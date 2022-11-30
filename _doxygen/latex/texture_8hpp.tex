@@ -1,0 +1,52 @@
+\hypertarget{texture_8hpp}{}\doxysection{liblava/resource/texture.hpp File Reference}
+\label{texture_8hpp}\index{liblava/resource/texture.hpp@{liblava/resource/texture.hpp}}
+
+
+Vulkan texture.  
+
+
+{\ttfamily \#include $<$liblava/resource/buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$liblava/resource/image.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1file__format}{lava\+::file\+\_\+format}}
+\begin{DoxyCompactList}\small\item\em File format. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1texture}{lava\+::texture}}
+\begin{DoxyCompactList}\small\item\em Texture. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1texture_1_1mip__level}{lava\+::texture\+::mip\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em Texture mip level. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1texture_1_1layer}{lava\+::texture\+::layer}}
+\begin{DoxyCompactList}\small\item\em Texture layer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1staging}{lava\+::staging}}
+\begin{DoxyCompactList}\small\item\em Texture staging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{texture_8hpp_afb7299a6f3b0510b280dfc58a0655c8d}\label{texture_8hpp_afb7299a6f3b0510b280dfc58a0655c8d}} 
+using {\bfseries lava\+::staging\+\_\+t} = staging
+\begin{DoxyCompactList}\small\item\em Staging type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{texture_8hpp_a0b62c808879e204c1038a0e234a6f81c}\label{texture_8hpp_a0b62c808879e204c1038a0e234a6f81c}} 
+using {\bfseries lava\+::texture\+\_\+registry} = id\+\_\+registry$<$ texture, file\+\_\+format $>$
+\begin{DoxyCompactList}\small\item\em Texture registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}\label{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}} 
+enum class \mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{lava\+::texture\+\_\+type}} \+: index \{ {\bfseries none} = 0
+, {\bfseries tex\+\_\+2d}
+, {\bfseries array}
+, {\bfseries cube\+\_\+map}
+ \}
+\begin{DoxyCompactList}\small\item\em Texture types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan texture. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}

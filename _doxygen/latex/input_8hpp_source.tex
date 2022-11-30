@@ -1,0 +1,491 @@
+\hypertarget{input_8hpp_source}{}\doxysection{input.\+hpp}
+\label{input_8hpp_source}\index{liblava/frame/input.hpp@{liblava/frame/input.hpp}}
+\mbox{\hyperlink{input_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{id_8hpp}{liblava/core/id.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{misc_8hpp}{liblava/core/misc.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{enum class} \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} : \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \{}
+\DoxyCodeLine{19     unknown = -\/1,}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{/* printable keys */}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     space = 32,}
+\DoxyCodeLine{24     apostrophe = 29, \textcolor{comment}{/* ' */}}
+\DoxyCodeLine{25     comma = 44, \textcolor{comment}{/* , */}}
+\DoxyCodeLine{26     minus = 45, \textcolor{comment}{/* -\/ */}}
+\DoxyCodeLine{27     period = 46, \textcolor{comment}{/* . */}}
+\DoxyCodeLine{28     slash = 47, \textcolor{comment}{/* / */}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \_0 = 48,}
+\DoxyCodeLine{31     \_1,}
+\DoxyCodeLine{32     \_2,}
+\DoxyCodeLine{33     \_3,}
+\DoxyCodeLine{34     \_4,}
+\DoxyCodeLine{35     \_5,}
+\DoxyCodeLine{36     \_6,}
+\DoxyCodeLine{37     \_7,}
+\DoxyCodeLine{38     \_8,}
+\DoxyCodeLine{39     \_9,}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     semicolon = 59, \textcolor{comment}{/* ; */}}
+\DoxyCodeLine{42     equal = 61, \textcolor{comment}{/* = */}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     a = 65,}
+\DoxyCodeLine{45     b,}
+\DoxyCodeLine{46     c,}
+\DoxyCodeLine{47     d,}
+\DoxyCodeLine{48     e,}
+\DoxyCodeLine{49     f,}
+\DoxyCodeLine{50     g,}
+\DoxyCodeLine{51     h,}
+\DoxyCodeLine{52     i,}
+\DoxyCodeLine{53     j,}
+\DoxyCodeLine{54     k,}
+\DoxyCodeLine{55     l,}
+\DoxyCodeLine{56     m,}
+\DoxyCodeLine{57     n,}
+\DoxyCodeLine{58     o,}
+\DoxyCodeLine{59     p,}
+\DoxyCodeLine{60     q,}
+\DoxyCodeLine{61     r,}
+\DoxyCodeLine{62     s,}
+\DoxyCodeLine{63     t,}
+\DoxyCodeLine{64     u,}
+\DoxyCodeLine{65     v,}
+\DoxyCodeLine{66     w,}
+\DoxyCodeLine{67     x,}
+\DoxyCodeLine{68     y,}
+\DoxyCodeLine{69     z,}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     left\_bracket = 91, \textcolor{comment}{/* [ */}}
+\DoxyCodeLine{72     backslash = 92, \textcolor{comment}{/* \(\backslash\) */}}
+\DoxyCodeLine{73     right\_bracket = 93, \textcolor{comment}{/* ] */}}
+\DoxyCodeLine{74     grave\_accent = 96, \textcolor{comment}{/* ` */}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     world\_1 = 161, \textcolor{comment}{/* non-\/US \#1 */}}
+\DoxyCodeLine{77     world\_2 = 162, \textcolor{comment}{/* non-\/US \#2 */}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{comment}{/* function keys */}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     escape = 256,}
+\DoxyCodeLine{82     enter,}
+\DoxyCodeLine{83     tab,}
+\DoxyCodeLine{84     backspace,}
+\DoxyCodeLine{85     insert,}
+\DoxyCodeLine{86     del, \textcolor{comment}{/* delete */}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     right,}
+\DoxyCodeLine{89     left,}
+\DoxyCodeLine{90     down,}
+\DoxyCodeLine{91     up,}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     page\_up,}
+\DoxyCodeLine{94     page\_down,}
+\DoxyCodeLine{95     home,}
+\DoxyCodeLine{96     \mbox{\hyperlink{misc_8hpp_a25642fea583db16ad4d444ba91c0821c}{end}},}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     caps\_lock = 280,}
+\DoxyCodeLine{99     scroll\_lock,}
+\DoxyCodeLine{100     num\_lock,}
+\DoxyCodeLine{101     print\_screen,}
+\DoxyCodeLine{102     pause,}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     f1 = 290,}
+\DoxyCodeLine{105     f2,}
+\DoxyCodeLine{106     f3,}
+\DoxyCodeLine{107     f4,}
+\DoxyCodeLine{108     f5,}
+\DoxyCodeLine{109     f6,}
+\DoxyCodeLine{110     f7,}
+\DoxyCodeLine{111     f8,}
+\DoxyCodeLine{112     f9,}
+\DoxyCodeLine{113     f10,}
+\DoxyCodeLine{114     f11,}
+\DoxyCodeLine{115     f12,}
+\DoxyCodeLine{116     f13,}
+\DoxyCodeLine{117     f14,}
+\DoxyCodeLine{118     f15,}
+\DoxyCodeLine{119     f16,}
+\DoxyCodeLine{120     f17,}
+\DoxyCodeLine{121     f18,}
+\DoxyCodeLine{122     f19,}
+\DoxyCodeLine{123     f20,}
+\DoxyCodeLine{124     f21,}
+\DoxyCodeLine{125     f22,}
+\DoxyCodeLine{126     f23,}
+\DoxyCodeLine{127     f24,}
+\DoxyCodeLine{128     f25,}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     kp\_0 = 320,}
+\DoxyCodeLine{131     kp\_1,}
+\DoxyCodeLine{132     kp\_2,}
+\DoxyCodeLine{133     kp\_3,}
+\DoxyCodeLine{134     kp\_4,}
+\DoxyCodeLine{135     kp\_5,}
+\DoxyCodeLine{136     kp\_6,}
+\DoxyCodeLine{137     kp\_7,}
+\DoxyCodeLine{138     kp\_8,}
+\DoxyCodeLine{139     kp\_9,}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     kp\_decimal,}
+\DoxyCodeLine{142     kp\_divide,}
+\DoxyCodeLine{143     kp\_multiply,}
+\DoxyCodeLine{144     kp\_subtract,}
+\DoxyCodeLine{145     kp\_add,}
+\DoxyCodeLine{146     kp\_enter,}
+\DoxyCodeLine{147     kp\_equal,}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149     left\_shift = 340,}
+\DoxyCodeLine{150     left\_control,}
+\DoxyCodeLine{151     left\_alt,}
+\DoxyCodeLine{152     left\_super,}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     right\_shift,}
+\DoxyCodeLine{155     right\_control,}
+\DoxyCodeLine{156     right\_alt,}
+\DoxyCodeLine{157     right\_super,}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     menu,}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     last = menu,}
+\DoxyCodeLine{162 \};}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{165 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key\_t}} = \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{168 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a43186b69527aac6ce1b4ec84f029a6dd}{key\_ref}} = \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{171 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_ab9e6a132d825e3ac5b09f6470ca91650}{keys}} = std::vector<key>;}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{174 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a1f16f60ea6c54d0f9785ef18ea3dfdba}{keys\_ref}} = \mbox{\hyperlink{input_8hpp_ab9e6a132d825e3ac5b09f6470ca91650}{keys}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{181 \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} k);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{188 \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{input_8hpp_a0f8cc3e9766eaac51a22d0e25ccf9df8}{get\_scancode}}(\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}});}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{193 \textcolor{keyword}{enum class} \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{194     release = 0,}
+\DoxyCodeLine{195     press,}
+\DoxyCodeLine{196     repeat}
+\DoxyCodeLine{197 \};}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{200 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action\_t}} = \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{203 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a7f185455845e4d2e7efd5e6883cec3a2}{action\_ref}} = \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{208 \textcolor{keyword}{enum class} \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} : \mbox{\hyperlink{types_8hpp_ae54e1af8bd332ce17bbfc07fe9dff1ef}{flag}} \{}
+\DoxyCodeLine{209     none = 0 << 0,}
+\DoxyCodeLine{210     shift = 1 << 0,}
+\DoxyCodeLine{211     control = 1 << 1,}
+\DoxyCodeLine{212     alt = 1 << 2,}
+\DoxyCodeLine{213     super = 1 << 3,}
+\DoxyCodeLine{214     caps\_lock = 1 << 4,}
+\DoxyCodeLine{215     num\_lock = 1 << 5,}
+\DoxyCodeLine{216 \};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 \mbox{\hyperlink{types_8hpp_a5f16c262ac0dcfeba2db0564b8a57cfe}{ENUM\_FLAG\_OPERATORS}}(mod)}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 using \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} = \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{229 inline \textcolor{keywordtype}{bool} check\_mod(\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} m, \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} c) \{}
+\DoxyCodeLine{230     \textcolor{keywordflow}{return} (m \& c) != mod::none;}
+\DoxyCodeLine{231 \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{234 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_aa54cdb85d648a581b0d6b24f42a29fa6}{mod\_ref}} = \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{241 \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} m);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{246 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1key__event}{key\_event}} \{}
+\DoxyCodeLine{248     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{ref}} = \mbox{\hyperlink{structlava_1_1key__event}{key\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{251     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{ref}})>;}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{254     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1key__event_a6570c9bb2733968f3a6dbb6b2eca72ba}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{257     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1key__event_ae4b1616f7d4c856f1cf37073b922db98}{list}} = std::vector<key\_event>;}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{260     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1key__event_aad9442a3c233bd4614773f96593ebdfa}{sender}};}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{263     \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key\_t}} \mbox{\hyperlink{structlava_1_1key__event_aa85059c68f2f24e14039c55a763980a0}{key}};}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{266     \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action\_t}} \mbox{\hyperlink{structlava_1_1key__event_a9e90f8851490531b3993b86ec5a249b0}{action}};}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{269     \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} \mbox{\hyperlink{structlava_1_1key__event_a18fd219df2be74d0704f4ce8b9b7f3e6}{mod}};}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{272     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1key__event_aed419f44822a52508f904146ccb883b7}{scancode}} = 0;}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{279     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1key__event_a9741e0da20252e7db9164db13a364d13}{pressed}}(\mbox{\hyperlink{input_8hpp_a43186b69527aac6ce1b4ec84f029a6dd}{key\_ref}} k)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{280         \textcolor{keywordflow}{return} (\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::press) \&\& (\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} == k);}
+\DoxyCodeLine{281     \}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{288     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1key__event_aeff304c2c3388f4d9ec8e305867de9a7}{released}}(\mbox{\hyperlink{input_8hpp_a43186b69527aac6ce1b4ec84f029a6dd}{key\_ref}} k)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{289         \textcolor{keywordflow}{return} (\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::release) \&\& (\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} == k);}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{297     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1key__event_a97f052f4ac4e070cce94b95980a5e6bc}{repeated}}(\mbox{\hyperlink{input_8hpp_a43186b69527aac6ce1b4ec84f029a6dd}{key\_ref}} k)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{298         \textcolor{keywordflow}{return} (\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::repeat) \&\& (\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} == k);}
+\DoxyCodeLine{299     \}}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{305     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1key__event_a94e716a7a0d261504cae3e65efa730cf}{active}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{306         \textcolor{keywordflow}{return} (\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::press) || (\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::repeat);}
+\DoxyCodeLine{307     \}}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{315     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1key__event_ab0b1d8451d6479bf2c889c550a38fc40}{pressed}}(\mbox{\hyperlink{input_8hpp_a43186b69527aac6ce1b4ec84f029a6dd}{key\_ref}} k, \mbox{\hyperlink{input_8hpp_aa54cdb85d648a581b0d6b24f42a29fa6}{mod\_ref}} m)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{316         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1key__event_a9741e0da20252e7db9164db13a364d13}{pressed}}(k) \&\& (\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} == m);}
+\DoxyCodeLine{317     \}}
+\DoxyCodeLine{318 \};}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{323 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1scroll__offset}{scroll\_offset}} \{}
+\DoxyCodeLine{325     \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \mbox{\hyperlink{structlava_1_1scroll__offset_a1c4c17c294d54e68eb8d0c0e61a9df12}{x}} = 0.0;}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{328     \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \mbox{\hyperlink{structlava_1_1scroll__offset_a95cbea807c6ba8c203e99cb349bc9fc1}{y}} = 0.0;}
+\DoxyCodeLine{329 \};}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{334 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1scroll__event}{scroll\_event}} \{}
+\DoxyCodeLine{336     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{ref}} = \mbox{\hyperlink{structlava_1_1scroll__event}{scroll\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{339     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{ref}})>;}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{342     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1scroll__event_a5ffb8b38989a51fcb7d96c9a69018a38}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{345     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1scroll__event_a0017da747cfbd97cd2de7acf650b9a69}{list}} = std::vector<scroll\_event>;}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{348     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1scroll__event_a9aa143c98a522ccae6eecbdffe7da9e0}{sender}};}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{351     \mbox{\hyperlink{structlava_1_1scroll__offset}{scroll\_offset}} \mbox{\hyperlink{structlava_1_1scroll__event_a60f3e32d7908cc9187078595484440c3}{offset}};}
+\DoxyCodeLine{352 \};}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{357 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}} \{}
+\DoxyCodeLine{359     \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \mbox{\hyperlink{structlava_1_1mouse__position_a9004862857233652b7512a1f631ed3d4}{x}} = 0.0;}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{362     \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \mbox{\hyperlink{structlava_1_1mouse__position_ad13d3497b2553a2419d8df7a727fe149}{y}} = 0.0;}
+\DoxyCodeLine{363 \};}
+\DoxyCodeLine{364 }
+\DoxyCodeLine{366 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\_position\_ref}} = \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{371 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1mouse__move__event}{mouse\_move\_event}} \{}
+\DoxyCodeLine{373     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__move__event_a9e06319f6d27619aee579e68b19ba2af}{ref}} = \mbox{\hyperlink{structlava_1_1mouse__move__event}{mouse\_move\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{376     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__move__event_a988cc8b1a34fa1d81033db5b97f38188}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1mouse__move__event_a9e06319f6d27619aee579e68b19ba2af}{ref}})>;}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{379     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__move__event_aeea165b2af733efa737ad686035e91aa}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{382     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__move__event_af31e6bd191db53bda388074bdccab6db}{list}} = std::vector<mouse\_move\_event>;}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{385     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1mouse__move__event_aa1477c4797a2983acfc72997c35faa97}{sender}};}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{388     \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}} \mbox{\hyperlink{structlava_1_1mouse__move__event_a44af0c3b7f5ebf33d244a4878d1b0190}{position}};}
+\DoxyCodeLine{389 \};}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{394 \textcolor{keyword}{enum class} \mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{mouse\_button}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{395     \_1 = 0,}
+\DoxyCodeLine{396     \_2,}
+\DoxyCodeLine{397     \_3,}
+\DoxyCodeLine{398     \_4,}
+\DoxyCodeLine{399     \_5,}
+\DoxyCodeLine{400     \_6,}
+\DoxyCodeLine{401     \_7,}
+\DoxyCodeLine{402     \_8,}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{404     last = \_8,}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{406     left = \_1,}
+\DoxyCodeLine{407     right = \_2,}
+\DoxyCodeLine{408     middle = \_3,}
+\DoxyCodeLine{409 \};}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{412 \textcolor{keyword}{using }\mbox{\hyperlink{input_8hpp_a87d0a452ccfd9969c9f8524385c3a76e}{mouse\_button\_ref}} = \mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{mouse\_button}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{417 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1mouse__button__event}{mouse\_button\_event}} \{}
+\DoxyCodeLine{419     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{ref}} = \mbox{\hyperlink{structlava_1_1mouse__button__event}{mouse\_button\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{422     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{ref}})>;}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{425     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__button__event_a5e5766a1b469819c15d6a3ec5d3973dd}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{428     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__button__event_a39918baa114b08b8fddbd85e01cf85ce}{list}} = std::vector<mouse\_button\_event>;}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{431     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1mouse__button__event_a95ab34209794bce897cfaa9911749025}{sender}};}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{434     \mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{mouse\_button}} \mbox{\hyperlink{structlava_1_1mouse__button__event_aef4d31ecfa367c9b1161889bd20ed80e}{button}};}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{437     \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action\_t}} \mbox{\hyperlink{structlava_1_1mouse__button__event_aa7b3e15b86e0fbc609484e95dec8e8d7}{action}};}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{440     \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} \mbox{\hyperlink{structlava_1_1mouse__button__event_a1c69c7e9aa8a8d39d2e7622fce709aba}{mod}};}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{447     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1mouse__button__event_a1090bb7697687e420ae801d04eb0480e}{pressed}}(\mbox{\hyperlink{input_8hpp_a87d0a452ccfd9969c9f8524385c3a76e}{mouse\_button\_ref}} b)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{448         \textcolor{keywordflow}{return} \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::press \&\& \mbox{\hyperlink{structlava_1_1mouse__button__event_aef4d31ecfa367c9b1161889bd20ed80e}{button}} == b;}
+\DoxyCodeLine{449     \}}
+\DoxyCodeLine{450 }
+\DoxyCodeLine{456     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1mouse__button__event_a93fae05971838957ffae462cb4862f88}{released}}(\mbox{\hyperlink{input_8hpp_a87d0a452ccfd9969c9f8524385c3a76e}{mouse\_button\_ref}} b)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{457         \textcolor{keywordflow}{return} \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} == action::release \&\& \mbox{\hyperlink{structlava_1_1mouse__button__event_aef4d31ecfa367c9b1161889bd20ed80e}{button}} == b;}
+\DoxyCodeLine{458     \}}
+\DoxyCodeLine{459 \};}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{464 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1path__drop__event}{path\_drop\_event}} \{}
+\DoxyCodeLine{466     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1path__drop__event_a528facd76f024688c17b3f6859dc7948}{ref}} = \mbox{\hyperlink{structlava_1_1path__drop__event}{path\_drop\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{469     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1path__drop__event_a73a774e2649235422bdc30cc0ba7e780}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1path__drop__event_a528facd76f024688c17b3f6859dc7948}{ref}})>;}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{472     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1path__drop__event_ac3f954496db5d4d1dbdcef8cebceb5ef}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{473 }
+\DoxyCodeLine{475     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1path__drop__event_a5714c15c9cd7051bea42ffb7bc9037ad}{list}} = std::vector<path\_drop\_event>;}
+\DoxyCodeLine{476 }
+\DoxyCodeLine{478     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1path__drop__event_ac0defd87a068d383b392b619ebfc397e}{sender}};}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{481     \mbox{\hyperlink{types_8hpp_a662ed5e244d378d6e91b125d43c882be}{string\_list}} \mbox{\hyperlink{structlava_1_1path__drop__event_a80665c61bb0db2174626728db0e3fb26}{files}};}
+\DoxyCodeLine{482 \};}
+\DoxyCodeLine{483 }
+\DoxyCodeLine{487 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1mouse__active__event}{mouse\_active\_event}} \{}
+\DoxyCodeLine{489     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__active__event_aca45278b110993a3277c5c659d5c1829}{ref}} = \mbox{\hyperlink{structlava_1_1mouse__active__event}{mouse\_active\_event}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{492     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40}{func}} = std::function<bool(\mbox{\hyperlink{structlava_1_1mouse__active__event_aca45278b110993a3277c5c659d5c1829}{ref}})>;}
+\DoxyCodeLine{493 }
+\DoxyCodeLine{495     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__active__event_a4194cf5dbd605d8f0ee4954d60aaffe5}{listeners}} = std::map<id, func>;}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{498     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1mouse__active__event_a06b38a8d022542740acbd2dc579d6fe0}{list}} = std::vector<mouse\_active\_event>;}
+\DoxyCodeLine{499 }
+\DoxyCodeLine{501     \textcolor{keywordtype}{id} \mbox{\hyperlink{structlava_1_1mouse__active__event_afb7ecec0df494161a2362e51611ec3cc}{sender}};}
+\DoxyCodeLine{502 }
+\DoxyCodeLine{504     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1mouse__active__event_a14e206a06f9e3490c5cf073b0f83bc49}{active}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{505 \};}
+\DoxyCodeLine{506 }
+\DoxyCodeLine{510 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1input__callback}{input\_callback}} \{}
+\DoxyCodeLine{512     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{cptr}} = \mbox{\hyperlink{structlava_1_1input__callback}{input\_callback}} \textcolor{keyword}{const}*;}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{515     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__callback_abb9c6298031decc24dd960373ebfdb6a}{list}} = std::vector<input\_callback*>;}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{518     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__callback_a10239e1631583796cb373223a6921945}{clist}} = std::vector<cptr>;}
+\DoxyCodeLine{519 }
+\DoxyCodeLine{524     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{525     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__callback_ae12caf1409f8cb46dbe97de6876a2a42}{func}} = std::function<bool(\textcolor{keyword}{typename} T::ref)>;}
+\DoxyCodeLine{526 }
+\DoxyCodeLine{528     \mbox{\hyperlink{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb}{key\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_a15e6ab42f64d047fc92a1b5e8df2e877}{on\_key\_event}};}
+\DoxyCodeLine{529 }
+\DoxyCodeLine{531     \mbox{\hyperlink{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74}{scroll\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_ac5bade394647d7860e02b3ea59ddcd17}{on\_scroll\_event}};}
+\DoxyCodeLine{532 }
+\DoxyCodeLine{534     \mbox{\hyperlink{structlava_1_1mouse__move__event_a988cc8b1a34fa1d81033db5b97f38188}{mouse\_move\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_a6e7de5a1d54143950923a5d830cb762c}{on\_mouse\_move\_event}};}
+\DoxyCodeLine{535 }
+\DoxyCodeLine{537     \mbox{\hyperlink{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa}{mouse\_button\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_af242d055d858eaa390f933fa491251b9}{on\_mouse\_button\_event}};}
+\DoxyCodeLine{538 }
+\DoxyCodeLine{540     \mbox{\hyperlink{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40}{mouse\_active\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_a479849fc1d527dc3ef83ecce821889f5}{on\_mouse\_active\_event}};}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{543     \mbox{\hyperlink{structlava_1_1path__drop__event_a73a774e2649235422bdc30cc0ba7e780}{path\_drop\_event::func}} \mbox{\hyperlink{structlava_1_1input__callback_a9866ee7e9135e230e1ac2d35831f37cf}{on\_path\_drop\_event}};}
+\DoxyCodeLine{544 \};}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{550 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{551 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1input__events}{input\_events}} : T::list \{}
+\DoxyCodeLine{556     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1input__events_a07c464dc2889ade4dad561a7fe933002}{add}}(\textcolor{keyword}{typename} T::ref event) \{}
+\DoxyCodeLine{557         this-\/>push\_back(event);}
+\DoxyCodeLine{558     \}}
+\DoxyCodeLine{559 }
+\DoxyCodeLine{561     \mbox{\hyperlink{structlava_1_1id__listeners}{id\_listeners<T>}} \mbox{\hyperlink{structlava_1_1input__events_a178bb91afe990de0b8787db3b73c7a0c}{listeners}};}
+\DoxyCodeLine{562 \};}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{565 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_key\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<key\_event>}};}
+\DoxyCodeLine{566 }
+\DoxyCodeLine{568 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_scroll\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<scroll\_event>}};}
+\DoxyCodeLine{569 }
+\DoxyCodeLine{571 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_move\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<mouse\_move\_event>}};}
+\DoxyCodeLine{572 }
+\DoxyCodeLine{574 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_button\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<mouse\_button\_event>}};}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{577 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_active\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<mouse\_active\_event>}};}
+\DoxyCodeLine{578 }
+\DoxyCodeLine{580 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input__events}{input\_path\_drop\_events}} = \mbox{\hyperlink{structlava_1_1input__events}{input\_events<path\_drop\_event>}};}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{583 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{input_8hpp_a355e51d18c6561c78d6fd901240d8db4}{input\_ignore}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{584 }
+\DoxyCodeLine{586 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{input_8hpp_a59127ef2ef83bf0724cb6a55558502fb}{input\_done}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{591 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1input}{input}} \{}
+\DoxyCodeLine{593     \mbox{\hyperlink{structlava_1_1input__events}{input\_key\_events}} \mbox{\hyperlink{structlava_1_1input_acd006dbfdd554b577b75d12aec293b07}{key}};}
+\DoxyCodeLine{594 }
+\DoxyCodeLine{596     \mbox{\hyperlink{structlava_1_1input__events}{input\_scroll\_events}} \mbox{\hyperlink{structlava_1_1input_aff08ec9fb495529bc2b0f0591898f8a7}{scroll}};}
+\DoxyCodeLine{597 }
+\DoxyCodeLine{599     \mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_move\_events}} \mbox{\hyperlink{structlava_1_1input_a882bd7e2d38a4051cd5b5af94f707831}{mouse\_move}};}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{602     \mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_button\_events}} \mbox{\hyperlink{structlava_1_1input_a6f78e783201ec1615bf1c382fa601c21}{mouse\_button}};}
+\DoxyCodeLine{603 }
+\DoxyCodeLine{605     \mbox{\hyperlink{structlava_1_1input__events}{input\_mouse\_active\_events}} \mbox{\hyperlink{structlava_1_1input_a5fbed64485450cf8d5a8b6aa69a3b99a}{mouse\_active}};}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{608     \mbox{\hyperlink{structlava_1_1input__events}{input\_path\_drop\_events}} \mbox{\hyperlink{structlava_1_1input_a325bd70d488ed70e820ad5d00e86d237}{path\_drop}};}
+\DoxyCodeLine{609 }
+\DoxyCodeLine{613     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1input_a4fa55893374d93c69129cda17ae45cf3}{handle\_events}}();}
+\DoxyCodeLine{614 }
+\DoxyCodeLine{619     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1input_a795a63b9ee361ada3e7da15a780702f7}{add}}(\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\_callback::cptr}} callback) \{}
+\DoxyCodeLine{620         callbacks.push\_back(callback);}
+\DoxyCodeLine{621     \}}
+\DoxyCodeLine{622 }
+\DoxyCodeLine{627     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1input_a13caa6e16398ba8db3cda132e47a884b}{remove}}(\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\_callback::cptr}} callback) \{}
+\DoxyCodeLine{628         \mbox{\hyperlink{misc_8hpp_a3ea11a6e491adb92e302e6dd9b80e47b}{lava::remove}}(callbacks, callback);}
+\DoxyCodeLine{629     \}}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{635     \mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\_position\_ref}} \mbox{\hyperlink{structlava_1_1input_a675d96d2b61966220ce44d07576b0f0d}{get\_mouse\_position}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{636         \textcolor{keywordflow}{return} current\_position;}
+\DoxyCodeLine{637     \}}
+\DoxyCodeLine{638 }
+\DoxyCodeLine{643     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1input_ac77a28a961c813158923b287fb0bce94}{set\_mouse\_position}}(\mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\_position\_ref}} position) \{}
+\DoxyCodeLine{644         current\_position = position;}
+\DoxyCodeLine{645     \}}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647 \textcolor{keyword}{private}:}
+\DoxyCodeLine{651     \textcolor{keywordtype}{void} handle\_mouse\_events();}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{654     \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}} current\_position;}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{657     \mbox{\hyperlink{structlava_1_1input__callback_a10239e1631583796cb373223a6921945}{input\_callback::clist}} callbacks;}
+\DoxyCodeLine{658 \};}
+\DoxyCodeLine{659 }
+\DoxyCodeLine{661 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1input}{input\_t}} = \mbox{\hyperlink{structlava_1_1input}{input}};}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{666 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1tooltip}{tooltip}} \{}
+\DoxyCodeLine{673     \mbox{\hyperlink{structlava_1_1tooltip_a75d73cbb2cfc3cf10dd7a3faba15d286}{tooltip}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{674             \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key\_t}} \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}},}
+\DoxyCodeLine{675             \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}})}
+\DoxyCodeLine{676     : \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}), \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}(\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}), \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}}(\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}}) \{}
+\DoxyCodeLine{677     \}}
+\DoxyCodeLine{678 }
+\DoxyCodeLine{680     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1tooltip_a70a61251ac8f2ce1517cd3bf2ba7a07a}{list}} = std::vector<tooltip>;}
+\DoxyCodeLine{681 }
+\DoxyCodeLine{683     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1tooltip_ac1ac47719540622a1853b8ec53eb3c28}{name}};}
+\DoxyCodeLine{684 }
+\DoxyCodeLine{686     \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key\_t}} \mbox{\hyperlink{structlava_1_1tooltip_a4a73806690732352bf1aea74497abe50}{key}};}
+\DoxyCodeLine{687 }
+\DoxyCodeLine{689     \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} \mbox{\hyperlink{structlava_1_1tooltip_a14b1e0149b3bb9aa710320e5604cb9dd}{mod}};}
+\DoxyCodeLine{690 \};}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{695 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1tooltip__list}{tooltip\_list}} \{}
+\DoxyCodeLine{702     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1tooltip__list_a5289e286abe1896da682ccb14bbcacb9}{add}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{703              \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key\_t}} \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}},}
+\DoxyCodeLine{704              \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod\_t}} \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} = mod::none) \{}
+\DoxyCodeLine{705         tooltips.emplace\_back(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}, \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}, \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}});}
+\DoxyCodeLine{706     \}}
+\DoxyCodeLine{707 }
+\DoxyCodeLine{711     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1tooltip__list_ab6265a11d603bd1a19819262c929da22}{clear}}() \{}
+\DoxyCodeLine{712         tooltips.clear();}
+\DoxyCodeLine{713     \}}
+\DoxyCodeLine{714 }
+\DoxyCodeLine{719     \mbox{\hyperlink{structlava_1_1tooltip_a70a61251ac8f2ce1517cd3bf2ba7a07a}{tooltip::list}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1tooltip__list_a91a5b41781db1d73c7dd58355133af0b}{get\_list}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{720         \textcolor{keywordflow}{return} tooltips;}
+\DoxyCodeLine{721     \}}
+\DoxyCodeLine{722 }
+\DoxyCodeLine{727     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1tooltip__list_ae4277a89fd3ea7c6de287e1184d58494}{set}}(\mbox{\hyperlink{structlava_1_1tooltip_a70a61251ac8f2ce1517cd3bf2ba7a07a}{tooltip::list}} \textcolor{keyword}{const}\& list) \{}
+\DoxyCodeLine{728         tooltips = list;}
+\DoxyCodeLine{729     \}}
+\DoxyCodeLine{730 }
+\DoxyCodeLine{735     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1tooltip__list_a93fc6926b01a3437d88fc906d318049e}{format\_string}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{736 }
+\DoxyCodeLine{737 \textcolor{keyword}{private}:}
+\DoxyCodeLine{739     \mbox{\hyperlink{structlava_1_1tooltip_a70a61251ac8f2ce1517cd3bf2ba7a07a}{tooltip::list}} tooltips;}
+\DoxyCodeLine{740 \};}
+\DoxyCodeLine{741 }
+\DoxyCodeLine{742 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

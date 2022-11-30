@@ -1,0 +1,86 @@
+\hypertarget{property_8hpp_source}{}\doxysection{property.\+hpp}
+\label{property_8hpp_source}\index{liblava/engine/property.hpp@{liblava/engine/property.hpp}}
+\mbox{\hyperlink{property_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{file__utils_8hpp}{liblava/file/file\_utils.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <liblava/file/json.hpp>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{argh_8hpp}{liblava/frame/argh.hpp}}>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <liblava/fwd.hpp>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1property}{property}} : \mbox{\hyperlink{structlava_1_1configurable}{configurable}} \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{structlava_1_1engine}{engine}}* \mbox{\hyperlink{structlava_1_1property_a771d31ffda98b4e91d7953bb8cbed8cb}{context}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27     \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1property_1_1prop}{prop}} \{}
+\DoxyCodeLine{29         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1property_1_1prop_a61da47acfb8632eec64b0807d515ec0f}{map}} = std::map<string, prop>;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35         \mbox{\hyperlink{structlava_1_1property_1_1prop_ac8214848dfc45d52648a6de91506bfdb}{prop}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1property_1_1prop_a8a6e8f2d9bd1f79a80b21cbb4006d3c9}{filename}})}
+\DoxyCodeLine{36         : \mbox{\hyperlink{structlava_1_1property_1_1prop_a8a6e8f2d9bd1f79a80b21cbb4006d3c9}{filename}}(\mbox{\hyperlink{structlava_1_1property_1_1prop_a8a6e8f2d9bd1f79a80b21cbb4006d3c9}{filename}}) \{\}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{39         \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1property_1_1prop_a8a6e8f2d9bd1f79a80b21cbb4006d3c9}{filename}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42         \mbox{\hyperlink{structlava_1_1file__data}{file\_data}} \mbox{\hyperlink{structlava_1_1property_1_1prop_ac757b9cb8a1ffa13a220f552fe203522}{data}};}
+\DoxyCodeLine{43     \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_a9e7fe97d51070c8aa20072ac602ed6db}{add}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{51              \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} filename);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58     \mbox{\hyperlink{structlava_1_1cdata}{cdata}} \mbox{\hyperlink{structlava_1_1property_a042f5e2cc4fe924273da837aa976db2d}{operator()}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1property_a2b15d312aee0d55843c5501afba5ea7f}{get\_filename}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} map.at(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}).filename;}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_a1c647ca1f05d92bf41a31c4dc044a567}{set\_filename}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{75                       \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} filename) \{}
+\DoxyCodeLine{76         map.at(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}).filename = filename;}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1property_aab8a2f906e69c9d7b137a5ff288fd408}{exists}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} map.count(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1property_ae5caf036a3f32233ab962995a918da7d}{empty}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}})\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} map.at(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}).data.ptr == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1property_a09cb783e96717909e9227cf1145c46a7}{load}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_a421701a7e1f534da044d981edaeaaa64}{unload}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}) \{}
+\DoxyCodeLine{109         map.at(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}).data = \{\};}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{116     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1property_af764377c542bfda75850aed5e04ad0f8}{load\_all}}();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_acee2ec3c878bd2be33b214d65126a2d7}{unload\_all}}() \{}
+\DoxyCodeLine{122         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& [\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}, \mbox{\hyperlink{structlava_1_1property_1_1prop}{prop}}] : map)}
+\DoxyCodeLine{123             \mbox{\hyperlink{structlava_1_1property_1_1prop}{prop}}.\mbox{\hyperlink{structlava_1_1property_1_1prop_ac757b9cb8a1ffa13a220f552fe203522}{data}} = \{\};}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1property_a873f65578869a577f29940719b627273}{check}}();}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_a1ad46064bf52b02871b1a59678dc8294}{parse}}(\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}} \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_aff1dd73f92567572048c034e0a84d7d3}{clear}}() \{}
+\DoxyCodeLine{142         map.clear();}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{149     \mbox{\hyperlink{structlava_1_1property_1_1prop_a61da47acfb8632eec64b0807d515ec0f}{prop::map}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1property_a417464f52e4ec1fc2c6074de47e0241f}{get\_all}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{return} map;}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1property_a8119491e65fe643df515e643611cd024}{set\_config}}(json\_ref j) \textcolor{keyword}{override};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{163     json \mbox{\hyperlink{structlava_1_1property_a1e86fc4eba1e7b1626a68bcd2535e00b}{get\_config}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{keyword}{private}:}
+\DoxyCodeLine{167     \mbox{\hyperlink{structlava_1_1property_1_1prop_a61da47acfb8632eec64b0807d515ec0f}{prop::map}} map;}
+\DoxyCodeLine{168 \};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

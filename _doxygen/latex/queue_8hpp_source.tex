@@ -1,0 +1,103 @@
+\hypertarget{queue_8hpp_source}{}\doxysection{queue.\+hpp}
+\label{queue_8hpp_source}\index{liblava/base/queue.hpp@{liblava/base/queue.hpp}}
+\mbox{\hyperlink{queue_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base_2base_8hpp}{liblava/base/base.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1queue}{queue}} \{}
+\DoxyCodeLine{20     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{list}} = std::deque<queue>;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{ref}} = \mbox{\hyperlink{structlava_1_1queue}{queue}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26     VkQueue \mbox{\hyperlink{structlava_1_1queue_a3d39db83595291f24fc52c74c736d107}{vk\_queue}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29     VkQueueFlags \mbox{\hyperlink{structlava_1_1queue_aca97ae9b3b7e040daac58116647b104b}{flags}} = 0;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1queue_ab085c28ba85b1ae3b01719e3e59a1fa7}{family}} = 0;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1queue_a96bb451532bb15ed5da445112fed7b69}{priority}} = 1.f;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1queue_a8c9c2ecc9a2fe7ad64da0a2cc66a253c}{valid}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1queue_a3d39db83595291f24fc52c74c736d107}{vk\_queue}} != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1queue_a5170f20bc30c95371856be53fbb0e41b}{operator<}}(\mbox{\hyperlink{structlava_1_1queue}{queue}} \textcolor{keyword}{const}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1queue_a96bb451532bb15ed5da445112fed7b69}{priority}} < other.\mbox{\hyperlink{structlava_1_1queue_a96bb451532bb15ed5da445112fed7b69}{priority}};}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{56 \textcolor{keyword}{constexpr} VkQueueFlags \textcolor{keyword}{const} \mbox{\hyperlink{queue_8hpp_a9fd36ce00e5d8b978c6205ed8d2b74d9}{default\_queue\_flags}} = VK\_QUEUE\_GRAPHICS\_BIT}
+\DoxyCodeLine{57                                                    | VK\_QUEUE\_COMPUTE\_BIT}
+\DoxyCodeLine{58                                                    | VK\_QUEUE\_TRANSFER\_BIT;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1queue__info}{queue\_info}} \{}
+\DoxyCodeLine{65     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1queue__info_aeca13b57f220037cfadabe6ecc004de9}{list}} = std::deque<queue\_info>;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     VkQueueFlags \mbox{\hyperlink{structlava_1_1queue__info_a58ec275c93fa08ff48a1c7a9ef75455f}{flags}} = \mbox{\hyperlink{queue_8hpp_a9fd36ce00e5d8b978c6205ed8d2b74d9}{default\_queue\_flags}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1queue__info_aef6912f5e6390f6d5a151d1c983f6af2}{priority}} = 1.f;}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1queue__family__info}{queue\_family\_info}} \{}
+\DoxyCodeLine{79     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{list}} = std::deque<queue\_family\_info>;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1queue__family__info_aa18ad31e5e2ebad5f271bb0d0a421dd5}{family\_index}} = 0;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85     \mbox{\hyperlink{structlava_1_1queue__info_aeca13b57f220037cfadabe6ecc004de9}{queue\_info::list}} \mbox{\hyperlink{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22}{queues}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1queue__family__info_a0118b1377d537994d6c9aa26a701d278}{add}}(VkQueueFlags flags,}
+\DoxyCodeLine{94              \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}{count}} = 1,}
+\DoxyCodeLine{95              \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} priority = 1.f) \{}
+\DoxyCodeLine{96         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = 0u; i < \mbox{\hyperlink{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}{count}}; ++i) \{}
+\DoxyCodeLine{97             \mbox{\hyperlink{structlava_1_1queue__info}{queue\_info}} info\{ flags, priority \};}
+\DoxyCodeLine{98             \mbox{\hyperlink{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22}{queues}}.push\_back(info);}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}{count}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{107         \textcolor{keywordflow}{return} \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22}{queues}}.size());}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1queue__family__info_a5009f5cb3c5050ceb3163f2987d3418d}{clear}}() \{}
+\DoxyCodeLine{114         \mbox{\hyperlink{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22}{queues}}.clear();}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{122 \textcolor{keywordtype}{void} \mbox{\hyperlink{queue_8hpp_a3a95d4fb6a75e074295c1a46695397ce}{set\_default\_queues}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}}\& list);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{129 \textcolor{keywordtype}{void} \mbox{\hyperlink{queue_8hpp_a625654669a4963a2daf910561b6282b4}{set\_all\_queues}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}}\& list,}
+\DoxyCodeLine{130                     \mbox{\hyperlink{base_2base_8hpp_ae5c6a1f4f065a7cdea070dc4f7e48947}{VkQueueFamilyPropertiesList}} \textcolor{keyword}{const}\& properties);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{141 \textcolor{keywordtype}{bool} \mbox{\hyperlink{queue_8hpp_ab7f1d0e25ab487cecd007ab6cd580b4c}{add\_queues}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}}\& list,}
+\DoxyCodeLine{142                 \mbox{\hyperlink{base_2base_8hpp_ae5c6a1f4f065a7cdea070dc4f7e48947}{VkQueueFamilyPropertiesList}} \textcolor{keyword}{const}\& properties,}
+\DoxyCodeLine{143                 VkQueueFlags flags,}
+\DoxyCodeLine{144                 \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} count,}
+\DoxyCodeLine{145                 \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} priority = 1.f);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{154 \textcolor{keywordtype}{bool} \mbox{\hyperlink{queue_8hpp_aa9e3a3836f529f0147d0a9a2556ac764}{add\_dedicated\_queues}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}}\& list,}
+\DoxyCodeLine{155                           \mbox{\hyperlink{base_2base_8hpp_ae5c6a1f4f065a7cdea070dc4f7e48947}{VkQueueFamilyPropertiesList}} \textcolor{keyword}{const}\& properties,}
+\DoxyCodeLine{156                           \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} priority = 1.f);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{161 \textcolor{keyword}{enum class} \mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\_queues\_result}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{162     ok = 0,}
+\DoxyCodeLine{163     empty\_list,}
+\DoxyCodeLine{164     no\_properties,}
+\DoxyCodeLine{165     duplicate\_family\_index,}
+\DoxyCodeLine{166     no\_family\_index,}
+\DoxyCodeLine{167     no\_queues,}
+\DoxyCodeLine{168     too\_many\_queues,}
+\DoxyCodeLine{169     no\_compatible\_flags}
+\DoxyCodeLine{170 \};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{178 \mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\_queues\_result}} \mbox{\hyperlink{queue_8hpp_a6dce4074f13b98f4a822013d1b51b016}{verify\_queues}}(\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}} \textcolor{keyword}{const}\& list,}
+\DoxyCodeLine{179                                    \mbox{\hyperlink{base_2base_8hpp_ae5c6a1f4f065a7cdea070dc4f7e48947}{VkQueueFamilyPropertiesList}} \textcolor{keyword}{const}\& properties);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

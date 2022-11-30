@@ -1,0 +1,49 @@
+\hypertarget{config_8hpp_source}{}\doxysection{config.\+hpp}
+\label{config_8hpp_source}\index{liblava/app/config.hpp@{liblava/app/config.hpp}}
+\mbox{\hyperlink{config_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{imgui_8hpp}{liblava/app/imgui.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{window_8hpp}{liblava/frame/window.hpp}}>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <liblava/fwd.hpp>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{format_8hpp}{liblava/resource/format.hpp}}>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1app__config}{app\_config}} : \mbox{\hyperlink{structlava_1_1configurable}{configurable}} \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{structlava_1_1app}{app}}* \mbox{\hyperlink{structlava_1_1app__config_aa5ce69738a59165cf8928bc4b7392738}{context}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{structlava_1_1app__config_ae761448b2402cb3bdf7c62a9bd51cb29}{org}} = \mbox{\hyperlink{types_8hpp_a5463322f2e652628790c04fe97367db0}{\_liblava\_}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{structlava_1_1app__config_acce23cf4709049fe780fe62a8d84372d}{ext}} = \textcolor{stringliteral}{"{}zip"{}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1app__config_a5666129d8f3b0aa3823d6c6a086b0b57}{save\_window}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1app__config_af41ba3e4aa66a34c45ba308a2d6c16eb}{handle\_key\_events}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1app__config_ac5315d258095909eb9f2a13846b0435f}{v\_sync}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     \mbox{\hyperlink{structlava_1_1surface__format__request}{surface\_format\_request}} \mbox{\hyperlink{structlava_1_1app__config_ae9f86485bed9c49bec981c63cfc3597e}{surface}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1physical__device}{physical\_device}} = 0;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{46     \mbox{\hyperlink{structlava_1_1imgui_1_1font}{imgui::font}} \mbox{\hyperlink{structlava_1_1app__config_aa608fd9df4970566bdfc0c23d7fdbd02}{imgui\_font}};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = \mbox{\hyperlink{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c}{\_default\_}};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1app__config_a6cd5daeffd92fd6f6c304bef020d9ed3}{set\_config}}(json\_ref j) \textcolor{keyword}{override};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     json \mbox{\hyperlink{structlava_1_1app__config_a1c90d1716d0648a069e3e9ded53fadfd}{get\_config}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1app__config_ad3f257517689f3dd0d115b304f06619d}{update\_window\_state}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69     \mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{window::state::optional}} \mbox{\hyperlink{structlava_1_1app__config_a475f12e6dd8a5c90055a7e7077f8243d}{window\_state}};}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{77 \textcolor{keywordtype}{void} \mbox{\hyperlink{config_8hpp_aad95a34591ffc7d28083692b53ea99e6}{set\_window\_icon}}(\mbox{\hyperlink{structlava_1_1window}{window}}\& \mbox{\hyperlink{structlava_1_1window}{window}}, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} icon\_file = \textcolor{stringliteral}{"{}icon.png"{}});}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

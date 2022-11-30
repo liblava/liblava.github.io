@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1mesh__template" kind="struct" language="C++" prot="public">
+    <compoundname>lava::mesh_template</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="mesh_8hpp" local="no">mesh.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+        <defval><ref refid="structlava_1_1vertex" kindref="compound">vertex</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1mesh__template_1a208bb4e7653b421e36212a28bf435cea" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1mesh__template" kindref="compound">mesh_template</ref>&lt; T &gt; &gt;</type>
+        <definition>using lava::mesh_template&lt; T &gt;::ptr =  std::shared_ptr&lt;mesh_template&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::mesh_template::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="79" column="5" bodyfile="liblava/resource/mesh.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mesh__template_1abd46ec7277958aff02fc1b06b461573e" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1mesh__template_1a208bb4e7653b421e36212a28bf435cea" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::mesh_template&lt; T &gt;::map =  std::map&lt;id, ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>lava::mesh_template::map</qualifiedname>
+        <briefdescription>
+<para>Map of meshes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="82" column="5" bodyfile="liblava/resource/mesh.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mesh__template_1aa27ab03391e6618968117f056df72af9" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1mesh__template_1a208bb4e7653b421e36212a28bf435cea" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::mesh_template&lt; T &gt;::list =  std::vector&lt;ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::mesh_template::list</qualifiedname>
+        <briefdescription>
+<para>List of meshes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="85" column="5" bodyfile="liblava/resource/mesh.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mesh__template_1a07b101db9b60f2a36dff0f6581d3284a" prot="public" static="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>using lava::mesh_template&lt; T &gt;::vertex_list =  std::vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>vertex_list</name>
+        <qualifiedname>lava::mesh_template::vertex_list</qualifiedname>
+        <briefdescription>
+<para>List of vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="88" column="5" bodyfile="liblava/resource/mesh.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1a4449956626996b5fcab9d36b1510a8bf" prot="private" static="no" mutable="no">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::mesh_template&lt; T &gt;::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>lava::mesh_template::device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="246" column="14" bodyfile="liblava/resource/mesh.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1aab3aeeba5d0e47b2f5c4f756b4ef7ce1" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1mesh__template__data" kindref="compound">mesh_template_data</ref>&lt; T &gt;</type>
+        <definition>mesh_template_data&lt;T&gt; lava::mesh_template&lt; T &gt;::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>lava::mesh_template::data</qualifiedname>
+        <briefdescription>
+<para>Mesh data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="249" column="24" bodyfile="liblava/resource/mesh.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1a7263291bb4af50a41d90d9f37dff7202" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref></type>
+        <definition>buffer::ptr lava::mesh_template&lt; T &gt;::vertex_buffer</definition>
+        <argsstring></argsstring>
+        <name>vertex_buffer</name>
+        <qualifiedname>lava::mesh_template::vertex_buffer</qualifiedname>
+        <briefdescription>
+<para>Vertex buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="252" column="17" bodyfile="liblava/resource/mesh.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1a1782a20bfeecba9294ebe14a21dd1022" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref></type>
+        <definition>buffer::ptr lava::mesh_template&lt; T &gt;::index_buffer</definition>
+        <argsstring></argsstring>
+        <name>index_buffer</name>
+        <qualifiedname>lava::mesh_template::index_buffer</qualifiedname>
+        <briefdescription>
+<para>Index buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="255" column="17" bodyfile="liblava/resource/mesh.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1a5d17068e52bd309d0781fb51b2f208dc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::mesh_template&lt; T &gt;::mapped</definition>
+        <argsstring></argsstring>
+        <name>mapped</name>
+        <qualifiedname>lava::mesh_template::mapped</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Mapped state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="258" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mesh__template_1adab3933cd55277f43f80d28c3ee3cf9d" prot="private" static="no" mutable="no">
+        <type>VmaMemoryUsage</type>
+        <definition>VmaMemoryUsage lava::mesh_template&lt; T &gt;::memory_usage</definition>
+        <argsstring></argsstring>
+        <name>memory_usage</name>
+        <qualifiedname>lava::mesh_template::memory_usage</qualifiedname>
+        <initializer>= VMA_MEMORY_USAGE_CPU_TO_GPU</initializer>
+        <briefdescription>
+<para>Memory usage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="261" column="20" bodyfile="liblava/resource/mesh.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a8795fca67bd15039034f010d8e383249" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template_1a208bb4e7653b421e36212a28bf435cea" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::mesh_template&lt; T &gt;::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::mesh_template::make</qualifiedname>
+        <briefdescription>
+<para>Make a new mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ptr Shared pointer to mesh </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="94" column="16" bodyfile="liblava/resource/mesh.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1mesh__template_1ae7534d966bb2e9d5ab383406d8363722" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::mesh_template&lt; T &gt;::~mesh_template</definition>
+        <argsstring>()</argsstring>
+        <name>~mesh_template</name>
+        <qualifiedname>lava::mesh_template::~mesh_template</qualifiedname>
+        <briefdescription>
+<para>Destroy the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="101" column="5" bodyfile="liblava/resource/mesh.hpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a11f4fab04b0090801b10f1d6237750ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::mesh_template&lt; T &gt;::create</definition>
+        <argsstring>(device_p device, bool mapped=false, VmaMemoryUsage memory_usage=VMA_MEMORY_USAGE_CPU_TO_GPU)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::mesh_template::create</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mapped</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>VmaMemoryUsage</type>
+          <declname>memory_usage</declname>
+          <defval>VMA_MEMORY_USAGE_CPU_TO_GPU</defval>
+        </param>
+        <briefdescription>
+<para>Create a new mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mapped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map mesh data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memory_usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Memory usage </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="112" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="359" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1ac931db5680dd91101a987296b53e960c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::mesh_template::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="119" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="298" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a977d87b340a7c9f048c53f616096ed2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::bind</definition>
+        <argsstring>(VkCommandBuffer cmd_buf) const</argsstring>
+        <name>bind</name>
+        <qualifiedname>lava::mesh_template::bind</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Bind the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="125" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="266" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a46507f22f7fc1151fd3f94edb027dcc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::draw</definition>
+        <argsstring>(VkCommandBuffer cmd_buf) const</argsstring>
+        <name>draw</name>
+        <qualifiedname>lava::mesh_template::draw</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Draw the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="131" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="285" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1aeb011c73afe5340e9a72574f2d2c333f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::bind_draw</definition>
+        <argsstring>(VkCommandBuffer cmd_buf) const</argsstring>
+        <name>bind_draw</name>
+        <qualifiedname>lava::mesh_template::bind_draw</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Bind and draw the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="137" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1aed03147c43b3f14db7622c6183e11b59" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::mesh_template&lt; T &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>lava::mesh_template::empty</qualifiedname>
+        <briefdescription>
+<para>Check if mesh is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Mesh is empty or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="146" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a25a6fab4f8ce6532389a8e88d4ef700d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::set_data</definition>
+        <argsstring>(mesh_template_data&lt; T &gt; const &amp;value)</argsstring>
+        <name>set_data</name>
+        <qualifiedname>lava::mesh_template::set_data</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1mesh__template__data" kindref="compound">mesh_template_data</ref>&lt; T &gt; const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the mesh data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="154" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1acbbf206ddeba856352db1c42862bed59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template__data" kindref="compound">mesh_template_data</ref>&lt; T &gt; &amp;</type>
+        <definition>mesh_template_data&lt; T &gt; &amp; lava::mesh_template&lt; T &gt;::get_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_data</name>
+        <qualifiedname>lava::mesh_template::get_data</qualifiedname>
+        <briefdescription>
+<para>Get the mesh data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>mesh_data&amp; Mesh data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="162" column="24" bodyfile="liblava/resource/mesh.hpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a8b110080cb6cb594a0c51584ef1dce57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::mesh_template&lt; T &gt;::add_data</definition>
+        <argsstring>(mesh_template_data&lt; T &gt; const &amp;value)</argsstring>
+        <name>add_data</name>
+        <qualifiedname>lava::mesh_template::add_data</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1mesh__template__data" kindref="compound">mesh_template_data</ref>&lt; T &gt; const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add mesh data to existing data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh data to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="170" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a4f5449dbed9c68def2e84cdbd97bb25a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template_1a07b101db9b60f2a36dff0f6581d3284a" kindref="member">vertex_list</ref> &amp;</type>
+        <definition>vertex_list &amp; lava::mesh_template&lt; T &gt;::get_vertices</definition>
+        <argsstring>()</argsstring>
+        <name>get_vertices</name>
+        <qualifiedname>lava::mesh_template::get_vertices</qualifiedname>
+        <briefdescription>
+<para>Get the vertices of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1vertex_1a6eabb986548885259ae4b96c5c48a498" kindref="member">vertex::list</ref>&amp; List of vertices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="178" column="17" bodyfile="liblava/resource/mesh.hpp" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1af19bbd42de50c795c13f5607cf53c3ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template_1a07b101db9b60f2a36dff0f6581d3284a" kindref="member">vertex_list</ref> const &amp;</type>
+        <definition>vertex_list const  &amp; lava::mesh_template&lt; T &gt;::get_vertices</definition>
+        <argsstring>() const</argsstring>
+        <name>get_vertices</name>
+        <qualifiedname>lava::mesh_template::get_vertices</qualifiedname>
+        <briefdescription>
+<para>Get the const vertices of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1vertex_1a6eabb986548885259ae4b96c5c48a498" kindref="member">vertex::list</ref> const&amp; List of vertices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="186" column="23" bodyfile="liblava/resource/mesh.hpp" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a2d2462d0bd17f2996f192a1c83e11844" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::mesh_template&lt; T &gt;::get_vertices_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_vertices_count</name>
+        <qualifiedname>lava::mesh_template::get_vertices_count</qualifiedname>
+        <briefdescription>
+<para>Get the vertices count of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ui32 Number of vertices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="194" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a6a33cb7f77dbad21a3b7fada5a751fb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a7699eec82092d0a53bea2ffd4c548819" kindref="member">index_list</ref> &amp;</type>
+        <definition>index_list &amp; lava::mesh_template&lt; T &gt;::get_indices</definition>
+        <argsstring>()</argsstring>
+        <name>get_indices</name>
+        <qualifiedname>lava::mesh_template::get_indices</qualifiedname>
+        <briefdescription>
+<para>Get the indices of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index_list&amp; List of indices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="202" column="16" bodyfile="liblava/resource/mesh.hpp" bodystart="202" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a13e0ed80437c331a4e56b20d3f816465" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a7699eec82092d0a53bea2ffd4c548819" kindref="member">index_list</ref> const &amp;</type>
+        <definition>index_list const  &amp; lava::mesh_template&lt; T &gt;::get_indices</definition>
+        <argsstring>() const</argsstring>
+        <name>get_indices</name>
+        <qualifiedname>lava::mesh_template::get_indices</qualifiedname>
+        <briefdescription>
+<para>Get the const indices of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index_list const&amp; List of indices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="210" column="22" bodyfile="liblava/resource/mesh.hpp" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1aed0db990910482de9b21f3809413468d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::mesh_template&lt; T &gt;::get_indices_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_indices_count</name>
+        <qualifiedname>lava::mesh_template::get_indices_count</qualifiedname>
+        <briefdescription>
+<para>Get the indices count of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ui32 Number of indices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="218" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a53fe723a0b3f47a733aad3c42048b78e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::mesh_template&lt; T &gt;::reload</definition>
+        <argsstring>()</argsstring>
+        <name>reload</name>
+        <qualifiedname>lava::mesh_template::reload</qualifiedname>
+        <briefdescription>
+<para>Reload the mesh data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reload was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="226" column="10" bodyfile="liblava/resource/mesh.hpp" bodystart="306" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1ac74e137ae3e0e824ee1c93fbcbb663be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref></type>
+        <definition>buffer::ptr lava::mesh_template&lt; T &gt;::get_vertex_buffer</definition>
+        <argsstring>()</argsstring>
+        <name>get_vertex_buffer</name>
+        <qualifiedname>lava::mesh_template::get_vertex_buffer</qualifiedname>
+        <briefdescription>
+<para>Get the vertex buffer of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref> Shared pointer to buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="232" column="17" bodyfile="liblava/resource/mesh.hpp" bodystart="232" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mesh__template_1a28b21cb65d9cd1b22141c76a8c68aa7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref></type>
+        <definition>buffer::ptr lava::mesh_template&lt; T &gt;::get_index_buffer</definition>
+        <argsstring>()</argsstring>
+        <name>get_index_buffer</name>
+        <qualifiedname>lava::mesh_template::get_index_buffer</qualifiedname>
+        <briefdescription>
+<para>Get the index buffer of the mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1buffer_1aeb4a99e41042625662a6ae68fae772e9" kindref="member">buffer::ptr</ref> Shared pointer to buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/mesh.hpp" line="240" column="17" bodyfile="liblava/resource/mesh.hpp" bodystart="240" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Temporary templated mesh. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertex struct typename </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::mesh_template&lt; T &gt;</label>
+        <link refid="structlava_1_1mesh__template"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::mesh_template&lt; T &gt;</label>
+        <link refid="structlava_1_1mesh__template"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/resource/mesh.hpp" line="77" column="1" bodyfile="liblava/resource/mesh.hpp" bodystart="77" bodyend="262"/>
+    <listofallmembers>
+      <member refid="structlava_1_1mesh__template_1a8b110080cb6cb594a0c51584ef1dce57" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>add_data</name></member>
+      <member refid="structlava_1_1mesh__template_1a977d87b340a7c9f048c53f616096ed2f" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>bind</name></member>
+      <member refid="structlava_1_1mesh__template_1aeb011c73afe5340e9a72574f2d2c333f" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>bind_draw</name></member>
+      <member refid="structlava_1_1mesh__template_1a11f4fab04b0090801b10f1d6237750ad" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>create</name></member>
+      <member refid="structlava_1_1mesh__template_1aab3aeeba5d0e47b2f5c4f756b4ef7ce1" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>data</name></member>
+      <member refid="structlava_1_1mesh__template_1ac931db5680dd91101a987296b53e960c" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>destroy</name></member>
+      <member refid="structlava_1_1mesh__template_1a4449956626996b5fcab9d36b1510a8bf" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>device</name></member>
+      <member refid="structlava_1_1mesh__template_1a46507f22f7fc1151fd3f94edb027dcc5" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>draw</name></member>
+      <member refid="structlava_1_1mesh__template_1aed03147c43b3f14db7622c6183e11b59" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>empty</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>entity</name></member>
+      <member refid="structlava_1_1mesh__template_1acbbf206ddeba856352db1c42862bed59" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_data</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_id</name></member>
+      <member refid="structlava_1_1mesh__template_1a28b21cb65d9cd1b22141c76a8c68aa7a" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_index_buffer</name></member>
+      <member refid="structlava_1_1mesh__template_1a6a33cb7f77dbad21a3b7fada5a751fb3" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_indices</name></member>
+      <member refid="structlava_1_1mesh__template_1a13e0ed80437c331a4e56b20d3f816465" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_indices</name></member>
+      <member refid="structlava_1_1mesh__template_1aed0db990910482de9b21f3809413468d" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_indices_count</name></member>
+      <member refid="structlava_1_1mesh__template_1ac74e137ae3e0e824ee1c93fbcbb663be" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_vertex_buffer</name></member>
+      <member refid="structlava_1_1mesh__template_1a4f5449dbed9c68def2e84cdbd97bb25a" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_vertices</name></member>
+      <member refid="structlava_1_1mesh__template_1af19bbd42de50c795c13f5607cf53c3ef" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_vertices</name></member>
+      <member refid="structlava_1_1mesh__template_1a2d2462d0bd17f2996f192a1c83e11844" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>get_vertices_count</name></member>
+      <member refid="structlava_1_1mesh__template_1a1782a20bfeecba9294ebe14a21dd1022" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>index_buffer</name></member>
+      <member refid="structlava_1_1mesh__template_1aa27ab03391e6618968117f056df72af9" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>list</name></member>
+      <member refid="structlava_1_1mesh__template_1a8795fca67bd15039034f010d8e383249" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>make</name></member>
+      <member refid="structlava_1_1mesh__template_1abd46ec7277958aff02fc1b06b461573e" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>map</name></member>
+      <member refid="structlava_1_1mesh__template_1a5d17068e52bd309d0781fb51b2f208dc" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>mapped</name></member>
+      <member refid="structlava_1_1mesh__template_1adab3933cd55277f43f80d28c3ee3cf9d" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>memory_usage</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>operator=</name></member>
+      <member refid="structlava_1_1mesh__template_1a208bb4e7653b421e36212a28bf435cea" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>ptr</name></member>
+      <member refid="structlava_1_1mesh__template_1a53fe723a0b3f47a733aad3c42048b78e" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>reload</name></member>
+      <member refid="structlava_1_1mesh__template_1a25a6fab4f8ce6532389a8e88d4ef700d" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>set_data</name></member>
+      <member refid="structlava_1_1mesh__template_1a7263291bb4af50a41d90d9f37dff7202" prot="private" virt="non-virtual"><scope>lava::mesh_template</scope><name>vertex_buffer</name></member>
+      <member refid="structlava_1_1mesh__template_1a07b101db9b60f2a36dff0f6581d3284a" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>vertex_list</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::mesh_template</scope><name>~interface</name></member>
+      <member refid="structlava_1_1mesh__template_1ae7534d966bb2e9d5ab383406d8363722" prot="public" virt="non-virtual"><scope>lava::mesh_template</scope><name>~mesh_template</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

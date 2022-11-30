@@ -1,0 +1,132 @@
+\hypertarget{render__pass_8hpp_source}{}\doxysection{render\+\_\+pass.\+hpp}
+\label{render__pass_8hpp_source}\index{liblava/block/render\_pass.hpp@{liblava/block/render\_pass.hpp}}
+\mbox{\hyperlink{render__pass_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{device_8hpp}{liblava/base/device.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{attachment_8hpp}{liblava/block/attachment.hpp}}>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{subpass_8hpp}{liblava/block/subpass.hpp}}>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1render__pass}{render\_pass}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{21     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1render__pass_acbb02af259140b938fcf3ef50b429e1a}{ptr}} = std::shared\_ptr<render\_pass>;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{24     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1render__pass_a712405cac25b89f4c1145aadd33cd618}{list}} = std::vector<ptr>;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{31     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1render__pass_acbb02af259140b938fcf3ef50b429e1a}{ptr}} \mbox{\hyperlink{structlava_1_1render__pass_a17a9ac6369c8bc37ad6b7498627770eb}{make}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}}) \{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} std::make\_shared<render\_pass>(\mbox{\hyperlink{structlava_1_1device}{device}});}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1render__pass_a7955ac6b0d107eb4ca57f407e06dc538}{render\_pass}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}});}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1render__pass_a78221218aef07a24578820956123dd8a}{create}}(\mbox{\hyperlink{base_2base_8hpp_a5773d0dd9bf940d230687680a4f4ce39}{VkAttachmentsRef}} target\_attachments,}
+\DoxyCodeLine{48                 \mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{rect::ref}} area);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_a5f05533d4ef4390159efbc8c28db7c65}{destroy}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_ac05d958ee34c68f606d7c313ae30a970}{process}}(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{61                  \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1frame}{frame}});}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1render__pass_a020b91685750179d16939ad023426fdf}{get\_device}}() \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     VkRenderPass \mbox{\hyperlink{structlava_1_1render__pass_a3cf22a97116c4740f683a78a8f62f93c}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} vk\_render\_pass;}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1render__pass_add1bcc7c7fe347bbb63975fa052037c3}{get\_subpass\_count}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(subpasses.size());}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1render__pass_adde61aee8afe6ed24140298a3e3a7980}{exists\_subpass}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} = 0)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} < subpasses.size();}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101     \mbox{\hyperlink{structlava_1_1subpass}{subpass}}* \mbox{\hyperlink{structlava_1_1render__pass_af60ff6646b107eeb4749d5e56b826dda}{get\_subpass}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} = 0) \{}
+\DoxyCodeLine{102         \textcolor{keywordflow}{return} subpasses.at(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}).get();}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109     \mbox{\hyperlink{structlava_1_1subpass_a951adc671287bc864b05210f30ffa577}{subpass::list}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1render__pass_a1c5527a5de3f340497871c05e95c43a2}{get\_subpasses}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{110         \textcolor{keywordflow}{return} subpasses;}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_a0d9f4fd9a939d73b1e18306dca18a8dd}{add}}(\mbox{\hyperlink{structlava_1_1attachment_a5dfe0eb2af2f6551b0a9daa1cf07c4c9}{attachment::ptr}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1attachment}{attachment}}) \{}
+\DoxyCodeLine{118         attachments.push\_back(\mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_aeac138df022321adc3e4637b2ddadbf7}{add}}(\mbox{\hyperlink{structlava_1_1subpass__dependency_a8727fb5ce3d49767ba8ca9e88d412958}{subpass\_dependency::ptr}} \textcolor{keyword}{const}\& dependency) \{}
+\DoxyCodeLine{126         dependencies.push\_back(dependency);}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_a762f756470af6f2915089b6962b9ea82}{add}}(\mbox{\hyperlink{structlava_1_1subpass_a41cb0524051a3bfa4c3318b61ab6a64e}{subpass::ptr}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1subpass}{subpass}}) \{}
+\DoxyCodeLine{134         subpasses.push\_back(\mbox{\hyperlink{structlava_1_1subpass}{subpass}});}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_a714f010d5873210d139aef95568e5a81}{set\_clear\_values}}(\mbox{\hyperlink{base_2base_8hpp_a85f0ec9daabd697f93584830c0fa0273}{VkClearValues}} \textcolor{keyword}{const}\& values) \{}
+\DoxyCodeLine{142         clear\_values = values;}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{149     \mbox{\hyperlink{base_2base_8hpp_a85f0ec9daabd697f93584830c0fa0273}{VkClearValues}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1render__pass_af0d5e8574d21d2d25fe093aa09494cb3}{get\_clear\_values}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{return} clear\_values;}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_ad319cf1e33f1825dea9e39a0dca3b538}{set\_clear\_color}}(\mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}} value = \{\});}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{163     \mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}} \mbox{\hyperlink{structlava_1_1render__pass_a73bcdb3a9f8765397e156eb3bc6f9a1d}{get\_clear\_color}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{170     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_a2dd2dc31c1fd14fdfdc3fc3ea4ab797f}{add}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7247e9c70198510c35adff01c2b94d49}{render\_pipeline::ptr}} \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}},}
+\DoxyCodeLine{171              \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1subpass}{subpass}} = 0) \{}
+\DoxyCodeLine{172         subpasses.at(\mbox{\hyperlink{structlava_1_1subpass}{subpass}})-\/>add(\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{173     \}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{180     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_ade5a98421750ece8ee0f8bb2f58d9ffe}{add\_front}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7247e9c70198510c35adff01c2b94d49}{render\_pipeline::ptr}} \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}},}
+\DoxyCodeLine{181                    \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1subpass}{subpass}} = 0) \{}
+\DoxyCodeLine{182         subpasses.at(\mbox{\hyperlink{structlava_1_1subpass}{subpass}})-\/>add\_front(\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{183     \}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{190     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1render__pass_ac17fe43362633e6586bb8471d92a2e7f}{remove}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7247e9c70198510c35adff01c2b94d49}{render\_pipeline::ptr}} \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}},}
+\DoxyCodeLine{191                 \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1subpass}{subpass}} = 0) \{}
+\DoxyCodeLine{192         subpasses.at(\mbox{\hyperlink{structlava_1_1subpass}{subpass}})-\/>remove(\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{199     \mbox{\hyperlink{structlava_1_1target__callback}{target\_callback}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1render__pass_a97f73b004d58836f92bff74b9cfea353}{get\_target\_callback}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{200         \textcolor{keywordflow}{return} callback;}
+\DoxyCodeLine{201     \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{keyword}{private}:}
+\DoxyCodeLine{205     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{208     VkRenderPass vk\_render\_pass = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{211     \mbox{\hyperlink{base_2base_8hpp_a00f1f9cbd595232aa1896d37885d4aa2}{VkFramebuffers}} framebuffers = \{\};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{214     \mbox{\hyperlink{structlava_1_1attachment_aa091a192af03969494d666fcb4c0d115}{attachment::list}} attachments;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{217     \mbox{\hyperlink{structlava_1_1subpass__dependency_ae11a4192138aa1afb6903e644971403d}{subpass\_dependency::list}} dependencies;}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{220     \mbox{\hyperlink{structlava_1_1subpass_a951adc671287bc864b05210f30ffa577}{subpass::list}} subpasses;}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{223     VkClearValues clear\_values = \{\};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{226     rect area;}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{229     target\_callback callback;}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{236     \textcolor{keywordtype}{void} begin(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{237                index frame);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{243     \textcolor{keywordtype}{void} end(VkCommandBuffer cmd\_buf);}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{251     \textcolor{keywordtype}{bool} on\_target\_created(VkAttachmentsRef target\_attachments,}
+\DoxyCodeLine{252                            \mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{rect::ref}} area);}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{257     \textcolor{keywordtype}{void} on\_target\_destroyed();}
+\DoxyCodeLine{258 \};}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

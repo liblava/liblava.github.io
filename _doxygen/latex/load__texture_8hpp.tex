@@ -1,0 +1,101 @@
+\hypertarget{load__texture_8hpp}{}\doxysection{liblava/asset/load\+\_\+texture.hpp File Reference}
+\label{load__texture_8hpp}\index{liblava/asset/load\_texture.hpp@{liblava/asset/load\_texture.hpp}}
+
+
+Load texture from file.  
+
+
+{\ttfamily \#include $<$liblava/resource/texture.\+hpp$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+texture\+::ptr \mbox{\hyperlink{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}{lava\+::load\+\_\+texture}} (device\+\_\+p device, file\+\_\+format file\+\_\+format, texture\+\_\+type type=texture\+\_\+type\+::tex\+\_\+2d)
+\begin{DoxyCompactList}\small\item\em Load texture from file. \end{DoxyCompactList}\item 
+texture\+::ptr \mbox{\hyperlink{load__texture_8hpp_accb9eae242f5a9a9b1b4ecdbda871eac}{lava\+::load\+\_\+texture}} (device\+\_\+p device, string\+\_\+ref filename, Vk\+Format format=VK\+\_\+\+FORMAT\+\_\+\+R8\+G8\+B8\+A8\+\_\+\+SRGB, texture\+\_\+type type=texture\+\_\+type\+::tex\+\_\+2d)
+\begin{DoxyCompactList}\small\item\em Load texture from file with default format (s\+RGB) \end{DoxyCompactList}\item 
+texture\+::ptr \mbox{\hyperlink{load__texture_8hpp_a80b0e0a2dcfb93c10cf9443683d0398b}{lava\+::create\+\_\+default\+\_\+texture}} (device\+\_\+p device, uv2 size=\{ 512, 512 \}, v3 color=v3(1.f), r32 alpha=0.\+7529f)
+\begin{DoxyCompactList}\small\item\em Create a default texture with checkerboard pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Load texture from file. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{load__texture_8hpp_a80b0e0a2dcfb93c10cf9443683d0398b}\label{load__texture_8hpp_a80b0e0a2dcfb93c10cf9443683d0398b}} 
+\index{load\_texture.hpp@{load\_texture.hpp}!create\_default\_texture@{create\_default\_texture}}
+\index{create\_default\_texture@{create\_default\_texture}!load\_texture.hpp@{load\_texture.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_default\_texture()}{create\_default\_texture()}}
+{\footnotesize\ttfamily texture\+::ptr lava\+::create\+\_\+default\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}}}]{size = {\ttfamily \{~512,~512~\}},  }\item[{\mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}}}]{color = {\ttfamily \mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}}(1.f)},  }\item[{\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}}}]{alpha = {\ttfamily 0.7529f} }\end{DoxyParamCaption})}
+
+
+
+Create a default texture with checkerboard pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em size} & Size of texture \\
+\hline
+{\em color} & Color of texture \\
+\hline
+{\em alpha} & Alpha value of texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+texture\+::ptr Loaded texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}\label{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}} 
+\index{load\_texture.hpp@{load\_texture.hpp}!load\_texture@{load\_texture}}
+\index{load\_texture@{load\_texture}!load\_texture.hpp@{load\_texture.hpp}}
+\doxysubsubsection{\texorpdfstring{load\_texture()}{load\_texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily texture\+::ptr lava\+::load\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{structlava_1_1file__format}{file\+\_\+format}}}]{file\+\_\+format,  }\item[{\mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}}}]{type = {\ttfamily texture\+\_\+type\+:\+:tex\+\_\+2d} }\end{DoxyParamCaption})}
+
+
+
+Load texture from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em file\+\_\+format} & File and format \\
+\hline
+{\em type} & Type of texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+texture\+::ptr Loaded texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{load__texture_8hpp_accb9eae242f5a9a9b1b4ecdbda871eac}\label{load__texture_8hpp_accb9eae242f5a9a9b1b4ecdbda871eac}} 
+\index{load\_texture.hpp@{load\_texture.hpp}!load\_texture@{load\_texture}}
+\index{load\_texture@{load\_texture}!load\_texture.hpp@{load\_texture.hpp}}
+\doxysubsubsection{\texorpdfstring{load\_texture()}{load\_texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily texture\+::ptr lava\+::load\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{filename,  }\item[{Vk\+Format}]{format = {\ttfamily VK\+\_\+FORMAT\+\_\+R8G8B8A8\+\_\+SRGB},  }\item[{\mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}}}]{type = {\ttfamily texture\+\_\+type\+:\+:tex\+\_\+2d} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load texture from file with default format (s\+RGB) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em filename} & File to load \\
+\hline
+{\em format} & Format of texture \\
+\hline
+{\em type} & Type of texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+texture\+::ptr Loaded texture 
+\end{DoxyReturn}

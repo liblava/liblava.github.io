@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1pipeline_1_1shader__stage" kind="struct" language="C++" prot="public">
+    <compoundname>lava::pipeline::shader_stage</compoundname>
+    <includes refid="pipeline_8hpp" local="no">pipeline.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1pipeline_1_1shader__stage_1ac6814b7ab69f749b55c6536f914da31c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1pipeline_1_1shader__stage" kindref="compound">shader_stage</ref> &gt;</type>
+        <definition>using lava::pipeline::shader_stage::ptr =  std::shared_ptr&lt;shader_stage&gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::pipeline::shader_stage::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="144" column="9" bodyfile="liblava/block/pipeline.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1pipeline_1_1shader__stage_1a9f070d883bb1ad716c1ffea62c529e9a" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1pipeline_1_1shader__stage_1ac6814b7ab69f749b55c6536f914da31c" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::pipeline::shader_stage::list =  std::vector&lt;ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::pipeline::shader_stage::list</qualifiedname>
+        <briefdescription>
+<para>List of shader stages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="147" column="9" bodyfile="liblava/block/pipeline.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1pipeline_1_1shader__stage_1a0d02f6ab923d65e08a37118fdee6dc3e" prot="private" static="no" mutable="no">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::pipeline::shader_stage::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>lava::pipeline::shader_stage::device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="210" column="18" bodyfile="liblava/block/pipeline.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1_1shader__stage_1a188c63361ee0c4c0ad9e6488bf95820d" prot="private" static="no" mutable="no">
+        <type>VkPipelineShaderStageCreateInfo</type>
+        <definition>VkPipelineShaderStageCreateInfo lava::pipeline::shader_stage::create_info</definition>
+        <argsstring></argsstring>
+        <name>create_info</name>
+        <qualifiedname>lava::pipeline::shader_stage::create_info</qualifiedname>
+        <briefdescription>
+<para>Pipeline shader stage create information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="213" column="41" bodyfile="liblava/block/pipeline.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1_1shader__stage_1ab9898758e1cdca2c697cf1dc7628efb0" prot="private" static="no" mutable="no">
+        <type>VkSpecializationInfo</type>
+        <definition>VkSpecializationInfo lava::pipeline::shader_stage::specialization_info</definition>
+        <argsstring></argsstring>
+        <name>specialization_info</name>
+        <qualifiedname>lava::pipeline::shader_stage::specialization_info</qualifiedname>
+        <briefdescription>
+<para>Secialization information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="216" column="30" bodyfile="liblava/block/pipeline.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1_1shader__stage_1ab86c8c67e2953a7b95cad1bae361e5ab" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a0a689471d9bd5cce31f325eb57e603e8" kindref="member">VkSpecializationMapEntries</ref></type>
+        <definition>VkSpecializationMapEntries lava::pipeline::shader_stage::specialization_entries</definition>
+        <argsstring></argsstring>
+        <name>specialization_entries</name>
+        <qualifiedname>lava::pipeline::shader_stage::specialization_entries</qualifiedname>
+        <briefdescription>
+<para>Map of specialization entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="219" column="36" bodyfile="liblava/block/pipeline.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1_1shader__stage_1a80f03293b325d2e9560b51138818170c" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1data" kindref="compound">data</ref></type>
+        <definition>data lava::pipeline::shader_stage::specialization_data_copy</definition>
+        <argsstring></argsstring>
+        <name>specialization_data_copy</name>
+        <qualifiedname>lava::pipeline::shader_stage::specialization_data_copy</qualifiedname>
+        <briefdescription>
+<para>Specialization data copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="222" column="14" bodyfile="liblava/block/pipeline.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a4e36def67d37fa5fc0a692c01e46df7d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1pipeline_1_1shader__stage_1ac6814b7ab69f749b55c6536f914da31c" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::pipeline::shader_stage::make</definition>
+        <argsstring>(VkShaderStageFlagBits stage)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::pipeline::shader_stage::make</qualifiedname>
+        <param>
+          <type>VkShaderStageFlagBits</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+<para>Make a new pipline shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader stage flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ptr Shared pointer to shader stage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="154" column="20" bodyfile="liblava/block/pipeline.hpp" bodystart="154" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1aac5cb6267f90a39648d054ab70bb42b8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::pipeline::shader_stage::shader_stage</definition>
+        <argsstring>()</argsstring>
+        <name>shader_stage</name>
+        <qualifiedname>lava::pipeline::shader_stage::shader_stage</qualifiedname>
+        <briefdescription>
+<para>Construct a new shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="163" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a4ee08e0d178f57a04af32547d2be203e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::pipeline::shader_stage::~shader_stage</definition>
+        <argsstring>()</argsstring>
+        <name>~shader_stage</name>
+        <qualifiedname>lava::pipeline::shader_stage::~shader_stage</qualifiedname>
+        <briefdescription>
+<para>Destroy the shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="168" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a6b1a08bafcc720d2a5f5db441d209c9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::shader_stage::set_stage</definition>
+        <argsstring>(VkShaderStageFlagBits stage)</argsstring>
+        <name>set_stage</name>
+        <qualifiedname>lava::pipeline::shader_stage::set_stage</qualifiedname>
+        <param>
+          <type>VkShaderStageFlagBits</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+<para>Set the stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader stage flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="174" column="14" bodyfile="liblava/block/pipeline.hpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a67900963fdfb36001441b4a380e1a7f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::shader_stage::add_specialization_entry</definition>
+        <argsstring>(VkSpecializationMapEntry const &amp;specialization)</argsstring>
+        <name>add_specialization_entry</name>
+        <qualifiedname>lava::pipeline::shader_stage::add_specialization_entry</qualifiedname>
+        <param>
+          <type>VkSpecializationMapEntry const &amp;</type>
+          <declname>specialization</declname>
+        </param>
+        <briefdescription>
+<para>Add specialization entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>specialization</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specialization map entry </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="182" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a81445cc401eb0103e13ed7d52e490020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline::shader_stage::create</definition>
+        <argsstring>(device_p device, cdata::ref shader_data, cdata::ref specialization_data=data())</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::pipeline::shader_stage::create</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1cdata_1a31b62cc479b79c95a98ed8e832fbbb19" kindref="member">cdata::ref</ref></type>
+          <declname>shader_data</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1cdata_1a31b62cc479b79c95a98ed8e832fbbb19" kindref="member">cdata::ref</ref></type>
+          <declname>specialization_data</declname>
+          <defval><ref refid="structlava_1_1data" kindref="compound">data</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Create a new shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shader_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>specialization_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specialization data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="191" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1aa826abf80a9ec82bd11da7661120867c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::shader_stage::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::pipeline::shader_stage::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="198" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1_1shader__stage_1a021703473c95cf5e6bebf12270669daf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPipelineShaderStageCreateInfo const &amp;</type>
+        <definition>VkPipelineShaderStageCreateInfo const  &amp; lava::pipeline::shader_stage::get_create_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_create_info</name>
+        <qualifiedname>lava::pipeline::shader_stage::get_create_info</qualifiedname>
+        <briefdescription>
+<para>Get the create info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPipelineShaderStageCreateInfo const&amp; Pipeline shader stage create information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="204" column="47" bodyfile="liblava/block/pipeline.hpp" bodystart="204" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Shader stage. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/block/pipeline.hpp" line="142" column="5" bodyfile="liblava/block/pipeline.hpp" bodystart="142" bodyend="223"/>
+    <listofallmembers>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a67900963fdfb36001441b4a380e1a7f0" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>add_specialization_entry</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a81445cc401eb0103e13ed7d52e490020" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>create</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a188c63361ee0c4c0ad9e6488bf95820d" prot="private" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>create_info</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1aa826abf80a9ec82bd11da7661120867c" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>destroy</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a0d02f6ab923d65e08a37118fdee6dc3e" prot="private" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>device</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a021703473c95cf5e6bebf12270669daf" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>get_create_info</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a9f070d883bb1ad716c1ffea62c529e9a" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>list</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a4e36def67d37fa5fc0a692c01e46df7d" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>make</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1ac6814b7ab69f749b55c6536f914da31c" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>ptr</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a6b1a08bafcc720d2a5f5db441d209c9e" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>set_stage</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1aac5cb6267f90a39648d054ab70bb42b8" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>shader_stage</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a80f03293b325d2e9560b51138818170c" prot="private" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>specialization_data_copy</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1ab86c8c67e2953a7b95cad1bae361e5ab" prot="private" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>specialization_entries</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1ab9898758e1cdca2c697cf1dc7628efb0" prot="private" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>specialization_info</name></member>
+      <member refid="structlava_1_1pipeline_1_1shader__stage_1a4ee08e0d178f57a04af32547d2be203e" prot="public" virt="non-virtual"><scope>lava::pipeline::shader_stage</scope><name>~shader_stage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

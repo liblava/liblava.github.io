@@ -1,0 +1,141 @@
+\hypertarget{image_8hpp_source}{}\doxysection{image.\+hpp}
+\label{image_8hpp_source}\index{liblava/resource/image.hpp@{liblava/resource/image.hpp}}
+\mbox{\hyperlink{image_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{device_8hpp}{liblava/base/device.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1image}{image}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{19     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{ptr}} = std::shared\_ptr<image>;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1image_a13e3e101c6f03b3f42ba819495496a5e}{map}} = std::map<id, ptr>;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1image_a9bc2dd233667119ba2ab657b587394f1}{list}} = std::vector<ptr>;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{ptr}} \mbox{\hyperlink{structlava_1_1image_ad74ace32932fb633f90936246d66b317}{make}}(VkFormat format,}
+\DoxyCodeLine{34                     VkImage vk\_image = 0) \{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} std::make\_shared<image>(format, vk\_image);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1image_ae408421e055cf4cf8449334d2c1444ec}{image}}(VkFormat format,}
+\DoxyCodeLine{44                    VkImage vk\_image = 0);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1image_a348cb2774adb0e7ec5063605bedd8bc0}{create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{55                 \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size,}
+\DoxyCodeLine{56                 VmaMemoryUsage memory\_usage = VMA\_MEMORY\_USAGE\_GPU\_ONLY,}
+\DoxyCodeLine{57                 \textcolor{keywordtype}{bool} mip\_levels\_generation = \textcolor{keyword}{false});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a308969f30821832171034ae067ec8b50}{destroy}}(\textcolor{keywordtype}{bool} view\_only = \textcolor{keyword}{false});}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a5ce4b73da358d7ca1129804cc42eeace}{destroy\_view}}() \{}
+\DoxyCodeLine{69         \mbox{\hyperlink{structlava_1_1image_a308969f30821832171034ae067ec8b50}{destroy}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1image_a11b47a0dc1c7c192e5beaaae754cb16f}{get\_device}}() \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{84     VkFormat \mbox{\hyperlink{structlava_1_1image_a56326b157b1065baa6ec7ce62df91f37}{get\_format}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} info.format;}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1image_a8235e7dde660a605abb4a411a015e108}{get\_size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \{ info.extent.width, info.extent.height \};}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{100     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1image_ae64efbe5c3f454f790344c11e4565699}{get\_depth}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} info.extent.depth;}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{108     VkImage \mbox{\hyperlink{structlava_1_1image_a41636ba2594ebc4d6e677fcb0e542fff}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{109         \textcolor{keywordflow}{return} vk\_image;}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{116     VkImageView \mbox{\hyperlink{structlava_1_1image_a6843bc71f3f1a318b2ebbcd529235ac4}{get\_view}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{117         \textcolor{keywordflow}{return} view;}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{124     VkImageCreateInfo \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1image_a67a1de54b0819057b3c9e2c22a6d42e1}{get\_info}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} info;}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{132     VkImageViewCreateInfo \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1image_a89c804c726969818437a42c5ecaeefe4}{get\_view\_info}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{133         \textcolor{keywordflow}{return} view\_info;}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140     VkImageSubresourceRange \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1image_af01ce34733cc4673f388613f133eb7eb}{get\_subresource\_range}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{141         \textcolor{keywordflow}{return} subresource\_range;}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{148     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a6847a06bb922f563c7d5e195de374948}{set\_flags}}(VkImageCreateFlagBits flags) \{}
+\DoxyCodeLine{149         info.flags = flags;}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{156     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a53b8e4b378090fc6f960c65b3bddf3a8}{set\_tiling}}(VkImageTiling tiling) \{}
+\DoxyCodeLine{157         info.tiling = tiling;}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a929f1c26de399381e60e4bde5368a243}{set\_usage}}(VkImageUsageFlags usage) \{}
+\DoxyCodeLine{165         info.usage = usage;}
+\DoxyCodeLine{166     \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{172     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a5b961f80dd743811785660a381e7ca19}{set\_layout}}(VkImageLayout initial) \{}
+\DoxyCodeLine{173         info.initialLayout = initial;}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{180     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_ab1faf46398b75f5bd89392c0e29985c8}{set\_aspect\_mask}}(VkImageAspectFlags aspectMask) \{}
+\DoxyCodeLine{181         subresource\_range.aspectMask = aspectMask;}
+\DoxyCodeLine{182     \}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{188     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a382972307f78457d7e6e5d5e7645fc78}{set\_level\_count}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} levels) \{}
+\DoxyCodeLine{189         subresource\_range.levelCount = levels;}
+\DoxyCodeLine{190         info.mipLevels = levels;}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{197     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_ab2504a00fed7465cdd398ca7d7d3208b}{set\_layer\_count}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} layers) \{}
+\DoxyCodeLine{198         subresource\_range.layerCount = layers;}
+\DoxyCodeLine{199         info.arrayLayers = layers;}
+\DoxyCodeLine{200     \}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{206     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a13c8acbfca50f5f260390367c3b79e62}{set\_component}}(VkComponentMapping mapping = \{\}) \{}
+\DoxyCodeLine{207         view\_info.components = mapping;}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{214     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1image_a94c015f268b6b831caa5c5738b0f63e6}{set\_view\_type}}(VkImageViewType type) \{}
+\DoxyCodeLine{215         view\_info.viewType = type;}
+\DoxyCodeLine{216     \}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{222     VmaAllocation \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1image_a722042abfe8806799de7bd50d035dbb9}{get\_allocation}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{223         \textcolor{keywordflow}{return} allocation;}
+\DoxyCodeLine{224     \}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \textcolor{keyword}{private}:}
+\DoxyCodeLine{228     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{231     VkImage vk\_image = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{234     VkImageCreateInfo info;}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{237     VmaAllocation allocation = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{240     VkImageView view = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{243     VkImageViewCreateInfo view\_info;}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{246     VkImageSubresourceRange subresource\_range;}
+\DoxyCodeLine{247 \};}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{257 \mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image::ptr}} \mbox{\hyperlink{image_8hpp_ae3601e77afac8ca81316681f8bf71fb6}{create\_image}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{258                         VkFormat format,}
+\DoxyCodeLine{259                         \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size,}
+\DoxyCodeLine{260                         VkImage vk\_image = 0);}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{267 \mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image::ptr}} \mbox{\hyperlink{image_8hpp_a995cd8efde888c31c5477d41b2c466f0}{grab\_image}}(\mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image::ptr}} source);}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

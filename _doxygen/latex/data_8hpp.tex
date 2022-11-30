@@ -1,0 +1,253 @@
+\hypertarget{data_8hpp}{}\doxysection{liblava/core/data.hpp File Reference}
+\label{data_8hpp}\index{liblava/core/data.hpp@{liblava/core/data.hpp}}
+
+
+Data wrapper.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$liblava/core/types.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1data__provider}{lava\+::data\+\_\+provider}}
+\begin{DoxyCompactList}\small\item\em Data provider. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1data}{lava\+::data}}
+\begin{DoxyCompactList}\small\item\em Data wrapper. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1cdata}{lava\+::cdata}}
+\begin{DoxyCompactList}\small\item\em Const data wrapper. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1unique__data}{lava\+::unique\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Unique data wrapper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{data_8hpp_a23a3e2f1394e8114001ce473e939d16a}\label{data_8hpp_a23a3e2f1394e8114001ce473e939d16a}} 
+\#define {\bfseries strndup}(p,  n)~\+\_\+strdup(p)
+\begin{DoxyCompactList}\small\item\em Duplicate string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{data_8hpp_a881a414775db89883beb7572771b296b}\label{data_8hpp_a881a414775db89883beb7572771b296b}} 
+using {\bfseries lava\+::data\+\_\+ptr} = char $\ast$
+\begin{DoxyCompactList}\small\item\em Data pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}\label{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}} 
+using {\bfseries lava\+::data\+\_\+cptr} = char const  $\ast$
+\begin{DoxyCompactList}\small\item\em Const data pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}\label{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}} 
+enum class \mbox{\hyperlink{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}{lava\+::data\+\_\+mode}} \+: index \{ {\bfseries alloc} = 0
+, {\bfseries no\+\_\+alloc}
+ \}
+\begin{DoxyCompactList}\small\item\em Data modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+data\+\_\+ptr \mbox{\hyperlink{data_8hpp_a61e8b63660e7658f460421ea67a807c9}{lava\+::as\+\_\+ptr}} (auto $\ast$value)
+\begin{DoxyCompactList}\small\item\em Cast to data pointer. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{data_8hpp_a56f4c8a3f02629235b9dc4427f52db69}{lava\+::align\+\_\+up}} (auto value, auto align)
+\begin{DoxyCompactList}\small\item\em Align value up. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{data_8hpp_ab2b69c06a3aadc778c09a4242b7d29e5}{lava\+::align}} (size\+\_\+t size, size\+\_\+t min=0)
+\begin{DoxyCompactList}\small\item\em Align a size. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{data_8hpp_a5805f59ec7d4cf0ddd74b8a7d465b2b7}{lava\+::align}} (size\+\_\+t min=0)
+\begin{DoxyCompactList}\small\item\em Get alignment of type. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{data_8hpp_a5e6b9f9d4a5afd1ee0bcf24aaeff76c7}{lava\+::alloc\+\_\+data}} (size\+\_\+t size, size\+\_\+t alignment=sizeof(c8))
+\begin{DoxyCompactList}\small\item\em Allocate data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8hpp_a3f58e009deb522d7036f8dcf79298fc8}{lava\+::free\+\_\+data}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Free data. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{data_8hpp_a6e3e79a887f63ea5f818a693ca5b27d4}{lava\+::realloc\+\_\+data}} (void $\ast$data, size\+\_\+t size, size\+\_\+t alignment)
+\begin{DoxyCompactList}\small\item\em Reallocate data. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{data_8hpp_ace1d98fa03ff75fbe231dbc741c70ce3}{lava\+::next\+\_\+pow\+\_\+2}} (size\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Get next power of two. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{data_8hpp_a9b60aaffcf2a664150db47ed524b98a1}{lava\+::human\+\_\+readable}} (size\+\_\+t const sz)
+\begin{DoxyCompactList}\small\item\em Convert data size to human readable string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data wrapper. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{data_8hpp_a5805f59ec7d4cf0ddd74b8a7d465b2b7}\label{data_8hpp_a5805f59ec7d4cf0ddd74b8a7d465b2b7}} 
+\index{data.hpp@{data.hpp}!align@{align}}
+\index{align@{align}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t lava\+::align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{min = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get alignment of type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to align \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimal alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Aligned size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_ab2b69c06a3aadc778c09a4242b7d29e5}\label{data_8hpp_ab2b69c06a3aadc778c09a4242b7d29e5}} 
+\index{data.hpp@{data.hpp}!align@{align}}
+\index{align@{align}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{align()}{align()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t lava\+::align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{min = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Align a size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Site to align \\
+\hline
+{\em min} & Minimal alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Aligned size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_a56f4c8a3f02629235b9dc4427f52db69}\label{data_8hpp_a56f4c8a3f02629235b9dc4427f52db69}} 
+\index{data.hpp@{data.hpp}!align\_up@{align\_up}}
+\index{align\_up@{align\_up}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{align\_up()}{align\_up()}}
+{\footnotesize\ttfamily auto lava\+::align\+\_\+up (\begin{DoxyParamCaption}\item[{auto}]{value,  }\item[{auto}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Align value up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to align \\
+\hline
+{\em align} & Target alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Aligned value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_a5e6b9f9d4a5afd1ee0bcf24aaeff76c7}\label{data_8hpp_a5e6b9f9d4a5afd1ee0bcf24aaeff76c7}} 
+\index{data.hpp@{data.hpp}!alloc\_data@{alloc\_data}}
+\index{alloc\_data@{alloc\_data}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{alloc\_data()}{alloc\_data()}}
+{\footnotesize\ttfamily void $\ast$ lava\+::alloc\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{alignment = {\ttfamily sizeof(\mbox{\hyperlink{types_8hpp_a922252301cc85475d6d8cda8b800c502}{c8}})} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of data \\
+\hline
+{\em alignment} & Target alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ Allocated data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_a61e8b63660e7658f460421ea67a807c9}\label{data_8hpp_a61e8b63660e7658f460421ea67a807c9}} 
+\index{data.hpp@{data.hpp}!as\_ptr@{as\_ptr}}
+\index{as\_ptr@{as\_ptr}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{as\_ptr()}{as\_ptr()}}
+{\footnotesize\ttfamily data\+\_\+ptr lava\+::as\+\_\+ptr (\begin{DoxyParamCaption}\item[{auto $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cast to data pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to cast \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data\+\_\+ptr Data pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_a3f58e009deb522d7036f8dcf79298fc8}\label{data_8hpp_a3f58e009deb522d7036f8dcf79298fc8}} 
+\index{data.hpp@{data.hpp}!free\_data@{free\_data}}
+\index{free\_data@{free\_data}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{free\_data()}{free\_data()}}
+{\footnotesize\ttfamily void lava\+::free\+\_\+data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Free data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{data_8hpp_a9b60aaffcf2a664150db47ed524b98a1}\label{data_8hpp_a9b60aaffcf2a664150db47ed524b98a1}} 
+\index{data.hpp@{data.hpp}!human\_readable@{human\_readable}}
+\index{human\_readable@{human\_readable}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{human\_readable()}{human\_readable()}}
+{\footnotesize\ttfamily char $\ast$ lava\+::human\+\_\+readable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}} const}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert data size to human readable string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & Size to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ Human readable size string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_ace1d98fa03ff75fbe231dbc741c70ce3}\label{data_8hpp_ace1d98fa03ff75fbe231dbc741c70ce3}} 
+\index{data.hpp@{data.hpp}!next\_pow\_2@{next\_pow\_2}}
+\index{next\_pow\_2@{next\_pow\_2}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{next\_pow\_2()}{next\_pow\_2()}}
+{\footnotesize\ttfamily size\+\_\+t lava\+::next\+\_\+pow\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get next power of two. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Next power of two 
+\end{DoxyReturn}
+\mbox{\Hypertarget{data_8hpp_a6e3e79a887f63ea5f818a693ca5b27d4}\label{data_8hpp_a6e3e79a887f63ea5f818a693ca5b27d4}} 
+\index{data.hpp@{data.hpp}!realloc\_data@{realloc\_data}}
+\index{realloc\_data@{realloc\_data}!data.hpp@{data.hpp}}
+\doxysubsubsection{\texorpdfstring{realloc\_data()}{realloc\_data()}}
+{\footnotesize\ttfamily void $\ast$ lava\+::realloc\+\_\+data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{size,  }\item[{\mbox{\hyperlink{types_8hpp_a565db567d2e3f4c843315c9583a01722}{size\+\_\+t}}}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reallocate data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to reallocate \\
+\hline
+{\em size} & Size of data \\
+\hline
+{\em alignment} & Target alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ Reallocated data 
+\end{DoxyReturn}

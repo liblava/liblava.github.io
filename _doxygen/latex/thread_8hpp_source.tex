@@ -1,0 +1,95 @@
+\hypertarget{thread_8hpp_source}{}\doxysection{thread.\+hpp}
+\label{thread_8hpp_source}\index{liblava/util/thread.hpp@{liblava/util/thread.hpp}}
+\mbox{\hyperlink{thread_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <condition\_variable>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{id_8hpp}{liblava/core/id.hpp}}>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{time_8hpp}{liblava/core/time.hpp}}>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{23 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{thread_8hpp_a33833d23b8725c12b221276c2fe797e1}{sleep}}(\mbox{\hyperlink{time_8hpp_ab7626bcf064745fbeaf56ae68ce04a8c}{ms}} time) \{}
+\DoxyCodeLine{24     std::this\_thread::sleep\_for(time);}
+\DoxyCodeLine{25 \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{31 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{thread_8hpp_a33833d23b8725c12b221276c2fe797e1}{sleep}}(\mbox{\hyperlink{time_8hpp_a97e475e681372558a64a6529905b5dc6}{seconds}} time) \{}
+\DoxyCodeLine{32     std::this\_thread::sleep\_for(time);}
+\DoxyCodeLine{33 \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1thread__pool}{thread\_pool}} \{}
+\DoxyCodeLine{40     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}} = std::function<void(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}})>;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1thread__pool_a804b2a22d7afe05579d7837864a453a5}{setup}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} count = 2) \{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = 0u; i < count; ++i)}
+\DoxyCodeLine{48             workers.emplace\_back(worker(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1thread__pool_a12a8efbcdeb045ba87858820c20905a4}{teardown}}() \{}
+\DoxyCodeLine{55         stop = \textcolor{keyword}{true};}
+\DoxyCodeLine{56         condition.notify\_all();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& worker : workers)}
+\DoxyCodeLine{59             worker.join();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         workers.clear();}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1thread__pool_a13d697b28f3f470d066651674a74cd1d}{enqueue}}(\textcolor{keyword}{auto} f) \{}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             std::unique\_lock<std::mutex> lock(queue\_mutex);}
+\DoxyCodeLine{71             tasks.push\_back(\mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}}(f));}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         condition.notify\_one();}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keyword}{private}:}
+\DoxyCodeLine{80     \textcolor{keyword}{struct }worker \{}
+\DoxyCodeLine{85         \textcolor{keyword}{explicit} worker(\mbox{\hyperlink{structlava_1_1thread__pool}{thread\_pool}}\& pool)}
+\DoxyCodeLine{86         : pool(pool) \{\}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{91         \textcolor{keywordtype}{void} operator()() \{}
+\DoxyCodeLine{92             \textcolor{keyword}{auto} thread\_id = \mbox{\hyperlink{structlava_1_1ids_a6ac8629822301912e5ba3f9f787a1d40}{ids::instance}}().\mbox{\hyperlink{structlava_1_1ids_a7dddb91a681d2250c2b8f8f89e64eadb}{next}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94             \mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}} \mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}};}
+\DoxyCodeLine{95             \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{96                 \{}
+\DoxyCodeLine{97                     std::unique\_lock<std::mutex> lock(pool.queue\_mutex);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99                     \textcolor{keywordflow}{while} (!pool.stop \&\& pool.tasks.empty())}
+\DoxyCodeLine{100                         pool.condition.wait(lock);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102                     \textcolor{keywordflow}{if} (pool.stop)}
+\DoxyCodeLine{103                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105                     \mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}} = pool.tasks.front();}
+\DoxyCodeLine{106                     pool.tasks.pop\_front();}
+\DoxyCodeLine{107                 \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109                 \mbox{\hyperlink{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}{task}}(thread\_id);}
+\DoxyCodeLine{110             \}}
+\DoxyCodeLine{111         \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keyword}{private}:}
+\DoxyCodeLine{115         thread\_pool\& pool;}
+\DoxyCodeLine{116     \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{119     std::vector<std::thread> workers;}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{122     std::deque<task> tasks;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125     std::mutex queue\_mutex;}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{128     std::condition\_variable condition;}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{131     \textcolor{keywordtype}{bool} stop = \textcolor{keyword}{false};}
+\DoxyCodeLine{132 \};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

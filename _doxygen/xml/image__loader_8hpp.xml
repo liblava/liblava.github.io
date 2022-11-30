@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="image__loader_8hpp" kind="file" language="C++">
+    <compoundname>image_loader.hpp</compoundname>
+    <includes refid="file_2file_8hpp" local="no">liblava/file/file.hpp</includes>
+    <includes refid="math_8hpp" local="no">liblava/util/math.hpp</includes>
+    <includedby refid="asset_8hpp" local="no">liblava/asset.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>liblava/asset/image_loader.hpp</label>
+        <link refid="image__loader_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/core/data.hpp</label>
+        <link refid="data_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/file/file.hpp</label>
+        <link refid="file_2file_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>liblava/util/math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="16">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="17">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="18">
+        <label>glm/gtc/type_ptr.hpp</label>
+      </node>
+      <node id="9">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>picosha2.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="12">
+        <label>string_view</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>liblava/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/asset/image_loader.hpp</label>
+        <link refid="image__loader_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1image__loader" prot="public">lava::image_loader</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <briefdescription>
+<para>Load image data from file and memory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="file_2file_8hpp" kindref="compound">liblava/file/file.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8hpp" kindref="compound">liblava/util/math.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structlava_1_1image__loader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1image__loader" kindref="compound">image_loader</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="structlava_1_1image__loader_1a754b69340553ea033bc7b4250ddc14d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1image__loader_1a754b69340553ea033bc7b4250ddc14d8" kindref="member">image_loader</ref>(<ref refid="types_8hpp_1a5008a742d2d9dedfde5eb39ec1995edc" kindref="member">string_ref</ref><sp/>filename);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structlava_1_1image__loader_1a81ad790cbb09f7b14a8da4707e971872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1image__loader_1a81ad790cbb09f7b14a8da4707e971872" kindref="member">image_loader</ref>(<ref refid="structlava_1_1cdata_1a31b62cc479b79c95a98ed8e832fbbb19" kindref="member">cdata::ref</ref><sp/><ref refid="structlava_1_1image" kindref="compound">image</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structlava_1_1image__loader_1a092b7418f8e8cd6bf89f616ffd15b1cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1image__loader_1a092b7418f8e8cd6bf89f616ffd15b1cb" kindref="member">~image_loader</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structlava_1_1image__loader_1ac52d94c78ebf0320bd924c8cd9107f27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1image__loader_1ac52d94c78ebf0320bd924c8cd9107f27" kindref="member">ready</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1data" kindref="compound">data</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structlava_1_1image__loader_1a2115b828e1d55edfa3419e2de2406d45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="data_8hpp_1a08da1d15223cbe6ff7b29ed4dad0e62a" kindref="member">data_cptr</ref><sp/><ref refid="structlava_1_1image__loader_1a2115b828e1d55edfa3419e2de2406d45" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1data" kindref="compound">data</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structlava_1_1image__loader_1ae8452b4d6f0bcc8c2c6e538420ea523d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1image__loader_1ae8452b4d6f0bcc8c2c6e538420ea523d" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>channels<sp/>*<sp/>dimensions.x<sp/>*<sp/>dimensions.y;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structlava_1_1image__loader_1afe05892720d36b9bbb0768df77b5f70f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8hpp_1a649cde1dd691a03ddc344f419cce8195" kindref="member">uv2</ref><sp/><ref refid="structlava_1_1image__loader_1afe05892720d36b9bbb0768df77b5f70f" kindref="member">get_dimensions</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dimensions;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structlava_1_1image__loader_1ad2bdec258463b587f2f563ec093651a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref><sp/><ref refid="structlava_1_1image__loader_1ad2bdec258463b587f2f563ec093651a1" kindref="member">get_channels</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>channels;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="data_8hpp_1a881a414775db89883beb7572771b296b" kindref="member">data_ptr</ref><sp/><ref refid="structlava_1_1data" kindref="compound">data</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8hpp_1a649cde1dd691a03ddc344f419cce8195" kindref="member">uv2</ref><sp/>dimensions<sp/>=<sp/><ref refid="math_8hpp_1a649cde1dd691a03ddc344f419cce8195" kindref="member">uv2</ref>(0,<sp/>0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref><sp/>channels<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/asset/image_loader.hpp"/>
+  </compounddef>
+</doxygen>

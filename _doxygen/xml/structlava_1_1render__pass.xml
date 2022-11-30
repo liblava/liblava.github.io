@@ -1,0 +1,1035 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1render__pass" kind="struct" language="C++" prot="public">
+    <compoundname>lava::render_pass</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="render__pass_8hpp" local="no">render_pass.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1render__pass" kindref="compound">render_pass</ref> &gt;</type>
+        <definition>using lava::render_pass::ptr =  std::shared_ptr&lt;render_pass&gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::render_pass::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="21" column="5" bodyfile="liblava/block/render_pass.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1render__pass_1a712405cac25b89f4c1145aadd33cd618" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::render_pass::list =  std::vector&lt;ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::render_pass::list</qualifiedname>
+        <briefdescription>
+<para>List of render passes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="24" column="5" bodyfile="liblava/block/render_pass.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a8cc2e563b74c7cbf0e0019f1bbff365d" prot="private" static="no" mutable="no">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::render_pass::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>lava::render_pass::device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="205" column="14" bodyfile="liblava/block/render_pass.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a2b0f6b5e18c12d83f01ae63ca93b4933" prot="private" static="no" mutable="no">
+        <type>VkRenderPass</type>
+        <definition>VkRenderPass lava::render_pass::vk_render_pass</definition>
+        <argsstring></argsstring>
+        <name>vk_render_pass</name>
+        <qualifiedname>lava::render_pass::vk_render_pass</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="208" column="18" bodyfile="liblava/block/render_pass.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a864e263dac61439a3acf79817ac5f039" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a00f1f9cbd595232aa1896d37885d4aa2" kindref="member">VkFramebuffers</ref></type>
+        <definition>VkFramebuffers lava::render_pass::framebuffers</definition>
+        <argsstring></argsstring>
+        <name>framebuffers</name>
+        <qualifiedname>lava::render_pass::framebuffers</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of frame buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="211" column="20" bodyfile="liblava/block/render_pass.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1acca3ad0e51e1803b0af6353865c7134a" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1attachment_1aa091a192af03969494d666fcb4c0d115" kindref="member">attachment::list</ref></type>
+        <definition>attachment::list lava::render_pass::attachments</definition>
+        <argsstring></argsstring>
+        <name>attachments</name>
+        <qualifiedname>lava::render_pass::attachments</qualifiedname>
+        <briefdescription>
+<para>List of attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="214" column="22" bodyfile="liblava/block/render_pass.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a6e0fd53e08e9b8625a6cec1fbe01312c" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1subpass__dependency_1ae11a4192138aa1afb6903e644971403d" kindref="member">subpass_dependency::list</ref></type>
+        <definition>subpass_dependency::list lava::render_pass::dependencies</definition>
+        <argsstring></argsstring>
+        <name>dependencies</name>
+        <qualifiedname>lava::render_pass::dependencies</qualifiedname>
+        <briefdescription>
+<para>List of subpass dependencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="217" column="30" bodyfile="liblava/block/render_pass.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a64d0086bbfe4d72df41947221ed5f21c" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1subpass_1a951adc671287bc864b05210f30ffa577" kindref="member">subpass::list</ref></type>
+        <definition>subpass::list lava::render_pass::subpasses</definition>
+        <argsstring></argsstring>
+        <name>subpasses</name>
+        <qualifiedname>lava::render_pass::subpasses</qualifiedname>
+        <briefdescription>
+<para>List of subpasses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="220" column="19" bodyfile="liblava/block/render_pass.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a2f361072900d244a17abc466e3762d58" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a85f0ec9daabd697f93584830c0fa0273" kindref="member">VkClearValues</ref></type>
+        <definition>VkClearValues lava::render_pass::clear_values</definition>
+        <argsstring></argsstring>
+        <name>clear_values</name>
+        <qualifiedname>lava::render_pass::clear_values</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of clear values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="223" column="19" bodyfile="liblava/block/render_pass.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1acc56ab6d6a108b9eeacae14d4ace625e" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1rect" kindref="compound">rect</ref></type>
+        <definition>rect lava::render_pass::area</definition>
+        <argsstring></argsstring>
+        <name>area</name>
+        <qualifiedname>lava::render_pass::area</qualifiedname>
+        <briefdescription>
+<para>Rectangle area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="226" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1render__pass_1a7a25b0c3ff8980293b1ea96f2491f36b" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref></type>
+        <definition>target_callback lava::render_pass::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>lava::render_pass::callback</qualifiedname>
+        <briefdescription>
+<para>Target callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="229" column="21" bodyfile="liblava/block/render_pass.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1render__pass_1a17a9ac6369c8bc37ad6b7498627770eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::render_pass::make</definition>
+        <argsstring>(device_p device)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::render_pass::make</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Make a new render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ptr Shared pointer to render pass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="31" column="16" bodyfile="liblava/block/render_pass.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1render__pass_1a7955ac6b0d107eb4ca57f407e06dc538" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::render_pass::render_pass</definition>
+        <argsstring>(device_p device)</argsstring>
+        <name>render_pass</name>
+        <qualifiedname>lava::render_pass::render_pass</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="39" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a78221218aef07a24578820956123dd8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::render_pass::create</definition>
+        <argsstring>(VkAttachmentsRef target_attachments, rect::ref area)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::render_pass::create</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a5773d0dd9bf940d230687680a4f4ce39" kindref="member">VkAttachmentsRef</ref></type>
+          <declname>target_attachments</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref></type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+<para>Create a new render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of target attachments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="47" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a5f05533d4ef4390159efbc8c28db7c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::render_pass::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1ac05d958ee34c68f606d7c313ae30a970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::process</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, index frame)</argsstring>
+        <name>process</name>
+        <qualifiedname>lava::render_pass::process</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Process the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a020b91685750179d16939ad023426fdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::render_pass::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::render_pass::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>device_p Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="67" column="14" bodyfile="liblava/block/render_pass.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a3cf22a97116c4740f683a78a8f62f93c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkRenderPass</type>
+        <definition>VkRenderPass lava::render_pass::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::render_pass::get</qualifiedname>
+        <briefdescription>
+<para>Get the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkRenderPass Vulkan render pass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="75" column="18" bodyfile="liblava/block/render_pass.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1add1bcc7c7fe347bbb63975fa052037c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::render_pass::get_subpass_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_subpass_count</name>
+        <qualifiedname>lava::render_pass::get_subpass_count</qualifiedname>
+        <briefdescription>
+<para>Get the subpass count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ui32 Number of subpasses </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="83" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1adde61aee8afe6ed24140298a3e3a7980" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::render_pass::exists_subpass</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>exists_subpass</name>
+        <qualifiedname>lava::render_pass::exists_subpass</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Check if subpass exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Subpass exists or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="92" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1af60ff6646b107eeb4749d5e56b826dda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref> *</type>
+        <definition>subpass * lava::render_pass::get_subpass</definition>
+        <argsstring>(index index=0)</argsstring>
+        <name>get_subpass</name>
+        <qualifiedname>lava::render_pass::get_subpass</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>subpass* Subpass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="101" column="13" bodyfile="liblava/block/render_pass.hpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a1c5527a5de3f340497871c05e95c43a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1subpass_1a951adc671287bc864b05210f30ffa577" kindref="member">subpass::list</ref> const &amp;</type>
+        <definition>subpass::list const  &amp; lava::render_pass::get_subpasses</definition>
+        <argsstring>() const</argsstring>
+        <name>get_subpasses</name>
+        <qualifiedname>lava::render_pass::get_subpasses</qualifiedname>
+        <briefdescription>
+<para>Get the subpasses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1subpass_1a951adc671287bc864b05210f30ffa577" kindref="member">subpass::list</ref> const&amp; List of subpasses </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="109" column="25" bodyfile="liblava/block/render_pass.hpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a0d9f4fd9a939d73b1e18306dca18a8dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::add</definition>
+        <argsstring>(attachment::ptr const &amp;attachment)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::render_pass::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1attachment_1a5dfe0eb2af2f6551b0a9daa1cf07c4c9" kindref="member">attachment::ptr</ref> const &amp;</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Add an attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="117" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1aeac138df022321adc3e4637b2ddadbf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::add</definition>
+        <argsstring>(subpass_dependency::ptr const &amp;dependency)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::render_pass::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1subpass__dependency_1a8727fb5ce3d49767ba8ca9e88d412958" kindref="member">subpass_dependency::ptr</ref> const &amp;</type>
+          <declname>dependency</declname>
+        </param>
+        <briefdescription>
+<para>Add a subpass dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dependency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subpass dependency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="125" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a762f756470af6f2915089b6962b9ea82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::add</definition>
+        <argsstring>(subpass::ptr const &amp;subpass)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::render_pass::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1subpass_1a41cb0524051a3bfa4c3318b61ab6a64e" kindref="member">subpass::ptr</ref> const &amp;</type>
+          <declname>subpass</declname>
+        </param>
+        <briefdescription>
+<para>Add a subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="133" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a714f010d5873210d139aef95568e5a81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::set_clear_values</definition>
+        <argsstring>(VkClearValues const &amp;values)</argsstring>
+        <name>set_clear_values</name>
+        <qualifiedname>lava::render_pass::set_clear_values</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a85f0ec9daabd697f93584830c0fa0273" kindref="member">VkClearValues</ref> const &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Set the clear values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of clear values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="141" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1af0d5e8574d21d2d25fe093aa09494cb3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1a85f0ec9daabd697f93584830c0fa0273" kindref="member">VkClearValues</ref> const &amp;</type>
+        <definition>VkClearValues const  &amp; lava::render_pass::get_clear_values</definition>
+        <argsstring>() const</argsstring>
+        <name>get_clear_values</name>
+        <qualifiedname>lava::render_pass::get_clear_values</qualifiedname>
+        <briefdescription>
+<para>Get the clear values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkClearValues const&amp; List of clear values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="149" column="25" bodyfile="liblava/block/render_pass.hpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1ad319cf1e33f1825dea9e39a0dca3b538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::set_clear_color</definition>
+        <argsstring>(v3 value={})</argsstring>
+        <name>set_clear_color</name>
+        <qualifiedname>lava::render_pass::set_clear_color</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1a9078718fe20b839c7a2780c80494bdbb" kindref="member">v3</ref></type>
+          <declname>value</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Set the clear color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Clear color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="157" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a73bcdb3a9f8765397e156eb3bc6f9a1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1a9078718fe20b839c7a2780c80494bdbb" kindref="member">v3</ref></type>
+        <definition>v3 lava::render_pass::get_clear_color</definition>
+        <argsstring>() const</argsstring>
+        <name>get_clear_color</name>
+        <qualifiedname>lava::render_pass::get_clear_color</qualifiedname>
+        <briefdescription>
+<para>Get the clear color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>v3 Clear color </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="163" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a2dd2dc31c1fd14fdfdc3fc3ea4ab797f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::add</definition>
+        <argsstring>(render_pipeline::ptr pipeline, index subpass=0)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::render_pass::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref></type>
+          <declname>pipeline</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>subpass</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Add a render pipeline to the back of subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="170" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1ade5a98421750ece8ee0f8bb2f58d9ffe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::add_front</definition>
+        <argsstring>(render_pipeline::ptr pipeline, index subpass=0)</argsstring>
+        <name>add_front</name>
+        <qualifiedname>lava::render_pass::add_front</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref></type>
+          <declname>pipeline</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>subpass</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Add a render pipeline to the front of subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="180" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1ac17fe43362633e6586bb8471d92a2e7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::remove</definition>
+        <argsstring>(render_pipeline::ptr pipeline, index subpass=0)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::render_pass::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref></type>
+          <declname>pipeline</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>subpass</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Remove a render pipeline from the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="190" column="10" bodyfile="liblava/block/render_pass.hpp" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a97f73b004d58836f92bff74b9cfea353" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref> const &amp;</type>
+        <definition>target_callback const  &amp; lava::render_pass::get_target_callback</definition>
+        <argsstring>() const</argsstring>
+        <name>get_target_callback</name>
+        <qualifiedname>lava::render_pass::get_target_callback</qualifiedname>
+        <briefdescription>
+<para>Get the target callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref> const&amp; Target callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="199" column="27" bodyfile="liblava/block/render_pass.hpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1render__pass_1a6a41ea1c0cda0bce518a0f0c71e877ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::begin</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, index frame)</argsstring>
+        <name>begin</name>
+        <qualifiedname>lava::render_pass::begin</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Begin the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="236" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a890b5aae42cdb3200d60b055b27f212d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::end</definition>
+        <argsstring>(VkCommandBuffer cmd_buf)</argsstring>
+        <name>end</name>
+        <qualifiedname>lava::render_pass::end</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>End the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="243" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1a6c72a14e9f14c291d52e7d20d09325be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::render_pass::on_target_created</definition>
+        <argsstring>(VkAttachmentsRef target_attachments, rect::ref area)</argsstring>
+        <name>on_target_created</name>
+        <qualifiedname>lava::render_pass::on_target_created</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a5773d0dd9bf940d230687680a4f4ce39" kindref="member">VkAttachmentsRef</ref></type>
+          <declname>target_attachments</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref></type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+<para>Called on target created. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of target attachments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="251" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1render__pass_1af48c64e43a2780906739cc725620f928" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::render_pass::on_target_destroyed</definition>
+        <argsstring>()</argsstring>
+        <name>on_target_destroyed</name>
+        <qualifiedname>lava::render_pass::on_target_destroyed</qualifiedname>
+        <briefdescription>
+<para>Called on target destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/render_pass.hpp" line="257" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Render pass. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::render_pass</label>
+        <link refid="structlava_1_1render__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::render_pass</label>
+        <link refid="structlava_1_1render__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/render_pass.hpp" line="19" column="1" bodyfile="liblava/block/render_pass.hpp" bodystart="19" bodyend="258"/>
+    <listofallmembers>
+      <member refid="structlava_1_1render__pass_1a0d9f4fd9a939d73b1e18306dca18a8dd" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>add</name></member>
+      <member refid="structlava_1_1render__pass_1aeac138df022321adc3e4637b2ddadbf7" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>add</name></member>
+      <member refid="structlava_1_1render__pass_1a762f756470af6f2915089b6962b9ea82" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>add</name></member>
+      <member refid="structlava_1_1render__pass_1a2dd2dc31c1fd14fdfdc3fc3ea4ab797f" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>add</name></member>
+      <member refid="structlava_1_1render__pass_1ade5a98421750ece8ee0f8bb2f58d9ffe" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>add_front</name></member>
+      <member refid="structlava_1_1render__pass_1acc56ab6d6a108b9eeacae14d4ace625e" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>area</name></member>
+      <member refid="structlava_1_1render__pass_1acca3ad0e51e1803b0af6353865c7134a" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>attachments</name></member>
+      <member refid="structlava_1_1render__pass_1a6a41ea1c0cda0bce518a0f0c71e877ea" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>begin</name></member>
+      <member refid="structlava_1_1render__pass_1a7a25b0c3ff8980293b1ea96f2491f36b" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>callback</name></member>
+      <member refid="structlava_1_1render__pass_1a2f361072900d244a17abc466e3762d58" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>clear_values</name></member>
+      <member refid="structlava_1_1render__pass_1a78221218aef07a24578820956123dd8a" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>create</name></member>
+      <member refid="structlava_1_1render__pass_1a6e0fd53e08e9b8625a6cec1fbe01312c" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>dependencies</name></member>
+      <member refid="structlava_1_1render__pass_1a5f05533d4ef4390159efbc8c28db7c65" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>destroy</name></member>
+      <member refid="structlava_1_1render__pass_1a8cc2e563b74c7cbf0e0019f1bbff365d" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>device</name></member>
+      <member refid="structlava_1_1render__pass_1a890b5aae42cdb3200d60b055b27f212d" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>end</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>entity</name></member>
+      <member refid="structlava_1_1render__pass_1adde61aee8afe6ed24140298a3e3a7980" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>exists_subpass</name></member>
+      <member refid="structlava_1_1render__pass_1a864e263dac61439a3acf79817ac5f039" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>framebuffers</name></member>
+      <member refid="structlava_1_1render__pass_1a3cf22a97116c4740f683a78a8f62f93c" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get</name></member>
+      <member refid="structlava_1_1render__pass_1a73bcdb3a9f8765397e156eb3bc6f9a1d" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_clear_color</name></member>
+      <member refid="structlava_1_1render__pass_1af0d5e8574d21d2d25fe093aa09494cb3" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_clear_values</name></member>
+      <member refid="structlava_1_1render__pass_1a020b91685750179d16939ad023426fdf" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_device</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_id</name></member>
+      <member refid="structlava_1_1render__pass_1af60ff6646b107eeb4749d5e56b826dda" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_subpass</name></member>
+      <member refid="structlava_1_1render__pass_1add1bcc7c7fe347bbb63975fa052037c3" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_subpass_count</name></member>
+      <member refid="structlava_1_1render__pass_1a1c5527a5de3f340497871c05e95c43a2" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_subpasses</name></member>
+      <member refid="structlava_1_1render__pass_1a97f73b004d58836f92bff74b9cfea353" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>get_target_callback</name></member>
+      <member refid="structlava_1_1render__pass_1a712405cac25b89f4c1145aadd33cd618" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>list</name></member>
+      <member refid="structlava_1_1render__pass_1a17a9ac6369c8bc37ad6b7498627770eb" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1render__pass_1a6c72a14e9f14c291d52e7d20d09325be" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>on_target_created</name></member>
+      <member refid="structlava_1_1render__pass_1af48c64e43a2780906739cc725620f928" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>on_target_destroyed</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>operator=</name></member>
+      <member refid="structlava_1_1render__pass_1ac05d958ee34c68f606d7c313ae30a970" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>process</name></member>
+      <member refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>ptr</name></member>
+      <member refid="structlava_1_1render__pass_1ac17fe43362633e6586bb8471d92a2e7f" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>remove</name></member>
+      <member refid="structlava_1_1render__pass_1a7955ac6b0d107eb4ca57f407e06dc538" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>render_pass</name></member>
+      <member refid="structlava_1_1render__pass_1ad319cf1e33f1825dea9e39a0dca3b538" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>set_clear_color</name></member>
+      <member refid="structlava_1_1render__pass_1a714f010d5873210d139aef95568e5a81" prot="public" virt="non-virtual"><scope>lava::render_pass</scope><name>set_clear_values</name></member>
+      <member refid="structlava_1_1render__pass_1a64d0086bbfe4d72df41947221ed5f21c" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>subpasses</name></member>
+      <member refid="structlava_1_1render__pass_1a2b0f6b5e18c12d83f01ae63ca93b4933" prot="private" virt="non-virtual"><scope>lava::render_pass</scope><name>vk_render_pass</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::render_pass</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

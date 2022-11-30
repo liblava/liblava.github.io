@@ -1,0 +1,232 @@
+\hypertarget{time_8hpp}{}\doxysection{liblava/core/time.hpp File Reference}
+\label{time_8hpp}\index{liblava/core/time.hpp@{liblava/core/time.hpp}}
+
+
+Run time.  
+
+
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$liblava/core/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1timer}{lava\+::timer}}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1run__time}{lava\+::run\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Run time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{time_8hpp_a97e475e681372558a64a6529905b5dc6}\label{time_8hpp_a97e475e681372558a64a6529905b5dc6}} 
+using {\bfseries lava\+::seconds} = std\+::chrono\+::seconds
+\begin{DoxyCompactList}\small\item\em Seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_a0fa6eb46dc3ae8c6893e7e8ea56cea27}\label{time_8hpp_a0fa6eb46dc3ae8c6893e7e8ea56cea27}} 
+using {\bfseries lava\+::milliseconds} = std\+::chrono\+::milliseconds
+\begin{DoxyCompactList}\small\item\em Milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_ab7626bcf064745fbeaf56ae68ce04a8c}\label{time_8hpp_ab7626bcf064745fbeaf56ae68ce04a8c}} 
+using {\bfseries lava\+::ms} = milliseconds
+\begin{DoxyCompactList}\small\item\em Milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_a6063900a0b23e988b20a6dc2e3a63d86}\label{time_8hpp_a6063900a0b23e988b20a6dc2e3a63d86}} 
+using {\bfseries lava\+::clock} = std\+::chrono\+::high\+\_\+resolution\+\_\+clock
+\begin{DoxyCompactList}\small\item\em Clock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_a729ab9cd950107eafb9e3ebde06d0f2d}\label{time_8hpp_a729ab9cd950107eafb9e3ebde06d0f2d}} 
+using {\bfseries lava\+::time\+\_\+point} = clock\+::time\+\_\+point
+\begin{DoxyCompactList}\small\item\em Time point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_af1c5eaa5f457f6e338a67a057df2c2cb}\label{time_8hpp_af1c5eaa5f457f6e338a67a057df2c2cb}} 
+using {\bfseries lava\+::duration} = clock\+::duration
+\begin{DoxyCompactList}\small\item\em Duration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_ae5b1178f3ac8352741a188daa600e414}\label{time_8hpp_ae5b1178f3ac8352741a188daa600e414}} 
+using {\bfseries lava\+::run\+\_\+time\+\_\+t} = run\+\_\+time
+\begin{DoxyCompactList}\small\item\em Run time type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+delta \mbox{\hyperlink{time_8hpp_a56103af37e9e492515a76dc05975b379}{lava\+::to\+\_\+delta}} (milliseconds ms)
+\begin{DoxyCompactList}\small\item\em Convert milliseconds to delta. \end{DoxyCompactList}\item 
+delta \mbox{\hyperlink{time_8hpp_a5a9ff164b025aac83c0ae087b5c31e3d}{lava\+::to\+\_\+dt}} (milliseconds ms)
+\item 
+real \mbox{\hyperlink{time_8hpp_a9d5bf259deae56c66dd9eeaf562c5c42}{lava\+::to\+\_\+sec}} (milliseconds ms)
+\begin{DoxyCompactList}\small\item\em Convert milliseconds to seconds. \end{DoxyCompactList}\item 
+ms \mbox{\hyperlink{time_8hpp_ac2432e735e962579aa315c70a152ea90}{lava\+::to\+\_\+ms}} (delta dt)
+\begin{DoxyCompactList}\small\item\em Convert delta to milliseconds. \end{DoxyCompactList}\item 
+ms \mbox{\hyperlink{time_8hpp_a4f8df81b62fc4f7fd4a1fd213268c6c9}{lava\+::to\+\_\+ms}} (real sec)
+\begin{DoxyCompactList}\small\item\em Convert seconds to milliseconds. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename CLOCK\+\_\+\+TYPE  = std\+::chrono\+::system\+\_\+clock$>$ }\\string \mbox{\hyperlink{time_8hpp_a5234ff682ffd6e6cebd07408286a1c12}{lava\+::timestamp}} (const typename CLOCK\+\_\+\+TYPE\+::time\+\_\+point \&time\+\_\+point, string\+\_\+ref format=\char`\"{}\%Y-\/\%m-\/\%d \%H-\/\%M-\/\%S\char`\"{})
+\begin{DoxyCompactList}\small\item\em Convert timestamp to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{time_8hpp_a386bd7c3577aefd1a30788b1aa88d95a}{lava\+::get\+\_\+current\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Get the current time as string. \end{DoxyCompactList}\item 
+ms \mbox{\hyperlink{time_8hpp_ab3c0e85a397c761e92162b76a4ee369e}{lava\+::get\+\_\+current\+\_\+timestamp\+\_\+ms}} ()
+\begin{DoxyCompactList}\small\item\em Get the current timestamp in milliseconds. \end{DoxyCompactList}\item 
+ui64 \mbox{\hyperlink{time_8hpp_a7a41bf2f96da788189a29b8e9363cfa2}{lava\+::get\+\_\+current\+\_\+timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Get the current timestamp in milliseconds (uint) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{time_8hpp_a39ed948807608027e5388132ca978739}\label{time_8hpp_a39ed948807608027e5388132ca978739}} 
+constexpr seconds const {\bfseries lava\+::one\+\_\+second} = seconds(1)
+\begin{DoxyCompactList}\small\item\em One second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{time_8hpp_a206f3112b3871d88333c93b934c9ddd8}\label{time_8hpp_a206f3112b3871d88333c93b934c9ddd8}} 
+constexpr ms const {\bfseries lava\+::one\+\_\+ms} = ms(1)
+\begin{DoxyCompactList}\small\item\em One millisecond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Run time. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{time_8hpp_a386bd7c3577aefd1a30788b1aa88d95a}\label{time_8hpp_a386bd7c3577aefd1a30788b1aa88d95a}} 
+\index{time.hpp@{time.hpp}!get\_current\_time@{get\_current\_time}}
+\index{get\_current\_time@{get\_current\_time}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_current\_time()}{get\_current\_time()}}
+{\footnotesize\ttfamily string lava\+::get\+\_\+current\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current time as string. 
+
+\begin{DoxyReturn}{Returns}
+string Time and date representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a7a41bf2f96da788189a29b8e9363cfa2}\label{time_8hpp_a7a41bf2f96da788189a29b8e9363cfa2}} 
+\index{time.hpp@{time.hpp}!get\_current\_timestamp@{get\_current\_timestamp}}
+\index{get\_current\_timestamp@{get\_current\_timestamp}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_current\_timestamp()}{get\_current\_timestamp()}}
+{\footnotesize\ttfamily ui64 lava\+::get\+\_\+current\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current timestamp in milliseconds (uint) 
+
+\begin{DoxyReturn}{Returns}
+ui64 Timestamp in ms (uint) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_ab3c0e85a397c761e92162b76a4ee369e}\label{time_8hpp_ab3c0e85a397c761e92162b76a4ee369e}} 
+\index{time.hpp@{time.hpp}!get\_current\_timestamp\_ms@{get\_current\_timestamp\_ms}}
+\index{get\_current\_timestamp\_ms@{get\_current\_timestamp\_ms}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_current\_timestamp\_ms()}{get\_current\_timestamp\_ms()}}
+{\footnotesize\ttfamily ms lava\+::get\+\_\+current\+\_\+timestamp\+\_\+ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current timestamp in milliseconds. 
+
+\begin{DoxyReturn}{Returns}
+ms Timestamp in ms 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a5234ff682ffd6e6cebd07408286a1c12}\label{time_8hpp_a5234ff682ffd6e6cebd07408286a1c12}} 
+\index{time.hpp@{time.hpp}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{timestamp()}{timestamp()}}
+{\footnotesize\ttfamily template$<$typename CLOCK\+\_\+\+TYPE  = std\+::chrono\+::system\+\_\+clock$>$ \\
+string lava\+::timestamp (\begin{DoxyParamCaption}\item[{const typename CLOCK\+\_\+\+TYPE\+::time\+\_\+point \&}]{time\+\_\+point,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{format = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%d~\%H-\/\%M-\/\%S\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert timestamp to string. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CLOCK\+\_\+\+TYPE} & Clock type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+point} & Time point \\
+\hline
+{\em format} & String format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Converted string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a56103af37e9e492515a76dc05975b379}\label{time_8hpp_a56103af37e9e492515a76dc05975b379}} 
+\index{time.hpp@{time.hpp}!to\_delta@{to\_delta}}
+\index{to\_delta@{to\_delta}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_delta()}{to\_delta()}}
+{\footnotesize\ttfamily delta lava\+::to\+\_\+delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a0fa6eb46dc3ae8c6893e7e8ea56cea27}{milliseconds}}}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert milliseconds to delta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Milliseconds to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+delta Converted delta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a5a9ff164b025aac83c0ae087b5c31e3d}\label{time_8hpp_a5a9ff164b025aac83c0ae087b5c31e3d}} 
+\index{time.hpp@{time.hpp}!to\_dt@{to\_dt}}
+\index{to\_dt@{to\_dt}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_dt()}{to\_dt()}}
+{\footnotesize\ttfamily delta lava\+::to\+\_\+dt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a0fa6eb46dc3ae8c6893e7e8ea56cea27}{milliseconds}}}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+to\+\_\+delta() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{time_8hpp_ac2432e735e962579aa315c70a152ea90}\label{time_8hpp_ac2432e735e962579aa315c70a152ea90}} 
+\index{time.hpp@{time.hpp}!to\_ms@{to\_ms}}
+\index{to\_ms@{to\_ms}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_ms()}{to\_ms()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ms lava\+::to\+\_\+ms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_afdca19b6b99a1625d9c515aa9a299241}{delta}}}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert delta to milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ms Converted milliseconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a4f8df81b62fc4f7fd4a1fd213268c6c9}\label{time_8hpp_a4f8df81b62fc4f7fd4a1fd213268c6c9}} 
+\index{time.hpp@{time.hpp}!to\_ms@{to\_ms}}
+\index{to\_ms@{to\_ms}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_ms()}{to\_ms()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ms lava\+::to\+\_\+ms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ac6041a47d1caf38c6a3322b833e4c45f}{real}}}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert seconds to milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & Seconds to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ms Converted milliseconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{time_8hpp_a9d5bf259deae56c66dd9eeaf562c5c42}\label{time_8hpp_a9d5bf259deae56c66dd9eeaf562c5c42}} 
+\index{time.hpp@{time.hpp}!to\_sec@{to\_sec}}
+\index{to\_sec@{to\_sec}!time.hpp@{time.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_sec()}{to\_sec()}}
+{\footnotesize\ttfamily real lava\+::to\+\_\+sec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a0fa6eb46dc3ae8c6893e7e8ea56cea27}{milliseconds}}}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert milliseconds to seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Milliseconds to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+real Converted seconds 
+\end{DoxyReturn}

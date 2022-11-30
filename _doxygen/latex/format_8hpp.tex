@@ -1,0 +1,473 @@
+\hypertarget{format_8hpp}{}\doxysection{liblava/resource/format.hpp File Reference}
+\label{format_8hpp}\index{liblava/resource/format.hpp@{liblava/resource/format.hpp}}
+
+
+Vulkan format.  
+
+
+{\ttfamily \#include $<$liblava/base/device.\+hpp$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1surface__format__request}{lava\+::surface\+\_\+format\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Surface format request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{format_8hpp_a2e2d35e57db9fab6046e28549ae783fc}\label{format_8hpp_a2e2d35e57db9fab6046e28549ae783fc}} 
+using {\bfseries lava\+::\+Vk\+Format\+\_\+optional} = std\+::optional$<$ Vk\+Format $>$
+\begin{DoxyCompactList}\small\item\em Optional format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{format_8hpp_ad7316f12587b541990a1d46e1fd32afb}{lava\+::format\+\_\+depth}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format is depth compatible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_ae8674587a9dc4313b9813cf6f7066174}{lava\+::format\+\_\+stencil}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format is stencil compatible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_ae30231d1f0c571506e4102d5673761d0}{lava\+::format\+\_\+depth\+\_\+stencil}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format is depth or stencil compatible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_a9234ef73c88aa800da25d11f328de77b}{lava\+::format\+\_\+srgb}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format is s\+RGB compatible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_a31a809859399cd7de8a35ca3ff65ddc8}{lava\+::format\+\_\+bgr}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format has BGR order. \end{DoxyCompactList}\item 
+Vk\+Image\+Aspect\+Flags \mbox{\hyperlink{format_8hpp_a949fe016a3e6201b2dfcfa7d01947999}{lava\+::format\+\_\+aspect\+\_\+mask}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Get image aspect mask of format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_aa2d890c441457bf2005ed9112fb537d2}{lava\+::format\+\_\+block\+\_\+dim}} (Vk\+Format format, ui32 \&width, ui32 \&height)
+\begin{DoxyCompactList}\small\item\em Get block dimension of format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_af714d7b98f2be790335ccb3333095c9f}{lava\+::format\+\_\+align\+\_\+dim}} (Vk\+Format format, ui32 \&width, ui32 \&height)
+\begin{DoxyCompactList}\small\item\em Get align dimension of format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_ab89533f6381ab10db6c87200eef9422d}{lava\+::format\+\_\+num\+\_\+blocks}} (Vk\+Format format, ui32 \&width, ui32 \&height)
+\begin{DoxyCompactList}\small\item\em Get format number of blocks. \end{DoxyCompactList}\item 
+ui32 \mbox{\hyperlink{format_8hpp_a0488b9c5fb9795264012185298ea9b8b}{lava\+::format\+\_\+block\+\_\+size}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Get format block size. \end{DoxyCompactList}\item 
+Vk\+Format\+\_\+optional \mbox{\hyperlink{format_8hpp_a5fb3483e1e7a432d3948757608ff0073}{lava\+::get\+\_\+supported\+\_\+depth\+\_\+format}} (Vk\+Physical\+Device physical\+\_\+device)
+\begin{DoxyCompactList}\small\item\em Get the supported depth format. \end{DoxyCompactList}\item 
+Vk\+Format\+\_\+optional \mbox{\hyperlink{format_8hpp_a7f32adf5937778f37b08e0310af2bff4}{lava\+::get\+\_\+supported\+\_\+format}} (Vk\+Physical\+Device physical\+\_\+device, Vk\+Formats const \&possible\+\_\+formats, Vk\+Image\+Usage\+Flags usage)
+\begin{DoxyCompactList}\small\item\em Get the supported format. \end{DoxyCompactList}\item 
+Vk\+Image\+Memory\+Barrier \mbox{\hyperlink{format_8hpp_acc1dae293ccc165303879bf130eebefb}{lava\+::image\+\_\+memory\+\_\+barrier}} (Vk\+Image image, Vk\+Image\+Layout old\+\_\+layout, Vk\+Image\+Layout new\+\_\+layout)
+\begin{DoxyCompactList}\small\item\em Get image memory barrier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_af551022681464189ba0002125214558d}{lava\+::set\+\_\+image\+\_\+layout}} (device\+\_\+p device, Vk\+Command\+Buffer cmd\+\_\+buffer, Vk\+Image image, Vk\+Image\+Layout old\+\_\+image\+\_\+layout, Vk\+Image\+Layout new\+\_\+image\+\_\+layout, Vk\+Image\+Subresource\+Range subresource\+\_\+range, Vk\+Pipeline\+Stage\+Flags src\+\_\+stage\+\_\+mask=VK\+\_\+\+PIPELINE\+\_\+\+STAGE\+\_\+\+ALL\+\_\+\+COMMANDS\+\_\+\+BIT, Vk\+Pipeline\+Stage\+Flags dst\+\_\+stage\+\_\+mask=VK\+\_\+\+PIPELINE\+\_\+\+STAGE\+\_\+\+ALL\+\_\+\+COMMANDS\+\_\+\+BIT)
+\begin{DoxyCompactList}\small\item\em Set the image layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_a78f0c1408531507bcbba04186973cd4e}{lava\+::set\+\_\+image\+\_\+layout}} (device\+\_\+p device, Vk\+Command\+Buffer cmd\+\_\+buffer, Vk\+Image image, Vk\+Image\+Aspect\+Flags aspect\+\_\+mask, Vk\+Image\+Layout old\+\_\+image\+\_\+layout, Vk\+Image\+Layout new\+\_\+image\+\_\+layout, Vk\+Pipeline\+Stage\+Flags src\+\_\+stage\+\_\+mask=VK\+\_\+\+PIPELINE\+\_\+\+STAGE\+\_\+\+ALL\+\_\+\+COMMANDS\+\_\+\+BIT, Vk\+Pipeline\+Stage\+Flags dst\+\_\+stage\+\_\+mask=VK\+\_\+\+PIPELINE\+\_\+\+STAGE\+\_\+\+ALL\+\_\+\+COMMANDS\+\_\+\+BIT)
+\begin{DoxyCompactList}\small\item\em Set the image layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{format_8hpp_af27d3a7e9390a07876f116a7afff4594}{lava\+::insert\+\_\+image\+\_\+memory\+\_\+barrier}} (device\+\_\+p device, Vk\+Command\+Buffer cmd\+\_\+buffer, Vk\+Image image, Vk\+Access\+Flags src\+\_\+access\+\_\+mask, Vk\+Access\+Flags dst\+\_\+access\+\_\+mask, Vk\+Image\+Layout old\+\_\+image\+\_\+layout, Vk\+Image\+Layout new\+\_\+image\+\_\+layout, Vk\+Pipeline\+Stage\+Flags src\+\_\+stage\+\_\+mask, Vk\+Pipeline\+Stage\+Flags dst\+\_\+stage\+\_\+mask, Vk\+Image\+Subresource\+Range subresource\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Insert image memory barrier. \end{DoxyCompactList}\item 
+Vk\+Surface\+Format\+KHR \mbox{\hyperlink{format_8hpp_a6e67336d5d6303f365cbdaf6730c7576}{lava\+::get\+\_\+surface\+\_\+format}} (Vk\+Physical\+Device device, Vk\+Surface\+KHR surface, surface\+\_\+format\+\_\+request request=\{\})
+\begin{DoxyCompactList}\small\item\em Get the surface format. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_ab3b5bbebb9ee932deb0371bce8f08f16}{lava\+::support\+\_\+blit}} (Vk\+Physical\+Device device, Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if format supports bltting. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{format_8hpp_a8cf3ce4ea20cbc3a7d1bc17399c239a0}{lava\+::support\+\_\+vertex\+\_\+buffer\+\_\+format}} (Vk\+Physical\+Device device, Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Check if vertex buffer format is supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan format. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{format_8hpp_af714d7b98f2be790335ccb3333095c9f}\label{format_8hpp_af714d7b98f2be790335ccb3333095c9f}} 
+\index{format.hpp@{format.hpp}!format\_align\_dim@{format\_align\_dim}}
+\index{format\_align\_dim@{format\_align\_dim}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_align\_dim()}{format\_align\_dim()}}
+{\footnotesize\ttfamily void lava\+::format\+\_\+align\+\_\+dim (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Get align dimension of format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Target format \\
+\hline
+{\em width} & Align width \\
+\hline
+{\em height} & Align height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_a949fe016a3e6201b2dfcfa7d01947999}\label{format_8hpp_a949fe016a3e6201b2dfcfa7d01947999}} 
+\index{format.hpp@{format.hpp}!format\_aspect\_mask@{format\_aspect\_mask}}
+\index{format\_aspect\_mask@{format\_aspect\_mask}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_aspect\_mask()}{format\_aspect\_mask()}}
+{\footnotesize\ttfamily Vk\+Image\+Aspect\+Flags lava\+::format\+\_\+aspect\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Get image aspect mask of format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Target format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+Aspect\+Flags Image aspect flags 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_a31a809859399cd7de8a35ca3ff65ddc8}\label{format_8hpp_a31a809859399cd7de8a35ca3ff65ddc8}} 
+\index{format.hpp@{format.hpp}!format\_bgr@{format\_bgr}}
+\index{format\_bgr@{format\_bgr}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_bgr()}{format\_bgr()}}
+{\footnotesize\ttfamily bool lava\+::format\+\_\+bgr (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format has BGR order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format has BGR order or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_aa2d890c441457bf2005ed9112fb537d2}\label{format_8hpp_aa2d890c441457bf2005ed9112fb537d2}} 
+\index{format.hpp@{format.hpp}!format\_block\_dim@{format\_block\_dim}}
+\index{format\_block\_dim@{format\_block\_dim}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_block\_dim()}{format\_block\_dim()}}
+{\footnotesize\ttfamily void lava\+::format\+\_\+block\+\_\+dim (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Get block dimension of format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Target format \\
+\hline
+{\em width} & Block width \\
+\hline
+{\em height} & Block height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_a0488b9c5fb9795264012185298ea9b8b}\label{format_8hpp_a0488b9c5fb9795264012185298ea9b8b}} 
+\index{format.hpp@{format.hpp}!format\_block\_size@{format\_block\_size}}
+\index{format\_block\_size@{format\_block\_size}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_block\_size()}{format\_block\_size()}}
+{\footnotesize\ttfamily ui32 lava\+::format\+\_\+block\+\_\+size (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Get format block size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Target format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui32 Size of block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_ad7316f12587b541990a1d46e1fd32afb}\label{format_8hpp_ad7316f12587b541990a1d46e1fd32afb}} 
+\index{format.hpp@{format.hpp}!format\_depth@{format\_depth}}
+\index{format\_depth@{format\_depth}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_depth()}{format\_depth()}}
+{\footnotesize\ttfamily bool lava\+::format\+\_\+depth (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format is depth compatible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format is depth compatible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_ae30231d1f0c571506e4102d5673761d0}\label{format_8hpp_ae30231d1f0c571506e4102d5673761d0}} 
+\index{format.hpp@{format.hpp}!format\_depth\_stencil@{format\_depth\_stencil}}
+\index{format\_depth\_stencil@{format\_depth\_stencil}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_depth\_stencil()}{format\_depth\_stencil()}}
+{\footnotesize\ttfamily bool lava\+::format\+\_\+depth\+\_\+stencil (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format is depth or stencil compatible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format is depth or stencil compatible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_ab89533f6381ab10db6c87200eef9422d}\label{format_8hpp_ab89533f6381ab10db6c87200eef9422d}} 
+\index{format.hpp@{format.hpp}!format\_num\_blocks@{format\_num\_blocks}}
+\index{format\_num\_blocks@{format\_num\_blocks}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_num\_blocks()}{format\_num\_blocks()}}
+{\footnotesize\ttfamily void lava\+::format\+\_\+num\+\_\+blocks (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Get format number of blocks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Target format \\
+\hline
+{\em width} & Number blocks width \\
+\hline
+{\em height} & Number blocks height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_a9234ef73c88aa800da25d11f328de77b}\label{format_8hpp_a9234ef73c88aa800da25d11f328de77b}} 
+\index{format.hpp@{format.hpp}!format\_srgb@{format\_srgb}}
+\index{format\_srgb@{format\_srgb}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_srgb()}{format\_srgb()}}
+{\footnotesize\ttfamily bool lava\+::format\+\_\+srgb (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format is s\+RGB compatible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format is s\+RGB compatible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_ae8674587a9dc4313b9813cf6f7066174}\label{format_8hpp_ae8674587a9dc4313b9813cf6f7066174}} 
+\index{format.hpp@{format.hpp}!format\_stencil@{format\_stencil}}
+\index{format\_stencil@{format\_stencil}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{format\_stencil()}{format\_stencil()}}
+{\footnotesize\ttfamily bool lava\+::format\+\_\+stencil (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format is stencil compatible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format is stencil compatible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_a5fb3483e1e7a432d3948757608ff0073}\label{format_8hpp_a5fb3483e1e7a432d3948757608ff0073}} 
+\index{format.hpp@{format.hpp}!get\_supported\_depth\_format@{get\_supported\_depth\_format}}
+\index{get\_supported\_depth\_format@{get\_supported\_depth\_format}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_supported\_depth\_format()}{get\_supported\_depth\_format()}}
+{\footnotesize\ttfamily Vk\+Format\+\_\+optional lava\+::get\+\_\+supported\+\_\+depth\+\_\+format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+\_\+device }\end{DoxyParamCaption})}
+
+
+
+Get the supported depth format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em physical\+\_\+device} & Physical device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Format\+\_\+optional Optional format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_a7f32adf5937778f37b08e0310af2bff4}\label{format_8hpp_a7f32adf5937778f37b08e0310af2bff4}} 
+\index{format.hpp@{format.hpp}!get\_supported\_format@{get\_supported\_format}}
+\index{get\_supported\_format@{get\_supported\_format}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_supported\_format()}{get\_supported\_format()}}
+{\footnotesize\ttfamily Vk\+Format\+\_\+optional lava\+::get\+\_\+supported\+\_\+format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+\_\+device,  }\item[{\mbox{\hyperlink{base_2base_8hpp_ac01be928417424dbb944f1d67cfc6a86}{Vk\+Formats}} const \&}]{possible\+\_\+formats,  }\item[{Vk\+Image\+Usage\+Flags}]{usage }\end{DoxyParamCaption})}
+
+
+
+Get the supported format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em physical\+\_\+device} & Physical device \\
+\hline
+{\em possible\+\_\+formats} & List of possible formats \\
+\hline
+{\em usage} & Image usage flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Format\+\_\+optional Optional format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_a6e67336d5d6303f365cbdaf6730c7576}\label{format_8hpp_a6e67336d5d6303f365cbdaf6730c7576}} 
+\index{format.hpp@{format.hpp}!get\_surface\_format@{get\_surface\_format}}
+\index{get\_surface\_format@{get\_surface\_format}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_surface\_format()}{get\_surface\_format()}}
+{\footnotesize\ttfamily Vk\+Surface\+Format\+KHR lava\+::get\+\_\+surface\+\_\+format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device,  }\item[{Vk\+Surface\+KHR}]{surface,  }\item[{\mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}}}]{request = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Get the surface format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em surface} & Vulkan surface \\
+\hline
+{\em request} & Surface format request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Surface\+Format\+KHR Chosen surface format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_acc1dae293ccc165303879bf130eebefb}\label{format_8hpp_acc1dae293ccc165303879bf130eebefb}} 
+\index{format.hpp@{format.hpp}!image\_memory\_barrier@{image\_memory\_barrier}}
+\index{image\_memory\_barrier@{image\_memory\_barrier}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{image\_memory\_barrier()}{image\_memory\_barrier()}}
+{\footnotesize\ttfamily Vk\+Image\+Memory\+Barrier lava\+::image\+\_\+memory\+\_\+barrier (\begin{DoxyParamCaption}\item[{Vk\+Image}]{image,  }\item[{Vk\+Image\+Layout}]{old\+\_\+layout,  }\item[{Vk\+Image\+Layout}]{new\+\_\+layout }\end{DoxyParamCaption})}
+
+
+
+Get image memory barrier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Target image \\
+\hline
+{\em old\+\_\+layout} & Old image layout \\
+\hline
+{\em new\+\_\+layout} & New image layout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+Memory\+Barrier Image memory barrier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_af27d3a7e9390a07876f116a7afff4594}\label{format_8hpp_af27d3a7e9390a07876f116a7afff4594}} 
+\index{format.hpp@{format.hpp}!insert\_image\_memory\_barrier@{insert\_image\_memory\_barrier}}
+\index{insert\_image\_memory\_barrier@{insert\_image\_memory\_barrier}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{insert\_image\_memory\_barrier()}{insert\_image\_memory\_barrier()}}
+{\footnotesize\ttfamily void lava\+::insert\+\_\+image\+\_\+memory\+\_\+barrier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buffer,  }\item[{Vk\+Image}]{image,  }\item[{Vk\+Access\+Flags}]{src\+\_\+access\+\_\+mask,  }\item[{Vk\+Access\+Flags}]{dst\+\_\+access\+\_\+mask,  }\item[{Vk\+Image\+Layout}]{old\+\_\+image\+\_\+layout,  }\item[{Vk\+Image\+Layout}]{new\+\_\+image\+\_\+layout,  }\item[{Vk\+Pipeline\+Stage\+Flags}]{src\+\_\+stage\+\_\+mask,  }\item[{Vk\+Pipeline\+Stage\+Flags}]{dst\+\_\+stage\+\_\+mask,  }\item[{Vk\+Image\+Subresource\+Range}]{subresource\+\_\+range }\end{DoxyParamCaption})}
+
+
+
+Insert image memory barrier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em cmd\+\_\+buffer} & Command buffer \\
+\hline
+{\em image} & Target image \\
+\hline
+{\em src\+\_\+access\+\_\+mask} & Source access mask \\
+\hline
+{\em dst\+\_\+access\+\_\+mask} & Destination access mask \\
+\hline
+{\em old\+\_\+image\+\_\+layout} & Old image layout \\
+\hline
+{\em new\+\_\+image\+\_\+layout} & New image layout \\
+\hline
+{\em src\+\_\+stage\+\_\+mask} & Source pipeline stage flags \\
+\hline
+{\em dst\+\_\+stage\+\_\+mask} & Destination pipeline stage flags \\
+\hline
+{\em subresource\+\_\+range} & Image subresource range \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_a78f0c1408531507bcbba04186973cd4e}\label{format_8hpp_a78f0c1408531507bcbba04186973cd4e}} 
+\index{format.hpp@{format.hpp}!set\_image\_layout@{set\_image\_layout}}
+\index{set\_image\_layout@{set\_image\_layout}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_layout()}{set\_image\_layout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lava\+::set\+\_\+image\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buffer,  }\item[{Vk\+Image}]{image,  }\item[{Vk\+Image\+Aspect\+Flags}]{aspect\+\_\+mask,  }\item[{Vk\+Image\+Layout}]{old\+\_\+image\+\_\+layout,  }\item[{Vk\+Image\+Layout}]{new\+\_\+image\+\_\+layout,  }\item[{Vk\+Pipeline\+Stage\+Flags}]{src\+\_\+stage\+\_\+mask = {\ttfamily VK\+\_\+PIPELINE\+\_\+STAGE\+\_\+ALL\+\_\+COMMANDS\+\_\+BIT},  }\item[{Vk\+Pipeline\+Stage\+Flags}]{dst\+\_\+stage\+\_\+mask = {\ttfamily VK\+\_\+PIPELINE\+\_\+STAGE\+\_\+ALL\+\_\+COMMANDS\+\_\+BIT} }\end{DoxyParamCaption})}
+
+
+
+Set the image layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em cmd\+\_\+buffer} & Command buffer \\
+\hline
+{\em image} & Target image \\
+\hline
+{\em aspect\+\_\+mask} & Image aspect flags \\
+\hline
+{\em old\+\_\+image\+\_\+layout} & Old image layout \\
+\hline
+{\em new\+\_\+image\+\_\+layout} & New image layout \\
+\hline
+{\em src\+\_\+stage\+\_\+mask} & Source pipeline stage flags \\
+\hline
+{\em dst\+\_\+stage\+\_\+mask} & Destination pipeline stage flags \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_af551022681464189ba0002125214558d}\label{format_8hpp_af551022681464189ba0002125214558d}} 
+\index{format.hpp@{format.hpp}!set\_image\_layout@{set\_image\_layout}}
+\index{set\_image\_layout@{set\_image\_layout}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_layout()}{set\_image\_layout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lava\+::set\+\_\+image\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buffer,  }\item[{Vk\+Image}]{image,  }\item[{Vk\+Image\+Layout}]{old\+\_\+image\+\_\+layout,  }\item[{Vk\+Image\+Layout}]{new\+\_\+image\+\_\+layout,  }\item[{Vk\+Image\+Subresource\+Range}]{subresource\+\_\+range,  }\item[{Vk\+Pipeline\+Stage\+Flags}]{src\+\_\+stage\+\_\+mask = {\ttfamily VK\+\_\+PIPELINE\+\_\+STAGE\+\_\+ALL\+\_\+COMMANDS\+\_\+BIT},  }\item[{Vk\+Pipeline\+Stage\+Flags}]{dst\+\_\+stage\+\_\+mask = {\ttfamily VK\+\_\+PIPELINE\+\_\+STAGE\+\_\+ALL\+\_\+COMMANDS\+\_\+BIT} }\end{DoxyParamCaption})}
+
+
+
+Set the image layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em cmd\+\_\+buffer} & Command buffer \\
+\hline
+{\em image} & Target image \\
+\hline
+{\em old\+\_\+image\+\_\+layout} & Old image layout \\
+\hline
+{\em new\+\_\+image\+\_\+layout} & New image layout \\
+\hline
+{\em subresource\+\_\+range} & Image subresource range \\
+\hline
+{\em src\+\_\+stage\+\_\+mask} & Source pipeline stage flags \\
+\hline
+{\em dst\+\_\+stage\+\_\+mask} & Destination pipeline stage flags \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{format_8hpp_ab3b5bbebb9ee932deb0371bce8f08f16}\label{format_8hpp_ab3b5bbebb9ee932deb0371bce8f08f16}} 
+\index{format.hpp@{format.hpp}!support\_blit@{support\_blit}}
+\index{support\_blit@{support\_blit}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{support\_blit()}{support\_blit()}}
+{\footnotesize\ttfamily bool lava\+::support\+\_\+blit (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device,  }\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if format supports bltting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan physical device \\
+\hline
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Blitting is supported or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{format_8hpp_a8cf3ce4ea20cbc3a7d1bc17399c239a0}\label{format_8hpp_a8cf3ce4ea20cbc3a7d1bc17399c239a0}} 
+\index{format.hpp@{format.hpp}!support\_vertex\_buffer\_format@{support\_vertex\_buffer\_format}}
+\index{support\_vertex\_buffer\_format@{support\_vertex\_buffer\_format}!format.hpp@{format.hpp}}
+\doxysubsubsection{\texorpdfstring{support\_vertex\_buffer\_format()}{support\_vertex\_buffer\_format()}}
+{\footnotesize\ttfamily bool lava\+::support\+\_\+vertex\+\_\+buffer\+\_\+format (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device,  }\item[{Vk\+Format}]{format }\end{DoxyParamCaption})}
+
+
+
+Check if vertex buffer format is supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan physical device \\
+\hline
+{\em format} & Format to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Format is supported or not 
+\end{DoxyReturn}

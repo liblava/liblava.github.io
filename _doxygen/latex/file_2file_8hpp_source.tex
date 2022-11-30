@@ -1,0 +1,91 @@
+\hypertarget{file_2file_8hpp_source}{}\doxysection{file.\+hpp}
+\label{file_2file_8hpp_source}\index{liblava/file/file.hpp@{liblava/file/file.hpp}}
+\mbox{\hyperlink{file_2file_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{data_8hpp}{liblava/core/data.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{// fwd}}
+\DoxyCodeLine{14 \textcolor{keyword}{struct }PHYSFS\_File;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21 \textcolor{keyword}{enum class} \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{22     none = 0,}
+\DoxyCodeLine{23     fs,}
+\DoxyCodeLine{24     f\_stream}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \textcolor{keyword}{const} \mbox{\hyperlink{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c}{file\_error\_result}} = -\/1;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{file_2file_8hpp_a7aaf917bd12b10e762020a0bd7bf009d}{file\_error}}(\mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} result) \{}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} result == \mbox{\hyperlink{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c}{file\_error\_result}};}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42 \textcolor{keyword}{enum class} \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{43     read = 0,}
+\DoxyCodeLine{44     write}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1file}{file}} : \mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\_copy\_no\_move}} \{}
+\DoxyCodeLine{52     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1file_a9a38fd427cf4038bf38f422c275b2cad}{ref}} = \mbox{\hyperlink{structlava_1_1file}{file}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{59     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1file_a2e577777719e646fe07900fd35955135}{file}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path = \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{60                   \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}} mode = file\_mode::read);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65     \mbox{\hyperlink{structlava_1_1file_ab870ec4da9026e9e6986590d94a155b2}{\string~file}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file_a5978b972d71c28a1d6b5ab23054e51b4}{open}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path,}
+\DoxyCodeLine{74               \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}} mode = file\_mode::read);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1file_a6ff92cdcc2b249ffc58a323306e4d7c7}{close}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file_ad04cef21b98035fd3edee2dbd857ce98}{opened}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}{get\_size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{98     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_aec73513392f8d54935583abff11dd8b0}{read}}(\mbox{\hyperlink{data_8hpp_a881a414775db89883beb7572771b296b}{data\_ptr}} \mbox{\hyperlink{structlava_1_1data}{data}}) \{}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1file_aec73513392f8d54935583abff11dd8b0}{read}}(\mbox{\hyperlink{structlava_1_1data}{data}},}
+\DoxyCodeLine{100                     \mbox{\hyperlink{types_8hpp_a52a659311126b89d05817c269505f14d}{to\_ui64}}(\mbox{\hyperlink{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}{get\_size}}()));}
+\DoxyCodeLine{101     \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{109     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_a4b9893276eda61cb18d2720fa031dd37}{read}}(\mbox{\hyperlink{data_8hpp_a881a414775db89883beb7572771b296b}{data\_ptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} size);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{117     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_a4b8fe6efbf8d89addfb31d6d0e88255d}{write}}(\mbox{\hyperlink{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}{data\_cptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} size);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{124     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_a86a14d3cb72e0f73126a3608c066309e}{seek}}(\mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} position);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{130     \mbox{\hyperlink{types_8hpp_ab9d0858376a2dd8a5ff204d54cd8840f}{i64}} \mbox{\hyperlink{structlava_1_1file_aa61df64db7c99e73e3ce3471956d9f29}{tell}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file_a7cd953262a017883f91f3411182773a3}{writable}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{137         \textcolor{keywordflow}{return} mode == file\_mode::write;}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{144     \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}} \mbox{\hyperlink{structlava_1_1file_abada804bc55603748cbbe269a0fadaa3}{get\_type}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{145         \textcolor{keywordflow}{return} type;}
+\DoxyCodeLine{146     \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{152     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file_a091e149d0cc93f5cefc7814df316027f}{get\_path}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{153         \textcolor{keywordflow}{return} path;}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{keyword}{private}:}
+\DoxyCodeLine{158     \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}} type = file\_type::none;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{161     \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}} mode = file\_mode::read;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{string} path;}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{167     PHYSFS\_File* fs\_file = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{170     \textcolor{keyword}{mutable} std::ifstream i\_stream;}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{173     \textcolor{keyword}{mutable} std::ofstream o\_stream;}
+\DoxyCodeLine{174 \};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

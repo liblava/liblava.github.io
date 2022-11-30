@@ -1,0 +1,130 @@
+\hypertarget{log_8hpp_source}{}\doxysection{log.\+hpp}
+\label{log_8hpp_source}\index{liblava/util/log.hpp@{liblava/util/log.hpp}}
+\mbox{\hyperlink{log_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <spdlog/sinks/basic\_file\_sink.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <spdlog/sinks/stdout\_color\_sinks.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <spdlog/spdlog.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{version_8hpp}{liblava/core/version.hpp}}>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 \textcolor{keyword}{using }\mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} = std::shared\_ptr<spdlog::logger>;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \textcolor{keywordtype}{id}, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}) \{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} fmt::format(\textcolor{stringliteral}{"{}\{\} | \{\}"{}}, \textcolor{keywordtype}{id}, \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{29 \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{36 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1version}{version}}) \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} fmt::format(\textcolor{stringliteral}{"{}\{\}.\{\}.\{\}"{}},}
+\DoxyCodeLine{38                        \mbox{\hyperlink{structlava_1_1version}{version}}.major,}
+\DoxyCodeLine{39                        \mbox{\hyperlink{structlava_1_1version}{version}}.minor,}
+\DoxyCodeLine{40                        \mbox{\hyperlink{structlava_1_1version}{version}}.patch);}
+\DoxyCodeLine{41 \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{log_8hpp_ab3ab601d2b6469f7e8d282bad6d8c9cd}{internal\_version\_string}}() \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{structlava_1_1internal__version}{int\_version}}\{\});}
+\DoxyCodeLine{49 \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{log_8hpp_a784edc2067018c2c772f0b9b895a100e}{int\_version\_string}}() \{}
+\DoxyCodeLine{55     \textcolor{keywordflow}{return} \mbox{\hyperlink{log_8hpp_ab3ab601d2b6469f7e8d282bad6d8c9cd}{internal\_version\_string}}();}
+\DoxyCodeLine{56 \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{63 \textcolor{keyword}{inline} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{version_8hpp_a405b58b30c091de0c985f3389f5d543d}{version\_stage}} \mbox{\hyperlink{structlava_1_1stage}{stage}}) \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{switch} (\mbox{\hyperlink{structlava_1_1stage}{stage}}) \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{case} version\_stage::preview:}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}preview"{}};}
+\DoxyCodeLine{67     \textcolor{keywordflow}{case} version\_stage::alpha:}
+\DoxyCodeLine{68         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}alpha"{}};}
+\DoxyCodeLine{69     \textcolor{keywordflow}{case} version\_stage::beta:}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}beta"{}};}
+\DoxyCodeLine{71     \textcolor{keywordflow}{case} version\_stage::rc:}
+\DoxyCodeLine{72         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}rc"{}};}
+\DoxyCodeLine{73     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76 \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{structlava_1_1version}{version}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1version}{version}}) \{}
+\DoxyCodeLine{84     \textcolor{keywordtype}{string} stage\_str = \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a13275affeb3eab2a3ebaba8d83963c96}{stage}});}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a8df3fcad2c48ebb8bd23c75a2898e2d5}{rev}} > 1) \&\& (\mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a13275affeb3eab2a3ebaba8d83963c96}{stage}} != version\_stage::release))}
+\DoxyCodeLine{86         stage\_str += fmt::format(\textcolor{stringliteral}{"{} \{\}"{}}, \mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a8df3fcad2c48ebb8bd23c75a2898e2d5}{rev}});}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a6fd8964be87b6bdb3051556748db714a}{release}} == 0) \{}
+\DoxyCodeLine{89         \textcolor{keywordflow}{if} (stage\_str.empty())}
+\DoxyCodeLine{90             \textcolor{keywordflow}{return} fmt::format(\textcolor{stringliteral}{"{}\{\}"{}}, \mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a873f2f0704da8620f5fb171b07321158}{year}});}
+\DoxyCodeLine{91         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{92             \textcolor{keywordflow}{return} fmt::format(\textcolor{stringliteral}{"{}\{\} \{\}"{}},}
+\DoxyCodeLine{93                                \mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a873f2f0704da8620f5fb171b07321158}{year}}, stage\_str);}
+\DoxyCodeLine{94     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} fmt::format(\textcolor{stringliteral}{"{}\{\}.\{\} \{\}"{}},}
+\DoxyCodeLine{96                            \mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a873f2f0704da8620f5fb171b07321158}{year}}, \mbox{\hyperlink{structlava_1_1version}{version}}.\mbox{\hyperlink{structlava_1_1version_a6fd8964be87b6bdb3051556748db714a}{release}}, stage\_str);}
+\DoxyCodeLine{97 \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{log_8hpp_a24f4d3b66a3cd12bc3ff3a57228764d6}{version\_string}}() \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{return} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{structlava_1_1version}{version}}\{\});}
+\DoxyCodeLine{105 \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1log__config}{log\_config}} \{}
+\DoxyCodeLine{112     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} = \mbox{\hyperlink{types_8hpp_aa6f0dfe4257894c2b7439582eeea0bec}{\_lava\_}};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{structlava_1_1file}{file}} = \textcolor{stringliteral}{"{}lava.log"{}};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{118     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1log__config_ad2b40c8d9dc25d36e46fc167d126dc5d}{level}} = -\/1;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1log__config_a0d78e11fa889c066e7f303fd5ec4cbc4}{debug}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{128 \textcolor{keyword}{inline} \mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} \mbox{\hyperlink{log_8hpp_a93eaa2a5ff4b1b7f15ebe00046753d56}{setup\_log}}(\mbox{\hyperlink{structlava_1_1log__config}{log\_config}} config = \{\}) \{}
+\DoxyCodeLine{129     \textcolor{keywordflow}{if} (config.debug) \{}
+\DoxyCodeLine{130         \textcolor{keyword}{auto} log = spdlog::stdout\_color\_mt(config.logger);}
+\DoxyCodeLine{131         log-\/>set\_level((config.level < 0)}
+\DoxyCodeLine{132                            ? spdlog::level::debug}
+\DoxyCodeLine{133                            : (spdlog::level::level\_enum) config.level);}
+\DoxyCodeLine{134         \textcolor{keywordflow}{return} log;}
+\DoxyCodeLine{135     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{136         \textcolor{keyword}{auto} \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}} = spdlog::basic\_logger\_mt(config.logger, config.file);}
+\DoxyCodeLine{137         \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}-\/>set\_level((config.level < 0)}
+\DoxyCodeLine{138                            ? spdlog::level::warn}
+\DoxyCodeLine{139                            : (spdlog::level::level\_enum) config.level);}
+\DoxyCodeLine{140         \textcolor{keywordflow}{return} \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}};}
+\DoxyCodeLine{141     \}}
+\DoxyCodeLine{142 \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{148 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{log_8hpp_aa8a223d182dfcefd09a6c1b0a3ce0692}{teardown\_log}}(\mbox{\hyperlink{structlava_1_1log__config}{log\_config}} config = \{\}) \{}
+\DoxyCodeLine{149     spdlog::drop(config.logger);}
+\DoxyCodeLine{150 \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{155 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1global__logger}{global\_logger}} \{}
+\DoxyCodeLine{160     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1global__logger}{global\_logger}}\& \mbox{\hyperlink{structlava_1_1global__logger_af8d156d01533ef0140fce79a27421c6f}{singleton}}() \{}
+\DoxyCodeLine{161         \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1global__logger}{global\_logger}} \mbox{\hyperlink{structlava_1_1global__logger}{global\_logger}};}
+\DoxyCodeLine{162         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1global__logger}{global\_logger}};}
+\DoxyCodeLine{163     \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{169     \mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} \mbox{\hyperlink{structlava_1_1global__logger_a2873deeab28e63acf0e939053cbe1695}{get}}() \{}
+\DoxyCodeLine{170         \textcolor{keywordflow}{return} log;}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{177     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1global__logger_aa5a90cad021a64830326d98d29b449db}{set}}(\mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{lava::logger}} l) \{}
+\DoxyCodeLine{178         log = l;}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{184     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1global__logger_a0b0815f56c6589a45b51cd2d254080b5}{reset}}() \{}
+\DoxyCodeLine{185         log = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{186     \}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{keyword}{private}:}
+\DoxyCodeLine{190     \mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} log;}
+\DoxyCodeLine{191 \};}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{197 \textcolor{keyword}{inline} \mbox{\hyperlink{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}{logger}} \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}() \{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1global__logger_af8d156d01533ef0140fce79a27421c6f}{global\_logger::singleton}}().\mbox{\hyperlink{structlava_1_1global__logger_a2873deeab28e63acf0e939053cbe1695}{get}}();}
+\DoxyCodeLine{199 \}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

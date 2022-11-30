@@ -1,0 +1,139 @@
+\hypertarget{structlava_1_1pipeline_1_1shader__stage}{}\doxysection{lava\+::pipeline\+::shader\+\_\+stage Struct Reference}
+\label{structlava_1_1pipeline_1_1shader__stage}\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+
+
+Shader stage.  
+
+
+
+
+{\ttfamily \#include $<$pipeline.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_ac6814b7ab69f749b55c6536f914da31c}\label{structlava_1_1pipeline_1_1shader__stage_ac6814b7ab69f749b55c6536f914da31c}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage}{shader\+\_\+stage}} $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to shader stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a9f070d883bb1ad716c1ffea62c529e9a}\label{structlava_1_1pipeline_1_1shader__stage_a9f070d883bb1ad716c1ffea62c529e9a}} 
+using {\bfseries list} = std\+::vector$<$ \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_ac6814b7ab69f749b55c6536f914da31c}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em List of shader stages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_aac5cb6267f90a39648d054ab70bb42b8}\label{structlava_1_1pipeline_1_1shader__stage_aac5cb6267f90a39648d054ab70bb42b8}} 
+{\bfseries shader\+\_\+stage} ()
+\begin{DoxyCompactList}\small\item\em Construct a new shader stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a4ee08e0d178f57a04af32547d2be203e}\label{structlava_1_1pipeline_1_1shader__stage_a4ee08e0d178f57a04af32547d2be203e}} 
+{\bfseries $\sim$shader\+\_\+stage} ()
+\begin{DoxyCompactList}\small\item\em Destroy the shader stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_a6b1a08bafcc720d2a5f5db441d209c9e}{set\+\_\+stage}} (Vk\+Shader\+Stage\+Flag\+Bits \mbox{\hyperlink{structlava_1_1stage}{stage}})
+\begin{DoxyCompactList}\small\item\em Set the stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_a67900963fdfb36001441b4a380e1a7f0}{add\+\_\+specialization\+\_\+entry}} (Vk\+Specialization\+Map\+Entry const \&specialization)
+\begin{DoxyCompactList}\small\item\em Add specialization entry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_a81445cc401eb0103e13ed7d52e490020}{create}} (\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}} shader\+\_\+data, \mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}} specialization\+\_\+data=\mbox{\hyperlink{structlava_1_1data}{data}}())
+\begin{DoxyCompactList}\small\item\em Create a new shader stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_aa826abf80a9ec82bd11da7661120867c}\label{structlava_1_1pipeline_1_1shader__stage_aa826abf80a9ec82bd11da7661120867c}} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the shader stage. \end{DoxyCompactList}\item 
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info const \& \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_a021703473c95cf5e6bebf12270669daf}{get\+\_\+create\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the create info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_ac6814b7ab69f749b55c6536f914da31c}{ptr}} \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_a4e36def67d37fa5fc0a692c01e46df7d}{make}} (Vk\+Shader\+Stage\+Flag\+Bits \mbox{\hyperlink{structlava_1_1stage}{stage}})
+\begin{DoxyCompactList}\small\item\em Make a new pipline shader stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shader stage. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a67900963fdfb36001441b4a380e1a7f0}\label{structlava_1_1pipeline_1_1shader__stage_a67900963fdfb36001441b4a380e1a7f0}} 
+\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}!add\_specialization\_entry@{add\_specialization\_entry}}
+\index{add\_specialization\_entry@{add\_specialization\_entry}!lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+\doxysubsubsection{\texorpdfstring{add\_specialization\_entry()}{add\_specialization\_entry()}}
+{\footnotesize\ttfamily void lava\+::pipeline\+::shader\+\_\+stage\+::add\+\_\+specialization\+\_\+entry (\begin{DoxyParamCaption}\item[{Vk\+Specialization\+Map\+Entry const \&}]{specialization }\end{DoxyParamCaption})}
+
+
+
+Add specialization entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em specialization} & Specialization map entry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a81445cc401eb0103e13ed7d52e490020}\label{structlava_1_1pipeline_1_1shader__stage_a81445cc401eb0103e13ed7d52e490020}} 
+\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}!create@{create}}
+\index{create@{create}!lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::pipeline\+::shader\+\_\+stage\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}}}]{shader\+\_\+data,  }\item[{\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}}}]{specialization\+\_\+data = {\ttfamily \mbox{\hyperlink{structlava_1_1data}{data}}()} }\end{DoxyParamCaption})}
+
+
+
+Create a new shader stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em shader\+\_\+data} & Shader data \\
+\hline
+{\em specialization\+\_\+data} & Specialization data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a021703473c95cf5e6bebf12270669daf}\label{structlava_1_1pipeline_1_1shader__stage_a021703473c95cf5e6bebf12270669daf}} 
+\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}!get\_create\_info@{get\_create\_info}}
+\index{get\_create\_info@{get\_create\_info}!lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+\doxysubsubsection{\texorpdfstring{get\_create\_info()}{get\_create\_info()}}
+{\footnotesize\ttfamily Vk\+Pipeline\+Shader\+Stage\+Create\+Info const  \& lava\+::pipeline\+::shader\+\_\+stage\+::get\+\_\+create\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the create info. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info const\& Pipeline shader stage create information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a4e36def67d37fa5fc0a692c01e46df7d}\label{structlava_1_1pipeline_1_1shader__stage_a4e36def67d37fa5fc0a692c01e46df7d}} 
+\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}!make@{make}}
+\index{make@{make}!lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage_ac6814b7ab69f749b55c6536f914da31c}{ptr}} lava\+::pipeline\+::shader\+\_\+stage\+::make (\begin{DoxyParamCaption}\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new pipline shader stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Shader stage flag bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to shader stage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_1_1shader__stage_a6b1a08bafcc720d2a5f5db441d209c9e}\label{structlava_1_1pipeline_1_1shader__stage_a6b1a08bafcc720d2a5f5db441d209c9e}} 
+\index{lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}!set\_stage@{set\_stage}}
+\index{set\_stage@{set\_stage}!lava::pipeline::shader\_stage@{lava::pipeline::shader\_stage}}
+\doxysubsubsection{\texorpdfstring{set\_stage()}{set\_stage()}}
+{\footnotesize\ttfamily void lava\+::pipeline\+::shader\+\_\+stage\+::set\+\_\+stage (\begin{DoxyParamCaption}\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Shader stage flag bits \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{pipeline_8hpp}{pipeline.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+\hypertarget{structlava_1_1renderer}{}\doxysection{lava\+::renderer Struct Reference}
+\label{structlava_1_1renderer}\index{lava::renderer@{lava::renderer}}
+
+
+Plain renderer.  
+
+
+
+
+{\ttfamily \#include $<$renderer.\+hpp$>$}
+
+Inheritance diagram for lava\+::renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1renderer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1renderer_a8a81825f7d0d459e036c50bdd48cd4f6}\label{structlava_1_1renderer_a8a81825f7d0d459e036c50bdd48cd4f6}} 
+using {\bfseries destroy\+\_\+func} = std\+::function$<$ void()$>$
+\begin{DoxyCompactList}\small\item\em Destroy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1renderer_acf20693eee0e74e63712dfeffbf4c6fa}{create}} (\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Create a new renderer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1renderer_ad98c7125833d129b5dc15fb363a5162a}\label{structlava_1_1renderer_ad98c7125833d129b5dc15fb363a5162a}} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{renderer_8hpp_a54ab89170034f263845c60460df1d093}{optional\+\_\+index}} \mbox{\hyperlink{structlava_1_1renderer_a6d619cb1a8aeb50a0ed075ea1477601d}{begin\+\_\+frame}} ()
+\begin{DoxyCompactList}\small\item\em Begin to render a frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1renderer_ae667b73be54b89bfe1a2df94258bb429}{end\+\_\+frame}} (\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{Vk\+Command\+Buffers}} const \&cmd\+\_\+buffers)
+\begin{DoxyCompactList}\small\item\em End of frame rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1renderer_ab4f090f364f811424edb2b08b4b50d44}{frame}} (\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{Vk\+Command\+Buffers}} const \&cmd\+\_\+buffers)
+\begin{DoxyCompactList}\small\item\em Render a frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1renderer_a1706d7aef2be7db41fe625af63d63e6c}{get\+\_\+frame}} () const
+\begin{DoxyCompactList}\small\item\em Get the current frame index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1renderer_accd2fdaf7d870094c62ceac122f415cb}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1renderer_a2400aee51a31b1edd61bf29e2870da21}\label{structlava_1_1renderer_a2400aee51a31b1edd61bf29e2870da21}} 
+\mbox{\hyperlink{structlava_1_1renderer_a8a81825f7d0d459e036c50bdd48cd4f6}{destroy\+\_\+func}} {\bfseries on\+\_\+destroy}
+\begin{DoxyCompactList}\small\item\em Called on renderer destroy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1renderer_aa8927a2cacb8b75863dae7a26e99b44d}\label{structlava_1_1renderer_aa8927a2cacb8b75863dae7a26e99b44d}} 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Active state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plain renderer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1renderer_a6d619cb1a8aeb50a0ed075ea1477601d}\label{structlava_1_1renderer_a6d619cb1a8aeb50a0ed075ea1477601d}} 
+\index{lava::renderer@{lava::renderer}!begin\_frame@{begin\_frame}}
+\index{begin\_frame@{begin\_frame}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{begin\_frame()}{begin\_frame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{renderer_8hpp_a54ab89170034f263845c60460df1d093}{optional\+\_\+index}} lava\+::renderer\+::begin\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Begin to render a frame. 
+
+\begin{DoxyReturn}{Returns}
+optional\+\_\+index Frame index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1renderer_acf20693eee0e74e63712dfeffbf4c6fa}\label{structlava_1_1renderer_acf20693eee0e74e63712dfeffbf4c6fa}} 
+\index{lava::renderer@{lava::renderer}!create@{create}}
+\index{create@{create}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::renderer\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Create a new renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Swapchain target \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1renderer_ae667b73be54b89bfe1a2df94258bb429}\label{structlava_1_1renderer_ae667b73be54b89bfe1a2df94258bb429}} 
+\index{lava::renderer@{lava::renderer}!end\_frame@{end\_frame}}
+\index{end\_frame@{end\_frame}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{end\_frame()}{end\_frame()}}
+{\footnotesize\ttfamily bool lava\+::renderer\+::end\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{Vk\+Command\+Buffers}} const \&}]{cmd\+\_\+buffers }\end{DoxyParamCaption})}
+
+
+
+End of frame rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buffers} & List of command buffers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+End was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1renderer_ab4f090f364f811424edb2b08b4b50d44}\label{structlava_1_1renderer_ab4f090f364f811424edb2b08b4b50d44}} 
+\index{lava::renderer@{lava::renderer}!frame@{frame}}
+\index{frame@{frame}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{frame()}{frame()}}
+{\footnotesize\ttfamily bool lava\+::renderer\+::frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{Vk\+Command\+Buffers}} const \&}]{cmd\+\_\+buffers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Render a frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buffers} & List of command buffers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Render was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1renderer_accd2fdaf7d870094c62ceac122f415cb}\label{structlava_1_1renderer_accd2fdaf7d870094c62ceac122f415cb}} 
+\index{lava::renderer@{lava::renderer}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} lava\+::renderer\+::get\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+device\+\_\+p Vulkan device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1renderer_a1706d7aef2be7db41fe625af63d63e6c}\label{structlava_1_1renderer_a1706d7aef2be7db41fe625af63d63e6c}} 
+\index{lava::renderer@{lava::renderer}!get\_frame@{get\_frame}}
+\index{get\_frame@{get\_frame}!lava::renderer@{lava::renderer}}
+\doxysubsubsection{\texorpdfstring{get\_frame()}{get\_frame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} lava\+::renderer\+::get\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current frame index. 
+
+\begin{DoxyReturn}{Returns}
+index Frame index 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{renderer_8hpp}{renderer.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\hypertarget{argh_8hpp_source}{}\doxysection{argh.\+hpp}
+\label{argh_8hpp_source}\index{liblava/frame/argh.hpp@{liblava/frame/argh.hpp}}
+\mbox{\hyperlink{argh_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <argh.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{log_8hpp}{liblava/util/log.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16 \textcolor{keyword}{using }\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}} = argh::parser \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{argh_8hpp_afd197b24f5f0a6899e5c789be5423d44}{log\_command\_line}}(\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}} \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}) \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.pos\_args().empty()) \{}
+\DoxyCodeLine{24         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& pos\_arg : \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.pos\_args())}
+\DoxyCodeLine{25             \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}()-\/>info(\textcolor{stringliteral}{"{}cmd \{\}"{}}, pos\_arg);}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.flags().empty()) \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& \mbox{\hyperlink{types_8hpp_ae54e1af8bd332ce17bbfc07fe9dff1ef}{flag}} : \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.flags())}
+\DoxyCodeLine{30             \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}()-\/>info(\textcolor{stringliteral}{"{}cmd flag: \{\}"{}}, \mbox{\hyperlink{types_8hpp_ae54e1af8bd332ce17bbfc07fe9dff1ef}{flag}});}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.params().empty()) \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}, value] : \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}}.params())}
+\DoxyCodeLine{35             \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}()-\/>info(\textcolor{stringliteral}{"{}cmd param: \{\} = \{\}"{}}, \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}, value);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

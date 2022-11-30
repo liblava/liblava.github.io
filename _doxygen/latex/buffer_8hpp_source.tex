@@ -1,0 +1,99 @@
+\hypertarget{buffer_8hpp_source}{}\doxysection{buffer.\+hpp}
+\label{buffer_8hpp_source}\index{liblava/resource/buffer.hpp@{liblava/resource/buffer.hpp}}
+\mbox{\hyperlink{buffer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{device_8hpp}{liblava/base/device.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1buffer}{buffer}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{19     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{ptr}} = std::shared\_ptr<buffer>;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1buffer_aa726289448a694ef212cf9ab132f47d8}{list}} = std::vector<ptr>;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{ptr}} \mbox{\hyperlink{structlava_1_1buffer_a5090b49b5454584a13b7569eae7d16be}{make}}() \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} std::make\_shared<buffer>();}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \mbox{\hyperlink{structlava_1_1buffer_acbfbf425c490bca4e6aeea592ec1c559}{\string~buffer}}() \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{structlava_1_1buffer_a90f1403a96a5a041114bdfe2482e1c96}{destroy}}();}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1buffer_a3d084f09d01b97f79b7479ed164ad081}{create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{50                 \textcolor{keywordtype}{void} \textcolor{keyword}{const}* \mbox{\hyperlink{structlava_1_1data}{data}},}
+\DoxyCodeLine{51                 \textcolor{keywordtype}{size\_t} size,}
+\DoxyCodeLine{52                 VkBufferUsageFlags usage,}
+\DoxyCodeLine{53                 \textcolor{keywordtype}{bool} mapped = \textcolor{keyword}{false},}
+\DoxyCodeLine{54                 VmaMemoryUsage memory\_usage = VMA\_MEMORY\_USAGE\_GPU\_ONLY);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1buffer_a450a4cd7af0c8c07bec66f0c1ed528d0}{create\_mapped}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{66                        \textcolor{keywordtype}{void} \textcolor{keyword}{const}* \mbox{\hyperlink{structlava_1_1data}{data}},}
+\DoxyCodeLine{67                        \textcolor{keywordtype}{size\_t} size,}
+\DoxyCodeLine{68                        VkBufferUsageFlags usage,}
+\DoxyCodeLine{69                        VmaMemoryUsage memory\_usage = VMA\_MEMORY\_USAGE\_CPU\_TO\_GPU);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1buffer_a90f1403a96a5a041114bdfe2482e1c96}{destroy}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1buffer_aaf1c22d0e94545eb9788700f086712c0}{get\_device}}() \{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1buffer_a0be51673d622a473bd6da8756f4bb8cd}{valid}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} vk\_buffer != VK\_NULL\_HANDLE;}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{96     VkBuffer \mbox{\hyperlink{structlava_1_1buffer_aabb19a74c0cdbfa5ca4b2f35e3033a76}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{return} vk\_buffer;}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104     VkDescriptorBufferInfo \textcolor{keyword}{const}* \mbox{\hyperlink{structlava_1_1buffer_ac6af491dceda2d1ab9bad86f88628e08}{get\_descriptor\_info}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{105         \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structlava_1_1descriptor}{descriptor}};}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{112     VkDeviceAddress \mbox{\hyperlink{structlava_1_1buffer_ae40ffbd255fe3b4b73cc760084df848d}{get\_address}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{118     VkDeviceSize \mbox{\hyperlink{structlava_1_1buffer_a56f97212f4a442bd52b3df9f76a6dbb9}{get\_size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{119         \textcolor{keywordflow}{return} allocation\_info.size;}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void}* \mbox{\hyperlink{structlava_1_1buffer_a6c0f7285793b973adc1d2de9545ca62f}{get\_mapped\_data}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} allocation\_info.pMappedData;}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{134     VkDeviceMemory \mbox{\hyperlink{structlava_1_1buffer_af0860571b26fa50f6cab16545828b299}{get\_device\_memory}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{135         \textcolor{keywordflow}{return} allocation\_info.deviceMemory;}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1buffer_a0b41bbf173c5f3a79deddf927cbd09d4}{flush}}(VkDeviceSize offset = 0,}
+\DoxyCodeLine{144                VkDeviceSize size = VK\_WHOLE\_SIZE);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{150     VmaAllocation \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1buffer_a2f2014025a50390b8cdbe204a9042400}{get\_allocation}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{151         \textcolor{keywordflow}{return} allocation;}
+\DoxyCodeLine{152     \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{158     VmaAllocationInfo \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1buffer_a86c5d2f8a4ae6452b5df9c8c33d94717}{get\_allocation\_info}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{159         \textcolor{keywordflow}{return} allocation\_info;}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{keyword}{private}:}
+\DoxyCodeLine{164     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{167     VkBuffer vk\_buffer = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{170     VmaAllocation allocation = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{173     VmaAllocationInfo allocation\_info = \{\};}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{176     VkDescriptorBufferInfo descriptor = \{\};}
+\DoxyCodeLine{177 \};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{184 VkPipelineStageFlags \mbox{\hyperlink{buffer_8hpp_a4fe4f0c45b11610b735dd4ec5eb1d36a}{buffer\_usage\_to\_possible\_stages}}(VkBufferUsageFlags usage);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{191 VkAccessFlags \mbox{\hyperlink{buffer_8hpp_a32e379ae053c501d6874da51314cf6ba}{buffer\_usage\_to\_possible\_access}}(VkBufferUsageFlags usage);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

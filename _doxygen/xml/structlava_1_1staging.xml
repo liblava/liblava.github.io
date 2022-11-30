@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1staging" kind="struct" language="C++" prot="public">
+    <compoundname>lava::staging</compoundname>
+    <includes refid="texture_8hpp" local="no">texture.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structlava_1_1staging_1ae4bd8fe899086e5be03440a6ccec4023" prot="private" static="no">
+        <type>std::map&lt; <ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref>, <ref refid="structlava_1_1texture_1a9590de86538341f171fe8bda29d8636e" kindref="member">texture::list</ref> &gt;</type>
+        <definition>using lava::staging::frame_stage_map =  std::map&lt;index, texture::list&gt;</definition>
+        <argsstring></argsstring>
+        <name>frame_stage_map</name>
+        <qualifiedname>lava::staging::frame_stage_map</qualifiedname>
+        <briefdescription>
+<para>Map of textures by frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="235" column="5" bodyfile="liblava/resource/texture.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1staging_1ab5a01c512f09f6eb21177fd1f084b978" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1texture_1a9590de86538341f171fe8bda29d8636e" kindref="member">texture::list</ref></type>
+        <definition>texture::list lava::staging::todo</definition>
+        <argsstring></argsstring>
+        <name>todo</name>
+        <qualifiedname>lava::staging::todo</qualifiedname>
+        <briefdescription>
+<para>List of textures to stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="232" column="19" bodyfile="liblava/resource/texture.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1staging_1ae9e46ef92149adf36b595fd4652e15df" prot="private" static="no" mutable="no">
+        <type>frame_stage_map</type>
+        <definition>frame_stage_map lava::staging::staged</definition>
+        <argsstring></argsstring>
+        <name>staged</name>
+        <qualifiedname>lava::staging::staged</qualifiedname>
+        <briefdescription>
+<para>Map of staged textures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="238" column="21" bodyfile="liblava/resource/texture.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1staging_1a7301334074fd5f5099f59cbb5855aeaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::staging::add</definition>
+        <argsstring>(texture::ptr texture)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::staging::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1texture_1af370579b8e012b0c1a0480f953ddb0b5" kindref="member">texture::ptr</ref></type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Add texture for staging. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Texture to stage </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="201" column="10" bodyfile="liblava/resource/texture.hpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1staging_1acdc91b33a416ac58ce433d071bd88cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::staging::stage</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, index frame)</argsstring>
+        <name>stage</name>
+        <qualifiedname>lava::staging::stage</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Stage textures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frame</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Stage was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="211" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1staging_1af0cd88d6ede7ef3280c4e37f765c9a9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::staging::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::staging::clear</qualifiedname>
+        <briefdescription>
+<para>Clear staging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="217" column="10" bodyfile="liblava/resource/texture.hpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1staging_1af243d1c4b3e96e387be946fbdaac10d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::staging::busy</definition>
+        <argsstring>() const</argsstring>
+        <name>busy</name>
+        <qualifiedname>lava::staging::busy</qualifiedname>
+        <briefdescription>
+<para>Check if staging is busy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Staging is busy or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/texture.hpp" line="226" column="10" bodyfile="liblava/resource/texture.hpp" bodystart="226" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Texture staging. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/resource/texture.hpp" line="196" column="1" bodyfile="liblava/resource/texture.hpp" bodystart="196" bodyend="239"/>
+    <listofallmembers>
+      <member refid="structlava_1_1staging_1a7301334074fd5f5099f59cbb5855aeaa" prot="public" virt="non-virtual"><scope>lava::staging</scope><name>add</name></member>
+      <member refid="structlava_1_1staging_1af243d1c4b3e96e387be946fbdaac10d8" prot="public" virt="non-virtual"><scope>lava::staging</scope><name>busy</name></member>
+      <member refid="structlava_1_1staging_1af0cd88d6ede7ef3280c4e37f765c9a9c" prot="public" virt="non-virtual"><scope>lava::staging</scope><name>clear</name></member>
+      <member refid="structlava_1_1staging_1ae4bd8fe899086e5be03440a6ccec4023" prot="private" virt="non-virtual"><scope>lava::staging</scope><name>frame_stage_map</name></member>
+      <member refid="structlava_1_1staging_1acdc91b33a416ac58ce433d071bd88cd2" prot="public" virt="non-virtual"><scope>lava::staging</scope><name>stage</name></member>
+      <member refid="structlava_1_1staging_1ae9e46ef92149adf36b595fd4652e15df" prot="private" virt="non-virtual"><scope>lava::staging</scope><name>staged</name></member>
+      <member refid="structlava_1_1staging_1ab5a01c512f09f6eb21177fd1f084b978" prot="private" virt="non-virtual"><scope>lava::staging</scope><name>todo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

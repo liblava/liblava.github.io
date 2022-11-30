@@ -1,0 +1,41 @@
+\hypertarget{platform_8hpp_source}{}\doxysection{platform.\+hpp}
+\label{platform_8hpp_source}\index{liblava/base/platform.hpp@{liblava/base/platform.hpp}}
+\mbox{\hyperlink{platform_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{device_8hpp}{liblava/base/device.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1platform}{platform}} \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}{device::ptr}} \mbox{\hyperlink{structlava_1_1platform_a597340b2ee216ce5ee7cb74376c33e54}{create}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1physical__device}{physical\_device}} = 0);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{30     \mbox{\hyperlink{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}{device::ptr}} \mbox{\hyperlink{structlava_1_1platform_a4341e065f7aef1501b18081b8efa21b8}{create}}(\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{device::create\_param::ref}} param);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1platform_ae9c5912cde238155ed47859c765ea3bb}{create\_device}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1physical__device}{physical\_device}} = 0);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \mbox{\hyperlink{structlava_1_1device_a0beef2f72f51aae8a14d2c541621fed0}{device::list}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1platform_a36606bc417ec30a6f65e88fd0db15e72}{get\_devices}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{44         \textcolor{keywordflow}{return} devices;}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1platform_a7a74dab7b396cb2bf35cb0ce5f60c987}{wait\_idle}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1platform_aa9f0c3a4956cad217783b13b53597ef5}{remove}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}} device\_id);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1platform_a197da16d082fb67b9f4f6efb52e7abf4}{clear}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1platform_a394d22d0bc7339bb446cc10cde021895}{create\_param\_func}} = std::function<void(\mbox{\hyperlink{structlava_1_1device_1_1create__param}{device::create\_param}}\&)>;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     \mbox{\hyperlink{structlava_1_1platform_a394d22d0bc7339bb446cc10cde021895}{create\_param\_func}} \mbox{\hyperlink{structlava_1_1platform_a540e774cad983aa99fa00681188ae0da}{on\_create\_param}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{private}:}
+\DoxyCodeLine{72     \mbox{\hyperlink{structlava_1_1device_a0beef2f72f51aae8a14d2c541621fed0}{device::list}} devices;}
+\DoxyCodeLine{73 \};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1platform}{platform\_t}} = \mbox{\hyperlink{structlava_1_1platform}{platform}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

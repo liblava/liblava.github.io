@@ -1,0 +1,50 @@
+\hypertarget{image__loader_8hpp_source}{}\doxysection{image\+\_\+loader.\+hpp}
+\label{image__loader_8hpp_source}\index{liblava/asset/image\_loader.hpp@{liblava/asset/image\_loader.hpp}}
+\mbox{\hyperlink{image__loader_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{file_2file_8hpp}{liblava/file/file.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{math_8hpp}{liblava/util/math.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1image__loader}{image\_loader}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1image__loader_a754b69340553ea033bc7b4250ddc14d8}{image\_loader}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} filename);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1image__loader_a81ad790cbb09f7b14a8da4707e971872}{image\_loader}}(\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata::ref}} \mbox{\hyperlink{structlava_1_1image}{image}});}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \mbox{\hyperlink{structlava_1_1image__loader_a092b7418f8e8cd6bf89f616ffd15b1cb}{\string~image\_loader}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1image__loader_ac52d94c78ebf0320bd924c8cd9107f27}{ready}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1data}{data}} != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \mbox{\hyperlink{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}{data\_cptr}} \mbox{\hyperlink{structlava_1_1image__loader_a2115b828e1d55edfa3419e2de2406d45}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1data}{data}};}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structlava_1_1image__loader_ae8452b4d6f0bcc8c2c6e538420ea523d}{size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{return} channels * dimensions.x * dimensions.y;}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1image__loader_afe05892720d36b9bbb0768df77b5f70f}{get\_dimensions}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} dimensions;}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1image__loader_ad2bdec258463b587f2f563ec093651a1}{get\_channels}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} channels;}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keyword}{private}:}
+\DoxyCodeLine{78     \mbox{\hyperlink{data_8hpp_a881a414775db89883beb7572771b296b}{data\_ptr}} \mbox{\hyperlink{structlava_1_1data}{data}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} dimensions = \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}}(0, 0);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} channels = 0;}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

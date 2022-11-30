@@ -1,0 +1,252 @@
+\hypertarget{window_8hpp_source}{}\doxysection{window.\+hpp}
+\label{window_8hpp_source}\index{liblava/frame/window.hpp@{liblava/frame/window.hpp}}
+\mbox{\hyperlink{window_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{data_8hpp}{liblava/core/data.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{input_8hpp}{liblava/frame/input.hpp}}>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{math_8hpp}{liblava/util/math.hpp}}>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <vulkan/vulkan.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 \textcolor{keyword}{struct }GLFWwindow;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1window}{window}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{30     \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1window_1_1state}{state}} \{}
+\DoxyCodeLine{32         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_1_1state_a2596f537f9ecc737c558cc0c3959baa2}{ref}} = \mbox{\hyperlink{structlava_1_1window_1_1state}{state}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{optional}} = std::optional<window::state>;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40         \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1window_1_1state_a5429777b6d33542a68a255e590e248c2}{state}}() \{\}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43         \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1window_1_1state_aadafe2fa19d0445d1e9e083d464150d3}{x}} = 0;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{46         \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1window_1_1state_af3f860b3fa393b75e0b808ed5b4c678e}{y}} = 0;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49         \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1window_1_1state_a0c43d5aae60dfc392a5f50370d21051a}{width}} = 0;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52         \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1window_1_1state_a1c17ed3f68da1de305bb13f39ada77f9}{height}} = 0;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_1_1state_a1ea944ba93115a2f5b0244087b4bc3c9}{fullscreen}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_1_1state_a1992da5546b33c0c59caf295b22a67a3}{floating}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_1_1state_a3e3476e0eb34e6274704bedb213bae08}{resizable}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_1_1state_ae7c6d346789ba99809e140ad0c188550}{decorated}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_1_1state_a60974718ef39f434b6b9c57cfaab297f}{maximized}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70         \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1window_1_1state_a4f88b190470e0da83e736a55954716d8}{monitor}} = 0;}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}{ptr}} = std::shared\_ptr<window>;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_a702ba56652ca21c51d2f03c91b74be4e}{event}} = std::function<void(\mbox{\hyperlink{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}{ptr}})>;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_a8dc22955535efe185fa2977071773f84}{map}} = std::map<id, ptr>;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_a2f49c43ec33876f8da7397b1122bec51}{ref}} = \mbox{\hyperlink{structlava_1_1window}{window}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88     \mbox{\hyperlink{structlava_1_1window_ae6f5bdd9cccc663b26da7ca28fb14ae2}{window}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1window_a6b1a26244ca5ede1e543b614200bb278}{window}}(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} title)}
+\DoxyCodeLine{95     : title(title) \{\}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a780a81f8022d4f6d575ccb278852d777}{create}}(\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state::optional}} \mbox{\hyperlink{structlava_1_1window_1_1state}{state}} = \{\});}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_ac16858698e4332b4083b0d374f7e068e}{destroy}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{113     \mbox{\hyperlink{structlava_1_1window_1_1state}{state}} \mbox{\hyperlink{structlava_1_1window_ae97792c44b60d2caeba694d8d535c650}{get\_state}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_aefbf4e32d2366c86eda425a085eac03b}{set\_title}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} text);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{125     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1window_a69dd8fb6ebbbe23d67eeeb1d80b543aa}{get\_title}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} title;}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a2c8a7a9e8283ef9b1e86eb1ee36f2f38}{set\_save\_name}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} save) \{}
+\DoxyCodeLine{134         save\_name = save;}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1window_a0c6a210efe2c66bd5de24124a735b025}{get\_save\_name}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{142         \textcolor{keywordflow}{return} save\_name;}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{150     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a7dfb5b209b52fe79dcf4b31922c3381d}{set\_position}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} x, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} y);}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a678da9602f4332749c0a16c78428b5e7}{get\_position}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}\& x, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}\& y) \textcolor{keyword}{const};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a238cbc1cf2aa62cdbb76f6fdceb60251}{set\_size}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} height);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{171     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_ae9277346b20a71317bae96cd284eb1dd}{get\_size}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}\& width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}\& height) \textcolor{keyword}{const};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{178     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a38d840058ccaa23cc1e94d03ab676fe0}{get\_framebuffer\_size}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}\& width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}\& height) \textcolor{keyword}{const};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{184     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1window_a3e5cbb58f82f4edcc4dc2c56e55c1632}{get\_size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{190     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1window_a1ded761d4ae5347f765f98fb774afca3}{get\_framebuffer\_size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{197     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a9f9ef97dc8d0b9e6f8a838287fe269bb}{set\_mouse\_position}}(\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} x, \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} y);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{204     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a514366df46e3ce881a3f6e44ae16148b}{get\_mouse\_position}}(\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}}\& x, \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}}\& y) \textcolor{keyword}{const};}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{210     \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}} \mbox{\hyperlink{structlava_1_1window_a1d53ce70ca68cb5f1e63e5192cd4e0aa}{get\_mouse\_position}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{215     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a19eef73e7b8e5d23298f73d8cd8f47a7}{hide\_mouse\_cursor}}();}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{220     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a8349ff92537391276ec8d2ae326a48cb}{show\_mouse\_cursor}}();}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{226     \textcolor{keywordtype}{float} \mbox{\hyperlink{structlava_1_1window_a9f96fb9bdf5d1bc2459551ebac45ca4f}{get\_aspect\_ratio}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{231     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a8fedf2b02c9d76d1dc6f69cfaa45da6c}{show}}();}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{236     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a0086ea35ec0353b3f5fa1007ad910f50}{hide}}();}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{242     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a4ce6512c5e14f1441560c86f9ecf9243}{visible}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{247     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a17ee815e1884cc759a2999350fca33d2}{iconify}}();}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{253     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a95e2a1be57126bd34cebf8974ec261bf}{iconified}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{258     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a97971fb1a3d69a0ff8ab80e1667b3b6b}{restore}}();}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{263     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a05b63c9fc8c2d4959f1e8301e175f525}{maximize}}();}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{269     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a5c8067cc7d9d1a5fec3167ca88a4ec55}{maximized}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{274     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a9a2b261a1db6b7a2ac4c197ffaf55bc9}{focus}}();}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{280     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_aa55afc417e3cf53d8d702c03df855a9f}{focused}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{286     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_ab8531946fe9d71cdbcbda68fc4316031}{set\_fullscreen}}(\textcolor{keywordtype}{bool} active) \{}
+\DoxyCodeLine{287         \textcolor{keywordflow}{if} (fullscreen\_active != active)}
+\DoxyCodeLine{288             switch\_mode\_request\_active = \textcolor{keyword}{true};}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{295     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a4bb058810f581ee6fe2d0d587d9ebef8}{fullscreen}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{296         \textcolor{keywordflow}{return} fullscreen\_active;}
+\DoxyCodeLine{297     \}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{303     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a50d31411756196d58387d25a3ef9b553}{hovered}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{309     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_aac73df0c28d7e87ef5f7a766f9d39dce}{resizable}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{315     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a64c5220c8ae6dd54443c1d7559c025fd}{set\_resizable}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{321     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a4ade3b30b8cd79547dc453a6aebc02ab}{decorated}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{327     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a1d43b29b7bf1f1b0fb35769c1fb8decf}{set\_decorated}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{333     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a09c1bea3dd04ace1d19af70e8bce1792}{floating}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{339     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a3a3d5383edb51ea16d816842eee685ef}{set\_floating}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{345     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a05b4168065393cd10196977bea2894a2}{close\_request}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{351     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a8a3a092c3618d55d1a1d1cffbd9c78cc}{switch\_mode\_request}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{352         \textcolor{keywordflow}{return} switch\_mode\_request\_active;}
+\DoxyCodeLine{353     \}}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{360     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a635165df128073843c48a139ab076fce}{switch\_mode}}(\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state::optional}} \mbox{\hyperlink{structlava_1_1window_1_1state}{state}} = \{\});}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{366     GLFWwindow* \mbox{\hyperlink{structlava_1_1window_a3f223af037dc955d8f4559ac89e67596}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{367         \textcolor{keywordflow}{return} handle;}
+\DoxyCodeLine{368     \}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{374     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a043cfb04185f8ee4fad8da66e348e4ec}{resize\_request}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{375         \textcolor{keywordflow}{return} resize\_request\_active;}
+\DoxyCodeLine{376     \}}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{382     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_a1edce74223d7f4a5128507265cfa8bdb}{handle\_resize}}() \{}
+\DoxyCodeLine{383         \textcolor{keywordflow}{if} (\mbox{\hyperlink{structlava_1_1window_a381cc0b877cb32e27a90894b7ed48f0c}{on\_resize}})}
+\DoxyCodeLine{384             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structlava_1_1window_a381cc0b877cb32e27a90894b7ed48f0c}{on\_resize}}(framebuffer\_width,}
+\DoxyCodeLine{385                            framebuffer\_height))}
+\DoxyCodeLine{386                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{388         resize\_request\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{389         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{390     \}}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{395     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_aeb42b88332a7dad151c99e47860a36d2}{update\_state}}() \{}
+\DoxyCodeLine{396         \mbox{\hyperlink{structlava_1_1window_a678da9602f4332749c0a16c78428b5e7}{get\_position}}(pos\_x, pos\_y);}
+\DoxyCodeLine{397         \mbox{\hyperlink{structlava_1_1window_a3e5cbb58f82f4edcc4dc2c56e55c1632}{get\_size}}(width, height);}
+\DoxyCodeLine{398     \}}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{401     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window_ad8337254c42fa78e9b3731edd65ad518}{resize\_func}} = std::function<bool(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}})>;}
+\DoxyCodeLine{402 }
+\DoxyCodeLine{404     \mbox{\hyperlink{structlava_1_1window_ad8337254c42fa78e9b3731edd65ad518}{resize\_func}} \mbox{\hyperlink{structlava_1_1window_a381cc0b877cb32e27a90894b7ed48f0c}{on\_resize}};}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{410     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_af10c1d0918e65e000b7fadcdb8ab0dde}{assign}}(\mbox{\hyperlink{structlava_1_1input}{input}}* callback) \{}
+\DoxyCodeLine{411         \mbox{\hyperlink{structlava_1_1input}{input}} = callback;}
+\DoxyCodeLine{412     \}}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{418     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_ad29839f5dc01f891976c1b2cbdcdddfc}{show\_save\_title}}(\textcolor{keywordtype}{bool} value = \textcolor{keyword}{true}) \{}
+\DoxyCodeLine{419         save\_title\_active = value;}
+\DoxyCodeLine{420     \}}
+\DoxyCodeLine{421 }
+\DoxyCodeLine{426     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1window_af75137379b53997c16b570563f1959b4}{save\_title}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{427         \textcolor{keywordflow}{return} save\_title\_active;}
+\DoxyCodeLine{428     \}}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{433     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_af57852b3c6f815c06bddfdaa34ff4566}{update\_title}}() \{}
+\DoxyCodeLine{434         \mbox{\hyperlink{structlava_1_1window_aefbf4e32d2366c86eda425a085eac03b}{set\_title}}(title);}
+\DoxyCodeLine{435     \}}
+\DoxyCodeLine{436 }
+\DoxyCodeLine{441     VkSurfaceKHR \mbox{\hyperlink{structlava_1_1window_a2ee0994d3d79dbf189f76774543b42f4}{create\_surface}}();}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{448     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_ab72d157a6d55d04c9b4917043c423d86}{set\_icon}}(\mbox{\hyperlink{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}{data\_cptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size);}
+\DoxyCodeLine{449 }
+\DoxyCodeLine{454     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1window_adf5d0528a85918a252de7977fd411ffd}{get\_monitor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{459     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1window_a9210b5003665a00a6afec8d19ac503c8}{center}}();}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{461 \textcolor{keyword}{private}:}
+\DoxyCodeLine{465     \textcolor{keywordtype}{void} handle\_message();}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{470     \textcolor{keywordtype}{void} handle\_mouse\_message();}
+\DoxyCodeLine{471 }
+\DoxyCodeLine{473     GLFWwindow* handle = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{476     \mbox{\hyperlink{structlava_1_1input}{input\_t}}* \mbox{\hyperlink{structlava_1_1input}{input}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{477 }
+\DoxyCodeLine{479     \textcolor{keywordtype}{string} title = \mbox{\hyperlink{types_8hpp_aa6f0dfe4257894c2b7439582eeea0bec}{\_lava\_}};}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{482     \textcolor{keywordtype}{string} save\_name = \mbox{\hyperlink{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c}{\_default\_}};}
+\DoxyCodeLine{483 }
+\DoxyCodeLine{485     \textcolor{keywordtype}{bool} fullscreen\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{486 }
+\DoxyCodeLine{488     \textcolor{keywordtype}{bool} save\_title\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{489 }
+\DoxyCodeLine{491     \textcolor{keywordtype}{bool} switch\_mode\_request\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{494     \textcolor{keywordtype}{bool} resize\_request\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{497     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} framebuffer\_width = 0;}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{500     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} framebuffer\_height = 0;}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{503     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} pos\_x = 0;}
+\DoxyCodeLine{504 }
+\DoxyCodeLine{506     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} pos\_y = 0;}
+\DoxyCodeLine{507 }
+\DoxyCodeLine{509     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} width = 0;}
+\DoxyCodeLine{510 }
+\DoxyCodeLine{512     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} height = 0;}
+\DoxyCodeLine{513 \};}
+\DoxyCodeLine{514 }
+\DoxyCodeLine{516 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1window}{window\_t}} = \mbox{\hyperlink{structlava_1_1window}{window}};}
+\DoxyCodeLine{517 }
+\DoxyCodeLine{523 VkSurfaceKHR \mbox{\hyperlink{window_8hpp_a83bdbe791a46c86d3096a037a1c260ca}{create\_surface}}(GLFWwindow* \mbox{\hyperlink{structlava_1_1window}{window}});}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{530 \mbox{\hyperlink{structlava_1_1window}{window}}* \mbox{\hyperlink{window_8hpp_ac53aead78134d695be87a92e4e784e1b}{get\_window}}(GLFWwindow* handle);}
+\DoxyCodeLine{531 }
+\DoxyCodeLine{532 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

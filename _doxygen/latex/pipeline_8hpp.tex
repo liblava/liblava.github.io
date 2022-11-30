@@ -1,0 +1,56 @@
+\hypertarget{pipeline_8hpp}{}\doxysection{liblava/block/pipeline.hpp File Reference}
+\label{pipeline_8hpp}\index{liblava/block/pipeline.hpp@{liblava/block/pipeline.hpp}}
+
+
+Pipeline.  
+
+
+{\ttfamily \#include $<$liblava/block/pipeline\+\_\+layout.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1pipeline}{lava\+::pipeline}}
+\begin{DoxyCompactList}\small\item\em Pipeline. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage}{lava\+::pipeline\+::shader\+\_\+stage}}
+\begin{DoxyCompactList}\small\item\em Shader stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+pipeline\+::shader\+\_\+stage\+::ptr \mbox{\hyperlink{pipeline_8hpp_af8e6d0e33b1d151bb8fd4318a149797c}{lava\+::create\+\_\+pipeline\+\_\+shader\+\_\+stage}} (device\+\_\+p device, cdata\+::ref data, Vk\+Shader\+Stage\+Flag\+Bits stage)
+\begin{DoxyCompactList}\small\item\em Create a new pipeline shader stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pipeline. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pipeline_8hpp_af8e6d0e33b1d151bb8fd4318a149797c}\label{pipeline_8hpp_af8e6d0e33b1d151bb8fd4318a149797c}} 
+\index{pipeline.hpp@{pipeline.hpp}!create\_pipeline\_shader\_stage@{create\_pipeline\_shader\_stage}}
+\index{create\_pipeline\_shader\_stage@{create\_pipeline\_shader\_stage}!pipeline.hpp@{pipeline.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_pipeline\_shader\_stage()}{create\_pipeline\_shader\_stage()}}
+{\footnotesize\ttfamily pipeline\+::shader\+\_\+stage\+::ptr lava\+::create\+\_\+pipeline\+\_\+shader\+\_\+stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}}}]{data,  }\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{stage }\end{DoxyParamCaption})}
+
+
+
+Create a new pipeline shader stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em data} & Shader data \\
+\hline
+{\em stage} & Shader stage flag bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pipeline\+::shader\+\_\+stage\+::ptr Shared pointer to pipeline shader stage 
+\end{DoxyReturn}

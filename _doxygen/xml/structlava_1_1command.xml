@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1command" kind="struct" language="C++" prot="public">
+    <compoundname>lava::command</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="block_2block_8hpp" local="no">block.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1command_1adcbc904e081a1d11100c310d72699225" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1command" kindref="compound">command</ref> &gt;</type>
+        <definition>using lava::command::ptr =  std::shared_ptr&lt;command&gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::command::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="19" column="5" bodyfile="liblava/block/block.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1command_1a284de10dc7ec894f637eb35ac079061e" prot="public" static="no">
+        <type><ref refid="structlava_1_1command" kindref="compound">command</ref> const  *</type>
+        <definition>using lava::command::cptr =  command const*</definition>
+        <argsstring></argsstring>
+        <name>cptr</name>
+        <qualifiedname>lava::command::cptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="22" column="5" bodyfile="liblava/block/block.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1command_1a96ef48169a54ec971eea7627aebbedf7" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1command_1adcbc904e081a1d11100c310d72699225" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::command::map =  std::map&lt;id, ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>lava::command::map</qualifiedname>
+        <briefdescription>
+<para>Map of commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="25" column="5" bodyfile="liblava/block/block.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1command_1ab99e6bf6e449de746e8b5a0a026167f4" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1command_1a284de10dc7ec894f637eb35ac079061e" kindref="member">cptr</ref> &gt;</type>
+        <definition>using lava::command::clist =  std::vector&lt;cptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>clist</name>
+        <qualifiedname>lava::command::clist</qualifiedname>
+        <briefdescription>
+<para>List of commands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="28" column="5" bodyfile="liblava/block/block.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1command_1aea5fb742f88010683d2ea34a1c81bb76" prot="public" static="no">
+        <type>std::function&lt; void(VkCommandBuffer)&gt;</type>
+        <definition>using lava::command::process_func =  std::function&lt;void(VkCommandBuffer)&gt;</definition>
+        <argsstring></argsstring>
+        <name>process_func</name>
+        <qualifiedname>lava::command::process_func</qualifiedname>
+        <briefdescription>
+<para>Command process function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="34" column="5" bodyfile="liblava/block/block.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1command_1ab22326abef17e815271192455b48f252" prot="public" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1aadb6651a44f02a6e23a00ce0bdf39561" kindref="member">VkCommandBuffers</ref></type>
+        <definition>VkCommandBuffers lava::command::buffers</definition>
+        <argsstring></argsstring>
+        <name>buffers</name>
+        <qualifiedname>lava::command::buffers</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of command buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="31" column="22" bodyfile="liblava/block/block.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1command_1a64d82fae785d7135efe009502331b234" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1command_1aea5fb742f88010683d2ea34a1c81bb76" kindref="member">process_func</ref></type>
+        <definition>process_func lava::command::on_process</definition>
+        <argsstring></argsstring>
+        <name>on_process</name>
+        <qualifiedname>lava::command::on_process</qualifiedname>
+        <briefdescription>
+<para>Called on command process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="37" column="18" bodyfile="liblava/block/block.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1command_1ab335e4b5f019d5c3551f05e0b2c1a786" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::command::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <qualifiedname>lava::command::active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="40" column="10" bodyfile="liblava/block/block.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1command_1a54afaf3709ad0978ab616f918625a7a0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1command_1adcbc904e081a1d11100c310d72699225" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::command::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::command::make</qualifiedname>
+        <briefdescription>
+<para>Make a new command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ptr Shared pointer to command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="46" column="16" bodyfile="liblava/block/block.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1command_1a457b928cf20a53f62f7e0337680d728a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::command::create</definition>
+        <argsstring>(device_p device, index frame_count, VkCommandPools command_pools)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::command::create</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>frame_count</declname>
+        </param>
+        <param>
+          <type><ref refid="base_2base_8hpp_1aac4d4fd538b1292d08c27aa373a38b8a" kindref="member">VkCommandPools</ref></type>
+          <declname>command_pools</declname>
+        </param>
+        <briefdescription>
+<para>Create a new command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frame_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frames </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command_pools</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of command pools </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1command_1a556171283e8183ad8d9b58f409b6041e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::command::destroy</definition>
+        <argsstring>(device_p device, VkCommandPools command_pools)</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::command::destroy</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="base_2base_8hpp_1aac4d4fd538b1292d08c27aa373a38b8a" kindref="member">VkCommandPools</ref></type>
+          <declname>command_pools</declname>
+        </param>
+        <briefdescription>
+<para>Destroy the command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command_pools</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of command pools </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/block.hpp" line="66" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Block command. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::command</label>
+        <link refid="structlava_1_1command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::command</label>
+        <link refid="structlava_1_1command"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/block.hpp" line="17" column="1" bodyfile="liblava/block/block.hpp" bodystart="17" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structlava_1_1command_1ab335e4b5f019d5c3551f05e0b2c1a786" prot="public" virt="non-virtual"><scope>lava::command</scope><name>active</name></member>
+      <member refid="structlava_1_1command_1ab22326abef17e815271192455b48f252" prot="public" virt="non-virtual"><scope>lava::command</scope><name>buffers</name></member>
+      <member refid="structlava_1_1command_1ab99e6bf6e449de746e8b5a0a026167f4" prot="public" virt="non-virtual"><scope>lava::command</scope><name>clist</name></member>
+      <member refid="structlava_1_1command_1a284de10dc7ec894f637eb35ac079061e" prot="public" virt="non-virtual"><scope>lava::command</scope><name>cptr</name></member>
+      <member refid="structlava_1_1command_1a457b928cf20a53f62f7e0337680d728a" prot="public" virt="non-virtual"><scope>lava::command</scope><name>create</name></member>
+      <member refid="structlava_1_1command_1a556171283e8183ad8d9b58f409b6041e" prot="public" virt="non-virtual"><scope>lava::command</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::command</scope><name>entity</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::command</scope><name>get_id</name></member>
+      <member refid="structlava_1_1command_1a54afaf3709ad0978ab616f918625a7a0" prot="public" virt="non-virtual"><scope>lava::command</scope><name>make</name></member>
+      <member refid="structlava_1_1command_1a96ef48169a54ec971eea7627aebbedf7" prot="public" virt="non-virtual"><scope>lava::command</scope><name>map</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::command</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::command</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1command_1a64d82fae785d7135efe009502331b234" prot="public" virt="non-virtual"><scope>lava::command</scope><name>on_process</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::command</scope><name>operator=</name></member>
+      <member refid="structlava_1_1command_1aea5fb742f88010683d2ea34a1c81bb76" prot="public" virt="non-virtual"><scope>lava::command</scope><name>process_func</name></member>
+      <member refid="structlava_1_1command_1adcbc904e081a1d11100c310d72699225" prot="public" virt="non-virtual"><scope>lava::command</scope><name>ptr</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::command</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

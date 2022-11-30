@@ -1,0 +1,122 @@
+\hypertarget{structlava_1_1command}{}\doxysection{lava\+::command Struct Reference}
+\label{structlava_1_1command}\index{lava::command@{lava::command}}
+
+
+Block command.  
+
+
+
+
+{\ttfamily \#include $<$block.\+hpp$>$}
+
+Inheritance diagram for lava\+::command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1command}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1command_adcbc904e081a1d11100c310d72699225}\label{structlava_1_1command_adcbc904e081a1d11100c310d72699225}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1command}{command}} $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_a284de10dc7ec894f637eb35ac079061e}\label{structlava_1_1command_a284de10dc7ec894f637eb35ac079061e}} 
+using {\bfseries cptr} = \mbox{\hyperlink{structlava_1_1command}{command}} const  $\ast$
+\begin{DoxyCompactList}\small\item\em Const pointer to command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_a96ef48169a54ec971eea7627aebbedf7}\label{structlava_1_1command_a96ef48169a54ec971eea7627aebbedf7}} 
+using {\bfseries map} = std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1command_adcbc904e081a1d11100c310d72699225}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em Map of commands. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_ab99e6bf6e449de746e8b5a0a026167f4}\label{structlava_1_1command_ab99e6bf6e449de746e8b5a0a026167f4}} 
+using {\bfseries clist} = std\+::vector$<$ \mbox{\hyperlink{structlava_1_1command_a284de10dc7ec894f637eb35ac079061e}{cptr}} $>$
+\begin{DoxyCompactList}\small\item\em List of commands. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}\label{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}} 
+using {\bfseries process\+\_\+func} = std\+::function$<$ void(Vk\+Command\+Buffer)$>$
+\begin{DoxyCompactList}\small\item\em Command process function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1command_a457b928cf20a53f62f7e0337680d728a}{create}} (\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} frame\+\_\+count, \mbox{\hyperlink{base_2base_8hpp_aac4d4fd538b1292d08c27aa373a38b8a}{Vk\+Command\+Pools}} command\+\_\+pools)
+\begin{DoxyCompactList}\small\item\em Create a new command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1command_a556171283e8183ad8d9b58f409b6041e}{destroy}} (\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{base_2base_8hpp_aac4d4fd538b1292d08c27aa373a38b8a}{Vk\+Command\+Pools}} command\+\_\+pools)
+\begin{DoxyCompactList}\small\item\em Destroy the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1command_adcbc904e081a1d11100c310d72699225}{ptr}} \mbox{\hyperlink{structlava_1_1command_a54afaf3709ad0978ab616f918625a7a0}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1command_ab22326abef17e815271192455b48f252}\label{structlava_1_1command_ab22326abef17e815271192455b48f252}} 
+\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{Vk\+Command\+Buffers}} {\bfseries buffers} = \{\}
+\begin{DoxyCompactList}\small\item\em List of command buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_a64d82fae785d7135efe009502331b234}\label{structlava_1_1command_a64d82fae785d7135efe009502331b234}} 
+\mbox{\hyperlink{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}{process\+\_\+func}} {\bfseries on\+\_\+process}
+\begin{DoxyCompactList}\small\item\em Called on command process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1command_ab335e4b5f019d5c3551f05e0b2c1a786}\label{structlava_1_1command_ab335e4b5f019d5c3551f05e0b2c1a786}} 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Active state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Block command. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1command_a457b928cf20a53f62f7e0337680d728a}\label{structlava_1_1command_a457b928cf20a53f62f7e0337680d728a}} 
+\index{lava::command@{lava::command}!create@{create}}
+\index{create@{create}!lava::command@{lava::command}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::command\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{frame\+\_\+count,  }\item[{\mbox{\hyperlink{base_2base_8hpp_aac4d4fd538b1292d08c27aa373a38b8a}{Vk\+Command\+Pools}}}]{command\+\_\+pools }\end{DoxyParamCaption})}
+
+
+
+Create a new command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em frame\+\_\+count} & Number of frames \\
+\hline
+{\em command\+\_\+pools} & List of command pools \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1command_a556171283e8183ad8d9b58f409b6041e}\label{structlava_1_1command_a556171283e8183ad8d9b58f409b6041e}} 
+\index{lava::command@{lava::command}!destroy@{destroy}}
+\index{destroy@{destroy}!lava::command@{lava::command}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void lava\+::command\+::destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{base_2base_8hpp_aac4d4fd538b1292d08c27aa373a38b8a}{Vk\+Command\+Pools}}}]{command\+\_\+pools }\end{DoxyParamCaption})}
+
+
+
+Destroy the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em command\+\_\+pools} & List of command pools \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1command_a54afaf3709ad0978ab616f918625a7a0}\label{structlava_1_1command_a54afaf3709ad0978ab616f918625a7a0}} 
+\index{lava::command@{lava::command}!make@{make}}
+\index{make@{make}!lava::command@{lava::command}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structlava_1_1command_adcbc904e081a1d11100c310d72699225}{ptr}} lava\+::command\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new command. 
+
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to command 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{block_2block_8hpp}{block.\+hpp}}\end{DoxyCompactItemize}

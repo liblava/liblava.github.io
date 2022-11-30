@@ -1,0 +1,85 @@
+\hypertarget{producer_8hpp_source}{}\doxysection{producer.\+hpp}
+\label{producer_8hpp_source}\index{liblava/engine/producer.hpp@{liblava/engine/producer.hpp}}
+\mbox{\hyperlink{producer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <liblava/fwd.hpp>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{resource_8hpp}{liblava/resource.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{producer_8hpp_ae6e393ea9aa1e3acee7ad1d7c50cfb66}{\_shader\_path\_}} = \textcolor{stringliteral}{"{}shader/"{}};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{producer_8hpp_ac6146986ec25ff6c869aabde9484ee1a}{\_temp\_path\_}} = \textcolor{stringliteral}{"{}temp/"{}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{producer_8hpp_a69ca1e4f41adc3320c17b59617608217}{\_hash\_json\_}} = \textcolor{stringliteral}{"{}hash.json"{}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1producer}{producer}} \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{structlava_1_1engine}{engine}}* \mbox{\hyperlink{structlava_1_1producer_aad1af6a470ac9d00cdaccaf45a0193b0}{context}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{36     \mbox{\hyperlink{structlava_1_1mesh__template_a208bb4e7653b421e36212a28bf435cea}{mesh::ptr}} \mbox{\hyperlink{structlava_1_1producer_ad4740ad6a57db053743463fcd702105e}{create\_mesh}}(\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}} \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \mbox{\hyperlink{structlava_1_1mesh__template_a208bb4e7653b421e36212a28bf435cea}{mesh::ptr}} \mbox{\hyperlink{structlava_1_1producer_ad5a22a77574a4f724faccc70df349339}{get\_mesh}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1producer_a23965149d1bf42c7c9c79a67d27972d5}{add\_mesh}}(\mbox{\hyperlink{structlava_1_1mesh__template_a208bb4e7653b421e36212a28bf435cea}{mesh::ptr}} \mbox{\hyperlink{structlava_1_1mesh__template}{mesh}});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57     \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} \mbox{\hyperlink{structlava_1_1producer_a241e6bdb176d34b41c45507eec54693b}{create\_texture}}(\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64     \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} \mbox{\hyperlink{structlava_1_1producer_a48a8719b0ed886eaee7cccd9d4578301}{get\_texture}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1producer_a50b61c9151ce6095d07b285e3fcc49e0}{add\_texture}}(\mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} product);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79     \mbox{\hyperlink{structlava_1_1cdata}{cdata}} \mbox{\hyperlink{structlava_1_1producer_a2cdbe4faf69a1df8a615a759bbeb6742}{get\_shader}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{80                      \textcolor{keywordtype}{bool} reload = \textcolor{keyword}{false});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87     \mbox{\hyperlink{structlava_1_1cdata}{cdata}} \mbox{\hyperlink{structlava_1_1producer_aa5a5de14b1a82f6dba09df6d2c5cf059}{reload\_shader}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}) \{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1producer_a2cdbe4faf69a1df8a615a759bbeb6742}{get\_shader}}(\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{89     \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98     \mbox{\hyperlink{structlava_1_1data}{data}} \mbox{\hyperlink{structlava_1_1producer_a64b55df32569e3344abc7b660fd7f476}{compile\_shader}}(\mbox{\hyperlink{structlava_1_1cdata}{cdata}} product,}
+\DoxyCodeLine{99                         \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{100                         \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} filename) \textcolor{keyword}{const};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1producer_aeea5c08661de1850daf7c392aee1d99d}{destroy}}();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1producer_a66b908590b9c22b43cbefd78b4553b9f}{clear}}();}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113     \mbox{\hyperlink{structlava_1_1id__registry}{id\_registry<mesh, string>}} \mbox{\hyperlink{structlava_1_1producer_ad7ec786d9a89d95bd28c3c7cd380aea2}{meshes}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116     \mbox{\hyperlink{structlava_1_1id__registry}{id\_registry<texture, string>}} \mbox{\hyperlink{structlava_1_1producer_af03bcb173ef9d6633556d5f08d90f081}{textures}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121     \textcolor{keyword}{enum} \mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\_optimization}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{122         none = 0,}
+\DoxyCodeLine{123         size,}
+\DoxyCodeLine{124         performance}
+\DoxyCodeLine{125     \};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{128     \mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\_optimization}} \mbox{\hyperlink{structlava_1_1producer_a50036267bb97fc294b73d18b41471498}{shader\_opt}} = shader\_optimization::performance;}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{133     \textcolor{keyword}{enum} \mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\_language}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{134         glsl = 0,}
+\DoxyCodeLine{135         hlsl}
+\DoxyCodeLine{136     \};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{139     \mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\_language}} \mbox{\hyperlink{structlava_1_1producer_aa4c66fdc83b093ce2269af2f5d5fa977}{shader\_lang}} = shader\_language::glsl;}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{142     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1producer_ab3bc54229e400f0803732a80223fb8c6}{shader\_debug}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keyword}{private}:}
+\DoxyCodeLine{150     \textcolor{keywordtype}{void} update\_hash(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{151                      \mbox{\hyperlink{types_8hpp_ab3fc7cda2eab45d3b8edfd57a2d77b05}{string\_map\_ref}} file\_hash\_map) \textcolor{keyword}{const};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{158     \textcolor{keywordtype}{bool} valid\_shader(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{161     \textcolor{keyword}{using }shader\_map = std::map<string, data>;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{164     shader\_map shaders;}
+\DoxyCodeLine{165 \};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{168 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1producer}{producer\_t}} = \mbox{\hyperlink{structlava_1_1producer}{producer}};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

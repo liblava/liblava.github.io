@@ -1,0 +1,64 @@
+\hypertarget{random_8hpp_source}{}\doxysection{random.\+hpp}
+\label{random_8hpp_source}\index{liblava/util/random.hpp@{liblava/util/random.hpp}}
+\mbox{\hyperlink{random_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1random__generator}{random\_generator}} \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{structlava_1_1random__generator_a8affb6390ba5d8e5adc5a2bbe50f2889}{random\_generator}}() \{}
+\DoxyCodeLine{23         std::random\_device rd;}
+\DoxyCodeLine{24         mt = std::mt19937(rd());}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1random__generator_ac68d074c2fda354049f8424f77071c1f}{get}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} low, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} high) \{}
+\DoxyCodeLine{34         std::uniform\_int\_distribution<i32> dist(low, high);}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} dist(mt);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{45     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T = real>}
+\DoxyCodeLine{46     T \mbox{\hyperlink{structlava_1_1random__generator_a93be61deb5e1979fb65b9cedcdf6727e}{get}}(T low, T high) \{}
+\DoxyCodeLine{47         std::uniform\_real\_distribution<T> dist(low, high);}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} dist(mt);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{private}:}
+\DoxyCodeLine{53     std::mt19937 mt;}
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{62 \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{random_8hpp_a2b30833553c956eae25b0b04e5b1f04a}{random}}(\textcolor{keyword}{auto} low, \textcolor{keyword}{auto} high) \{}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1random__generator}{random\_generator}}().\mbox{\hyperlink{structlava_1_1random__generator_ac68d074c2fda354049f8424f77071c1f}{get}}(low, high);}
+\DoxyCodeLine{64 \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{71 \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{random_8hpp_a2b30833553c956eae25b0b04e5b1f04a}{random}}(\textcolor{keyword}{auto} high) \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1random__generator}{random\_generator}}().\mbox{\hyperlink{structlava_1_1random__generator_ac68d074c2fda354049f8424f77071c1f}{get}}(\{\}, high);}
+\DoxyCodeLine{73 \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1pseudo__random__generator}{pseudo\_random\_generator}} \{}
+\DoxyCodeLine{83     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1pseudo__random__generator_ab77e3cd68d02b281bf77573d860c4e12}{pseudo\_random\_generator}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} seed)}
+\DoxyCodeLine{84     : seed(seed) \{\}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1pseudo__random__generator_ad43f02d8e9f238abde2629c94429e2aa}{set\_seed}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} value) \{}
+\DoxyCodeLine{91         seed = value;}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{98     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1pseudo__random__generator_aa77ba4515668439d80821cd0dbd4cdca}{get}}() \{}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} generate\_fast() \string^ (generate\_fast() >> 7);}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{keyword}{private}:}
+\DoxyCodeLine{104     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} seed = 0;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{110     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} generate\_fast() \{}
+\DoxyCodeLine{111         \textcolor{keywordflow}{return} seed = (seed * 196314165 + 907633515);}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

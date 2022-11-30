@@ -1,0 +1,475 @@
+\hypertarget{misc_8hpp}{}\doxysection{liblava/core/misc.hpp File Reference}
+\label{misc_8hpp}\index{liblava/core/misc.hpp@{liblava/core/misc.hpp}}
+
+
+Miscellaneous helpers.  
+
+
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$liblava/core/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1reversion__wrapper}{lava\+::reversion\+\_\+wrapper$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Reversion Wrapper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{misc_8hpp_a68c5d5751dad0b46aa8af3022c0ac84b}{lava\+::exists}} (names\+\_\+ref list, name item)
+\begin{DoxyCompactList}\small\item\em Check if name exists in name list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{misc_8hpp_a3ea11a6e491adb92e302e6dd9b80e47b}{lava\+::remove}} (std\+::vector$<$ T $>$ \&list, T item)
+\begin{DoxyCompactList}\small\item\em Remove item from list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{misc_8hpp_a3e180fc39604b9da8475bfa7539a513b}{lava\+::contains}} (std\+::vector$<$ T $>$ \&list, T item)
+\begin{DoxyCompactList}\small\item\em Check if item is included in list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{misc_8hpp_a4f4ed7173bd51a56474672dda78f7818}{lava\+::append}} (std\+::vector$<$ T $>$ \&list, std\+::vector$<$ T $>$ \&items)
+\begin{DoxyCompactList}\small\item\em Append a list of items to another list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}{lava\+::ltrim}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Trim string only from start (in place) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}{lava\+::rtrim}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Trim string only from end (in place) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{misc_8hpp_a3097d82814968317612b1b45be15de96}{lava\+::trim}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Trim string from both ends (in place) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_a613239a66fbe6be9c236ed1260822347}{lava\+::ltrim\+\_\+copy}} (string s)
+\begin{DoxyCompactList}\small\item\em Trim string only from start (copying) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_a79ed3a492185c4147cd8cad3f7480126}{lava\+::rtrim\+\_\+copy}} (string s)
+\begin{DoxyCompactList}\small\item\em Trim string only from end (copying) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_a164b31b1e097ef980b8d408126783fe6}{lava\+::trim\+\_\+copy}} (string s)
+\begin{DoxyCompactList}\small\item\em Trim string from both ends (copying) \end{DoxyCompactList}\item 
+string \& \mbox{\hyperlink{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}{lava\+::remove\+\_\+chars}} (string \&s, string\+\_\+ref chars)
+\begin{DoxyCompactList}\small\item\em Remove chars in string. \end{DoxyCompactList}\item 
+string \& \mbox{\hyperlink{misc_8hpp_a685c6acbad52fbad672ed983c0c3c509}{lava\+::remove\+\_\+punctuation\+\_\+marks}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Remove punctuation marks in string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_ad900a8cab7ab57c4ad78c5334c78a9c9}{lava\+::remove\+\_\+chars\+\_\+copy}} (string s, string\+\_\+ref chars)
+\begin{DoxyCompactList}\small\item\em Remove chars in string (copying) \end{DoxyCompactList}\item 
+string \& \mbox{\hyperlink{misc_8hpp_a6baf2dbae56b17e410e0c29f0be7eacc}{lava\+::remove\+\_\+nondigit}} (string \&s)
+\begin{DoxyCompactList}\small\item\em Remove all non digit chars in string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_aa01e067bd89cde00a300f326f9d5a5a9}{lava\+::remove\+\_\+nondigit\+\_\+copy}} (string s)
+\begin{DoxyCompactList}\small\item\em Remove all non digit chars in string (copying) \end{DoxyCompactList}\item 
+string \& \mbox{\hyperlink{misc_8hpp_a0cd915bfde1f60eb370ed9b1552f3191}{lava\+::remove\+\_\+chars\+\_\+if\+\_\+not}} (string \&s, string\+\_\+ref allowed)
+\begin{DoxyCompactList}\small\item\em Remove all chars in string which are not allowed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{misc_8hpp_a4d9a6856ce0d2ae7bb67c157cc74bcd3}{lava\+::remove\+\_\+chars\+\_\+if\+\_\+not\+\_\+copy}} (string s, string\+\_\+ref allowed)
+\begin{DoxyCompactList}\small\item\em Remove all chars in string which are not allowed (copying) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{misc_8hpp_a610f848d04b46c2b7b7fe1b10d233859}{lava\+::begin}} (reversion\+\_\+wrapper$<$ T $>$ w)
+\begin{DoxyCompactList}\small\item\em Begin the iterator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{misc_8hpp_a25642fea583db16ad4d444ba91c0821c}{lava\+::end}} (reversion\+\_\+wrapper$<$ T $>$ w)
+\begin{DoxyCompactList}\small\item\em End the iterator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\reversion\+\_\+wrapper$<$ T $>$ \mbox{\hyperlink{misc_8hpp_a6be2bfbc12c6162b059b375f84fa988a}{lava\+::reverse}} (T \&\&iterable)
+\begin{DoxyCompactList}\small\item\em Reverse iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{misc_8hpp_a9877ace319736a9bfc950fee3a6b9fe8}\label{misc_8hpp_a9877ace319736a9bfc950fee3a6b9fe8}} 
+constexpr name {\bfseries lava\+::\+\_\+punctuation\+\_\+marks\+\_\+} = \char`\"{}\textbackslash{}\char`\"{}\textbackslash{}\textquotesingle{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Punctuation marks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Miscellaneous helpers. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{misc_8hpp_a4f4ed7173bd51a56474672dda78f7818}\label{misc_8hpp_a4f4ed7173bd51a56474672dda78f7818}} 
+\index{misc.hpp@{misc.hpp}!append@{append}}
+\index{append@{append}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void lava\+::append (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{std\+::vector$<$ T $>$ \&}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Append a list of items to another list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of list \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of items \\
+\hline
+{\em items} & Items to append \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{misc_8hpp_a610f848d04b46c2b7b7fe1b10d233859}\label{misc_8hpp_a610f848d04b46c2b7b7fe1b10d233859}} 
+\index{misc.hpp@{misc.hpp}!begin@{begin}}
+\index{begin@{begin}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto lava\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\+\_\+wrapper}}$<$ T $>$}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Begin the iterator. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of iterable \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Reversion wrapper \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a3e180fc39604b9da8475bfa7539a513b}\label{misc_8hpp_a3e180fc39604b9da8475bfa7539a513b}} 
+\index{misc.hpp@{misc.hpp}!contains@{contains}}
+\index{contains@{contains}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool lava\+::contains (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if item is included in list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of list \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of items \\
+\hline
+{\em item} & Item to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Item exists or not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a25642fea583db16ad4d444ba91c0821c}\label{misc_8hpp_a25642fea583db16ad4d444ba91c0821c}} 
+\index{misc.hpp@{misc.hpp}!end@{end}}
+\index{end@{end}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto lava\+::end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\+\_\+wrapper}}$<$ T $>$}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End the iterator. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of iterable \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Reversion wrapper \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a68c5d5751dad0b46aa8af3022c0ac84b}\label{misc_8hpp_a68c5d5751dad0b46aa8af3022c0ac84b}} 
+\index{misc.hpp@{misc.hpp}!exists@{exists}}
+\index{exists@{exists}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool lava\+::exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_adcee78dcb3f8f69f189c05c3a162b7db}{names\+\_\+ref}}}]{list,  }\item[{\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if name exists in name list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of names \\
+\hline
+{\em item} & Item to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Item exists or not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}\label{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}} 
+\index{misc.hpp@{misc.hpp}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{ltrim()}{ltrim()}}
+{\footnotesize\ttfamily void lava\+::ltrim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string only from start (in place) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{misc_8hpp_a613239a66fbe6be9c236ed1260822347}\label{misc_8hpp_a613239a66fbe6be9c236ed1260822347}} 
+\index{misc.hpp@{misc.hpp}!ltrim\_copy@{ltrim\_copy}}
+\index{ltrim\_copy@{ltrim\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{ltrim\_copy()}{ltrim\_copy()}}
+{\footnotesize\ttfamily string lava\+::ltrim\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string only from start (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Trimmed string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a3ea11a6e491adb92e302e6dd9b80e47b}\label{misc_8hpp_a3ea11a6e491adb92e302e6dd9b80e47b}} 
+\index{misc.hpp@{misc.hpp}!remove@{remove}}
+\index{remove@{remove}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void lava\+::remove (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove item from list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of list \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of items \\
+\hline
+{\em item} & Item to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}\label{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}} 
+\index{misc.hpp@{misc.hpp}!remove\_chars@{remove\_chars}}
+\index{remove\_chars@{remove\_chars}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_chars()}{remove\_chars()}}
+{\footnotesize\ttfamily string \& lava\+::remove\+\_\+chars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{chars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove chars in string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+{\em chars} & Chars to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\& Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_ad900a8cab7ab57c4ad78c5334c78a9c9}\label{misc_8hpp_ad900a8cab7ab57c4ad78c5334c78a9c9}} 
+\index{misc.hpp@{misc.hpp}!remove\_chars\_copy@{remove\_chars\_copy}}
+\index{remove\_chars\_copy@{remove\_chars\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_chars\_copy()}{remove\_chars\_copy()}}
+{\footnotesize\ttfamily string lava\+::remove\+\_\+chars\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{chars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove chars in string (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+{\em chars} & Chars to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a0cd915bfde1f60eb370ed9b1552f3191}\label{misc_8hpp_a0cd915bfde1f60eb370ed9b1552f3191}} 
+\index{misc.hpp@{misc.hpp}!remove\_chars\_if\_not@{remove\_chars\_if\_not}}
+\index{remove\_chars\_if\_not@{remove\_chars\_if\_not}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_chars\_if\_not()}{remove\_chars\_if\_not()}}
+{\footnotesize\ttfamily string \& lava\+::remove\+\_\+chars\+\_\+if\+\_\+not (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{allowed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all chars in string which are not allowed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+{\em allowed} & Allowed chars \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\& Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a4d9a6856ce0d2ae7bb67c157cc74bcd3}\label{misc_8hpp_a4d9a6856ce0d2ae7bb67c157cc74bcd3}} 
+\index{misc.hpp@{misc.hpp}!remove\_chars\_if\_not\_copy@{remove\_chars\_if\_not\_copy}}
+\index{remove\_chars\_if\_not\_copy@{remove\_chars\_if\_not\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_chars\_if\_not\_copy()}{remove\_chars\_if\_not\_copy()}}
+{\footnotesize\ttfamily string lava\+::remove\+\_\+chars\+\_\+if\+\_\+not\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{allowed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all chars in string which are not allowed (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+{\em allowed} & Allowed chars \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a6baf2dbae56b17e410e0c29f0be7eacc}\label{misc_8hpp_a6baf2dbae56b17e410e0c29f0be7eacc}} 
+\index{misc.hpp@{misc.hpp}!remove\_nondigit@{remove\_nondigit}}
+\index{remove\_nondigit@{remove\_nondigit}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_nondigit()}{remove\_nondigit()}}
+{\footnotesize\ttfamily string \& lava\+::remove\+\_\+nondigit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all non digit chars in string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\& Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_aa01e067bd89cde00a300f326f9d5a5a9}\label{misc_8hpp_aa01e067bd89cde00a300f326f9d5a5a9}} 
+\index{misc.hpp@{misc.hpp}!remove\_nondigit\_copy@{remove\_nondigit\_copy}}
+\index{remove\_nondigit\_copy@{remove\_nondigit\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_nondigit\_copy()}{remove\_nondigit\_copy()}}
+{\footnotesize\ttfamily string lava\+::remove\+\_\+nondigit\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all non digit chars in string (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a685c6acbad52fbad672ed983c0c3c509}\label{misc_8hpp_a685c6acbad52fbad672ed983c0c3c509}} 
+\index{misc.hpp@{misc.hpp}!remove\_punctuation\_marks@{remove\_punctuation\_marks}}
+\index{remove\_punctuation\_marks@{remove\_punctuation\_marks}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_punctuation\_marks()}{remove\_punctuation\_marks()}}
+{\footnotesize\ttfamily string \& lava\+::remove\+\_\+punctuation\+\_\+marks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove punctuation marks in string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Target string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\& Cleared string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a6be2bfbc12c6162b059b375f84fa988a}\label{misc_8hpp_a6be2bfbc12c6162b059b375f84fa988a}} 
+\index{misc.hpp@{misc.hpp}!reverse@{reverse}}
+\index{reverse@{reverse}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{reverse()}{reverse()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+reversion\+\_\+wrapper$<$ T $>$ lava\+::reverse (\begin{DoxyParamCaption}\item[{T \&\&}]{iterable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverse iteration. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of iterable \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em iterable} & Iterable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reversion\+\_\+wrapper$<$\+T$>$ Wrapper 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}\label{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}} 
+\index{misc.hpp@{misc.hpp}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily void lava\+::rtrim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string only from end (in place) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{misc_8hpp_a79ed3a492185c4147cd8cad3f7480126}\label{misc_8hpp_a79ed3a492185c4147cd8cad3f7480126}} 
+\index{misc.hpp@{misc.hpp}!rtrim\_copy@{rtrim\_copy}}
+\index{rtrim\_copy@{rtrim\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{rtrim\_copy()}{rtrim\_copy()}}
+{\footnotesize\ttfamily string lava\+::rtrim\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string only from end (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Trimmed string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{misc_8hpp_a3097d82814968317612b1b45be15de96}\label{misc_8hpp_a3097d82814968317612b1b45be15de96}} 
+\index{misc.hpp@{misc.hpp}!trim@{trim}}
+\index{trim@{trim}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily void lava\+::trim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string from both ends (in place) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{misc_8hpp_a164b31b1e097ef980b8d408126783fe6}\label{misc_8hpp_a164b31b1e097ef980b8d408126783fe6}} 
+\index{misc.hpp@{misc.hpp}!trim\_copy@{trim\_copy}}
+\index{trim\_copy@{trim\_copy}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{trim\_copy()}{trim\_copy()}}
+{\footnotesize\ttfamily string lava\+::trim\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a598c1db84ed46b1b70b8d438b9799b59}{string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim string from both ends (copying) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Trimmed string 
+\end{DoxyReturn}

@@ -1,0 +1,77 @@
+\hypertarget{file__system_8hpp_source}{}\doxysection{file\+\_\+system.\+hpp}
+\label{file__system_8hpp_source}\index{liblava/file/file\_system.hpp@{liblava/file/file\_system.hpp}}
+\mbox{\hyperlink{file__system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{version_8hpp}{liblava/core/version.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1file__system}{file\_system}} : \mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\_copy\_no\_move}} \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} \mbox{\hyperlink{structlava_1_1file__system_a7738c1a940e416a576971c540b2c5862}{get\_version}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1file__system_ae2412b2813ed104cfb47760f6dab9a99}{get\_base\_dir}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1file__system_a6035a06dbfcbbc8f832b84eeaf770a53}{get\_full\_base\_dir}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1file__system_aa06b58dc745cc8e0163fcc126ab4d00d}{get\_pref\_dir}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1file__system_ab0864cd05da14b30699cb6aadc1e6a46}{get\_res\_dir}}();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a498847d0f265e3df79050101a7ac9d77}{mount}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a7786077f80c21a8a7c7d0f82833de29b}{mount\_base}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} base\_dir\_path);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a5b5b87ef6ffe06b17c6e5238220dcdcb}{exists}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file}{file}});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1file__system_a1453846158d92eb16facc5844e814efe}{get\_real\_dir}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file}{file}});}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83     \mbox{\hyperlink{types_8hpp_a662ed5e244d378d6e91b125d43c882be}{string\_list}} \mbox{\hyperlink{structlava_1_1file__system_a06d5636ef1511179db0285aca220db00}{enumerate\_files}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a6d3e702b2ee354cb72e5c420ab710dd3}{initialize}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} argv\_0,}
+\DoxyCodeLine{94                     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} org,}
+\DoxyCodeLine{95                     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1app}{app}},}
+\DoxyCodeLine{96                     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} ext);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1file__system_a01a492befb85c3c57c195740855e27bd}{terminate}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{107     \mbox{\hyperlink{types_8hpp_a662ed5e244d378d6e91b125d43c882be}{string\_list}} \mbox{\hyperlink{structlava_1_1file__system_ab140c6dd0a6aaa4bbd3cd2271afcb0f4}{mount\_res}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{114     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a266374e602590d8a24b177de626a9891}{create\_folder}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} = \textcolor{stringliteral}{"{}data"{}});}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1file__system_a69cc544f63441f63a1b33e36b4415dd2}{clean\_pref\_dir}}();}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{125     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file__system_af8c3a743a0e7b022e54977348f8d27c5}{get\_org}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} org;}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file__system_adbcfe405006ac93429fe305908d154e1}{get\_app}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{134         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1app}{app}};}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1file__system_ac0947f2e2a9bd3358228867be381b704}{get\_ext}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{142         \textcolor{keywordflow}{return} ext;}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{149     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1file__system_a15797e70806e2ef869462ae8726278cc}{ready}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{return} initialized;}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{keyword}{private}:}
+\DoxyCodeLine{155     \textcolor{keywordtype}{bool} initialized = \textcolor{keyword}{false};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{158     \textcolor{keywordtype}{string} org;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{161     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1app}{app}};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{string} ext;}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{167     \textcolor{keywordtype}{string} res\_path;}
+\DoxyCodeLine{168 \};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

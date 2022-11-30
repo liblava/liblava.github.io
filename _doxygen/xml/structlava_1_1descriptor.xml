@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1descriptor" kind="struct" language="C++" prot="public">
+    <compoundname>lava::descriptor</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="descriptor_8hpp" local="no">descriptor.hpp</includes>
+    <innerclass refid="structlava_1_1descriptor_1_1binding" prot="public">lava::descriptor::binding</innerclass>
+    <innerclass refid="structlava_1_1descriptor_1_1pool" prot="public">lava::descriptor::pool</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1descriptor" kindref="compound">descriptor</ref> &gt;</type>
+        <definition>using lava::descriptor::ptr =  std::shared_ptr&lt;descriptor&gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::descriptor::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="182" column="5" bodyfile="liblava/block/descriptor.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1descriptor_1a79b7b23bb7845c0876c462710811747f" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::descriptor::list =  std::vector&lt;ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::descriptor::list</qualifiedname>
+        <briefdescription>
+<para>List of descriptors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="185" column="5" bodyfile="liblava/block/descriptor.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1descriptor_1ad23fc976df7975f6b80d85b020a12452" prot="private" static="no" mutable="no">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::descriptor::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>lava::descriptor::device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="331" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1descriptor_1a5f3fe2bc2f33fe827abce0f15737b2b9" prot="private" static="no" mutable="no">
+        <type>VkDescriptorSetLayout</type>
+        <definition>VkDescriptorSetLayout lava::descriptor::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <qualifiedname>lava::descriptor::layout</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan descriptor set layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="334" column="27" bodyfile="liblava/block/descriptor.hpp" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1descriptor_1a4e38bcee368247a9fc0d36626222d981" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1descriptor_1_1binding_1adcccea4dfd48088253594d472717bb71" kindref="member">binding::list</ref></type>
+        <definition>binding::list lava::descriptor::bindings</definition>
+        <argsstring></argsstring>
+        <name>bindings</name>
+        <qualifiedname>lava::descriptor::bindings</qualifiedname>
+        <briefdescription>
+<para>List of descriptor bindings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="337" column="19" bodyfile="liblava/block/descriptor.hpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1descriptor_1aed34e6bc5743d8ee08bf06b987b7b420" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::descriptor::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::descriptor::make</qualifiedname>
+        <briefdescription>
+<para>Make a new descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ptr Shared pointer to descriptor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="191" column="16" bodyfile="liblava/block/descriptor.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1descriptor_1a78ef6ed0db7df38ef1a4d9b7f788e34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::add_binding</definition>
+        <argsstring>(index binding, VkDescriptorType descriptor_type, VkShaderStageFlags stage_flags)</argsstring>
+        <name>add_binding</name>
+        <qualifiedname>lava::descriptor::add_binding</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>binding</declname>
+        </param>
+        <param>
+          <type>VkDescriptorType</type>
+          <declname>descriptor_type</declname>
+        </param>
+        <param>
+          <type>VkShaderStageFlags</type>
+          <declname>stage_flags</declname>
+        </param>
+        <briefdescription>
+<para>Add binding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of binding </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>descriptor_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stage_flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader stage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="201" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a6ae99dad6d633bea0646d7b7272b4c65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::clear_bindings</definition>
+        <argsstring>()</argsstring>
+        <name>clear_bindings</name>
+        <qualifiedname>lava::descriptor::clear_bindings</qualifiedname>
+        <briefdescription>
+<para>Clear bindings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="208" column="10" bodyfile="liblava/block/descriptor.hpp" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a0cf194a22281a13b121e8f9355b63cd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::add</definition>
+        <argsstring>(binding::ptr const &amp;binding)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::descriptor::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1descriptor_1_1binding_1a934c45c3d7dffcb725925c985be5af55" kindref="member">binding::ptr</ref> const &amp;</type>
+          <declname>binding</declname>
+        </param>
+        <briefdescription>
+<para>Add binding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>binding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor binding </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="216" column="10" bodyfile="liblava/block/descriptor.hpp" bodystart="216" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1ae2d79a93e886d5c273420c29b4727821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::descriptor::create</definition>
+        <argsstring>(device_p device)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::descriptor::create</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Create a new descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="225" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a7c0807873cbb24f4de4427bc79d7cb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::descriptor::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="230" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a7efceefa3b7834a031ae20da7287cb62" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::descriptor::get_binding_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_binding_count</name>
+        <qualifiedname>lava::descriptor::get_binding_count</qualifiedname>
+        <briefdescription>
+<para>Get the binding count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ui32 Number of bindings </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="236" column="10" bodyfile="liblava/block/descriptor.hpp" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a815cb5175452ed94c2aab0c1ce81364c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1descriptor_1_1binding_1adcccea4dfd48088253594d472717bb71" kindref="member">binding::list</ref> const &amp;</type>
+        <definition>binding::list const  &amp; lava::descriptor::get_bindings</definition>
+        <argsstring>()</argsstring>
+        <name>get_bindings</name>
+        <qualifiedname>lava::descriptor::get_bindings</qualifiedname>
+        <briefdescription>
+<para>Get the bindings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1descriptor_1_1binding_1adcccea4dfd48088253594d472717bb71" kindref="member">binding::list</ref> const&amp; List of bindings </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="244" column="25" bodyfile="liblava/block/descriptor.hpp" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1ac71eebd48c521e982d377df5054f3221" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorSetLayout</type>
+        <definition>VkDescriptorSetLayout lava::descriptor::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::descriptor::get</qualifiedname>
+        <briefdescription>
+<para>Get descriptor set layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDescriptorSetLayout Vulkan descriptor set layout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="252" column="27" bodyfile="liblava/block/descriptor.hpp" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a8b1e0b6f32bf75fc5fc0f5568eb9b842" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::descriptor::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::descriptor::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>device_p Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="260" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="260" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a92824e40b7d2fa477f8bfa7b192a7051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDescriptorSet</type>
+        <definition>VkDescriptorSet lava::descriptor::allocate_set</definition>
+        <argsstring>(VkDescriptorPool pool)</argsstring>
+        <name>allocate_set</name>
+        <qualifiedname>lava::descriptor::allocate_set</qualifiedname>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Allocate descriptor set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>VkDescriptorSet Descriptor set </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="269" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a9474988b27cf2c8531dc66a05c8d6742" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorSet</type>
+        <definition>VkDescriptorSet lava::descriptor::allocate</definition>
+        <argsstring>(VkDescriptorPool pool)</argsstring>
+        <name>allocate</name>
+        <qualifiedname>lava::descriptor::allocate</qualifiedname>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1descriptor_1a92824e40b7d2fa477f8bfa7b192a7051" kindref="member">allocate_set</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="274" column="21" bodyfile="liblava/block/descriptor.hpp" bodystart="274" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a28879adf0a76d203413212f91dd650d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::descriptor::free_set</definition>
+        <argsstring>(VkDescriptorSet &amp;descriptor_set, VkDescriptorPool pool)</argsstring>
+        <name>free_set</name>
+        <qualifiedname>lava::descriptor::free_set</qualifiedname>
+        <param>
+          <type>VkDescriptorSet &amp;</type>
+          <declname>descriptor_set</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Free descriptor set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Free was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="284" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a7f812d09f3ccc11c052958393b28794b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::descriptor::free</definition>
+        <argsstring>(VkDescriptorSet &amp;descriptor_set, VkDescriptorPool pool)</argsstring>
+        <name>free</name>
+        <qualifiedname>lava::descriptor::free</qualifiedname>
+        <param>
+          <type>VkDescriptorSet &amp;</type>
+          <declname>descriptor_set</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1descriptor_1a28879adf0a76d203413212f91dd650d8" kindref="member">free_set</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="290" column="10" bodyfile="liblava/block/descriptor.hpp" bodystart="290" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1accea7a79b9ca3ce6e699907aeaf91f3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1a4d2e6d109a6cc56a7e23ac92364018f6" kindref="member">VkDescriptorSets</ref></type>
+        <definition>VkDescriptorSets lava::descriptor::allocate_sets</definition>
+        <argsstring>(ui32 size, VkDescriptorPool pool)</argsstring>
+        <name>allocate_sets</name>
+        <qualifiedname>lava::descriptor::allocate_sets</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Allocate descriptor sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of sets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>VkDescriptorSets List of descriptor sets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="301" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1ad5648b8d918efbe77dbf4c90324af6c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1a4d2e6d109a6cc56a7e23ac92364018f6" kindref="member">VkDescriptorSets</ref></type>
+        <definition>VkDescriptorSets lava::descriptor::allocate</definition>
+        <argsstring>(ui32 size, VkDescriptorPool pool)</argsstring>
+        <name>allocate</name>
+        <qualifiedname>lava::descriptor::allocate</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1descriptor_1accea7a79b9ca3ce6e699907aeaf91f3e" kindref="member">allocate_sets</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="307" column="22" bodyfile="liblava/block/descriptor.hpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1a932b30b2e9057cc37d77034c52fad8d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::descriptor::free_sets</definition>
+        <argsstring>(VkDescriptorSets &amp;descriptor_sets, VkDescriptorPool pool)</argsstring>
+        <name>free_sets</name>
+        <qualifiedname>lava::descriptor::free_sets</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a4d2e6d109a6cc56a7e23ac92364018f6" kindref="member">VkDescriptorSets</ref> &amp;</type>
+          <declname>descriptor_sets</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+<para>Free descriptor sets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor_sets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of descriptor sets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor pool </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Free was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="318" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1ad8db374b407bdd9d6c4ef2b2ae4c4c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::descriptor::free</definition>
+        <argsstring>(VkDescriptorSets &amp;descriptor_sets, VkDescriptorPool pool)</argsstring>
+        <name>free</name>
+        <qualifiedname>lava::descriptor::free</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a4d2e6d109a6cc56a7e23ac92364018f6" kindref="member">VkDescriptorSets</ref> &amp;</type>
+          <declname>descriptor_sets</declname>
+        </param>
+        <param>
+          <type>VkDescriptorPool</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1descriptor_1a932b30b2e9057cc37d77034c52fad8d8" kindref="member">free_sets</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="324" column="10" bodyfile="liblava/block/descriptor.hpp" bodystart="324" bodyend="327"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Descriptor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::descriptor</label>
+        <link refid="structlava_1_1descriptor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::descriptor</label>
+        <link refid="structlava_1_1descriptor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/descriptor.hpp" line="17" column="1" bodyfile="liblava/block/descriptor.hpp" bodystart="17" bodyend="338"/>
+    <listofallmembers>
+      <member refid="structlava_1_1descriptor_1a0cf194a22281a13b121e8f9355b63cd3" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>add</name></member>
+      <member refid="structlava_1_1descriptor_1a78ef6ed0db7df38ef1a4d9b7f788e34d" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>add_binding</name></member>
+      <member refid="structlava_1_1descriptor_1a9474988b27cf2c8531dc66a05c8d6742" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>allocate</name></member>
+      <member refid="structlava_1_1descriptor_1ad5648b8d918efbe77dbf4c90324af6c4" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>allocate</name></member>
+      <member refid="structlava_1_1descriptor_1a92824e40b7d2fa477f8bfa7b192a7051" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>allocate_set</name></member>
+      <member refid="structlava_1_1descriptor_1accea7a79b9ca3ce6e699907aeaf91f3e" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>allocate_sets</name></member>
+      <member refid="structlava_1_1descriptor_1a4e38bcee368247a9fc0d36626222d981" prot="private" virt="non-virtual"><scope>lava::descriptor</scope><name>bindings</name></member>
+      <member refid="structlava_1_1descriptor_1a6ae99dad6d633bea0646d7b7272b4c65" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>clear_bindings</name></member>
+      <member refid="structlava_1_1descriptor_1ae2d79a93e886d5c273420c29b4727821" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>create</name></member>
+      <member refid="structlava_1_1descriptor_1a7c0807873cbb24f4de4427bc79d7cb81" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>destroy</name></member>
+      <member refid="structlava_1_1descriptor_1ad23fc976df7975f6b80d85b020a12452" prot="private" virt="non-virtual"><scope>lava::descriptor</scope><name>device</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>entity</name></member>
+      <member refid="structlava_1_1descriptor_1a7f812d09f3ccc11c052958393b28794b" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>free</name></member>
+      <member refid="structlava_1_1descriptor_1ad8db374b407bdd9d6c4ef2b2ae4c4c3a" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>free</name></member>
+      <member refid="structlava_1_1descriptor_1a28879adf0a76d203413212f91dd650d8" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>free_set</name></member>
+      <member refid="structlava_1_1descriptor_1a932b30b2e9057cc37d77034c52fad8d8" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>free_sets</name></member>
+      <member refid="structlava_1_1descriptor_1ac71eebd48c521e982d377df5054f3221" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>get</name></member>
+      <member refid="structlava_1_1descriptor_1a7efceefa3b7834a031ae20da7287cb62" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>get_binding_count</name></member>
+      <member refid="structlava_1_1descriptor_1a815cb5175452ed94c2aab0c1ce81364c" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>get_bindings</name></member>
+      <member refid="structlava_1_1descriptor_1a8b1e0b6f32bf75fc5fc0f5568eb9b842" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>get_device</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>get_id</name></member>
+      <member refid="structlava_1_1descriptor_1a5f3fe2bc2f33fe827abce0f15737b2b9" prot="private" virt="non-virtual"><scope>lava::descriptor</scope><name>layout</name></member>
+      <member refid="structlava_1_1descriptor_1a79b7b23bb7845c0876c462710811747f" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>list</name></member>
+      <member refid="structlava_1_1descriptor_1aed34e6bc5743d8ee08bf06b987b7b420" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>operator=</name></member>
+      <member refid="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" prot="public" virt="non-virtual"><scope>lava::descriptor</scope><name>ptr</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::descriptor</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

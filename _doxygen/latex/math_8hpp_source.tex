@@ -1,0 +1,128 @@
+\hypertarget{math_8hpp_source}{}\doxysection{math.\+hpp}
+\label{math_8hpp_source}\index{liblava/util/math.hpp@{liblava/util/math.hpp}}
+\mbox{\hyperlink{math_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <picosha2.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define GLM\_FORCE\_RADIANS}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define GLM\_FORCE\_DEPTH\_ZERO\_TO\_ONE}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <glm/glm.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <glm/gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a8fbba1b1e8df83f14dcb821fc8e25bba}{v2}} = glm::vec2;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}} = glm::vec3;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} = glm::vec4;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{31 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} = glm::uvec2;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_afebcf1006c323856319786525467092d}{mat3}} = glm::mat3;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{37 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_ae13ab97b53db2802455495121dccfb55}{mat4}} = glm::mat4;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} = glm::ivec2;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43 \textcolor{keyword}{using }\mbox{\hyperlink{math_8hpp_a9530e56e164ef6a7c7fa9e65fb492af7}{iv3}} = glm::ivec3;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1rect}{rect}} \{}
+\DoxyCodeLine{50     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{ref}} = \mbox{\hyperlink{structlava_1_1rect}{rect}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{55     \mbox{\hyperlink{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a}{rect}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{64     \mbox{\hyperlink{structlava_1_1rect_a3d0f4f5754c31997269ed57b81ec6ef1}{rect}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} left, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} top,}
+\DoxyCodeLine{65          \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} height)}
+\DoxyCodeLine{66     : left\_top(\{ left, top \}) \{}
+\DoxyCodeLine{67         \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\{ width, height \});}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{76     \mbox{\hyperlink{structlava_1_1rect_ac5ed6ef38b816c3960821013d261187d}{rect}}(\mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} \textcolor{keyword}{const}\& left\_top,}
+\DoxyCodeLine{77          \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} height)}
+\DoxyCodeLine{78     : left\_top(left\_top) \{}
+\DoxyCodeLine{79         \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\{ width, height \});}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{87     \mbox{\hyperlink{structlava_1_1rect_aba98af4909b983af8ca2461a0f79a394}{rect}}(\mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} \textcolor{keyword}{const}\& left\_top,}
+\DoxyCodeLine{88          \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \textcolor{keyword}{const}\& size)}
+\DoxyCodeLine{89     : left\_top(left\_top) \{}
+\DoxyCodeLine{90         \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(size);}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97     \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1rect_a1bb7aa44bc739dc0d56569f39b9392c6}{get\_origin}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{98         \textcolor{keywordflow}{return} left\_top;}
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105     \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1rect_aa85aa770875eac252d6477451ab55e23}{get\_end\_point}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{106         \textcolor{keywordflow}{return} right\_bottom;}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{113     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1rect_aaeaf65436bf93bcfb312be45aa751806}{get\_size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{114         LAVA\_ASSERT(left\_top.x <= right\_bottom.x);}
+\DoxyCodeLine{115         LAVA\_ASSERT(left\_top.y <= right\_bottom.y);}
+\DoxyCodeLine{116         \textcolor{keywordflow}{return} \{ right\_bottom.x -\/ left\_top.x,}
+\DoxyCodeLine{117                  right\_bottom.y -\/ left\_top.y \};}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \textcolor{keyword}{const}\& size) \{}
+\DoxyCodeLine{125         right\_bottom.x = left\_top.x + size.x;}
+\DoxyCodeLine{126         right\_bottom.y = left\_top.y + size.y;}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1rect_af28e1e3c0610aae0d1619ef89c93e419}{move}}(\mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} \textcolor{keyword}{const}\& offset) \{}
+\DoxyCodeLine{134         left\_top += offset;}
+\DoxyCodeLine{135         right\_bottom += offset;}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1rect_a706360205e786afeafb94b91802162a3}{contains}}(\mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} point)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return} (left\_top.x < point.x)}
+\DoxyCodeLine{145                \&\& (left\_top.y < point.y)}
+\DoxyCodeLine{146                \&\& (right\_bottom.x > point.x)}
+\DoxyCodeLine{147                \&\& (right\_bottom.y > point.y);}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{keyword}{private}:}
+\DoxyCodeLine{152     \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} left\_top = \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}}();}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{155     \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}} right\_bottom = \mbox{\hyperlink{math_8hpp_a0926e6d91f857ef8d1bc63d687464b44}{iv2}}();}
+\DoxyCodeLine{156 \};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{164 \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{math_8hpp_a29d6bb9c11a24947cd7e1ea649ed626b}{ceil\_div}}(\textcolor{keyword}{auto} x, \textcolor{keyword}{auto} y) \{}
+\DoxyCodeLine{165     \textcolor{keywordflow}{return} (x + y -\/ 1) / y;}
+\DoxyCodeLine{166 \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{169 \textcolor{keyword}{constexpr} \mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}} \textcolor{keyword}{const} \mbox{\hyperlink{math_8hpp_a7a88b7d3991a796d5abbcf00755c1377}{default\_color}} = \mbox{\hyperlink{math_8hpp_a9078718fe20b839c7a2780c80494bdbb}{v3}}\{ 0.8118f,}
+\DoxyCodeLine{170                                        0.0627f,}
+\DoxyCodeLine{171                                        0.1255f \};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{180 \textcolor{keyword}{inline} \mbox{\hyperlink{math_8hpp_ae13ab97b53db2802455495121dccfb55}{mat4}} \mbox{\hyperlink{math_8hpp_a7254ea0a21ddb7784c785e2c5529c70d}{perspective\_matrix}}(\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size,}
+\DoxyCodeLine{181                                \textcolor{keywordtype}{float} fov = 90.f,}
+\DoxyCodeLine{182                                \textcolor{keywordtype}{float} far\_plane = 5.f) \{}
+\DoxyCodeLine{183     \textcolor{comment}{// Vulkan NDC is right-\/handed with Y pointing down}}
+\DoxyCodeLine{184     \textcolor{comment}{// we flip Y which makes it left-\/handed}}
+\DoxyCodeLine{185     \textcolor{keywordflow}{return} glm::scale(glm::identity<glm::mat4>(),}
+\DoxyCodeLine{186                       \{ 1.f, -\/1.f, 1.f \})}
+\DoxyCodeLine{187            * glm::perspectiveLH\_ZO(}
+\DoxyCodeLine{188                glm::radians(fov),}
+\DoxyCodeLine{189                \textcolor{keywordtype}{float}(size.x) / size.y,}
+\DoxyCodeLine{190                0.1f,}
+\DoxyCodeLine{191                far\_plane);}
+\DoxyCodeLine{192 \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{199 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{math_8hpp_ab4d9c1b9eb7d51228db5de1a164d07d4}{hash256}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} value) \{}
+\DoxyCodeLine{200     std::vector<uc8> hash(picosha2::k\_digest\_size);}
+\DoxyCodeLine{201     picosha2::hash256(value.begin(), value.end(),}
+\DoxyCodeLine{202                       hash.begin(), hash.end());}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204     \textcolor{keywordflow}{return} picosha2::bytes\_to\_hex\_string(hash.begin(), hash.end());}
+\DoxyCodeLine{205 \}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

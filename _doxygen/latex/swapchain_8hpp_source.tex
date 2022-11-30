@@ -1,0 +1,113 @@
+\hypertarget{swapchain_8hpp_source}{}\doxysection{swapchain.\+hpp}
+\label{swapchain_8hpp_source}\index{liblava/frame/swapchain.hpp@{liblava/frame/swapchain.hpp}}
+\mbox{\hyperlink{swapchain_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{image_8hpp}{liblava/resource/image.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_a50ea25634c1db55074f85ead0bed5ccd}{create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{28                 VkSurfaceKHR surface,}
+\DoxyCodeLine{29                 VkSurfaceFormatKHR format,}
+\DoxyCodeLine{30                 \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size,}
+\DoxyCodeLine{31                 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88}{v\_sync}} = \textcolor{keyword}{false});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1swapchain_a5e3664831939f1ced3c5c352656b7e56}{destroy}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_aa07ecb458ba621fb1ca281969de51611}{resize}}(\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} new\_size);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1swapchain_a521e6a4d528080bb7f08b270acfc55d9}{request\_reload}}() \{}
+\DoxyCodeLine{49         reload\_request\_active = \textcolor{keyword}{true};}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_a5329fb28a938b547f44896200bafbb69}{reload\_request}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{return} reload\_request\_active;}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{64     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1swapchain_a4b4b1f482ff800451f4f96e24da948c0}{get\_device}}() \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1swapchain_a215d372f28ff63e9380daa6bdb1b20d4}{get\_size}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80     VkFormat \mbox{\hyperlink{structlava_1_1swapchain_ac89fc6e2cc8808b2535b8a922696873f}{get\_format}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} format.format;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     VkColorSpaceKHR \mbox{\hyperlink{structlava_1_1swapchain_acb79990c2af08536400fcd2ce0ee5c1f}{get\_color\_space}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} format.colorSpace;}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{96     VkSwapchainKHR \mbox{\hyperlink{structlava_1_1swapchain_ae9cdc4102b140aa080aecee6b8c30672}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{return} vk\_swapchain;}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1swapchain_a3fae6439a7f077ab240de83932ad23c2}{get\_backbuffer\_count}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{105         \textcolor{keywordflow}{return} \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(backbuffers.size());}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{112     \mbox{\hyperlink{structlava_1_1image_a9bc2dd233667119ba2ab657b587394f1}{image::list}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1swapchain_aac4c6f119eda69c9d1b8851252527ee2}{get\_backbuffers}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} backbuffers;}
+\DoxyCodeLine{114     \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119     \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}} \{}
+\DoxyCodeLine{121         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a23250ad3fa53f8a95fef00c79c2ae96b}{list}} = std::vector<callback*>;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{124         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a00251e4ba4f716fa7755b922eddbbb26}{created\_func}} = std::function<bool()>;}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{127         \mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a00251e4ba4f716fa7755b922eddbbb26}{created\_func}} \mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a4fd0c6e0afdd8aa14fde412eb17b9dbb}{on\_created}};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a7f986018c2ea727c8f63f7a74bbe0394}{destroyed\_func}} = std::function<void()>;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{133         \mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a7f986018c2ea727c8f63f7a74bbe0394}{destroyed\_func}} \mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a83202164f090e5b7ebbc10b7af8bada6}{on\_destroyed}};}
+\DoxyCodeLine{134     \};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1swapchain_aa0f1dc61fdbd6d90d70602216824569a}{add\_callback}}(\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}}* cb);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1swapchain_a3492a31d76e85ead2eb089e19d041032}{remove\_callback}}(\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}}* cb);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88}{v\_sync}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{153         \textcolor{keywordflow}{return} v\_sync\_active;}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{161     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1swapchain_a2ba8d162d3d6159cd197ca0a540c6b68}{surface\_supported}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} queue\_family) \textcolor{keyword}{const};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{keyword}{private}:}
+\DoxyCodeLine{169     VkPresentModeKHR choose\_present\_mode(\mbox{\hyperlink{base_2base_8hpp_acb60d7e5388b03b70dcb992133531af2}{VkPresentModeKHRs}} \textcolor{keyword}{const}\& present\_modes) \textcolor{keyword}{const};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{176     VkSwapchainCreateInfoKHR create\_info(\mbox{\hyperlink{base_2base_8hpp_acb60d7e5388b03b70dcb992133531af2}{VkPresentModeKHRs}} present\_modes);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{182     \textcolor{keywordtype}{bool} setup();}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{187     \textcolor{keywordtype}{void} teardown();}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{192     \textcolor{keywordtype}{void} destroy\_backbuffer\_views();}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{195     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{198     VkSurfaceKHR surface = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{201     VkSurfaceFormatKHR format = \{\};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{204     VkSwapchainKHR vk\_swapchain = VK\_NULL\_HANDLE;}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{207     \mbox{\hyperlink{structlava_1_1image_a9bc2dd233667119ba2ab657b587394f1}{image::list}} backbuffers;}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{210     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size;}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{213     \textcolor{keywordtype}{bool} reload\_request\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{216     \textcolor{keywordtype}{bool} v\_sync\_active = \textcolor{keyword}{false};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{219     \mbox{\hyperlink{structlava_1_1swapchain_1_1callback_a23250ad3fa53f8a95fef00c79c2ae96b}{callback::list}} callbacks;}
+\DoxyCodeLine{220 \};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

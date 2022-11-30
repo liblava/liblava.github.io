@@ -1,0 +1,30 @@
+\hypertarget{load__texture_8hpp_source}{}\doxysection{load\+\_\+texture.\+hpp}
+\label{load__texture_8hpp_source}\index{liblava/asset/load\_texture.hpp@{liblava/asset/load\_texture.hpp}}
+\mbox{\hyperlink{load__texture_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{texture_8hpp}{liblava/resource/texture.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{21 \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} \mbox{\hyperlink{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}{load\_texture}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{22                           \mbox{\hyperlink{structlava_1_1file__format}{file\_format}} \mbox{\hyperlink{structlava_1_1file__format}{file\_format}},}
+\DoxyCodeLine{23                           \mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\_type}} type = texture\_type::tex\_2d);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{33 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} \mbox{\hyperlink{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}{load\_texture}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{34                                  \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} filename,}
+\DoxyCodeLine{35                                  VkFormat format = VK\_FORMAT\_R8G8B8A8\_SRGB,}
+\DoxyCodeLine{36                                  \mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\_type}} type = texture\_type::tex\_2d) \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} \mbox{\hyperlink{load__texture_8hpp_a282eebfe6e01160df2ab6e773c29c7b3}{load\_texture}}(\mbox{\hyperlink{structlava_1_1device}{device}}, \{ filename, format \}, type);}
+\DoxyCodeLine{38 \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{48 \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{texture::ptr}} \mbox{\hyperlink{load__texture_8hpp_a80b0e0a2dcfb93c10cf9443683d0398b}{create\_default\_texture}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{49                                     \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size = \{ 512, 512 \},}
+\DoxyCodeLine{50                                     v3 color = v3(1.f),}
+\DoxyCodeLine{51                                     r32 alpha = 0.7529f);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

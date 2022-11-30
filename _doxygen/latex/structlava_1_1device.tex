@@ -1,0 +1,459 @@
+\hypertarget{structlava_1_1device}{}\doxysection{lava\+::device Struct Reference}
+\label{structlava_1_1device}\index{lava::device@{lava::device}}
+
+
+Vulkan device.  
+
+
+
+
+{\ttfamily \#include $<$device.\+hpp$>$}
+
+Inheritance diagram for lava\+::device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1device}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1device_1_1create__param}{create\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em Device create parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}\label{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1device}{device}} $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to a device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1device_a0beef2f72f51aae8a14d2c541621fed0}\label{structlava_1_1device_a0beef2f72f51aae8a14d2c541621fed0}} 
+using {\bfseries list} = std\+::vector$<$ \mbox{\hyperlink{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em List of devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1device_a5533b7847b993c68e68c3015b72ad32d}\label{structlava_1_1device_a5533b7847b993c68e68c3015b72ad32d}} 
+{\bfseries $\sim$device} ()
+\begin{DoxyCompactList}\small\item\em Destroy the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_a1e3ccc0106503deb957d554f9a3d0c0d}{create}} (\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{create\+\_\+param\+::ref}} param)
+\begin{DoxyCompactList}\small\item\em Create a new device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1device_a74045c4c30a3afaa400421c0f60af3e3}\label{structlava_1_1device_a74045c4c30a3afaa400421c0f60af3e3}} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}{get\+\_\+graphics\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\begin{DoxyCompactList}\small\item\em Get a graphics queue by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_a78176765160f50f099b4e8202ce13bb9}{graphics\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}{get\+\_\+compute\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\begin{DoxyCompactList}\small\item\em Get a compute queue by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_a05571936798d869f9e6640b688feda8b}{compute\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}{get\+\_\+transfer\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\begin{DoxyCompactList}\small\item\em Get a transfer queue by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1device_a7f62fa3f60987ec4305637ba490ea6d2}{transfer\+\_\+queue}} (\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}=0) const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}{get\+\_\+graphics\+\_\+queues}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of graphics queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_aa81e365bde440a6587e8836e32538204}{graphics\+\_\+queues}} () const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}{get\+\_\+compute\+\_\+queues}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of compute queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_a60e3dda7b16f899e980dec87d7bce118}{compute\+\_\+queues}} () const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}{get\+\_\+transfer\+\_\+queues}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of transfer queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_aaa49cf894a2afa7e6e050a0c167e635f}{transfer\+\_\+queues}} () const
+\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_a327236b92200ab829a6b7de58968f847}{get\+\_\+queues}} () const
+\begin{DoxyCompactList}\small\item\em Get all queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const \& \mbox{\hyperlink{structlava_1_1device_aa2a41a0eb47c6a218f3092ebbd56efaa}{queues}} () const
+\item 
+Vk\+Device \mbox{\hyperlink{structlava_1_1device_a45cad0d3df6eefd926226495e49411da}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan device. \end{DoxyCompactList}\item 
+Volk\+Device\+Table const \& \mbox{\hyperlink{structlava_1_1device_a6bc4fe6711c01a1c50f2fce6fed901b2}{call}} () const
+\begin{DoxyCompactList}\small\item\em Get the Volk device table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_a0fda93f987ef8655e375cc8d7180c7e7}{wait\+\_\+for\+\_\+idle}} () const
+\begin{DoxyCompactList}\small\item\em Wait for idle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{device_8hpp_aaa9933e26d22eabf91e980074e67aaaa}{physical\+\_\+device\+\_\+cp}} \mbox{\hyperlink{structlava_1_1device_ac6bb19b9cd4b79a7529c734575c699fb}{get\+\_\+physical\+\_\+device}} () const
+\begin{DoxyCompactList}\small\item\em Get the physical device. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device \mbox{\hyperlink{structlava_1_1device_afb9bba83954f5d9299b0eaaad5f66a8c}{get\+\_\+vk\+\_\+physical\+\_\+device}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan physical device. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device\+Features const \& \mbox{\hyperlink{structlava_1_1device_a4bf266a2e0ea67fcd72e878448ee4c87}{get\+\_\+features}} () const
+\begin{DoxyCompactList}\small\item\em Get the physical device features. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device\+Properties const \& \mbox{\hyperlink{structlava_1_1device_a7205f9a0bb651770091720af171bb5c5}{get\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the physical device properties. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_ac7fc2bbef2544362ce16dbd118fbae04}{surface\+\_\+supported}} (Vk\+Surface\+KHR surface) const
+\begin{DoxyCompactList}\small\item\em Check if surface is supported by this device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1device_a1d4b8fe7ce13bf0c9bb1c67261310a84}{set\+\_\+allocator}} (\mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator\+::ptr}} value)
+\begin{DoxyCompactList}\small\item\em Set the allocator for this device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator\+::ptr}} \mbox{\hyperlink{structlava_1_1device_a39ba18894ccb4d2ec0031356ae2dd3a7}{get\+\_\+allocator}} ()
+\begin{DoxyCompactList}\small\item\em Get the allocator of this device. \end{DoxyCompactList}\item 
+Vma\+Allocator \mbox{\hyperlink{structlava_1_1device_a9ef9942f9eb91c9412c4735a1cdf83fe}{alloc}} () const
+\begin{DoxyCompactList}\small\item\em Get the VMA allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}{ptr}} \mbox{\hyperlink{structlava_1_1device_a4434587f061e7f020534b29df875561e}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan device. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1device_a9ef9942f9eb91c9412c4735a1cdf83fe}\label{structlava_1_1device_a9ef9942f9eb91c9412c4735a1cdf83fe}} 
+\index{lava::device@{lava::device}!alloc@{alloc}}
+\index{alloc@{alloc}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily Vma\+Allocator lava\+::device\+::alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the VMA allocator. 
+
+\begin{DoxyReturn}{Returns}
+Vma\+Allocator VMA allocator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a6bc4fe6711c01a1c50f2fce6fed901b2}\label{structlava_1_1device_a6bc4fe6711c01a1c50f2fce6fed901b2}} 
+\index{lava::device@{lava::device}!call@{call}}
+\index{call@{call}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily Volk\+Device\+Table const  \& lava\+::device\+::call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Volk device table. 
+
+\begin{DoxyReturn}{Returns}
+Volk\+Device\+Table const\& Volk device table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a05571936798d869f9e6640b688feda8b}\label{structlava_1_1device_a05571936798d869f9e6640b688feda8b}} 
+\index{lava::device@{lava::device}!compute\_queue@{compute\_queue}}
+\index{compute\_queue@{compute\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{compute\_queue()}{compute\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::compute\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}{get\+\_\+compute\+\_\+queue}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_a60e3dda7b16f899e980dec87d7bce118}\label{structlava_1_1device_a60e3dda7b16f899e980dec87d7bce118}} 
+\index{lava::device@{lava::device}!compute\_queues@{compute\_queues}}
+\index{compute\_queues@{compute\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{compute\_queues()}{compute\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::compute\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}{get\+\_\+compute\+\_\+queues}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_a1e3ccc0106503deb957d554f9a3d0c0d}\label{structlava_1_1device_a1e3ccc0106503deb957d554f9a3d0c0d}} 
+\index{lava::device@{lava::device}!create@{create}}
+\index{create@{create}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::device\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{create\+\_\+param\+::ref}}}]{param }\end{DoxyParamCaption})}
+
+
+
+Create a new device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Create parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a45cad0d3df6eefd926226495e49411da}\label{structlava_1_1device_a45cad0d3df6eefd926226495e49411da}} 
+\index{lava::device@{lava::device}!get@{get}}
+\index{get@{get}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Vk\+Device lava\+::device\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan device. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Device Vulkan device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a39ba18894ccb4d2ec0031356ae2dd3a7}\label{structlava_1_1device_a39ba18894ccb4d2ec0031356ae2dd3a7}} 
+\index{lava::device@{lava::device}!get\_allocator@{get\_allocator}}
+\index{get\_allocator@{get\_allocator}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_allocator()}{get\_allocator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator\+::ptr}} lava\+::device\+::get\+\_\+allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the allocator of this device. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator\+::ptr}} Allocator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}\label{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}} 
+\index{lava::device@{lava::device}!get\_compute\_queue@{get\_compute\_queue}}
+\index{get\_compute\_queue@{get\_compute\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_compute\_queue()}{get\_compute\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::get\+\_\+compute\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a compute queue by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} Compute queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}\label{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}} 
+\index{lava::device@{lava::device}!get\_compute\_queues@{get\_compute\_queues}}
+\index{get\_compute\_queues@{get\_compute\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_compute\_queues()}{get\_compute\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::get\+\_\+compute\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of compute queues. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const\& Compute queues 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a4bf266a2e0ea67fcd72e878448ee4c87}\label{structlava_1_1device_a4bf266a2e0ea67fcd72e878448ee4c87}} 
+\index{lava::device@{lava::device}!get\_features@{get\_features}}
+\index{get\_features@{get\_features}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_features()}{get\_features()}}
+{\footnotesize\ttfamily Vk\+Physical\+Device\+Features const  \& lava\+::device\+::get\+\_\+features (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the physical device features. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device\+Features const\& Features 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}\label{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}} 
+\index{lava::device@{lava::device}!get\_graphics\_queue@{get\_graphics\_queue}}
+\index{get\_graphics\_queue@{get\_graphics\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_graphics\_queue()}{get\_graphics\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::get\+\_\+graphics\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a graphics queue by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} Graphics queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}\label{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}} 
+\index{lava::device@{lava::device}!get\_graphics\_queues@{get\_graphics\_queues}}
+\index{get\_graphics\_queues@{get\_graphics\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_graphics\_queues()}{get\_graphics\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::get\+\_\+graphics\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of graphics queues. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const\& Graphics queues 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_ac6bb19b9cd4b79a7529c734575c699fb}\label{structlava_1_1device_ac6bb19b9cd4b79a7529c734575c699fb}} 
+\index{lava::device@{lava::device}!get\_physical\_device@{get\_physical\_device}}
+\index{get\_physical\_device@{get\_physical\_device}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_physical\_device()}{get\_physical\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{device_8hpp_aaa9933e26d22eabf91e980074e67aaaa}{physical\+\_\+device\+\_\+cp}} lava\+::device\+::get\+\_\+physical\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the physical device. 
+
+\begin{DoxyReturn}{Returns}
+physical\+\_\+device\+\_\+cp Physical device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a7205f9a0bb651770091720af171bb5c5}\label{structlava_1_1device_a7205f9a0bb651770091720af171bb5c5}} 
+\index{lava::device@{lava::device}!get\_properties@{get\_properties}}
+\index{get\_properties@{get\_properties}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_properties()}{get\_properties()}}
+{\footnotesize\ttfamily Vk\+Physical\+Device\+Properties const  \& lava\+::device\+::get\+\_\+properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the physical device properties. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device\+Properties const\& Properties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a327236b92200ab829a6b7de58968f847}\label{structlava_1_1device_a327236b92200ab829a6b7de58968f847}} 
+\index{lava::device@{lava::device}!get\_queues@{get\_queues}}
+\index{get\_queues@{get\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_queues()}{get\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::get\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all queues. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const\& List of all queues 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}\label{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}} 
+\index{lava::device@{lava::device}!get\_transfer\_queue@{get\_transfer\_queue}}
+\index{get\_transfer\_queue@{get\_transfer\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_transfer\_queue()}{get\_transfer\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::get\+\_\+transfer\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a transfer queue by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} Transfer queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}\label{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}} 
+\index{lava::device@{lava::device}!get\_transfer\_queues@{get\_transfer\_queues}}
+\index{get\_transfer\_queues@{get\_transfer\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_transfer\_queues()}{get\_transfer\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::get\+\_\+transfer\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of transfer queues. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const\& Transfer queues 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_afb9bba83954f5d9299b0eaaad5f66a8c}\label{structlava_1_1device_afb9bba83954f5d9299b0eaaad5f66a8c}} 
+\index{lava::device@{lava::device}!get\_vk\_physical\_device@{get\_vk\_physical\_device}}
+\index{get\_vk\_physical\_device@{get\_vk\_physical\_device}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{get\_vk\_physical\_device()}{get\_vk\_physical\_device()}}
+{\footnotesize\ttfamily Vk\+Physical\+Device lava\+::device\+::get\+\_\+vk\+\_\+physical\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Vulkan physical device. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device Vulkan physical device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a78176765160f50f099b4e8202ce13bb9}\label{structlava_1_1device_a78176765160f50f099b4e8202ce13bb9}} 
+\index{lava::device@{lava::device}!graphics\_queue@{graphics\_queue}}
+\index{graphics\_queue@{graphics\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{graphics\_queue()}{graphics\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::graphics\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}{get\+\_\+graphics\+\_\+queue}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_aa81e365bde440a6587e8836e32538204}\label{structlava_1_1device_aa81e365bde440a6587e8836e32538204}} 
+\index{lava::device@{lava::device}!graphics\_queues@{graphics\_queues}}
+\index{graphics\_queues@{graphics\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{graphics\_queues()}{graphics\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::graphics\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}{get\+\_\+graphics\+\_\+queues}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_a4434587f061e7f020534b29df875561e}\label{structlava_1_1device_a4434587f061e7f020534b29df875561e}} 
+\index{lava::device@{lava::device}!make@{make}}
+\index{make@{make}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structlava_1_1device_a204dc83e8f608a987d64dbe9646c6684}{ptr}} lava\+::device\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new device. 
+
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_aa2a41a0eb47c6a218f3092ebbd56efaa}\label{structlava_1_1device_aa2a41a0eb47c6a218f3092ebbd56efaa}} 
+\index{lava::device@{lava::device}!queues@{queues}}
+\index{queues@{queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{queues()}{queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_a327236b92200ab829a6b7de58968f847}{get\+\_\+queues}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_a1d4b8fe7ce13bf0c9bb1c67261310a84}\label{structlava_1_1device_a1d4b8fe7ce13bf0c9bb1c67261310a84}} 
+\index{lava::device@{lava::device}!set\_allocator@{set\_allocator}}
+\index{set\_allocator@{set\_allocator}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{set\_allocator()}{set\_allocator()}}
+{\footnotesize\ttfamily void lava\+::device\+::set\+\_\+allocator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator\+::ptr}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the allocator for this device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Allocator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1device_ac7fc2bbef2544362ce16dbd118fbae04}\label{structlava_1_1device_ac7fc2bbef2544362ce16dbd118fbae04}} 
+\index{lava::device@{lava::device}!surface\_supported@{surface\_supported}}
+\index{surface\_supported@{surface\_supported}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{surface\_supported()}{surface\_supported()}}
+{\footnotesize\ttfamily bool lava\+::device\+::surface\+\_\+supported (\begin{DoxyParamCaption}\item[{Vk\+Surface\+KHR}]{surface }\end{DoxyParamCaption}) const}
+
+
+
+Check if surface is supported by this device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & Surface to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Surface is supported or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1device_a7f62fa3f60987ec4305637ba490ea6d2}\label{structlava_1_1device_a7f62fa3f60987ec4305637ba490ea6d2}} 
+\index{lava::device@{lava::device}!transfer\_queue@{transfer\_queue}}
+\index{transfer\_queue@{transfer\_queue}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{transfer\_queue()}{transfer\_queue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} lava\+::device\+::transfer\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}{get\+\_\+transfer\+\_\+queue}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_aaa49cf894a2afa7e6e050a0c167e635f}\label{structlava_1_1device_aaa49cf894a2afa7e6e050a0c167e635f}} 
+\index{lava::device@{lava::device}!transfer\_queues@{transfer\_queues}}
+\index{transfer\_queues@{transfer\_queues}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{transfer\_queues()}{transfer\_queues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue\+::list}} const  \& lava\+::device\+::transfer\+\_\+queues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}{get\+\_\+transfer\+\_\+queues}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structlava_1_1device_a0fda93f987ef8655e375cc8d7180c7e7}\label{structlava_1_1device_a0fda93f987ef8655e375cc8d7180c7e7}} 
+\index{lava::device@{lava::device}!wait\_for\_idle@{wait\_for\_idle}}
+\index{wait\_for\_idle@{wait\_for\_idle}!lava::device@{lava::device}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_idle()}{wait\_for\_idle()}}
+{\footnotesize\ttfamily bool lava\+::device\+::wait\+\_\+for\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wait for idle. 
+
+\begin{DoxyReturn}{Returns}
+Wait was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{device_8hpp}{device.\+hpp}}\end{DoxyCompactItemize}

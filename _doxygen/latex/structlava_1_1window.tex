@@ -1,0 +1,807 @@
+\hypertarget{structlava_1_1window}{}\doxysection{lava\+::window Struct Reference}
+\label{structlava_1_1window}\index{lava::window@{lava::window}}
+
+
+Window.  
+
+
+
+
+{\ttfamily \#include $<$window.\+hpp$>$}
+
+Inheritance diagram for lava\+::window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1window}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1window_1_1state}{state}}
+\begin{DoxyCompactList}\small\item\em Window state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}\label{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1window}{window}} $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a702ba56652ca21c51d2f03c91b74be4e}\label{structlava_1_1window_a702ba56652ca21c51d2f03c91b74be4e}} 
+using {\bfseries event} = std\+::function$<$ void(\mbox{\hyperlink{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}{ptr}})$>$
+\begin{DoxyCompactList}\small\item\em Window event function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a8dc22955535efe185fa2977071773f84}\label{structlava_1_1window_a8dc22955535efe185fa2977071773f84}} 
+using {\bfseries map} = std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1window_ae89b57a0e9b1a611429c18bba6d79ec3}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em Map of windows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a2f49c43ec33876f8da7397b1122bec51}\label{structlava_1_1window_a2f49c43ec33876f8da7397b1122bec51}} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1window}{window}} const  \&
+\begin{DoxyCompactList}\small\item\em Reference to window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_ad8337254c42fa78e9b3731edd65ad518}\label{structlava_1_1window_ad8337254c42fa78e9b3731edd65ad518}} 
+using {\bfseries resize\+\_\+func} = std\+::function$<$ bool(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}})$>$
+\begin{DoxyCompactList}\small\item\em Resize window function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1window_ae6f5bdd9cccc663b26da7ca28fb14ae2}\label{structlava_1_1window_ae6f5bdd9cccc663b26da7ca28fb14ae2}} 
+{\bfseries window} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1window_a6b1a26244ca5ede1e543b614200bb278}{window}} (\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} title)
+\begin{DoxyCompactList}\small\item\em Construct a new window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a780a81f8022d4f6d575ccb278852d777}{create}} (\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state\+::optional}} \mbox{\hyperlink{structlava_1_1window_1_1state}{state}}=\{\})
+\begin{DoxyCompactList}\small\item\em Create a new window with optional state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_ac16858698e4332b4083b0d374f7e068e}\label{structlava_1_1window_ac16858698e4332b4083b0d374f7e068e}} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1window_1_1state}{state}} \mbox{\hyperlink{structlava_1_1window_ae97792c44b60d2caeba694d8d535c650}{get\+\_\+state}} () const
+\begin{DoxyCompactList}\small\item\em Get the window state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_aefbf4e32d2366c86eda425a085eac03b}{set\+\_\+title}} (\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} text)
+\begin{DoxyCompactList}\small\item\em Set the window title. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1window_a69dd8fb6ebbbe23d67eeeb1d80b543aa}{get\+\_\+title}} () const
+\begin{DoxyCompactList}\small\item\em Get the window title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a2c8a7a9e8283ef9b1e86eb1ee36f2f38}{set\+\_\+save\+\_\+name}} (\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} save)
+\begin{DoxyCompactList}\small\item\em Set the save name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1window_a0c6a210efe2c66bd5de24124a735b025}{get\+\_\+save\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the save name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a7dfb5b209b52fe79dcf4b31922c3381d}{set\+\_\+position}} (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} x, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} y)
+\begin{DoxyCompactList}\small\item\em Set the position of window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a678da9602f4332749c0a16c78428b5e7}{get\+\_\+position}} (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \&x, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \&y) const
+\begin{DoxyCompactList}\small\item\em Get the position of window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a238cbc1cf2aa62cdbb76f6fdceb60251}{set\+\_\+size}} (\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} height)
+\begin{DoxyCompactList}\small\item\em Set the size of window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_ae9277346b20a71317bae96cd284eb1dd}{get\+\_\+size}} (\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&height) const
+\begin{DoxyCompactList}\small\item\em Get the size of window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a38d840058ccaa23cc1e94d03ab676fe0}{get\+\_\+framebuffer\+\_\+size}} (\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&width, \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&height) const
+\begin{DoxyCompactList}\small\item\em Get the framebuffer size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1window_a3e5cbb58f82f4edcc4dc2c56e55c1632}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} \mbox{\hyperlink{structlava_1_1window_a1ded761d4ae5347f765f98fb774afca3}{get\+\_\+framebuffer\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the framebuffer size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a9f9ef97dc8d0b9e6f8a838287fe269bb}{set\+\_\+mouse\+\_\+position}} (\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} x, \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} y)
+\begin{DoxyCompactList}\small\item\em Set the mouse position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a514366df46e3ce881a3f6e44ae16148b}{get\+\_\+mouse\+\_\+position}} (\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \&x, \mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \&y) const
+\begin{DoxyCompactList}\small\item\em Get the mouse position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} \mbox{\hyperlink{structlava_1_1window_a1d53ce70ca68cb5f1e63e5192cd4e0aa}{get\+\_\+mouse\+\_\+position}} () const
+\begin{DoxyCompactList}\small\item\em Get the mouse position in window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a19eef73e7b8e5d23298f73d8cd8f47a7}\label{structlava_1_1window_a19eef73e7b8e5d23298f73d8cd8f47a7}} 
+void {\bfseries hide\+\_\+mouse\+\_\+cursor} ()
+\begin{DoxyCompactList}\small\item\em Hide mouse cursor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a8349ff92537391276ec8d2ae326a48cb}\label{structlava_1_1window_a8349ff92537391276ec8d2ae326a48cb}} 
+void {\bfseries show\+\_\+mouse\+\_\+cursor} ()
+\begin{DoxyCompactList}\small\item\em Show mouse cursor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structlava_1_1window_a9f96fb9bdf5d1bc2459551ebac45ca4f}{get\+\_\+aspect\+\_\+ratio}} () const
+\begin{DoxyCompactList}\small\item\em Get the aspect ratio of window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a8fedf2b02c9d76d1dc6f69cfaa45da6c}\label{structlava_1_1window_a8fedf2b02c9d76d1dc6f69cfaa45da6c}} 
+void {\bfseries show} ()
+\begin{DoxyCompactList}\small\item\em Show the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a0086ea35ec0353b3f5fa1007ad910f50}\label{structlava_1_1window_a0086ea35ec0353b3f5fa1007ad910f50}} 
+void {\bfseries hide} ()
+\begin{DoxyCompactList}\small\item\em Hide the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a4ce6512c5e14f1441560c86f9ecf9243}{visible}} () const
+\begin{DoxyCompactList}\small\item\em Check if window is visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a17ee815e1884cc759a2999350fca33d2}\label{structlava_1_1window_a17ee815e1884cc759a2999350fca33d2}} 
+void {\bfseries iconify} ()
+\begin{DoxyCompactList}\small\item\em Iconify the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a95e2a1be57126bd34cebf8974ec261bf}{iconified}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is iconified. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a97971fb1a3d69a0ff8ab80e1667b3b6b}\label{structlava_1_1window_a97971fb1a3d69a0ff8ab80e1667b3b6b}} 
+void {\bfseries restore} ()
+\begin{DoxyCompactList}\small\item\em Restore the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a05b63c9fc8c2d4959f1e8301e175f525}\label{structlava_1_1window_a05b63c9fc8c2d4959f1e8301e175f525}} 
+void {\bfseries maximize} ()
+\begin{DoxyCompactList}\small\item\em Maximize the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a5c8067cc7d9d1a5fec3167ca88a4ec55}{maximized}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is maximized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a9a2b261a1db6b7a2ac4c197ffaf55bc9}\label{structlava_1_1window_a9a2b261a1db6b7a2ac4c197ffaf55bc9}} 
+void {\bfseries focus} ()
+\begin{DoxyCompactList}\small\item\em Focus the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_aa55afc417e3cf53d8d702c03df855a9f}{focused}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is focused. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_ab8531946fe9d71cdbcbda68fc4316031}{set\+\_\+fullscreen}} (bool active)
+\begin{DoxyCompactList}\small\item\em Set the window to fullscreen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a4bb058810f581ee6fe2d0d587d9ebef8}{fullscreen}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is fullscreen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a50d31411756196d58387d25a3ef9b553}{hovered}} () const
+\begin{DoxyCompactList}\small\item\em Check if mouse hovered over the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_aac73df0c28d7e87ef5f7a766f9d39dce}{resizable}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is resizable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a64c5220c8ae6dd54443c1d7559c025fd}{set\+\_\+resizable}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the window resizable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a4ade3b30b8cd79547dc453a6aebc02ab}{decorated}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is decorated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a1d43b29b7bf1f1b0fb35769c1fb8decf}{set\+\_\+decorated}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the window decorated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a09c1bea3dd04ace1d19af70e8bce1792}{floating}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window is floating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_a3a3d5383edb51ea16d816842eee685ef}{set\+\_\+floating}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the window floating. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a05b4168065393cd10196977bea2894a2}{close\+\_\+request}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window request to close. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a8a3a092c3618d55d1a1d1cffbd9c78cc}{switch\+\_\+mode\+\_\+request}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window request to switch mode. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a635165df128073843c48a139ab076fce}{switch\+\_\+mode}} (\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state\+::optional}} \mbox{\hyperlink{structlava_1_1window_1_1state}{state}}=\{\})
+\begin{DoxyCompactList}\small\item\em Switch mode of the window. \end{DoxyCompactList}\item 
+GLFWwindow $\ast$ \mbox{\hyperlink{structlava_1_1window_a3f223af037dc955d8f4559ac89e67596}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get GLFW handle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a043cfb04185f8ee4fad8da66e348e4ec}{resize\+\_\+request}} () const
+\begin{DoxyCompactList}\small\item\em Check if the window request to resize. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_a1edce74223d7f4a5128507265cfa8bdb}{handle\+\_\+resize}} ()
+\begin{DoxyCompactList}\small\item\em Handle window resize. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_aeb42b88332a7dad151c99e47860a36d2}\label{structlava_1_1window_aeb42b88332a7dad151c99e47860a36d2}} 
+void {\bfseries update\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Update window state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_af10c1d0918e65e000b7fadcdb8ab0dde}{assign}} (\mbox{\hyperlink{structlava_1_1input}{input}} $\ast$callback)
+\begin{DoxyCompactList}\small\item\em Assign input callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_ad29839f5dc01f891976c1b2cbdcdddfc}{show\+\_\+save\+\_\+title}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Show the save title in the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1window_af75137379b53997c16b570563f1959b4}{save\+\_\+title}} () const
+\begin{DoxyCompactList}\small\item\em Check the show save title state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_af57852b3c6f815c06bddfdaa34ff4566}\label{structlava_1_1window_af57852b3c6f815c06bddfdaa34ff4566}} 
+void {\bfseries update\+\_\+title} ()
+\begin{DoxyCompactList}\small\item\em Update the window title. \end{DoxyCompactList}\item 
+Vk\+Surface\+KHR \mbox{\hyperlink{structlava_1_1window_a2ee0994d3d79dbf189f76774543b42f4}{create\+\_\+surface}} ()
+\begin{DoxyCompactList}\small\item\em Create a surface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1window_ab72d157a6d55d04c9b4917043c423d86}{set\+\_\+icon}} (\mbox{\hyperlink{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}{data\+\_\+cptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} size)
+\begin{DoxyCompactList}\small\item\em Set the window icon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1window_adf5d0528a85918a252de7977fd411ffd}{get\+\_\+monitor}} () const
+\begin{DoxyCompactList}\small\item\em Get the monitor index of the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1window_a9210b5003665a00a6afec8d19ac503c8}\label{structlava_1_1window_a9210b5003665a00a6afec8d19ac503c8}} 
+void {\bfseries center} ()
+\begin{DoxyCompactList}\small\item\em Center the window on the monitor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1window_a381cc0b877cb32e27a90894b7ed48f0c}\label{structlava_1_1window_a381cc0b877cb32e27a90894b7ed48f0c}} 
+\mbox{\hyperlink{structlava_1_1window_ad8337254c42fa78e9b3731edd65ad518}{resize\+\_\+func}} {\bfseries on\+\_\+resize}
+\begin{DoxyCompactList}\small\item\em Called on window resize. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structlava_1_1window_a6b1a26244ca5ede1e543b614200bb278}\label{structlava_1_1window_a6b1a26244ca5ede1e543b614200bb278}} 
+\index{lava::window@{lava::window}!window@{window}}
+\index{window@{window}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}}
+{\footnotesize\ttfamily lava\+::window\+::window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}}}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1window_af10c1d0918e65e000b7fadcdb8ab0dde}\label{structlava_1_1window_af10c1d0918e65e000b7fadcdb8ab0dde}} 
+\index{lava::window@{lava::window}!assign@{assign}}
+\index{assign@{assign}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily void lava\+::window\+::assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1input}{input}} $\ast$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign input callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Input callbacl \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a05b4168065393cd10196977bea2894a2}\label{structlava_1_1window_a05b4168065393cd10196977bea2894a2}} 
+\index{lava::window@{lava::window}!close\_request@{close\_request}}
+\index{close\_request@{close\_request}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{close\_request()}{close\_request()}}
+{\footnotesize\ttfamily bool lava\+::window\+::close\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window request to close. 
+
+\begin{DoxyReturn}{Returns}
+Window has close request or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a780a81f8022d4f6d575ccb278852d777}\label{structlava_1_1window_a780a81f8022d4f6d575ccb278852d777}} 
+\index{lava::window@{lava::window}!create@{create}}
+\index{create@{create}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::window\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state\+::optional}}}]{state = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Create a new window with optional state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Window state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a2ee0994d3d79dbf189f76774543b42f4}\label{structlava_1_1window_a2ee0994d3d79dbf189f76774543b42f4}} 
+\index{lava::window@{lava::window}!create\_surface@{create\_surface}}
+\index{create\_surface@{create\_surface}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{create\_surface()}{create\_surface()}}
+{\footnotesize\ttfamily Vk\+Surface\+KHR lava\+::window\+::create\+\_\+surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a surface. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Surface\+KHR Vulkan surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a4ade3b30b8cd79547dc453a6aebc02ab}\label{structlava_1_1window_a4ade3b30b8cd79547dc453a6aebc02ab}} 
+\index{lava::window@{lava::window}!decorated@{decorated}}
+\index{decorated@{decorated}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{decorated()}{decorated()}}
+{\footnotesize\ttfamily bool lava\+::window\+::decorated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is decorated. 
+
+\begin{DoxyReturn}{Returns}
+Window is decorated or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a09c1bea3dd04ace1d19af70e8bce1792}\label{structlava_1_1window_a09c1bea3dd04ace1d19af70e8bce1792}} 
+\index{lava::window@{lava::window}!floating@{floating}}
+\index{floating@{floating}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{floating()}{floating()}}
+{\footnotesize\ttfamily bool lava\+::window\+::floating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is floating. 
+
+\begin{DoxyReturn}{Returns}
+Window is floating or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_aa55afc417e3cf53d8d702c03df855a9f}\label{structlava_1_1window_aa55afc417e3cf53d8d702c03df855a9f}} 
+\index{lava::window@{lava::window}!focused@{focused}}
+\index{focused@{focused}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{focused()}{focused()}}
+{\footnotesize\ttfamily bool lava\+::window\+::focused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is focused. 
+
+\begin{DoxyReturn}{Returns}
+Window is focused or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a4bb058810f581ee6fe2d0d587d9ebef8}\label{structlava_1_1window_a4bb058810f581ee6fe2d0d587d9ebef8}} 
+\index{lava::window@{lava::window}!fullscreen@{fullscreen}}
+\index{fullscreen@{fullscreen}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{fullscreen()}{fullscreen()}}
+{\footnotesize\ttfamily bool lava\+::window\+::fullscreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the window is fullscreen. 
+
+\begin{DoxyReturn}{Returns}
+Window is fullscreen or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a3f223af037dc955d8f4559ac89e67596}\label{structlava_1_1window_a3f223af037dc955d8f4559ac89e67596}} 
+\index{lava::window@{lava::window}!get@{get}}
+\index{get@{get}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily GLFWwindow $\ast$ lava\+::window\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get GLFW handle. 
+
+\begin{DoxyReturn}{Returns}
+GLFWwindow$\ast$ GLFW window handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a9f96fb9bdf5d1bc2459551ebac45ca4f}\label{structlava_1_1window_a9f96fb9bdf5d1bc2459551ebac45ca4f}} 
+\index{lava::window@{lava::window}!get\_aspect\_ratio@{get\_aspect\_ratio}}
+\index{get\_aspect\_ratio@{get\_aspect\_ratio}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_aspect\_ratio()}{get\_aspect\_ratio()}}
+{\footnotesize\ttfamily float lava\+::window\+::get\+\_\+aspect\+\_\+ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the aspect ratio of window. 
+
+\begin{DoxyReturn}{Returns}
+float Aspect ratio 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a1ded761d4ae5347f765f98fb774afca3}\label{structlava_1_1window_a1ded761d4ae5347f765f98fb774afca3}} 
+\index{lava::window@{lava::window}!get\_framebuffer\_size@{get\_framebuffer\_size}}
+\index{get\_framebuffer\_size@{get\_framebuffer\_size}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_framebuffer\_size()}{get\_framebuffer\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} lava\+::window\+::get\+\_\+framebuffer\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the framebuffer size. 
+
+\begin{DoxyReturn}{Returns}
+uv2 Size of framebuffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a38d840058ccaa23cc1e94d03ab676fe0}\label{structlava_1_1window_a38d840058ccaa23cc1e94d03ab676fe0}} 
+\index{lava::window@{lava::window}!get\_framebuffer\_size@{get\_framebuffer\_size}}
+\index{get\_framebuffer\_size@{get\_framebuffer\_size}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_framebuffer\_size()}{get\_framebuffer\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lava\+::window\+::get\+\_\+framebuffer\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{height }\end{DoxyParamCaption}) const}
+
+
+
+Get the framebuffer size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Framebuffer width \\
+\hline
+{\em height} & Framebuffer height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_adf5d0528a85918a252de7977fd411ffd}\label{structlava_1_1window_adf5d0528a85918a252de7977fd411ffd}} 
+\index{lava::window@{lava::window}!get\_monitor@{get\_monitor}}
+\index{get\_monitor@{get\_monitor}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_monitor()}{get\_monitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} lava\+::window\+::get\+\_\+monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the monitor index of the window. 
+
+\begin{DoxyReturn}{Returns}
+index Monitor index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a1d53ce70ca68cb5f1e63e5192cd4e0aa}\label{structlava_1_1window_a1d53ce70ca68cb5f1e63e5192cd4e0aa}} 
+\index{lava::window@{lava::window}!get\_mouse\_position@{get\_mouse\_position}}
+\index{get\_mouse\_position@{get\_mouse\_position}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_mouse\_position()}{get\_mouse\_position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} lava\+::window\+::get\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the mouse position in window. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} Position of mouse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a514366df46e3ce881a3f6e44ae16148b}\label{structlava_1_1window_a514366df46e3ce881a3f6e44ae16148b}} 
+\index{lava::window@{lava::window}!get\_mouse\_position@{get\_mouse\_position}}
+\index{get\_mouse\_position@{get\_mouse\_position}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_mouse\_position()}{get\_mouse\_position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lava\+::window\+::get\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \&}]{x,  }\item[{\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}} \&}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Get the mouse position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Mouse X position \\
+\hline
+{\em y} & Mouse Y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a678da9602f4332749c0a16c78428b5e7}\label{structlava_1_1window_a678da9602f4332749c0a16c78428b5e7}} 
+\index{lava::window@{lava::window}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily void lava\+::window\+::get\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \&}]{x,  }\item[{\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \&}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Get the position of window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position \\
+\hline
+{\em y} & Y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a0c6a210efe2c66bd5de24124a735b025}\label{structlava_1_1window_a0c6a210efe2c66bd5de24124a735b025}} 
+\index{lava::window@{lava::window}!get\_save\_name@{get\_save\_name}}
+\index{get\_save\_name@{get\_save\_name}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_save\_name()}{get\_save\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} lava\+::window\+::get\+\_\+save\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the save name. 
+
+\begin{DoxyReturn}{Returns}
+name Save name of window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a3e5cbb58f82f4edcc4dc2c56e55c1632}\label{structlava_1_1window_a3e5cbb58f82f4edcc4dc2c56e55c1632}} 
+\index{lava::window@{lava::window}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}} lava\+::window\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the size. 
+
+\begin{DoxyReturn}{Returns}
+uv2 Size of window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_ae9277346b20a71317bae96cd284eb1dd}\label{structlava_1_1window_ae9277346b20a71317bae96cd284eb1dd}} 
+\index{lava::window@{lava::window}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lava\+::window\+::get\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \&}]{height }\end{DoxyParamCaption}) const}
+
+
+
+Get the size of window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Window width \\
+\hline
+{\em height} & Window height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_ae97792c44b60d2caeba694d8d535c650}\label{structlava_1_1window_ae97792c44b60d2caeba694d8d535c650}} 
+\index{lava::window@{lava::window}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1window_1_1state}{state}} lava\+::window\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the window state. 
+
+\begin{DoxyReturn}{Returns}
+state Window state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a69dd8fb6ebbbe23d67eeeb1d80b543aa}\label{structlava_1_1window_a69dd8fb6ebbbe23d67eeeb1d80b543aa}} 
+\index{lava::window@{lava::window}!get\_title@{get\_title}}
+\index{get\_title@{get\_title}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{get\_title()}{get\_title()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}} lava\+::window\+::get\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the window title. 
+
+\begin{DoxyReturn}{Returns}
+name Title of window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a1edce74223d7f4a5128507265cfa8bdb}\label{structlava_1_1window_a1edce74223d7f4a5128507265cfa8bdb}} 
+\index{lava::window@{lava::window}!handle\_resize@{handle\_resize}}
+\index{handle\_resize@{handle\_resize}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{handle\_resize()}{handle\_resize()}}
+{\footnotesize\ttfamily bool lava\+::window\+::handle\+\_\+resize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handle window resize. 
+
+\begin{DoxyReturn}{Returns}
+Resize was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a50d31411756196d58387d25a3ef9b553}\label{structlava_1_1window_a50d31411756196d58387d25a3ef9b553}} 
+\index{lava::window@{lava::window}!hovered@{hovered}}
+\index{hovered@{hovered}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{hovered()}{hovered()}}
+{\footnotesize\ttfamily bool lava\+::window\+::hovered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if mouse hovered over the window. 
+
+\begin{DoxyReturn}{Returns}
+Mouse hovered or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a95e2a1be57126bd34cebf8974ec261bf}\label{structlava_1_1window_a95e2a1be57126bd34cebf8974ec261bf}} 
+\index{lava::window@{lava::window}!iconified@{iconified}}
+\index{iconified@{iconified}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{iconified()}{iconified()}}
+{\footnotesize\ttfamily bool lava\+::window\+::iconified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is iconified. 
+
+\begin{DoxyReturn}{Returns}
+Window is iconified or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a5c8067cc7d9d1a5fec3167ca88a4ec55}\label{structlava_1_1window_a5c8067cc7d9d1a5fec3167ca88a4ec55}} 
+\index{lava::window@{lava::window}!maximized@{maximized}}
+\index{maximized@{maximized}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{maximized()}{maximized()}}
+{\footnotesize\ttfamily bool lava\+::window\+::maximized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is maximized. 
+
+\begin{DoxyReturn}{Returns}
+Window is maximized or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_aac73df0c28d7e87ef5f7a766f9d39dce}\label{structlava_1_1window_aac73df0c28d7e87ef5f7a766f9d39dce}} 
+\index{lava::window@{lava::window}!resizable@{resizable}}
+\index{resizable@{resizable}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{resizable()}{resizable()}}
+{\footnotesize\ttfamily bool lava\+::window\+::resizable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the window is resizable. 
+
+\begin{DoxyReturn}{Returns}
+Window is resizable or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a043cfb04185f8ee4fad8da66e348e4ec}\label{structlava_1_1window_a043cfb04185f8ee4fad8da66e348e4ec}} 
+\index{lava::window@{lava::window}!resize\_request@{resize\_request}}
+\index{resize\_request@{resize\_request}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{resize\_request()}{resize\_request()}}
+{\footnotesize\ttfamily bool lava\+::window\+::resize\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the window request to resize. 
+
+\begin{DoxyReturn}{Returns}
+Window has resize request or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_af75137379b53997c16b570563f1959b4}\label{structlava_1_1window_af75137379b53997c16b570563f1959b4}} 
+\index{lava::window@{lava::window}!save\_title@{save\_title}}
+\index{save\_title@{save\_title}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{save\_title()}{save\_title()}}
+{\footnotesize\ttfamily bool lava\+::window\+::save\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check the show save title state. 
+
+\begin{DoxyReturn}{Returns}
+Save title is active or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a1d43b29b7bf1f1b0fb35769c1fb8decf}\label{structlava_1_1window_a1d43b29b7bf1f1b0fb35769c1fb8decf}} 
+\index{lava::window@{lava::window}!set\_decorated@{set\_decorated}}
+\index{set\_decorated@{set\_decorated}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_decorated()}{set\_decorated()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+decorated (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the window decorated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Decorated state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a3a3d5383edb51ea16d816842eee685ef}\label{structlava_1_1window_a3a3d5383edb51ea16d816842eee685ef}} 
+\index{lava::window@{lava::window}!set\_floating@{set\_floating}}
+\index{set\_floating@{set\_floating}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_floating()}{set\_floating()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+floating (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the window floating. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Floating state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_ab8531946fe9d71cdbcbda68fc4316031}\label{structlava_1_1window_ab8531946fe9d71cdbcbda68fc4316031}} 
+\index{lava::window@{lava::window}!set\_fullscreen@{set\_fullscreen}}
+\index{set\_fullscreen@{set\_fullscreen}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_fullscreen()}{set\_fullscreen()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+fullscreen (\begin{DoxyParamCaption}\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the window to fullscreen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & Fullscreen or windowed mode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_ab72d157a6d55d04c9b4917043c423d86}\label{structlava_1_1window_ab72d157a6d55d04c9b4917043c423d86}} 
+\index{lava::window@{lava::window}!set\_icon@{set\_icon}}
+\index{set\_icon@{set\_icon}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_icon()}{set\_icon()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+icon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{data_8hpp_a08da1d15223cbe6ff7b29ed4dad0e62a}{data\+\_\+cptr}}}]{data,  }\item[{\mbox{\hyperlink{math_8hpp_a649cde1dd691a03ddc344f419cce8195}{uv2}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the window icon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Image data \\
+\hline
+{\em size} & Image size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a9f9ef97dc8d0b9e6f8a838287fe269bb}\label{structlava_1_1window_a9f9ef97dc8d0b9e6f8a838287fe269bb}} 
+\index{lava::window@{lava::window}!set\_mouse\_position@{set\_mouse\_position}}
+\index{set\_mouse\_position@{set\_mouse\_position}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_mouse\_position()}{set\_mouse\_position()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}}}]{x,  }\item[{\mbox{\hyperlink{types_8hpp_a473a991d7ee12f05d1a276a6af7fd3cd}{r64}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Set the mouse position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Mouse X position \\
+\hline
+{\em y} & Mouse Y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a7dfb5b209b52fe79dcf4b31922c3381d}\label{structlava_1_1window_a7dfb5b209b52fe79dcf4b31922c3381d}} 
+\index{lava::window@{lava::window}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}}]{x,  }\item[{\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Set the position of window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X positoin \\
+\hline
+{\em y} & Y position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a64c5220c8ae6dd54443c1d7559c025fd}\label{structlava_1_1window_a64c5220c8ae6dd54443c1d7559c025fd}} 
+\index{lava::window@{lava::window}!set\_resizable@{set\_resizable}}
+\index{set\_resizable@{set\_resizable}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_resizable()}{set\_resizable()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+resizable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the window resizable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Resizable state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a2c8a7a9e8283ef9b1e86eb1ee36f2f38}\label{structlava_1_1window_a2c8a7a9e8283ef9b1e86eb1ee36f2f38}} 
+\index{lava::window@{lava::window}!set\_save\_name@{set\_save\_name}}
+\index{set\_save\_name@{set\_save\_name}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_save\_name()}{set\_save\_name()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+save\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{save }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the save name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save} & Save name of window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a238cbc1cf2aa62cdbb76f6fdceb60251}\label{structlava_1_1window_a238cbc1cf2aa62cdbb76f6fdceb60251}} 
+\index{lava::window@{lava::window}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}}]{width,  }\item[{\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}}}]{height }\end{DoxyParamCaption})}
+
+
+
+Set the size of window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Window width \\
+\hline
+{\em height} & Window height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_aefbf4e32d2366c86eda425a085eac03b}\label{structlava_1_1window_aefbf4e32d2366c86eda425a085eac03b}} 
+\index{lava::window@{lava::window}!set\_title@{set\_title}}
+\index{set\_title@{set\_title}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{set\_title()}{set\_title()}}
+{\footnotesize\ttfamily void lava\+::window\+::set\+\_\+title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{text }\end{DoxyParamCaption})}
+
+
+
+Set the window title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Title of window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_ad29839f5dc01f891976c1b2cbdcdddfc}\label{structlava_1_1window_ad29839f5dc01f891976c1b2cbdcdddfc}} 
+\index{lava::window@{lava::window}!show\_save\_title@{show\_save\_title}}
+\index{show\_save\_title@{show\_save\_title}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{show\_save\_title()}{show\_save\_title()}}
+{\footnotesize\ttfamily void lava\+::window\+::show\+\_\+save\+\_\+title (\begin{DoxyParamCaption}\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Show the save title in the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Save title state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1window_a635165df128073843c48a139ab076fce}\label{structlava_1_1window_a635165df128073843c48a139ab076fce}} 
+\index{lava::window@{lava::window}!switch\_mode@{switch\_mode}}
+\index{switch\_mode@{switch\_mode}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{switch\_mode()}{switch\_mode()}}
+{\footnotesize\ttfamily bool lava\+::window\+::switch\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{state\+::optional}}}]{state = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Switch mode of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Target window state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Switch was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a8a3a092c3618d55d1a1d1cffbd9c78cc}\label{structlava_1_1window_a8a3a092c3618d55d1a1d1cffbd9c78cc}} 
+\index{lava::window@{lava::window}!switch\_mode\_request@{switch\_mode\_request}}
+\index{switch\_mode\_request@{switch\_mode\_request}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{switch\_mode\_request()}{switch\_mode\_request()}}
+{\footnotesize\ttfamily bool lava\+::window\+::switch\+\_\+mode\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the window request to switch mode. 
+
+\begin{DoxyReturn}{Returns}
+Window has switch mode request or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1window_a4ce6512c5e14f1441560c86f9ecf9243}\label{structlava_1_1window_a4ce6512c5e14f1441560c86f9ecf9243}} 
+\index{lava::window@{lava::window}!visible@{visible}}
+\index{visible@{visible}!lava::window@{lava::window}}
+\doxysubsubsection{\texorpdfstring{visible()}{visible()}}
+{\footnotesize\ttfamily bool lava\+::window\+::visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if window is visible. 
+
+\begin{DoxyReturn}{Returns}
+Window is visible or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{window_8hpp}{window.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{renderer_8hpp_source}{}\doxysection{renderer.\+hpp}
+\label{renderer_8hpp_source}\index{liblava/frame/renderer.hpp@{liblava/frame/renderer.hpp}}
+\mbox{\hyperlink{renderer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{swapchain_8hpp}{liblava/frame/swapchain.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16 \textcolor{keyword}{using }\mbox{\hyperlink{renderer_8hpp_a54ab89170034f263845c60460df1d093}{optional\_index}} = std::optional<index>;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1renderer}{renderer}} : \mbox{\hyperlink{structlava_1_1entity}{entity}} \{}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1renderer_acf20693eee0e74e63712dfeffbf4c6fa}{create}}(\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}}* target);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1renderer_ad98c7125833d129b5dc15fb363a5162a}{destroy}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38     \mbox{\hyperlink{renderer_8hpp_a54ab89170034f263845c60460df1d093}{optional\_index}} \mbox{\hyperlink{structlava_1_1renderer_a6d619cb1a8aeb50a0ed075ea1477601d}{begin\_frame}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1renderer_ae667b73be54b89bfe1a2df94258bb429}{end\_frame}}(\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{VkCommandBuffers}} \textcolor{keyword}{const}\& cmd\_buffers);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1renderer_ab4f090f364f811424edb2b08b4b50d44}{frame}}(\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{VkCommandBuffers}} \textcolor{keyword}{const}\& cmd\_buffers) \{}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structlava_1_1renderer_a6d619cb1a8aeb50a0ed075ea1477601d}{begin\_frame}}())}
+\DoxyCodeLine{54             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1renderer_ae667b73be54b89bfe1a2df94258bb429}{end\_frame}}(cmd\_buffers);}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{structlava_1_1renderer_a1706d7aef2be7db41fe625af63d63e6c}{get\_frame}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} current\_frame;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1renderer_accd2fdaf7d870094c62ceac122f415cb}{get\_device}}() \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1renderer_a8a81825f7d0d459e036c50bdd48cd4f6}{destroy\_func}} = std::function<void()>;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79     \mbox{\hyperlink{structlava_1_1renderer_a8a81825f7d0d459e036c50bdd48cd4f6}{destroy\_func}} \mbox{\hyperlink{structlava_1_1renderer_a2400aee51a31b1edd61bf29e2870da21}{on\_destroy}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1renderer_aa8927a2cacb8b75863dae7a26e99b44d}{active}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{private}:}
+\DoxyCodeLine{86     \mbox{\hyperlink{structlava_1_1device}{device\_p}} \mbox{\hyperlink{structlava_1_1device}{device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{89     \mbox{\hyperlink{structlava_1_1queue}{queue}} graphics\_queue;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92     \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}}* target = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{95     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} current\_frame = 0;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} queued\_frames = 2;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} current\_sync = 0;}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104     \mbox{\hyperlink{base_2base_8hpp_a980e2743ad5c10b63bbc318a48d1997a}{VkFences}} fences = \{\};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107     \mbox{\hyperlink{base_2base_8hpp_a980e2743ad5c10b63bbc318a48d1997a}{VkFences}} fences\_in\_use = \{\};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110     VkSemaphores image\_acquired\_semaphores = \{\};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113     \mbox{\hyperlink{base_2base_8hpp_ab42dc53754ec372e54be1ab74440f330}{VkSemaphores}} render\_complete\_semaphores = \{\};}
+\DoxyCodeLine{114 \};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{117 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1renderer}{renderer\_t}} = \mbox{\hyperlink{structlava_1_1renderer}{renderer}};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

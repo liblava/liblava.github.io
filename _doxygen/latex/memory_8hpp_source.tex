@@ -1,0 +1,98 @@
+\hypertarget{memory_8hpp_source}{}\doxysection{memory.\+hpp}
+\label{memory_8hpp_source}\index{liblava/base/memory.hpp@{liblava/base/memory.hpp}}
+\mbox{\hyperlink{memory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base_2base_8hpp}{liblava/base/base.hpp}}>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <liblava/fwd.hpp>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vk\_mem\_alloc.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22 \textcolor{keyword}{using }\mbox{\hyperlink{memory_8hpp_a8a07696dd6b7d9a8d507bee988f6c438}{device\_cptr}} = \mbox{\hyperlink{structlava_1_1device}{device}} \textcolor{keyword}{const}*;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1allocator}{allocator}} \{}
+\DoxyCodeLine{29     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{ptr}} = std::shared\_ptr<allocator>;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{ptr}} \mbox{\hyperlink{structlava_1_1allocator_a05a2bff425899f9d84d33b44a069a0cd}{make}}() \{}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} std::make\_shared<allocator>();}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42     \mbox{\hyperlink{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}{allocator}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1allocator_a104549380e2442ee141fc82a3665391c}{allocator}}(VmaAllocator \mbox{\hyperlink{structlava_1_1allocator}{allocator}})}
+\DoxyCodeLine{49     : vma\_allocator(\mbox{\hyperlink{structlava_1_1allocator}{allocator}}) \{\}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1allocator_ad546b8f427aba59865bb4d6670709cf0}{create}}(\mbox{\hyperlink{memory_8hpp_a8a07696dd6b7d9a8d507bee988f6c438}{device\_cptr}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{58                 VmaAllocatorCreateFlags flags = 0);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1allocator_a07c98ecaa86fbf0184c2082a810ce484}{destroy}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1allocator_a4b9ce048e3a652edca92cd4f183e7de3}{valid}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} vma\_allocator != \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77     VmaAllocator \mbox{\hyperlink{structlava_1_1allocator_ad0b6446682e0edef271d7afbbb7aa97f}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} vma\_allocator;}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{private}:}
+\DoxyCodeLine{83     VmaAllocator vma\_allocator = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{92 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{allocator::ptr}} \mbox{\hyperlink{memory_8hpp_ab774057a9a27ab883663654bbdd14a2b}{create\_allocator}}(\mbox{\hyperlink{memory_8hpp_a8a07696dd6b7d9a8d507bee988f6c438}{device\_cptr}} \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{93                                        VmaAllocatorCreateFlags flags = 0) \{}
+\DoxyCodeLine{94     \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1allocator_a05a2bff425899f9d84d33b44a069a0cd}{allocator::make}}();}
+\DoxyCodeLine{95     \textcolor{keywordflow}{if} (!result-\/>create(\mbox{\hyperlink{structlava_1_1device}{device}}, flags))}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{99 \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1memory}{memory}} : \mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\_copy\_no\_move}} \{}
+\DoxyCodeLine{108     \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}}();}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{114     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1memory}{memory}}\& \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{instance}}() \{}
+\DoxyCodeLine{115         \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1memory}{memory}} \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}};}
+\DoxyCodeLine{116         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}};}
+\DoxyCodeLine{117     \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{123     VkAllocationCallbacks* \mbox{\hyperlink{structlava_1_1memory_a2bff8517a31a95e3f74e981dce64ee64}{alloc}}() \{}
+\DoxyCodeLine{124         \textcolor{keywordflow}{if} (use\_custom\_cpu\_callbacks)}
+\DoxyCodeLine{125             \textcolor{keywordflow}{return} \&vk\_callbacks;}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{134     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1memory_aa6cf33bee632e9ca622bd398a2023860}{set\_callbacks}}(VkAllocationCallbacks \textcolor{keyword}{const}\& callbacks) \{}
+\DoxyCodeLine{135         vk\_callbacks = callbacks;}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{142     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1memory_a304445836b73d2d86aa08c33b1df6ba6}{set\_use\_custom\_cpu\_callbacks}}(\textcolor{keywordtype}{bool} value) \{}
+\DoxyCodeLine{143         use\_custom\_cpu\_callbacks = value;}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{private}:}
+\DoxyCodeLine{148     \textcolor{keywordtype}{bool} use\_custom\_cpu\_callbacks = \textcolor{keyword}{true};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{151     VkAllocationCallbacks vk\_callbacks = \{\};}
+\DoxyCodeLine{152 \};}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{161 \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{memory_8hpp_a033009b2750404dee2dbcaa5f7a869a6}{find\_memory\_type\_with\_properties}}(VkPhysicalDeviceMemoryProperties properties,}
+\DoxyCodeLine{162                                        \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} type\_bits,}
+\DoxyCodeLine{163                                        VkMemoryPropertyFlags required\_properties);}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{172 \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \mbox{\hyperlink{memory_8hpp_a82f310a9f64c8e0390df94cdaccad831}{find\_memory\_type}}(VkPhysicalDevice gpu,}
+\DoxyCodeLine{173                        VkMemoryPropertyFlags properties,}
+\DoxyCodeLine{174                        \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} type\_bits);}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

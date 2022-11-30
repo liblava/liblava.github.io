@@ -1,0 +1,1084 @@
+\hypertarget{debug__utils_8hpp_source}{}\doxysection{debug\+\_\+utils.\+hpp}
+\label{debug__utils_8hpp_source}\index{liblava/base/debug\_utils.hpp@{liblava/base/debug\_utils.hpp}}
+\mbox{\hyperlink{debug__utils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base_2base_8hpp}{liblava/base/base.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <liblava/core/def.hpp>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef LAVA\_DEBUG\_UTILS}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{    \#define LAVA\_DEBUG\_UTILS LAVA\_DEBUG}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#if LAVA\_DEBUG\_UTILS}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} begin\_label(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{29                  name label,}
+\DoxyCodeLine{30                  v4 color);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} end\_label(VkCommandBuffer cmd\_buf);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} insert\_label(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{45                   name label,}
+\DoxyCodeLine{46                   v4 color);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} begin\_label(VkQueue queue,}
+\DoxyCodeLine{55                  name label,}
+\DoxyCodeLine{56                  v4 color);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62 \textcolor{keywordtype}{void} end\_label(VkQueue queue);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{void} insert\_label(VkQueue queue,}
+\DoxyCodeLine{71                   name label,}
+\DoxyCodeLine{72                   v4 color);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{81 \textcolor{keywordtype}{void} set\_object\_name(VkDevice device,}
+\DoxyCodeLine{82                      VkObjectType type,}
+\DoxyCodeLine{83                      VkObjectHandle handle,}
+\DoxyCodeLine{84                      name \textcolor{keywordtype}{object});}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{95 \textcolor{keywordtype}{void} set\_object\_tag(VkDevice device,}
+\DoxyCodeLine{96                     VkObjectType type,}
+\DoxyCodeLine{97                     VkObjectHandle handle,}
+\DoxyCodeLine{98                     ui64 name,}
+\DoxyCodeLine{99                     void\_cp tag,}
+\DoxyCodeLine{100                     \textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{105 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e}{begin\_label}}(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{106                         \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} label,}
+\DoxyCodeLine{107                         \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} color) \{\}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120}{end\_label}}(VkCommandBuffer cmd\_buf) \{\}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a3431b58eaf31d73206bdc46d2bbbe399}{insert\_label}}(VkCommandBuffer cmd\_buf,}
+\DoxyCodeLine{114                          \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} label,}
+\DoxyCodeLine{115                          \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} color) \{\}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{118 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e}{begin\_label}}(VkQueue \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{119                         \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} label,}
+\DoxyCodeLine{120                         \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} color) \{\}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{123 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120}{end\_label}}(VkQueue \mbox{\hyperlink{structlava_1_1queue}{queue}}) \{\}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{126 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a3431b58eaf31d73206bdc46d2bbbe399}{insert\_label}}(VkQueue \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{127                          \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} label,}
+\DoxyCodeLine{128                          \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} color) \{\}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{131 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{132                             VkObjectType type,}
+\DoxyCodeLine{133                             \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}} handle,}
+\DoxyCodeLine{134                             \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{\}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{137 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{138                            VkObjectType type,}
+\DoxyCodeLine{139                            \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}} handle,}
+\DoxyCodeLine{140                            \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{141                            \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{142                            \textcolor{keywordtype}{size\_t} size) \{\}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{150 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{151 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1scoped__label}{scoped\_label}} \{}
+\DoxyCodeLine{158     \mbox{\hyperlink{structlava_1_1scoped__label_a3fff8b2c9ddcb76d7e4c4c32fa6e9b44}{scoped\_label}}(T scope, \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} label, \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}} color = \mbox{\hyperlink{math_8hpp_a4b2e051c0e81c2b041a59bcf36636a70}{v4}}(0.f))}
+\DoxyCodeLine{159     : scope(scope) \{}
+\DoxyCodeLine{160         \mbox{\hyperlink{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e}{begin\_label}}(scope, label, color);}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{166     \mbox{\hyperlink{structlava_1_1scoped__label_ada178cbaf3abe5e20ec58c51aae99332}{\string~scoped\_label}}() \{}
+\DoxyCodeLine{167         \mbox{\hyperlink{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120}{end\_label}}(scope);}
+\DoxyCodeLine{168     \}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{keyword}{private}:}
+\DoxyCodeLine{172     T scope;}
+\DoxyCodeLine{173 \};}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{182 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ad5061ad46b6cd6193ad510db8f30e64f}{set\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{183                      \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}} handle,}
+\DoxyCodeLine{184                      \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{185     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{186                     VK\_OBJECT\_TYPE\_UNKNOWN,}
+\DoxyCodeLine{187                     handle,}
+\DoxyCodeLine{188                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{189 \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{200 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ad1e67c5e112f0743111cc4276d8d6eba}{set\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{201                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}} handle,}
+\DoxyCodeLine{202                     \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{203                     \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{204                     \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{205     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{206                    VK\_OBJECT\_TYPE\_UNKNOWN,}
+\DoxyCodeLine{207                    handle,}
+\DoxyCodeLine{208                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{209                    tag,}
+\DoxyCodeLine{210                    size);}
+\DoxyCodeLine{211 \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{218 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a9ca6fb449238bc8f13143909a00b5662}{set\_instance\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{219                               VkInstance handle,}
+\DoxyCodeLine{220                               \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{221     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{222                     VK\_OBJECT\_TYPE\_INSTANCE,}
+\DoxyCodeLine{223                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{224                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{225 \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{230 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a81d3955abfb69702b8d0826756a66aa6}{set\_instance\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{231                              VkInstance handle,}
+\DoxyCodeLine{232                              \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{233                              \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{234                              \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{235     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{236                    VK\_OBJECT\_TYPE\_INSTANCE,}
+\DoxyCodeLine{237                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{238                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{239                    tag,}
+\DoxyCodeLine{240                    size);}
+\DoxyCodeLine{241 \}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{248 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ab72267034c5c9b340a1afbc3799f6f47}{set\_physical\_device\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{249                                      VkPhysicalDevice handle,}
+\DoxyCodeLine{250                                      \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{251     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{252                     VK\_OBJECT\_TYPE\_PHYSICAL\_DEVICE,}
+\DoxyCodeLine{253                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{254                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{255 \}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{260 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a1c3010077469fc166d7806203f6fc509}{set\_physical\_device\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{261                                     VkPhysicalDevice handle,}
+\DoxyCodeLine{262                                     \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{263                                     \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{264                                     \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{265     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{266                    VK\_OBJECT\_TYPE\_PHYSICAL\_DEVICE,}
+\DoxyCodeLine{267                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{268                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{269                    tag,}
+\DoxyCodeLine{270                    size);}
+\DoxyCodeLine{271 \}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{278 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_acf17f194d476935553848fbd95fb3fe3}{set\_device\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{279                             \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{280     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{281                     VK\_OBJECT\_TYPE\_DEVICE,}
+\DoxyCodeLine{282                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(\mbox{\hyperlink{structlava_1_1device}{device}}),}
+\DoxyCodeLine{283                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{284 \}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{289 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_add1079cb5d1ee5bc5b6857a7e2ac0cf4}{set\_device\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{290                            \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{291                            \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{292                            \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{293     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{294                    VK\_OBJECT\_TYPE\_DEVICE,}
+\DoxyCodeLine{295                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(\mbox{\hyperlink{structlava_1_1device}{device}}),}
+\DoxyCodeLine{296                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{297                    tag,}
+\DoxyCodeLine{298                    size);}
+\DoxyCodeLine{299 \}}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{306 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_adec43fe09dfaac4e8b5873992352f9f2}{set\_queue\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{307                            VkQueue handle,}
+\DoxyCodeLine{308                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{309     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{310                     VK\_OBJECT\_TYPE\_QUEUE,}
+\DoxyCodeLine{311                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{312                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{313 \}}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{318 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a292b954585760df99f3b51fae4e1fc59}{set\_queue\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{319                           VkQueue handle,}
+\DoxyCodeLine{320                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{321                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{322                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{323     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{324                    VK\_OBJECT\_TYPE\_QUEUE,}
+\DoxyCodeLine{325                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{326                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{327                    tag,}
+\DoxyCodeLine{328                    size);}
+\DoxyCodeLine{329 \}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{336 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a113744f9cbe4b3de7daca899d8ed1cd6}{set\_semaphore\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{337                                VkSemaphore handle,}
+\DoxyCodeLine{338                                \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{339     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{340                     VK\_OBJECT\_TYPE\_SEMAPHORE,}
+\DoxyCodeLine{341                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{342                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{343 \}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{348 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a3ec484cf116a866001313e33b75fcca9}{set\_semaphore\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{349                               VkSemaphore handle,}
+\DoxyCodeLine{350                               \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{351                               \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{352                               \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{353     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{354                    VK\_OBJECT\_TYPE\_SEMAPHORE,}
+\DoxyCodeLine{355                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{356                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{357                    tag,}
+\DoxyCodeLine{358                    size);}
+\DoxyCodeLine{359 \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{366 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a9f91d723414960068dc43f2612f43ef2}{set\_command\_buffer\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{367                                     VkCommandBuffer handle,}
+\DoxyCodeLine{368                                     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{369     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{370                     VK\_OBJECT\_TYPE\_COMMAND\_BUFFER,}
+\DoxyCodeLine{371                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{372                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{373 \}}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{378 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a215f92d6f75efd5b1e143637a180d81a}{set\_command\_buffer\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{379                                    VkCommandBuffer handle,}
+\DoxyCodeLine{380                                    \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{381                                    \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{382                                    \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{383     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{384                    VK\_OBJECT\_TYPE\_COMMAND\_BUFFER,}
+\DoxyCodeLine{385                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{386                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{387                    tag,}
+\DoxyCodeLine{388                    size);}
+\DoxyCodeLine{389 \}}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{391 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{392 }
+\DoxyCodeLine{396 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a1575aaf97b8ac41556bb6df89c6141a0}{set\_fence\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{397                            VkFence handle,}
+\DoxyCodeLine{398                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{399     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{400                     VK\_OBJECT\_TYPE\_FENCE,}
+\DoxyCodeLine{401                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{402                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{403 \}}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{408 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a17459de2ff2b9818fc3ac4d6f3160750}{set\_fence\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{409                           VkFence handle,}
+\DoxyCodeLine{410                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{411                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{412                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{413     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{414                    VK\_OBJECT\_TYPE\_FENCE,}
+\DoxyCodeLine{415                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{416                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{417                    tag,}
+\DoxyCodeLine{418                    size);}
+\DoxyCodeLine{419 \}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{426 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a49ddcfde13928ab6be2fa31accef96a9}{set\_device\_memory\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{427                                    VkDeviceMemory handle,}
+\DoxyCodeLine{428                                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{429     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{430                     VK\_OBJECT\_TYPE\_DEVICE\_MEMORY,}
+\DoxyCodeLine{431                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{432                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{433 \}}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{438 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ab613bfa71bb5934387e36da678f2cfb4}{set\_device\_memory\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{439                                   VkDeviceMemory handle,}
+\DoxyCodeLine{440                                   \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{441                                   \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{442                                   \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{443     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{444                    VK\_OBJECT\_TYPE\_DEVICE\_MEMORY,}
+\DoxyCodeLine{445                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{446                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{447                    tag,}
+\DoxyCodeLine{448                    size);}
+\DoxyCodeLine{449 \}}
+\DoxyCodeLine{450 }
+\DoxyCodeLine{451 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{452 }
+\DoxyCodeLine{456 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aa78eb0eda53c024afc7ad957e95cc47f}{set\_buffer\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{457                             VkBuffer handle,}
+\DoxyCodeLine{458                             \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{459     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{460                     VK\_OBJECT\_TYPE\_BUFFER,}
+\DoxyCodeLine{461                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{462                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{463 \}}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{468 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ad254381828151d088bd19dd2990d58ed}{set\_buffer\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{469                            VkBuffer handle,}
+\DoxyCodeLine{470                            \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{471                            \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{472                            \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{473     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{474                    VK\_OBJECT\_TYPE\_BUFFER,}
+\DoxyCodeLine{475                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{476                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{477                    tag,}
+\DoxyCodeLine{478                    size);}
+\DoxyCodeLine{479 \}}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{482 }
+\DoxyCodeLine{486 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a15cd6c2df3bdbf648f37e62bbe255a1d}{set\_image\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{487                            VkImage handle,}
+\DoxyCodeLine{488                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{489     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{490                     VK\_OBJECT\_TYPE\_IMAGE,}
+\DoxyCodeLine{491                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{492                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{493 \}}
+\DoxyCodeLine{494 }
+\DoxyCodeLine{498 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a0ff3385756af28c51c889fe93a7801ab}{set\_image\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{499                           VkImage handle,}
+\DoxyCodeLine{500                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{501                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{502                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{503     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{504                    VK\_OBJECT\_TYPE\_IMAGE,}
+\DoxyCodeLine{505                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{506                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{507                    tag,}
+\DoxyCodeLine{508                    size);}
+\DoxyCodeLine{509 \}}
+\DoxyCodeLine{510 }
+\DoxyCodeLine{511 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{512 }
+\DoxyCodeLine{516 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a5eb0028a9227a352df569313207ade61}{set\_event\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{517                            VkEvent handle,}
+\DoxyCodeLine{518                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{519     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{520                     VK\_OBJECT\_TYPE\_EVENT,}
+\DoxyCodeLine{521                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{522                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{523 \}}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{528 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a83cf0d7ed7ae3c0298d43d118f4a2e66}{set\_event\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{529                           VkEvent handle,}
+\DoxyCodeLine{530                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{531                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{532                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{533     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{534                    VK\_OBJECT\_TYPE\_EVENT,}
+\DoxyCodeLine{535                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{536                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{537                    tag,}
+\DoxyCodeLine{538                    size);}
+\DoxyCodeLine{539 \}}
+\DoxyCodeLine{540 }
+\DoxyCodeLine{541 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{542 }
+\DoxyCodeLine{546 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6a958cf59787688161fb4d9bbfa2755f}{set\_query\_pool\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{547                                 VkQueryPool handle,}
+\DoxyCodeLine{548                                 \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{549     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{550                     VK\_OBJECT\_TYPE\_QUERY\_POOL,}
+\DoxyCodeLine{551                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{552                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{553 \}}
+\DoxyCodeLine{554 }
+\DoxyCodeLine{558 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a91742696f8d455c6d1526af7bc07777b}{set\_query\_pool\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{559                                VkQueryPool handle,}
+\DoxyCodeLine{560                                \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{561                                \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{562                                \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{563     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{564                    VK\_OBJECT\_TYPE\_QUERY\_POOL,}
+\DoxyCodeLine{565                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{566                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{567                    tag,}
+\DoxyCodeLine{568                    size);}
+\DoxyCodeLine{569 \}}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{572 }
+\DoxyCodeLine{576 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a5b32c4e749c554b97e058a3ab1ec077e}{set\_buffer\_view\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{577                                  VkBufferView handle,}
+\DoxyCodeLine{578                                  \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{579     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{580                     VK\_OBJECT\_TYPE\_BUFFER\_VIEW,}
+\DoxyCodeLine{581                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{582                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{583 \}}
+\DoxyCodeLine{584 }
+\DoxyCodeLine{588 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6d7d65afcbc31c2f397699369f85ede0}{set\_buffer\_view\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{589                                 VkBufferView handle,}
+\DoxyCodeLine{590                                 \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{591                                 \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{592                                 \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{593     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{594                    VK\_OBJECT\_TYPE\_BUFFER\_VIEW,}
+\DoxyCodeLine{595                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{596                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{597                    tag,}
+\DoxyCodeLine{598                    size);}
+\DoxyCodeLine{599 \}}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{601 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{602 }
+\DoxyCodeLine{606 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_afa6d83d47cc29d0e41f865c264d2b267}{set\_image\_view\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{607                                 VkImageView handle,}
+\DoxyCodeLine{608                                 \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{609     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{610                     VK\_OBJECT\_TYPE\_IMAGE\_VIEW,}
+\DoxyCodeLine{611                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{612                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{613 \}}
+\DoxyCodeLine{614 }
+\DoxyCodeLine{618 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a7450ef63aeadfd2891095f585a0e10b2}{set\_image\_view\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{619                                VkImageView handle,}
+\DoxyCodeLine{620                                \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{621                                \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{622                                \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{623     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{624                    VK\_OBJECT\_TYPE\_IMAGE\_VIEW,}
+\DoxyCodeLine{625                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{626                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{627                    tag,}
+\DoxyCodeLine{628                    size);}
+\DoxyCodeLine{629 \}}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{631 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{636 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_af657ced147a13788fba6b16c241d6b2f}{set\_shader\_module\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{637                                    VkShaderModule handle,}
+\DoxyCodeLine{638                                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{639     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{640                     VK\_OBJECT\_TYPE\_SHADER\_MODULE,}
+\DoxyCodeLine{641                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{642                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{643 \}}
+\DoxyCodeLine{644 }
+\DoxyCodeLine{648 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a4763d3fc69b592b2e285df6cf0f52539}{set\_shader\_module\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{649                                   VkShaderModule handle,}
+\DoxyCodeLine{650                                   \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{651                                   \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{652                                   \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{653     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{654                    VK\_OBJECT\_TYPE\_SHADER\_MODULE,}
+\DoxyCodeLine{655                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{656                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{657                    tag,}
+\DoxyCodeLine{658                    size);}
+\DoxyCodeLine{659 \}}
+\DoxyCodeLine{660 }
+\DoxyCodeLine{661 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{666 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a24d9f76f247afc9667acc39e6c452943}{set\_pipeline\_cache\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{667                                     VkPipelineCache handle,}
+\DoxyCodeLine{668                                     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{669     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{670                     VK\_OBJECT\_TYPE\_PIPELINE\_CACHE,}
+\DoxyCodeLine{671                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{672                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{673 \}}
+\DoxyCodeLine{674 }
+\DoxyCodeLine{678 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ae31023f3a8251c2b3f47fcb55957bb6b}{set\_pipeline\_cache\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{679                                    VkPipelineCache handle,}
+\DoxyCodeLine{680                                    \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{681                                    \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{682                                    \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{683     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{684                    VK\_OBJECT\_TYPE\_PIPELINE\_CACHE,}
+\DoxyCodeLine{685                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{686                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{687                    tag,}
+\DoxyCodeLine{688                    size);}
+\DoxyCodeLine{689 \}}
+\DoxyCodeLine{690 }
+\DoxyCodeLine{691 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{692 }
+\DoxyCodeLine{696 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_af5cf190f01a235568236447afdf7a6af}{set\_pipeline\_layout\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{697                                      VkPipelineLayout handle,}
+\DoxyCodeLine{698                                      \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{699     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{700                     VK\_OBJECT\_TYPE\_PIPELINE\_LAYOUT,}
+\DoxyCodeLine{701                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{702                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{703 \}}
+\DoxyCodeLine{704 }
+\DoxyCodeLine{708 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a709272205c65f4cf36629676adc5fc66}{set\_pipeline\_layout\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{709                                     VkPipelineLayout handle,}
+\DoxyCodeLine{710                                     \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{711                                     \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{712                                     \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{713     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{714                    VK\_OBJECT\_TYPE\_PIPELINE\_LAYOUT,}
+\DoxyCodeLine{715                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{716                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{717                    tag,}
+\DoxyCodeLine{718                    size);}
+\DoxyCodeLine{719 \}}
+\DoxyCodeLine{720 }
+\DoxyCodeLine{721 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{722 }
+\DoxyCodeLine{726 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aaaca6badd896f2ca7c706b956af0812f}{set\_render\_pass\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{727                                  VkRenderPass handle,}
+\DoxyCodeLine{728                                  \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{729     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{730                     VK\_OBJECT\_TYPE\_RENDER\_PASS,}
+\DoxyCodeLine{731                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{732                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{733 \}}
+\DoxyCodeLine{734 }
+\DoxyCodeLine{738 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a527ba06f7281b693b5ae059c2f8e3a08}{set\_render\_pass\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{739                                 VkRenderPass handle,}
+\DoxyCodeLine{740                                 \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{741                                 \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{742                                 \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{743     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{744                    VK\_OBJECT\_TYPE\_RENDER\_PASS,}
+\DoxyCodeLine{745                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{746                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{747                    tag,}
+\DoxyCodeLine{748                    size);}
+\DoxyCodeLine{749 \}}
+\DoxyCodeLine{750 }
+\DoxyCodeLine{751 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{752 }
+\DoxyCodeLine{756 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a75e72cd5e1e7c75f9cf78c78682b0e49}{set\_pipeline\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{757                               VkPipeline handle,}
+\DoxyCodeLine{758                               \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{759     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{760                     VK\_OBJECT\_TYPE\_PIPELINE,}
+\DoxyCodeLine{761                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{762                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{763 \}}
+\DoxyCodeLine{764 }
+\DoxyCodeLine{768 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6a14524769be25de72f54da0288e7c5e}{set\_pipeline\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{769                              VkPipeline handle,}
+\DoxyCodeLine{770                              \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{771                              \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{772                              \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{773     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{774                    VK\_OBJECT\_TYPE\_PIPELINE,}
+\DoxyCodeLine{775                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{776                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{777                    tag,}
+\DoxyCodeLine{778                    size);}
+\DoxyCodeLine{779 \}}
+\DoxyCodeLine{780 }
+\DoxyCodeLine{781 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{782 }
+\DoxyCodeLine{786 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a68bd37a2f9ca497e73c7a96bd18e5195}{set\_descriptor\_set\_layout\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{787                                            VkDescriptorSetLayout handle,}
+\DoxyCodeLine{788                                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{789     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{790                     VK\_OBJECT\_TYPE\_DESCRIPTOR\_SET\_LAYOUT,}
+\DoxyCodeLine{791                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{792                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{793 \}}
+\DoxyCodeLine{794 }
+\DoxyCodeLine{798 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a3863ed833d6adebd0df386de69a18b32}{set\_descriptor\_set\_layout\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{799                                           VkDescriptorSetLayout handle,}
+\DoxyCodeLine{800                                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{801                                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{802                                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{803     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{804                    VK\_OBJECT\_TYPE\_DESCRIPTOR\_SET\_LAYOUT,}
+\DoxyCodeLine{805                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{806                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{807                    tag,}
+\DoxyCodeLine{808                    size);}
+\DoxyCodeLine{809 \}}
+\DoxyCodeLine{810 }
+\DoxyCodeLine{811 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{812 }
+\DoxyCodeLine{816 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a31d51c0c71b82a07f2c7c04a2eb89854}{set\_sampler\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{817                              VkSampler handle,}
+\DoxyCodeLine{818                              \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{819     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{820                     VK\_OBJECT\_TYPE\_SAMPLER,}
+\DoxyCodeLine{821                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{822                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{823 \}}
+\DoxyCodeLine{824 }
+\DoxyCodeLine{828 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a4b86916ebfb70a4b041eb54b6541e785}{set\_sampler\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{829                             VkSampler handle,}
+\DoxyCodeLine{830                             \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{831                             \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{832                             \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{833     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{834                    VK\_OBJECT\_TYPE\_SAMPLER,}
+\DoxyCodeLine{835                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{836                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{837                    tag,}
+\DoxyCodeLine{838                    size);}
+\DoxyCodeLine{839 \}}
+\DoxyCodeLine{840 }
+\DoxyCodeLine{841 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{842 }
+\DoxyCodeLine{846 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a4b7b8ce28933ac0d4e5f350738e142b6}{set\_descriptor\_pool\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{847                                      VkDescriptorPool handle,}
+\DoxyCodeLine{848                                      \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{849     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{850                     VK\_OBJECT\_TYPE\_DESCRIPTOR\_POOL,}
+\DoxyCodeLine{851                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{852                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{853 \}}
+\DoxyCodeLine{854 }
+\DoxyCodeLine{858 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a7a986f31f660a6a070f01d31aafe30d7}{set\_descriptor\_pool\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{859                                     VkDescriptorPool handle,}
+\DoxyCodeLine{860                                     \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{861                                     \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{862                                     \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{863     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{864                    VK\_OBJECT\_TYPE\_DESCRIPTOR\_POOL,}
+\DoxyCodeLine{865                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{866                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{867                    tag,}
+\DoxyCodeLine{868                    size);}
+\DoxyCodeLine{869 \}}
+\DoxyCodeLine{870 }
+\DoxyCodeLine{871 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{872 }
+\DoxyCodeLine{876 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aa98b23878c543bc2fcc6797f689619db}{set\_descriptor\_set\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{877                                     VkDescriptorSet handle,}
+\DoxyCodeLine{878                                     \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{879     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{880                     VK\_OBJECT\_TYPE\_DESCRIPTOR\_SET,}
+\DoxyCodeLine{881                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{882                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{883 \}}
+\DoxyCodeLine{884 }
+\DoxyCodeLine{888 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a01c898fa5e8b84743c2878762ef8e093}{set\_descriptor\_set\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{889                                    VkDescriptorSet handle,}
+\DoxyCodeLine{890                                    \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{891                                    \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{892                                    \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{893     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{894                    VK\_OBJECT\_TYPE\_DESCRIPTOR\_SET,}
+\DoxyCodeLine{895                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{896                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{897                    tag,}
+\DoxyCodeLine{898                    size);}
+\DoxyCodeLine{899 \}}
+\DoxyCodeLine{900 }
+\DoxyCodeLine{901 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{902 }
+\DoxyCodeLine{906 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_af3265a5a4f1288e9522ccb618038afe9}{set\_framebuffer\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{907                                  VkFramebuffer handle,}
+\DoxyCodeLine{908                                  \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{909     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{910                     VK\_OBJECT\_TYPE\_FRAMEBUFFER,}
+\DoxyCodeLine{911                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{912                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{913 \}}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{918 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a0269a9202a9997813e73e650d545e065}{set\_framebuffer\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{919                                 VkFramebuffer handle,}
+\DoxyCodeLine{920                                 \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{921                                 \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{922                                 \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{923     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{924                    VK\_OBJECT\_TYPE\_FRAMEBUFFER,}
+\DoxyCodeLine{925                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{926                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{927                    tag,}
+\DoxyCodeLine{928                    size);}
+\DoxyCodeLine{929 \}}
+\DoxyCodeLine{930 }
+\DoxyCodeLine{931 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{932 }
+\DoxyCodeLine{936 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a515d5b38271de06c797fdc985206fb20}{set\_command\_pool\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{937                                   VkCommandPool handle,}
+\DoxyCodeLine{938                                   \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{939     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{940                     VK\_OBJECT\_TYPE\_COMMAND\_POOL,}
+\DoxyCodeLine{941                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{942                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{943 \}}
+\DoxyCodeLine{944 }
+\DoxyCodeLine{948 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a375fa98b2e7a3a80da26890288d69dc7}{set\_command\_pool\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{949                                  VkCommandPool handle,}
+\DoxyCodeLine{950                                  \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{951                                  \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{952                                  \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{953     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{954                    VK\_OBJECT\_TYPE\_COMMAND\_POOL,}
+\DoxyCodeLine{955                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{956                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{957                    tag,}
+\DoxyCodeLine{958                    size);}
+\DoxyCodeLine{959 \}}
+\DoxyCodeLine{960 }
+\DoxyCodeLine{961 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{962 }
+\DoxyCodeLine{966 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a361e5f2f8e977f8bdd1b177403eb9b84}{set\_sampler\_ycbcr\_conversion\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{967                                               VkSamplerYcbcrConversion handle,}
+\DoxyCodeLine{968                                               \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{969     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{970                     VK\_OBJECT\_TYPE\_SAMPLER\_YCBCR\_CONVERSION,}
+\DoxyCodeLine{971                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{972                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{973 \}}
+\DoxyCodeLine{974 }
+\DoxyCodeLine{978 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aacffa02466a9a83215a9cac0454787b7}{set\_sampler\_ycbcr\_conversion\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{979                                              VkSamplerYcbcrConversion handle,}
+\DoxyCodeLine{980                                              \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{981                                              \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{982                                              \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{983     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{984                    VK\_OBJECT\_TYPE\_SAMPLER\_YCBCR\_CONVERSION,}
+\DoxyCodeLine{985                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{986                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{987                    tag,}
+\DoxyCodeLine{988                    size);}
+\DoxyCodeLine{989 \}}
+\DoxyCodeLine{990 }
+\DoxyCodeLine{991 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{992 }
+\DoxyCodeLine{996 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aed1646e4df5f8b74f61ef1fe328b3980}{set\_descriptor\_update\_template\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{997                                                 VkDescriptorUpdateTemplate handle,}
+\DoxyCodeLine{998                                                 \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{999     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1000                     VK\_OBJECT\_TYPE\_DESCRIPTOR\_UPDATE\_TEMPLATE,}
+\DoxyCodeLine{1001                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1002                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1003 \}}
+\DoxyCodeLine{1004 }
+\DoxyCodeLine{1008 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a079f5f4d7703381eb73d313c88a06d84}{set\_descriptor\_update\_template\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1009                                                VkDescriptorUpdateTemplate handle,}
+\DoxyCodeLine{1010                                                \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1011                                                \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1012                                                \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1013     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1014                    VK\_OBJECT\_TYPE\_DESCRIPTOR\_UPDATE\_TEMPLATE,}
+\DoxyCodeLine{1015                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1016                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1017                    tag,}
+\DoxyCodeLine{1018                    size);}
+\DoxyCodeLine{1019 \}}
+\DoxyCodeLine{1020 }
+\DoxyCodeLine{1021 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1022 }
+\DoxyCodeLine{1026 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a10e59f1daaa7f4ea37f9f1dbca89ed6b}{set\_surface\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1027                              VkSurfaceKHR handle,}
+\DoxyCodeLine{1028                              \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1029     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1030                     VK\_OBJECT\_TYPE\_SURFACE\_KHR,}
+\DoxyCodeLine{1031                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1032                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1033 \}}
+\DoxyCodeLine{1034 }
+\DoxyCodeLine{1038 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6a557bada61b1bdedc1c662b86a9c1cf}{set\_surface\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1039                             VkSurfaceKHR handle,}
+\DoxyCodeLine{1040                             \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1041                             \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1042                             \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1043     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1044                    VK\_OBJECT\_TYPE\_SURFACE\_KHR,}
+\DoxyCodeLine{1045                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1046                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1047                    tag,}
+\DoxyCodeLine{1048                    size);}
+\DoxyCodeLine{1049 \}}
+\DoxyCodeLine{1050 }
+\DoxyCodeLine{1051 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1052 }
+\DoxyCodeLine{1056 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a0aeb0764e8b67fef86fa067452317a2e}{set\_swapchain\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1057                                VkSwapchainKHR handle,}
+\DoxyCodeLine{1058                                \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1059     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1060                     VK\_OBJECT\_TYPE\_SWAPCHAIN\_KHR,}
+\DoxyCodeLine{1061                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1062                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1063 \}}
+\DoxyCodeLine{1064 }
+\DoxyCodeLine{1068 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_adb61bbf0722a6c4b7cbb3335a0589223}{set\_swapchain\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1069                               VkSwapchainKHR handle,}
+\DoxyCodeLine{1070                               \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1071                               \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1072                               \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1073     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1074                    VK\_OBJECT\_TYPE\_SWAPCHAIN\_KHR,}
+\DoxyCodeLine{1075                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1076                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1077                    tag,}
+\DoxyCodeLine{1078                    size);}
+\DoxyCodeLine{1079 \}}
+\DoxyCodeLine{1080 }
+\DoxyCodeLine{1081 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1082 }
+\DoxyCodeLine{1086 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ac3dbb020518bd0f2a9951c9e989a08d8}{set\_display\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1087                              VkDisplayKHR handle,}
+\DoxyCodeLine{1088                              \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1089     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1090                     VK\_OBJECT\_TYPE\_DISPLAY\_KHR,}
+\DoxyCodeLine{1091                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1092                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1093 \}}
+\DoxyCodeLine{1094 }
+\DoxyCodeLine{1098 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a3086878d9ffcb8a6adc1ec068195388d}{set\_display\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1099                             VkDisplayKHR handle,}
+\DoxyCodeLine{1100                             \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1101                             \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1102                             \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1103     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1104                    VK\_OBJECT\_TYPE\_DISPLAY\_KHR,}
+\DoxyCodeLine{1105                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1106                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1107                    tag,}
+\DoxyCodeLine{1108                    size);}
+\DoxyCodeLine{1109 \}}
+\DoxyCodeLine{1110 }
+\DoxyCodeLine{1111 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1112 }
+\DoxyCodeLine{1116 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_aa89bf505707ae2bdf8d1ab5f6dd372dc}{set\_display\_mode\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1117                                   VkDisplayModeKHR handle,}
+\DoxyCodeLine{1118                                   \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1119     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1120                     VK\_OBJECT\_TYPE\_DISPLAY\_MODE\_KHR,}
+\DoxyCodeLine{1121                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1122                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1123 \}}
+\DoxyCodeLine{1124 }
+\DoxyCodeLine{1128 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a36e7ad3da8c4414d0404bf3638899a26}{set\_display\_mode\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1129                                  VkDisplayModeKHR handle,}
+\DoxyCodeLine{1130                                  \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1131                                  \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1132                                  \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1133     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1134                    VK\_OBJECT\_TYPE\_DISPLAY\_MODE\_KHR,}
+\DoxyCodeLine{1135                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1136                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1137                    tag,}
+\DoxyCodeLine{1138                    size);}
+\DoxyCodeLine{1139 \}}
+\DoxyCodeLine{1140 }
+\DoxyCodeLine{1141 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1142 }
+\DoxyCodeLine{1146 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a1a7d81226199ad3d3bba273cc8410c7c}{set\_debug\_report\_callback\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1147                                            VkDebugReportCallbackEXT handle,}
+\DoxyCodeLine{1148                                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1149     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1150                     VK\_OBJECT\_TYPE\_DEBUG\_REPORT\_CALLBACK\_EXT,}
+\DoxyCodeLine{1151                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1152                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1153 \}}
+\DoxyCodeLine{1154 }
+\DoxyCodeLine{1158 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a38438870563ab39dbbcfb83619d914d7}{set\_debug\_report\_callback\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1159                                           VkDebugReportCallbackEXT handle,}
+\DoxyCodeLine{1160                                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1161                                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1162                                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1163     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1164                    VK\_OBJECT\_TYPE\_DEBUG\_REPORT\_CALLBACK\_EXT,}
+\DoxyCodeLine{1165                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1166                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1167                    tag,}
+\DoxyCodeLine{1168                    size);}
+\DoxyCodeLine{1169 \}}
+\DoxyCodeLine{1170 }
+\DoxyCodeLine{1171 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1172 }
+\DoxyCodeLine{1176 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6a1636c4b6ee438b2bc6d58ae529fd5c}{set\_indirect\_commands\_layout\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1177                                               VkIndirectCommandsLayoutNV handle,}
+\DoxyCodeLine{1178                                               \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1179     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1180                     VK\_OBJECT\_TYPE\_INDIRECT\_COMMANDS\_LAYOUT\_NV,}
+\DoxyCodeLine{1181                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1182                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1183 \}}
+\DoxyCodeLine{1184 }
+\DoxyCodeLine{1188 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_abd847c1b6225fa828759e003b3eb5bf8}{set\_indirect\_commands\_layout\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1189                                              VkIndirectCommandsLayoutNV handle,}
+\DoxyCodeLine{1190                                              \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1191                                              \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1192                                              \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1193     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1194                    VK\_OBJECT\_TYPE\_INDIRECT\_COMMANDS\_LAYOUT\_NV,}
+\DoxyCodeLine{1195                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1196                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1197                    tag,}
+\DoxyCodeLine{1198                    size);}
+\DoxyCodeLine{1199 \}}
+\DoxyCodeLine{1200 }
+\DoxyCodeLine{1201 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1202 }
+\DoxyCodeLine{1206 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ac313bc536eec88a57529c3ad2c847a66}{set\_debug\_utils\_messenger\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1207                                            VkDebugUtilsMessengerEXT handle,}
+\DoxyCodeLine{1208                                            \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1209     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1210                     VK\_OBJECT\_TYPE\_DEBUG\_UTILS\_MESSENGER\_EXT,}
+\DoxyCodeLine{1211                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1212                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1213 \}}
+\DoxyCodeLine{1214 }
+\DoxyCodeLine{1218 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a76bf209ad277b6566364858a6c88474d}{set\_debug\_utils\_messenger\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1219                                           VkDebugUtilsMessengerEXT handle,}
+\DoxyCodeLine{1220                                           \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1221                                           \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1222                                           \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1223     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1224                    VK\_OBJECT\_TYPE\_DEBUG\_UTILS\_MESSENGER\_EXT,}
+\DoxyCodeLine{1225                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1226                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1227                    tag,}
+\DoxyCodeLine{1228                    size);}
+\DoxyCodeLine{1229 \}}
+\DoxyCodeLine{1230 }
+\DoxyCodeLine{1231 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1232 }
+\DoxyCodeLine{1236 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_afa9ecdf0d2ede4519ce5b844a4f20e6b}{set\_validation\_cache\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1237                                       VkValidationCacheEXT handle,}
+\DoxyCodeLine{1238                                       \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1239     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1240                     VK\_OBJECT\_TYPE\_VALIDATION\_CACHE\_EXT,}
+\DoxyCodeLine{1241                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1242                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1243 \}}
+\DoxyCodeLine{1244 }
+\DoxyCodeLine{1248 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a4b75813a6b258c129c3e2703c970dc4e}{set\_validation\_cache\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1249                                      VkValidationCacheEXT handle,}
+\DoxyCodeLine{1250                                      \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1251                                      \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1252                                      \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1253     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1254                    VK\_OBJECT\_TYPE\_VALIDATION\_CACHE\_EXT,}
+\DoxyCodeLine{1255                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1256                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1257                    tag,}
+\DoxyCodeLine{1258                    size);}
+\DoxyCodeLine{1259 \}}
+\DoxyCodeLine{1260 }
+\DoxyCodeLine{1261 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1262 }
+\DoxyCodeLine{1266 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a559f908838c26789c5dea7de8e3059b9}{set\_acceleration\_structure\_nv\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1267                                                VkAccelerationStructureNV handle,}
+\DoxyCodeLine{1268                                                \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1269     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1270                     VK\_OBJECT\_TYPE\_ACCELERATION\_STRUCTURE\_NV,}
+\DoxyCodeLine{1271                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1272                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1273 \}}
+\DoxyCodeLine{1274 }
+\DoxyCodeLine{1278 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_acb40c051e5e99b299f6884925938dc75}{set\_acceleration\_structure\_nv\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1279                                               VkAccelerationStructureNV handle,}
+\DoxyCodeLine{1280                                               \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1281                                               \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1282                                               \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1283     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1284                    VK\_OBJECT\_TYPE\_ACCELERATION\_STRUCTURE\_NV,}
+\DoxyCodeLine{1285                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1286                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1287                    tag,}
+\DoxyCodeLine{1288                    size);}
+\DoxyCodeLine{1289 \}}
+\DoxyCodeLine{1290 }
+\DoxyCodeLine{1291 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1292 }
+\DoxyCodeLine{1296 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_acac1efcd9a235faea2867659cae05532}{set\_acceleration\_structure\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1297                                             VkAccelerationStructureKHR handle,}
+\DoxyCodeLine{1298                                             \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1299     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1300                     VK\_OBJECT\_TYPE\_ACCELERATION\_STRUCTURE\_KHR,}
+\DoxyCodeLine{1301                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1302                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1303 \}}
+\DoxyCodeLine{1304 }
+\DoxyCodeLine{1308 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6307392f3bb020819f66a5eb19656c4c}{set\_acceleration\_structure\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1309                                            VkAccelerationStructureKHR handle,}
+\DoxyCodeLine{1310                                            \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1311                                            \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1312                                            \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1313     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1314                    VK\_OBJECT\_TYPE\_ACCELERATION\_STRUCTURE\_KHR,}
+\DoxyCodeLine{1315                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1316                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1317                    tag,}
+\DoxyCodeLine{1318                    size);}
+\DoxyCodeLine{1319 \}}
+\DoxyCodeLine{1320 }
+\DoxyCodeLine{1321 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1322 }
+\DoxyCodeLine{1326 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a6db6b5408619d9bf6622502d78219912}{set\_performance\_configuration\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1327                                                VkPerformanceConfigurationINTEL handle,}
+\DoxyCodeLine{1328                                                \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1329     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1330                     VK\_OBJECT\_TYPE\_PERFORMANCE\_CONFIGURATION\_INTEL,}
+\DoxyCodeLine{1331                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1332                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1333 \}}
+\DoxyCodeLine{1334 }
+\DoxyCodeLine{1338 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a7450685343854905b2634415cae17cb5}{set\_performance\_configuration\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1339                                               VkPerformanceConfigurationINTEL handle,}
+\DoxyCodeLine{1340                                               \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1341                                               \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1342                                               \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1343     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1344                    VK\_OBJECT\_TYPE\_PERFORMANCE\_CONFIGURATION\_INTEL,}
+\DoxyCodeLine{1345                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1346                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1347                    tag,}
+\DoxyCodeLine{1348                    size);}
+\DoxyCodeLine{1349 \}}
+\DoxyCodeLine{1350 }
+\DoxyCodeLine{1351 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1352 }
+\DoxyCodeLine{1356 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_ab952d94354da8e059c5495f6bfde0baf}{set\_deferred\_operation\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1357                                         VkDeferredOperationKHR handle,}
+\DoxyCodeLine{1358                                         \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1359     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1360                     VK\_OBJECT\_TYPE\_DEFERRED\_OPERATION\_KHR,}
+\DoxyCodeLine{1361                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1362                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1363 \}}
+\DoxyCodeLine{1364 }
+\DoxyCodeLine{1368 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a56d3c7b76c89b3976b5559ab536bfdb1}{set\_deferred\_operation\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1369                                        VkDeferredOperationKHR handle,}
+\DoxyCodeLine{1370                                        \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1371                                        \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1372                                        \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1373     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1374                    VK\_OBJECT\_TYPE\_DEFERRED\_OPERATION\_KHR,}
+\DoxyCodeLine{1375                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1376                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1377                    tag,}
+\DoxyCodeLine{1378                    size);}
+\DoxyCodeLine{1379 \}}
+\DoxyCodeLine{1380 }
+\DoxyCodeLine{1381 \textcolor{comment}{// -\/-\/-\/}}
+\DoxyCodeLine{1382 }
+\DoxyCodeLine{1386 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a128aa5324effec6720427eb63fc04cfa}{set\_private\_data\_slot\_name}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1387                                        VkPrivateDataSlotEXT handle,}
+\DoxyCodeLine{1388                                        \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \textcolor{keywordtype}{object}) \{}
+\DoxyCodeLine{1389     \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{set\_object\_name}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1390                     VK\_OBJECT\_TYPE\_PRIVATE\_DATA\_SLOT\_EXT,}
+\DoxyCodeLine{1391                     \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1392                     \textcolor{keywordtype}{object});}
+\DoxyCodeLine{1393 \}}
+\DoxyCodeLine{1394 }
+\DoxyCodeLine{1398 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{debug__utils_8hpp_a2c34872bb95d42678023e06f0a208660}{set\_private\_data\_slot\_tag}}(VkDevice \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1399                                       VkPrivateDataSlotEXT handle,}
+\DoxyCodeLine{1400                                       \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1401                                       \mbox{\hyperlink{types_8hpp_a5fd4e6db78c609c5d87565a8403e6f88}{void\_cp}} tag,}
+\DoxyCodeLine{1402                                       \textcolor{keywordtype}{size\_t} size) \{}
+\DoxyCodeLine{1403     \mbox{\hyperlink{debug__utils_8hpp_a56fc888144656f15823e0bf6e9c6add9}{set\_object\_tag}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{1404                    VK\_OBJECT\_TYPE\_PRIVATE\_DATA\_SLOT\_EXT,}
+\DoxyCodeLine{1405                    \mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}}(handle),}
+\DoxyCodeLine{1406                    \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{1407                    tag,}
+\DoxyCodeLine{1408                    size);}
+\DoxyCodeLine{1409 \}}
+\DoxyCodeLine{1410 }
+\DoxyCodeLine{1411 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

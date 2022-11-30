@@ -1,0 +1,154 @@
+\hypertarget{base_2base_8hpp_source}{}\doxysection{base.\+hpp}
+\label{base_2base_8hpp_source}\index{liblava/base/base.hpp@{liblava/base/base.hpp}}
+\mbox{\hyperlink{base_2base_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{version_8hpp}{liblava/core/version.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{math_8hpp}{liblava/util/math.hpp}}>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{// clang-\/format off}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define VK\_NO\_PROTOTYPES}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vulkan/vulkan.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <volk.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// clang-\/format on}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{24 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_afe335efe0ca838987d19da5cbbcc1c23}{VkObjectHandle}} = \mbox{\hyperlink{types_8hpp_afbc10065d3c7318cfdb2979de5a9a5a9}{ui64}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_ac01be928417424dbb944f1d67cfc6a86}{VkFormats}} = std::vector<VkFormat>;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a15b6daa09381b5133967f1aa8af6225a}{VkImages}} = std::vector<VkImage>;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a46b40aa17f388020a60e5ae21fb4fa2b}{VkImagesRef}} = \mbox{\hyperlink{base_2base_8hpp_a15b6daa09381b5133967f1aa8af6225a}{VkImages}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{36 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_ae1eebb712a1da25d28bfd1d1ce48812d}{VkImageViews}} = std::vector<VkImageView>;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{39 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a00f1f9cbd595232aa1896d37885d4aa2}{VkFramebuffers}} = std::vector<VkFramebuffer>;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_aac4d4fd538b1292d08c27aa373a38b8a}{VkCommandPools}} = std::vector<VkCommandPool>;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_aadb6651a44f02a6e23a00ce0bdf39561}{VkCommandBuffers}} = std::vector<VkCommandBuffer>;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{48 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a980e2743ad5c10b63bbc318a48d1997a}{VkFences}} = std::vector<VkFence>;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_ab42dc53754ec372e54be1ab74440f330}{VkSemaphores}} = std::vector<VkSemaphore>;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_acb60d7e5388b03b70dcb992133531af2}{VkPresentModeKHRs}} = std::vector<VkPresentModeKHR>;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{57 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a4d2e6d109a6cc56a7e23ac92364018f6}{VkDescriptorSets}} = std::vector<VkDescriptorSet>;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{60 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a10ca52d38dd5fc2937435daece6eb663}{VkDescriptorSetLayouts}} = std::vector<VkDescriptorSetLayout>;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_aada445cbe4f50be8dd2303c3ca97b89d}{VkDescriptorSetLayoutBindings}} = std::vector<VkDescriptorSetLayoutBinding>;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_ac29ed83b017fb581d361688e25837664}{VkDescriptorPoolSizes}} = std::vector<VkDescriptorPoolSize>;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_afb293187b7bea5fd1934efad805cf8eb}{VkDescriptorPoolSizesRef}} = \mbox{\hyperlink{base_2base_8hpp_ac29ed83b017fb581d361688e25837664}{VkDescriptorPoolSizes}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{72 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a7594a018041ecaaae03eab356c05704f}{VkPushConstantRanges}} = std::vector<VkPushConstantRange>;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a01c849fcaafc6e398023043b0cbf8c25}{VkAttachmentReferences}} = std::vector<VkAttachmentReference>;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a85f0ec9daabd697f93584830c0fa0273}{VkClearValues}} = std::vector<VkClearValue>;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_adc0f58f26a6d0c3a6cd94edaaa2b9315}{VkPipelineShaderStageCreateInfos}} = std::vector<VkPipelineShaderStageCreateInfo>;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a0a689471d9bd5cce31f325eb57e603e8}{VkSpecializationMapEntries}} = std::vector<VkSpecializationMapEntry>;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a480506a244054359d2b1fb1463812167}{VkVertexInputBindingDescriptions}} = std::vector<VkVertexInputBindingDescription>;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a3dff1ee7e4657c917559e60f6785e6d1}{VkVertexInputAttributeDescriptions}} = std::vector<VkVertexInputAttributeDescription>;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{93 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a6e7954fd8d0d31b36cb11dcbec3934fe}{VkPipelineColorBlendAttachmentStates}} = std::vector<VkPipelineColorBlendAttachmentState>;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{96 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a21f0cf55a8813111c0a4e09f4bb3958d}{VkDynamicStates}} = std::vector<VkDynamicState>;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{99 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_ae5c6a1f4f065a7cdea070dc4f7e48947}{VkQueueFamilyPropertiesList}} = std::vector<VkQueueFamilyProperties>;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{102 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a6e1e74ad2b0cc709c5c0ac8b11aaa25e}{VkExtensionPropertiesList}} = std::vector<VkExtensionProperties>;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{105 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_aa1368ece90ff1ff5e66afa05fcdc50a8}{VkLayerPropertiesList}} = std::vector<VkLayerProperties>;}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{108 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a6e1e74ad2b0cc709c5c0ac8b11aaa25e}{VkExtensionPropertiesList}} = std::vector<VkExtensionProperties>;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{111 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_acb65abd2c9ceb4bd55556647b641e023}{VkPhysicalDevices}} = std::vector<VkPhysicalDevice>;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118 \textcolor{keywordtype}{bool} \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(VkResult result);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{125 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{base_2base_8hpp_a8c33378c47aea22ea0734f005f3160f6}{failed}}(VkResult result) \{}
+\DoxyCodeLine{126     \textcolor{keywordflow}{return} !\mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result);}
+\DoxyCodeLine{127 \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{134 \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(VkResult result);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{141 \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a1aabd2d46aa91d5fda7a8177a8c67af8}{version\_to\_string}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1version}{version}});}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{148 \mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} \mbox{\hyperlink{base_2base_8hpp_a115052c027aa8e795ccc8072874b6286}{to\_version}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1version}{version}});}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{155 \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{base_2base_8hpp_a115052c027aa8e795ccc8072874b6286}{to\_version}}(\mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} \mbox{\hyperlink{structlava_1_1version}{version}});}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{160 \textcolor{keyword}{enum class} \mbox{\hyperlink{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a}{api\_version}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{161     v1\_0 = 0,}
+\DoxyCodeLine{162     v1\_1,}
+\DoxyCodeLine{163     v1\_2,}
+\DoxyCodeLine{164     v1\_3}
+\DoxyCodeLine{165 \};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{172 \mbox{\hyperlink{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a}{api\_version}} \mbox{\hyperlink{base_2base_8hpp_a1dfd7f46db8be2350e8c61ecacd9e739}{to\_api\_version}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \mbox{\hyperlink{structlava_1_1version}{version}});}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{177 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \{}
+\DoxyCodeLine{179     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1vk__result_acf21c93306f2ee6c0eb9800b09dc89c4}{state}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{182     VkResult \mbox{\hyperlink{structlava_1_1vk__result_acf04578236c3665501aa5764f9cd62ab}{value}} = VK\_NOT\_READY;}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{188     \textcolor{keyword}{operator} bool() \{}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1vk__result_acf21c93306f2ee6c0eb9800b09dc89c4}{state}};}
+\DoxyCodeLine{190     \}}
+\DoxyCodeLine{191 \};}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{194 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a5ce56ce5fa9324105cd58a0573b27d36}{build\_failed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{197 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a9113e4177ba920920f06df6a7bf39382}{build\_done}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{200 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a45b9ba20efc93f8dd4222de449220f20}{VkAttachments}} = std::vector<VkImageViews>;}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{203 \textcolor{keyword}{using }\mbox{\hyperlink{base_2base_8hpp_a5773d0dd9bf940d230687680a4f4ce39}{VkAttachmentsRef}} = \mbox{\hyperlink{base_2base_8hpp_a45b9ba20efc93f8dd4222de449220f20}{VkAttachments}} \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{208 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1target__callback}{target\_callback}} \{}
+\DoxyCodeLine{210     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1target__callback_ad0c4e08401d3fc151c3ddbb60c7510fb}{cptr}} = \mbox{\hyperlink{structlava_1_1target__callback}{target\_callback}} \textcolor{keyword}{const}*;}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{213     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1target__callback_ab14f4c45a5fc1bede89a2f8a5bd3f2f7}{list}} = std::vector<target\_callback*>;}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{216     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1target__callback_a11542d9aaf5f65dc6ef43731f736ffcf}{clist}} = std::vector<cptr>;}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{219     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1target__callback_a6c1d6809811d792db0c3651beaf7e651}{created\_func}} = std::function<bool(\mbox{\hyperlink{base_2base_8hpp_a5773d0dd9bf940d230687680a4f4ce39}{VkAttachmentsRef}}, \mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{rect::ref}})>;}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{222     \mbox{\hyperlink{structlava_1_1target__callback_a6c1d6809811d792db0c3651beaf7e651}{created\_func}} \mbox{\hyperlink{structlava_1_1target__callback_a4ea94b6dab645ca198d1a96598d52572}{on\_created}};}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{225     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1target__callback_a31efdb007e1d6df70119b6928e4df446}{destroyed\_func}} = std::function<void()>;}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{228     \mbox{\hyperlink{structlava_1_1target__callback_a31efdb007e1d6df70119b6928e4df446}{destroyed\_func}} \mbox{\hyperlink{structlava_1_1target__callback_ae3eb3ddc8de72e2e9db50375ef40b3f7}{on\_destroyed}};}
+\DoxyCodeLine{229 \};}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{232 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a013b3ebd3c49c600aded40f65edc7a9d}{Vk\_Limit\_DescriptorSets}} = 4;}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{235 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a480388d3b3e0e985af702c9403d4a7c5}{Vk\_Limit\_Bindings}} = 16;}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{238 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a89b84ce26c4099f5b7894facace71df5}{Vk\_Limit\_Attachments}} = 8;}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{241 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_ab76e1c42f9b7e8110adf4677b9329d60}{Vk\_Limit\_VertexAttribs}} = 16;}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{244 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a73b2e4bc6ac162d3e220dead440586b6}{Vk\_Limit\_VertexBuffers}} = 4;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{247 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_a9b8f0c6649af56dc87910f3a33b9a6b1}{Vk\_Limit\_PushConstant\_Size}} = 128;}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{250 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} \mbox{\hyperlink{base_2base_8hpp_adbf9a98289504ad4fe87bb50a6aef9d2}{Vk\_Limit\_UBO\_Size}} = 16 * 1024;}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

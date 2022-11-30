@@ -1,0 +1,82 @@
+\hypertarget{driver_8hpp_source}{}\doxysection{driver.\+hpp}
+\label{driver_8hpp_source}\index{liblava/frame/driver.hpp@{liblava/frame/driver.hpp}}
+\mbox{\hyperlink{driver_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{argh_8hpp}{liblava/frame/argh.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1stage}{stage}} \{}
+\DoxyCodeLine{19     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{map}} = std::map<index, stage*>;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}} = std::function<\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}(argh::parser)>;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{30     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1stage_a825e08db257906413e57ce438e4fd887}{stage}}(\mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keywordtype}{id},}
+\DoxyCodeLine{31                    \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}},}
+\DoxyCodeLine{32                    \mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}} \mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}});}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{string} \mbox{\hyperlink{structlava_1_1stage_aa1f7cf27be9025a80d4a8b1dd9c9aaa4}{name}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     \mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}} \mbox{\hyperlink{structlava_1_1stage_aa342228af68538573490437bb069fafc}{on\_func}};}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1driver}{driver}} \{}
+\DoxyCodeLine{51     \textcolor{keyword}{enum} \mbox{\hyperlink{structlava_1_1driver_a46bcb3fcede1d91f250dd6bef15bba84}{error}} \{}
+\DoxyCodeLine{52         stages\_empty = -\/1,}
+\DoxyCodeLine{53         stage\_not\_found = -\/2,}
+\DoxyCodeLine{54         undef\_run = -\/3,}
+\DoxyCodeLine{55     \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1driver_1_1result}{result}} \{}
+\DoxyCodeLine{62         \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1driver}{driver}} = 0;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65         \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1driver_1_1result_a56e124796b3f88e822bf24b79d4846c7}{selected}} = 0;}
+\DoxyCodeLine{66     \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1driver}{driver}}\& \mbox{\hyperlink{structlava_1_1driver_ade12629f76d50f187860954ec93e5b15}{instance}}() \{}
+\DoxyCodeLine{73         \textcolor{keyword}{static} \mbox{\hyperlink{structlava_1_1driver}{driver}} \mbox{\hyperlink{structlava_1_1driver}{driver}};}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1driver}{driver}};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1driver_a10b1666387c2aac2ee2c3fcc0b56d87a}{add\_stage}}(\mbox{\hyperlink{structlava_1_1stage}{stage}}* \mbox{\hyperlink{structlava_1_1stage}{stage}}) \{}
+\DoxyCodeLine{82         assert(!stages.count(\mbox{\hyperlink{structlava_1_1stage}{stage}}-\/>\mbox{\hyperlink{structlava_1_1stage_ad4bd99d638a787dba404c92e61d18de0}{id}}) \&\& \textcolor{stringliteral}{"{}stage id already defined."{}});}
+\DoxyCodeLine{83         stages.emplace(\mbox{\hyperlink{structlava_1_1stage}{stage}}-\/>\mbox{\hyperlink{structlava_1_1stage_ad4bd99d638a787dba404c92e61d18de0}{id}}, \mbox{\hyperlink{structlava_1_1stage}{stage}});}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \mbox{\hyperlink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{stage::map}} \textcolor{keyword}{const}\& \mbox{\hyperlink{structlava_1_1driver_acd24daf28a3186453991f5ef1201e39e}{get\_stages}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{91         \textcolor{keywordflow}{return} stages;}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1driver_a8d80fe8735c05b7a898439d1a6ca7da0}{run}}(argh::parser \mbox{\hyperlink{argh_8hpp_af9312b9c70528811817dee2f26cba2ad}{cmd\_line}} = \{\});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{102     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1driver_a17f884fcfa3e5acb85f36da82a5b9240}{run\_func}} = std::function<\mbox{\hyperlink{structlava_1_1driver_1_1result}{result}}(argh::parser)>;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{105     \mbox{\hyperlink{structlava_1_1driver_a17f884fcfa3e5acb85f36da82a5b9240}{run\_func}} \mbox{\hyperlink{structlava_1_1driver_aae9102b766adabd740bb293e26c7e60c}{on\_run}};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{private}:}
+\DoxyCodeLine{111     \mbox{\hyperlink{structlava_1_1driver}{driver}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{114     \mbox{\hyperlink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{stage::map}} stages;}
+\DoxyCodeLine{115 \};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \} \textcolor{comment}{// namespace lava}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define STAGE\_OBJ stage\_}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define STAGE\_FUNC \_stage}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define STR\_(n, m) n\#\#m}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define STR(n, m) STR\_(n, m)}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define LAVA\_STAGE(ID, NAME) \(\backslash\)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{    lava::i32 STR(STAGE\_FUNC, ID)(argh::parser argh); \(\backslash\)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{    lava::stage STR(STAGE\_OBJ, ID)(ID, NAME, ::STR(STAGE\_FUNC, ID)); \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{    lava::i32 STR(STAGE\_FUNC, ID)(argh::parser argh)}}
+
+\end{DoxyCode}

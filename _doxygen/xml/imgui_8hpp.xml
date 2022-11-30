@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="imgui_8hpp" kind="file" language="C++">
+    <compoundname>imgui.hpp</compoundname>
+    <includes refid="render__pipeline_8hpp" local="no">liblava/block/render_pipeline.hpp</includes>
+    <includes refid="file_8hpp" local="no">liblava/file.hpp</includes>
+    <includes refid="input_8hpp" local="no">liblava/frame/input.hpp</includes>
+    <includes refid="texture_8hpp" local="no">liblava/resource/texture.hpp</includes>
+    <includedby refid="app_8hpp" local="no">liblava/app.hpp</includedby>
+    <includedby refid="config_8hpp" local="no">liblava/app/config.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/base/base.hpp</label>
+        <link refid="base_2base_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/base/device.hpp</label>
+        <link refid="device_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/base/device_table.hpp</label>
+        <link refid="device__table_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/base/memory.hpp</label>
+        <link refid="memory_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>liblava/base/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/block/descriptor.hpp</label>
+        <link refid="descriptor_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/block/pipeline.hpp</label>
+        <link refid="pipeline_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/block/pipeline_layout.hpp</label>
+        <link refid="pipeline__layout_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/block/render_pipeline.hpp</label>
+        <link refid="render__pipeline_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>liblava/core/data.hpp</label>
+        <link refid="data_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>liblava/core/id.hpp</label>
+        <link refid="id_8hpp"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>liblava/core/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>liblava/core/version.hpp</label>
+        <link refid="version_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>liblava/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>liblava/file/file.hpp</label>
+        <link refid="file_2file_8hpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>liblava/file/file_system.hpp</label>
+        <link refid="file__system_8hpp"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>liblava/file/file_utils.hpp</label>
+        <link refid="file__utils_8hpp"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>liblava/file/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>liblava/file/json_file.hpp</label>
+        <link refid="json__file_8hpp"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>liblava/frame/input.hpp</label>
+        <link refid="input_8hpp"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>liblava/resource/buffer.hpp</label>
+        <link refid="buffer_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>liblava/resource/image.hpp</label>
+        <link refid="image_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>liblava/resource/texture.hpp</label>
+        <link refid="texture_8hpp"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>liblava/util/math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>atomic</label>
+      </node>
+      <node id="12">
+        <label>cstdint</label>
+      </node>
+      <node id="48">
+        <label>cstring</label>
+      </node>
+      <node id="30">
+        <label>deque</label>
+      </node>
+      <node id="41">
+        <label>filesystem</label>
+      </node>
+      <node id="39">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="21">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="22">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="23">
+        <label>glm/gtc/type_ptr.hpp</label>
+      </node>
+      <node id="14">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="26">
+        <label>liblava/fwd.hpp</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="28">
+        <label>memory</label>
+      </node>
+      <node id="35">
+        <label>mutex</label>
+      </node>
+      <node id="44">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="20">
+        <label>picosha2.h</label>
+      </node>
+      <node id="36">
+        <label>set</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="32">
+        <label>string.h</label>
+      </node>
+      <node id="17">
+        <label>string_view</label>
+      </node>
+      <node id="49">
+        <label>utility</label>
+      </node>
+      <node id="18">
+        <label>vector</label>
+      </node>
+      <node id="27">
+        <label>vk_mem_alloc.h</label>
+      </node>
+      <node id="25">
+        <label>volk.h</label>
+      </node>
+      <node id="24">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/app/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1imgui" prot="public">lava::imgui</innerclass>
+    <innerclass refid="structlava_1_1imgui_1_1icon__font" prot="public">lava::imgui::icon_font</innerclass>
+    <innerclass refid="structlava_1_1imgui_1_1font" prot="public">lava::imgui::font</innerclass>
+    <innerclass refid="structlava_1_1imgui_1_1config" prot="public">lava::imgui::config</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <briefdescription>
+<para>ImGui integration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="render__pipeline_8hpp" kindref="compound">liblava/block/render_pipeline.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="file_8hpp" kindref="compound">liblava/file.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="input_8hpp" kindref="compound">liblava/frame/input.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="texture_8hpp" kindref="compound">liblava/resource/texture.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fwd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">GLFWwindow;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">GLFWcursor;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ImDrawData;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ImGuiStyle;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="imgui_8hpp_1a038eae5884bdeed5f1d9162d34e521e2" refkind="member"><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a3cd4807df88ec57bda5a1268480983cd" kindref="member">r32</ref><sp/><ref refid="imgui_8hpp_1a038eae5884bdeed5f1d9162d34e521e2" kindref="member">default_imgui_font_size</ref><sp/>=<sp/>18.f;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structlava_1_1imgui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui" kindref="compound">imgui</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="structlava_1_1imgui_1a1045d179f75b8ff05d625383a2beea7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a1045d179f75b8ff05d625383a2beea7c" kindref="member">imgui</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structlava_1_1imgui_1a38665d7779b0880b6446e0f24ce9f168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a38665d7779b0880b6446e0f24ce9f168" kindref="member">imgui</ref>(GLFWwindow*<sp/><ref refid="structlava_1_1window" kindref="compound">window</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" kindref="member">setup</ref>(<ref refid="structlava_1_1window" kindref="compound">window</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structlava_1_1imgui_1aed43c117003f8e9b06b5fc55845f1248" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1aed43c117003f8e9b06b5fc55845f1248" kindref="member">~imgui</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1aa783551e1e9a21787c2771ae3f84556b" kindref="member">destroy</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structlava_1_1imgui_1_1icon__font" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui_1_1icon__font" kindref="compound">icon_font</ref><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="structlava_1_1imgui_1_1icon__font_1a928d07de30ce65589e87b72d02d4bf22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1data" kindref="compound">data</ref><sp/><ref refid="structlava_1_1imgui_1_1icon__font_1a928d07de30ce65589e87b72d02d4bf22" kindref="member">font_data</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structlava_1_1imgui_1_1icon__font_1abbe61fc1ecf80731ec0e931283b82237" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/><ref refid="structlava_1_1imgui_1_1icon__font_1abbe61fc1ecf80731ec0e931283b82237" kindref="member">range_begin</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structlava_1_1imgui_1_1icon__font_1ad75f64253ad2be7b18d852b57cb4ab49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/><ref refid="structlava_1_1imgui_1_1icon__font_1ad75f64253ad2be7b18d852b57cb4ab49" kindref="member">range_end</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structlava_1_1imgui_1_1icon__font_1a8e890fc984d6f640388fb462b83c6919" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a3cd4807df88ec57bda5a1268480983cd" kindref="member">r32</ref><sp/><ref refid="structlava_1_1imgui_1_1icon__font_1a8e890fc984d6f640388fb462b83c6919" kindref="member">size</ref><sp/>=<sp/><ref refid="imgui_8hpp_1a038eae5884bdeed5f1d9162d34e521e2" kindref="member">default_imgui_font_size</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structlava_1_1imgui_1_1font" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui_1_1font" kindref="compound">font</ref><sp/>{</highlight></codeline>
+<codeline lineno="72" refid="structlava_1_1imgui_1_1font_1a508c5bf4dea805b81f90e7c30e0194fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui_1_1font_1a508c5bf4dea805b81f90e7c30e0194fe" kindref="member">ref</ref><sp/>=<sp/><ref refid="structlava_1_1imgui_1_1font" kindref="compound">font</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structlava_1_1imgui_1_1font_1a5063f7352fd5b84bed5bcefac01afbad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1_1font_1a5063f7352fd5b84bed5bcefac01afbad" kindref="member">file</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structlava_1_1imgui_1_1font_1aebd853cc0700df424352f1bc19f1091d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a3cd4807df88ec57bda5a1268480983cd" kindref="member">r32</ref><sp/><ref refid="structlava_1_1imgui_1_1font_1aebd853cc0700df424352f1bc19f1091d" kindref="member">size</ref><sp/>=<sp/>21.f;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structlava_1_1imgui_1_1font_1a5759b7b30e1c6fbb3e44926670c2f5b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1_1font_1a5759b7b30e1c6fbb3e44926670c2f5b3" kindref="member">icon_file</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="structlava_1_1imgui_1_1font_1ae86d264f4cf90dcae3a04ee20c1396a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a3cd4807df88ec57bda5a1268480983cd" kindref="member">r32</ref><sp/><ref refid="structlava_1_1imgui_1_1font_1ae86d264f4cf90dcae3a04ee20c1396a5" kindref="member">icon_size</ref><sp/>=<sp/>21.f;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structlava_1_1imgui_1_1font_1a0dd3f613da2a49dbdef6e6e7e69c30de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/><ref refid="structlava_1_1imgui_1_1font_1a0dd3f613da2a49dbdef6e6e7e69c30de" kindref="member">icon_range_begin</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structlava_1_1imgui_1_1font_1afa06f89b2a2644de5e585492a4c1cb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/><ref refid="structlava_1_1imgui_1_1font_1afa06f89b2a2644de5e585492a4c1cb80" kindref="member">icon_range_end</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structlava_1_1imgui_1_1config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui_1_1config" kindref="compound">config</ref><sp/>{</highlight></codeline>
+<codeline lineno="98" refid="structlava_1_1imgui_1_1config_1af5729a4085c236e2cf851a3b49a30a2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1data" kindref="compound">data</ref><sp/><ref refid="structlava_1_1imgui_1_1config_1af5729a4085c236e2cf851a3b49a30a2e" kindref="member">font_data</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structlava_1_1imgui_1_1config_1a25f8b6220b91473b032f0bcd89eb8ec1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a3cd4807df88ec57bda5a1268480983cd" kindref="member">r32</ref><sp/><ref refid="structlava_1_1imgui_1_1config_1a25f8b6220b91473b032f0bcd89eb8ec1" kindref="member">font_size</ref><sp/>=<sp/><ref refid="imgui_8hpp_1a038eae5884bdeed5f1d9162d34e521e2" kindref="member">default_imgui_font_size</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structlava_1_1imgui_1_1config_1ad4e6f395f20983073b502e23f23386f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ImGuiStyle&gt;<sp/><ref refid="structlava_1_1imgui_1_1config_1ad4e6f395f20983073b502e23f23386f9" kindref="member">style</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structlava_1_1imgui_1_1config_1a5e1f410d40fd6cfe9e498604f29d9555" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1_1icon__font" kindref="compound">icon_font</ref><sp/><ref refid="structlava_1_1imgui_1_1config_1a5e1f410d40fd6cfe9e498604f29d9555" kindref="member">icon</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structlava_1_1imgui_1_1config_1a87a878f1de64022f4d863f3bb34d4d6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::path<sp/><ref refid="structlava_1_1imgui_1_1config_1a87a878f1de64022f4d863f3bb34d4d6f" kindref="member">ini_file_dir</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" kindref="member">setup</ref>(GLFWwindow*<sp/><ref refid="structlava_1_1window" kindref="compound">window</ref>,<sp/><ref refid="structlava_1_1imgui_1_1config" kindref="compound">config</ref><sp/><ref refid="structlava_1_1imgui_1_1config" kindref="compound">config</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structlava_1_1imgui_1a9ac7bc4fdea8db77dbdf51319f05f51f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a9ac7bc4fdea8db77dbdf51319f05f51f" kindref="member">setup</ref>(GLFWwindow*<sp/><ref refid="structlava_1_1window" kindref="compound">window</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" kindref="member">setup</ref>(<ref refid="structlava_1_1window" kindref="compound">window</ref>,<sp/><ref refid="structlava_1_1imgui_1_1config" kindref="compound">config</ref>());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="structlava_1_1imgui_1a5f7ed538772e1e17be9df0237e650cb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a5f7ed538772e1e17be9df0237e650cb9" kindref="member">create</ref>(<ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>,<sp/><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref><sp/>max_frames);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structlava_1_1imgui_1ae5e140d8c9f2504094ba1bd3d9432ffd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1ae5e140d8c9f2504094ba1bd3d9432ffd" kindref="member">create</ref>(<ref refid="structlava_1_1device" kindref="compound">device_p</ref><sp/><ref refid="structlava_1_1device" kindref="compound">device</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref><sp/>max_frames,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineCache<sp/>pipeline_cache)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a5f7ed538772e1e17be9df0237e650cb9" kindref="member">create</ref>(<ref refid="structlava_1_1render__pipeline_1a24b36dc071d6b3079c07bcb5017249ee" kindref="member">render_pipeline::make</ref>(<ref refid="structlava_1_1device" kindref="compound">device</ref>,<sp/>pipeline_cache),</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_frames);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="structlava_1_1imgui_1a75ac6086a924c0a53dcf44862fc3de54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a75ac6086a924c0a53dcf44862fc3de54" kindref="member">create</ref>(<ref refid="structlava_1_1device" kindref="compound">device_p</ref><sp/><ref refid="structlava_1_1device" kindref="compound">device</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref><sp/>max_frames,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkRenderPass<sp/>pass,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VkPipelineCache<sp/>pipeline_cache<sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structlava_1_1imgui_1a5f7ed538772e1e17be9df0237e650cb9" kindref="member">create</ref>(<ref refid="structlava_1_1device" kindref="compound">device</ref>,<sp/>max_frames,<sp/>pipeline_cache))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>-&gt;<ref refid="structlava_1_1pipeline_1a9efe4f61250e2e1cca7d64530691eab0" kindref="member">create</ref>(pass);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="structlava_1_1imgui_1a2c990137088d5ec7fa0a2ebfb126cc54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a2c990137088d5ec7fa0a2ebfb126cc54" kindref="member">upload_fonts</ref>(<ref refid="structlava_1_1texture_1af370579b8e012b0c1a0480f953ddb0b5" kindref="member">texture::ptr</ref><sp/><ref refid="structlava_1_1texture" kindref="compound">texture</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="structlava_1_1imgui_1aa783551e1e9a21787c2771ae3f84556b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1aa783551e1e9a21787c2771ae3f84556b" kindref="member">destroy</ref>();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="structlava_1_1imgui_1ad8d5e0c8be33e958887174d554896870" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1ad8d5e0c8be33e958887174d554896870" kindref="member">ready</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initialized;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structlava_1_1imgui_1a3c07c7c666866cfe75aa9f4e59a5804e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref><sp/><ref refid="structlava_1_1imgui_1a3c07c7c666866cfe75aa9f4e59a5804e" kindref="member">get_pipeline</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" kindref="member">draw_func</ref><sp/>=<sp/>std::function&lt;void()&gt;;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="structlava_1_1imgui_1a06d37097926da66b1e16aea586cb2379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" kindref="member">draw_func</ref><sp/><ref refid="structlava_1_1imgui_1a06d37097926da66b1e16aea586cb2379" kindref="member">on_draw</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="structlava_1_1imgui_1a0a23316f198244c282b16e636cae9cb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a0a23316f198244c282b16e636cae9cb0" kindref="member">capture_mouse</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="structlava_1_1imgui_1a83a4b2448c40b505bea3a3e08b40314f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a83a4b2448c40b505bea3a3e08b40314f" kindref="member">capture_keyboard</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="structlava_1_1imgui_1a62d4f5801ad6878b0227e7fc4fd84ea6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a62d4f5801ad6878b0227e7fc4fd84ea6" kindref="member">set_active</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="structlava_1_1imgui_1a055fbe4279fd85b1e5c918f72a7b2f39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a055fbe4279fd85b1e5c918f72a7b2f39" kindref="member">activated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>active;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="structlava_1_1imgui_1a32b4f23806260a5b1dc6a306111f1ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a32b4f23806260a5b1dc6a306111f1ea7" kindref="member">toggle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>active<sp/>=<sp/>!active;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="structlava_1_1imgui_1a922e6fafba918cc61ecfff8aef5111d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a922e6fafba918cc61ecfff8aef5111d3" kindref="member">set_ini_file</ref>(std::filesystem::path<sp/>dir);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="structlava_1_1imgui_1aca5b4e00d34baf4f0dcd89c0188556a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::filesystem::path<sp/><ref refid="structlava_1_1imgui_1aca5b4e00d34baf4f0dcd89c0188556a7" kindref="member">get_ini_file</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::filesystem::path(ini_file);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="structlava_1_1imgui_1a0ae68e6629d20950c98a7ef4f1921c3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1imgui_1a0ae68e6629d20950c98a7ef4f1921c3c" kindref="member">convert_style_to_srgb</ref>();</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="structlava_1_1imgui_1a6cd3946fa85e7421226baeb43957bbf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1imgui_1a6cd3946fa85e7421226baeb43957bbf8" kindref="member">get_input_callback</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>callback;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handle_key_event(<ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/><ref refid="input_8hpp_1a9f1f9c2e6ae8192d1adecd3314877831" kindref="member">key</ref>,<sp/><ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/>scancode,<sp/><ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/><ref refid="input_8hpp_1a12e8d7909c4de4a74e281bb91cd4a5e7" kindref="member">action</ref>,<sp/><ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/>mods);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handle_mouse_button_event(<ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/>button,<sp/><ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/><ref refid="input_8hpp_1a12e8d7909c4de4a74e281bb91cd4a5e7" kindref="member">action</ref>,<sp/><ref refid="types_8hpp_1a490e11fcfc4290eb69c7c9c0a790c49c" kindref="member">i32</ref><sp/>mods);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handle_scroll_event(<ref refid="types_8hpp_1a473a991d7ee12f05d1a276a6af7fd3cd" kindref="member">r64</ref><sp/>x_offset,<sp/><ref refid="types_8hpp_1a473a991d7ee12f05d1a276a6af7fd3cd" kindref="member">r64</ref><sp/>y_offset);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>prepare_draw_lists(ImDrawData*<sp/>draw_data);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>render_draw_lists(VkCommandBuffer<sp/>cmd_buf);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>invalidate_device_objects();</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_mouse_pos_and_buttons();</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_mouse_cursor();</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>new_frame();</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>render(VkCommandBuffer<sp/>cmd_buf);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1device" kindref="compound">device_p</ref><sp/><ref refid="structlava_1_1device" kindref="compound">device</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialized<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1render__pipeline_1a7247e9c70198510c35adff01c2b94d49" kindref="member">render_pipeline::ptr</ref><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1pipeline__layout_1a258243ec8b59d7ff495b2e45780a4e5f" kindref="member">pipeline_layout::ptr</ref><sp/>layout;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_memory_alignment<sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref><sp/><ref refid="structlava_1_1frame" kindref="compound">frame</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref><sp/>max_frames<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1buffer_1aa726289448a694ef212cf9ab132f47d8" kindref="member">buffer::list</ref><sp/>vertex_buffers;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1buffer_1aa726289448a694ef212cf9ab132f47d8" kindref="member">buffer::list</ref><sp/>index_buffers;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="descriptor_8hpp_1ad7e788ce2e6d4e8c2618260b6b381b1c" kindref="member">descriptor_ptr</ref><sp/><ref refid="structlava_1_1descriptor" kindref="compound">descriptor</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1descriptor_1_1pool_1ab7111a7425fb17bc9246b229dc7ff6e5" kindref="member">descriptor::pool::ptr</ref><sp/>descriptor_pool;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>VkDescriptorSet<sp/>descriptor_set<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>GLFWwindow*<sp/><ref refid="structlava_1_1window" kindref="compound">window</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mouse_just_pressed[5]<sp/>=<sp/>{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>r64<sp/>current_time<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;GLFWcursor*&gt;<sp/>mouse_cursors;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ini_file;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>input_callback<sp/>callback;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;ui16,<sp/>3&gt;<sp/>icons_range;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389" refid="imgui_8hpp_1a98dfebd555f9529eec9f349c27e2f1d5" refkind="member"><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1imgui" kindref="compound">imgui_t</ref><sp/>=<sp/><ref refid="structlava_1_1imgui" kindref="compound">imgui</ref>;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396" refid="imgui_8hpp_1ae93b1f65953d237670f6c6432a5b05e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="imgui_8hpp_1ae93b1f65953d237670f6c6432a5b05e9" kindref="member">setup_imgui_font</ref>(<ref refid="structlava_1_1imgui_1_1config" kindref="compound">imgui::config</ref>&amp;<sp/>config,</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1imgui_1_1font_1a508c5bf4dea805b81f90e7c30e0194fe" kindref="member">imgui::font::ref</ref><sp/>font);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406" refid="imgui_8hpp_1a78f52c3853e8fa7daefcb96a3e99b442" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="imgui_8hpp_1a78f52c3853e8fa7daefcb96a3e99b442" kindref="member">setup_imgui_font_icons</ref>(<ref refid="structlava_1_1imgui_1_1font" kindref="compound">imgui::font</ref>&amp;<sp/>font,</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filename,</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/>min,<sp/><ref refid="types_8hpp_1a895524bbf2b83e0c146c930656f4b546" kindref="member">ui16</ref><sp/>max);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="imgui_8hpp_1a3a5f26a1f68ebeb71ccb6becc4cb667b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="imgui_8hpp_1a3a5f26a1f68ebeb71ccb6becc4cb667b" kindref="member">imgui_left_spacing</ref>(<ref refid="types_8hpp_1a4790140d63e38c1d099a9d8ce378b09f" kindref="member">ui32</ref><sp/>top<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/app/imgui.hpp"/>
+  </compounddef>
+</doxygen>

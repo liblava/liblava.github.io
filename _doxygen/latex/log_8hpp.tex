@@ -1,0 +1,214 @@
+\hypertarget{log_8hpp}{}\doxysection{liblava/util/log.hpp File Reference}
+\label{log_8hpp}\index{liblava/util/log.hpp@{liblava/util/log.hpp}}
+
+
+Logging.  
+
+
+{\ttfamily \#include $<$spdlog/sinks/basic\+\_\+file\+\_\+sink.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/sinks/stdout\+\_\+color\+\_\+sinks.\+h$>$}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$liblava/core/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1log__config}{lava\+::log\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Log configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1global__logger}{lava\+::global\+\_\+logger}}
+\begin{DoxyCompactList}\small\item\em Global logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}\label{log_8hpp_a0f61090ef8c79d6fb7db48c11588d5e1}} 
+using {\bfseries lava\+::logger} = std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$
+\begin{DoxyCompactList}\small\item\em Logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{log_8hpp_a3ca352b083878c2d3ee5dd4f4f962aad}{lava\+::to\+\_\+string}} (string\+\_\+ref id, string\+\_\+ref name)
+\begin{DoxyCompactList}\small\item\em Convert id and name to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{log_8hpp_a4f2ad8d673b49b674a845f0fdebcd06a}{lava\+::to\+\_\+string}} (int\+\_\+version const \&version)
+\begin{DoxyCompactList}\small\item\em Convert internal version to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{log_8hpp_ab3ab601d2b6469f7e8d282bad6d8c9cd}{lava\+::internal\+\_\+version\+\_\+string}} ()
+\begin{DoxyCompactList}\small\item\em Convert global internal version to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{log_8hpp_a784edc2067018c2c772f0b9b895a100e}{lava\+::int\+\_\+version\+\_\+string}} ()
+\item 
+name \mbox{\hyperlink{log_8hpp_abf34deddbe7ec13bdbef030763c4d222}{lava\+::to\+\_\+string}} (version\+\_\+stage stage)
+\begin{DoxyCompactList}\small\item\em Convert version stage to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{log_8hpp_abefb8ca281e429dedfa8c43d9ae711c9}{lava\+::to\+\_\+string}} (version const \&version)
+\begin{DoxyCompactList}\small\item\em Convert version to string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{log_8hpp_a24f4d3b66a3cd12bc3ff3a57228764d6}{lava\+::version\+\_\+string}} ()
+\begin{DoxyCompactList}\small\item\em Convert global version to string. \end{DoxyCompactList}\item 
+logger \mbox{\hyperlink{log_8hpp_a93eaa2a5ff4b1b7f15ebe00046753d56}{lava\+::setup\+\_\+log}} (log\+\_\+config config=\{\})
+\begin{DoxyCompactList}\small\item\em Set up logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{log_8hpp_aa8a223d182dfcefd09a6c1b0a3ce0692}{lava\+::teardown\+\_\+log}} (log\+\_\+config config=\{\})
+\begin{DoxyCompactList}\small\item\em Tear down logging. \end{DoxyCompactList}\item 
+logger \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{lava\+::log}} ()
+\begin{DoxyCompactList}\small\item\em Get global logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logging. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{log_8hpp_a784edc2067018c2c772f0b9b895a100e}\label{log_8hpp_a784edc2067018c2c772f0b9b895a100e}} 
+\index{log.hpp@{log.hpp}!int\_version\_string@{int\_version\_string}}
+\index{int\_version\_string@{int\_version\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{int\_version\_string()}{int\_version\_string()}}
+{\footnotesize\ttfamily string lava\+::int\+\_\+version\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+internal\+\_\+version\+\_\+string 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{log_8hpp_ab3ab601d2b6469f7e8d282bad6d8c9cd}\label{log_8hpp_ab3ab601d2b6469f7e8d282bad6d8c9cd}} 
+\index{log.hpp@{log.hpp}!internal\_version\_string@{internal\_version\_string}}
+\index{internal\_version\_string@{internal\_version\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{internal\_version\_string()}{internal\_version\_string()}}
+{\footnotesize\ttfamily string lava\+::internal\+\_\+version\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert global internal version to string. 
+
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_a3ae1bac979ba56645dc376477774c3db}\label{log_8hpp_a3ae1bac979ba56645dc376477774c3db}} 
+\index{log.hpp@{log.hpp}!log@{log}}
+\index{log@{log}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily logger lava\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get global logger. 
+
+\begin{DoxyReturn}{Returns}
+logger Logger 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_a93eaa2a5ff4b1b7f15ebe00046753d56}\label{log_8hpp_a93eaa2a5ff4b1b7f15ebe00046753d56}} 
+\index{log.hpp@{log.hpp}!setup\_log@{setup\_log}}
+\index{setup\_log@{setup\_log}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{setup\_log()}{setup\_log()}}
+{\footnotesize\ttfamily logger lava\+::setup\+\_\+log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1log__config}{log\+\_\+config}}}]{config = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Log configuration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8hpp_aa8a223d182dfcefd09a6c1b0a3ce0692}\label{log_8hpp_aa8a223d182dfcefd09a6c1b0a3ce0692}} 
+\index{log.hpp@{log.hpp}!teardown\_log@{teardown\_log}}
+\index{teardown\_log@{teardown\_log}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{teardown\_log()}{teardown\_log()}}
+{\footnotesize\ttfamily void lava\+::teardown\+\_\+log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1log__config}{log\+\_\+config}}}]{config = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tear down logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Log configuration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8hpp_a4f2ad8d673b49b674a845f0fdebcd06a}\label{log_8hpp_a4f2ad8d673b49b674a845f0fdebcd06a}} 
+\index{log.hpp@{log.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{version_8hpp_abd59f91665d2267412a4c50d47b8b522}{int\+\_\+version}} const \&}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert internal version to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Internal version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_a3ca352b083878c2d3ee5dd4f4f962aad}\label{log_8hpp_a3ca352b083878c2d3ee5dd4f4f962aad}} 
+\index{log.hpp@{log.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{id,  }\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert id and name to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id to convert \\
+\hline
+{\em name} & Name to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_abefb8ca281e429dedfa8c43d9ae711c9}\label{log_8hpp_abefb8ca281e429dedfa8c43d9ae711c9}} 
+\index{log.hpp@{log.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1version}{version}} const \&}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert version to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_abf34deddbe7ec13bdbef030763c4d222}\label{log_8hpp_abf34deddbe7ec13bdbef030763c4d222}} 
+\index{log.hpp@{log.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily name lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{version_8hpp_a405b58b30c091de0c985f3389f5d543d}{version\+\_\+stage}}}]{stage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert version stage to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Version stage to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name Name representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8hpp_a24f4d3b66a3cd12bc3ff3a57228764d6}\label{log_8hpp_a24f4d3b66a3cd12bc3ff3a57228764d6}} 
+\index{log.hpp@{log.hpp}!version\_string@{version\_string}}
+\index{version\_string@{version\_string}!log.hpp@{log.hpp}}
+\doxysubsubsection{\texorpdfstring{version\_string()}{version\_string()}}
+{\footnotesize\ttfamily string lava\+::version\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert global version to string. 
+
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}

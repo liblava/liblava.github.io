@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="structlava_1_1pipeline__layout" kind="struct" language="C++" prot="public">
+    <compoundname>lava::pipeline_layout</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="pipeline__layout_8hpp" local="no">pipeline_layout.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1pipeline__layout_1a258243ec8b59d7ff495b2e45780a4e5f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1pipeline__layout" kindref="compound">pipeline_layout</ref> &gt;</type>
+        <definition>using lava::pipeline_layout::ptr =  std::shared_ptr&lt;pipeline_layout&gt;</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::pipeline_layout::ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="19" column="5" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1pipeline__layout_1adaaf691ab15918af2955a7b3825fb0c8" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1pipeline__layout_1a258243ec8b59d7ff495b2e45780a4e5f" kindref="member">ptr</ref> &gt;</type>
+        <definition>using lava::pipeline_layout::list =  std::vector&lt;ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::pipeline_layout::list</qualifiedname>
+        <briefdescription>
+<para>List of pipeline layouts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="22" column="5" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1pipeline__layout_1a1b0b0f849848ee624d258ff37f99ef70" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref> &gt;</type>
+        <definition>using lava::pipeline_layout::offset_list =  std::vector&lt;index&gt;</definition>
+        <argsstring></argsstring>
+        <name>offset_list</name>
+        <qualifiedname>lava::pipeline_layout::offset_list</qualifiedname>
+        <briefdescription>
+<para>List of offsets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="129" column="5" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1pipeline__layout_1ac6c65ac606b1c20021c06c6abc64fb0b" prot="private" static="no" mutable="no">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::pipeline_layout::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>lava::pipeline_layout::device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="162" column="14" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline__layout_1a865aa092456f8626695075bae4f13efe" prot="private" static="no" mutable="no">
+        <type>VkPipelineLayout</type>
+        <definition>VkPipelineLayout lava::pipeline_layout::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <qualifiedname>lava::pipeline_layout::layout</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="165" column="22" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline__layout_1a473a99b22468842d1a5bcae4fe3cac44" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1descriptor_1a79b7b23bb7845c0876c462710811747f" kindref="member">descriptor::list</ref></type>
+        <definition>descriptor::list lava::pipeline_layout::descriptors</definition>
+        <argsstring></argsstring>
+        <name>descriptors</name>
+        <qualifiedname>lava::pipeline_layout::descriptors</qualifiedname>
+        <briefdescription>
+<para>List of descriptors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="168" column="22" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline__layout_1a6d243e4f4952d962ac3d37004da68ed6" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a7594a018041ecaaae03eab356c05704f" kindref="member">VkPushConstantRanges</ref></type>
+        <definition>VkPushConstantRanges lava::pipeline_layout::push_constant_ranges</definition>
+        <argsstring></argsstring>
+        <name>push_constant_ranges</name>
+        <qualifiedname>lava::pipeline_layout::push_constant_ranges</qualifiedname>
+        <briefdescription>
+<para>List of push constant ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="171" column="26" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a7d9aba54f5d450078e3be8e0df6ceff6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1pipeline__layout_1a258243ec8b59d7ff495b2e45780a4e5f" kindref="member">ptr</ref></type>
+        <definition>static ptr lava::pipeline_layout::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::pipeline_layout::make</qualifiedname>
+        <briefdescription>
+<para>Make a new pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ptr Shared pointer to pipeline layout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="28" column="16" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a40e64a50b288ab86dc128a97010228df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::add</definition>
+        <argsstring>(descriptor::ptr const &amp;descriptor)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::pipeline_layout::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" kindref="member">descriptor::ptr</ref> const &amp;</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1pipeline__layout_1aa1e18d5b376910af55e540fec6c33600" kindref="member">add_descriptor</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="35" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1af32bc935f614479e2ec6c094759e9f90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::add</definition>
+        <argsstring>(VkPushConstantRange const &amp;range)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::pipeline_layout::add</qualifiedname>
+        <param>
+          <type>VkPushConstantRange const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1pipeline__layout_1afd034ca303a814ede6eee4167b1bd197" kindref="member">add_push_constant_range</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="42" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1aa1e18d5b376910af55e540fec6c33600" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::add_descriptor</definition>
+        <argsstring>(descriptor::ptr const &amp;descriptor)</argsstring>
+        <name>add_descriptor</name>
+        <qualifiedname>lava::pipeline_layout::add_descriptor</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1descriptor_1ab03a75689f81f080f76da078f0c58279" kindref="member">descriptor::ptr</ref> const &amp;</type>
+          <declname>descriptor</declname>
+        </param>
+        <briefdescription>
+<para>Add descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="50" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1afd034ca303a814ede6eee4167b1bd197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::add_push_constant_range</definition>
+        <argsstring>(VkPushConstantRange const &amp;range)</argsstring>
+        <name>add_push_constant_range</name>
+        <qualifiedname>lava::pipeline_layout::add_push_constant_range</qualifiedname>
+        <param>
+          <type>VkPushConstantRange const &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+<para>Add push contant range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Push contant range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="58" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a8c9b807c7c91a93f47c472535a4d3e05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::clear_descriptors</definition>
+        <argsstring>()</argsstring>
+        <name>clear_descriptors</name>
+        <qualifiedname>lava::pipeline_layout::clear_descriptors</qualifiedname>
+        <briefdescription>
+<para>Clear descriptors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="65" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a6466b9a87a9872a692251cdcae1b6286" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::clear_ranges</definition>
+        <argsstring>()</argsstring>
+        <name>clear_ranges</name>
+        <qualifiedname>lava::pipeline_layout::clear_ranges</qualifiedname>
+        <briefdescription>
+<para>Clear push constant ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="72" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a7555cbe78804e673d5877701a05d19d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::pipeline_layout::clear</qualifiedname>
+        <briefdescription>
+<para>Clear descriptors and push constant ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="79" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a9306659a9b541640e5baeba63a826f7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline_layout::create</definition>
+        <argsstring>(device_p device)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::pipeline_layout::create</qualifiedname>
+        <param>
+          <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Create a new pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="89" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a3160748b253764012d0ee1b517c694ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::pipeline_layout::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="94" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1ab8dd12247c0fa0c6791aa77c932d9705" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPipelineLayout</type>
+        <definition>VkPipelineLayout lava::pipeline_layout::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::pipeline_layout::get</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPipelineLayout Pipeline layout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="100" column="22" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a5e9908020da153a86be6b50076f2c19c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="device_8hpp_1a487f73dbf483e94037aa60785b2e2abd" kindref="member">device_p</ref></type>
+        <definition>device_p lava::pipeline_layout::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::pipeline_layout::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>device_p Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="108" column="14" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a27bba3e333f9685c0cb05f7728ec9f99" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1descriptor_1a79b7b23bb7845c0876c462710811747f" kindref="member">descriptor::list</ref> const &amp;</type>
+        <definition>descriptor::list const  &amp; lava::pipeline_layout::get_descriptors</definition>
+        <argsstring>() const</argsstring>
+        <name>get_descriptors</name>
+        <qualifiedname>lava::pipeline_layout::get_descriptors</qualifiedname>
+        <briefdescription>
+<para>Get the descriptors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1descriptor_1a79b7b23bb7845c0876c462710811747f" kindref="member">descriptor::list</ref> const&amp; List of descriptors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="116" column="28" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1afc91b4cddf60214659d21bb3ed475375" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1a7594a018041ecaaae03eab356c05704f" kindref="member">VkPushConstantRanges</ref> const &amp;</type>
+        <definition>VkPushConstantRanges const  &amp; lava::pipeline_layout::get_push_constant_ranges</definition>
+        <argsstring>() const</argsstring>
+        <name>get_push_constant_ranges</name>
+        <qualifiedname>lava::pipeline_layout::get_push_constant_ranges</qualifiedname>
+        <briefdescription>
+<para>Get the push constant ranges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPushConstantRanges const&amp; List of push constant ranges </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="124" column="32" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a6772737a70f03d1212d8d6393d469e49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::bind_descriptor_set</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, VkDescriptorSet descriptor_set, index first_set=0, offset_list offsets={}, VkPipelineBindPoint bind_point=VK_PIPELINE_BIND_POINT_GRAPHICS)</argsstring>
+        <name>bind_descriptor_set</name>
+        <qualifiedname>lava::pipeline_layout::bind_descriptor_set</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type>VkDescriptorSet</type>
+          <declname>descriptor_set</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>first_set</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1pipeline__layout_1a1b0b0f849848ee624d258ff37f99ef70" kindref="member">offset_list</ref></type>
+          <declname>offsets</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>VkPipelineBindPoint</type>
+          <declname>bind_point</declname>
+          <defval>VK_PIPELINE_BIND_POINT_GRAPHICS</defval>
+        </param>
+        <briefdescription>
+<para>Bind descriptor set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>descriptor_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to first descriptor set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of offsets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bind_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline bind point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="139" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline__layout_1a00ab04bb3ce95a464e785a0a71f71069" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline_layout::bind</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, VkDescriptorSet descriptor_set, index first_set=0, offset_list offsets={}, VkPipelineBindPoint bind_point=VK_PIPELINE_BIND_POINT_GRAPHICS)</argsstring>
+        <name>bind</name>
+        <qualifiedname>lava::pipeline_layout::bind</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type>VkDescriptorSet</type>
+          <declname>descriptor_set</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2e2665dfc02f242d2deb531c6e936464" kindref="member">index</ref></type>
+          <declname>first_set</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1pipeline__layout_1a1b0b0f849848ee624d258ff37f99ef70" kindref="member">offset_list</ref></type>
+          <declname>offsets</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>VkPipelineBindPoint</type>
+          <declname>bind_point</declname>
+          <defval>VK_PIPELINE_BIND_POINT_GRAPHICS</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1pipeline__layout_1a6772737a70f03d1212d8d6393d469e49" kindref="member">bind_descriptor_set</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline_layout.hpp" line="148" column="10" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="148" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Pipeline layout. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::pipeline_layout</label>
+        <link refid="structlava_1_1pipeline__layout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::pipeline_layout</label>
+        <link refid="structlava_1_1pipeline__layout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/pipeline_layout.hpp" line="17" column="1" bodyfile="liblava/block/pipeline_layout.hpp" bodystart="17" bodyend="172"/>
+    <listofallmembers>
+      <member refid="structlava_1_1pipeline__layout_1a40e64a50b288ab86dc128a97010228df" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>add</name></member>
+      <member refid="structlava_1_1pipeline__layout_1af32bc935f614479e2ec6c094759e9f90" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>add</name></member>
+      <member refid="structlava_1_1pipeline__layout_1aa1e18d5b376910af55e540fec6c33600" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>add_descriptor</name></member>
+      <member refid="structlava_1_1pipeline__layout_1afd034ca303a814ede6eee4167b1bd197" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>add_push_constant_range</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a00ab04bb3ce95a464e785a0a71f71069" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>bind</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a6772737a70f03d1212d8d6393d469e49" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>bind_descriptor_set</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a7555cbe78804e673d5877701a05d19d3" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>clear</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a8c9b807c7c91a93f47c472535a4d3e05" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>clear_descriptors</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a6466b9a87a9872a692251cdcae1b6286" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>clear_ranges</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a9306659a9b541640e5baeba63a826f7c" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>create</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a473a99b22468842d1a5bcae4fe3cac44" prot="private" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>descriptors</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a3160748b253764012d0ee1b517c694ca" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>destroy</name></member>
+      <member refid="structlava_1_1pipeline__layout_1ac6c65ac606b1c20021c06c6abc64fb0b" prot="private" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>device</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>entity</name></member>
+      <member refid="structlava_1_1pipeline__layout_1ab8dd12247c0fa0c6791aa77c932d9705" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>get</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a27bba3e333f9685c0cb05f7728ec9f99" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>get_descriptors</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a5e9908020da153a86be6b50076f2c19c" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>get_device</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>get_id</name></member>
+      <member refid="structlava_1_1pipeline__layout_1afc91b4cddf60214659d21bb3ed475375" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>get_push_constant_ranges</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a865aa092456f8626695075bae4f13efe" prot="private" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>layout</name></member>
+      <member refid="structlava_1_1pipeline__layout_1adaaf691ab15918af2955a7b3825fb0c8" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>list</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a7d9aba54f5d450078e3be8e0df6ceff6" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a1b0b0f849848ee624d258ff37f99ef70" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>offset_list</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>operator=</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a258243ec8b59d7ff495b2e45780a4e5f" prot="public" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>ptr</name></member>
+      <member refid="structlava_1_1pipeline__layout_1a6d243e4f4952d962ac3d37004da68ed6" prot="private" virt="non-virtual"><scope>lava::pipeline_layout</scope><name>push_constant_ranges</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::pipeline_layout</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

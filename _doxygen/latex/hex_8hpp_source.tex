@@ -1,0 +1,470 @@
+\hypertarget{hex_8hpp_source}{}\doxysection{hex.\+hpp}
+\label{hex_8hpp_source}\index{liblava/util/hex.hpp@{liblava/util/hex.hpp}}
+\mbox{\hyperlink{hex_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <numbers>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__point_a139ad44afadb839dcf388aada3c9c453}{list}} = std::vector<hex\_point>;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__point_aae7c7ae269a5a1b2739a4e8a3fb45601}{x}}\{\};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__point_a82cd6d623cf1818dc1e298c54a81a267}{y}}\{\};}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \{}
+\DoxyCodeLine{37     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{list}} = std::vector<hex\_cell>;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}}\{\};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{43     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}}\{\};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{46     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}}\{\};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \textcolor{keyword}{auto} \mbox{\hyperlink{structlava_1_1hex__cell_a3c30f0cbb14017e54456160554950fd2}{operator<=>}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\&) \textcolor{keyword}{const} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{pair}} = std::pair<i32, i32>;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{57     \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__cell_a775ffe0daed029c7f2adefd7ec080b08}{map}} = std::unordered\_map<pair, index, pair\_hash>;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{pair}} \mbox{\hyperlink{structlava_1_1hex__cell_af816d04f8d8c9041ccd8a9b7fd522a09}{to\_pair}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}}, \mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} \};}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae}{add}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{72         *\textcolor{keyword}{this} = \{ \mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}},}
+\DoxyCodeLine{73                   \mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}},}
+\DoxyCodeLine{74                   \mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} \};}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__cell_a6eddba5d173537802483b3d4c726cbc5}{substract}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{82         *\textcolor{keyword}{this} = \{ \mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} -\/ cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}},}
+\DoxyCodeLine{83                   \mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} -\/ cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}},}
+\DoxyCodeLine{84                   \mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} -\/ cell.\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} \};}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__cell_ab4e15c9d93220b9f98548887f101901a}{scale}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} factor) \{}
+\DoxyCodeLine{92         *\textcolor{keyword}{this} = \{ \mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} * factor,}
+\DoxyCodeLine{93                   \mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} * factor,}
+\DoxyCodeLine{94                   \mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} * factor \};}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{100     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__cell_a4c143ba3ad787b6bcbe40dba0621316a}{rotate\_left}}() \{}
+\DoxyCodeLine{101         *\textcolor{keyword}{this} = \{ -\/\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}}, -\/\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}}, -\/\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} \};}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__cell_a8a6e68b4fe459e37bdeb30d98b10b910}{rotate\_right}}() \{}
+\DoxyCodeLine{108         *\textcolor{keyword}{this} = \{ -\/\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}}, -\/\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}}, -\/\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} \};}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110 \};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{118 \textcolor{keyword}{inline} \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{hex_8hpp_a7ca014ec5e5a02dda82dc24ba4eda276}{hex\_get\_s}}(\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} q, \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} r) \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} -\/q -\/ r;}
+\DoxyCodeLine{120 \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{127 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_ad5e454169eed0c6193064321c2f290ef}{hex\_cell\_from\_pair}}(\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{hex\_cell::pair}} \textcolor{keyword}{const}\& pair) \{}
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} \{ pair.first, pair.second,}
+\DoxyCodeLine{129              \mbox{\hyperlink{hex_8hpp_a7ca014ec5e5a02dda82dc24ba4eda276}{hex\_get\_s}}(pair.first, pair.second) \};}
+\DoxyCodeLine{130 \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{135 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_fractional\_cell}} \{}
+\DoxyCodeLine{137     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__fractional__cell_ab9f047d8294fe5cb56d8ae0ad7b2d432}{q}}\{\};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{140     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__fractional__cell_a00f495d9f189ede812c19845949259be}{r}}\{\};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{143     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__fractional__cell_af5744166cdec9f1102ac555dfd130965}{s}}\{\};}
+\DoxyCodeLine{144 \};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{147 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} = \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_fractional\_cell}};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{154 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{hex_8hpp_a9182ebdc614f1415b3482ec84f809ca5}{hex\_is\_valid}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{155     \textcolor{keywordflow}{return} cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}} == 0;}
+\DoxyCodeLine{156 \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{161 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}} \{}
+\DoxyCodeLine{163     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}}\{\};}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{166     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}}\{\};}
+\DoxyCodeLine{167 \};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{170 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_doubled\_coord}} = \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{175 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\_orientation}} \{}
+\DoxyCodeLine{177     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a063043a6c162721cb6ce5389bfeb5efb}{f0}}\{\};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{180     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a54544e0e9e69a00dff57d70a5d5a173f}{f1}}\{\};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{183     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_aafd9a21888792ce9bcbb3676148123c5}{f2}}\{\};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{186     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a881f30a84c2cbb8a8c4e89a6f0c851eb}{f3}}\{\};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{189     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a376896a7a7b8ad00524a51f5b51aff7b}{b0}}\{\};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{192     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a69244fabdeae4ed615a483ad3930e519}{b1}}\{\};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{195     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_a71ba6493f8fd4a2c6a9220c9ecf29f76}{b2}}\{\};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{198     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_ad1c5abc27e15f74128b4665e66bbc618}{b3}}\{\};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{201     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__orientation_adfd94c45be45f50157e68c5f36442b80}{start\_angle}}\{\};}
+\DoxyCodeLine{202 \};}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{207 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \{}
+\DoxyCodeLine{209     \mbox{\hyperlink{structlava_1_1hex__orientation}{hex\_orientation}} \mbox{\hyperlink{structlava_1_1hex__layout_a21b57c9897062a175b9876327774b91a}{orientation}};}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{212     \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{structlava_1_1hex__layout_afd4ce94603d567dd0f9f3c01446c0051}{origin}};}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{215     \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{structlava_1_1hex__layout_a92b22baeee3e4135c4888e28a5c4cd90}{size}};}
+\DoxyCodeLine{216 \};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{219 \mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\_cell::list}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a9e0563c523141e347ff5dba0e0dd54c6}{hex\_directions}}\{}
+\DoxyCodeLine{220     \{ 1, 0, -\/1 \},}
+\DoxyCodeLine{221     \{ 1, -\/1, 0 \},}
+\DoxyCodeLine{222     \{ 0, -\/1, 1 \},}
+\DoxyCodeLine{223     \{ -\/1, 0, 1 \},}
+\DoxyCodeLine{224     \{ -\/1, 1, 0 \},}
+\DoxyCodeLine{225     \{ 0, 1, -\/1 \}}
+\DoxyCodeLine{226 \};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{233 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a8a16da974409e2757c6f17d3c6a04145}{hex\_direction}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} direction) \{}
+\DoxyCodeLine{234     \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_a9e0563c523141e347ff5dba0e0dd54c6}{hex\_directions}}[direction];}
+\DoxyCodeLine{235 \}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{243 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a898ffd15cb1a51808d3c2d78f5025ec6}{hex\_neighbor}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell,}
+\DoxyCodeLine{244                              \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} direction) \{}
+\DoxyCodeLine{245     \textcolor{keyword}{auto} neighbor = cell;}
+\DoxyCodeLine{246     neighbor.\mbox{\hyperlink{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae}{add}}(\mbox{\hyperlink{hex_8hpp_a8a16da974409e2757c6f17d3c6a04145}{hex\_direction}}(direction));}
+\DoxyCodeLine{247     \textcolor{keywordflow}{return} neighbor;}
+\DoxyCodeLine{248 \}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{251 \mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\_cell::list}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a813c3a54be3abeb12fe6814fb84167b4}{hex\_diagonals}}\{}
+\DoxyCodeLine{252     \{ 2, -\/1, -\/1 \},}
+\DoxyCodeLine{253     \{ -\/1, -\/2, 1 \},}
+\DoxyCodeLine{254     \{ -\/1, -\/1, 2 \},}
+\DoxyCodeLine{255     \{ -\/2, 1, 1 \},}
+\DoxyCodeLine{256     \{ -\/1, 2, -\/1 \},}
+\DoxyCodeLine{257     \{ 1, 1, -\/2 \}}
+\DoxyCodeLine{258 \};}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{265 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_adfb53fa51a50b93e353e5101d9a03e3e}{hex\_diagonal}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} direction) \{}
+\DoxyCodeLine{266     \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_a813c3a54be3abeb12fe6814fb84167b4}{hex\_diagonals}}[direction];}
+\DoxyCodeLine{267 \}}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{275 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_ad5acac030efb7626bb99fb663324da8a}{hex\_diagonal\_neighbor}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell,}
+\DoxyCodeLine{276                                       \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} direction) \{}
+\DoxyCodeLine{277     \textcolor{keyword}{auto} neighbor = cell;}
+\DoxyCodeLine{278     neighbor.\mbox{\hyperlink{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae}{add}}(\mbox{\hyperlink{hex_8hpp_adfb53fa51a50b93e353e5101d9a03e3e}{hex\_diagonal}}(direction));}
+\DoxyCodeLine{279     \textcolor{keywordflow}{return} neighbor;}
+\DoxyCodeLine{280 \}}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{287 \textcolor{keyword}{inline} \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{hex_8hpp_aacff1394173374911b79331d353ef449}{hex\_length}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{288     \textcolor{keywordflow}{return} \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(std::abs(cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}})}
+\DoxyCodeLine{289                   + std::abs(cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}})}
+\DoxyCodeLine{290                   + std::abs(cell.\mbox{\hyperlink{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}{s}}) / 2);}
+\DoxyCodeLine{291 \}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{299 \textcolor{keyword}{inline} \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{hex_8hpp_a5c5b747307cac342033640acf1b22b37}{hex\_distance}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& a,}
+\DoxyCodeLine{300                         \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& b) \{}
+\DoxyCodeLine{301     \textcolor{keyword}{auto} dist = a;}
+\DoxyCodeLine{302     dist.substract(b);}
+\DoxyCodeLine{303     \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_aacff1394173374911b79331d353ef449}{hex\_length}}(dist);}
+\DoxyCodeLine{304 \}}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{311 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9}{hex\_round}}(\mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{312     \textcolor{keyword}{auto} qi = \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(std::round(cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_ab9f047d8294fe5cb56d8ae0ad7b2d432}{q}}));}
+\DoxyCodeLine{313     \textcolor{keyword}{auto} ri = \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(std::round(cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_a00f495d9f189ede812c19845949259be}{r}}));}
+\DoxyCodeLine{314     \textcolor{keyword}{auto} si = \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(std::round(cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_af5744166cdec9f1102ac555dfd130965}{s}}));}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316     \textcolor{keyword}{auto} \textcolor{keyword}{const} q\_diff = std::abs(qi -\/ cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_ab9f047d8294fe5cb56d8ae0ad7b2d432}{q}});}
+\DoxyCodeLine{317     \textcolor{keyword}{auto} \textcolor{keyword}{const} r\_diff = std::abs(ri -\/ cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_a00f495d9f189ede812c19845949259be}{r}});}
+\DoxyCodeLine{318     \textcolor{keyword}{auto} \textcolor{keyword}{const} s\_diff = std::abs(si -\/ cell.\mbox{\hyperlink{structlava_1_1hex__fractional__cell_af5744166cdec9f1102ac555dfd130965}{s}});}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320     \textcolor{keywordflow}{if} ((q\_diff > r\_diff) \&\& (q\_diff > s\_diff))}
+\DoxyCodeLine{321         qi = -\/ri -\/ si;}
+\DoxyCodeLine{322     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r\_diff > s\_diff)}
+\DoxyCodeLine{323         ri = -\/qi -\/ si;}
+\DoxyCodeLine{324     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{325         si = -\/qi -\/ ri;}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327     \textcolor{keywordflow}{return} \{ qi, ri, si \};}
+\DoxyCodeLine{328 \}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{337 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} \mbox{\hyperlink{hex_8hpp_a79131e23aba708d19fb30fe1f6fa77a5}{hex\_lerp}}(\mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} \textcolor{keyword}{const}\& a,}
+\DoxyCodeLine{338                               \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} \textcolor{keyword}{const}\& b,}
+\DoxyCodeLine{339                               \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} t) \{}
+\DoxyCodeLine{340     \textcolor{keywordflow}{return} \{}
+\DoxyCodeLine{341         a.q * (1.f -\/ t) + b.q * t,}
+\DoxyCodeLine{342         a.r * (1.f -\/ t) + b.r * t,}
+\DoxyCodeLine{343         a.s * (1.f -\/ t) + b.s * t}
+\DoxyCodeLine{344     \};}
+\DoxyCodeLine{345 \}}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{353 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\_cell::list}} \mbox{\hyperlink{hex_8hpp_a01c50ea26d302c05a4eede033863ca9b}{hex\_line}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& a,}
+\DoxyCodeLine{354                                \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& b) \{}
+\DoxyCodeLine{355     \textcolor{keyword}{auto} \textcolor{keyword}{const} a\_nudge = \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}}\{ a.q + 0.000001f,}
+\DoxyCodeLine{356                                         a.r + 0.000001f,}
+\DoxyCodeLine{357                                         a.s -\/ 0.000002f \};}
+\DoxyCodeLine{358     \textcolor{keyword}{auto} \textcolor{keyword}{const} b\_nudge = \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}}\{ b.q + 0.000001f,}
+\DoxyCodeLine{359                                         b.r + 0.000001f,}
+\DoxyCodeLine{360                                         b.s -\/ 0.000002f \};}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362     \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} \textcolor{keyword}{const} n = \mbox{\hyperlink{hex_8hpp_a5c5b747307cac342033640acf1b22b37}{hex\_distance}}(a, b);}
+\DoxyCodeLine{363     \textcolor{keyword}{auto} \textcolor{keyword}{const} step = 1.0 / std::max(n, 1u);}
+\DoxyCodeLine{364 }
+\DoxyCodeLine{365     \mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\_cell::list}} results;}
+\DoxyCodeLine{366     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i = 0u; i <= n; ++i)}
+\DoxyCodeLine{367         results.push\_back(\mbox{\hyperlink{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9}{hex\_round}}(\mbox{\hyperlink{hex_8hpp_a79131e23aba708d19fb30fe1f6fa77a5}{hex\_lerp}}(a\_nudge,}
+\DoxyCodeLine{368                                              b\_nudge,}
+\DoxyCodeLine{369                                              step * i)));}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371     \textcolor{keywordflow}{return} results;}
+\DoxyCodeLine{372 \}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{377 \textcolor{keyword}{enum class} \mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\_offset}} : \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \{}
+\DoxyCodeLine{378     odd = -\/1,}
+\DoxyCodeLine{379     even = 1}
+\DoxyCodeLine{380 \};}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{388 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}} \mbox{\hyperlink{hex_8hpp_aa509932a3cb8382abc5086b699f55d99}{hex\_q\_offset\_from\_cube}}(\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\_offset}} offset,}
+\DoxyCodeLine{389                                                \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{390     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& col = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}};}
+\DoxyCodeLine{391     \textcolor{keyword}{auto} \textcolor{keyword}{const} row = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}}}
+\DoxyCodeLine{392                      + \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) offset * (cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} \& 1)) / 2);}
+\DoxyCodeLine{393     \textcolor{keywordflow}{return} \{ col, row \};}
+\DoxyCodeLine{394 \}}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{402 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a3e916b0ac0ab4fe8198c90554e6c388b}{hex\_q\_offset\_to\_cube}}(\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\_offset}} offset,}
+\DoxyCodeLine{403                                      \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}} \textcolor{keyword}{const}\& coord) \{}
+\DoxyCodeLine{404     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& q = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}};}
+\DoxyCodeLine{405     \textcolor{keyword}{auto} \textcolor{keyword}{const} r = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}}}
+\DoxyCodeLine{406                    -\/ \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}} + (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) offset * (coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}} \& 1)) / 2);}
+\DoxyCodeLine{407     \textcolor{keyword}{auto} \textcolor{keyword}{const} s = -\/q -\/ r;}
+\DoxyCodeLine{408     \textcolor{keywordflow}{return} \{ q, r, s \};}
+\DoxyCodeLine{409 \}}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{417 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}} \mbox{\hyperlink{hex_8hpp_a140bd9814b6cef5a138c7001866fcf78}{hex\_r\_offset\_from\_cube}}(\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\_offset}} offset,}
+\DoxyCodeLine{418                                                \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{419     \textcolor{keyword}{auto} \textcolor{keyword}{const} col = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}}}
+\DoxyCodeLine{420                      + \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} + (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) offset * (cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} \& 1)) / 2);}
+\DoxyCodeLine{421     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& row = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}};}
+\DoxyCodeLine{422     \textcolor{keywordflow}{return} \{ col, row \};}
+\DoxyCodeLine{423 \}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{431 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a03b854cf6039784e37ae5f5a5d2a9aff}{hex\_r\_offset\_to\_cube}}(\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\_offset}} offset,}
+\DoxyCodeLine{432                                      \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_offset\_coord}} \textcolor{keyword}{const}\& coord) \{}
+\DoxyCodeLine{433     \textcolor{keyword}{auto} \textcolor{keyword}{const} q = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}}}
+\DoxyCodeLine{434                    -\/ \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}} + (\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) offset * (coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}} \& 1)) / 2);}
+\DoxyCodeLine{435     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& r = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}};}
+\DoxyCodeLine{436     \textcolor{keyword}{auto} \textcolor{keyword}{const} s = -\/q -\/ r;}
+\DoxyCodeLine{437     \textcolor{keywordflow}{return} \{ q, r, s \};}
+\DoxyCodeLine{438 \}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{445 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_doubled\_coord}} \mbox{\hyperlink{hex_8hpp_a5d65e4531828807f633a0a62525c22c1}{hex\_q\_doubled\_from\_cube}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{446     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& col = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}};}
+\DoxyCodeLine{447     \textcolor{keyword}{auto} \textcolor{keyword}{const} row = 2 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}};}
+\DoxyCodeLine{448     \textcolor{keywordflow}{return} \{ col, row \};}
+\DoxyCodeLine{449 \}}
+\DoxyCodeLine{450 }
+\DoxyCodeLine{456 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a4fee9dc0368a70ba9aac2d0b5640084b}{hex\_q\_doubled\_to\_cube}}(\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_doubled\_coord}} \textcolor{keyword}{const}\& coord) \{}
+\DoxyCodeLine{457     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& q = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}};}
+\DoxyCodeLine{458     \textcolor{keyword}{auto} \textcolor{keyword}{const} r = \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}} -\/ coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}}) / 2);}
+\DoxyCodeLine{459     \textcolor{keyword}{auto} \textcolor{keyword}{const} s = -\/q -\/ r;}
+\DoxyCodeLine{460     \textcolor{keywordflow}{return} \{ q, r, s \};}
+\DoxyCodeLine{461 \}}
+\DoxyCodeLine{462 }
+\DoxyCodeLine{468 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_doubled\_coord}} \mbox{\hyperlink{hex_8hpp_aa4a3c70aa527a679eae96f56273e0d59}{hex\_r\_doubled\_from\_cube}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{469     \textcolor{keyword}{auto} \textcolor{keyword}{const} col = 2 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}};}
+\DoxyCodeLine{470     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& row = cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}};}
+\DoxyCodeLine{471     \textcolor{keywordflow}{return} \{ col, row \};}
+\DoxyCodeLine{472 \}}
+\DoxyCodeLine{473 }
+\DoxyCodeLine{479 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_a94c56d07872b9ee1b320751f7ea36981}{hex\_r\_doubled\_to\_cube}}(\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\_doubled\_coord}} \textcolor{keyword}{const}\& coord) \{}
+\DoxyCodeLine{480     \textcolor{keyword}{auto} \textcolor{keyword}{const} q = \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}((coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_a39ad60e2c8bc54e2b7445e8548c0a774}{col}} -\/ coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}}) / 2);}
+\DoxyCodeLine{481     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& r = coord.\mbox{\hyperlink{structlava_1_1hex__offset__coord_aba13ca3d0d94c09e89623775f2c9fba9}{row}};}
+\DoxyCodeLine{482     \textcolor{keyword}{auto} \textcolor{keyword}{const} s = -\/q -\/ r;}
+\DoxyCodeLine{483     \textcolor{keywordflow}{return} \{ q, r, s \};}
+\DoxyCodeLine{484 \}}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{487 \mbox{\hyperlink{structlava_1_1hex__orientation}{hex\_orientation}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}{hex\_layout\_point\_y}} = \{}
+\DoxyCodeLine{488     std::sqrt(3.f),}
+\DoxyCodeLine{489     std::sqrt(3.f) / 2.f,}
+\DoxyCodeLine{490     0.f,}
+\DoxyCodeLine{491     3.f / 2.f,}
+\DoxyCodeLine{492     std::sqrt(3.f) / 3.f,}
+\DoxyCodeLine{493     -\/1.f / 3.f,}
+\DoxyCodeLine{494     0.f,}
+\DoxyCodeLine{495     2.f / 3.f,}
+\DoxyCodeLine{496     0.5f}
+\DoxyCodeLine{497 \};}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{500 \mbox{\hyperlink{structlava_1_1hex__orientation}{hex\_orientation}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a73418d6cc574517a81fad81c3818158f}{hex\_layout\_flat}} = \{}
+\DoxyCodeLine{501     3.f / 2.f,}
+\DoxyCodeLine{502     0.f,}
+\DoxyCodeLine{503     std::sqrt(3.f) / 2.f,}
+\DoxyCodeLine{504     std::sqrt(3.f),}
+\DoxyCodeLine{505     2.f / 3.f,}
+\DoxyCodeLine{506     0.f,}
+\DoxyCodeLine{507     -\/1.f / 3.f,}
+\DoxyCodeLine{508     std::sqrt(3.f) / 3.f,}
+\DoxyCodeLine{509     0.f}
+\DoxyCodeLine{510 \};}
+\DoxyCodeLine{511 }
+\DoxyCodeLine{518 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd}{hex\_to\_pixel}}(\mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \textcolor{keyword}{const}\& layout,}
+\DoxyCodeLine{519                               \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{520     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& m = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a21b57c9897062a175b9876327774b91a}{orientation}};}
+\DoxyCodeLine{521     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& size = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a92b22baeee3e4135c4888e28a5c4cd90}{size}};}
+\DoxyCodeLine{522     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& origin = layout.\mbox{\hyperlink{structlava_1_1hex__layout_afd4ce94603d567dd0f9f3c01446c0051}{origin}};}
+\DoxyCodeLine{523     \textcolor{keyword}{auto} \textcolor{keyword}{const} x = (m.f0 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + m.f1 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}}) * size.x;}
+\DoxyCodeLine{524     \textcolor{keyword}{auto} \textcolor{keyword}{const} y = (m.f2 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}{q}} + m.f3 * cell.\mbox{\hyperlink{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}{r}}) * size.y;}
+\DoxyCodeLine{525     \textcolor{keywordflow}{return} \{ x + origin.x, y + origin.y \};}
+\DoxyCodeLine{526 \}}
+\DoxyCodeLine{527 }
+\DoxyCodeLine{534 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\_frac\_cell}} \mbox{\hyperlink{hex_8hpp_a904901a544a66a5b6226e373ab97da4c}{hex\_pixel\_to\_cell}}(\mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \textcolor{keyword}{const}\& layout,}
+\DoxyCodeLine{535                                        \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \textcolor{keyword}{const}\& p) \{}
+\DoxyCodeLine{536     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& m = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a21b57c9897062a175b9876327774b91a}{orientation}};}
+\DoxyCodeLine{537     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& size = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a92b22baeee3e4135c4888e28a5c4cd90}{size}};}
+\DoxyCodeLine{538     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& origin = layout.\mbox{\hyperlink{structlava_1_1hex__layout_afd4ce94603d567dd0f9f3c01446c0051}{origin}};}
+\DoxyCodeLine{539     \textcolor{keyword}{auto} \textcolor{keyword}{const} pt = \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}}\{ (p.x -\/ origin.x) / size.\mbox{\hyperlink{structlava_1_1hex__point_aae7c7ae269a5a1b2739a4e8a3fb45601}{x}},}
+\DoxyCodeLine{540                                (p.y -\/ origin.y) / size.y \};}
+\DoxyCodeLine{541     \textcolor{keyword}{auto} \textcolor{keyword}{const} q = m.b0 * pt.x + m.b1 * pt.y;}
+\DoxyCodeLine{542     \textcolor{keyword}{auto} \textcolor{keyword}{const} r = m.b2 * pt.x + m.b3 * pt.y;}
+\DoxyCodeLine{543     \textcolor{keywordflow}{return} \{ q, r, -\/q -\/ r \};}
+\DoxyCodeLine{544 \}}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{552 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{hex_8hpp_a05b05a162ad716a49e8f5b7d36874bc3}{hex\_corner\_offset}}(\mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \textcolor{keyword}{const}\& layout,}
+\DoxyCodeLine{553                                    \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} corner) \{}
+\DoxyCodeLine{554     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& m = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a21b57c9897062a175b9876327774b91a}{orientation}};}
+\DoxyCodeLine{555     \textcolor{keyword}{auto} \textcolor{keyword}{const}\& size = layout.\mbox{\hyperlink{structlava_1_1hex__layout_a92b22baeee3e4135c4888e28a5c4cd90}{size}};}
+\DoxyCodeLine{556     \textcolor{keyword}{auto} \textcolor{keyword}{const} angle = 2.}
+\DoxyCodeLine{557                        * std::numbers::pi\_v<r32> * (m.start\_angle -\/ corner)}
+\DoxyCodeLine{558                        / 6.f;}
+\DoxyCodeLine{559     \textcolor{keywordflow}{return} \{ size.\mbox{\hyperlink{structlava_1_1hex__point_aae7c7ae269a5a1b2739a4e8a3fb45601}{x}} * (\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}}) std::cos(angle),}
+\DoxyCodeLine{560              size.y * (\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}}) std::sin(angle) \};}
+\DoxyCodeLine{561 \}}
+\DoxyCodeLine{562 }
+\DoxyCodeLine{569 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__point_a139ad44afadb839dcf388aada3c9c453}{hex\_point::list}} \mbox{\hyperlink{hex_8hpp_ac22679ea22e6cd067c6518fb6e3d5d54}{hex\_polygon\_corners}}(\mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \textcolor{keyword}{const}\& layout,}
+\DoxyCodeLine{570                                            \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell) \{}
+\DoxyCodeLine{571     \mbox{\hyperlink{structlava_1_1hex__point_a139ad44afadb839dcf388aada3c9c453}{hex\_point::list}} corners = \{\};}
+\DoxyCodeLine{572     \textcolor{keyword}{auto} \textcolor{keyword}{const} center = \mbox{\hyperlink{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd}{hex\_to\_pixel}}(layout, cell);}
+\DoxyCodeLine{573     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0u; i < 6; ++i) \{}
+\DoxyCodeLine{574         \textcolor{keyword}{auto} \textcolor{keyword}{const} offset = \mbox{\hyperlink{hex_8hpp_a05b05a162ad716a49e8f5b7d36874bc3}{hex\_corner\_offset}}(layout, i);}
+\DoxyCodeLine{575         corners.push\_back(\{ center.x + offset.x,}
+\DoxyCodeLine{576                             center.y + offset.y \});}
+\DoxyCodeLine{577     \}}
+\DoxyCodeLine{578     \textcolor{keywordflow}{return} corners;}
+\DoxyCodeLine{579 \}}
+\DoxyCodeLine{580 }
+\DoxyCodeLine{588 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{hex_8hpp_a026a5d0c6b45925419404ac88ad8fb3a}{hex\_get\_corner}}(\mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \textcolor{keyword}{const}\& center,}
+\DoxyCodeLine{589                                 \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} size,}
+\DoxyCodeLine{590                                 \mbox{\hyperlink{types_8hpp_a4790140d63e38c1d099a9d8ce378b09f}{ui32}} corner) \{}
+\DoxyCodeLine{591     \textcolor{keyword}{auto} \textcolor{keyword}{const} angle\_deg = 60 * corner -\/ 30;}
+\DoxyCodeLine{592     \textcolor{keyword}{auto} \textcolor{keyword}{const} angle\_rad = std::numbers::pi\_v<r32> / 180 * angle\_deg;}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{594     \textcolor{keywordflow}{return} \{}
+\DoxyCodeLine{595         center.\mbox{\hyperlink{structlava_1_1hex__point_aae7c7ae269a5a1b2739a4e8a3fb45601}{x}} + size * std::cos(angle\_rad),}
+\DoxyCodeLine{596         center.\mbox{\hyperlink{structlava_1_1hex__point_a82cd6d623cf1818dc1e298c54a81a267}{y}} + size * std::sin(angle\_rad)}
+\DoxyCodeLine{597     \};}
+\DoxyCodeLine{598 \}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{603 \textcolor{keyword}{enum class} \mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}} : \mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} \{}
+\DoxyCodeLine{604     NE = 0,}
+\DoxyCodeLine{605     E,}
+\DoxyCodeLine{606     SE,}
+\DoxyCodeLine{607     SW,}
+\DoxyCodeLine{608     W,}
+\DoxyCodeLine{609     NW}
+\DoxyCodeLine{610 \};}
+\DoxyCodeLine{611 }
+\DoxyCodeLine{617 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{to\_string}}(\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}} direction) \{}
+\DoxyCodeLine{618     \textcolor{keywordflow}{switch} (direction) \{}
+\DoxyCodeLine{619     \textcolor{keywordflow}{case} hex\_cardinal\_direction::NE: \{}
+\DoxyCodeLine{620         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Northeast"{}};}
+\DoxyCodeLine{621     \}}
+\DoxyCodeLine{622     \textcolor{keywordflow}{case} hex\_cardinal\_direction::E: \{}
+\DoxyCodeLine{623         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}East"{}};}
+\DoxyCodeLine{624     \}}
+\DoxyCodeLine{625     \textcolor{keywordflow}{case} hex\_cardinal\_direction::SE: \{}
+\DoxyCodeLine{626         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Southeast"{}};}
+\DoxyCodeLine{627     \}}
+\DoxyCodeLine{628     \textcolor{keywordflow}{case} hex\_cardinal\_direction::SW: \{}
+\DoxyCodeLine{629         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Southwest"{}};}
+\DoxyCodeLine{630     \}}
+\DoxyCodeLine{631     \textcolor{keywordflow}{case} hex\_cardinal\_direction::W: \{}
+\DoxyCodeLine{632         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}West"{}};}
+\DoxyCodeLine{633     \}}
+\DoxyCodeLine{634     \textcolor{keywordflow}{case} hex\_cardinal\_direction::NW: \{}
+\DoxyCodeLine{635         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Northwest"{}};}
+\DoxyCodeLine{636     \}}
+\DoxyCodeLine{637     \}}
+\DoxyCodeLine{638 \}}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{641 \mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\_cell::list}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a0f36d2510bc406178144b0eb524e67ad}{hex\_cardinal\_directions}}\{}
+\DoxyCodeLine{642     \{ 1, 0, -\/1 \},}
+\DoxyCodeLine{643     \{ 0, 1, -\/1 \},}
+\DoxyCodeLine{644     \{ -\/1, 1, 0 \},}
+\DoxyCodeLine{645     \{ -\/1, 0, 1 \},}
+\DoxyCodeLine{646     \{ 0, -\/1, 1 \},}
+\DoxyCodeLine{647     \{ 1, -\/1, 0 \}}
+\DoxyCodeLine{648 \};}
+\DoxyCodeLine{649 }
+\DoxyCodeLine{655 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{hex_8hpp_adc50c7ed8b575685efb41a2b886fa29f}{hex\_get}}(\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}} direction) \{}
+\DoxyCodeLine{656     \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_a0f36d2510bc406178144b0eb524e67ad}{hex\_cardinal\_directions}}[(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}) direction];}
+\DoxyCodeLine{657 \}}
+\DoxyCodeLine{658 }
+\DoxyCodeLine{664 \textcolor{keyword}{inline} \mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}} \mbox{\hyperlink{hex_8hpp_a0a89eb0e36e8f5b7633e1dd99a7408ef}{hex\_opposite}}(\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}} direction) \{}
+\DoxyCodeLine{665     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}}) direction < 3)}
+\DoxyCodeLine{666         \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}}((\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) direction + 3);}
+\DoxyCodeLine{667     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{668         \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\_cardinal\_direction}}((\mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}}) direction -\/ 3);}
+\DoxyCodeLine{669 \}}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{672 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a0bc43ac417551495eb0dd2c587afa071}{hex\_inner\_radius\_factor}} = 0.866025404f;}
+\DoxyCodeLine{673 }
+\DoxyCodeLine{675 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \textcolor{keyword}{const} \mbox{\hyperlink{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}{hex\_default\_outer\_radius}} = 1.f;}
+\DoxyCodeLine{676 }
+\DoxyCodeLine{682 \textcolor{keyword}{inline} \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{hex_8hpp_a9dff4b533bda410b478b9529e27fe289}{hex\_calculate\_inner\_radius}}(\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} outer\_radius) \{}
+\DoxyCodeLine{683     \textcolor{keywordflow}{return} outer\_radius * \mbox{\hyperlink{hex_8hpp_a0bc43ac417551495eb0dd2c587afa071}{hex\_inner\_radius\_factor}};}
+\DoxyCodeLine{684 \}}
+\DoxyCodeLine{685 }
+\DoxyCodeLine{689 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1hex__grid}{hex\_grid}} \{}
+\DoxyCodeLine{691     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__grid_a835e161cfc4d3e3d5d69646a21e5b896}{inner\_radius}} = 0.f;}
+\DoxyCodeLine{692 }
+\DoxyCodeLine{694     \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} \mbox{\hyperlink{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}{outer\_radius}} = \mbox{\hyperlink{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}{hex\_default\_outer\_radius}};}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{697     \mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}} \mbox{\hyperlink{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d}{layout}};}
+\DoxyCodeLine{698 }
+\DoxyCodeLine{703     \mbox{\hyperlink{structlava_1_1hex__grid_af37592f301eba31bdd07708b66a85c2b}{hex\_grid}}(\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} radius = hex\_default\_outer\_radius)}
+\DoxyCodeLine{704     : \mbox{\hyperlink{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}{outer\_radius}}(radius) \{}
+\DoxyCodeLine{705         \mbox{\hyperlink{structlava_1_1hex__grid_a7f60fc1e3eacd0e5aed6b5863b5479bf}{update}}();}
+\DoxyCodeLine{706     \}}
+\DoxyCodeLine{707 }
+\DoxyCodeLine{712     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1hex__grid_a7f60fc1e3eacd0e5aed6b5863b5479bf}{update}}(\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\_orientation}} orientation = hex\_layout\_point\_y) \{}
+\DoxyCodeLine{713         \mbox{\hyperlink{structlava_1_1hex__grid_a835e161cfc4d3e3d5d69646a21e5b896}{inner\_radius}} = \mbox{\hyperlink{hex_8hpp_a9dff4b533bda410b478b9529e27fe289}{hex\_calculate\_inner\_radius}}(\mbox{\hyperlink{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}{outer\_radius}});}
+\DoxyCodeLine{714         \mbox{\hyperlink{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d}{layout}} = \{}
+\DoxyCodeLine{715             orientation,}
+\DoxyCodeLine{716             \{\},}
+\DoxyCodeLine{717             \{ \mbox{\hyperlink{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}{outer\_radius}}, \mbox{\hyperlink{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}{outer\_radius}} \}}
+\DoxyCodeLine{718         \};}
+\DoxyCodeLine{719     \}}
+\DoxyCodeLine{720 }
+\DoxyCodeLine{727     \mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \mbox{\hyperlink{structlava_1_1hex__grid_a4b6f1445db48e26bc0919090dc1b4d62}{find}}(\mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} x, \mbox{\hyperlink{types_8hpp_a3cd4807df88ec57bda5a1268480983cd}{r32}} y)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{728         \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9}{hex\_round}}(\mbox{\hyperlink{hex_8hpp_a904901a544a66a5b6226e373ab97da4c}{hex\_pixel\_to\_cell}}(\mbox{\hyperlink{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d}{layout}},}
+\DoxyCodeLine{729                                            \{ x, y \}));}
+\DoxyCodeLine{730     \}}
+\DoxyCodeLine{731 }
+\DoxyCodeLine{737     \mbox{\hyperlink{structlava_1_1hex__point}{hex\_point}} \mbox{\hyperlink{structlava_1_1hex__grid_ad91f76ece700e3308b1d199846dd3a7e}{to\_pixel}}(\mbox{\hyperlink{structlava_1_1hex__cell}{hex\_cell}} \textcolor{keyword}{const}\& cell)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{738         \textcolor{keywordflow}{return} \mbox{\hyperlink{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd}{hex\_to\_pixel}}(\mbox{\hyperlink{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d}{layout}}, cell);}
+\DoxyCodeLine{739     \}}
+\DoxyCodeLine{740 \};}
+\DoxyCodeLine{741 }
+\DoxyCodeLine{742 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

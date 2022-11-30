@@ -1,0 +1,132 @@
+\hypertarget{misc_8hpp_source}{}\doxysection{misc.\+hpp}
+\label{misc_8hpp_source}\index{liblava/core/misc.hpp@{liblava/core/misc.hpp}}
+\mbox{\hyperlink{misc_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{22 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{misc_8hpp_a68c5d5751dad0b46aa8af3022c0ac84b}{exists}}(\mbox{\hyperlink{types_8hpp_adcee78dcb3f8f69f189c05c3a162b7db}{names\_ref}} list, \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} item) \{}
+\DoxyCodeLine{23     \textcolor{keyword}{auto} itr = std::find\_if(list.begin(), list.end(),}
+\DoxyCodeLine{24                             [\&](\mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} entry) \{ return strcmp(entry, item) == 0; \});}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} itr != list.end();}
+\DoxyCodeLine{26 \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{34 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{35 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{misc_8hpp_a3ea11a6e491adb92e302e6dd9b80e47b}{remove}}(std::vector<T>\& list, T item) \{}
+\DoxyCodeLine{36     list.erase(std::remove(list.begin(), list.end(), item), list.end());}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{46 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{47 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{misc_8hpp_a3e180fc39604b9da8475bfa7539a513b}{contains}}(std::vector<T>\& list, T item) \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} std::find(list.begin(), list.end(), item) != list.end();}
+\DoxyCodeLine{49 \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{57 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{58 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{misc_8hpp_a4f4ed7173bd51a56474672dda78f7818}{append}}(std::vector<T>\& list, std::vector<T>\& items) \{}
+\DoxyCodeLine{59     list.insert(list.end(), items.begin(), items.end());}
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}{ltrim}}(\textcolor{keywordtype}{string}\& s) \{}
+\DoxyCodeLine{67     s.erase(s.begin(), std::find\_if(s.begin(), s.end(), [](\mbox{\hyperlink{types_8hpp_aeda9d3d4896f38d4668749d0e2201972}{uchar}} ch) \{}
+\DoxyCodeLine{68                 return !std::isspace(ch);}
+\DoxyCodeLine{69             \}));}
+\DoxyCodeLine{70 \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}{rtrim}}(\textcolor{keywordtype}{string}\& s) \{}
+\DoxyCodeLine{77     s.erase(std::find\_if(s.rbegin(), s.rend(), [](\mbox{\hyperlink{types_8hpp_aeda9d3d4896f38d4668749d0e2201972}{uchar}} ch) \{}
+\DoxyCodeLine{78                 return !std::isspace(ch);}
+\DoxyCodeLine{79             \}).base(),}
+\DoxyCodeLine{80             s.end());}
+\DoxyCodeLine{81 \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{87 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{misc_8hpp_a3097d82814968317612b1b45be15de96}{trim}}(\textcolor{keywordtype}{string}\& s) \{}
+\DoxyCodeLine{88     \mbox{\hyperlink{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}{ltrim}}(s);}
+\DoxyCodeLine{89     \mbox{\hyperlink{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}{rtrim}}(s);}
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{97 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_a613239a66fbe6be9c236ed1260822347}{ltrim\_copy}}(\textcolor{keywordtype}{string} s) \{}
+\DoxyCodeLine{98     \mbox{\hyperlink{misc_8hpp_ab31ba002b83ccdc71e841997e7d64013}{ltrim}}(s);}
+\DoxyCodeLine{99     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{100 \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_a79ed3a492185c4147cd8cad3f7480126}{rtrim\_copy}}(\textcolor{keywordtype}{string} s) \{}
+\DoxyCodeLine{108     \mbox{\hyperlink{misc_8hpp_a41e3cf0442666de6a25b6b134eff73b4}{rtrim}}(s);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{110 \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{117 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_a164b31b1e097ef980b8d408126783fe6}{trim\_copy}}(\textcolor{keywordtype}{string} s) \{}
+\DoxyCodeLine{118     \mbox{\hyperlink{misc_8hpp_a3097d82814968317612b1b45be15de96}{trim}}(s);}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{120 \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{128 \textcolor{keyword}{inline} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}{remove\_chars}}(\textcolor{keywordtype}{string}\& s, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} chars) \{}
+\DoxyCodeLine{129     s.erase(remove\_if(s.begin(), s.end(), [\&chars](\mbox{\hyperlink{types_8hpp_a192a4a4239d9f7e6e79ea3034700d144}{name\_ref}} c) \{}
+\DoxyCodeLine{130                 return chars.find(c) != string::npos;}
+\DoxyCodeLine{131             \}),}
+\DoxyCodeLine{132             s.end());}
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{134 \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{137 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{misc_8hpp_a9877ace319736a9bfc950fee3a6b9fe8}{\_punctuation\_marks\_}} = \textcolor{stringliteral}{"{}\(\backslash\)"{}\(\backslash\)'"{}};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{144 \textcolor{keyword}{inline} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{misc_8hpp_a685c6acbad52fbad672ed983c0c3c509}{remove\_punctuation\_marks}}(\textcolor{keywordtype}{string}\& s) \{}
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} \mbox{\hyperlink{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}{remove\_chars}}(s, \mbox{\hyperlink{misc_8hpp_a9877ace319736a9bfc950fee3a6b9fe8}{\_punctuation\_marks\_}});}
+\DoxyCodeLine{146 \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{154 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_ad900a8cab7ab57c4ad78c5334c78a9c9}{remove\_chars\_copy}}(\textcolor{keywordtype}{string} s, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} chars) \{}
+\DoxyCodeLine{155     \textcolor{keywordflow}{return} \mbox{\hyperlink{misc_8hpp_af97c6f296407bd8c2b7049fd0b06b73d}{remove\_chars}}(s, chars);}
+\DoxyCodeLine{156 \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{163 \textcolor{keyword}{inline} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{misc_8hpp_a6baf2dbae56b17e410e0c29f0be7eacc}{remove\_nondigit}}(\textcolor{keywordtype}{string}\& s) \{}
+\DoxyCodeLine{164     s.erase(remove\_if(s.begin(), s.end(), [](\mbox{\hyperlink{types_8hpp_a192a4a4239d9f7e6e79ea3034700d144}{name\_ref}} c) \{}
+\DoxyCodeLine{165                 return !isdigit(c);}
+\DoxyCodeLine{166             \}),}
+\DoxyCodeLine{167             s.end());}
+\DoxyCodeLine{168     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{169 \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{176 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_aa01e067bd89cde00a300f326f9d5a5a9}{remove\_nondigit\_copy}}(\textcolor{keywordtype}{string} s) \{}
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \mbox{\hyperlink{misc_8hpp_a6baf2dbae56b17e410e0c29f0be7eacc}{remove\_nondigit}}(s);}
+\DoxyCodeLine{178 \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{186 \textcolor{keyword}{inline} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{misc_8hpp_a0cd915bfde1f60eb370ed9b1552f3191}{remove\_chars\_if\_not}}(\textcolor{keywordtype}{string}\& s, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} allowed) \{}
+\DoxyCodeLine{187     s.erase(remove\_if(s.begin(), s.end(), [\&allowed](\mbox{\hyperlink{types_8hpp_a192a4a4239d9f7e6e79ea3034700d144}{name\_ref}} c) \{}
+\DoxyCodeLine{188                 return allowed.find(c) == string::npos;}
+\DoxyCodeLine{189             \}),}
+\DoxyCodeLine{190             s.end());}
+\DoxyCodeLine{191     \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{192 \}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{200 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{misc_8hpp_a4d9a6856ce0d2ae7bb67c157cc74bcd3}{remove\_chars\_if\_not\_copy}}(\textcolor{keywordtype}{string} s, \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} allowed) \{}
+\DoxyCodeLine{201     \textcolor{keywordflow}{return} \mbox{\hyperlink{misc_8hpp_a0cd915bfde1f60eb370ed9b1552f3191}{remove\_chars\_if\_not}}(s, allowed);}
+\DoxyCodeLine{202 \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{208 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{209 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\_wrapper}} \{}
+\DoxyCodeLine{211     T\& \mbox{\hyperlink{structlava_1_1reversion__wrapper_aa168f8481070fdc72b96fc0b60d629d5}{iterable}};}
+\DoxyCodeLine{212 \};}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{220 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{221 \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{misc_8hpp_a610f848d04b46c2b7b7fe1b10d233859}{begin}}(\mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\_wrapper<T>}} w) \{}
+\DoxyCodeLine{222     \textcolor{keywordflow}{return} std::rbegin(w.iterable);}
+\DoxyCodeLine{223 \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{231 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{232 \textcolor{keyword}{inline} \textcolor{keyword}{auto} \mbox{\hyperlink{misc_8hpp_a25642fea583db16ad4d444ba91c0821c}{end}}(\mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\_wrapper<T>}} w) \{}
+\DoxyCodeLine{233     \textcolor{keywordflow}{return} std::rend(w.iterable);}
+\DoxyCodeLine{234 \}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{242 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{243 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1reversion__wrapper}{reversion\_wrapper<T>}} \mbox{\hyperlink{misc_8hpp_a6be2bfbc12c6162b059b375f84fa988a}{reverse}}(T\&\& iterable) \{}
+\DoxyCodeLine{244     \textcolor{keywordflow}{return} \{ iterable \};}
+\DoxyCodeLine{245 \}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

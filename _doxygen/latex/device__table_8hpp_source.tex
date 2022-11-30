@@ -1,0 +1,344 @@
+\hypertarget{device__table_8hpp_source}{}\doxysection{device\+\_\+table.\+hpp}
+\label{device__table_8hpp_source}\index{liblava/base/device\_table.hpp@{liblava/base/device\_table.hpp}}
+\mbox{\hyperlink{device__table_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{memory_8hpp}{liblava/base/memory.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1device__table}{device\_table}} \{}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a6485fcde506d9a6e3510091921efe673}{load\_table}}() \{}
+\DoxyCodeLine{22         volkLoadDeviceTable(\&\mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}, \mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}});}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ab9605d308a708e8b3f4265d8a3eaec0f}{vkCreateImageView}}(\textcolor{keyword}{const} VkImageViewCreateInfo* pCreateInfo,}
+\DoxyCodeLine{29                                 \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{30                                 VkImageView* pView) \{}
+\DoxyCodeLine{31         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateImageView(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{32                                               pCreateInfo,}
+\DoxyCodeLine{33                                               pAllocator,}
+\DoxyCodeLine{34                                               pView);}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_aef2eaad651f261618611d22f0fb94626}{vkCreateImageView}}(\textcolor{keyword}{const} VkImageViewCreateInfo* pCreateInfo,}
+\DoxyCodeLine{42                                 VkImageView* pView) \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_ab9605d308a708e8b3f4265d8a3eaec0f}{vkCreateImageView}}(pCreateInfo,}
+\DoxyCodeLine{44                                  \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{45                                  pView);}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ab852b5ff8b09ece6fb864658f7dfd39b}{vkCreateSampler}}(\textcolor{keyword}{const} VkSamplerCreateInfo* pCreateInfo,}
+\DoxyCodeLine{52                               \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{53                               VkSampler* pSampler) \{}
+\DoxyCodeLine{54         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateSampler(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{55                                             pCreateInfo,}
+\DoxyCodeLine{56                                             pAllocator,}
+\DoxyCodeLine{57                                             pSampler);}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a110d109b567d5db1b1d2b2b4e76a2246}{vkCreateSampler}}(\textcolor{keyword}{const} VkSamplerCreateInfo* pCreateInfo,}
+\DoxyCodeLine{65                               VkSampler* pSampler) \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_ab852b5ff8b09ece6fb864658f7dfd39b}{vkCreateSampler}}(pCreateInfo,}
+\DoxyCodeLine{67                                \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{68                                pSampler);}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a12f6dafcb7308c0b688504636ab289d8}{vkCreateShaderModule}}(\textcolor{keyword}{const} VkShaderModuleCreateInfo* pCreateInfo,}
+\DoxyCodeLine{75                                    \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{76                                    VkShaderModule* pShaderModule) \{}
+\DoxyCodeLine{77         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateShaderModule(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{78                                                  pCreateInfo,}
+\DoxyCodeLine{79                                                  pAllocator,}
+\DoxyCodeLine{80                                                  pShaderModule);}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_acb12213e27a3fac40fc35cc9f55d9080}{vkCreateShaderModule}}(\textcolor{keyword}{const} VkShaderModuleCreateInfo* pCreateInfo,}
+\DoxyCodeLine{88                                    VkShaderModule* pShaderModule) \{}
+\DoxyCodeLine{89         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_a12f6dafcb7308c0b688504636ab289d8}{vkCreateShaderModule}}(pCreateInfo,}
+\DoxyCodeLine{90                                     \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{91                                     pShaderModule);}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{97     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ace420dd11554de96dc86707ccf5c5cb6}{vkCreateFence}}(\textcolor{keyword}{const} VkFenceCreateInfo* pCreateInfo,}
+\DoxyCodeLine{98                             \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{99                             VkFence* pFence) \{}
+\DoxyCodeLine{100         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateFence(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{101                                           pCreateInfo,}
+\DoxyCodeLine{102                                           pAllocator,}
+\DoxyCodeLine{103                                           pFence);}
+\DoxyCodeLine{104         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a0b08e70562ea67ef07f4917d88152dd2}{vkCreateFence}}(\textcolor{keyword}{const} VkFenceCreateInfo* pCreateInfo,}
+\DoxyCodeLine{111                             VkFence* pFence) \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_ace420dd11554de96dc86707ccf5c5cb6}{vkCreateFence}}(pCreateInfo,}
+\DoxyCodeLine{113                              \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{114                              pFence);}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{120     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ab64d37f196d30dc191d36e5c33f5cd76}{vkCreateSemaphore}}(\textcolor{keyword}{const} VkSemaphoreCreateInfo* pCreateInfo,}
+\DoxyCodeLine{121                                 \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{122                                 VkSemaphore* pSemaphore) \{}
+\DoxyCodeLine{123         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateSemaphore(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{124                                               pCreateInfo,}
+\DoxyCodeLine{125                                               pAllocator,}
+\DoxyCodeLine{126                                               pSemaphore);}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{133     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a184c655d31f896a706b8437d38d45e8c}{vkCreateSemaphore}}(\textcolor{keyword}{const} VkSemaphoreCreateInfo* pCreateInfo,}
+\DoxyCodeLine{134                                 VkSemaphore* pSemaphore) \{}
+\DoxyCodeLine{135         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_ab64d37f196d30dc191d36e5c33f5cd76}{vkCreateSemaphore}}(pCreateInfo,}
+\DoxyCodeLine{136                                  \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{137                                  pSemaphore);}
+\DoxyCodeLine{138     \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{143     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_aa7c0adca236066bc65a7a3d4fd5470ed}{vkWaitForFences}}(uint32\_t fenceCount,}
+\DoxyCodeLine{144                               \textcolor{keyword}{const} VkFence* pFences,}
+\DoxyCodeLine{145                               VkBool32 waitAll,}
+\DoxyCodeLine{146                               uint64\_t timeout) \{}
+\DoxyCodeLine{147         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkWaitForFences(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{148                                             fenceCount,}
+\DoxyCodeLine{149                                             pFences,}
+\DoxyCodeLine{150                                             waitAll,}
+\DoxyCodeLine{151                                             timeout);}
+\DoxyCodeLine{152         \textcolor{keywordflow}{if} ((result == VK\_TIMEOUT) \&\& (timeout != UINT64\_MAX))}
+\DoxyCodeLine{153             \textcolor{keywordflow}{return} \{ \textcolor{keyword}{false}, result \};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{161     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_adef9da910b0272301e340556fb6202df}{vkResetFences}}(uint32\_t fenceCount,}
+\DoxyCodeLine{162                             \textcolor{keyword}{const} VkFence* pFences) \{}
+\DoxyCodeLine{163         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkResetFences(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{164                                           fenceCount,}
+\DoxyCodeLine{165                                           pFences);}
+\DoxyCodeLine{166         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{172     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ad19039936fdba57790ef1abedcfd7a4b}{vkQueueSubmit}}(VkQueue \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{173                             uint32\_t submitCount,}
+\DoxyCodeLine{174                             \textcolor{keyword}{const} VkSubmitInfo* pSubmits,}
+\DoxyCodeLine{175                             VkFence fence) \{}
+\DoxyCodeLine{176         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkQueueSubmit(\mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{177                                           submitCount,}
+\DoxyCodeLine{178                                           pSubmits,}
+\DoxyCodeLine{179                                           fence);}
+\DoxyCodeLine{180         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{181     \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{186     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_afd39bd9756ec036ee2c587b5579fc024}{vkAcquireNextImageKHR}}(VkSwapchainKHR \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{187                                     uint64\_t timeout,}
+\DoxyCodeLine{188                                     VkSemaphore semaphore,}
+\DoxyCodeLine{189                                     VkFence fence,}
+\DoxyCodeLine{190                                     uint32\_t* pImageIndex) \{}
+\DoxyCodeLine{191         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkAcquireNextImageKHR(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{192                                                   \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{193                                                   timeout,}
+\DoxyCodeLine{194                                                   semaphore,}
+\DoxyCodeLine{195                                                   fence,}
+\DoxyCodeLine{196                                                   pImageIndex);}
+\DoxyCodeLine{197         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{203     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ac9136218e3ba69707769209b45b58f55}{vkQueuePresentKHR}}(VkQueue \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{204                                 \textcolor{keyword}{const} VkPresentInfoKHR* pPresentInfo) \{}
+\DoxyCodeLine{205         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkQueuePresentKHR(\mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{206                                               pPresentInfo);}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{213     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a76d5dd53c1f3076c68c43ccc25bd012c}{vkCreateSwapchainKHR}}(\textcolor{keyword}{const} VkSwapchainCreateInfoKHR* pCreateInfo,}
+\DoxyCodeLine{214                                    \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{215                                    VkSwapchainKHR* pSwapchain) \{}
+\DoxyCodeLine{216         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateSwapchainKHR(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{217                                                  pCreateInfo,}
+\DoxyCodeLine{218                                                  pAllocator,}
+\DoxyCodeLine{219                                                  pSwapchain);}
+\DoxyCodeLine{220         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{221     \}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{226     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a0c4548c0e147bfb52c3a80f92884b7d9}{vkCreateSwapchainKHR}}(\textcolor{keyword}{const} VkSwapchainCreateInfoKHR* pCreateInfo,}
+\DoxyCodeLine{227                                    VkSwapchainKHR* pSwapchain) \{}
+\DoxyCodeLine{228         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_a76d5dd53c1f3076c68c43ccc25bd012c}{vkCreateSwapchainKHR}}(pCreateInfo,}
+\DoxyCodeLine{229                                     \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{230                                     pSwapchain);}
+\DoxyCodeLine{231     \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{236     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a44f74c998ac94fc7740b218a76836e48}{vkDestroySwapchainKHR}}(VkSwapchainKHR \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{237                                \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{238         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroySwapchainKHR(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{239                                     \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{240                                     pAllocator);}
+\DoxyCodeLine{241     \}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{246     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a6cf01e1682a6013ed4a3746899b370e2}{vkGetSwapchainImagesKHR}}(VkSwapchainKHR \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{247                                       uint32\_t* pSwapchainImageCount, VkImage* pSwapchainImages) \{}
+\DoxyCodeLine{248         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkGetSwapchainImagesKHR(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{249                                                     \mbox{\hyperlink{structlava_1_1swapchain}{swapchain}},}
+\DoxyCodeLine{250                                                     pSwapchainImageCount,}
+\DoxyCodeLine{251                                                     pSwapchainImages);}
+\DoxyCodeLine{252         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{253     \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{258     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_a9a8c35c91887b67800b79ab49b0afd19}{vkCreateCommandPool}}(\textcolor{keyword}{const} VkCommandPoolCreateInfo* pCreateInfo,}
+\DoxyCodeLine{259                                   \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator,}
+\DoxyCodeLine{260                                   VkCommandPool* pCommandPool) \{}
+\DoxyCodeLine{261         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkCreateCommandPool(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{262                                                 pCreateInfo,}
+\DoxyCodeLine{263                                                 pAllocator,}
+\DoxyCodeLine{264                                                 pCommandPool);}
+\DoxyCodeLine{265         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{266     \}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{271     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_af2535c85ababbe9ef4751dffd72d7786}{vkCreateCommandPool}}(\textcolor{keyword}{const} VkCommandPoolCreateInfo* pCreateInfo,}
+\DoxyCodeLine{272                                   VkCommandPool* pCommandPool) \{}
+\DoxyCodeLine{273         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_a9a8c35c91887b67800b79ab49b0afd19}{vkCreateCommandPool}}(pCreateInfo,}
+\DoxyCodeLine{274                                    \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc(),}
+\DoxyCodeLine{275                                    pCommandPool);}
+\DoxyCodeLine{276     \}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{281     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_ac597c59730634ceda15077c5c90df561}{vkCreateCommandPool}}(\mbox{\hyperlink{types_8hpp_a2e2665dfc02f242d2deb531c6e936464}{index}} queue\_family,}
+\DoxyCodeLine{282                                   VkCommandPool* pCommandPool) \{}
+\DoxyCodeLine{283         VkCommandPoolCreateInfo create\_info\{}
+\DoxyCodeLine{284             .sType = VK\_STRUCTURE\_TYPE\_COMMAND\_POOL\_CREATE\_INFO,}
+\DoxyCodeLine{285             .queueFamilyIndex = queue\_family,}
+\DoxyCodeLine{286         \};}
+\DoxyCodeLine{287         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_a9a8c35c91887b67800b79ab49b0afd19}{vkCreateCommandPool}}(\&create\_info,}
+\DoxyCodeLine{288                                    pCommandPool);}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{294     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_aa0d68e90568a79083ba2909b3b2a5cd9}{vkAllocateCommandBuffers}}(\textcolor{keyword}{const} VkCommandBufferAllocateInfo* pAllocateInfo,}
+\DoxyCodeLine{295                                        VkCommandBuffer* pCommandBuffers) \{}
+\DoxyCodeLine{296         \textcolor{keyword}{auto} result = \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkAllocateCommandBuffers(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{297                                                      pAllocateInfo,}
+\DoxyCodeLine{298                                                      pCommandBuffers);}
+\DoxyCodeLine{299         \textcolor{keywordflow}{return} \{ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(result), result \};}
+\DoxyCodeLine{300     \}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{305     \mbox{\hyperlink{structlava_1_1vk__result}{vk\_result}} \mbox{\hyperlink{structlava_1_1device__table_af7a2f81296f9b39fb0827524ae441013}{vkAllocateCommandBuffers}}(VkCommandPool commandPool,}
+\DoxyCodeLine{306                                        uint32\_t commandBufferCount,}
+\DoxyCodeLine{307                                        VkCommandBuffer* pCommandBuffers,}
+\DoxyCodeLine{308                                        VkCommandBufferLevel level = VK\_COMMAND\_BUFFER\_LEVEL\_PRIMARY) \{}
+\DoxyCodeLine{309         VkCommandBufferAllocateInfo alloc\_info\{}
+\DoxyCodeLine{310             .sType = VK\_STRUCTURE\_TYPE\_COMMAND\_BUFFER\_ALLOCATE\_INFO,}
+\DoxyCodeLine{311             .commandPool = commandPool,}
+\DoxyCodeLine{312             .level = level,}
+\DoxyCodeLine{313             .commandBufferCount = commandBufferCount,}
+\DoxyCodeLine{314         \};}
+\DoxyCodeLine{315         \textcolor{keywordflow}{return} \mbox{\hyperlink{structlava_1_1device__table_aa0d68e90568a79083ba2909b3b2a5cd9}{vkAllocateCommandBuffers}}(\&alloc\_info,}
+\DoxyCodeLine{316                                         pCommandBuffers);}
+\DoxyCodeLine{317     \}}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{322     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a4a50fe66466940a0fb52e778490f3d4d}{vkDestroyImageView}}(VkImageView imageView,}
+\DoxyCodeLine{323                             \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{324         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroyImageView(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{325                                  imageView,}
+\DoxyCodeLine{326                                  pAllocator);}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{332     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a11175cb5263c36f2a4cfbd9acfd7a0d7}{vkDestroyFence}}(VkFence fence,}
+\DoxyCodeLine{333                         \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{334         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroyFence(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{335                              fence,}
+\DoxyCodeLine{336                              pAllocator);}
+\DoxyCodeLine{337     \}}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{342     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a86814faa0636a23a5eedb3a85e27bb2f}{vkDestroySemaphore}}(VkSemaphore semaphore,}
+\DoxyCodeLine{343                             \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{344         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroySemaphore(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{345                                  semaphore,}
+\DoxyCodeLine{346                                  pAllocator);}
+\DoxyCodeLine{347     \}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{352     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a3571dfe2e1a1a885dda6cdbb89a16b76}{vkFreeCommandBuffers}}(VkCommandPool commandPool,}
+\DoxyCodeLine{353                               uint32\_t commandBufferCount,}
+\DoxyCodeLine{354                               \textcolor{keyword}{const} VkCommandBuffer* pCommandBuffers) \{}
+\DoxyCodeLine{355         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkFreeCommandBuffers(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{356                                    commandPool,}
+\DoxyCodeLine{357                                    commandBufferCount,}
+\DoxyCodeLine{358                                    pCommandBuffers);}
+\DoxyCodeLine{359     \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{364     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a24a2a350988afa38eb13a2f8485ce9a1}{vkDestroyCommandPool}}(VkCommandPool commandPool,}
+\DoxyCodeLine{365                               \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{366         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroyCommandPool(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{367                                    commandPool,}
+\DoxyCodeLine{368                                    pAllocator);}
+\DoxyCodeLine{369     \}}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{374     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a82932056a1901a4bff4608079b0e54ed}{vkDestroySampler}}(VkSampler sampler,}
+\DoxyCodeLine{375                           \textcolor{keyword}{const} VkAllocationCallbacks* pAllocator = \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{memory::instance}}().alloc()) \{}
+\DoxyCodeLine{376         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkDestroySampler(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{377                                sampler,}
+\DoxyCodeLine{378                                pAllocator);}
+\DoxyCodeLine{379     \}}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{384     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(uint32\_t descriptorWriteCount,}
+\DoxyCodeLine{385                                 \textcolor{keyword}{const} VkWriteDescriptorSet* pDescriptorWrites,}
+\DoxyCodeLine{386                                 uint32\_t descriptorCopyCount = 0,}
+\DoxyCodeLine{387                                 \textcolor{keyword}{const} VkCopyDescriptorSet* pDescriptorCopies = \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{388         \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}}.vkUpdateDescriptorSets(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}},}
+\DoxyCodeLine{389                                      descriptorWriteCount,}
+\DoxyCodeLine{390                                      pDescriptorWrites,}
+\DoxyCodeLine{391                                      descriptorCopyCount,}
+\DoxyCodeLine{392                                      pDescriptorCopies);}
+\DoxyCodeLine{393     \}}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{398     \textcolor{keyword}{template}<std::\textcolor{keywordtype}{size\_t} SIZE>}
+\DoxyCodeLine{399     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_ac5b1bdf0e6788c38aa7ca5b5118b8e21}{vkUpdateDescriptorSets}}(std::array<VkWriteDescriptorSet, SIZE> \textcolor{keyword}{const}\& descriptor\_writes) \{}
+\DoxyCodeLine{400         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_writes.size()),}
+\DoxyCodeLine{401                                descriptor\_writes.data());}
+\DoxyCodeLine{402     \}}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{407     \textcolor{keyword}{template}<std::\textcolor{keywordtype}{size\_t} SIZE>}
+\DoxyCodeLine{408     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_ab17fd51c1c6392952327467a3ee11977}{vkUpdateDescriptorSets}}(std::array<VkCopyDescriptorSet, SIZE> \textcolor{keyword}{const}\& descriptor\_copies) \{}
+\DoxyCodeLine{409         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(0,}
+\DoxyCodeLine{410                                \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{411                                \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_copies.size()),}
+\DoxyCodeLine{412                                descriptor\_copies.data());}
+\DoxyCodeLine{413     \}}
+\DoxyCodeLine{414 }
+\DoxyCodeLine{418     \textcolor{keyword}{template}<std::\textcolor{keywordtype}{size\_t} WRITE\_SIZE, std::\textcolor{keywordtype}{size\_t} COPY\_SIZE>}
+\DoxyCodeLine{419     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a6e5ebced33181a52e33baa1ae73f0a0b}{vkUpdateDescriptorSets}}(std::array<VkWriteDescriptorSet, WRITE\_SIZE> \textcolor{keyword}{const}\& descriptor\_writes,}
+\DoxyCodeLine{420                                 std::array<VkCopyDescriptorSet, COPY\_SIZE> \textcolor{keyword}{const}\& descriptor\_copies) \{}
+\DoxyCodeLine{421         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_writes.size()),}
+\DoxyCodeLine{422                                descriptor\_writes.data(),}
+\DoxyCodeLine{423                                \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_copies.size()),}
+\DoxyCodeLine{424                                descriptor\_copies.data());}
+\DoxyCodeLine{425     \}}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{430     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a669ace4d084d396f15a54ca4c8e6cdf2}{vkUpdateDescriptorSets}}(std::initializer\_list<VkWriteDescriptorSet> descriptor\_writes) \{}
+\DoxyCodeLine{431         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_writes.size()),}
+\DoxyCodeLine{432                                descriptor\_writes.begin());}
+\DoxyCodeLine{433     \}}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{438     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a8fa8a5d4f870928bcd13da11a8f2632a}{vkUpdateDescriptorSets}}(std::initializer\_list<VkCopyDescriptorSet> descriptor\_copies) \{}
+\DoxyCodeLine{439         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(0,}
+\DoxyCodeLine{440                                \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{441                                \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_copies.size()),}
+\DoxyCodeLine{442                                descriptor\_copies.begin());}
+\DoxyCodeLine{443     \}}
+\DoxyCodeLine{444 }
+\DoxyCodeLine{448     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1device__table_a6283dfdf1eb4ce3f09e7e9aec64cd5ec}{vkUpdateDescriptorSets}}(std::initializer\_list<VkWriteDescriptorSet> descriptor\_writes,}
+\DoxyCodeLine{449                                 std::initializer\_list<VkCopyDescriptorSet> descriptor\_copies) \{}
+\DoxyCodeLine{450         \mbox{\hyperlink{structlava_1_1device__table_abbeacc45f13d0fd86a7e99312367f74e}{vkUpdateDescriptorSets}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_writes.size()),}
+\DoxyCodeLine{451                                descriptor\_writes.begin(),}
+\DoxyCodeLine{452                                \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(descriptor\_copies.size()),}
+\DoxyCodeLine{453                                descriptor\_copies.begin());}
+\DoxyCodeLine{454     \}}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{457     VkDevice \mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{460     VolkDeviceTable \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}} = \{\};}
+\DoxyCodeLine{461 \};}
+\DoxyCodeLine{462 }
+\DoxyCodeLine{463 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

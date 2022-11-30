@@ -1,0 +1,298 @@
+\hypertarget{structlava_1_1pipeline}{}\doxysection{lava\+::pipeline Struct Reference}
+\label{structlava_1_1pipeline}\index{lava::pipeline@{lava::pipeline}}
+
+
+Pipeline.  
+
+
+
+
+{\ttfamily \#include $<$pipeline.\+hpp$>$}
+
+Inheritance diagram for lava\+::pipeline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{structlava_1_1pipeline}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1pipeline_1_1shader__stage}{shader\+\_\+stage}}
+\begin{DoxyCompactList}\small\item\em Shader stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a6dce1fc42907b5b34ec28bc96e224296}\label{structlava_1_1pipeline_a6dce1fc42907b5b34ec28bc96e224296}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}} $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_ab7b88948cf86f2b7fd94de17ac19c722}\label{structlava_1_1pipeline_ab7b88948cf86f2b7fd94de17ac19c722}} 
+using {\bfseries list} = std\+::vector$<$ \mbox{\hyperlink{structlava_1_1pipeline_a6dce1fc42907b5b34ec28bc96e224296}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em List of pipelines. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a2cdd9f46ddc9b493421680c53a2a5f68}\label{structlava_1_1pipeline_a2cdd9f46ddc9b493421680c53a2a5f68}} 
+using {\bfseries process\+\_\+func} = std\+::function$<$ void(Vk\+Command\+Buffer)$>$
+\begin{DoxyCompactList}\small\item\em Pipeline process function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1pipeline_a25764a7f5b611fcc93406ad7820e04e7}{pipeline}} (\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Cache \mbox{\hyperlink{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}{pipeline\+\_\+cache}}=0)
+\begin{DoxyCompactList}\small\item\em Construct a new pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_aa558324b8630b342dd0ece7dadaae821}\label{structlava_1_1pipeline_aa558324b8630b342dd0ece7dadaae821}} 
+{\bfseries $\sim$pipeline} () override
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a9efe4f61250e2e1cca7d64530691eab0}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_ad75a43fefcc8feae90feee4e0ccf097b}\label{structlava_1_1pipeline_ad75a43fefcc8feae90feee4e0ccf097b}} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structlava_1_1pipeline_a4fbab953063b31a88987dd050ee9289c}{bind}} (Vk\+Command\+Buffer cmd\+\_\+buf)=0
+\begin{DoxyCompactList}\small\item\em Bind the pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_a8917bd488924a0c7c509535ac6d45769}{set\+\_\+active}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set pipeline active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_af1ed6d08db3d755b3011fcb8b423f416}{activated}} () const
+\begin{DoxyCompactList}\small\item\em Check if pipeline is active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_acd76893861c4cfd8f840280613d3479f}\label{structlava_1_1pipeline_acd76893861c4cfd8f840280613d3479f}} 
+void {\bfseries toggle} ()
+\begin{DoxyCompactList}\small\item\em Toggle activation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_ad5b46469c6de88ce4bde0f9cbff570b4}{set\+\_\+auto\+\_\+bind}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set auto bind. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a102ce500ee05cfdf242423703188b9d7}{auto\+\_\+bind}} () const
+\begin{DoxyCompactList}\small\item\em Check if auto bind is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a9246051bc496565d046631ac64cd8a26}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if pipeline is ready. \end{DoxyCompactList}\item 
+Vk\+Pipeline \mbox{\hyperlink{structlava_1_1pipeline_a3e37bdce392138b2058e7a811fcbcbb9}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1pipeline_a57a88dd0de42ea3c87ef0da6202b0510}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} \mbox{\hyperlink{structlava_1_1pipeline_a46f127c294d5ebbad1c03f6697a83ffc}{get\+\_\+layout}} () const
+\begin{DoxyCompactList}\small\item\em Get the layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_aa6eb4e95f7d7d1602e3961388e849226}{set\+\_\+layout}} (\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} const \&value)
+\begin{DoxyCompactList}\small\item\em Set the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a27840fc2c5f4ea19de106acc6fe631cc}\label{structlava_1_1pipeline_a27840fc2c5f4ea19de106acc6fe631cc}} 
+\mbox{\hyperlink{structlava_1_1pipeline_a2cdd9f46ddc9b493421680c53a2a5f68}{process\+\_\+func}} {\bfseries on\+\_\+process}
+\begin{DoxyCompactList}\small\item\em Called on pipeline process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{structlava_1_1pipeline_a1e10d18f9f3eaeece74d6110f6b1b59e}{setup}} ()=0
+\begin{DoxyCompactList}\small\item\em Set up the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a0e1556ac325e63b3c5f0e705bfbf42d3}\label{structlava_1_1pipeline_a0e1556ac325e63b3c5f0e705bfbf42d3}} 
+virtual void {\bfseries teardown} ()=0
+\begin{DoxyCompactList}\small\item\em Tear down the pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a34f88977369205344e4284b95575a78f}\label{structlava_1_1pipeline_a34f88977369205344e4284b95575a78f}} 
+\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} {\bfseries device} = nullptr
+\begin{DoxyCompactList}\small\item\em Vulkan device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a2235eb4d4091a543cc86a55dcafa78f2}\label{structlava_1_1pipeline_a2235eb4d4091a543cc86a55dcafa78f2}} 
+Vk\+Pipeline {\bfseries vk\+\_\+pipeline} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\begin{DoxyCompactList}\small\item\em Vulkan pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}\label{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}} 
+Vk\+Pipeline\+Cache {\bfseries pipeline\+\_\+cache} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\begin{DoxyCompactList}\small\item\em Vulkan pipeline cache. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1pipeline_a9f7d74f001670e0b91e4db9031906f35}\label{structlava_1_1pipeline_a9f7d74f001670e0b91e4db9031906f35}} 
+\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} {\bfseries layout}
+\begin{DoxyCompactList}\small\item\em Pipeline layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pipeline. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structlava_1_1pipeline_a25764a7f5b611fcc93406ad7820e04e7}\label{structlava_1_1pipeline_a25764a7f5b611fcc93406ad7820e04e7}} 
+\index{lava::pipeline@{lava::pipeline}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{pipeline()}{pipeline()}}
+{\footnotesize\ttfamily lava\+::pipeline\+::pipeline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}}}]{device,  }\item[{Vk\+Pipeline\+Cache}]{pipeline\+\_\+cache = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em pipeline\+\_\+cache} & Pipeline cache \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1pipeline_af1ed6d08db3d755b3011fcb8b423f416}\label{structlava_1_1pipeline_af1ed6d08db3d755b3011fcb8b423f416}} 
+\index{lava::pipeline@{lava::pipeline}!activated@{activated}}
+\index{activated@{activated}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily bool lava\+::pipeline\+::activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if pipeline is active. 
+
+\begin{DoxyReturn}{Returns}
+Pipeline is active or note 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a102ce500ee05cfdf242423703188b9d7}\label{structlava_1_1pipeline_a102ce500ee05cfdf242423703188b9d7}} 
+\index{lava::pipeline@{lava::pipeline}!auto\_bind@{auto\_bind}}
+\index{auto\_bind@{auto\_bind}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{auto\_bind()}{auto\_bind()}}
+{\footnotesize\ttfamily bool lava\+::pipeline\+::auto\+\_\+bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if auto bind is enabled. 
+
+\begin{DoxyReturn}{Returns}
+Auto bind is enabled or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a4fbab953063b31a88987dd050ee9289c}\label{structlava_1_1pipeline_a4fbab953063b31a88987dd050ee9289c}} 
+\index{lava::pipeline@{lava::pipeline}!bind@{bind}}
+\index{bind@{bind}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily virtual void lava\+::pipeline\+::bind (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Bind the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{structlava_1_1render__pipeline_ac25707c49c52b336b4378be0cf20f2f4}{lava\+::render\+\_\+pipeline}}, and \mbox{\hyperlink{structlava_1_1compute__pipeline_a7be06c2bd664c103661e4848f1bc2854}{lava\+::compute\+\_\+pipeline}}.
+
+\mbox{\Hypertarget{structlava_1_1pipeline_a9efe4f61250e2e1cca7d64530691eab0}\label{structlava_1_1pipeline_a9efe4f61250e2e1cca7d64530691eab0}} 
+\index{lava::pipeline@{lava::pipeline}!create@{create}}
+\index{create@{create}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::pipeline\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new pipeline. 
+
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a3e37bdce392138b2058e7a811fcbcbb9}\label{structlava_1_1pipeline_a3e37bdce392138b2058e7a811fcbcbb9}} 
+\index{lava::pipeline@{lava::pipeline}!get@{get}}
+\index{get@{get}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Vk\+Pipeline lava\+::pipeline\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Pipeline Vulkan pipeline 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a57a88dd0de42ea3c87ef0da6202b0510}\label{structlava_1_1pipeline_a57a88dd0de42ea3c87ef0da6202b0510}} 
+\index{lava::pipeline@{lava::pipeline}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{device_8hpp_a487f73dbf483e94037aa60785b2e2abd}{device\+\_\+p}} lava\+::pipeline\+::get\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+device\+\_\+p Vulkan device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a46f127c294d5ebbad1c03f6697a83ffc}\label{structlava_1_1pipeline_a46f127c294d5ebbad1c03f6697a83ffc}} 
+\index{lava::pipeline@{lava::pipeline}!get\_layout@{get\_layout}}
+\index{get\_layout@{get\_layout}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{get\_layout()}{get\_layout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} lava\+::pipeline\+::get\+\_\+layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the layout. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} Pipeline layout 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a9246051bc496565d046631ac64cd8a26}\label{structlava_1_1pipeline_a9246051bc496565d046631ac64cd8a26}} 
+\index{lava::pipeline@{lava::pipeline}!ready@{ready}}
+\index{ready@{ready}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily bool lava\+::pipeline\+::ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if pipeline is ready. 
+
+\begin{DoxyReturn}{Returns}
+Pipeline is ready or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1pipeline_a8917bd488924a0c7c509535ac6d45769}\label{structlava_1_1pipeline_a8917bd488924a0c7c509535ac6d45769}} 
+\index{lava::pipeline@{lava::pipeline}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily void lava\+::pipeline\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pipeline active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Active state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1pipeline_ad5b46469c6de88ce4bde0f9cbff570b4}\label{structlava_1_1pipeline_ad5b46469c6de88ce4bde0f9cbff570b4}} 
+\index{lava::pipeline@{lava::pipeline}!set\_auto\_bind@{set\_auto\_bind}}
+\index{set\_auto\_bind@{set\_auto\_bind}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{set\_auto\_bind()}{set\_auto\_bind()}}
+{\footnotesize\ttfamily void lava\+::pipeline\+::set\+\_\+auto\+\_\+bind (\begin{DoxyParamCaption}\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set auto bind. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Enable state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1pipeline_aa6eb4e95f7d7d1602e3961388e849226}\label{structlava_1_1pipeline_aa6eb4e95f7d7d1602e3961388e849226}} 
+\index{lava::pipeline@{lava::pipeline}!set\_layout@{set\_layout}}
+\index{set\_layout@{set\_layout}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{set\_layout()}{set\_layout()}}
+{\footnotesize\ttfamily void lava\+::pipeline\+::set\+\_\+layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Pipeline layout \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1pipeline_a1e10d18f9f3eaeece74d6110f6b1b59e}\label{structlava_1_1pipeline_a1e10d18f9f3eaeece74d6110f6b1b59e}} 
+\index{lava::pipeline@{lava::pipeline}!setup@{setup}}
+\index{setup@{setup}!lava::pipeline@{lava::pipeline}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily virtual bool lava\+::pipeline\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Set up the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+Setup was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{pipeline_8hpp}{pipeline.\+hpp}}\end{DoxyCompactItemize}

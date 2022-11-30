@@ -1,0 +1,25 @@
+\hypertarget{json_8hpp_source}{}\doxysection{json.\+hpp}
+\label{json_8hpp_source}\index{liblava/file/json.hpp@{liblava/file/json.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <nlohmann/json.hpp>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16 \textcolor{keyword}{using }json = nlohmann::json;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{19 \textcolor{keyword}{using }json\_ref = json \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1configurable}{configurable}} : \mbox{\hyperlink{structlava_1_1interface}{interface}} \{}
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1configurable_a50439d6ce03d3d309dbf00c3f7d32178}{set\_config}}(json\_ref j) = 0;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} json \mbox{\hyperlink{structlava_1_1configurable_a26005cbe26a36abbe5c4df3bc3222381}{get\_config}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

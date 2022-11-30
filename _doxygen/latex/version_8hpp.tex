@@ -1,0 +1,80 @@
+\hypertarget{version_8hpp}{}\doxysection{liblava/core/version.hpp File Reference}
+\label{version_8hpp}\index{liblava/core/version.hpp@{liblava/core/version.hpp}}
+
+
+Version information.  
+
+
+{\ttfamily \#include $<$liblava/core/types.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1internal__version}{lava\+::internal\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em Internal version. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1version}{lava\+::version}}
+\begin{DoxyCompactList}\small\item\em Version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{version_8hpp_abd59f91665d2267412a4c50d47b8b522}\label{version_8hpp_abd59f91665d2267412a4c50d47b8b522}} 
+using {\bfseries lava\+::int\+\_\+version} = internal\+\_\+version
+\begin{DoxyCompactList}\small\item\em Internal version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{version_8hpp_a405b58b30c091de0c985f3389f5d543d}\label{version_8hpp_a405b58b30c091de0c985f3389f5d543d}} 
+enum class \mbox{\hyperlink{version_8hpp_a405b58b30c091de0c985f3389f5d543d}{lava\+::version\+\_\+stage}} \{ \newline
+{\bfseries preview}
+, {\bfseries alpha}
+, {\bfseries beta}
+, {\bfseries rc}
+, \newline
+{\bfseries release}
+ \}
+\begin{DoxyCompactList}\small\item\em Version stages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int\+\_\+version \mbox{\hyperlink{version_8hpp_aff160c855ba1edf2400c4ee7fedfe739}{lava\+::to\+\_\+version}} (string\+\_\+ref str)
+\begin{DoxyCompactList}\small\item\em Convert string to internal version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{version_8hpp_aca1a92152aa84082ca6bcd4b709f54ea}\label{version_8hpp_aca1a92152aa84082ca6bcd4b709f54ea}} 
+constexpr name {\bfseries lava\+::\+\_\+build\+\_\+date} = LAVA\+\_\+\+BUILD\+\_\+\+DATE
+\begin{DoxyCompactList}\small\item\em Build date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{version_8hpp_a62050e11b8d9f840a748ccc8b1d51cf5}\label{version_8hpp_a62050e11b8d9f840a748ccc8b1d51cf5}} 
+constexpr name {\bfseries lava\+::\+\_\+build\+\_\+time} = LAVA\+\_\+\+BUILD\+\_\+\+TIME
+\begin{DoxyCompactList}\small\item\em Build time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Version information. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{version_8hpp_aff160c855ba1edf2400c4ee7fedfe739}\label{version_8hpp_aff160c855ba1edf2400c4ee7fedfe739}} 
+\index{version.hpp@{version.hpp}!to\_version@{to\_version}}
+\index{to\_version@{to\_version}!version.hpp@{version.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_version()}{to\_version()}}
+{\footnotesize\ttfamily int\+\_\+version lava\+::to\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\+\_\+ref}}}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert string to internal version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+\_\+version Internal version 
+\end{DoxyReturn}

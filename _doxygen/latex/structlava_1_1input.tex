@@ -1,0 +1,115 @@
+\hypertarget{structlava_1_1input}{}\doxysection{lava\+::input Struct Reference}
+\label{structlava_1_1input}\index{lava::input@{lava::input}}
+
+
+Input handling.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1input_a4fa55893374d93c69129cda17ae45cf3}\label{structlava_1_1input_a4fa55893374d93c69129cda17ae45cf3}} 
+void {\bfseries handle\+\_\+events} ()
+\begin{DoxyCompactList}\small\item\em Handle events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1input_a795a63b9ee361ada3e7da15a780702f7}{add}} (\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\+\_\+callback\+::cptr}} callback)
+\begin{DoxyCompactList}\small\item\em Add callback to the input handling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1input_a13caa6e16398ba8db3cda132e47a884b}{remove}} (\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\+\_\+callback\+::cptr}} callback)
+\begin{DoxyCompactList}\small\item\em Remove callback from the input handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\+\_\+position\+\_\+ref}} \mbox{\hyperlink{structlava_1_1input_a675d96d2b61966220ce44d07576b0f0d}{get\+\_\+mouse\+\_\+position}} () const
+\begin{DoxyCompactList}\small\item\em Get the mouse position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1input_ac77a28a961c813158923b287fb0bce94}{set\+\_\+mouse\+\_\+position}} (\mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\+\_\+position\+\_\+ref}} position)
+\begin{DoxyCompactList}\small\item\em Set the mouse position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1input_acd006dbfdd554b577b75d12aec293b07}\label{structlava_1_1input_acd006dbfdd554b577b75d12aec293b07}} 
+\mbox{\hyperlink{input_8hpp_ab614ef38be8bc64c62c6250052c8ee25}{input\+\_\+key\+\_\+events}} {\bfseries key}
+\begin{DoxyCompactList}\small\item\em List of key events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1input_aff08ec9fb495529bc2b0f0591898f8a7}\label{structlava_1_1input_aff08ec9fb495529bc2b0f0591898f8a7}} 
+\mbox{\hyperlink{input_8hpp_ad01f77bcb099e6f4fe985e0b57695f51}{input\+\_\+scroll\+\_\+events}} {\bfseries scroll}
+\begin{DoxyCompactList}\small\item\em List of scroll events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1input_a882bd7e2d38a4051cd5b5af94f707831}\label{structlava_1_1input_a882bd7e2d38a4051cd5b5af94f707831}} 
+\mbox{\hyperlink{input_8hpp_a27189ce45f83a35c2955dd65606b6650}{input\+\_\+mouse\+\_\+move\+\_\+events}} {\bfseries mouse\+\_\+move}
+\begin{DoxyCompactList}\small\item\em List of mouse move events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1input_a6f78e783201ec1615bf1c382fa601c21}\label{structlava_1_1input_a6f78e783201ec1615bf1c382fa601c21}} 
+\mbox{\hyperlink{input_8hpp_aeca15aa11010979fec9c2353365bc646}{input\+\_\+mouse\+\_\+button\+\_\+events}} {\bfseries mouse\+\_\+button}
+\begin{DoxyCompactList}\small\item\em List of mouse button events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1input_a5fbed64485450cf8d5a8b6aa69a3b99a}\label{structlava_1_1input_a5fbed64485450cf8d5a8b6aa69a3b99a}} 
+\mbox{\hyperlink{input_8hpp_a6018ccde7a287b04568e78057bb90d82}{input\+\_\+mouse\+\_\+active\+\_\+events}} {\bfseries mouse\+\_\+active}
+\begin{DoxyCompactList}\small\item\em List of mouse active events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1input_a325bd70d488ed70e820ad5d00e86d237}\label{structlava_1_1input_a325bd70d488ed70e820ad5d00e86d237}} 
+\mbox{\hyperlink{input_8hpp_aeaf78ab0c1a85131f7a843499dd827b4}{input\+\_\+path\+\_\+drop\+\_\+events}} {\bfseries path\+\_\+drop}
+\begin{DoxyCompactList}\small\item\em List of path drop events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input handling. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1input_a795a63b9ee361ada3e7da15a780702f7}\label{structlava_1_1input_a795a63b9ee361ada3e7da15a780702f7}} 
+\index{lava::input@{lava::input}!add@{add}}
+\index{add@{add}!lava::input@{lava::input}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void lava\+::input\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\+\_\+callback\+::cptr}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add callback to the input handling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1input_a675d96d2b61966220ce44d07576b0f0d}\label{structlava_1_1input_a675d96d2b61966220ce44d07576b0f0d}} 
+\index{lava::input@{lava::input}!get\_mouse\_position@{get\_mouse\_position}}
+\index{get\_mouse\_position@{get\_mouse\_position}!lava::input@{lava::input}}
+\doxysubsubsection{\texorpdfstring{get\_mouse\_position()}{get\_mouse\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\+\_\+position\+\_\+ref}} lava\+::input\+::get\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the mouse position. 
+
+\begin{DoxyReturn}{Returns}
+mouse\+\_\+position\+\_\+ref Current mouse position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1input_a13caa6e16398ba8db3cda132e47a884b}\label{structlava_1_1input_a13caa6e16398ba8db3cda132e47a884b}} 
+\index{lava::input@{lava::input}!remove@{remove}}
+\index{remove@{remove}!lava::input@{lava::input}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void lava\+::input\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{input\+\_\+callback\+::cptr}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove callback from the input handling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1input_ac77a28a961c813158923b287fb0bce94}\label{structlava_1_1input_ac77a28a961c813158923b287fb0bce94}} 
+\index{lava::input@{lava::input}!set\_mouse\_position@{set\_mouse\_position}}
+\index{set\_mouse\_position@{set\_mouse\_position}!lava::input@{lava::input}}
+\doxysubsubsection{\texorpdfstring{set\_mouse\_position()}{set\_mouse\_position()}}
+{\footnotesize\ttfamily void lava\+::input\+::set\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_afb39313c483d9799d4fb2e91f43a1586}{mouse\+\_\+position\+\_\+ref}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the mouse position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Current mouse position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

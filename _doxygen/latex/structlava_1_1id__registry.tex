@@ -1,0 +1,228 @@
+\hypertarget{structlava_1_1id__registry}{}\doxysection{lava\+::id\+\_\+registry\texorpdfstring{$<$}{<} T, Meta \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structlava_1_1id__registry}\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+
+
+Id registry.  
+
+
+
+
+{\ttfamily \#include $<$id.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}\label{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to id registry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1id__registry_aed0ce6a32ac0b549525ec308d901e297}\label{structlava_1_1id__registry_aed0ce6a32ac0b549525ec308d901e297}} 
+using {\bfseries map} = std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}{ptr}} $>$
+\begin{DoxyCompactList}\small\item\em Map of id registries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}\label{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}} 
+using {\bfseries meta\+\_\+map} = std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, Meta $>$
+\begin{DoxyCompactList}\small\item\em Map of ids with meta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1id__registry_a17f7cda234e50ef2b3baa76a4d3f4234}{create}} (Meta info=\{\})
+\begin{DoxyCompactList}\small\item\em Create a new object in registry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1id__registry_aeaf42b703c3b047e308f3e1486aae95d}{add}} (\mbox{\hyperlink{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}{ptr}} object, Meta info=\{\})
+\begin{DoxyCompactList}\small\item\em Add a object with meta to registry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1id__registry_a1ef7f586431ea57e7e1cd8046ce4e5d7}{exists}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Check if object exists in registry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}{ptr}} \mbox{\hyperlink{structlava_1_1id__registry_ab81688236f2b3d7e5b2ee70d7a027572}{get}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Get the object by id. \end{DoxyCompactList}\item 
+Meta const \& \mbox{\hyperlink{structlava_1_1id__registry_aa44e8196ff58f515776f7395779f3860}{get\+\_\+meta}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Get the meta by id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id__registry_aed0ce6a32ac0b549525ec308d901e297}{map}} const \& \mbox{\hyperlink{structlava_1_1id__registry_a7ae8963262a4225dbdf615a2a0a52cba}{get\+\_\+all}} () const
+\begin{DoxyCompactList}\small\item\em Get all objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}{meta\+\_\+map}} const \& \mbox{\hyperlink{structlava_1_1id__registry_abe1072366fcd4133bf88fe572c437c02}{get\+\_\+all\+\_\+meta}} () const
+\begin{DoxyCompactList}\small\item\em Get all meta objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1id__registry_a538de7261d27bb2f3618fd955a59cfce}{update}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id, Meta const \&meta)
+\begin{DoxyCompactList}\small\item\em Update meta of object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1id__registry_a5f050d3ebb14fb5e3d2ba1e3afad1468}{remove}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove object from registry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlava_1_1id__registry_a46dc3451b22f67ca87c551529565ace6}\label{structlava_1_1id__registry_a46dc3451b22f67ca87c551529565ace6}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Meta$>$\newline
+struct lava\+::id\+\_\+registry$<$ T, Meta $>$}
+Id registry. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of objects hold in registry \\
+\hline
+{\em Meta} & Meta type for object \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlava_1_1id__registry_aeaf42b703c3b047e308f3e1486aae95d}\label{structlava_1_1id__registry_aeaf42b703c3b047e308f3e1486aae95d}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!add@{add}}
+\index{add@{add}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+void \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}{ptr}}}]{object,  }\item[{Meta}]{info = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a object with meta to registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Object to add \\
+\hline
+{\em info} & Meta of object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1id__registry_a17f7cda234e50ef2b3baa76a4d3f4234}\label{structlava_1_1id__registry_a17f7cda234e50ef2b3baa76a4d3f4234}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!create@{create}}
+\index{create@{create}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::create (\begin{DoxyParamCaption}\item[{Meta}]{info = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new object in registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Meta information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Object id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_a1ef7f586431ea57e7e1cd8046ce4e5d7}\label{structlava_1_1id__registry_a1ef7f586431ea57e7e1cd8046ce4e5d7}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!exists@{exists}}
+\index{exists@{exists}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+bool \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if object exists in registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object exists or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_ab81688236f2b3d7e5b2ee70d7a027572}\label{structlava_1_1id__registry_ab81688236f2b3d7e5b2ee70d7a027572}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!get@{get}}
+\index{get@{get}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+\mbox{\hyperlink{structlava_1_1id__registry_ace5b42cde30c905c1d519c62133bd1cb}{ptr}} \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the object by id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_a7ae8963262a4225dbdf615a2a0a52cba}\label{structlava_1_1id__registry_a7ae8963262a4225dbdf615a2a0a52cba}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+\mbox{\hyperlink{structlava_1_1id__registry_aed0ce6a32ac0b549525ec308d901e297}{map}} const  \& \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all objects. 
+
+\begin{DoxyReturn}{Returns}
+map const\& Map with objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_abe1072366fcd4133bf88fe572c437c02}\label{structlava_1_1id__registry_abe1072366fcd4133bf88fe572c437c02}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!get\_all\_meta@{get\_all\_meta}}
+\index{get\_all\_meta@{get\_all\_meta}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{get\_all\_meta()}{get\_all\_meta()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+\mbox{\hyperlink{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}{meta\+\_\+map}} const  \& \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::get\+\_\+all\+\_\+meta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all meta objects. 
+
+\begin{DoxyReturn}{Returns}
+meta\+\_\+map const\& Map with metas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_aa44e8196ff58f515776f7395779f3860}\label{structlava_1_1id__registry_aa44e8196ff58f515776f7395779f3860}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!get\_meta@{get\_meta}}
+\index{get\_meta@{get\_meta}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{get\_meta()}{get\_meta()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+Meta const  \& \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::get\+\_\+meta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the meta by id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Meta Meta object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlava_1_1id__registry_a5f050d3ebb14fb5e3d2ba1e3afad1468}\label{structlava_1_1id__registry_a5f050d3ebb14fb5e3d2ba1e3afad1468}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!remove@{remove}}
+\index{remove@{remove}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+void \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove object from registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structlava_1_1id__registry_a538de7261d27bb2f3618fd955a59cfce}\label{structlava_1_1id__registry_a538de7261d27bb2f3618fd955a59cfce}} 
+\index{lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}!update@{update}}
+\index{update@{update}!lava::id\_registry$<$ T, Meta $>$@{lava::id\_registry$<$ T, Meta $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename T , typename Meta $>$ \\
+bool \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry}}$<$ T, Meta $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id,  }\item[{Meta const \&}]{meta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update meta of object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object id \\
+\hline
+{\em meta} & Meta to update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Meta updated or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/core/\mbox{\hyperlink{id_8hpp}{id.\+hpp}}\end{DoxyCompactItemize}

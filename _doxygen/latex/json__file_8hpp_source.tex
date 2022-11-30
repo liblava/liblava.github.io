@@ -1,0 +1,55 @@
+\hypertarget{json__file_8hpp_source}{}\doxysection{json\+\_\+file.\+hpp}
+\label{json__file_8hpp_source}\index{liblava/file/json\_file.hpp@{liblava/file/json\_file.hpp}}
+\mbox{\hyperlink{json__file_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <liblava/file/json.hpp>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1json__file}{json\_file}} \{}
+\DoxyCodeLine{22     \textcolor{keyword}{explicit} \mbox{\hyperlink{structlava_1_1json__file_ac1a7e52bf524153c11c55c856022c9de}{json\_file}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} path = \textcolor{stringliteral}{"{}config.json"{}});}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27     \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}} \{}
+\DoxyCodeLine{29         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1json__file_1_1callback_a62a29ad820e89a9ed921993e818e00b1}{list}} = std::vector<callback*>;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1json__file_1_1callback_ae8d62fe3f5aa4fa89c35e5ae8a7f7aba}{load\_func}} = std::function<void(json\_ref)>;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35         \mbox{\hyperlink{structlava_1_1json__file_1_1callback_ae8d62fe3f5aa4fa89c35e5ae8a7f7aba}{load\_func}} \mbox{\hyperlink{structlava_1_1json__file_1_1callback_acd4c87929d47fae6ed5d9d58a1142fcb}{on\_load}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38         \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1json__file_1_1callback_a665e2fc08e78e701e579fb4e369c6556}{save\_func}} = std::function<json()>;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41         \mbox{\hyperlink{structlava_1_1json__file_1_1callback_a665e2fc08e78e701e579fb4e369c6556}{save\_func}} \mbox{\hyperlink{structlava_1_1json__file_1_1callback_a4bf90d7df332bd8d8e789699b1284efd}{on\_save}};}
+\DoxyCodeLine{42     \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1json__file_afae0540df27bf7bfa0f0c669a534577e}{add}}(\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}}* \mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1json__file_a03ccb249c96a5c28282cd0a814d65a64}{remove}}(\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}}* \mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1json__file_a882c2ebe6f850e5d9ad30281d062b0be}{clear}}() \{}
+\DoxyCodeLine{60         callbacks.clear();}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{structlava_1_1json__file_a0618669ca032de3d8c3a6b28da6d3b22}{set}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} value) \{}
+\DoxyCodeLine{68         path = value;}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     \mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} \mbox{\hyperlink{structlava_1_1json__file_a24ab8dd1c900bbefca20e75791670b03}{get}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} path;}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1json__file_af4614ce9c2d36a9ae763abe822cc640c}{load}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structlava_1_1json__file_a8174ad57c686d1004bcd33ab016a4689}{save}}();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{keyword}{private}:}
+\DoxyCodeLine{93     \textcolor{keywordtype}{string} path;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{96     \mbox{\hyperlink{structlava_1_1json__file_1_1callback_a62a29ad820e89a9ed921993e818e00b1}{callback::list}} callbacks;}
+\DoxyCodeLine{97 \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\hypertarget{version_8hpp_source}{}\doxysection{version.\+hpp}
+\label{version_8hpp_source}\index{liblava/core/version.hpp@{liblava/core/version.hpp}}
+\mbox{\hyperlink{version_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }lava \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1internal__version}{internal\_version}} \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1internal__version_a6a4aa017de8d7b6fa543ef983988218b}{major}} = LAVA\_VERSION\_MAJOR;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1internal__version_aebb13f310064b0f452bc1b52ed58c8dd}{minor}} = LAVA\_VERSION\_MINOR;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1internal__version_a13b606a26151dd9f417bc868d558371a}{patch}} = LAVA\_VERSION\_PATCH;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keyword}{auto} \mbox{\hyperlink{structlava_1_1internal__version_aab9c4f1496caa9169f45834340b96d50}{operator<=>}}(\mbox{\hyperlink{structlava_1_1internal__version}{internal\_version}} \textcolor{keyword}{const}\&) \textcolor{keyword}{const} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34 \textcolor{keyword}{using }\mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} = \mbox{\hyperlink{structlava_1_1internal__version}{internal\_version}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41 \textcolor{keyword}{inline} \mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} \mbox{\hyperlink{base_2base_8hpp_a115052c027aa8e795ccc8072874b6286}{to\_version}}(\mbox{\hyperlink{types_8hpp_a5008a742d2d9dedfde5eb39ec1995edc}{string\_ref}} str) \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{structlava_1_1internal__version}{int\_version}} result\{ 0, 0, 0 \};}
+\DoxyCodeLine{43     sscanf(\mbox{\hyperlink{types_8hpp_ad11094258ce2dac54b79917ae31198b6}{str}}.c\_str(), \textcolor{stringliteral}{"{}\%d.\%d.\%d"{}},}
+\DoxyCodeLine{44            \&result.major, \&result.minor, \&result.patch);}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{46 \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51 \textcolor{keyword}{enum class} \mbox{\hyperlink{version_8hpp_a405b58b30c091de0c985f3389f5d543d}{version\_stage}} \{}
+\DoxyCodeLine{52     preview,}
+\DoxyCodeLine{53     alpha,}
+\DoxyCodeLine{54     beta,}
+\DoxyCodeLine{55     rc,}
+\DoxyCodeLine{56     release}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{struct }\mbox{\hyperlink{structlava_1_1version}{version}} \{}
+\DoxyCodeLine{64     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1version_a873f2f0704da8620f5fb171b07321158}{year}} = 2022;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1version_a6fd8964be87b6bdb3051556748db714a}{release}} = 0;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \mbox{\hyperlink{version_8hpp_a405b58b30c091de0c985f3389f5d543d}{version\_stage}} \mbox{\hyperlink{structlava_1_1stage}{stage}} = version\_stage::release;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \mbox{\hyperlink{types_8hpp_a490e11fcfc4290eb69c7c9c0a790c49c}{i32}} \mbox{\hyperlink{structlava_1_1version_a8df3fcad2c48ebb8bd23c75a2898e2d5}{rev}} = 0;}
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{version_8hpp_aca1a92152aa84082ca6bcd4b709f54ea}{\_build\_date}} = LAVA\_BUILD\_DATE;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80 \textcolor{keyword}{constexpr} \mbox{\hyperlink{types_8hpp_a0dfd64a6fef28a45910948fc36218c4b}{name}} \mbox{\hyperlink{version_8hpp_a62050e11b8d9f840a748ccc8b1d51cf5}{\_build\_time}} = LAVA\_BUILD\_TIME;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \} \textcolor{comment}{// namespace lava}}
+
+\end{DoxyCode}
