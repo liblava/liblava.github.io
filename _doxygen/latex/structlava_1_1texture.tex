@@ -1,0 +1,243 @@
+\doxysection{lava\+::texture Struct Reference}
+\hypertarget{structlava_1_1texture}{}\label{structlava_1_1texture}\index{lava::texture@{lava::texture}}
+
+
+Texture.  
+
+
+
+
+{\ttfamily \#include $<$texture.\+hpp$>$}
+
+Inheritance diagram for lava\+::texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1texture}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1texture_1_1layer}{layer}}
+\begin{DoxyCompactList}\small\item\em Texture layer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1texture_1_1mip__level}{mip\+\_\+level}}
+\begin{DoxyCompactList}\small\item\em Texture mip level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}\label{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5} 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{using}} {\bfseries ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1texture}{texture}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to texture. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}\label{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc} 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{using}} {\bfseries map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of textures. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1texture_a9590de86538341f171fe8bda29d8636e}\label{structlava_1_1texture_a9590de86538341f171fe8bda29d8636e} 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{using}} {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of textures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1texture_ac7b1de3714be5aebacbe85fb72cdfd51}\label{structlava_1_1texture_ac7b1de3714be5aebacbe85fb72cdfd51} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}texture} ()
+\begin{DoxyCompactList}\small\item\em Destroy the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} \mbox{\hyperlink{structlava_1_1texture_a198d287bf268521e2ee38f3bc0c97817}{create}} (\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Format}} format, \mbox{\hyperlink{structlava_1_1texture_1_1layer_a672f13a6f7ce463ca428a16688aa2f15}{layer\+::list}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}} \&layers=\{\}, \mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}} type=texture\+\_\+type\+::tex\+\_\+2d)
+\begin{DoxyCompactList}\small\item\em Create a new texture. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1texture_ae1c3c2004a6ca02160b608a301b2e160}\label{structlava_1_1texture_ae1c3c2004a6ca02160b608a301b2e160} 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{void}} {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} \mbox{\hyperlink{structlava_1_1texture_af21a7526b89f40386a2934a9f5516e3b}{upload}} (\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{void}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{data\+\_\+size}})
+\begin{DoxyCompactList}\small\item\em Upload data to texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} \mbox{\hyperlink{structlava_1_1texture_a8fc881feb8a3dd38b2e87c67536a6f92}{stage}} (\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Command\+Buffer}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{cmd\+\_\+buffer}})
+\begin{DoxyCompactList}\small\item\em Stage the texture. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1texture_a6f228749adea20729c5b99fb23e76acb}\label{structlava_1_1texture_a6f228749adea20729c5b99fb23e76acb} 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{void}} {\bfseries destroy\+\_\+upload\+\_\+buffer} ()
+\begin{DoxyCompactList}\small\item\em Destroy the upload buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Descriptor\+Image\+Info}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1texture_aedc9aff17541d60c54128803fa979dbc}{get\+\_\+descriptor\+\_\+info}} () \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}}
+\begin{DoxyCompactList}\small\item\em Get the descriptor information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image\+::ptr}} \mbox{\hyperlink{structlava_1_1texture_ac637b937f57d5bddd723f22dcf7afcbf}{get\+\_\+image}} ()
+\begin{DoxyCompactList}\small\item\em Get the image of the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1texture_a35451506c759d57af0d2889bec873874}{get\+\_\+size}} () \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}}
+\begin{DoxyCompactList}\small\item\em Get the size of the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}} \mbox{\hyperlink{structlava_1_1texture_a4853a34186a384e6610c6881e761e724}{get\+\_\+type}} () \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}}
+\begin{DoxyCompactList}\small\item\em Get the type of the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Format}} \mbox{\hyperlink{structlava_1_1texture_a7754c37f1bd439f925625ef7a8233b36}{get\+\_\+format}} () \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}}
+\begin{DoxyCompactList}\small\item\em Get the format of the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{static}} \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{ptr}} \mbox{\hyperlink{structlava_1_1texture_a2ab6f22c0d55c253e8d62ad4f67b0c12}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Texture. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1texture_a198d287bf268521e2ee38f3bc0c97817}\label{structlava_1_1texture_a198d287bf268521e2ee38f3bc0c97817} 
+\index{lava::texture@{lava::texture}!create@{create}}
+\index{create@{create}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} lava\+::texture\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size,  }\item[{\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Format}}}]{format,  }\item[{\mbox{\hyperlink{structlava_1_1texture_1_1layer_a672f13a6f7ce463ca428a16688aa2f15}{layer\+::list}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}} \&}]{layers = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}}}]{type = {\ttfamily texture\+\_\+type\+:\+:tex\+\_\+2d} }\end{DoxyParamCaption})}
+
+
+
+Create a new texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em size} & Texture size \\
+\hline
+{\em format} & Texture format \\
+\hline
+{\em layers} & List of layers \\
+\hline
+{\em type} & Texture type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_aedc9aff17541d60c54128803fa979dbc}\label{structlava_1_1texture_aedc9aff17541d60c54128803fa979dbc} 
+\index{lava::texture@{lava::texture}!get\_descriptor\_info@{get\_descriptor\_info}}
+\index{get\_descriptor\_info@{get\_descriptor\_info}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{get\_descriptor\_info()}{get\_descriptor\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Descriptor\+Image\+Info}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}}  \texorpdfstring{$\ast$}{*} lava\+::texture\+::get\+\_\+descriptor\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the descriptor information. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Descriptor\+Image\+Info const\texorpdfstring{$\ast$}{*} Descriptor image information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_a7754c37f1bd439f925625ef7a8233b36}\label{structlava_1_1texture_a7754c37f1bd439f925625ef7a8233b36} 
+\index{lava::texture@{lava::texture}!get\_format@{get\_format}}
+\index{get\_format@{get\_format}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{get\_format()}{get\_format()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Format}} lava\+::texture\+::get\+\_\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the format of the texture. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Format Texture format 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_ac637b937f57d5bddd723f22dcf7afcbf}\label{structlava_1_1texture_ac637b937f57d5bddd723f22dcf7afcbf} 
+\index{lava::texture@{lava::texture}!get\_image@{get\_image}}
+\index{get\_image@{get\_image}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{get\_image()}{get\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image\+::ptr}} lava\+::texture\+::get\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the image of the texture. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a02d34cc8d6b785c01753a74cda3e8bbb}{image\+::ptr} Shared pointer to image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_a35451506c759d57af0d2889bec873874}\label{structlava_1_1texture_a35451506c759d57af0d2889bec873874} 
+\index{lava::texture@{lava::texture}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::texture\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the texture. 
+
+\begin{DoxyReturn}{Returns}
+uv2 Texture size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_a4853a34186a384e6610c6881e761e724}\label{structlava_1_1texture_a4853a34186a384e6610c6881e761e724} 
+\index{lava::texture@{lava::texture}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{texture_8hpp_abdcbbefe88a74313afdf6bf806ff3ec5}{texture\+\_\+type}} lava\+::texture\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the type of the texture. 
+
+\begin{DoxyReturn}{Returns}
+texture\+\_\+type Texture type 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_a2ab6f22c0d55c253e8d62ad4f67b0c12}\label{structlava_1_1texture_a2ab6f22c0d55c253e8d62ad4f67b0c12} 
+\index{lava::texture@{lava::texture}!make@{make}}
+\index{make@{make}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{static}} \mbox{\hyperlink{structlava_1_1texture_af370579b8e012b0c1a0480f953ddb0b5}{ptr}} lava\+::texture\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new texture. 
+
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to texture 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_a8fc881feb8a3dd38b2e87c67536a6f92}\label{structlava_1_1texture_a8fc881feb8a3dd38b2e87c67536a6f92} 
+\index{lava::texture@{lava::texture}!stage@{stage}}
+\index{stage@{stage}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{stage()}{stage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} lava\+::texture\+::stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{Vk\+Command\+Buffer}}}]{cmd\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Stage the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buffer} & Command buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stage was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1texture_af21a7526b89f40386a2934a9f5516e3b}\label{structlava_1_1texture_af21a7526b89f40386a2934a9f5516e3b} 
+\index{lava::texture@{lava::texture}!upload@{upload}}
+\index{upload@{upload}!lava::texture@{lava::texture}}
+\doxysubsubsection{\texorpdfstring{upload()}{upload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{bool}} lava\+::texture\+::upload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{void}} \mbox{\hyperlink{structlava_1_1texture_a9110a7a0f0e213450b7e161f5f4e04cc}{const}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{data\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Upload data to texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to upload \\
+\hline
+{\em data\+\_\+size} & Size of data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upload was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{texture_8hpp}{texture.\+hpp}}\end{DoxyCompactItemize}

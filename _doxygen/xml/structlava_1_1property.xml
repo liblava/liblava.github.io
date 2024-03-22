@@ -1,0 +1,943 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structlava_1_1property" kind="struct" language="C++" prot="public">
+    <compoundname>lava::property</compoundname>
+    <basecompoundref refid="structlava_1_1configurable" prot="public" virt="non-virtual">lava::configurable</basecompoundref>
+    <includes refid="property_8hpp" local="no">property.hpp</includes>
+    <innerclass refid="structlava_1_1property_1_1prop" prot="public">lava::property::prop</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1property_1a771d31ffda98b4e91d7953bb8cbed8cb" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1engine" kindref="compound">engine</ref> *</type>
+        <definition>engine* lava::property::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>lava::property::context</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Engine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="22" column="12" bodyfile="liblava/engine/property.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1property_1a69e253f014e0325f3bef3df8c1ae9346" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1property_1_1prop_1a61da47acfb8632eec64b0807d515ec0f" kindref="member">prop::map</ref></type>
+        <definition>prop::map lava::property::map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>lava::property::map</qualifiedname>
+        <briefdescription>
+<para>Map of props. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="176" column="15" bodyfile="liblava/engine/property.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1property_1a9e7fe97d51070c8aa20072ac602ed6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::add</definition>
+        <argsstring>(string_ref name, string_ref filename)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::property::add</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Add a prop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a62b73e3c7672e98b510e97e02a117772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::remove</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::property::remove</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Remove a prop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a2ddc84a2c9a81df9cccc6425260c0148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::install</definition>
+        <argsstring>(string_ref name, string_ref filename)</argsstring>
+        <name>install</name>
+        <qualifiedname>lava::property::install</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Install a prop (add + load) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Install was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a042f5e2cc4fe924273da837aa976db2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1cdata" kindref="compound">cdata</ref></type>
+        <definition>cdata lava::property::operator()</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>lava::property::operator()</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get prop data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cdata Prop const data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="73" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a2b15d312aee0d55843c5501afba5ea7f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::property::get_filename</definition>
+        <argsstring>(string_ref name) const</argsstring>
+        <name>get_filename</name>
+        <qualifiedname>lava::property::get_filename</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get file name of prop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string_ref File name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="80" column="16" bodyfile="liblava/engine/property.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a1c647ca1f05d92bf41a31c4dc044a567" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::set_filename</definition>
+        <argsstring>(string_ref name, string_ref filename)</argsstring>
+        <name>set_filename</name>
+        <qualifiedname>lava::property::set_filename</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Set filename of prop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="89" column="10" bodyfile="liblava/engine/property.hpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1aab8a2f906e69c9d7b137a5ff288fd408" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::exists</definition>
+        <argsstring>(string_ref name) const</argsstring>
+        <name>exists</name>
+        <qualifiedname>lava::property::exists</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check if prop exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prop exists or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="99" column="10" bodyfile="liblava/engine/property.hpp" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1ae5caf036a3f32233ab962995a918da7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::empty</definition>
+        <argsstring>(string_ref name) const</argsstring>
+        <name>empty</name>
+        <qualifiedname>lava::property::empty</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check if prop data is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prop data is empty or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="108" column="10" bodyfile="liblava/engine/property.hpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a09cb783e96717909e9227cf1145c46a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::load</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>load</name>
+        <qualifiedname>lava::property::load</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Load prop data (reload if loaded) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Load was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="117" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a421701a7e1f534da044d981edaeaaa64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::unload</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>unload</name>
+        <qualifiedname>lava::property::unload</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Unload prop data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="123" column="10" bodyfile="liblava/engine/property.hpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1af764377c542bfda75850aed5e04ad0f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::load_all</definition>
+        <argsstring>()</argsstring>
+        <name>load_all</name>
+        <qualifiedname>lava::property::load_all</qualifiedname>
+        <briefdescription>
+<para>Load all prop data (reload if loaded) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Load was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="131" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1acee2ec3c878bd2be33b214d65126a2d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::unload_all</definition>
+        <argsstring>()</argsstring>
+        <name>unload_all</name>
+        <qualifiedname>lava::property::unload_all</qualifiedname>
+        <briefdescription>
+<para>Unload all prop data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="136" column="10" bodyfile="liblava/engine/property.hpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a873f65578869a577f29940719b627273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::property::check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <qualifiedname>lava::property::check</qualifiedname>
+        <briefdescription>
+<para>Check whether all props are available. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>All props are there or are missing (see log) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="145" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a1ad46064bf52b02871b1a59678dc8294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::parse</definition>
+        <argsstring>(cmd_line cmd_line)</argsstring>
+        <name>parse</name>
+        <qualifiedname>lava::property::parse</qualifiedname>
+        <param>
+          <type><ref refid="argh_8hpp_1a0ec69c8269dd4598981cbfeea2cc88d1" kindref="member">cmd_line</ref></type>
+          <declname>cmd_line</declname>
+        </param>
+        <briefdescription>
+<para>Parse prop overloads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command line arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="151" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1aff1dd73f92567572048c034e0a84d7d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::property::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::property::clear</qualifiedname>
+        <briefdescription>
+<para>Clear all props. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="156" column="10" bodyfile="liblava/engine/property.hpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a417464f52e4ec1fc2c6074de47e0241f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1property_1_1prop_1a61da47acfb8632eec64b0807d515ec0f" kindref="member">prop::map</ref> const &amp;</type>
+        <definition>prop::map const  &amp; lava::property::get_all</definition>
+        <argsstring>() const</argsstring>
+        <name>get_all</name>
+        <qualifiedname>lava::property::get_all</qualifiedname>
+        <briefdescription>
+<para>Get all props. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1property_1_1prop_1a61da47acfb8632eec64b0807d515ec0f" kindref="member">prop::map</ref> const&amp; Map of props </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="164" column="21" bodyfile="liblava/engine/property.hpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1ab87b3ca7a19917fa7dc8135e3837062c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void lava::property::set_json</definition>
+        <argsstring>(json_ref j) override</argsstring>
+        <name>set_json</name>
+        <qualifiedname>lava::property::set_json</qualifiedname>
+        <reimplements refid="structlava_1_1configurable_1adea3f5e14b54e32b9f176c8f75ef029c">set_json</reimplements>
+        <param>
+          <type>json_ref</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1configurable_1adea3f5e14b54e32b9f176c8f75ef029c" kindref="member">configurable::set_json</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="169" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1property_1a762187355622fa58d17a857b7a0dc5d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>json</type>
+        <definition>json lava::property::get_json</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_json</name>
+        <qualifiedname>lava::property::get_json</qualifiedname>
+        <reimplements refid="structlava_1_1configurable_1a4d820633e763f6e1fe5de468ac84b22c">get_json</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1configurable_1a4d820633e763f6e1fe5de468ac84b22c" kindref="member">configurable::get_json</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/property.hpp" line="172" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Props master. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::property</label>
+        <link refid="structlava_1_1property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13">
+        <label>T::list</label>
+      </node>
+      <node id="14">
+        <label>lava::id_listeners&lt; key_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="22">
+        <label>lava::id_listeners&lt; mouse_active_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="20">
+        <label>lava::id_listeners&lt; mouse_button_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="18">
+        <label>lava::id_listeners&lt; mouse_move_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="24">
+        <label>lava::id_listeners&lt; path_drop_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="16">
+        <label>lava::id_listeners&lt; scroll_event &gt;</label>
+        <link refid="structlava_1_1id__listeners"/>
+      </node>
+      <node id="46">
+        <label>lava::id_registry&lt; lava::mesh_template, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="47">
+        <label>lava::id_registry&lt; lava::texture, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="12">
+        <label>lava::input_events&lt; key_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>lava::input_events&lt; mouse_active_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>lava::input_events&lt; mouse_button_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>lava::input_events&lt; mouse_move_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>lava::input_events&lt; path_drop_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>lava::input_events&lt; scroll_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::app</label>
+        <link refid="structlava_1_1app"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>window</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>imgui</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>imgui_config</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>tooltips</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>staging</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>block</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>shading</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>run_time</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>fs</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>config_file</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>lava::app_config</label>
+        <link refid="structlava_1_1app__config"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>imgui_font</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>lava::block</label>
+        <link refid="structlava_1_1block"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>lava::camera</label>
+        <link refid="structlava_1_1camera"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>lava::data</label>
+        <link refid="structlava_1_1data"/>
+      </node>
+      <node id="31">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="4">
+        <label>lava::engine</label>
+        <link refid="structlava_1_1engine"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>props</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>producer</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>lava::file_system</label>
+        <link refid="structlava_1_1file__system"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>lava::forward_shading</label>
+        <link refid="structlava_1_1forward__shading"/>
+      </node>
+      <node id="6">
+        <label>lava::frame</label>
+        <link refid="structlava_1_1frame"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>platform</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>lava::gamepad</label>
+        <link refid="structlava_1_1gamepad"/>
+      </node>
+      <node id="25">
+        <label>lava::imgui</label>
+        <link refid="structlava_1_1imgui"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>layers</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>lava::imgui::config</label>
+        <link refid="structlava_1_1imgui_1_1config"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>icon</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>lava::imgui::font</label>
+        <link refid="structlava_1_1imgui_1_1font"/>
+      </node>
+      <node id="29">
+        <label>lava::imgui::icon_font</label>
+        <link refid="structlava_1_1imgui_1_1icon__font"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>lava::input</label>
+        <link refid="structlava_1_1input"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>scroll</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mouse_move</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mouse_button</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>mouse_active</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>path_drop</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="44">
+        <label>lava::json_file</label>
+        <link refid="structlava_1_1json__file"/>
+      </node>
+      <node id="26">
+        <label>lava::layer_list</label>
+        <link refid="structlava_1_1layer__list"/>
+      </node>
+      <node id="7">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="8">
+        <label>lava::platform</label>
+        <link refid="structlava_1_1platform"/>
+      </node>
+      <node id="45">
+        <label>lava::producer</label>
+        <link refid="structlava_1_1producer"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>meshes</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>textures</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::property</label>
+        <link refid="structlava_1_1property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>lava::renderer</label>
+        <link refid="structlava_1_1renderer"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>lava::run_time</label>
+        <link refid="structlava_1_1run__time"/>
+      </node>
+      <node id="35">
+        <label>lava::staging</label>
+        <link refid="structlava_1_1staging"/>
+      </node>
+      <node id="42">
+        <label>lava::surface_format_request</label>
+        <link refid="structlava_1_1surface__format__request"/>
+      </node>
+      <node id="30">
+        <label>lava::tooltip_list</label>
+        <link refid="structlava_1_1tooltip__list"/>
+      </node>
+      <node id="9">
+        <label>lava::window</label>
+        <link refid="structlava_1_1window"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/engine/property.hpp" line="20" column="1" bodyfile="liblava/engine/property.hpp" bodystart="20" bodyend="177"/>
+    <listofallmembers>
+      <member refid="structlava_1_1property_1a9e7fe97d51070c8aa20072ac602ed6db" prot="public" virt="non-virtual"><scope>lava::property</scope><name>add</name></member>
+      <member refid="structlava_1_1property_1a873f65578869a577f29940719b627273" prot="public" virt="non-virtual"><scope>lava::property</scope><name>check</name></member>
+      <member refid="structlava_1_1property_1aff1dd73f92567572048c034e0a84d7d3" prot="public" virt="non-virtual"><scope>lava::property</scope><name>clear</name></member>
+      <member refid="structlava_1_1property_1a771d31ffda98b4e91d7953bb8cbed8cb" prot="public" virt="non-virtual"><scope>lava::property</scope><name>context</name></member>
+      <member refid="structlava_1_1property_1ae5caf036a3f32233ab962995a918da7d" prot="public" virt="non-virtual"><scope>lava::property</scope><name>empty</name></member>
+      <member refid="structlava_1_1property_1aab8a2f906e69c9d7b137a5ff288fd408" prot="public" virt="non-virtual"><scope>lava::property</scope><name>exists</name></member>
+      <member refid="structlava_1_1property_1a417464f52e4ec1fc2c6074de47e0241f" prot="public" virt="non-virtual"><scope>lava::property</scope><name>get_all</name></member>
+      <member refid="structlava_1_1property_1a2b15d312aee0d55843c5501afba5ea7f" prot="public" virt="non-virtual"><scope>lava::property</scope><name>get_filename</name></member>
+      <member refid="structlava_1_1property_1a762187355622fa58d17a857b7a0dc5d8" prot="public" virt="virtual"><scope>lava::property</scope><name>get_json</name></member>
+      <member refid="structlava_1_1property_1a2ddc84a2c9a81df9cccc6425260c0148" prot="public" virt="non-virtual"><scope>lava::property</scope><name>install</name></member>
+      <member refid="structlava_1_1property_1a09cb783e96717909e9227cf1145c46a7" prot="public" virt="non-virtual"><scope>lava::property</scope><name>load</name></member>
+      <member refid="structlava_1_1property_1af764377c542bfda75850aed5e04ad0f8" prot="public" virt="non-virtual"><scope>lava::property</scope><name>load_all</name></member>
+      <member refid="structlava_1_1property_1a69e253f014e0325f3bef3df8c1ae9346" prot="private" virt="non-virtual"><scope>lava::property</scope><name>map</name></member>
+      <member refid="structlava_1_1property_1a042f5e2cc4fe924273da837aa976db2d" prot="public" virt="non-virtual"><scope>lava::property</scope><name>operator()</name></member>
+      <member refid="structlava_1_1property_1a1ad46064bf52b02871b1a59678dc8294" prot="public" virt="non-virtual"><scope>lava::property</scope><name>parse</name></member>
+      <member refid="structlava_1_1property_1a62b73e3c7672e98b510e97e02a117772" prot="public" virt="non-virtual"><scope>lava::property</scope><name>remove</name></member>
+      <member refid="structlava_1_1property_1a1c647ca1f05d92bf41a31c4dc044a567" prot="public" virt="non-virtual"><scope>lava::property</scope><name>set_filename</name></member>
+      <member refid="structlava_1_1property_1ab87b3ca7a19917fa7dc8135e3837062c" prot="public" virt="virtual"><scope>lava::property</scope><name>set_json</name></member>
+      <member refid="structlava_1_1property_1a421701a7e1f534da044d981edaeaaa64" prot="public" virt="non-virtual"><scope>lava::property</scope><name>unload</name></member>
+      <member refid="structlava_1_1property_1acee2ec3c878bd2be33b214d65126a2d7" prot="public" virt="non-virtual"><scope>lava::property</scope><name>unload_all</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::property</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

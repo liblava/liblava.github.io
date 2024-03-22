@@ -1,0 +1,127 @@
+\doxysection{lava\+::allocator Struct Reference}
+\hypertarget{structlava_1_1allocator}{}\label{structlava_1_1allocator}\index{lava::allocator@{lava::allocator}}
+
+
+Vulkan allocator.  
+
+
+
+
+{\ttfamily \#include $<$memory.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}\label{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66} 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1allocator}{allocator}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to a allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}\label{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54} 
+{\bfseries allocator} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1allocator_a104549380e2442ee141fc82a3665391c}{allocator}} (Vma\+Allocator \mbox{\hyperlink{structlava_1_1allocator}{allocator}})
+\begin{DoxyCompactList}\small\item\em Construct a new allocator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1allocator_ad546b8f427aba59865bb4d6670709cf0}{create}} (\mbox{\hyperlink{memory_8hpp_a79fde9f4df3162f37cc199a0adc8fa95}{device\+\_\+cptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vma\+Allocator\+Create\+Flags flags=0)
+\begin{DoxyCompactList}\small\item\em Create a new allocator. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1allocator_a07c98ecaa86fbf0184c2082a810ce484}\label{structlava_1_1allocator_a07c98ecaa86fbf0184c2082a810ce484} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the allocator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1allocator_a4b9ce048e3a652edca92cd4f183e7de3}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if allocator is valid. \end{DoxyCompactList}\item 
+Vma\+Allocator \mbox{\hyperlink{structlava_1_1allocator_ad0b6446682e0edef271d7afbbb7aa97f}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the VMA allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{ptr}} \mbox{\hyperlink{structlava_1_1allocator_a05a2bff425899f9d84d33b44a069a0cd}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan allocator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1allocator_a104549380e2442ee141fc82a3665391c}\label{structlava_1_1allocator_a104549380e2442ee141fc82a3665391c} 
+\index{lava::allocator@{lava::allocator}!allocator@{allocator}}
+\index{allocator@{allocator}!lava::allocator@{lava::allocator}}
+\doxysubsubsection{\texorpdfstring{allocator()}{allocator()}}
+{\footnotesize\ttfamily lava\+::allocator\+::allocator (\begin{DoxyParamCaption}\item[{Vma\+Allocator}]{allocator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & VMA allocator \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1allocator_ad546b8f427aba59865bb4d6670709cf0}\label{structlava_1_1allocator_ad546b8f427aba59865bb4d6670709cf0} 
+\index{lava::allocator@{lava::allocator}!create@{create}}
+\index{create@{create}!lava::allocator@{lava::allocator}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily bool lava\+::allocator\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memory_8hpp_a79fde9f4df3162f37cc199a0adc8fa95}{device\+\_\+cptr}}}]{device,  }\item[{Vma\+Allocator\+Create\+Flags}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Create a new allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em flags} & VMA allocator create flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1allocator_ad0b6446682e0edef271d7afbbb7aa97f}\label{structlava_1_1allocator_ad0b6446682e0edef271d7afbbb7aa97f} 
+\index{lava::allocator@{lava::allocator}!get@{get}}
+\index{get@{get}!lava::allocator@{lava::allocator}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Vma\+Allocator lava\+::allocator\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the VMA allocator. 
+
+\begin{DoxyReturn}{Returns}
+Vma\+Allocator VMA allocator 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1allocator_a05a2bff425899f9d84d33b44a069a0cd}\label{structlava_1_1allocator_a05a2bff425899f9d84d33b44a069a0cd} 
+\index{lava::allocator@{lava::allocator}!make@{make}}
+\index{make@{make}!lava::allocator@{lava::allocator}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structlava_1_1allocator_aebc22fb878bf9a0a94e13518869f1e66}{ptr}} lava\+::allocator\+::make (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new allocator. 
+
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to allocator 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1allocator_a4b9ce048e3a652edca92cd4f183e7de3}\label{structlava_1_1allocator_a4b9ce048e3a652edca92cd4f183e7de3} 
+\index{lava::allocator@{lava::allocator}!valid@{valid}}
+\index{valid@{valid}!lava::allocator@{lava::allocator}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool lava\+::allocator\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if allocator is valid. 
+
+\begin{DoxyReturn}{Returns}
+Allocator is valid or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{memory_8hpp}{memory.\+hpp}}\end{DoxyCompactItemize}

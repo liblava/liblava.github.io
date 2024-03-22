@@ -1,0 +1,639 @@
+\doxysection{mesh.\+hpp}
+\hypertarget{mesh_8hpp_source}{}\label{mesh_8hpp_source}\index{liblava/resource/mesh.hpp@{liblava/resource/mesh.hpp}}
+\mbox{\hyperlink{mesh_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{misc_8hpp}{liblava/core/misc.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{buffer_8hpp}{liblava/resource/buffer.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{primitive_8hpp}{liblava/resource/primitive.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hex_8hpp}{liblava/util/hex.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{log_8hpp}{liblava/util/log.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ vertex>}
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<T>\ \mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\_list}}\ \mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PosType\ =\ r32>}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template__data_a8d2b9b4c5acc8f9cfe76c6ffec26c4ef}{move}}(std::array<PosType,\ 3>\ offset)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (T\&\ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}\ :\ \mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}})\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ 3;\ ++i)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}.\mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}}[i]\ +=\ offset[i];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template__data_aff275dacb2a30293406e4593ce72c810}{scale}}(\textcolor{keyword}{auto}\ factor)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (T\&\ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}\ :\ \mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}})\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ 3;\ ++i)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}.\mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}}[i]\ *=\ factor;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PosType\ =\ r32>}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template__data_abafc87baf585d01b7188d6017015bcb2}{scale\_vector}}(std::array<PosType,\ 3>\ factors)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (T\&\ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}\ :\ \mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}})\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ 0u;\ i\ <\ 3;\ ++i)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1vertex}{vertex}}.\mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}}[i]\ *=\ factors[i];}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ vertex>}
+\DoxyCodeLine{00077\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1mesh__template}{mesh\_template}}\ :\ \mbox{\hyperlink{structlava_1_1entity}{entity}}\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template_a472d1254a23ff0b67ebebe1791139cfb}{ptr}}\ =\ std::shared\_ptr<mesh\_template<T>>;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{map}}\ =\ std::map<id,\ ptr>;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template_aa27ab03391e6618968117f056df72af9}{list}}\ =\ std::vector<ptr>;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\_list}}\ =\ std::vector<T>;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1mesh__template_a472d1254a23ff0b67ebebe1791139cfb}{ptr}}\ \mbox{\hyperlink{structlava_1_1mesh__template_a8795fca67bd15039034f010d8e383249}{make}}()\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<mesh\_template<T>>();}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_ae7534d966bb2e9d5ab383406d8363722}{\string~mesh\_template}}()\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_ac931db5680dd91101a987296b53e960c}{destroy}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1mesh__template_a11f4fab04b0090801b10f1d6237750ad}{create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mapped\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VmaMemoryUsage}}\ memory\_usage\ =\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VMA\_MEMORY\_USAGE\_CPU\_TO\_GPU}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_ac931db5680dd91101a987296b53e960c}{destroy}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f}{bind}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VkCommandBuffer}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5}{draw}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VkCommandBuffer}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_aeb011c73afe5340e9a72574f2d2c333f}{bind\_draw}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VkCommandBuffer}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f}{bind}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}});}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5}{draw}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}});}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1mesh__template_aed03147c43b3f14db7622c6183e11b59}{empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}.vertices.empty();}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a25a6fab4f8ce6532389a8e88d4ef700d}{set\_data}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{mesh\_template\_data<T>}}\ \textcolor{keyword}{const}\&\ value)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1data}{data}}\ =\ value;}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{mesh\_template\_data<T>}}\&\ \mbox{\hyperlink{structlava_1_1mesh__template_acbbf206ddeba856352db1c42862bed59}{get\_data}}()\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}};}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a8b110080cb6cb594a0c51584ef1dce57}{add\_data}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{mesh\_template\_data<T>}}\ \textcolor{keyword}{const}\&\ value)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1data}{data}}\ =\ value;}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\_list}}\&\ \mbox{\hyperlink{structlava_1_1mesh__template_a4f5449dbed9c68def2e84cdbd97bb25a}{get\_vertices}}()\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}.vertices;}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\_list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1mesh__template_af19bbd42de50c795c13f5607cf53c3ef}{get\_vertices}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}.vertices;}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ \mbox{\hyperlink{structlava_1_1mesh__template_a2d2462d0bd17f2996f192a1c83e11844}{get\_vertices\_count}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(\mbox{\hyperlink{structlava_1_1data}{data}}.vertices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}());}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\_list}}\&\ \mbox{\hyperlink{structlava_1_1mesh__template_a6a33cb7f77dbad21a3b7fada5a751fb3}{get\_indices}}()\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}.indices;}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\_list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1mesh__template_a13e0ed80437c331a4e56b20d3f816465}{get\_indices}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}.indices;}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ \mbox{\hyperlink{structlava_1_1mesh__template_aed0db990910482de9b21f3809413468d}{get\_indices\_count}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(\mbox{\hyperlink{structlava_1_1data}{data}}.indices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}());}
+\DoxyCodeLine{00220\ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1mesh__template_a53fe723a0b3f47a733aad3c42048b78e}{reload}}();}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00232\ \ \ \ \ \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{buffer::ptr}}\ \mbox{\hyperlink{structlava_1_1mesh__template_ac74e137ae3e0e824ee1c93fbcbb663be}{get\_vertex\_buffer}}()\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vertex\_buffer;}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00240\ \ \ \ \ \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{buffer::ptr}}\ \mbox{\hyperlink{structlava_1_1mesh__template_a28b21cb65d9cd1b22141c76a8c68aa7a}{get\_index\_buffer}}()\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ index\_buffer;}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device}{device\_p}}\ \mbox{\hyperlink{structlava_1_1device}{device}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data<T>}}\ \mbox{\hyperlink{structlava_1_1data}{data}};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{buffer::ptr}}\ vertex\_buffer;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00255\ \ \ \ \ \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{buffer::ptr}}\ index\_buffer;}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{bool}\ mapped\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VmaMemoryUsage}}\ memory\_usage\ =\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VMA\_MEMORY\_USAGE\_CPU\_TO\_GPU}};}
+\DoxyCodeLine{00262\ \};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00265\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00266\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f}{mesh\_template<T>::bind}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VkCommandBuffer}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (vertex\_buffer\ \&\&\ vertex\_buffer-\/>valid())\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ std::array<VkDeviceSize,\ 1>\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{buffer\_offsets}}\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ std::array<VkBuffer,\ 1>\ \textcolor{keyword}{const}\ buffers\ =\ \{\ vertex\_buffer-\/>get()\ \};}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{vkCmdBindVertexBuffers}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}},\ 0,}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(buffers.size()),\ buffers.data(),}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{buffer\_offsets}}.data());}
+\DoxyCodeLine{00274\ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\_buffer\ \&\&\ index\_buffer-\/>valid())}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{vkCmdBindIndexBuffer}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}},}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ index\_buffer-\/>get(),}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0,}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VK\_INDEX\_TYPE\_UINT32}});}
+\DoxyCodeLine{00281\ \}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00284\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00285\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5}{mesh\_template<T>::draw}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VkCommandBuffer}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}})\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structlava_1_1data}{data}}.indices.empty())}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{vkCmdDrawIndexed}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}},}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(\mbox{\hyperlink{structlava_1_1data}{data}}.indices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}()),}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{vkCmdDraw}}(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{cmd\_buf}},}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{to\_ui32}}(\mbox{\hyperlink{structlava_1_1data}{data}}.vertices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}()),}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1,\ 0,\ 0);}
+\DoxyCodeLine{00294\ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00297\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00298\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1mesh__template_ac931db5680dd91101a987296b53e960c}{mesh\_template<T>::destroy}}()\ \{}
+\DoxyCodeLine{00299\ \ \ \ \ vertex\_buffer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00300\ \ \ \ \ index\_buffer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00301\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device}{device}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00302\ \}}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00305\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00306\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1mesh__template_a53fe723a0b3f47a733aad3c42048b78e}{mesh\_template<T>::reload}}()\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{dev}}\ =\ \mbox{\hyperlink{structlava_1_1device}{device}};}
+\DoxyCodeLine{00308\ \ \ \ \ destroy();}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordflow}{return}\ create(\mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{dev}},\ mapped,\ memory\_usage);}
+\DoxyCodeLine{00311\ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00325\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ \mbox{\hyperlink{structlava_1_1vertex}{vertex}},}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_colors\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_normals\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_uvs\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_colors\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_normals\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_uvs\ =\ \textcolor{keyword}{true}>}
+\DoxyCodeLine{00332\ \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data<T>}}\ \mbox{\hyperlink{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693}{create\_mesh\_data}}(\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ type);}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00347\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T\ =\ \mbox{\hyperlink{structlava_1_1vertex}{vertex}},}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_colors\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_normals\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_uvs\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_colors\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_normals\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_uvs\ =\ \textcolor{keyword}{true}>}
+\DoxyCodeLine{00354\ std::shared\_ptr<mesh\_template<T>>\ \mbox{\hyperlink{mesh_8hpp_a250f79eeede589809259e897a9bc2ae0}{create\_mesh}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}}\&\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ type);}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00358\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00359\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1mesh__template_a11f4fab04b0090801b10f1d6237750ad}{mesh\_template<T>::create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}}\ d,}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m,}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VmaMemoryUsage}}\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{mu}})\ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device}{device}}\ =\ d;}
+\DoxyCodeLine{00363\ \ \ \ \ mapped\ =\ m;}
+\DoxyCodeLine{00364\ \ \ \ \ memory\_usage\ =\ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{mu}};}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structlava_1_1data}{data}}.vertices.empty())\ \{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ vertex\_buffer\ =\ \mbox{\hyperlink{structlava_1_1buffer_a5090b49b5454584a13b7569eae7d16be}{buffer::make}}();}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!vertex\_buffer-\/>create(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1data}{data}}.vertices.\mbox{\hyperlink{structlava_1_1data_a8671f49149a11b46b0ca3f54d3be29d6}{data}}(),}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(T)\ *\ \mbox{\hyperlink{structlava_1_1data}{data}}.vertices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}(),}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VK\_BUFFER\_USAGE\_VERTEX\_BUFFER\_BIT}},}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mapped,}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory\_usage))\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}()-\/>error(\textcolor{stringliteral}{"{}create\ mesh\ vertex\ buffer"{}});}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00378\ \ \ \ \ \}}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structlava_1_1data}{data}}.indices.empty())\ \{}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ index\_buffer\ =\ \mbox{\hyperlink{structlava_1_1buffer_a5090b49b5454584a13b7569eae7d16be}{buffer::make}}();}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!index\_buffer-\/>create(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1data}{data}}.indices.\mbox{\hyperlink{structlava_1_1data_a8671f49149a11b46b0ca3f54d3be29d6}{data}}(),}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}})\ *\ \mbox{\hyperlink{structlava_1_1data}{data}}.indices.\mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}}(),}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_abd46ec7277958aff02fc1b06b461573e}{VK\_BUFFER\_USAGE\_INDEX\_BUFFER\_BIT}},}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mapped,}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory\_usage))\ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{log_8hpp_a3ae1bac979ba56645dc376477774c3db}{log}}()-\/>error(\textcolor{stringliteral}{"{}create\ mesh\ index\ buffer"{}});}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00392\ \ \ \ \ \}}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00395\ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00404\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PosType,\ \textcolor{keywordtype}{size\_t}\ vert\_count,\ \textcolor{keywordtype}{bool}\ is\_complex>}
+\DoxyCodeLine{00405\ \textcolor{keyword}{constexpr}\ std::array<PosType,\ vert\_count>\ \mbox{\hyperlink{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b}{make\_primitive\_positions\_cube}}();}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00408\ \textcolor{comment}{//\ NOTE:\ The\ C++20\ spec\ allows\ std::vector<T>\ to\ be\ constexpr}}
+\DoxyCodeLine{00409\ \textcolor{comment}{//\ g++\ does\ not\ currently\ implement\ this\ feature,\ however}}
+\DoxyCodeLine{00410\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00417\ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ is\_complex>}
+\DoxyCodeLine{00418\ std::vector<index>\ \mbox{\hyperlink{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238}{make\_primitive\_indices\_cube}}();}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00425\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NormType>}
+\DoxyCodeLine{00426\ \textcolor{keyword}{constexpr}\ std::array<NormType,\ 6>\ \mbox{\hyperlink{mesh_8hpp_af87a63e28c639e3fcce909291d92117f}{make\_primitive\_normals\_cube}}();}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00433\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ UVType>}
+\DoxyCodeLine{00434\ \textcolor{keyword}{constexpr}\ std::array<UVType,\ 24>\ \mbox{\hyperlink{mesh_8hpp_a30ccf5eed07b27155682ddd4597e4a92}{make\_primitive\_uvs\_cube}}();}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00437\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_colors,}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_normals,}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_uvs,}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_colors,}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_normals,}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_uvs>}
+\DoxyCodeLine{00444\ std::shared\_ptr<mesh\_template<T>>\ \mbox{\hyperlink{mesh_8hpp_a250f79eeede589809259e897a9bc2ae0}{create\_mesh}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}}\&\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ type)\ \{}
+\DoxyCodeLine{00446\ \ \ \ \ std::shared\_ptr<mesh\_template<T>>\ return\_mesh\ =}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ std::make\_shared<mesh\_template<T>>();}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \ \ \ \ return\_mesh-\/>add\_data(\mbox{\hyperlink{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693}{create\_mesh\_data}}<T,}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generate\_colors,}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generate\_normals,}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generate\_uvs,}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ has\_colors,}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ has\_normals,}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ has\_uvs>(type));}
+\DoxyCodeLine{00456\ \ \ \ \ return\_mesh-\/>create(\mbox{\hyperlink{structlava_1_1device}{device}});}
+\DoxyCodeLine{00457\ \ \ \ \ \textcolor{keywordflow}{return}\ return\_mesh;}
+\DoxyCodeLine{00458\ \}}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00461\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_colors,}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_normals,}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ generate\_uvs,}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_colors,}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_normals,}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_uvs>}
+\DoxyCodeLine{00468\ \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data<T>}}\ \mbox{\hyperlink{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693}{create\_mesh\_data}}(\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ type)\ \{}
+\DoxyCodeLine{00469\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data<T>}}\ return\_mesh\_data;}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00471\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ auto\_position\ =\ \textcolor{keyword}{requires}(\textcolor{keyword}{const}\ T\ t)\ \{}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ t.position;}
+\DoxyCodeLine{00473\ \ \ \ \ \};}
+\DoxyCodeLine{00474\ \ \ \ \ \textcolor{keyword}{static\_assert}(auto\_position,}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vertex\ struct\ \`{}T`\ must\ contain\ field\ \`{}position`"{}});}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ auto\_colors\ =\ \textcolor{keyword}{requires}(\textcolor{keyword}{const}\ T\ t)\ \{}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ t.color;}
+\DoxyCodeLine{00479\ \ \ \ \ \};}
+\DoxyCodeLine{00480\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ auto\_normals\ =\ \textcolor{keyword}{requires}(\textcolor{keyword}{const}\ T\ t)\ \{}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ t.normal;}
+\DoxyCodeLine{00482\ \ \ \ \ \};}
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ auto\_uvs\ =\ \textcolor{keyword}{requires}(\textcolor{keyword}{const}\ T\ t)\ \{}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ t.uv;}
+\DoxyCodeLine{00485\ \ \ \ \ \};}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \ \ \ \ \textcolor{keyword}{using\ }PosType\ =\ \textcolor{keyword}{decltype}(T::position);}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)\ \{}
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordflow}{case}\ mesh\_type::cube:\ \{}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}.reserve(36);}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}\ =\ \mbox{\hyperlink{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238}{make\_primitive\_indices\_cube}}<(generate\_normals}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ auto\_normals)>();}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ vert\_count\ =\ (generate\_normals\ \&\&\ auto\_normals)\ ?\ 24\ :\ 8;}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.reserve(vert\_count);}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ positions\ =\ \mbox{\hyperlink{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b}{make\_primitive\_positions\_cube}}<PosType,\ vert\_count,}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (generate\_normals\ \&\&\ auto\_normals)>();}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ vert\_count;\ i++)\ \{}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ T\ vert;}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ vert.position\ =\ positions[i];}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_normals\ \&\&\ auto\_normals)\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ array\ is\ generated\ inside\ of\ every\ loop\ because}}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ makes\ the\ scoping\ rules\ simplest\ to\ follow}}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ my\ expectation\ is\ that\ a\ compiler\ should\ be\ able}}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ trivially\ optimize\ this}}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }NormType\ =\ \textcolor{keyword}{decltype}(T::normal);}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ normals\ =\ make\_primitive\_normals\_cube<NormType>();}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vert.normal\ =\ normals[i\ /\ 4];}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_uvs\ \&\&\ auto\_uvs)\ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }UVType\ =\ \textcolor{keyword}{decltype}(T::uv);}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ uvs\ =\ make\_primitive\_uvs\_cube<UVType>();}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vert.uv\ =\ uvs[i];}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert);}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00518\ \ \ \ \ \}}
+\DoxyCodeLine{00519\ }
+\DoxyCodeLine{00520\ \ \ \ \ \textcolor{keywordflow}{case}\ mesh\_type::triangle:\ \{}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.reserve(3);}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ T\ vert\_one;}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ vert\_one.position\ =\ \{\ 1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ T\ vert\_two;}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ vert\_two.position\ =\ \{\ -\/1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ T\ vert\_three;}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ vert\_three.position\ =\ \{\ 0,\ -\/1,\ 0\ \};}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_uvs\ \&\&\ auto\_uvs)\ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_one.uv\ =\ \{\ 1,\ 1\ \};}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_two.uv\ =\ \{\ 0,\ 1\ \};}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_three.uv\ =\ \{\ 0.5,\ 0\ \};}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_normals\ \&\&\ auto\_normals)\ \{}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_one.normal\ =\ \{\ 1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_two.normal\ =\ \{\ -\/1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_three.normal\ =\ \{\ 0,\ -\/1,\ 0\ \};}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_one);}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_two);}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_three);}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00542\ \ \ \ \ \}}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \textcolor{keywordflow}{case}\ mesh\_type::quad:\ \{}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.reserve(4);}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}.reserve(6);}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ T\ vert\_one;}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ vert\_one.position\ =\ \{\ 1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ T\ vert\_two;}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ vert\_two.position\ =\ \{\ -\/1,\ 1,\ 0\ \};}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ T\ vert\_three;}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ vert\_three.position\ =\ \{\ -\/1,\ -\/1,\ 0\ \};}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ T\ vert\_four;}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ vert\_four.position\ =\ \{\ 1,\ -\/1,\ 0\ \};}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_uvs\ \&\&\ auto\_uvs)\ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_one.uv\ =\ \{\ 1,\ 1\ \};}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_two.uv\ =\ \{\ 0,\ 1\ \};}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_three.uv\ =\ \{\ 0,\ 0\ \};}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_four.uv\ =\ \{\ 1,\ 0\ \};}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_normals\ \&\&\ auto\_normals)\ \{}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_one.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_two.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_three.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_four.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}\ =\ \{}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 1,\ 2,}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \ \ \ \ 2,\ 3,\ 0,}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_one);}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_two);}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_three);}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_four);}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00578\ \ \ \ \ \}}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ \ \ \ \ \textcolor{keywordflow}{case}\ mesh\_type::hexagon:\ \{}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.reserve(7);}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}.reserve(18);}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1hex__layout}{hex\_layout}}\ layout;}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ layout.\mbox{\hyperlink{structlava_1_1hex__layout_a21b57c9897062a175b9876327774b91a}{orientation}}\ =\ \mbox{\hyperlink{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}{hex\_layout\_point\_y}};}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ layout.\mbox{\hyperlink{structlava_1_1hex__layout_a92b22baeee3e4135c4888e28a5c4cd90}{size}}\ =\ \{\ 1,\ 1\ \};}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ hex\_corners\ =\ \mbox{\hyperlink{hex_8hpp_ac22679ea22e6cd067c6518fb6e3d5d54}{hex\_polygon\_corners}}(layout,\ \{\});}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ T\ vert\_center;}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ vert\_center.position\ =\ \{\ 0,\ 0,\ 0\ \};}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ T\ vert\_sw;}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ PosType\ temp;}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(0).x;}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(0).y;}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ temp[2]\ =\ 0;}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ vert\_sw.position\ =\ temp;}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ T\ vert\_nw;}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(1).x;}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(1).y;}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ vert\_nw.position\ =\ temp;}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ T\ vert\_n;}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(2).x;}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(2).y;}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ vert\_n.position\ =\ temp;}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ T\ vert\_ne;}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(3).x;}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(3).y;}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ vert\_ne.position\ =\ temp;}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ T\ vert\_se;}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(4).x;}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(4).y;}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ vert\_se.position\ =\ temp;}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ T\ vert\_s;}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ temp[0]\ =\ hex\_corners.at(5).x;}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ temp[1]\ =\ hex\_corners.at(5).y;}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ vert\_s.position\ =\ temp;}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_uvs\ \&\&\ auto\_uvs)\ \{}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_center.uv\ =\ \{\ 0,\ 0\ \};}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_sw.uv\ =\ \{\ 1,\ 0\ \};}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_nw.uv\ =\ \{\ 0,\ 1\ \};}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_n.uv\ =\ \{\ 1,\ 1\ \};}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_ne.uv\ =\ \{\ 1,\ 0\ \};}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_se.uv\ =\ \{\ 0,\ 1\ \};}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_s.uv\ =\ \{\ 1,\ 1\ \};}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_normals\ \&\&\ auto\_normals)\ \{}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_center.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_sw.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_nw.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_n.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_ne.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_se.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ vert\_s.normal\ =\ \{\ 0,\ 0,\ 1\ \};}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}{indices}}\ =\ \{}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 1,\ 6,\ 0,\ 6,\ 5,\ 0,\ 5,\ 4,\ 0,\ 4,\ 3,\ 0,\ 3,\ 2,\ 0,\ 2,\ 1}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_center);}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_sw);}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_nw);}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_n);}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_ne);}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_se);}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}}.push\_back(vert\_s);}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00646\ \ \ \ \ \}}
+\DoxyCodeLine{00647\ }
+\DoxyCodeLine{00648\ \ \ \ \ \textcolor{keywordflow}{case}\ mesh\_type::none:}
+\DoxyCodeLine{00649\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00651\ \ \ \ \ \}}
+\DoxyCodeLine{00652\ }
+\DoxyCodeLine{00653\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (generate\_colors\ \&\&\ auto\_colors)\ \{}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ vert\ :\ return\_mesh\_data.\mbox{\hyperlink{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}{vertices}})\ \{}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ does\ not\ work\ on\ glm\ vectors}}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (auto\&\ this\_color\ :\ vert.color)\ \{}}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ for\ (auto\&\ color\_component\ :\ this\_color)\ \{}}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ color\_component\ =\ 1;}}
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\textcolor{keyword}{decltype}(vert.color),\ glm::vec3>)\ \{}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vert.color\ =\ \{\ 1,\ 1,\ 1\ \};}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\textcolor{keyword}{decltype}(vert.color),\ glm::vec4>)\ \{}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vert.color\ =\ \{\ 1,\ 1,\ 1,\ 1\ \};}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ vert.color.size();\ i++)\ \{}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vert.color[i]\ =\ 1;}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00671\ \ \ \ \ \}}
+\DoxyCodeLine{00672\ }
+\DoxyCodeLine{00673\ \ \ \ \ \textcolor{keywordflow}{return}\ return\_mesh\_data;}
+\DoxyCodeLine{00674\ \}}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00676\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00677\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ PosType,}
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ vert\_count,}
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_complex>}
+\DoxyCodeLine{00680\ \textcolor{keyword}{constexpr}\ std::array<PosType,\ vert\_count>\ \mbox{\hyperlink{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b}{make\_primitive\_positions\_cube}}()\ \{}
+\DoxyCodeLine{00681\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00682\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (is\_complex)\ \{}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ std::array<PosType,\ 24>\ \textcolor{keyword}{const}\ positions\ =\ \{\{}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ front}}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ 1\ \},\ \{\ -\/1,\ 1,\ 1\},\ \{\ -\/1,\ -\/1,\ 1\ \},\ \{\ 1,\ -\/1,\ 1\ \},}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ back}}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ -\/1\ \},\ \{\ -\/1,\ 1,\ -\/1\ \},\ \{\ -\/1,\ -\/1,\ -\/1\ \},\ \{\ 1,\ -\/1,\ -\/1\ \},}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ left}}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ 1,\ 1\ \},\ \{\ -\/1,\ 1,\ -\/1\ \},\ \{\ -\/1,\ -\/1,\ -\/1\ \},\ \{\ -\/1,\ -\/1,\ 1\ \},}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ right}}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ 1\ \},\ \{\ 1,\ -\/1,\ 1\ \},\ \{\ 1,\ -\/1,\ -\/1\ \},\ \{\ 1,\ 1,\ -\/1\ \},}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bottom}}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ 1\ \},\ \{\ -\/1,\ 1,\ 1\ \},\ \{\ -\/1,\ 1,\ -\/1\ \},\ \{\ 1,\ 1,\ -\/1\ \},}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ top}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ -\/1,\ 1\ \},\ \{\ -\/1,\ -\/1,\ 1\ \},\ \{\ -\/1,\ -\/1,\ -\/1\ \},\ \{\ 1,\ -\/1,\ -\/1\ \},}
+\DoxyCodeLine{00696\ \ \ \ \ \ \ \ \ \}\};}
+\DoxyCodeLine{00697\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ positions;}
+\DoxyCodeLine{00698\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ std::array<PosType,\ 8>\ \textcolor{keyword}{const}\ positions\ =\ \{\{}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ -\/1,\ -\/1\ \},}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ -\/1,\ 1\ \},}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ 1,\ -\/1\ \},}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ 1,\ 1\ \},}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ -\/1,\ -\/1\ \},}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ -\/1,\ 1\ \},}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ -\/1\ \},}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 1,\ 1,\ 1\ \},}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \}\};}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ positions;}
+\DoxyCodeLine{00710\ \ \ \ \ \}}
+\DoxyCodeLine{00711\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00712\ \}}
+\DoxyCodeLine{00713\ }
+\DoxyCodeLine{00714\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00715\ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}\ is\_complex>}
+\DoxyCodeLine{00716\ std::vector<index>\ \mbox{\hyperlink{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238}{make\_primitive\_indices\_cube}}()\ \{}
+\DoxyCodeLine{00717\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00718\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (is\_complex)\ \{}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ std::vector<index>\ \textcolor{keyword}{const}\ indices\ =\ \{}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 1,\ 2,}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ 2,\ 3,\ 0,}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ 4,\ 7,\ 6,}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \ \ \ \ 6,\ 5,\ 4,}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ 8,\ 9,\ 10,}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ 10,\ 11,\ 8,}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ 12,\ 13,\ 14,}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ 14,\ 15,\ 12,}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ 16,\ 19,\ 18,}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \ \ \ \ 18,\ 17,\ 16,}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ 20,\ 21,\ 22,}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \ \ \ \ 22,\ 23,\ 20,}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ indices;}
+\DoxyCodeLine{00734\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clockwise\ winding\ order}}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ std::vector<index>\ \textcolor{keyword}{const}\ indices\ =\ \{}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ left}}
+\DoxyCodeLine{00738\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 1,\ 2,}
+\DoxyCodeLine{00739\ \ \ \ \ \ \ \ \ \ \ \ \ 2,\ 1,\ 3,}
+\DoxyCodeLine{00740\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ right}}
+\DoxyCodeLine{00741\ \ \ \ \ \ \ \ \ \ \ \ \ 4,\ 5,\ 6,}
+\DoxyCodeLine{00742\ \ \ \ \ \ \ \ \ \ \ \ \ 6,\ 5,\ 7,}
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ top}}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ \ \ \ \ 0,\ 1,\ 4,}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \ \ \ \ 4,\ 1,\ 5,}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bottom}}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \ \ \ \ 2,\ 3,\ 6,}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \ \ \ \ 6,\ 3,\ 7,}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ back}}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ 3,\ 1,\ 5,}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ 5,\ 7,\ 3,}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ front}}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ 2,\ 0,\ 4,}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \ \ \ \ 4,\ 6,\ 2,}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ indices;}
+\DoxyCodeLine{00757\ \ \ \ \ \}}
+\DoxyCodeLine{00758\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00759\ \}}
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00761\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00762\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ NormType>}
+\DoxyCodeLine{00763\ \textcolor{keyword}{constexpr}\ std::array<NormType,\ 6>\ \mbox{\hyperlink{mesh_8hpp_af87a63e28c639e3fcce909291d92117f}{make\_primitive\_normals\_cube}}()\ \{}
+\DoxyCodeLine{00764\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00765\ \ \ \ \ \textcolor{comment}{//\ front,\ back,\ left,\ right,\ bottom,\ and\ top\ normals,\ in\ that\ order}}
+\DoxyCodeLine{00766\ \ \ \ \ std::array<NormType,\ 6>\ \textcolor{keyword}{const}\ normals\ =\ \{\{\ \{\ 0,\ 0,\ 1\ \},\ \ \{\ 0,\ 0,\ -\/1\ \},}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ -\/1,\ 0,\ 0\ \},\ \{\ 1,\ 0,\ 0\ \},}
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0,\ 1,\ 0\ \},\ \ \{\ 0,\ -\/1,\ 0\ \},\ \}\};}
+\DoxyCodeLine{00769\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00770\ \ \ \ \ \textcolor{keywordflow}{return}\ normals;}
+\DoxyCodeLine{00771\ \}}
+\DoxyCodeLine{00772\ }
+\DoxyCodeLine{00773\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00774\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ UVType>}
+\DoxyCodeLine{00775\ \textcolor{keyword}{constexpr}\ std::array<UVType,\ 24>\ \mbox{\hyperlink{mesh_8hpp_a30ccf5eed07b27155682ddd4597e4a92}{make\_primitive\_uvs\_cube}}()\ \{}
+\DoxyCodeLine{00776\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00777\ \ \ \ \ std::array<UVType,\ 24>\ \textcolor{keyword}{const}\ uvs\ =\ \{\{}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ \{\ 1,\ 1\ \},\ \{\ 0,\ 1\ \},\ \{\ 0,\ 0\ \},\ \{\ 1,\ 0\ \},\ \textcolor{comment}{//\ front}}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \{\ 0,\ 1\ \},\ \{\ 1,\ 1\ \},\ \{\ 1,\ 0\ \},\ \{\ 0,\ 0\ \},\ \textcolor{comment}{//\ back}}
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \ \ \{\ 1,\ 1\ \},\ \{\ 0,\ 1\ \},\ \{\ 0,\ 0\ \},\ \{\ 1,\ 0\ \},\ \textcolor{comment}{//\ left}}
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \{\ 0,\ 1\ \},\ \{\ 0,\ 0\ \},\ \{\ 1,\ 0\ \},\ \{\ 1,\ 1\ \},\ \textcolor{comment}{//\ right}}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \{\ 1,\ 0\ \},\ \{\ 0,\ 0\ \},\ \{\ 0,\ 1\ \},\ \{\ 1,\ 1\ \},\ \textcolor{comment}{//\ bottom}}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \{\ 1,\ 1\ \},\ \{\ 0,\ 1\ \},\ \{\ 0,\ 0\ \},\ \{\ 1,\ 0\ \},\ \textcolor{comment}{//\ top}}
+\DoxyCodeLine{00784\ \ \ \ \ \}\};}
+\DoxyCodeLine{00785\ \ \ \ \ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00786\ \ \ \ \ \textcolor{keywordflow}{return}\ uvs;}
+\DoxyCodeLine{00787\ \}}
+\DoxyCodeLine{00788\ }
+\DoxyCodeLine{00790\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_data}}\ =\ \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\_template\_data<vertex>}};}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00793\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1mesh__template}{mesh}}\ =\ \mbox{\hyperlink{structlava_1_1mesh__template}{mesh\_template<vertex>}};}
+\DoxyCodeLine{00794\ }
+\DoxyCodeLine{00798\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1mesh__meta}{mesh\_meta}}\ \{}
+\DoxyCodeLine{00800\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structlava_1_1mesh__meta_ac530555e8f4a1ebf987a6250db7feafb}{filename}};}
+\DoxyCodeLine{00801\ }
+\DoxyCodeLine{00803\ \ \ \ \ \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ \mbox{\hyperlink{structlava_1_1mesh__meta_a8bb2ba2f40b27dab502bb396d6cd63a1}{type}}\ =\ mesh\_type::none;}
+\DoxyCodeLine{00804\ \};}
+\DoxyCodeLine{00805\ }
+\DoxyCodeLine{00807\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id__registry}{mesh\_registry}}\ =\ \mbox{\hyperlink{structlava_1_1id__registry}{id\_registry<mesh,\ mesh\_meta>}};}
+\DoxyCodeLine{00808\ }
+\DoxyCodeLine{00809\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

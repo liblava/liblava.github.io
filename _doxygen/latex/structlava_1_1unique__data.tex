@@ -1,0 +1,106 @@
+\doxysection{lava\+::unique\+\_\+data Struct Reference}
+\hypertarget{structlava_1_1unique__data}{}\label{structlava_1_1unique__data}\index{lava::unique\_data@{lava::unique\_data}}
+
+
+Unique data wrapper.  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+Inheritance diagram for lava\+::unique\+\_\+data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1unique__data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1unique__data_aecdf1c720e2713b4f75a85c02d394aeb}\label{structlava_1_1unique__data_aecdf1c720e2713b4f75a85c02d394aeb} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1unique__data}{unique\+\_\+data}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to unique data wrapper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{structlava_1_1data}{lava\+::data}}}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1data}{data}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to data wrapper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1unique__data_a7396249a5ef0ff241654ee19de746746}{unique\+\_\+data}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} length=0, \mbox{\hyperlink{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}{data\+\_\+mode}} mode=data\+\_\+mode\+::alloc)
+\begin{DoxyCompactList}\small\item\em Construct a new unique data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1unique__data_ac219b1f93ede0c97cf6ac5e47eab9f53}{unique\+\_\+data}} (\mbox{\hyperlink{structlava_1_1data_af45fa6169fcd0b92cfa6692099fedc73}{data\+::ref}} \mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Construct a new unique data from another data. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1unique__data_a15063fc33a2db91110718149c90027b3}\label{structlava_1_1unique__data_a15063fc33a2db91110718149c90027b3} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}unique\+\_\+data} ()
+\begin{DoxyCompactList}\small\item\em Destroy the unique data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1data}{lava\+::data}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries data} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1data_afa036aea7e0f5c1ff76a1a187d553eec}{data}} (auto \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data_ac8f4c74a90f183445bd33bdd6aa99991}{ptr}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}})
+\begin{DoxyCompactList}\small\item\em Construct a new data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1data_a557ce23e9f7065de37de0cba16aea1b4}{set}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} length, \mbox{\hyperlink{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}{data\+\_\+mode}} mode=data\+\_\+mode\+::alloc)
+\begin{DoxyCompactList}\small\item\em Set and allocate data by length. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1data_abcf807ad35ff941ca2c33775ee6d092f}{allocate}} ()
+\begin{DoxyCompactList}\small\item\em Allocate data. \end{DoxyCompactList}\item 
+void {\bfseries free} ()
+\begin{DoxyCompactList}\small\item\em Free data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{data_8hpp_a6ebeada7186a7c7f866c316500d2c5fb}{data\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1data_ad1009c598b6ee7dd71656d176028f046}{end}} () const
+\begin{DoxyCompactList}\small\item\em Pointer to end of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{structlava_1_1data}{lava\+::data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data_8hpp_a6ebeada7186a7c7f866c316500d2c5fb}{data\+\_\+ptr}} {\bfseries ptr} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} {\bfseries size} = 0
+\begin{DoxyCompactList}\small\item\em Size of data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} {\bfseries alignment} = 0
+\begin{DoxyCompactList}\small\item\em Data alignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unique data wrapper. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1unique__data_a7396249a5ef0ff241654ee19de746746}\label{structlava_1_1unique__data_a7396249a5ef0ff241654ee19de746746} 
+\index{lava::unique\_data@{lava::unique\_data}!unique\_data@{unique\_data}}
+\index{unique\_data@{unique\_data}!lava::unique\_data@{lava::unique\_data}}
+\doxysubsubsection{\texorpdfstring{unique\_data()}{unique\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lava\+::unique\+\_\+data\+::unique\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{length = {\ttfamily 0},  }\item[{\mbox{\hyperlink{data_8hpp_a76dedd5bc32d5278bdccf3b9e0fd8d0f}{data\+\_\+mode}}}]{mode = {\ttfamily data\+\_\+mode\+:\+:alloc} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new unique data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length of data \\
+\hline
+{\em mode} & Data mode \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1unique__data_ac219b1f93ede0c97cf6ac5e47eab9f53}\label{structlava_1_1unique__data_ac219b1f93ede0c97cf6ac5e47eab9f53} 
+\index{lava::unique\_data@{lava::unique\_data}!unique\_data@{unique\_data}}
+\index{unique\_data@{unique\_data}!lava::unique\_data@{lava::unique\_data}}
+\doxysubsubsection{\texorpdfstring{unique\_data()}{unique\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lava\+::unique\+\_\+data\+::unique\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1data_af45fa6169fcd0b92cfa6692099fedc73}{data\+::ref}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new unique data from another data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Source data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/core/\mbox{\hyperlink{data_8hpp}{data.\+hpp}}\end{DoxyCompactItemize}

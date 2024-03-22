@@ -1,0 +1,140 @@
+\doxysection{lava\+::image\+\_\+loader Struct Reference}
+\hypertarget{structlava_1_1image__loader}{}\label{structlava_1_1image__loader}\index{lava::image\_loader@{lava::image\_loader}}
+
+
+Load image data from file and memory.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+loader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1image__loader_a754b69340553ea033bc7b4250ddc14d8}{image\+\_\+loader}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Construct a new image data from file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image__loader_a81ad790cbb09f7b14a8da4707e971872}{image\+\_\+loader}} (\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}} \mbox{\hyperlink{structlava_1_1image}{image}})
+\begin{DoxyCompactList}\small\item\em Construct a new image data from memory. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1image__loader_a092b7418f8e8cd6bf89f616ffd15b1cb}\label{structlava_1_1image__loader_a092b7418f8e8cd6bf89f616ffd15b1cb} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}image\+\_\+loader} ()
+\begin{DoxyCompactList}\small\item\em Destroy the image data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1image__loader_ac52d94c78ebf0320bd924c8cd9107f27}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if data is ready. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{data_8hpp_ad742e6a476d148b87fc705b4583af093}{data\+\_\+cptr}} \mbox{\hyperlink{structlava_1_1image__loader_a2115b828e1d55edfa3419e2de2406d45}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get image data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{structlava_1_1image__loader_ae8452b4d6f0bcc8c2c6e538420ea523d}{size}} () const
+\begin{DoxyCompactList}\small\item\em Get image data size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1image__loader_afe05892720d36b9bbb0768df77b5f70f}{get\+\_\+dimensions}} () const
+\begin{DoxyCompactList}\small\item\em Get image dimensions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1image__loader_ad2bdec258463b587f2f563ec093651a1}{get\+\_\+channels}} () const
+\begin{DoxyCompactList}\small\item\em Get image channel count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Load image data from file and memory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1image__loader_a754b69340553ea033bc7b4250ddc14d8}\label{structlava_1_1image__loader_a754b69340553ea033bc7b4250ddc14d8} 
+\index{lava::image\_loader@{lava::image\_loader}!image\_loader@{image\_loader}}
+\index{image\_loader@{image\_loader}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{image\_loader()}{image\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lava\+::image\+\_\+loader\+::image\+\_\+loader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new image data from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File data to load \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image__loader_a81ad790cbb09f7b14a8da4707e971872}\label{structlava_1_1image__loader_a81ad790cbb09f7b14a8da4707e971872} 
+\index{lava::image\_loader@{lava::image\_loader}!image\_loader@{image\_loader}}
+\index{image\_loader@{image\_loader}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{image\_loader()}{image\_loader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lava\+::image\+\_\+loader\+::image\+\_\+loader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}}}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new image data from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Memory data to load \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1image__loader_a2115b828e1d55edfa3419e2de2406d45}\label{structlava_1_1image__loader_a2115b828e1d55edfa3419e2de2406d45} 
+\index{lava::image\_loader@{lava::image\_loader}!get@{get}}
+\index{get@{get}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{data_8hpp_ad742e6a476d148b87fc705b4583af093}{data\+\_\+cptr}} lava\+::image\+\_\+loader\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get image data. 
+
+\begin{DoxyReturn}{Returns}
+data\+\_\+ptr Image data pointer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image__loader_ad2bdec258463b587f2f563ec093651a1}\label{structlava_1_1image__loader_ad2bdec258463b587f2f563ec093651a1} 
+\index{lava::image\_loader@{lava::image\_loader}!get\_channels@{get\_channels}}
+\index{get\_channels@{get\_channels}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{get\_channels()}{get\_channels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::image\+\_\+loader\+::get\+\_\+channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get image channel count. 
+
+\begin{DoxyReturn}{Returns}
+ui32 Channel count 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image__loader_afe05892720d36b9bbb0768df77b5f70f}\label{structlava_1_1image__loader_afe05892720d36b9bbb0768df77b5f70f} 
+\index{lava::image\_loader@{lava::image\_loader}!get\_dimensions@{get\_dimensions}}
+\index{get\_dimensions@{get\_dimensions}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{get\_dimensions()}{get\_dimensions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::image\+\_\+loader\+::get\+\_\+dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get image dimensions. 
+
+\begin{DoxyReturn}{Returns}
+uv2 Image dimensions 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image__loader_ac52d94c78ebf0320bd924c8cd9107f27}\label{structlava_1_1image__loader_ac52d94c78ebf0320bd924c8cd9107f27} 
+\index{lava::image\_loader@{lava::image\_loader}!ready@{ready}}
+\index{ready@{ready}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily bool lava\+::image\+\_\+loader\+::ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if data is ready. 
+
+\begin{DoxyReturn}{Returns}
+Data is ready or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image__loader_ae8452b4d6f0bcc8c2c6e538420ea523d}\label{structlava_1_1image__loader_ae8452b4d6f0bcc8c2c6e538420ea523d} 
+\index{lava::image\_loader@{lava::image\_loader}!size@{size}}
+\index{size@{size}!lava::image\_loader@{lava::image\_loader}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} lava\+::image\+\_\+loader\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get image data size. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Image data size 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/asset/\mbox{\hyperlink{image__loader_8hpp}{image\+\_\+loader.\+hpp}}\end{DoxyCompactItemize}

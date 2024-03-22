@@ -1,0 +1,258 @@
+\doxysection{lava\+::compute\+\_\+pipeline Struct Reference}
+\hypertarget{structlava_1_1compute__pipeline}{}\label{structlava_1_1compute__pipeline}\index{lava::compute\_pipeline@{lava::compute\_pipeline}}
+
+
+Compute pipeline.  
+
+
+
+
+{\ttfamily \#include $<$compute\+\_\+pipeline.\+hpp$>$}
+
+Inheritance diagram for lava\+::compute\+\_\+pipeline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{structlava_1_1compute__pipeline}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}\label{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1} 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{using}} {\bfseries ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1compute__pipeline}{compute\+\_\+pipeline}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to compute pipeline. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}\label{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699} 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{using}} {\bfseries map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of compute pipelines. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1compute__pipeline_ad25157b266b5fa128df48643c216101d}\label{structlava_1_1compute__pipeline_ad25157b266b5fa128df48643c216101d} 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{using}} {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of compute pipelines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{structlava_1_1pipeline}{lava\+::pipeline}}}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to pipeline. \end{DoxyCompactList}\item 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1pipeline_a6dce1fc42907b5b34ec28bc96e224296}{ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of pipelines. \end{DoxyCompactList}\item 
+using {\bfseries process\+\_\+func} = std\+::function$<$void(Vk\+Command\+Buffer)$>$
+\begin{DoxyCompactList}\small\item\em Pipeline process function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a7be06c2bd664c103661e4848f1bc2854}{bind}} (\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Command\+Buffer}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{cmd\+Buffer}}) \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{override}}
+\begin{DoxyCompactList}\small\item\em Bind the pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{bool}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a4f9d4248df877686b5b6b244cf87aacd}{set\+\_\+shader\+\_\+stage}} (\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Shader\+Stage\+Flag\+Bits}} \mbox{\hyperlink{structlava_1_1stage}{stage}})
+\begin{DoxyCompactList}\small\item\em Set shader stage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a20e184681270a350bdc157ffbb218556}{set}} (shader\+\_\+stage\+::ptr \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}} \&\mbox{\hyperlink{structlava_1_1stage}{stage}})
+\begin{DoxyCompactList}\small\item\em Set shader stage. \end{DoxyCompactList}\item 
+shader\+\_\+stage\+::ptr \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}} \& \mbox{\hyperlink{structlava_1_1compute__pipeline_a6fe319e61e33c773ac264f62b796d68d}{get\+\_\+shader\+\_\+stage}} () \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}}
+\begin{DoxyCompactList}\small\item\em Get the shader stage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a63ae45c6b38d4b07d57d3f5ace6e528b}{copy\+\_\+to}} (\mbox{\hyperlink{structlava_1_1compute__pipeline}{compute\+\_\+pipeline}} \texorpdfstring{$\ast$}{*}target) \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}}
+\begin{DoxyCompactList}\small\item\em Copy configuration to target pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} \mbox{\hyperlink{structlava_1_1compute__pipeline_afe3efbf02feca04028c6563854dc3e66}{copy\+\_\+from}} (\mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}} \&\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{source}})
+\begin{DoxyCompactList}\small\item\em Copy configuration from source. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1compute__pipeline_a25764a7f5b611fcc93406ad7820e04e7}\label{structlava_1_1compute__pipeline_a25764a7f5b611fcc93406ad7820e04e7} 
+{\bfseries pipeline} (\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Pipeline\+Cache}} \mbox{\hyperlink{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}{pipeline\+\_\+cache}}=0)
+\begin{DoxyCompactList}\small\item\em Pipeline constructors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1pipeline}{lava\+::pipeline}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1pipeline_a25764a7f5b611fcc93406ad7820e04e7}{pipeline}} (\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Cache \mbox{\hyperlink{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}{pipeline\+\_\+cache}}=0)
+\begin{DoxyCompactList}\small\item\em Construct a new pipeline. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}pipeline} () override
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a9efe4f61250e2e1cca7d64530691eab0}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new pipeline. \end{DoxyCompactList}\item 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_a8917bd488924a0c7c509535ac6d45769}{set\+\_\+active}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set pipeline active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_af1ed6d08db3d755b3011fcb8b423f416}{activated}} () const
+\begin{DoxyCompactList}\small\item\em Check if pipeline is active. \end{DoxyCompactList}\item 
+void {\bfseries toggle} ()
+\begin{DoxyCompactList}\small\item\em Toggle activation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_ad5b46469c6de88ce4bde0f9cbff570b4}{set\+\_\+auto\+\_\+bind}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set auto bind. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a102ce500ee05cfdf242423703188b9d7}{auto\+\_\+bind}} () const
+\begin{DoxyCompactList}\small\item\em Check if auto bind is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline_a9246051bc496565d046631ac64cd8a26}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if pipeline is ready. \end{DoxyCompactList}\item 
+Vk\+Pipeline \mbox{\hyperlink{structlava_1_1pipeline_a3e37bdce392138b2058e7a811fcbcbb9}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1pipeline_a57a88dd0de42ea3c87ef0da6202b0510}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} \mbox{\hyperlink{structlava_1_1pipeline_a46f127c294d5ebbad1c03f6697a83ffc}{get\+\_\+layout}} () const
+\begin{DoxyCompactList}\small\item\em Get the layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline_aa6eb4e95f7d7d1602e3961388e849226}{set\+\_\+layout}} (\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} const \&value)
+\begin{DoxyCompactList}\small\item\em Set the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{static}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a0b19a820a753f53937252218be450b25}{make}} (\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Pipeline\+Cache}} \mbox{\hyperlink{structlava_1_1pipeline_a68ab4f4b84e9bc12d5f91f4fd6a93420}{pipeline\+\_\+cache}}=0)
+\begin{DoxyCompactList}\small\item\em Make a new compute pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{structlava_1_1pipeline}{lava\+::pipeline}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1pipeline_a2cdd9f46ddc9b493421680c53a2a5f68}{process\+\_\+func}} {\bfseries on\+\_\+process}
+\begin{DoxyCompactList}\small\item\em Called on pipeline process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{structlava_1_1pipeline}{lava\+::pipeline}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}} {\bfseries device} = nullptr
+\begin{DoxyCompactList}\small\item\em Vulkan device. \end{DoxyCompactList}\item 
+Vk\+Pipeline {\bfseries vk\+\_\+pipeline} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\begin{DoxyCompactList}\small\item\em Vulkan pipeline. \end{DoxyCompactList}\item 
+Vk\+Pipeline\+Cache {\bfseries pipeline\+\_\+cache} = VK\+\_\+\+NULL\+\_\+\+HANDLE
+\begin{DoxyCompactList}\small\item\em Vulkan pipeline cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1pipeline__layout_a258243ec8b59d7ff495b2e45780a4e5f}{pipeline\+\_\+layout\+::ptr}} {\bfseries layout}
+\begin{DoxyCompactList}\small\item\em Pipeline layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compute pipeline. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1compute__pipeline_a7be06c2bd664c103661e4848f1bc2854}\label{structlava_1_1compute__pipeline_a7be06c2bd664c103661e4848f1bc2854} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!bind@{bind}}
+\index{bind@{bind}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} lava\+::compute\+\_\+pipeline\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Command\+Buffer}}}]{cmd\+Buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Bind the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Buffer} & Command buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{structlava_1_1pipeline_a4fbab953063b31a88987dd050ee9289c}{lava\+::pipeline}}.
+
+\Hypertarget{structlava_1_1compute__pipeline_afe3efbf02feca04028c6563854dc3e66}\label{structlava_1_1compute__pipeline_afe3efbf02feca04028c6563854dc3e66} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!copy\_from@{copy\_from}}
+\index{copy\_from@{copy\_from}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{copy\_from()}{copy\_from()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} lava\+::compute\+\_\+pipeline\+::copy\+\_\+from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}} \&}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy configuration from source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Compute pipeline \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1compute__pipeline_a63ae45c6b38d4b07d57d3f5ace6e528b}\label{structlava_1_1compute__pipeline_a63ae45c6b38d4b07d57d3f5ace6e528b} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!copy\_to@{copy\_to}}
+\index{copy\_to@{copy\_to}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{copy\_to()}{copy\_to()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} lava\+::compute\+\_\+pipeline\+::copy\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1compute__pipeline}{compute\+\_\+pipeline}} \texorpdfstring{$\ast$}{*}}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Copy configuration to target pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Compute pipeline \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1compute__pipeline_a6fe319e61e33c773ac264f62b796d68d}\label{structlava_1_1compute__pipeline_a6fe319e61e33c773ac264f62b796d68d} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!get\_shader\_stage@{get\_shader\_stage}}
+\index{get\_shader\_stage@{get\_shader\_stage}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{get\_shader\_stage()}{get\_shader\_stage()}}
+{\footnotesize\ttfamily shader\+\_\+stage\+::ptr \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}}  \& lava\+::compute\+\_\+pipeline\+::get\+\_\+shader\+\_\+stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the shader stage. 
+
+\begin{DoxyReturn}{Returns}
+shader\+\_\+stage\+::ptr const\& Shader state 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1compute__pipeline_a0b19a820a753f53937252218be450b25}\label{structlava_1_1compute__pipeline_a0b19a820a753f53937252218be450b25} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!make@{make}}
+\index{make@{make}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{static}} \mbox{\hyperlink{structlava_1_1compute__pipeline_a04c9a6cdae83e68ae0bd8dda8c6f50a1}{ptr}} lava\+::compute\+\_\+pipeline\+::make (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{device_8hpp_a98e4e1a4b6100c6d724074d570ceda20}{device\+\_\+p}}}]{device,  }\item[{\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Pipeline\+Cache}}}]{pipeline\+\_\+cache = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new compute pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em pipeline\+\_\+cache} & Pipeline cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to compute pipeline 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1compute__pipeline_a20e184681270a350bdc157ffbb218556}\label{structlava_1_1compute__pipeline_a20e184681270a350bdc157ffbb218556} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!set@{set}}
+\index{set@{set}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{void}} lava\+::compute\+\_\+pipeline\+::set (\begin{DoxyParamCaption}\item[{shader\+\_\+stage\+::ptr \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{const}} \&}]{stage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set shader stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Shader state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1compute__pipeline_a4f9d4248df877686b5b6b244cf87aacd}\label{structlava_1_1compute__pipeline_a4f9d4248df877686b5b6b244cf87aacd} 
+\index{lava::compute\_pipeline@{lava::compute\_pipeline}!set\_shader\_stage@{set\_shader\_stage}}
+\index{set\_shader\_stage@{set\_shader\_stage}!lava::compute\_pipeline@{lava::compute\_pipeline}}
+\doxysubsubsection{\texorpdfstring{set\_shader\_stage()}{set\_shader\_stage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{bool}} lava\+::compute\+\_\+pipeline\+::set\+\_\+shader\+\_\+stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1cdata_a31b62cc479b79c95a98ed8e832fbbb19}{cdata\+::ref}}}]{data,  }\item[{\mbox{\hyperlink{structlava_1_1compute__pipeline_a36df92acb0d5b1bb6d90228885831699}{Vk\+Shader\+Stage\+Flag\+Bits}}}]{stage }\end{DoxyParamCaption})}
+
+
+
+Set shader stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Shader data \\
+\hline
+{\em stage} & Shader stage flag bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{compute__pipeline_8hpp}{compute\+\_\+pipeline.\+hpp}}\end{DoxyCompactItemize}

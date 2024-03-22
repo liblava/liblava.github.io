@@ -1,0 +1,151 @@
+\doxysection{camera.\+hpp}
+\hypertarget{camera_8hpp_source}{}\label{camera_8hpp_source}\index{liblava/app/camera.hpp@{liblava/app/camera.hpp}}
+\mbox{\hyperlink{camera_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gamepad_8hpp}{liblava/frame/gamepad.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_8hpp}{liblava/frame/input.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{buffer_8hpp}{liblava/resource/buffer.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{camera_8hpp_a731716ff18d5a87545c4d9cbd0be2ebe}{camera\_mode}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ first\_person\ =\ 0,}
+\DoxyCodeLine{00021\ \ \ \ \ look\_at,}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1camera}{camera}}\ :\ \mbox{\hyperlink{structlava_1_1entity}{entity}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1camera_a6c8d4ad6f337e7009125dc561db03296}{ptr}}\ =\ std::shared\_ptr<camera>;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{map}}\ =\ std::map<id,\ ptr>;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1camera_a3b31a4af4a544dcb7583c7de89ee7909}{list}}\ =\ std::vector<ptr>;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_a5ab764cead22f355362e1ad39c1ec250}{create}}(\mbox{\hyperlink{structlava_1_1device}{device\_p}}\ \mbox{\hyperlink{structlava_1_1device}{device}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_af76bd66f245611c64738121f70e3fea7}{destroy}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a0218c5b3237f95d851ece093bf9cfe05}{update\_projection}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_ab5629150384212bb36279ccc7aee5fec}{update\_view}}(\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{dt}},\ \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}}\ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{mouse\_pos}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a0c7bcca859ff175838fc9fc22f1ec7ef}{update\_view}}(\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{dt}},\ \mbox{\hyperlink{structlava_1_1gamepad_ae9c3ebf9c404adc56a5415c6f364a081}{gamepad::ref}}\ pad);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ \mbox{\hyperlink{structlava_1_1camera_a58d102279002d4482b42601d99b84135}{get\_view}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ \mbox{\hyperlink{structlava_1_1camera_a450407d93e617f26595682e1d236b2cd}{get\_projection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ \mbox{\hyperlink{structlava_1_1camera_a4b23855a2d209a56c72793a8b0636d6f}{calc\_view\_projection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_adc223537f4a0a3f86110d407de2de24e}{handle}}(\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{key\_event::ref}}\ event);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_a1602a69e9b10026a555b776435967274}{handle}}(\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{mouse\_button\_event::ref}}\ event,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\_position}}\ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{mouse\_pos}});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_a5ab126b025cf5a295632a42029aaf39b}{handle}}(\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{scroll\_event::ref}}\ event);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_acb65ea214394366c19618feeb3ef6e29}{valid}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}\ ?\ \mbox{\hyperlink{structlava_1_1data}{data}}-\/>valid()\ :\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{VkDescriptorBufferInfo}}\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{structlava_1_1camera_a12e066870d5f849cd231626870d05770}{get\_descriptor\_info}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1data}{data}}\ ?\ \mbox{\hyperlink{structlava_1_1data}{data}}-\/>get\_descriptor\_info()\ :\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_aa7bd2279bcac1e13ff18310d8713cf1b}{upload}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a50ef9b7e825c9f5bcfc8728257cde0be}{stop}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a53c5b447cc5e2cf063b7196f21c46274}{reset}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a606ba30fa8d6487b76e3a72e92a51b04}{set\_active}}(\textcolor{keywordtype}{bool}\ value\ =\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ active\ =\ value;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_abe7be71cb4f5c01c9b7dede8ba2ec8fe}{activated}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ active;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_ac37bea8c2893bf25c89f04427f2452ff}{moving}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ move\_up\ ||\ move\_down\ ||\ move\_left\ ||\ move\_right;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1camera_a2a71a670e7e63fb388b8f92066695300}{set\_movement\_keys}}(\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\_ref}}\ up,\ \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\_ref}}\ down,}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\_ref}}\ left,\ \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\_ref}}\ right)\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ up\_keys\ =\ up;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ down\_keys\ =\ down;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ left\_keys\ =\ left;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ right\_keys\ =\ right;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ \mbox{\hyperlink{structlava_1_1camera_abe3ae9b3c5b8de5f5bd623ad7528450a}{position}}\ =\ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}(0.f);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ \mbox{\hyperlink{structlava_1_1camera_a80234741cfe9f7e2808c2cce005fab6c}{rotation}}\ =\ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}(0.f);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_a50e621f8660dc6a420211ec810fae8ea}{rotation\_speed}}\ =\ 20.f;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_aa8688226ac35525517e98260acb0f264}{movement\_speed}}\ =\ 1.f;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_a5c0ea276e42e335229d6778a9da2eea3}{zoom\_speed}}\ =\ 20.f;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_a0d5b42d59361a57d98f9a90db5ce65ee}{fov}}\ =\ 60.f;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_a96c50dfd75e4611fd424709b6fb6200c}{z\_near}}\ =\ 0.1f;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_ab27550631e3cb0da1f76a2414a71eb53}{z\_far}}\ =\ 256.f;}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1camera_a46b80c2fb0b453c66c8e5fd251faff4b}{aspect\_ratio}}\ =\ 1.77f;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{camera_8hpp_a731716ff18d5a87545c4d9cbd0be2ebe}{camera\_mode}}\ \mbox{\hyperlink{structlava_1_1camera_a28c8a677fbf1d8048396a5ea3083cb3c}{mode}}\ =\ camera\_mode::first\_person;}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_a95be646793f23f19139810f173ba66de}{lock\_z}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1camera_a269a54d6faab7efde7e651ebbaac035f}{lock\_rotation}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ move\_first\_person(\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ \mbox{\hyperlink{structlava_1_1camera_a8c7ad939bf021403061595e2531156b7}{dt}});}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{bool}\ active\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_up\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_down\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_left\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_right\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{bool}\ rotate\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{bool}\ translate\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}}\ mouse\_pos\_x\ =\ 0.0;}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00247\ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}}\ mouse\_pos\_y\ =\ 0.0;}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00250\ \ \ \ \ \mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}}\ scroll\_pos\ =\ 0.0;}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00253\ \ \ \ \ \mbox{\hyperlink{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3}{keys}}\ up\_keys\{\ key::w\ \};}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00256\ \ \ \ \ \mbox{\hyperlink{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3}{keys}}\ down\_keys\{\ key::s\ \};}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00259\ \ \ \ \ keys\ left\_keys\{\ key::a\ \};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3}{keys}}\ right\_keys\{\ key::d\ \};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{structlava_1_1buffer_aeb4a99e41042625662a6ae68fae772e9}{buffer::ptr}}\ data;}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}})\ *\ 2;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00271\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ projection\ =\ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}(0.f);}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00274\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ view\ =\ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}(0.f);}
+\DoxyCodeLine{00275\ \};}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00278\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1camera}{camera\_t}}\ =\ \mbox{\hyperlink{structlava_1_1camera}{camera}};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

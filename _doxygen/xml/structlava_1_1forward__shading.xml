@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structlava_1_1forward__shading" kind="struct" language="C++" prot="public">
+    <compoundname>lava::forward_shading</compoundname>
+    <includes refid="forward__shading_8hpp" local="no">forward_shading.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1forward__shading_1a395e88df4485f775f3dad67568543f08" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1render__target_1a104faafb2538563edc867c798086739b" kindref="member">render_target::ptr</ref></type>
+        <definition>render_target::ptr lava::forward_shading::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <qualifiedname>lava::forward_shading::target</qualifiedname>
+        <briefdescription>
+<para>Render target. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="69" column="24" bodyfile="liblava/app/forward_shading.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1forward__shading_1a6d88d078dc88a51f949f7db681d6d6d8" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" kindref="member">render_pass::ptr</ref></type>
+        <definition>render_pass::ptr lava::forward_shading::pass</definition>
+        <argsstring></argsstring>
+        <name>pass</name>
+        <qualifiedname>lava::forward_shading::pass</qualifiedname>
+        <briefdescription>
+<para>Render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="72" column="22" bodyfile="liblava/app/forward_shading.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1forward__shading_1af4bc9af412f83f3f4c3ebe735a872176" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1image_1a02d34cc8d6b785c01753a74cda3e8bbb" kindref="member">image::ptr</ref></type>
+        <definition>image::ptr lava::forward_shading::depth_stencil</definition>
+        <argsstring></argsstring>
+        <name>depth_stencil</name>
+        <qualifiedname>lava::forward_shading::depth_stencil</qualifiedname>
+        <briefdescription>
+<para>Depth stencil image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="75" column="16" bodyfile="liblava/app/forward_shading.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1forward__shading_1a724301829060777c7739db5d12f355cf" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::forward_shading::forward_shading</definition>
+        <argsstring>()=default</argsstring>
+        <name>forward_shading</name>
+        <qualifiedname>lava::forward_shading::forward_shading</qualifiedname>
+        <briefdescription>
+<para>Construct a new forward shading. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1a51391e8cb1bdb453c6cdccd27f659242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::forward_shading::~forward_shading</definition>
+        <argsstring>()</argsstring>
+        <name>~forward_shading</name>
+        <qualifiedname>lava::forward_shading::~forward_shading</qualifiedname>
+        <briefdescription>
+<para>Destroy the forward shading. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="27" column="5" bodyfile="liblava/app/forward_shading.hpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1a2e086a2eddff1e2fb9e4ef77107d964a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::forward_shading::create</definition>
+        <argsstring>(render_target::ptr target)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::forward_shading::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__target_1a104faafb2538563edc867c798086739b" kindref="member">render_target::ptr</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Create a forward shading for a render target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render target </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="36" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1a9da8c059432678d2a32aa121d4a3c4b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::forward_shading::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::forward_shading::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the forward shading. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1a4f49e62584a5bb84fe6062d07e0a7e2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" kindref="member">render_pass::ptr</ref></type>
+        <definition>render_pass::ptr lava::forward_shading::get_pass</definition>
+        <argsstring>() const</argsstring>
+        <name>get_pass</name>
+        <qualifiedname>lava::forward_shading::get_pass</qualifiedname>
+        <briefdescription>
+<para>Get the render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1render__pass_1acbb02af259140b938fcf3ef50b429e1a" kindref="member">render_pass::ptr</ref> Render pass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="47" column="22" bodyfile="liblava/app/forward_shading.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1ac8078a6d6331237472a2920d287e3a65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkRenderPass</type>
+        <definition>VkRenderPass lava::forward_shading::get_vk_pass</definition>
+        <argsstring>() const</argsstring>
+        <name>get_vk_pass</name>
+        <qualifiedname>lava::forward_shading::get_vk_pass</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkRenderPass Vulkan Render pass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="55" column="18" bodyfile="liblava/app/forward_shading.hpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1forward__shading_1afddacfe68d2f5cb983891afeae036757" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1image_1a02d34cc8d6b785c01753a74cda3e8bbb" kindref="member">image::ptr</ref></type>
+        <definition>image::ptr lava::forward_shading::get_depth_stencil</definition>
+        <argsstring>() const</argsstring>
+        <name>get_depth_stencil</name>
+        <qualifiedname>lava::forward_shading::get_depth_stencil</qualifiedname>
+        <briefdescription>
+<para>Get the depth stencil image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1image_1a02d34cc8d6b785c01753a74cda3e8bbb" kindref="member">image::ptr</ref> Depth stencil Image </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/forward_shading.hpp" line="63" column="16" bodyfile="liblava/app/forward_shading.hpp" bodystart="63" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Forward shading. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/app/forward_shading.hpp" line="18" column="1" bodyfile="liblava/app/forward_shading.hpp" bodystart="18" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structlava_1_1forward__shading_1a2e086a2eddff1e2fb9e4ef77107d964a" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>create</name></member>
+      <member refid="structlava_1_1forward__shading_1af4bc9af412f83f3f4c3ebe735a872176" prot="private" virt="non-virtual"><scope>lava::forward_shading</scope><name>depth_stencil</name></member>
+      <member refid="structlava_1_1forward__shading_1a9da8c059432678d2a32aa121d4a3c4b7" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>destroy</name></member>
+      <member refid="structlava_1_1forward__shading_1a724301829060777c7739db5d12f355cf" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>forward_shading</name></member>
+      <member refid="structlava_1_1forward__shading_1afddacfe68d2f5cb983891afeae036757" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>get_depth_stencil</name></member>
+      <member refid="structlava_1_1forward__shading_1a4f49e62584a5bb84fe6062d07e0a7e2a" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>get_pass</name></member>
+      <member refid="structlava_1_1forward__shading_1ac8078a6d6331237472a2920d287e3a65" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>get_vk_pass</name></member>
+      <member refid="structlava_1_1forward__shading_1a6d88d078dc88a51f949f7db681d6d6d8" prot="private" virt="non-virtual"><scope>lava::forward_shading</scope><name>pass</name></member>
+      <member refid="structlava_1_1forward__shading_1a395e88df4485f775f3dad67568543f08" prot="private" virt="non-virtual"><scope>lava::forward_shading</scope><name>target</name></member>
+      <member refid="structlava_1_1forward__shading_1a51391e8cb1bdb453c6cdccd27f659242" prot="public" virt="non-virtual"><scope>lava::forward_shading</scope><name>~forward_shading</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

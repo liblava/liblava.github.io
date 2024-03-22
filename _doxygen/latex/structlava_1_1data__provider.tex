@@ -1,0 +1,43 @@
+\doxysection{lava\+::data\+\_\+provider Struct Reference}
+\hypertarget{structlava_1_1data__provider}{}\label{structlava_1_1data__provider}\index{lava::data\_provider@{lava::data\_provider}}
+
+
+Data provider.  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1data__provider_aa5fc56f4eeb0a6ababecdd9168253853}\label{structlava_1_1data__provider_aa5fc56f4eeb0a6ababecdd9168253853} 
+using {\bfseries alloc\+\_\+func} = std\+::function$<$\mbox{\hyperlink{data_8hpp_a6ebeada7186a7c7f866c316500d2c5fb}{data\+\_\+ptr}}(\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}})$>$
+\begin{DoxyCompactList}\small\item\em Allocation function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data__provider_a83743a85bffddbf1196e7c94a479a874}\label{structlava_1_1data__provider_a83743a85bffddbf1196e7c94a479a874} 
+using {\bfseries free\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Free function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data__provider_ace111a79d85ca58fa6ad9320533c8171}\label{structlava_1_1data__provider_ace111a79d85ca58fa6ad9320533c8171} 
+using {\bfseries realloc\+\_\+func} = std\+::function$<$\mbox{\hyperlink{data_8hpp_a6ebeada7186a7c7f866c316500d2c5fb}{data\+\_\+ptr}}(\mbox{\hyperlink{data_8hpp_a6ebeada7186a7c7f866c316500d2c5fb}{data\+\_\+ptr}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}})$>$
+\begin{DoxyCompactList}\small\item\em Reallocation function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1data__provider_a403bfb0625dc7ec0619c70061d9924aa}\label{structlava_1_1data__provider_a403bfb0625dc7ec0619c70061d9924aa} 
+\mbox{\hyperlink{structlava_1_1data__provider_aa5fc56f4eeb0a6ababecdd9168253853}{alloc\+\_\+func}} {\bfseries on\+\_\+alloc}
+\begin{DoxyCompactList}\small\item\em Called on allocation. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data__provider_a4e433f78aeb0409ac619fe458f92bcbe}\label{structlava_1_1data__provider_a4e433f78aeb0409ac619fe458f92bcbe} 
+\mbox{\hyperlink{structlava_1_1data__provider_a83743a85bffddbf1196e7c94a479a874}{free\+\_\+func}} {\bfseries on\+\_\+free}
+\begin{DoxyCompactList}\small\item\em Called on free. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data__provider_a2fd8dfe4e19cc81f4ef9773847ab50d8}\label{structlava_1_1data__provider_a2fd8dfe4e19cc81f4ef9773847ab50d8} 
+\mbox{\hyperlink{structlava_1_1data__provider_ace111a79d85ca58fa6ad9320533c8171}{realloc\+\_\+func}} {\bfseries on\+\_\+realloc}
+\begin{DoxyCompactList}\small\item\em Called on reallocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data provider. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/core/\mbox{\hyperlink{data_8hpp}{data.\+hpp}}\end{DoxyCompactItemize}
