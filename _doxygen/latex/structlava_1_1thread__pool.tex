@@ -1,0 +1,68 @@
+\doxysection{lava\+::thread\+\_\+pool Struct Reference}
+\hypertarget{structlava_1_1thread__pool}{}\label{structlava_1_1thread__pool}\index{lava::thread\_pool@{lava::thread\_pool}}
+
+
+Thread pool.  
+
+
+
+
+{\ttfamily \#include $<$thread.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577}\label{structlava_1_1thread__pool_aaf79c28a670fa80d6dd01c8c22cec577} 
+using {\bfseries task} = std\+::function$<$void(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}})$>$
+\begin{DoxyCompactList}\small\item\em Task function (with thread id) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1thread__pool_a804b2a22d7afe05579d7837864a453a5}{setup}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} count=2)
+\begin{DoxyCompactList}\small\item\em Set up the thread pool. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1thread__pool_a12a8efbcdeb045ba87858820c20905a4}\label{structlava_1_1thread__pool_a12a8efbcdeb045ba87858820c20905a4} 
+void {\bfseries teardown} ()
+\begin{DoxyCompactList}\small\item\em Tear down the thread pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1thread__pool_a13d697b28f3f470d066651674a74cd1d}{enqueue}} (auto f)
+\begin{DoxyCompactList}\small\item\em Enqueue a task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thread pool. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1thread__pool_a13d697b28f3f470d066651674a74cd1d}\index{lava::thread\_pool@{lava::thread\_pool}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!lava::thread\_pool@{lava::thread\_pool}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{structlava_1_1thread__pool_a13d697b28f3f470d066651674a74cd1d} 
+void lava\+::thread\+\_\+pool\+::enqueue (\begin{DoxyParamCaption}\item[{auto}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enqueue a task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Task function \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1thread__pool_a804b2a22d7afe05579d7837864a453a5}\index{lava::thread\_pool@{lava::thread\_pool}!setup@{setup}}
+\index{setup@{setup}!lava::thread\_pool@{lava::thread\_pool}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{structlava_1_1thread__pool_a804b2a22d7afe05579d7837864a453a5} 
+void lava\+::thread\+\_\+pool\+::setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{count}{ = {\ttfamily 2}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up the thread pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Number of threads \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{thread_8hpp}{thread.\+hpp}}\end{DoxyCompactItemize}

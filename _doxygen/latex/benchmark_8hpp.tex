@@ -1,0 +1,92 @@
+\doxysection{liblava/app/benchmark.hpp File Reference}
+\hypertarget{benchmark_8hpp}{}\label{benchmark_8hpp}\index{liblava/app/benchmark.hpp@{liblava/app/benchmark.hpp}}
+
+
+Benchmark.  
+
+
+{\ttfamily \#include "{}liblava/app/def.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/frame/frame.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1benchmark__data}{lava\+::benchmark\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Benchmark data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{benchmark_8hpp_acc2e1297ee044efbd2cb4883acad0dac}{lava\+::parse\+\_\+benchmark}} (\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}, \mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&\mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Parse command line arguments and set benchmark data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{benchmark_8hpp_a4dc6d3014c95c22833dee1abb757d88b}{lava\+::benchmark}} (\mbox{\hyperlink{structlava_1_1frame}{frame}} \&\mbox{\hyperlink{structlava_1_1app}{app}}, \mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&\mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Start a benchmark run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{benchmark_8hpp_a4983ef01641b0d4f525cbaa0b4e090ae}{lava\+::write\+\_\+frames\+\_\+json}} (\mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&\mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Write frames to json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Benchmark. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{benchmark_8hpp_a4dc6d3014c95c22833dee1abb757d88b}\index{benchmark.hpp@{benchmark.hpp}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!benchmark.hpp@{benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{benchmark()}{benchmark()}}
+{\footnotesize\ttfamily \label{benchmark_8hpp_a4dc6d3014c95c22833dee1abb757d88b} 
+void lava\+::benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1frame}{frame}} \&}]{app}{, }\item[{\mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Start a benchmark run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & App to benchmark \\
+\hline
+{\em data} & Benchmark data setting \\
+\hline
+\end{DoxyParams}
+\Hypertarget{benchmark_8hpp_acc2e1297ee044efbd2cb4883acad0dac}\index{benchmark.hpp@{benchmark.hpp}!parse\_benchmark@{parse\_benchmark}}
+\index{parse\_benchmark@{parse\_benchmark}!benchmark.hpp@{benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{parse\_benchmark()}{parse\_benchmark()}}
+{\footnotesize\ttfamily \label{benchmark_8hpp_acc2e1297ee044efbd2cb4883acad0dac} 
+bool lava\+::parse\+\_\+benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}}]{cmd\+\_\+line}{, }\item[{\mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Parse command line arguments and set benchmark data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+line} & Command line arguments \\
+\hline
+{\em data} & Benchmark data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Benchmark data is parsed or not ready 
+\end{DoxyReturn}
+\Hypertarget{benchmark_8hpp_a4983ef01641b0d4f525cbaa0b4e090ae}\index{benchmark.hpp@{benchmark.hpp}!write\_frames\_json@{write\_frames\_json}}
+\index{write\_frames\_json@{write\_frames\_json}!benchmark.hpp@{benchmark.hpp}}
+\doxysubsubsection{\texorpdfstring{write\_frames\_json()}{write\_frames\_json()}}
+{\footnotesize\ttfamily \label{benchmark_8hpp_a4983ef01641b0d4f525cbaa0b4e090ae} 
+bool lava\+::write\+\_\+frames\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1benchmark__data}{benchmark\+\_\+data}} \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Write frames to json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Benchmark data setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write was successful or failed 
+\end{DoxyReturn}

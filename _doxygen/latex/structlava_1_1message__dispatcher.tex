@@ -1,0 +1,159 @@
+\doxysection{lava\+::message\+\_\+dispatcher Struct Reference}
+\hypertarget{structlava_1_1message__dispatcher}{}\label{structlava_1_1message__dispatcher}\index{lava::message\_dispatcher@{lava::message\_dispatcher}}
+
+
+Message dispatcher.  
+
+
+
+
+{\ttfamily \#include $<$telegram.\+hpp$>$}
+
+Inheritance diagram for lava\+::message\+\_\+dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1message__dispatcher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}\label{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f} 
+using {\bfseries message\+\_\+func} = std\+::function$<$void(\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{telegram\+::ref}}, \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}})$>$
+\begin{DoxyCompactList}\small\item\em Message function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1message__dispatcher_a0677dd2d564d76a27a20766095ebd574}\label{structlava_1_1message__dispatcher_a0677dd2d564d76a27a20766095ebd574} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}message\+\_\+dispatcher} ()
+\begin{DoxyCompactList}\small\item\em Destroy the dispatcher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1message__dispatcher_aa422c136ee6a70b8ba35c729e39ca9ea}{setup}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} thread\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Set up the dispatcher. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1message__dispatcher_afad57bbc64cbbbed74b5dab99d6c88c6}\label{structlava_1_1message__dispatcher_afad57bbc64cbbbed74b5dab99d6c88c6} 
+void {\bfseries teardown} ()
+\begin{DoxyCompactList}\small\item\em Tear down the dispatcher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1message__dispatcher_a0d1c597dd4ff66f8da3a45bd84f338dd}{update}} (\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} current)
+\begin{DoxyCompactList}\small\item\em Update the dispatcher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1message__dispatcher_aac8ade56ddd9f9b837095fae1263b584}{send\+\_\+message}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} receiver, \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} sender, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} message, \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} delay=\{\}, \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} const \&info=\{\}) override
+\item 
+bool \mbox{\hyperlink{structlava_1_1message__dispatcher_a390fdb43a976c51b07049b4bc2189d62}{add\+\_\+dispatch}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} target, \mbox{\hyperlink{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}{message\+\_\+func}} func)
+\begin{DoxyCompactList}\small\item\em Add dispatch. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1message__dispatcher_ad2df99e26a91c77f226c33c190dea0e2}{remove\+\_\+dispatch}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} target)
+\begin{DoxyCompactList}\small\item\em Remove dispatch. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1message__dispatcher_a8b3ec32314f216591ab9bf59ba1db394}{has\+\_\+dispatch}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} target) const
+\begin{DoxyCompactList}\small\item\em Check if dispatch is registered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Message dispatcher. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1message__dispatcher_a390fdb43a976c51b07049b4bc2189d62}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!add\_dispatch@{add\_dispatch}}
+\index{add\_dispatch@{add\_dispatch}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{add\_dispatch()}{add\_dispatch()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_a390fdb43a976c51b07049b4bc2189d62} 
+bool lava\+::message\+\_\+dispatcher\+::add\+\_\+dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{target}{, }\item[{\mbox{\hyperlink{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}{message\+\_\+func}}}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add dispatch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Sender id \\
+\hline
+{\em func} & Dispatch function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dispatch added or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1message__dispatcher_a8b3ec32314f216591ab9bf59ba1db394}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!has\_dispatch@{has\_dispatch}}
+\index{has\_dispatch@{has\_dispatch}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{has\_dispatch()}{has\_dispatch()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_a8b3ec32314f216591ab9bf59ba1db394} 
+bool lava\+::message\+\_\+dispatcher\+::has\+\_\+dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{target}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if dispatch is registered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Sender id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dispatch exists or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1message__dispatcher_ad2df99e26a91c77f226c33c190dea0e2}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!remove\_dispatch@{remove\_dispatch}}
+\index{remove\_dispatch@{remove\_dispatch}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{remove\_dispatch()}{remove\_dispatch()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_ad2df99e26a91c77f226c33c190dea0e2} 
+bool lava\+::message\+\_\+dispatcher\+::remove\+\_\+dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove dispatch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Sender id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dispatch removed or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1message__dispatcher_aac8ade56ddd9f9b837095fae1263b584}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_aac8ade56ddd9f9b837095fae1263b584} 
+void lava\+::message\+\_\+dispatcher\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{receiver}{, }\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{sender}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{message}{, }\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{delay}{ = {\ttfamily \{\}}, }\item[{\mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} const \&}]{info}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196}{telegraph\+::send\+\_\+message} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196}{lava\+::telegraph}}.
+
+\Hypertarget{structlava_1_1message__dispatcher_aa422c136ee6a70b8ba35c729e39ca9ea}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!setup@{setup}}
+\index{setup@{setup}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_aa422c136ee6a70b8ba35c729e39ca9ea} 
+void lava\+::message\+\_\+dispatcher\+::setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{thread\+\_\+count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up the dispatcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+\_\+count} & Number of threads \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1message__dispatcher_a0d1c597dd4ff66f8da3a45bd84f338dd}\index{lava::message\_dispatcher@{lava::message\_dispatcher}!update@{update}}
+\index{update@{update}!lava::message\_dispatcher@{lava::message\_dispatcher}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{structlava_1_1message__dispatcher_a0d1c597dd4ff66f8da3a45bd84f338dd} 
+void lava\+::message\+\_\+dispatcher\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the dispatcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Time in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{telegram_8hpp}{telegram.\+hpp}}\end{DoxyCompactItemize}

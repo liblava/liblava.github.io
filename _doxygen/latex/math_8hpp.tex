@@ -1,0 +1,152 @@
+\doxysection{liblava/util/math.hpp File Reference}
+\hypertarget{math_8hpp}{}\label{math_8hpp}\index{liblava/util/math.hpp@{liblava/util/math.hpp}}
+
+
+Math helpers.  
+
+
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+{\ttfamily \#include "{}picosha2.\+h"{}}\newline
+{\ttfamily \#include "{}glm/glm.\+hpp"{}}\newline
+{\ttfamily \#include "{}glm/gtc/matrix\+\_\+transform.\+hpp"{}}\newline
+{\ttfamily \#include "{}glm/gtc/type\+\_\+ptr.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1rect}{lava\+::rect}}
+\begin{DoxyCompactList}\small\item\em Rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{math_8hpp_a4e3a0adf51090a120cdae77cc06ec2a1}\label{math_8hpp_a4e3a0adf51090a120cdae77cc06ec2a1} 
+using {\bfseries lava\+::v2} = glm\+::vec2
+\begin{DoxyCompactList}\small\item\em Vector 2D. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_a4384995facacf81c4762b81285341e78}\label{math_8hpp_a4384995facacf81c4762b81285341e78} 
+using {\bfseries lava\+::v3} = glm\+::vec3
+\begin{DoxyCompactList}\small\item\em Vector 3D. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_a43bc972887896e505e428d6c7a426324}\label{math_8hpp_a43bc972887896e505e428d6c7a426324} 
+using {\bfseries lava\+::v4} = glm\+::vec4
+\begin{DoxyCompactList}\small\item\em Vector 4D. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_ad63e913ea06491bbe4e45588b35587df}\label{math_8hpp_ad63e913ea06491bbe4e45588b35587df} 
+using {\bfseries lava\+::uv2} = glm\+::uvec2
+\begin{DoxyCompactList}\small\item\em UV pair. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_a9f15b92db378c4620d41e072a530d0df}\label{math_8hpp_a9f15b92db378c4620d41e072a530d0df} 
+using {\bfseries lava\+::mat3} = glm\+::mat3
+\begin{DoxyCompactList}\small\item\em Matrix 3x3. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_a07245a7b7cef276ff8ce545d92519604}\label{math_8hpp_a07245a7b7cef276ff8ce545d92519604} 
+using {\bfseries lava\+::mat4} = glm\+::mat4
+\begin{DoxyCompactList}\small\item\em Matrix 4x4. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}\label{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11} 
+using {\bfseries lava\+::iv2} = glm\+::ivec2
+\begin{DoxyCompactList}\small\item\em Integer vector 2D. \end{DoxyCompactList}\item 
+\Hypertarget{math_8hpp_aad07ac9f8537f6d9ddf687d152431200}\label{math_8hpp_aad07ac9f8537f6d9ddf687d152431200} 
+using {\bfseries lava\+::iv3} = glm\+::ivec3
+\begin{DoxyCompactList}\small\item\em Integer vector 3D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{math_8hpp_a29d6bb9c11a24947cd7e1ea649ed626b}{lava\+::ceil\+\_\+div}} (auto x, auto y)
+\begin{DoxyCompactList}\small\item\em Ceiling of division. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} \mbox{\hyperlink{math_8hpp_a3a95d0862fb9fdf36a0fa9e3d5f67c1c}{lava\+::perspective\+\_\+matrix}} (\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} fov=90.f, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} far\+\_\+plane=5.f)
+\begin{DoxyCompactList}\small\item\em Calculate perspective matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{math_8hpp_ab4d9c1b9eb7d51228db5de1a164d07d4}{lava\+::hash256}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} value)
+\begin{DoxyCompactList}\small\item\em Get SHA-\/256 hash of string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}} const \mbox{\hyperlink{math_8hpp_afe888185f07103e7eee3daa64a4e0f04}{lava\+::default\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em Default color (Lava color\+: CF1020 \+: 207, 16, 32) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Math helpers. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{math_8hpp_a29d6bb9c11a24947cd7e1ea649ed626b}\index{math.hpp@{math.hpp}!ceil\_div@{ceil\_div}}
+\index{ceil\_div@{ceil\_div}!math.hpp@{math.hpp}}
+\doxysubsubsection{\texorpdfstring{ceil\_div()}{ceil\_div()}}
+{\footnotesize\ttfamily \label{math_8hpp_a29d6bb9c11a24947cd7e1ea649ed626b} 
+auto lava\+::ceil\+\_\+div (\begin{DoxyParamCaption}\item[{auto}]{x}{, }\item[{auto}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ceiling of division. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X value \\
+\hline
+{\em y} & Y value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Result 
+\end{DoxyReturn}
+\Hypertarget{math_8hpp_ab4d9c1b9eb7d51228db5de1a164d07d4}\index{math.hpp@{math.hpp}!hash256@{hash256}}
+\index{hash256@{hash256}!math.hpp@{math.hpp}}
+\doxysubsubsection{\texorpdfstring{hash256()}{hash256()}}
+{\footnotesize\ttfamily \label{math_8hpp_ab4d9c1b9eb7d51228db5de1a164d07d4} 
+string lava\+::hash256 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get SHA-\/256 hash of string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to hash \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Hash result 
+\end{DoxyReturn}
+\Hypertarget{math_8hpp_a3a95d0862fb9fdf36a0fa9e3d5f67c1c}\index{math.hpp@{math.hpp}!perspective\_matrix@{perspective\_matrix}}
+\index{perspective\_matrix@{perspective\_matrix}!math.hpp@{math.hpp}}
+\doxysubsubsection{\texorpdfstring{perspective\_matrix()}{perspective\_matrix()}}
+{\footnotesize\ttfamily \label{math_8hpp_a3a95d0862fb9fdf36a0fa9e3d5f67c1c} 
+mat4 lava\+::perspective\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{fov}{ = {\ttfamily 90.f}, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{far\+\_\+plane}{ = {\ttfamily 5.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate perspective matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size for aspect ratio \\
+\hline
+{\em fov} & Field of view \\
+\hline
+{\em far\+\_\+plane} & Far plane \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mat4 Calculated matrix 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{math_8hpp_afe888185f07103e7eee3daa64a4e0f04}\index{math.hpp@{math.hpp}!default\_color@{default\_color}}
+\index{default\_color@{default\_color}!math.hpp@{math.hpp}}
+\doxysubsubsection{\texorpdfstring{default\_color}{default\_color}}
+{\footnotesize\ttfamily \label{math_8hpp_afe888185f07103e7eee3daa64a4e0f04} 
+v3 const lava\+::default\+\_\+color}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\{0.8118f,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0627f,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.1255f\}}
+
+\end{DoxyCode}
+
+
+Default color (Lava color\+: CF1020 \+: 207, 16, 32) 
+

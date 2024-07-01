@@ -1,0 +1,109 @@
+\doxysection{liblava/frame/render\+\_\+target.hpp File Reference}
+\hypertarget{render__target_8hpp}{}\label{render__target_8hpp}\index{liblava/frame/render\_target.hpp@{liblava/frame/render\_target.hpp}}
+
+
+Render target.  
+
+
+{\ttfamily \#include "{}liblava/core/misc.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/frame/swapchain.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/fwd.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/resource/format.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1render__target}{lava\+::render\+\_\+target}}
+\begin{DoxyCompactList}\small\item\em Render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{render\+\_\+target\+::s\+\_\+ptr}} \mbox{\hyperlink{render__target_8hpp_a396d9438e62a79e60ded5e2691a1e72c}{lava\+::create\+\_\+target}} (\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}}, \mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, bool v\+\_\+sync=false, bool triple\+\_\+buffer=true, \mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}} request=\{\})
+\begin{DoxyCompactList}\small\item\em Create a new render target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{render\+\_\+target\+::s\+\_\+ptr}} \mbox{\hyperlink{render__target_8hpp_a62b9da0a3e63f98456db5e85ff3e6ba5}{lava\+::create\+\_\+target\+\_\+v\+\_\+sync}} (\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}}, \mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}} request=\{\})
+\begin{DoxyCompactList}\small\item\em Create a new render target with V-\/\+Sync enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{render\+\_\+target\+::s\+\_\+ptr}} \mbox{\hyperlink{render__target_8hpp_a8e4b3c82e56c886bae2518119a2ef716}{lava\+::create\+\_\+target\+\_\+no\+\_\+triple\+\_\+buffer}} (\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}}, \mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}} request=\{\})
+\begin{DoxyCompactList}\small\item\em Create a new render target that prefers VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Render target. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{render__target_8hpp_a396d9438e62a79e60ded5e2691a1e72c}\index{render\_target.hpp@{render\_target.hpp}!create\_target@{create\_target}}
+\index{create\_target@{create\_target}!render\_target.hpp@{render\_target.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_target()}{create\_target()}}
+{\footnotesize\ttfamily \label{render__target_8hpp_a396d9438e62a79e60ded5e2691a1e72c} 
+render\+\_\+target\+::s\+\_\+ptr lava\+::create\+\_\+target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{bool}]{v\+\_\+sync}{ = {\ttfamily false}, }\item[{bool}]{triple\+\_\+buffer}{ = {\ttfamily true}, }\item[{\mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}}}]{request}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})}
+
+
+
+Create a new render target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Target window \\
+\hline
+{\em device} & Vulkan device \\
+\hline
+{\em v\+\_\+sync} & V-\/\+Sync enabled \\
+\hline
+{\em triple\+\_\+buffer} & VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR \\
+\hline
+{\em request} & Surface format request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+render\+\_\+target\+::s\+\_\+ptr Shared pointer to render target 
+\end{DoxyReturn}
+\Hypertarget{render__target_8hpp_a8e4b3c82e56c886bae2518119a2ef716}\index{render\_target.hpp@{render\_target.hpp}!create\_target\_no\_triple\_buffer@{create\_target\_no\_triple\_buffer}}
+\index{create\_target\_no\_triple\_buffer@{create\_target\_no\_triple\_buffer}!render\_target.hpp@{render\_target.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_target\_no\_triple\_buffer()}{create\_target\_no\_triple\_buffer()}}
+{\footnotesize\ttfamily \label{render__target_8hpp_a8e4b3c82e56c886bae2518119a2ef716} 
+render\+\_\+target\+::s\+\_\+ptr lava\+::create\+\_\+target\+\_\+no\+\_\+triple\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}}}]{request}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new render target that prefers VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Target window \\
+\hline
+{\em device} & Vulkan device \\
+\hline
+{\em request} & Surface format request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+render\+\_\+target\+::s\+\_\+ptr Shared pointer to render target 
+\end{DoxyReturn}
+\Hypertarget{render__target_8hpp_a62b9da0a3e63f98456db5e85ff3e6ba5}\index{render\_target.hpp@{render\_target.hpp}!create\_target\_v\_sync@{create\_target\_v\_sync}}
+\index{create\_target\_v\_sync@{create\_target\_v\_sync}!render\_target.hpp@{render\_target.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_target\_v\_sync()}{create\_target\_v\_sync()}}
+{\footnotesize\ttfamily \label{render__target_8hpp_a62b9da0a3e63f98456db5e85ff3e6ba5} 
+render\+\_\+target\+::s\+\_\+ptr lava\+::create\+\_\+target\+\_\+v\+\_\+sync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}}}]{request}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new render target with V-\/\+Sync enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Target window \\
+\hline
+{\em device} & Vulkan device \\
+\hline
+{\em request} & Surface format request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+render\+\_\+target\+::s\+\_\+ptr Shared pointer to render target 
+\end{DoxyReturn}

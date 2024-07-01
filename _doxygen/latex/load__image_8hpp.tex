@@ -1,0 +1,65 @@
+\doxysection{liblava/asset/load\+\_\+image.hpp File Reference}
+\hypertarget{load__image_8hpp}{}\label{load__image_8hpp}\index{liblava/asset/load\_image.hpp@{liblava/asset/load\_image.hpp}}
+
+
+Load image data from file and memory.  
+
+
+{\ttfamily \#include "{}liblava/resource/image.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1image__data_ac9b1dc454efa428bdca20abbc8b077f5}{image\+\_\+data\+::s\+\_\+ptr}} \mbox{\hyperlink{load__image_8hpp_a3acab89979010ebd16f3cd73ce8208e7}{lava\+::load\+\_\+image}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Load image data from file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image__data_ac9b1dc454efa428bdca20abbc8b077f5}{image\+\_\+data\+::s\+\_\+ptr}} \mbox{\hyperlink{load__image_8hpp_a6beba3ce3542a17086a8bc480e73b4a5}{lava\+::load\+\_\+image}} (\mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\+\_\+data\+::ref}} \mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Load image data from memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Load image data from file and memory. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{load__image_8hpp_a6beba3ce3542a17086a8bc480e73b4a5}\index{load\_image.hpp@{load\_image.hpp}!load\_image@{load\_image}}
+\index{load\_image@{load\_image}!load\_image.hpp@{load\_image.hpp}}
+\doxysubsubsection{\texorpdfstring{load\_image()}{load\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{load__image_8hpp_a6beba3ce3542a17086a8bc480e73b4a5} 
+image\+\_\+data\+::s\+\_\+ptr lava\+::load\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\+\_\+data\+::ref}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Load image data from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Memory data to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+\_\+data\+::s\+\_\+ptr Loaded image 
+\end{DoxyReturn}
+\Hypertarget{load__image_8hpp_a3acab89979010ebd16f3cd73ce8208e7}\index{load\_image.hpp@{load\_image.hpp}!load\_image@{load\_image}}
+\index{load\_image@{load\_image}!load\_image.hpp@{load\_image.hpp}}
+\doxysubsubsection{\texorpdfstring{load\_image()}{load\_image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{load__image_8hpp_a3acab89979010ebd16f3cd73ce8208e7} 
+image\+\_\+data\+::s\+\_\+ptr lava\+::load\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Load image data from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+\_\+data\+::s\+\_\+ptr Loaded image 
+\end{DoxyReturn}
