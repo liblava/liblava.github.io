@@ -1,0 +1,160 @@
+\doxysection{lava\+::descriptor\+::binding Struct Reference}
+\hypertarget{structlava_1_1descriptor_1_1binding}{}\label{structlava_1_1descriptor_1_1binding}\index{lava::descriptor::binding@{lava::descriptor::binding}}
+
+
+Descriptor binding.  
+
+
+
+
+{\ttfamily \#include $<$descriptor.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1descriptor_1_1binding_a1df8d85a8a44b268a649e0e5e3dfca10}\label{structlava_1_1descriptor_1_1binding_a1df8d85a8a44b268a649e0e5e3dfca10} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1descriptor_1_1binding}{binding}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to binding. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1descriptor_1_1binding_afb9ae6e820453224e9562729c5aec99e}\label{structlava_1_1descriptor_1_1binding_afb9ae6e820453224e9562729c5aec99e} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a1df8d85a8a44b268a649e0e5e3dfca10}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1descriptor_1_1binding_a946af81bcb8055f786f1e6ba90ebefb0}\label{structlava_1_1descriptor_1_1binding_a946af81bcb8055f786f1e6ba90ebefb0} 
+{\bfseries binding} ()
+\begin{DoxyCompactList}\small\item\em Construct a new binding. \end{DoxyCompactList}\item 
+Vk\+Descriptor\+Set\+Layout\+Binding const \& \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_aaf2faa3cb381c46a74dcd6fff272a4cd}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan descriptor set layout binding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_ae19c025ac25b38f0ce2c299fa9edd223}{set}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}})
+\begin{DoxyCompactList}\small\item\em Det the binding index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_af38746b62f1cfa6ac67227d53495a5e0}{set\+\_\+type}} (Vk\+Descriptor\+Type descriptor\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Set the type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a8e513bcd9cc11e5fe6cb8ca7549481a0}{set\+\_\+count}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} descriptor\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Set the count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a7dd8cad97af9912e2004f7b1ed249c4c}{set\+\_\+stage\+\_\+flags}} (Vk\+Shader\+Stage\+Flags stage\+\_\+flags)
+\begin{DoxyCompactList}\small\item\em Set the stage flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a06c457792fc5eb3e934757d1c0a496fc}{set\+\_\+samplers}} (Vk\+Sampler const \texorpdfstring{$\ast$}{*}immutable\+\_\+samplers)
+\begin{DoxyCompactList}\small\item\em Set the samplers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a1df8d85a8a44b268a649e0e5e3dfca10}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a86260cc342e5ad73a84c7777d8224d17}{make}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}})
+\begin{DoxyCompactList}\small\item\em Make a new descriptor binding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Descriptor binding. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1descriptor_1_1binding_aaf2faa3cb381c46a74dcd6fff272a4cd}\index{lava::descriptor::binding@{lava::descriptor::binding}!get@{get}}
+\index{get@{get}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_aaf2faa3cb381c46a74dcd6fff272a4cd} 
+Vk\+Descriptor\+Set\+Layout\+Binding const  \& lava\+::descriptor\+::binding\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan descriptor set layout binding. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Descriptor\+Set\+Layout\+Binding const\& Vulkan binding 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1descriptor_1_1binding_a86260cc342e5ad73a84c7777d8224d17}\index{lava::descriptor::binding@{lava::descriptor::binding}!make@{make}}
+\index{make@{make}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_a86260cc342e5ad73a84c7777d8224d17} 
+static \mbox{\hyperlink{structlava_1_1descriptor_1_1binding_a1df8d85a8a44b268a649e0e5e3dfca10}{s\+\_\+ptr}} lava\+::descriptor\+::binding\+::make (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new descriptor binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Binding index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to descriptor binding 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1descriptor_1_1binding_ae19c025ac25b38f0ce2c299fa9edd223}\index{lava::descriptor::binding@{lava::descriptor::binding}!set@{set}}
+\index{set@{set}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_ae19c025ac25b38f0ce2c299fa9edd223} 
+void lava\+::descriptor\+::binding\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Det the binding index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Binding index \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1descriptor_1_1binding_a8e513bcd9cc11e5fe6cb8ca7549481a0}\index{lava::descriptor::binding@{lava::descriptor::binding}!set\_count@{set\_count}}
+\index{set\_count@{set\_count}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{set\_count()}{set\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_a8e513bcd9cc11e5fe6cb8ca7549481a0} 
+void lava\+::descriptor\+::binding\+::set\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{descriptor\+\_\+count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor\+\_\+count} & Descriptor count \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1descriptor_1_1binding_a06c457792fc5eb3e934757d1c0a496fc}\index{lava::descriptor::binding@{lava::descriptor::binding}!set\_samplers@{set\_samplers}}
+\index{set\_samplers@{set\_samplers}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{set\_samplers()}{set\_samplers()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_a06c457792fc5eb3e934757d1c0a496fc} 
+void lava\+::descriptor\+::binding\+::set\+\_\+samplers (\begin{DoxyParamCaption}\item[{Vk\+Sampler const \texorpdfstring{$\ast$}{*}}]{immutable\+\_\+samplers}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the samplers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em immutable\+\_\+samplers} & Pointer to immutable samplers \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1descriptor_1_1binding_a7dd8cad97af9912e2004f7b1ed249c4c}\index{lava::descriptor::binding@{lava::descriptor::binding}!set\_stage\_flags@{set\_stage\_flags}}
+\index{set\_stage\_flags@{set\_stage\_flags}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{set\_stage\_flags()}{set\_stage\_flags()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_a7dd8cad97af9912e2004f7b1ed249c4c} 
+void lava\+::descriptor\+::binding\+::set\+\_\+stage\+\_\+flags (\begin{DoxyParamCaption}\item[{Vk\+Shader\+Stage\+Flags}]{stage\+\_\+flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stage flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage\+\_\+flags} & Shader stage flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1descriptor_1_1binding_af38746b62f1cfa6ac67227d53495a5e0}\index{lava::descriptor::binding@{lava::descriptor::binding}!set\_type@{set\_type}}
+\index{set\_type@{set\_type}!lava::descriptor::binding@{lava::descriptor::binding}}
+\doxysubsubsection{\texorpdfstring{set\_type()}{set\_type()}}
+{\footnotesize\ttfamily \label{structlava_1_1descriptor_1_1binding_af38746b62f1cfa6ac67227d53495a5e0} 
+void lava\+::descriptor\+::binding\+::set\+\_\+type (\begin{DoxyParamCaption}\item[{Vk\+Descriptor\+Type}]{descriptor\+\_\+type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor\+\_\+type} & Descriptor type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{descriptor_8hpp}{descriptor.\+hpp}}\end{DoxyCompactItemize}

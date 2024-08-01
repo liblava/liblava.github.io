@@ -1,0 +1,354 @@
+\doxysection{lava\+::imgui Struct Reference}
+\hypertarget{structlava_1_1imgui}{}\label{structlava_1_1imgui}\index{lava::imgui@{lava::imgui}}
+
+
+Im\+Gui integration.  
+
+
+
+
+{\ttfamily \#include $<$imgui.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1config}{config}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1font}{font}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui font settings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1icon__font}{icon\+\_\+font}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui icon font settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1imgui_abb2a1f3eb4babf73d3b1e5627f9829e7}\label{structlava_1_1imgui_abb2a1f3eb4babf73d3b1e5627f9829e7} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1imgui}{imgui}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to imgui. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_a867bf49531cdec799d54011a0d645d4c}\label{structlava_1_1imgui_a867bf49531cdec799d54011a0d645d4c} 
+using {\bfseries draw\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Draw function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1imgui_a1045d179f75b8ff05d625383a2beea7c}\label{structlava_1_1imgui_a1045d179f75b8ff05d625383a2beea7c} 
+{\bfseries imgui} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new Im\+Gui. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1imgui_a38665d7779b0880b6446e0f24ce9f168}{imgui}} (GLFWwindow \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}})
+\begin{DoxyCompactList}\small\item\em Construct a new Im\+Gui. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_aed43c117003f8e9b06b5fc55845f1248}\label{structlava_1_1imgui_aed43c117003f8e9b06b5fc55845f1248} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}imgui} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Im\+Gui. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1imgui_aee765da69cd996a1a9d7481e0ba468cc}{setup}} (GLFWwindow \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}}, \mbox{\hyperlink{structlava_1_1imgui_1_1config}{config}} \mbox{\hyperlink{structlava_1_1imgui_1_1config}{config}})
+\begin{DoxyCompactList}\small\item\em Set up Im\+Gui with configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1imgui_a0977c794e1fd19dda8169938d4d41e04}{setup}} (GLFWwindow \texorpdfstring{$\ast$}{*}win)
+\begin{DoxyCompactList}\small\item\em Set up default Im\+Gui. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a87e2a644485869037f569f6c18d9d975}{create}} (\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} max\+\_\+frames)
+\begin{DoxyCompactList}\small\item\em Create pipeline for Im\+Gui. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a85fc2881ac35f630d3a6828c3bc33ad1}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} dev, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} frames, Vk\+Pipeline\+Cache pipeline\+\_\+cache)
+\begin{DoxyCompactList}\small\item\em Create pipeline for Im\+Gui with device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a1af9de841808f809d0ef2b564423f438}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} dev, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} frames, Vk\+Render\+Pass pass, Vk\+Pipeline\+Cache pipeline\+\_\+cache=0)
+\begin{DoxyCompactList}\small\item\em Create pipeline for Im\+Gui with device and render pass. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a2570a375882a8c298eb8e4ae3b04ea32}{upload\+\_\+fonts}} (\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1texture}{texture}})
+\begin{DoxyCompactList}\small\item\em Upload font texture. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_aa783551e1e9a21787c2771ae3f84556b}\label{structlava_1_1imgui_aa783551e1e9a21787c2771ae3f84556b} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy Im\+Gui. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_ad8d5e0c8be33e958887174d554896870}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if Im\+Gui is ready. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1imgui_a4c22d7bd25a2afc858d3d9a48a790c92}{get\+\_\+pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Get the pipeline. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a0a23316f198244c282b16e636cae9cb0}{capture\+\_\+mouse}} () const
+\begin{DoxyCompactList}\small\item\em Check if mouse capture is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a83a4b2448c40b505bea3a3e08b40314f}{capture\+\_\+keyboard}} () const
+\begin{DoxyCompactList}\small\item\em Check if keyboard capture is active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1imgui_a62d4f5801ad6878b0227e7fc4fd84ea6}{set\+\_\+active}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set Im\+Gui active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1imgui_a055fbe4279fd85b1e5c918f72a7b2f39}{activated}} () const
+\begin{DoxyCompactList}\small\item\em Check if Im\+Gui is activated. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_a32b4f23806260a5b1dc6a306111f1ea7}\label{structlava_1_1imgui_a32b4f23806260a5b1dc6a306111f1ea7} 
+void {\bfseries toggle} ()
+\begin{DoxyCompactList}\small\item\em Togge active state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1imgui_a922e6fafba918cc61ecfff8aef5111d3}{set\+\_\+ini\+\_\+file}} (std\+::filesystem\+::path dir)
+\begin{DoxyCompactList}\small\item\em Set the ini file. \end{DoxyCompactList}\item 
+std\+::filesystem\+::path \mbox{\hyperlink{structlava_1_1imgui_aca5b4e00d34baf4f0dcd89c0188556a7}{get\+\_\+ini\+\_\+file}} () const
+\begin{DoxyCompactList}\small\item\em Get the ini file. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_a0ae68e6629d20950c98a7ef4f1921c3c}\label{structlava_1_1imgui_a0ae68e6629d20950c98a7ef4f1921c3c} 
+void {\bfseries convert\+\_\+style\+\_\+to\+\_\+srgb} ()
+\begin{DoxyCompactList}\small\item\em Convert style to s\+RGB. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1input__callback}{input\+\_\+callback}} const \& \mbox{\hyperlink{structlava_1_1imgui_a6cd3946fa85e7421226baeb43957bbf8}{get\+\_\+input\+\_\+callback}} () const
+\begin{DoxyCompactList}\small\item\em Get the input callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1imgui_a06d37097926da66b1e16aea586cb2379}\label{structlava_1_1imgui_a06d37097926da66b1e16aea586cb2379} 
+\mbox{\hyperlink{structlava_1_1imgui_a867bf49531cdec799d54011a0d645d4c}{draw\+\_\+func}} {\bfseries on\+\_\+draw}
+\begin{DoxyCompactList}\small\item\em Function called on Im\+Gui draw. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1imgui_ae61916a2509cdf402c2709e3e8989f1d}\label{structlava_1_1imgui_ae61916a2509cdf402c2709e3e8989f1d} 
+\mbox{\hyperlink{structlava_1_1layer__list}{layer\+\_\+list}} {\bfseries layers}
+\begin{DoxyCompactList}\small\item\em Layer list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Im\+Gui integration. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1imgui_a38665d7779b0880b6446e0f24ce9f168}\index{lava::imgui@{lava::imgui}!imgui@{imgui}}
+\index{imgui@{imgui}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{imgui()}{imgui()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a38665d7779b0880b6446e0f24ce9f168} 
+lava\+::imgui\+::imgui (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new Im\+Gui. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window for Im\+Gui \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1imgui_a055fbe4279fd85b1e5c918f72a7b2f39}\index{lava::imgui@{lava::imgui}!activated@{activated}}
+\index{activated@{activated}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a055fbe4279fd85b1e5c918f72a7b2f39} 
+bool lava\+::imgui\+::activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if Im\+Gui is activated. 
+
+\begin{DoxyReturn}{Returns}
+Im\+Gui is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a83a4b2448c40b505bea3a3e08b40314f}\index{lava::imgui@{lava::imgui}!capture\_keyboard@{capture\_keyboard}}
+\index{capture\_keyboard@{capture\_keyboard}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{capture\_keyboard()}{capture\_keyboard()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a83a4b2448c40b505bea3a3e08b40314f} 
+bool lava\+::imgui\+::capture\+\_\+keyboard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if keyboard capture is active. 
+
+\begin{DoxyReturn}{Returns}
+Capture is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a0a23316f198244c282b16e636cae9cb0}\index{lava::imgui@{lava::imgui}!capture\_mouse@{capture\_mouse}}
+\index{capture\_mouse@{capture\_mouse}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{capture\_mouse()}{capture\_mouse()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a0a23316f198244c282b16e636cae9cb0} 
+bool lava\+::imgui\+::capture\+\_\+mouse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if mouse capture is active. 
+
+\begin{DoxyReturn}{Returns}
+Capture is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a85fc2881ac35f630d3a6828c3bc33ad1}\index{lava::imgui@{lava::imgui}!create@{create}}
+\index{create@{create}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a85fc2881ac35f630d3a6828c3bc33ad1} 
+bool lava\+::imgui\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{dev}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frames}{, }\item[{Vk\+Pipeline\+Cache}]{pipeline\+\_\+cache}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create pipeline for Im\+Gui with device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & Vulkan device \\
+\hline
+{\em frames} & Number of frames \\
+\hline
+{\em pipeline\+\_\+cache} & Pipeline cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a1af9de841808f809d0ef2b564423f438}\index{lava::imgui@{lava::imgui}!create@{create}}
+\index{create@{create}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a1af9de841808f809d0ef2b564423f438} 
+bool lava\+::imgui\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{dev}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frames}{, }\item[{Vk\+Render\+Pass}]{pass}{, }\item[{Vk\+Pipeline\+Cache}]{pipeline\+\_\+cache}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create pipeline for Im\+Gui with device and render pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dev} & Vulkan device \\
+\hline
+{\em frames} & Number of frames \\
+\hline
+{\em pass} & Render pass \\
+\hline
+{\em pipeline\+\_\+cache} & Pipeline cache \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a87e2a644485869037f569f6c18d9d975}\index{lava::imgui@{lava::imgui}!create@{create}}
+\index{create@{create}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a87e2a644485869037f569f6c18d9d975} 
+bool lava\+::imgui\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}}}]{pipeline}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{max\+\_\+frames}{}\end{DoxyParamCaption})}
+
+
+
+Create pipeline for Im\+Gui. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & Render pipeline \\
+\hline
+{\em max\+\_\+frames} & Number of frames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_aca5b4e00d34baf4f0dcd89c0188556a7}\index{lava::imgui@{lava::imgui}!get\_ini\_file@{get\_ini\_file}}
+\index{get\_ini\_file@{get\_ini\_file}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{get\_ini\_file()}{get\_ini\_file()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_aca5b4e00d34baf4f0dcd89c0188556a7} 
+std\+::filesystem\+::path lava\+::imgui\+::get\+\_\+ini\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the ini file. 
+
+\begin{DoxyReturn}{Returns}
+fs\+::path Path of file 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a6cd3946fa85e7421226baeb43957bbf8}\index{lava::imgui@{lava::imgui}!get\_input\_callback@{get\_input\_callback}}
+\index{get\_input\_callback@{get\_input\_callback}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{get\_input\_callback()}{get\_input\_callback()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a6cd3946fa85e7421226baeb43957bbf8} 
+\mbox{\hyperlink{structlava_1_1input__callback}{input\+\_\+callback}} const  \& lava\+::imgui\+::get\+\_\+input\+\_\+callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the input callback. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1input__callback}{input\+\_\+callback} const\& Input callback 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a4c22d7bd25a2afc858d3d9a48a790c92}\index{lava::imgui@{lava::imgui}!get\_pipeline@{get\_pipeline}}
+\index{get\_pipeline@{get\_pipeline}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{get\_pipeline()}{get\_pipeline()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a4c22d7bd25a2afc858d3d9a48a790c92} 
+\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} lava\+::imgui\+::get\+\_\+pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr} Render pipeline 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_ad8d5e0c8be33e958887174d554896870}\index{lava::imgui@{lava::imgui}!ready@{ready}}
+\index{ready@{ready}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_ad8d5e0c8be33e958887174d554896870} 
+bool lava\+::imgui\+::ready (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if Im\+Gui is ready. 
+
+\begin{DoxyReturn}{Returns}
+Im\+Gui is ready or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1imgui_a62d4f5801ad6878b0227e7fc4fd84ea6}\index{lava::imgui@{lava::imgui}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a62d4f5801ad6878b0227e7fc4fd84ea6} 
+void lava\+::imgui\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{bool}]{value}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set Im\+Gui active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Active state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1imgui_a922e6fafba918cc61ecfff8aef5111d3}\index{lava::imgui@{lava::imgui}!set\_ini\_file@{set\_ini\_file}}
+\index{set\_ini\_file@{set\_ini\_file}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{set\_ini\_file()}{set\_ini\_file()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a922e6fafba918cc61ecfff8aef5111d3} 
+void lava\+::imgui\+::set\+\_\+ini\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::filesystem\+::path}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Set the ini file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Path for file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1imgui_a0977c794e1fd19dda8169938d4d41e04}\index{lava::imgui@{lava::imgui}!setup@{setup}}
+\index{setup@{setup}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a0977c794e1fd19dda8169938d4d41e04} 
+void lava\+::imgui\+::setup (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{win}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up default Im\+Gui. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Target window \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1imgui_aee765da69cd996a1a9d7481e0ba468cc}\index{lava::imgui@{lava::imgui}!setup@{setup}}
+\index{setup@{setup}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_aee765da69cd996a1a9d7481e0ba468cc} 
+void lava\+::imgui\+::setup (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{\mbox{\hyperlink{structlava_1_1imgui_1_1config}{config}}}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Set up Im\+Gui with configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Target window \\
+\hline
+{\em config} & Configuration \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1imgui_a2570a375882a8c298eb8e4ae3b04ea32}\index{lava::imgui@{lava::imgui}!upload\_fonts@{upload\_fonts}}
+\index{upload\_fonts@{upload\_fonts}!lava::imgui@{lava::imgui}}
+\doxysubsubsection{\texorpdfstring{upload\_fonts()}{upload\_fonts()}}
+{\footnotesize\ttfamily \label{structlava_1_1imgui_a2570a375882a8c298eb8e4ae3b04ea32} 
+bool lava\+::imgui\+::upload\+\_\+fonts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}}}]{texture}{}\end{DoxyParamCaption})}
+
+
+
+Upload font texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture to upload \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upload was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/app/\mbox{\hyperlink{imgui_8hpp}{imgui.\+hpp}}\end{DoxyCompactItemize}

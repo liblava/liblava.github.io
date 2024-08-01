@@ -1,0 +1,65 @@
+\doxysection{lava\+::telegraph Struct Reference}
+\hypertarget{structlava_1_1telegraph}{}\label{structlava_1_1telegraph}\index{lava::telegraph@{lava::telegraph}}
+
+
+Telegraph station.  
+
+
+
+
+{\ttfamily \#include $<$telegram.\+hpp$>$}
+
+Inheritance diagram for lava\+::telegraph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1telegraph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196}{send\+\_\+message}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} receiver, \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} sender, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} message, \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} delay=\{\}, \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} const \&info=\{\})=0
+\begin{DoxyCompactList}\small\item\em Send message to dispatcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telegraph station. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196}\index{lava::telegraph@{lava::telegraph}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!lava::telegraph@{lava::telegraph}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily \label{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196} 
+virtual void lava\+::telegraph\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{receiver}{, }\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{sender}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{message}{, }\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{delay}{ = {\ttfamily \{\}}, }\item[{\mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} const \&}]{info}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send message to dispatcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & Receiver id \\
+\hline
+{\em sender} & Sender id \\
+\hline
+{\em message} & Message id \\
+\hline
+{\em delay} & Delay time \\
+\hline
+{\em info} & Telegram information \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{structlava_1_1message__dispatcher_aac8ade56ddd9f9b837095fae1263b584}{lava\+::message\+\_\+dispatcher}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{telegram_8hpp}{telegram.\+hpp}}\end{DoxyCompactItemize}

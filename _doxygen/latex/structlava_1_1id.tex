@@ -1,0 +1,114 @@
+\doxysection{lava\+::id Struct Reference}
+\hypertarget{structlava_1_1id}{}\label{structlava_1_1id}\index{lava::id@{lava::id}}
+
+
+Identification.  
+
+
+
+
+{\ttfamily \#include $<$id.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}\label{structlava_1_1id_a226df789a94177f765bdcaac2988eda0} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1id}{id}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a5681d138e316875b5c91f34110f6b7ca}\label{structlava_1_1id_a5681d138e316875b5c91f34110f6b7ca} 
+using {\bfseries set} = std\+::set$<$\mbox{\hyperlink{structlava_1_1id}{id}}$>$
+\begin{DoxyCompactList}\small\item\em Set of ids. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a8cb3dbbd2611027c0b2b095db094bb81}\label{structlava_1_1id_a8cb3dbbd2611027c0b2b095db094bb81} 
+using {\bfseries set\+\_\+ref} = \mbox{\hyperlink{structlava_1_1id_a5681d138e316875b5c91f34110f6b7ca}{set}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to set of ids. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a76fc344f9c0b634c58611fb0a73528dd}\label{structlava_1_1id_a76fc344f9c0b634c58611fb0a73528dd} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1id}{id}}$>$
+\begin{DoxyCompactList}\small\item\em List if ids. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a454b3ed8f4e34c06cef590e45bdd6f45}\label{structlava_1_1id_a454b3ed8f4e34c06cef590e45bdd6f45} 
+using {\bfseries map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1id}{id}}$>$
+\begin{DoxyCompactList}\small\item\em Map of ids. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a8328204a339b365090eb0c68a31560f1}\label{structlava_1_1id_a8328204a339b365090eb0c68a31560f1} 
+using {\bfseries index\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}$>$
+\begin{DoxyCompactList}\small\item\em Index map by ids. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a5a8dc3a1db21f6e29cb4518f465b1bb3}\label{structlava_1_1id_a5a8dc3a1db21f6e29cb4518f465b1bb3} 
+using {\bfseries string\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}$>$
+\begin{DoxyCompactList}\small\item\em String map by ids. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1id_a1caf19994deda21262dac41097b54de3}\label{structlava_1_1id_a1caf19994deda21262dac41097b54de3} 
+{\bfseries id} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a18c9a54cc887849df0195bd9a3a03c2a}{id}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}})
+\begin{DoxyCompactList}\small\item\em Construct a new id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1id_ade2d3cd5e892b75c94c8028c75e72c71}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if the id is valid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1id_ab9fd67ed78ec6d91cb691d850fe21815}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Convert the id to string. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a576815d2775ff7d95a746322d50f9c57}\label{structlava_1_1id_a576815d2775ff7d95a746322d50f9c57} 
+void {\bfseries invalidate} ()
+\begin{DoxyCompactList}\small\item\em Invalidate id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1id_a11620ef3741fe0f21f47aa5d21da131f}\label{structlava_1_1id_a11620ef3741fe0f21f47aa5d21da131f} 
+auto {\bfseries operator$<$=$>$} (\mbox{\hyperlink{structlava_1_1id}{id}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}\label{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries value} = \mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Identification. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1id_a18c9a54cc887849df0195bd9a3a03c2a}\index{lava::id@{lava::id}!id@{id}}
+\index{id@{id}!lava::id@{lava::id}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily \label{structlava_1_1id_a18c9a54cc887849df0195bd9a3a03c2a} 
+lava\+::id\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of id \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1id_ab9fd67ed78ec6d91cb691d850fe21815}\index{lava::id@{lava::id}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!lava::id@{lava::id}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{structlava_1_1id_ab9fd67ed78ec6d91cb691d850fe21815} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::id\+::to\+\_\+string (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the id to string. 
+
+\begin{DoxyReturn}{Returns}
+string String representation of id 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1id_ade2d3cd5e892b75c94c8028c75e72c71}\index{lava::id@{lava::id}!valid@{valid}}
+\index{valid@{valid}!lava::id@{lava::id}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily \label{structlava_1_1id_ade2d3cd5e892b75c94c8028c75e72c71} 
+bool lava\+::id\+::valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the id is valid. 
+
+\begin{DoxyReturn}{Returns}
+Id is valid or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/core/\mbox{\hyperlink{id_8hpp}{id.\+hpp}}\end{DoxyCompactItemize}

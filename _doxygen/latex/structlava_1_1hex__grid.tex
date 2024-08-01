@@ -1,0 +1,116 @@
+\doxysection{lava\+::hex\+\_\+grid Struct Reference}
+\hypertarget{structlava_1_1hex__grid}{}\label{structlava_1_1hex__grid}\index{lava::hex\_grid@{lava::hex\_grid}}
+
+
+Hex grid.  
+
+
+
+
+{\ttfamily \#include $<$hex.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1hex__grid_af37592f301eba31bdd07708b66a85c2b}{hex\+\_\+grid}} (\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} radius=\mbox{\hyperlink{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}{hex\+\_\+default\+\_\+outer\+\_\+radius}})
+\begin{DoxyCompactList}\small\item\em Construct a new hex grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1hex__grid_a7f60fc1e3eacd0e5aed6b5863b5479bf}{update}} (\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\+\_\+orientation}} orientation=\mbox{\hyperlink{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}{hex\+\_\+layout\+\_\+point\+\_\+y}})
+\begin{DoxyCompactList}\small\item\em Update the hex grid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{structlava_1_1hex__grid_a4b6f1445db48e26bc0919090dc1b4d62}{find}} (\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} x, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} y) const
+\begin{DoxyCompactList}\small\item\em Find the hex cell from X and Y coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} \mbox{\hyperlink{structlava_1_1hex__grid_ad91f76ece700e3308b1d199846dd3a7e}{to\+\_\+pixel}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell) const
+\begin{DoxyCompactList}\small\item\em Get the hex point from hex cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1hex__grid_a835e161cfc4d3e3d5d69646a21e5b896}\label{structlava_1_1hex__grid_a835e161cfc4d3e3d5d69646a21e5b896} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries inner\+\_\+radius} = 0.f
+\begin{DoxyCompactList}\small\item\em Hex inner radius. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb}\label{structlava_1_1hex__grid_ad3f348f5a43e347edcf6d5b0da2978cb} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries outer\+\_\+radius} = \mbox{\hyperlink{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}{hex\+\_\+default\+\_\+outer\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em Hex outer radius. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d}\label{structlava_1_1hex__grid_aad025ee36c697be80f6e2c706b6d7b1d} 
+\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} {\bfseries layout}
+\begin{DoxyCompactList}\small\item\em Hex layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hex grid. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1hex__grid_af37592f301eba31bdd07708b66a85c2b}\index{lava::hex\_grid@{lava::hex\_grid}!hex\_grid@{hex\_grid}}
+\index{hex\_grid@{hex\_grid}!lava::hex\_grid@{lava::hex\_grid}}
+\doxysubsubsection{\texorpdfstring{hex\_grid()}{hex\_grid()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__grid_af37592f301eba31bdd07708b66a85c2b} 
+lava\+::hex\+\_\+grid\+::hex\+\_\+grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{radius}{ = {\ttfamily \mbox{\hyperlink{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}{hex\+\_\+default\+\_\+outer\+\_\+radius}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new hex grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Hex outer radius \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1hex__grid_a4b6f1445db48e26bc0919090dc1b4d62}\index{lava::hex\_grid@{lava::hex\_grid}!find@{find}}
+\index{find@{find}!lava::hex\_grid@{lava::hex\_grid}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__grid_a4b6f1445db48e26bc0919090dc1b4d62} 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} lava\+::hex\+\_\+grid\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{x}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{y}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the hex cell from X and Y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate \\
+\hline
+{\em y} & Y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1hex__cell}{hex\+\_\+cell} Hex cell 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1hex__grid_ad91f76ece700e3308b1d199846dd3a7e}\index{lava::hex\_grid@{lava::hex\_grid}!to\_pixel@{to\_pixel}}
+\index{to\_pixel@{to\_pixel}!lava::hex\_grid@{lava::hex\_grid}}
+\doxysubsubsection{\texorpdfstring{to\_pixel()}{to\_pixel()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__grid_ad91f76ece700e3308b1d199846dd3a7e} 
+\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} lava\+::hex\+\_\+grid\+::to\+\_\+pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex point from hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1hex__point}{hex\+\_\+point} Hex point 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1hex__grid_a7f60fc1e3eacd0e5aed6b5863b5479bf}\index{lava::hex\_grid@{lava::hex\_grid}!update@{update}}
+\index{update@{update}!lava::hex\_grid@{lava::hex\_grid}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__grid_a7f60fc1e3eacd0e5aed6b5863b5479bf} 
+void lava\+::hex\+\_\+grid\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\+\_\+orientation}}}]{orientation}{ = {\ttfamily \mbox{\hyperlink{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}{hex\+\_\+layout\+\_\+point\+\_\+y}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the hex grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & Hex orientation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{hex_8hpp}{hex.\+hpp}}\end{DoxyCompactItemize}
