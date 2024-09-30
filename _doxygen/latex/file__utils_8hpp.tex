@@ -1,0 +1,188 @@
+\doxysection{liblava/file/file\+\_\+utils.hpp File Reference}
+\hypertarget{file__utils_8hpp}{}\label{file__utils_8hpp}\index{liblava/file/file\_utils.hpp@{liblava/file/file\_utils.hpp}}
+
+
+File utilities.  
+
+
+{\ttfamily \#include "{}liblava/core/data.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1file__data}{lava\+::file\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em File data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1file__delete}{lava\+::file\+\_\+delete}}
+\begin{DoxyCompactList}\small\item\em File delete guard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{file__utils_8hpp_a4c3e9d3f0d95eb8a88b768ee76e226b6}{lava\+::read\+\_\+file}} (std\+::vector$<$ char $>$ \&out, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Read data from file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{file__utils_8hpp_a76549be42a251ec8fea5859c59966048}{lava\+::write\+\_\+file}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename, char const \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} data\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Write data to file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{file__utils_8hpp_ae1308f8f78ed75e822b67a4e2a29bdc6}{lava\+::extension}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} extension)
+\begin{DoxyCompactList}\small\item\em Check extension of file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{file__utils_8hpp_ab5791d1141824979d18967f30cbcd1b2}{lava\+::extension}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename, \mbox{\hyperlink{types_8hpp_a84b64f09909c198d14fadc65b0776272}{string\+\_\+list\+\_\+ref}} extensions)
+\begin{DoxyCompactList}\small\item\em Check extensions of file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{file__utils_8hpp_a79582249a9e8729cd0482fc78f99308c}{lava\+::get\+\_\+filename\+\_\+from}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path, bool with\+\_\+extension=false)
+\begin{DoxyCompactList}\small\item\em Get the file name from path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{file__utils_8hpp_a0e41f2f9fa6d3d436271c3a93487aa6e}{lava\+::remove\+\_\+existing\+\_\+path}} (\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \&target, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path)
+\begin{DoxyCompactList}\small\item\em Remove existing path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{file__utils_8hpp_a54ed54233a7a48dc4ebd5afcfc9abba7}{lava\+::load\+\_\+file\+\_\+data}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename, \mbox{\hyperlink{structlava_1_1data}{data}} \&target)
+\begin{DoxyCompactList}\small\item\em Load file data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File utilities. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{file__utils_8hpp_ab5791d1141824979d18967f30cbcd1b2}\index{file\_utils.hpp@{file\_utils.hpp}!extension@{extension}}
+\index{extension@{extension}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{extension()}{extension()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_ab5791d1141824979d18967f30cbcd1b2} 
+bool lava\+::extension (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{, }\item[{\mbox{\hyperlink{types_8hpp_a84b64f09909c198d14fadc65b0776272}{string\+\_\+list\+\_\+ref}}}]{extensions}{}\end{DoxyParamCaption})}
+
+
+
+Check extensions of file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file \\
+\hline
+{\em extensions} & List of extensions to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Extension found or not 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_ae1308f8f78ed75e822b67a4e2a29bdc6}\index{file\_utils.hpp@{file\_utils.hpp}!extension@{extension}}
+\index{extension@{extension}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{extension()}{extension()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_ae1308f8f78ed75e822b67a4e2a29bdc6} 
+bool lava\+::extension (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{extension}{}\end{DoxyParamCaption})}
+
+
+
+Check extension of file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file \\
+\hline
+{\em extension} & Extension to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Extension found or not 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_a79582249a9e8729cd0482fc78f99308c}\index{file\_utils.hpp@{file\_utils.hpp}!get\_filename\_from@{get\_filename\_from}}
+\index{get\_filename\_from@{get\_filename\_from}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_filename\_from()}{get\_filename\_from()}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_a79582249a9e8729cd0482fc78f99308c} 
+string lava\+::get\+\_\+filename\+\_\+from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{, }\item[{bool}]{with\+\_\+extension}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Get the file name from path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Target path \\
+\hline
+{\em with\+\_\+extension} & Include extension in file name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string File name 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_a54ed54233a7a48dc4ebd5afcfc9abba7}\index{file\_utils.hpp@{file\_utils.hpp}!load\_file\_data@{load\_file\_data}}
+\index{load\_file\_data@{load\_file\_data}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{load\_file\_data()}{load\_file\_data()}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_a54ed54233a7a48dc4ebd5afcfc9abba7} 
+bool lava\+::load\+\_\+file\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{, }\item[{\mbox{\hyperlink{structlava_1_1data}{data}} \&}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Load file data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file \\
+\hline
+{\em target} & Target data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Load was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_a4c3e9d3f0d95eb8a88b768ee76e226b6}\index{file\_utils.hpp@{file\_utils.hpp}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_a4c3e9d3f0d95eb8a88b768ee76e226b6} 
+bool lava\+::read\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$ \&}]{out}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Read data from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & File data \\
+\hline
+{\em filename} & Name of file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Read was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_a0e41f2f9fa6d3d436271c3a93487aa6e}\index{file\_utils.hpp@{file\_utils.hpp}!remove\_existing\_path@{remove\_existing\_path}}
+\index{remove\_existing\_path@{remove\_existing\_path}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_existing\_path()}{remove\_existing\_path()}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_a0e41f2f9fa6d3d436271c3a93487aa6e} 
+bool lava\+::remove\+\_\+existing\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \&}]{target}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Remove existing path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target path \\
+\hline
+{\em path} & Path to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remove was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{file__utils_8hpp_a76549be42a251ec8fea5859c59966048}\index{file\_utils.hpp@{file\_utils.hpp}!write\_file@{write\_file}}
+\index{write\_file@{write\_file}!file\_utils.hpp@{file\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{write\_file()}{write\_file()}}
+{\footnotesize\ttfamily \label{file__utils_8hpp_a76549be42a251ec8fea5859c59966048} 
+bool lava\+::write\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{data\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Write data to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of file \\
+\hline
+{\em data} & Data to write \\
+\hline
+{\em data\+\_\+size} & Size of data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write was successful or failed 
+\end{DoxyReturn}
