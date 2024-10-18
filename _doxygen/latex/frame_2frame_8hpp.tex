@@ -1,0 +1,131 @@
+\doxysection{liblava/frame/frame.hpp File Reference}
+\hypertarget{frame_2frame_8hpp}{}\label{frame_2frame_8hpp}\index{liblava/frame/frame.hpp@{liblava/frame/frame.hpp}}
+
+
+Framework.  
+
+
+{\ttfamily \#include "{}liblava/base/device.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/base/instance.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/base/platform.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/time.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/frame/argh.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/log.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/telegram.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1frame__env}{lava\+::frame\+\_\+env}}
+\begin{DoxyCompactList}\small\item\em Framework environment. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1frame}{lava\+::frame}}
+\begin{DoxyCompactList}\small\item\em Framework. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{frame_2frame_8hpp_ae0770939201dcb7731205c9ada28e26d}\label{frame_2frame_8hpp_ae0770939201dcb7731205c9ada28e26d} 
+enum \mbox{\hyperlink{frame_2frame_8hpp_ae0770939201dcb7731205c9ada28e26d}{lava\+::error}} \{ \newline
+{\bfseries not\+\_\+ready} = -\/1
+, {\bfseries create\+\_\+failed} = -\/2
+, {\bfseries init\+\_\+failed} = -\/3
+, {\bfseries load\+\_\+failed} = -\/4
+, \newline
+{\bfseries run\+\_\+aborted} = -\/5
+, {\bfseries still\+\_\+running} = -\/6
+, {\bfseries program\+\_\+failed} = -\/7
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} \mbox{\hyperlink{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe}{lava\+::now}} ()
+\begin{DoxyCompactList}\small\item\em Get the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_2frame_8hpp_a9326b703f3378a53589c04a56414e20f}{lava\+::handle\+\_\+events}} (bool wait=false)
+\begin{DoxyCompactList}\small\item\em Handle events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_2frame_8hpp_a7e2843c4ce32c8a7103c0fc92531c938}{lava\+::handle\+\_\+events\+\_\+timeout}} (\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} timeout)
+\begin{DoxyCompactList}\small\item\em Handle events with timeout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_2frame_8hpp_a12696017c434c033e4a97f57d54ccc7a}{lava\+::handle\+\_\+events\+\_\+timeout}} (\mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}} timeout)
+\begin{DoxyCompactList}\small\item\em Handle events with timeout. \end{DoxyCompactList}\item 
+\Hypertarget{frame_2frame_8hpp_ab3fe2f7aa3cbd0d972be4a09b10d80dd}\label{frame_2frame_8hpp_ab3fe2f7aa3cbd0d972be4a09b10d80dd} 
+void {\bfseries lava\+::post\+\_\+empty\+\_\+event} ()
+\begin{DoxyCompactList}\small\item\em Post an empty event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{frame_2frame_8hpp_a011162e4caccaff2090bb941a563d5fa}\label{frame_2frame_8hpp_a011162e4caccaff2090bb941a563d5fa} 
+constexpr bool const {\bfseries lava\+::run\+\_\+abort} = false
+\begin{DoxyCompactList}\small\item\em Run abort result. \end{DoxyCompactList}\item 
+\Hypertarget{frame_2frame_8hpp_a777200fce6b1b289bc0739186ba3d788}\label{frame_2frame_8hpp_a777200fce6b1b289bc0739186ba3d788} 
+constexpr bool const {\bfseries lava\+::run\+\_\+continue} = true
+\begin{DoxyCompactList}\small\item\em Run continue result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Framework. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{frame_2frame_8hpp_a9326b703f3378a53589c04a56414e20f}\index{frame.hpp@{frame.hpp}!handle\_events@{handle\_events}}
+\index{handle\_events@{handle\_events}!frame.hpp@{frame.hpp}}
+\doxysubsubsection{\texorpdfstring{handle\_events()}{handle\_events()}}
+{\footnotesize\ttfamily \label{frame_2frame_8hpp_a9326b703f3378a53589c04a56414e20f} 
+void lava\+::handle\+\_\+events (\begin{DoxyParamCaption}\item[{bool}]{wait}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Handle events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait} & Wait for events \\
+\hline
+\end{DoxyParams}
+\Hypertarget{frame_2frame_8hpp_a7e2843c4ce32c8a7103c0fc92531c938}\index{frame.hpp@{frame.hpp}!handle\_events\_timeout@{handle\_events\_timeout}}
+\index{handle\_events\_timeout@{handle\_events\_timeout}!frame.hpp@{frame.hpp}}
+\doxysubsubsection{\texorpdfstring{handle\_events\_timeout()}{handle\_events\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{frame_2frame_8hpp_a7e2843c4ce32c8a7103c0fc92531c938} 
+void lava\+::handle\+\_\+events\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Handle events with timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & Wait timeout in milliseconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{frame_2frame_8hpp_a12696017c434c033e4a97f57d54ccc7a}\index{frame.hpp@{frame.hpp}!handle\_events\_timeout@{handle\_events\_timeout}}
+\index{handle\_events\_timeout@{handle\_events\_timeout}!frame.hpp@{frame.hpp}}
+\doxysubsubsection{\texorpdfstring{handle\_events\_timeout()}{handle\_events\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{frame_2frame_8hpp_a12696017c434c033e4a97f57d54ccc7a} 
+void lava\+::handle\+\_\+events\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}}}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Handle events with timeout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & Wait timeout in seconds \\
+\hline
+\end{DoxyParams}
+\Hypertarget{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe}\index{frame.hpp@{frame.hpp}!now@{now}}
+\index{now@{now}!frame.hpp@{frame.hpp}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}}
+{\footnotesize\ttfamily \label{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe} 
+ms lava\+::now (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current time. 
+
+\begin{DoxyReturn}{Returns}
+ms Current milliseconds 
+\end{DoxyReturn}

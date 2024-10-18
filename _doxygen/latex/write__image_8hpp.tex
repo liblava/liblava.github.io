@@ -1,0 +1,51 @@
+\doxysection{liblava/asset/write\+\_\+image.hpp File Reference}
+\hypertarget{write__image_8hpp}{}\label{write__image_8hpp}\index{liblava/asset/write\_image.hpp@{liblava/asset/write\_image.hpp}}
+
+
+Write image data to file.  
+
+
+{\ttfamily \#include "{}liblava/resource/image.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{write__image_8hpp_a900c0f58630db722de2273738e55ff77}{lava\+::write\+\_\+image\+\_\+png}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1image}{image}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename, bool swizzle)
+\begin{DoxyCompactList}\small\item\em Write image data to png file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Write image data to file. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{write__image_8hpp_a900c0f58630db722de2273738e55ff77}\index{write\_image.hpp@{write\_image.hpp}!write\_image\_png@{write\_image\_png}}
+\index{write\_image\_png@{write\_image\_png}!write\_image.hpp@{write\_image.hpp}}
+\doxysubsubsection{\texorpdfstring{write\_image\_png()}{write\_image\_png()}}
+{\footnotesize\ttfamily \label{write__image_8hpp_a900c0f58630db722de2273738e55ff77} 
+bool lava\+::write\+\_\+image\+\_\+png (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}}}]{image}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{, }\item[{bool}]{swizzle}{}\end{DoxyParamCaption})}
+
+
+
+Write image data to png file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em image} & Image to write \\
+\hline
+{\em filename} & File to write \\
+\hline
+{\em swizzle} & Swizzle data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Write was successful or failed 
+\end{DoxyReturn}

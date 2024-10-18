@@ -1,0 +1,86 @@
+\doxysection{liblava/util/thread.hpp File Reference}
+\hypertarget{thread_8hpp}{}\label{thread_8hpp}\index{liblava/util/thread.hpp@{liblava/util/thread.hpp}}
+
+
+Thread pool.  
+
+
+{\ttfamily \#include "{}liblava/core/id.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/time.\+hpp"{}}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1thread__pool}{lava\+::thread\+\_\+pool}}
+\begin{DoxyCompactList}\small\item\em Thread pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{thread_8hpp_acca408871390653d2607d22b40802b08}{lava\+::sleep}} (\mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}} time)
+\begin{DoxyCompactList}\small\item\em Sleep for seconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{thread_8hpp_a33833d23b8725c12b221276c2fe797e1}{lava\+::sleep}} (\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} time)
+\begin{DoxyCompactList}\small\item\em Sleep for milliseconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{thread_8hpp_af54d973a5ca94ac0f6f88c00d3e65075}{lava\+::sleep}} (\mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}} time)
+\begin{DoxyCompactList}\small\item\em Sleep for microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thread pool. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{thread_8hpp_a33833d23b8725c12b221276c2fe797e1}\index{thread.hpp@{thread.hpp}!sleep@{sleep}}
+\index{sleep@{sleep}!thread.hpp@{thread.hpp}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{thread_8hpp_a33833d23b8725c12b221276c2fe797e1} 
+void lava\+::sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sleep for milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Milliseconds to sleep \\
+\hline
+\end{DoxyParams}
+\Hypertarget{thread_8hpp_acca408871390653d2607d22b40802b08}\index{thread.hpp@{thread.hpp}!sleep@{sleep}}
+\index{sleep@{sleep}!thread.hpp@{thread.hpp}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{thread_8hpp_acca408871390653d2607d22b40802b08} 
+void lava\+::sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}}}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sleep for seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Seconds to sleep \\
+\hline
+\end{DoxyParams}
+\Hypertarget{thread_8hpp_af54d973a5ca94ac0f6f88c00d3e65075}\index{thread.hpp@{thread.hpp}!sleep@{sleep}}
+\index{sleep@{sleep}!thread.hpp@{thread.hpp}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{thread_8hpp_af54d973a5ca94ac0f6f88c00d3e65075} 
+void lava\+::sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}}}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sleep for microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Microseconds to sleep \\
+\hline
+\end{DoxyParams}

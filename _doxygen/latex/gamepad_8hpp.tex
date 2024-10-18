@@ -1,0 +1,127 @@
+\doxysection{liblava/frame/gamepad.hpp File Reference}
+\hypertarget{gamepad_8hpp}{}\label{gamepad_8hpp}\index{liblava/frame/gamepad.hpp@{liblava/frame/gamepad.hpp}}
+
+
+Gamepad manager.  
+
+
+{\ttfamily \#include "{}liblava/core/id.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1gamepad}{lava\+::gamepad}}
+\begin{DoxyCompactList}\small\item\em Gamepad. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1gamepad__manager}{lava\+::gamepad\+\_\+manager}}
+\begin{DoxyCompactList}\small\item\em Gamepad manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}\label{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88} 
+using {\bfseries lava\+::gamepad\+\_\+id\+\_\+ref} = \mbox{\hyperlink{gamepad_8hpp_a9c84923c4dc78344da664c372a377596}{gamepad\+\_\+id}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to gamepad id. \end{DoxyCompactList}\item 
+\Hypertarget{gamepad_8hpp_a2580191222c823be813184b47dfd2cdb}\label{gamepad_8hpp_a2580191222c823be813184b47dfd2cdb} 
+using {\bfseries lava\+::gamepad\+\_\+button\+\_\+ref} = \mbox{\hyperlink{gamepad_8hpp_a165ecdb0f8cfd572123f4952c2c3ce39}{gamepad\+\_\+button}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to gamepad button. \end{DoxyCompactList}\item 
+\Hypertarget{gamepad_8hpp_a366d568b96562a9477efd0c619ebdfe0}\label{gamepad_8hpp_a366d568b96562a9477efd0c619ebdfe0} 
+using {\bfseries lava\+::gamepad\+\_\+axis\+\_\+ref} = \mbox{\hyperlink{gamepad_8hpp_a3e5d0f5bbfdfbbe860056801ff17b30a}{gamepad\+\_\+axis}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to gamepad axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{gamepad_8hpp_a9c84923c4dc78344da664c372a377596}\label{gamepad_8hpp_a9c84923c4dc78344da664c372a377596} 
+enum class \mbox{\hyperlink{gamepad_8hpp_a9c84923c4dc78344da664c372a377596}{lava\+::gamepad\+\_\+id}} \+: index \{ \newline
+{\bfseries \+\_\+1} = 0
+, {\bfseries \+\_\+2}
+, {\bfseries \+\_\+3}
+, {\bfseries \+\_\+4}
+, \newline
+{\bfseries \+\_\+5}
+, {\bfseries \+\_\+6}
+, {\bfseries \+\_\+7}
+, {\bfseries \+\_\+8}
+, \newline
+{\bfseries \+\_\+9}
+, {\bfseries \+\_\+10}
+, {\bfseries \+\_\+11}
+, {\bfseries \+\_\+12}
+, \newline
+{\bfseries \+\_\+13}
+, {\bfseries \+\_\+14}
+, {\bfseries \+\_\+15}
+, {\bfseries \+\_\+16}
+, \newline
+{\bfseries last} = \+\_\+16
+ \}
+\begin{DoxyCompactList}\small\item\em Gamepad ids. \end{DoxyCompactList}\item 
+\Hypertarget{gamepad_8hpp_a165ecdb0f8cfd572123f4952c2c3ce39}\label{gamepad_8hpp_a165ecdb0f8cfd572123f4952c2c3ce39} 
+enum class \mbox{\hyperlink{gamepad_8hpp_a165ecdb0f8cfd572123f4952c2c3ce39}{lava\+::gamepad\+\_\+button}} \+: index \{ \newline
+{\bfseries a} = 0
+, {\bfseries b}
+, {\bfseries x}
+, {\bfseries y}
+, \newline
+{\bfseries left\+\_\+bumper}
+, {\bfseries right\+\_\+bumper}
+, {\bfseries back}
+, {\bfseries start}
+, \newline
+{\bfseries guide}
+, {\bfseries left\+\_\+thumb}
+, {\bfseries right\+\_\+thumb}
+, {\bfseries dpad\+\_\+up}
+, \newline
+{\bfseries dpad\+\_\+right}
+, {\bfseries dpad\+\_\+down}
+, {\bfseries dpad\+\_\+left}
+, {\bfseries last} = dpad\+\_\+left
+, \newline
+{\bfseries cross} = a
+, {\bfseries circle} = b
+, {\bfseries square} = x
+, {\bfseries triangle} = y
+ \}
+\begin{DoxyCompactList}\small\item\em Gamepad buttons. \end{DoxyCompactList}\item 
+\Hypertarget{gamepad_8hpp_a3e5d0f5bbfdfbbe860056801ff17b30a}\label{gamepad_8hpp_a3e5d0f5bbfdfbbe860056801ff17b30a} 
+enum class \mbox{\hyperlink{gamepad_8hpp_a3e5d0f5bbfdfbbe860056801ff17b30a}{lava\+::gamepad\+\_\+axis}} \+: index \{ \newline
+{\bfseries left\+\_\+x} = 0
+, {\bfseries left\+\_\+y}
+, {\bfseries right\+\_\+x}
+, {\bfseries right\+\_\+y}
+, \newline
+{\bfseries left\+\_\+trigger}
+, {\bfseries right\+\_\+trigger}
+, {\bfseries last} = right\+\_\+trigger
+ \}
+\begin{DoxyCompactList}\small\item\em Gamepad axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1gamepad_a4f3fd03973e46439e28b2579567c66c5}{gamepad\+::list}} \mbox{\hyperlink{gamepad_8hpp_a7a776fd083c4b25475e8aadfe3ad7b2d}{lava\+::gamepads}} ()
+\begin{DoxyCompactList}\small\item\em Get list of all gamepads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gamepad manager. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gamepad_8hpp_a7a776fd083c4b25475e8aadfe3ad7b2d}\index{gamepad.hpp@{gamepad.hpp}!gamepads@{gamepads}}
+\index{gamepads@{gamepads}!gamepad.hpp@{gamepad.hpp}}
+\doxysubsubsection{\texorpdfstring{gamepads()}{gamepads()}}
+{\footnotesize\ttfamily \label{gamepad_8hpp_a7a776fd083c4b25475e8aadfe3ad7b2d} 
+gamepad\+::list lava\+::gamepads (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get list of all gamepads. 
+
+\begin{DoxyReturn}{Returns}
+gamepad\+::list List of gamepads 
+\end{DoxyReturn}

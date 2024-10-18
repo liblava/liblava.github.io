@@ -1,0 +1,105 @@
+\doxysection{liblava/app/imgui.hpp File Reference}
+\hypertarget{imgui_8hpp}{}\label{imgui_8hpp}\index{liblava/app/imgui.hpp@{liblava/app/imgui.hpp}}
+
+
+Im\+Gui integration.  
+
+
+{\ttfamily \#include "{}liblava/block/render\+\_\+pipeline.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/file.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/frame/input.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/resource/texture.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/layer.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1imgui}{lava\+::imgui}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui integration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1icon__font}{lava\+::imgui\+::icon\+\_\+font}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui icon font settings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1font}{lava\+::imgui\+::font}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui font settings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1imgui_1_1config}{lava\+::imgui\+::config}}
+\begin{DoxyCompactList}\small\item\em Im\+Gui configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{imgui_8hpp_ae93b1f65953d237670f6c6432a5b05e9}{lava\+::setup\+\_\+imgui\+\_\+font}} (\mbox{\hyperlink{structlava_1_1imgui_1_1config}{imgui\+::config}} \&config, \mbox{\hyperlink{structlava_1_1imgui_1_1font_a508c5bf4dea805b81f90e7c30e0194fe}{imgui\+::font\+::ref}} font)
+\begin{DoxyCompactList}\small\item\em Set up Im\+Gui font. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{imgui_8hpp_a78f52c3853e8fa7daefcb96a3e99b442}{lava\+::setup\+\_\+imgui\+\_\+font\+\_\+icons}} (\mbox{\hyperlink{structlava_1_1imgui_1_1font}{imgui\+::font}} \&font, \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} filename, \mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{ui16}} min, \mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{ui16}} max)
+\begin{DoxyCompactList}\small\item\em Set up imgui font icons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{imgui_8hpp_a3a5f26a1f68ebeb71ccb6becc4cb667b}{lava\+::imgui\+\_\+left\+\_\+spacing}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} top=1)
+\begin{DoxyCompactList}\small\item\em Im\+Gui left spacing with top offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{imgui_8hpp_a038eae5884bdeed5f1d9162d34e521e2}\label{imgui_8hpp_a038eae5884bdeed5f1d9162d34e521e2} 
+constexpr const \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries lava\+::default\+\_\+imgui\+\_\+font\+\_\+size} = 18.f
+\begin{DoxyCompactList}\small\item\em Default Im\+Gui font size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Im\+Gui integration. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{imgui_8hpp_a3a5f26a1f68ebeb71ccb6becc4cb667b}\index{imgui.hpp@{imgui.hpp}!imgui\_left\_spacing@{imgui\_left\_spacing}}
+\index{imgui\_left\_spacing@{imgui\_left\_spacing}!imgui.hpp@{imgui.hpp}}
+\doxysubsubsection{\texorpdfstring{imgui\_left\_spacing()}{imgui\_left\_spacing()}}
+{\footnotesize\ttfamily \label{imgui_8hpp_a3a5f26a1f68ebeb71ccb6becc4cb667b} 
+void lava\+::imgui\+\_\+left\+\_\+spacing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{top}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Im\+Gui left spacing with top offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & Top offset \\
+\hline
+\end{DoxyParams}
+\Hypertarget{imgui_8hpp_ae93b1f65953d237670f6c6432a5b05e9}\index{imgui.hpp@{imgui.hpp}!setup\_imgui\_font@{setup\_imgui\_font}}
+\index{setup\_imgui\_font@{setup\_imgui\_font}!imgui.hpp@{imgui.hpp}}
+\doxysubsubsection{\texorpdfstring{setup\_imgui\_font()}{setup\_imgui\_font()}}
+{\footnotesize\ttfamily \label{imgui_8hpp_ae93b1f65953d237670f6c6432a5b05e9} 
+void lava\+::setup\+\_\+imgui\+\_\+font (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1imgui_1_1config}{imgui\+::config}} \&}]{config}{, }\item[{\mbox{\hyperlink{structlava_1_1imgui_1_1font_a508c5bf4dea805b81f90e7c30e0194fe}{imgui\+::font\+::ref}}}]{font}{}\end{DoxyParamCaption})}
+
+
+
+Set up Im\+Gui font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Im\+Gui configuration \\
+\hline
+{\em font} & Im\+Gui font \\
+\hline
+\end{DoxyParams}
+\Hypertarget{imgui_8hpp_a78f52c3853e8fa7daefcb96a3e99b442}\index{imgui.hpp@{imgui.hpp}!setup\_imgui\_font\_icons@{setup\_imgui\_font\_icons}}
+\index{setup\_imgui\_font\_icons@{setup\_imgui\_font\_icons}!imgui.hpp@{imgui.hpp}}
+\doxysubsubsection{\texorpdfstring{setup\_imgui\_font\_icons()}{setup\_imgui\_font\_icons()}}
+{\footnotesize\ttfamily \label{imgui_8hpp_a78f52c3853e8fa7daefcb96a3e99b442} 
+void lava\+::setup\+\_\+imgui\+\_\+font\+\_\+icons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1imgui_1_1font}{imgui\+::font}} \&}]{font}{, }\item[{\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}}]{filename}{, }\item[{\mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{ui16}}}]{min}{, }\item[{\mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{ui16}}}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Set up imgui font icons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & Imgui font \\
+\hline
+{\em filename} & Font icon file name \\
+\hline
+{\em min} & Min range \\
+\hline
+{\em max} & Max range \\
+\hline
+\end{DoxyParams}

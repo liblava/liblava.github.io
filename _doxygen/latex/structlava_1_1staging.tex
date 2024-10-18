@@ -1,0 +1,88 @@
+\doxysection{lava\+::staging Struct Reference}
+\hypertarget{structlava_1_1staging}{}\label{structlava_1_1staging}\index{lava::staging@{lava::staging}}
+
+
+Texture staging.  
+
+
+
+
+{\ttfamily \#include $<$texture.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1staging_a42618e7ad25c9e3e8473fd4f807d0e5f}\label{structlava_1_1staging_a42618e7ad25c9e3e8473fd4f807d0e5f} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1staging}{staging}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to staging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1staging_aaf658809e4966b383c03068384a8d6b8}{add}} (\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1texture}{texture}})
+\begin{DoxyCompactList}\small\item\em Add texture for staging. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1staging_acdc91b33a416ac58ce433d071bd88cd2}{stage}} (Vk\+Command\+Buffer cmd\+\_\+buf, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1frame}{frame}})
+\begin{DoxyCompactList}\small\item\em Stage textures. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1staging_af0cd88d6ede7ef3280c4e37f765c9a9c}\label{structlava_1_1staging_af0cd88d6ede7ef3280c4e37f765c9a9c} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear staging. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1staging_af243d1c4b3e96e387be946fbdaac10d8}{busy}} () const
+\begin{DoxyCompactList}\small\item\em Check if staging is busy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Texture staging. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1staging_aaf658809e4966b383c03068384a8d6b8}\index{lava::staging@{lava::staging}!add@{add}}
+\index{add@{add}!lava::staging@{lava::staging}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1staging_aaf658809e4966b383c03068384a8d6b8} 
+void lava\+::staging\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}}}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add texture for staging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture to stage \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1staging_af243d1c4b3e96e387be946fbdaac10d8}\index{lava::staging@{lava::staging}!busy@{busy}}
+\index{busy@{busy}!lava::staging@{lava::staging}}
+\doxysubsubsection{\texorpdfstring{busy()}{busy()}}
+{\footnotesize\ttfamily \label{structlava_1_1staging_af243d1c4b3e96e387be946fbdaac10d8} 
+bool lava\+::staging\+::busy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if staging is busy. 
+
+\begin{DoxyReturn}{Returns}
+Staging is busy or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1staging_acdc91b33a416ac58ce433d071bd88cd2}\index{lava::staging@{lava::staging}!stage@{stage}}
+\index{stage@{stage}!lava::staging@{lava::staging}}
+\doxysubsubsection{\texorpdfstring{stage()}{stage()}}
+{\footnotesize\ttfamily \label{structlava_1_1staging_acdc91b33a416ac58ce433d071bd88cd2} 
+bool lava\+::staging\+::stage (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+Stage textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+{\em frame} & Frame index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stage was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{texture_8hpp}{texture.\+hpp}}\end{DoxyCompactItemize}
