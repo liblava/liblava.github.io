@@ -1,0 +1,81 @@
+\doxysection{liblava/core/version.hpp File Reference}
+\hypertarget{version_8hpp}{}\label{version_8hpp}\index{liblava/core/version.hpp@{liblava/core/version.hpp}}
+
+
+Version information.  
+
+
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1semantic__version}{lava\+::semantic\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em Semantic version. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1version}{lava\+::version}}
+\begin{DoxyCompactList}\small\item\em Version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}\label{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a} 
+using {\bfseries lava\+::sem\+\_\+version} = \mbox{\hyperlink{structlava_1_1semantic__version}{semantic\+\_\+version}}
+\begin{DoxyCompactList}\small\item\em Semantic version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{version_8hpp_a592fe41d299f08f625229ef52f7fe331}\label{version_8hpp_a592fe41d299f08f625229ef52f7fe331} 
+enum class \mbox{\hyperlink{version_8hpp_a592fe41d299f08f625229ef52f7fe331}{lava\+::version\+\_\+stage}} \+: index \{ \newline
+{\bfseries preview}
+, {\bfseries alpha}
+, {\bfseries beta}
+, {\bfseries rc}
+, \newline
+{\bfseries release}
+, {\bfseries rolling}
+ \}
+\begin{DoxyCompactList}\small\item\em Version stages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{version_8hpp_a273284a1f05f4eb9a4e33a7420ff2b10}{lava\+::to\+\_\+version}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_ad11094258ce2dac54b79917ae31198b6}{str}})
+\begin{DoxyCompactList}\small\item\em Convert string to semantic version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{version_8hpp_a0af71ac2aa9615cbaa92b9337bf45dd1}\label{version_8hpp_a0af71ac2aa9615cbaa92b9337bf45dd1} 
+constexpr \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries lava\+::g\+\_\+build\+\_\+date} = LAVA\+\_\+\+BUILD\+\_\+\+DATE
+\begin{DoxyCompactList}\small\item\em Build date. \end{DoxyCompactList}\item 
+\Hypertarget{version_8hpp_aea2bee6f19e0d06bb1965bff5e16148a}\label{version_8hpp_aea2bee6f19e0d06bb1965bff5e16148a} 
+constexpr \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries lava\+::g\+\_\+build\+\_\+time} = LAVA\+\_\+\+BUILD\+\_\+\+TIME
+\begin{DoxyCompactList}\small\item\em Build time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Version information. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{version_8hpp_a273284a1f05f4eb9a4e33a7420ff2b10}\index{version.hpp@{version.hpp}!to\_version@{to\_version}}
+\index{to\_version@{to\_version}!version.hpp@{version.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_version()}{to\_version()}}
+{\footnotesize\ttfamily \label{version_8hpp_a273284a1f05f4eb9a4e33a7420ff2b10} 
+sem\+\_\+version lava\+::to\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert string to semantic version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sem\+\_\+version Semantic version 
+\end{DoxyReturn}

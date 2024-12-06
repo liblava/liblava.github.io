@@ -1,0 +1,120 @@
+\doxysection{lava\+::telegram Struct Reference}
+\hypertarget{structlava_1_1telegram}{}\label{structlava_1_1telegram}\index{lava::telegram@{lava::telegram}}
+
+
+Telegram.  
+
+
+
+
+{\ttfamily \#include $<$telegram.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}\label{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1telegram}{telegram}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to telegram. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1telegram_abc8fe1e9664bd0f9aa45f80dd3085fa2}\label{structlava_1_1telegram_abc8fe1e9664bd0f9aa45f80dd3085fa2} 
+using {\bfseries set} = std\+::multiset$<$\mbox{\hyperlink{structlava_1_1telegram}{telegram}}$>$
+\begin{DoxyCompactList}\small\item\em Set of telegrams. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369}{telegram}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}}, \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} msg, \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} \mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\+\_\+time}}=\{\}, \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} \mbox{\hyperlink{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}{info}}=\{\})
+\begin{DoxyCompactList}\small\item\em Construct a new telegram. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1telegram_a5b404b8b88b2d3c13fb6ae409c85a4ac}{operator==}} (\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}} rhs) const
+\begin{DoxyCompactList}\small\item\em Equal operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1telegram_aa59bdbe78b18bca6b81eb4f123a61a35}{operator$<$}} (\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}} rhs) const
+\begin{DoxyCompactList}\small\item\em Time order operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}\label{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries sender}
+\begin{DoxyCompactList}\small\item\em Sender id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}\label{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em Receiver id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1telegram_ab07e6369d48bbbaaf9ce13952e3f954b}\label{structlava_1_1telegram_ab07e6369d48bbbaaf9ce13952e3f954b} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries msg\+\_\+id} = \mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Message id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}\label{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10} 
+\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} {\bfseries dispatch\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Dispatch time. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}\label{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3} 
+\mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}} {\bfseries info}
+\begin{DoxyCompactList}\small\item\em Telegram information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telegram. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369}\index{lava::telegram@{lava::telegram}!telegram@{telegram}}
+\index{telegram@{telegram}!lava::telegram@{lava::telegram}}
+\doxysubsubsection{\texorpdfstring{telegram()}{telegram()}}
+{\footnotesize\ttfamily \label{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369} 
+lava\+::telegram\+::telegram (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{sender}{, }\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{receiver}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{msg}{, }\item[{\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}}]{dispatch\+\_\+time}{ = {\ttfamily \{\}}, }\item[{\mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}}]{info}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new telegram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender id \\
+\hline
+{\em receiver} & Receiver id \\
+\hline
+{\em msg} & Message id \\
+\hline
+{\em dispatch\+\_\+time} & Dispatch time \\
+\hline
+{\em info} & Telegram information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1telegram_aa59bdbe78b18bca6b81eb4f123a61a35}\index{lava::telegram@{lava::telegram}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!lava::telegram@{lava::telegram}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{structlava_1_1telegram_aa59bdbe78b18bca6b81eb4f123a61a35} 
+bool lava\+::telegram\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}}}]{rhs}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Time order operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Another telegram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Telegram is earlier or later 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1telegram_a5b404b8b88b2d3c13fb6ae409c85a4ac}\index{lava::telegram@{lava::telegram}!operator==@{operator==}}
+\index{operator==@{operator==}!lava::telegram@{lava::telegram}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{structlava_1_1telegram_a5b404b8b88b2d3c13fb6ae409c85a4ac} 
+bool lava\+::telegram\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}}}]{rhs}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equal operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Another telegram \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Telegram is equal or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{telegram_8hpp}{telegram.\+hpp}}\end{DoxyCompactItemize}

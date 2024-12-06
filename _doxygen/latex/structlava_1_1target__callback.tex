@@ -1,0 +1,46 @@
+\doxysection{lava\+::target\+\_\+callback Struct Reference}
+\hypertarget{structlava_1_1target__callback}{}\label{structlava_1_1target__callback}\index{lava::target\_callback@{lava::target\_callback}}
+
+
+Target callback.  
+
+
+
+
+{\ttfamily \#include $<$base.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}\label{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0} 
+using {\bfseries c\+\_\+ptr} = \mbox{\hyperlink{structlava_1_1target__callback}{target\+\_\+callback}} const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Const pointer to target callback. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1target__callback_ab14f4c45a5fc1bede89a2f8a5bd3f2f7}\label{structlava_1_1target__callback_ab14f4c45a5fc1bede89a2f8a5bd3f2f7} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1target__callback}{target\+\_\+callback}}\texorpdfstring{$\ast$}{*}$>$
+\begin{DoxyCompactList}\small\item\em List of target callbacks. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1target__callback_ab70ab60d51666d3b8ab9e78b72381703}\label{structlava_1_1target__callback_ab70ab60d51666d3b8ab9e78b72381703} 
+using {\bfseries c\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}{c\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Const list of target callbacks. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1target__callback_a6c1d6809811d792db0c3651beaf7e651}\label{structlava_1_1target__callback_a6c1d6809811d792db0c3651beaf7e651} 
+using {\bfseries created\+\_\+func} = std\+::function$<$bool(\mbox{\hyperlink{base_2base_8hpp_a5d9774191fbb48cbd1d60cd9216a5e1b}{Vk\+Attachments\+Ref}}, \mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{rect\+::ref}})$>$
+\begin{DoxyCompactList}\small\item\em Created function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1target__callback_a31efdb007e1d6df70119b6928e4df446}\label{structlava_1_1target__callback_a31efdb007e1d6df70119b6928e4df446} 
+using {\bfseries destroyed\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Destroy function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1target__callback_a4ea94b6dab645ca198d1a96598d52572}\label{structlava_1_1target__callback_a4ea94b6dab645ca198d1a96598d52572} 
+\mbox{\hyperlink{structlava_1_1target__callback_a6c1d6809811d792db0c3651beaf7e651}{created\+\_\+func}} {\bfseries on\+\_\+created}
+\begin{DoxyCompactList}\small\item\em Called on target created. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1target__callback_ae3eb3ddc8de72e2e9db50375ef40b3f7}\label{structlava_1_1target__callback_ae3eb3ddc8de72e2e9db50375ef40b3f7} 
+\mbox{\hyperlink{structlava_1_1target__callback_a31efdb007e1d6df70119b6928e4df446}{destroyed\+\_\+func}} {\bfseries on\+\_\+destroyed}
+\begin{DoxyCompactList}\small\item\em Called on target destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Target callback. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{base_2base_8hpp}{base.\+hpp}}\end{DoxyCompactItemize}

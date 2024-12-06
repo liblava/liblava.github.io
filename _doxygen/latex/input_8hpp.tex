@@ -1,0 +1,383 @@
+\doxysection{liblava/frame/input.hpp File Reference}
+\hypertarget{input_8hpp}{}\label{input_8hpp}\index{liblava/frame/input.hpp@{liblava/frame/input.hpp}}
+
+
+Input handling.  
+
+
+{\ttfamily \#include "{}liblava/core/id.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/misc.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1key__event}{lava\+::key\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Key event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1scroll__offset}{lava\+::scroll\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Input scroll offset. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1scroll__event}{lava\+::scroll\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Scroll event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mouse__position}{lava\+::mouse\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em Input mouse position. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mouse__move__event}{lava\+::mouse\+\_\+move\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Mouse move event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mouse__button__event}{lava\+::mouse\+\_\+button\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Mouse button event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1path__drop__event}{lava\+::path\+\_\+drop\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Path drop event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mouse__active__event}{lava\+::mouse\+\_\+active\+\_\+event}}
+\begin{DoxyCompactList}\small\item\em Mouse active event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1input__callback}{lava\+::input\+\_\+callback}}
+\begin{DoxyCompactList}\small\item\em Input callback. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1input__events}{lava\+::input\+\_\+events$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em List of input events. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1input}{lava\+::input}}
+\begin{DoxyCompactList}\small\item\em Input handling. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1tooltip}{lava\+::tooltip}}
+\begin{DoxyCompactList}\small\item\em Tooltip. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1tooltip__list}{lava\+::tooltip\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Tooltip list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}\label{input_8hpp_aa563fd25d36506aa0f56906ca6357f26} 
+using {\bfseries lava\+::key\+\_\+ref} = \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to key. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3}\label{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3} 
+using {\bfseries lava\+::keys} = std\+::vector$<$\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}$>$
+\begin{DoxyCompactList}\small\item\em List of keys. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}\label{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c} 
+using {\bfseries lava\+::keys\+\_\+ref} = \mbox{\hyperlink{input_8hpp_af1777d4e8975bc9f0283b9d67e0290e3}{keys}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to list of keys. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a7be52fbb92715f74fbf8f8b655dcf388}\label{input_8hpp_a7be52fbb92715f74fbf8f8b655dcf388} 
+using {\bfseries lava\+::action\+\_\+ref} = \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{action}} const\&
+\begin{DoxyCompactList}\small\item\em Refernece to action. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a7d7f3cb9ffbc3938511999b1c375db33}\label{input_8hpp_a7d7f3cb9ffbc3938511999b1c375db33} 
+using {\bfseries lava\+::mod\+\_\+ref} = \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to mod. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_aa23894246017ee7014ad86189ba2d3cd}\label{input_8hpp_aa23894246017ee7014ad86189ba2d3cd} 
+using {\bfseries lava\+::mouse\+\_\+position\+\_\+ref} = \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to mouse position. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_aae253d3da456f719a42e05251866c319}\label{input_8hpp_aae253d3da456f719a42e05251866c319} 
+using {\bfseries lava\+::mouse\+\_\+button\+\_\+ref} = \mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{mouse\+\_\+button}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to mouse button. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_ac6991193b96f8c605a00c1a90b680f5f}\label{input_8hpp_ac6991193b96f8c605a00c1a90b680f5f} 
+using {\bfseries lava\+::input\+\_\+key\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1key__event}{key\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of key events. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a8116373e2cdc08eb7289941127949eb6}\label{input_8hpp_a8116373e2cdc08eb7289941127949eb6} 
+using {\bfseries lava\+::input\+\_\+scroll\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1scroll__event}{scroll\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of scroll events. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a972eb88b978d711def92f92e2fdb7c54}\label{input_8hpp_a972eb88b978d711def92f92e2fdb7c54} 
+using {\bfseries lava\+::input\+\_\+mouse\+\_\+move\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1mouse__move__event}{mouse\+\_\+move\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse move events. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a33079fd02eb091326720a85743930043}\label{input_8hpp_a33079fd02eb091326720a85743930043} 
+using {\bfseries lava\+::input\+\_\+mouse\+\_\+button\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1mouse__button__event}{mouse\+\_\+button\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse button events. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a1abf00e69bc5648d77ad8a4df0b06b51}\label{input_8hpp_a1abf00e69bc5648d77ad8a4df0b06b51} 
+using {\bfseries lava\+::input\+\_\+mouse\+\_\+active\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1mouse__active__event}{mouse\+\_\+active\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse active events. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_accb52eeef273d6dbdc3232e88bcb9a6d}\label{input_8hpp_accb52eeef273d6dbdc3232e88bcb9a6d} 
+using {\bfseries lava\+::input\+\_\+path\+\_\+drop\+\_\+events} = \mbox{\hyperlink{structlava_1_1input__events}{input\+\_\+events}}$<$\mbox{\hyperlink{structlava_1_1path__drop__event}{path\+\_\+drop\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of path drop events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}\label{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831} 
+enum class \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{lava\+::key}} \+: i32 \{ \newline
+{\bfseries unknown} = undef
+, {\bfseries space} = 32
+, {\bfseries apostrophe} = 29
+, {\bfseries comma} = 44
+, \newline
+{\bfseries minus} = 45
+, {\bfseries period} = 46
+, {\bfseries slash} = 47
+, {\bfseries \+\_\+0} = 48
+, \newline
+{\bfseries \+\_\+1}
+, {\bfseries \+\_\+2}
+, {\bfseries \+\_\+3}
+, {\bfseries \+\_\+4}
+, \newline
+{\bfseries \+\_\+5}
+, {\bfseries \+\_\+6}
+, {\bfseries \+\_\+7}
+, {\bfseries \+\_\+8}
+, \newline
+{\bfseries \+\_\+9}
+, {\bfseries semicolon} = 59
+, {\bfseries equal} = 61
+, {\bfseries a} = 65
+, \newline
+{\bfseries b}
+, {\bfseries c}
+, {\bfseries d}
+, {\bfseries e}
+, \newline
+{\bfseries f}
+, {\bfseries g}
+, {\bfseries h}
+, {\bfseries i}
+, \newline
+{\bfseries j}
+, {\bfseries k}
+, {\bfseries l}
+, {\bfseries m}
+, \newline
+{\bfseries n}
+, {\bfseries o}
+, {\bfseries p}
+, {\bfseries q}
+, \newline
+{\bfseries r}
+, {\bfseries s}
+, {\bfseries t}
+, {\bfseries u}
+, \newline
+{\bfseries v}
+, {\bfseries w}
+, {\bfseries x}
+, {\bfseries y}
+, \newline
+{\bfseries z}
+, {\bfseries left\+\_\+bracket} = 91
+, {\bfseries backslash} = 92
+, {\bfseries right\+\_\+bracket} = 93
+, \newline
+{\bfseries grave\+\_\+accent} = 96
+, {\bfseries world\+\_\+1} = 161
+, {\bfseries world\+\_\+2} = 162
+, {\bfseries escape} = 256
+, \newline
+{\bfseries enter}
+, {\bfseries tab}
+, {\bfseries backspace}
+, {\bfseries insert}
+, \newline
+{\bfseries del}
+, {\bfseries right}
+, {\bfseries left}
+, {\bfseries down}
+, \newline
+{\bfseries up}
+, {\bfseries page\+\_\+up}
+, {\bfseries page\+\_\+down}
+, {\bfseries home}
+, \newline
+{\bfseries end}
+, {\bfseries caps\+\_\+lock} = 280
+, {\bfseries scroll\+\_\+lock}
+, {\bfseries num\+\_\+lock}
+, \newline
+{\bfseries print\+\_\+screen}
+, {\bfseries pause}
+, {\bfseries f1} = 290
+, {\bfseries f2}
+, \newline
+{\bfseries f3}
+, {\bfseries f4}
+, {\bfseries f5}
+, {\bfseries f6}
+, \newline
+{\bfseries f7}
+, {\bfseries f8}
+, {\bfseries f9}
+, {\bfseries f10}
+, \newline
+{\bfseries f11}
+, {\bfseries f12}
+, {\bfseries f13}
+, {\bfseries f14}
+, \newline
+{\bfseries f15}
+, {\bfseries f16}
+, {\bfseries f17}
+, {\bfseries f18}
+, \newline
+{\bfseries f19}
+, {\bfseries f20}
+, {\bfseries f21}
+, {\bfseries f22}
+, \newline
+{\bfseries f23}
+, {\bfseries f24}
+, {\bfseries f25}
+, {\bfseries kp\+\_\+0} = 320
+, \newline
+{\bfseries kp\+\_\+1}
+, {\bfseries kp\+\_\+2}
+, {\bfseries kp\+\_\+3}
+, {\bfseries kp\+\_\+4}
+, \newline
+{\bfseries kp\+\_\+5}
+, {\bfseries kp\+\_\+6}
+, {\bfseries kp\+\_\+7}
+, {\bfseries kp\+\_\+8}
+, \newline
+{\bfseries kp\+\_\+9}
+, {\bfseries kp\+\_\+decimal}
+, {\bfseries kp\+\_\+divide}
+, {\bfseries kp\+\_\+multiply}
+, \newline
+{\bfseries kp\+\_\+subtract}
+, {\bfseries kp\+\_\+add}
+, {\bfseries kp\+\_\+enter}
+, {\bfseries kp\+\_\+equal}
+, \newline
+{\bfseries left\+\_\+shift} = 340
+, {\bfseries left\+\_\+control}
+, {\bfseries left\+\_\+alt}
+, {\bfseries left\+\_\+super}
+, \newline
+{\bfseries right\+\_\+shift}
+, {\bfseries right\+\_\+control}
+, {\bfseries right\+\_\+alt}
+, {\bfseries right\+\_\+super}
+, \newline
+{\bfseries menu}
+, {\bfseries last} = menu
+ \}
+\begin{DoxyCompactList}\small\item\em Input keys. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}\label{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7} 
+enum class \mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{lava\+::action}} \+: index \{ {\bfseries release} = 0
+, {\bfseries press}
+, {\bfseries repeat}
+ \}
+\begin{DoxyCompactList}\small\item\em Input actions. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}\label{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb} 
+enum class \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{lava\+::mod}} \+: flag \{ \newline
+{\bfseries none} = 0 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, {\bfseries shift} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, {\bfseries control} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, {\bfseries alt} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \newline
+{\bfseries super} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, {\bfseries caps\+\_\+lock} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, {\bfseries num\+\_\+lock} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5
+ \}
+\begin{DoxyCompactList}\small\item\em Input mods. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a9917bd3554a799bdfb5ec83161676125}\label{input_8hpp_a9917bd3554a799bdfb5ec83161676125} 
+enum class \mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{lava\+::mouse\+\_\+button}} \+: index \{ \newline
+{\bfseries \+\_\+1} = 0
+, {\bfseries \+\_\+2}
+, {\bfseries \+\_\+3}
+, {\bfseries \+\_\+4}
+, \newline
+{\bfseries \+\_\+5}
+, {\bfseries \+\_\+6}
+, {\bfseries \+\_\+7}
+, {\bfseries \+\_\+8}
+, \newline
+{\bfseries last} = \+\_\+8
+, {\bfseries left} = \+\_\+1
+, {\bfseries right} = \+\_\+2
+, {\bfseries middle} = \+\_\+3
+ \}
+\begin{DoxyCompactList}\small\item\em Input mouse buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{input_8hpp_a1b1952aaad3122db329f75dd20ee5e56}{lava\+::to\+\_\+string}} (\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} k)
+\begin{DoxyCompactList}\small\item\em Convert input key to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{input_8hpp_a0f8cc3e9766eaac51a22d0e25ccf9df8}{lava\+::get\+\_\+scancode}} (\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}} \mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}})
+\begin{DoxyCompactList}\small\item\em Get scancode based on key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{input_8hpp_aae1ae981718d104ae1e4e3093901b766}{lava\+::check\+\_\+mod}} (\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} m, \mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} c)
+\begin{DoxyCompactList}\small\item\em Check if mod is active. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{input_8hpp_a54400320ffe7fc0c142fccb819bad958}{lava\+::to\+\_\+string}} (\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}} m)
+\begin{DoxyCompactList}\small\item\em Convert input mod to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{input_8hpp_a355e51d18c6561c78d6fd901240d8db4}\label{input_8hpp_a355e51d18c6561c78d6fd901240d8db4} 
+constexpr bool const {\bfseries lava\+::input\+\_\+ignore} = false
+\begin{DoxyCompactList}\small\item\em Input ignore result. \end{DoxyCompactList}\item 
+\Hypertarget{input_8hpp_a59127ef2ef83bf0724cb6a55558502fb}\label{input_8hpp_a59127ef2ef83bf0724cb6a55558502fb} 
+constexpr bool const {\bfseries lava\+::input\+\_\+done} = true
+\begin{DoxyCompactList}\small\item\em Input done result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input handling. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{input_8hpp_aae1ae981718d104ae1e4e3093901b766}\index{input.hpp@{input.hpp}!check\_mod@{check\_mod}}
+\index{check\_mod@{check\_mod}!input.hpp@{input.hpp}}
+\doxysubsubsection{\texorpdfstring{check\_mod()}{check\_mod()}}
+{\footnotesize\ttfamily \label{input_8hpp_aae1ae981718d104ae1e4e3093901b766} 
+bool lava\+::check\+\_\+mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}}}]{m}{, }\item[{\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}}}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if mod is active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Target mod \\
+\hline
+{\em c} & Mod to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mod is active or not 
+\end{DoxyReturn}
+\Hypertarget{input_8hpp_a0f8cc3e9766eaac51a22d0e25ccf9df8}\index{input.hpp@{input.hpp}!get\_scancode@{get\_scancode}}
+\index{get\_scancode@{get\_scancode}!input.hpp@{input.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_scancode()}{get\_scancode()}}
+{\footnotesize\ttfamily \label{input_8hpp_a0f8cc3e9766eaac51a22d0e25ccf9df8} 
+i32 lava\+::get\+\_\+scancode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Get scancode based on key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Input key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i32 Input scan code 
+\end{DoxyReturn}
+\Hypertarget{input_8hpp_a1b1952aaad3122db329f75dd20ee5e56}\index{input.hpp@{input.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!input.hpp@{input.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{input_8hpp_a1b1952aaad3122db329f75dd20ee5e56} 
+string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{key}}}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Convert input key to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+\Hypertarget{input_8hpp_a54400320ffe7fc0c142fccb819bad958}\index{input.hpp@{input.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!input.hpp@{input.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{input_8hpp_a54400320ffe7fc0c142fccb819bad958} 
+string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{mod}}}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Convert input mod to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Input mod \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
