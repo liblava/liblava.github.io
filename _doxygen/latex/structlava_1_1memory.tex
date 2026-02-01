@@ -1,0 +1,110 @@
+\doxysection{lava\+::memory Struct Reference}
+\hypertarget{structlava_1_1memory}{}\label{structlava_1_1memory}\index{lava::memory@{lava::memory}}
+
+
+Vulkan memory.  
+
+
+
+
+{\ttfamily \#include $<$memory.\+hpp$>$}
+
+Inheritance diagram for lava\+::memory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structlava_1_1memory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}\label{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45} 
+{\bfseries memory} ()
+\begin{DoxyCompactList}\small\item\em Construct a new memory. \end{DoxyCompactList}\item 
+Vk\+Allocation\+Callbacks \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1memory_a2bff8517a31a95e3f74e981dce64ee64}{alloc}} ()
+\begin{DoxyCompactList}\small\item\em Get allocation callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1memory_aa6cf33bee632e9ca622bd398a2023860}{set\+\_\+callbacks}} (Vk\+Allocation\+Callbacks const \&callbacks)
+\begin{DoxyCompactList}\small\item\em Set the callbacks object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1memory_a304445836b73d2d86aa08c33b1df6ba6}{set\+\_\+use\+\_\+custom\+\_\+cpu\+\_\+callbacks}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set use custom cpu callbacks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1memory}{memory}} \& \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Get memory instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan memory. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1memory_a2bff8517a31a95e3f74e981dce64ee64}\index{lava::memory@{lava::memory}!alloc@{alloc}}
+\index{alloc@{alloc}!lava::memory@{lava::memory}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily \label{structlava_1_1memory_a2bff8517a31a95e3f74e981dce64ee64} 
+Vk\+Allocation\+Callbacks \texorpdfstring{$\ast$}{*} lava\+::memory\+::alloc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get allocation callback. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Allocation\+Callbacks\texorpdfstring{$\ast$}{*} Allocation callbacks 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}\index{lava::memory@{lava::memory}!instance@{instance}}
+\index{instance@{instance}!lava::memory@{lava::memory}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \label{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142} 
+static \mbox{\hyperlink{structlava_1_1memory}{memory}} \& lava\+::memory\+::instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get memory instance. 
+
+\begin{DoxyReturn}{Returns}
+memory\& Memory 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1memory_aa6cf33bee632e9ca622bd398a2023860}\index{lava::memory@{lava::memory}!set\_callbacks@{set\_callbacks}}
+\index{set\_callbacks@{set\_callbacks}!lava::memory@{lava::memory}}
+\doxysubsubsection{\texorpdfstring{set\_callbacks()}{set\_callbacks()}}
+{\footnotesize\ttfamily \label{structlava_1_1memory_aa6cf33bee632e9ca622bd398a2023860} 
+void lava\+::memory\+::set\+\_\+callbacks (\begin{DoxyParamCaption}\item[{Vk\+Allocation\+Callbacks const \&}]{callbacks}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the callbacks object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callbacks} & Allocation Callbacks \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1memory_a304445836b73d2d86aa08c33b1df6ba6}\index{lava::memory@{lava::memory}!set\_use\_custom\_cpu\_callbacks@{set\_use\_custom\_cpu\_callbacks}}
+\index{set\_use\_custom\_cpu\_callbacks@{set\_use\_custom\_cpu\_callbacks}!lava::memory@{lava::memory}}
+\doxysubsubsection{\texorpdfstring{set\_use\_custom\_cpu\_callbacks()}{set\_use\_custom\_cpu\_callbacks()}}
+{\footnotesize\ttfamily \label{structlava_1_1memory_a304445836b73d2d86aa08c33b1df6ba6} 
+void lava\+::memory\+::set\+\_\+use\+\_\+custom\+\_\+cpu\+\_\+callbacks (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set use custom cpu callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value state \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{memory_8hpp}{memory.\+hpp}}\end{DoxyCompactItemize}

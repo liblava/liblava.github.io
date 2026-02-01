@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1tooltip__list" kind="struct" language="C++" prot="public">
+    <compoundname>lava::tooltip_list</compoundname>
+    <includes refid="input_8hpp" local="no">input.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1tooltip__list_1a202cfadf46f1b157bf621607429a7096" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1tooltip_1a70a61251ac8f2ce1517cd3bf2ba7a07a" kindref="member">tooltip::list</ref></type>
+        <definition>tooltip::list lava::tooltip_list::m_tooltips</definition>
+        <argsstring></argsstring>
+        <name>m_tooltips</name>
+        <qualifiedname>lava::tooltip_list::m_tooltips</qualifiedname>
+        <briefdescription>
+<para>List of tooltips. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="730" column="19" bodyfile="liblava/frame/input.hpp" bodystart="730" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1tooltip__list_1aa47dec6a4de393b5bc12141d9c07cf2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::tooltip_list::add</definition>
+        <argsstring>(string_ref name, key key, mod mod=mod::none)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::tooltip_list::add</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="input_8hpp_1a9f1f9c2e6ae8192d1adecd3314877831" kindref="member">key</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="input_8hpp_1a83cec806a5f7af14a6981b4760aef6fb" kindref="member">mod</ref></type>
+          <declname>mod</declname>
+          <defval>mod::none</defval>
+        </param>
+        <briefdescription>
+<para>Add a tooltip. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of tooltip </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input mod (default: none) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="693" column="10" bodyfile="liblava/frame/input.hpp" bodystart="693" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1tooltip__list_1ab6265a11d603bd1a19819262c929da22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::tooltip_list::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::tooltip_list::clear</qualifiedname>
+        <briefdescription>
+<para>Clear tooltips. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="702" column="10" bodyfile="liblava/frame/input.hpp" bodystart="702" bodyend="704"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1tooltip__list_1a91a5b41781db1d73c7dd58355133af0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1tooltip_1a70a61251ac8f2ce1517cd3bf2ba7a07a" kindref="member">tooltip::list</ref> const &amp;</type>
+        <definition>tooltip::list const  &amp; lava::tooltip_list::get_list</definition>
+        <argsstring>() const</argsstring>
+        <name>get_list</name>
+        <qualifiedname>lava::tooltip_list::get_list</qualifiedname>
+        <briefdescription>
+<para>Get tooltips. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1tooltip_1a70a61251ac8f2ce1517cd3bf2ba7a07a" kindref="member">tooltip::list</ref> List of tooltips </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="710" column="25" bodyfile="liblava/frame/input.hpp" bodystart="710" bodyend="712"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1tooltip__list_1ae4277a89fd3ea7c6de287e1184d58494" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::tooltip_list::set</definition>
+        <argsstring>(tooltip::list const &amp;list)</argsstring>
+        <name>set</name>
+        <qualifiedname>lava::tooltip_list::set</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1tooltip_1a70a61251ac8f2ce1517cd3bf2ba7a07a" kindref="member">tooltip::list</ref> const &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Set a new tooltip list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of tooltips </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="718" column="10" bodyfile="liblava/frame/input.hpp" bodystart="718" bodyend="720"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1tooltip__list_1a93fc6926b01a3437d88fc906d318049e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::tooltip_list::format_string</definition>
+        <argsstring>() const</argsstring>
+        <name>format_string</name>
+        <qualifiedname>lava::tooltip_list::format_string</qualifiedname>
+        <briefdescription>
+<para>Convert tooltips to string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string String representation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="726" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tooltip list. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/frame/input.hpp" line="686" column="1" bodyfile="liblava/frame/input.hpp" bodystart="686" bodyend="731"/>
+    <listofallmembers>
+      <member refid="structlava_1_1tooltip__list_1aa47dec6a4de393b5bc12141d9c07cf2b" prot="public" virt="non-virtual"><scope>lava::tooltip_list</scope><name>add</name></member>
+      <member refid="structlava_1_1tooltip__list_1ab6265a11d603bd1a19819262c929da22" prot="public" virt="non-virtual"><scope>lava::tooltip_list</scope><name>clear</name></member>
+      <member refid="structlava_1_1tooltip__list_1a93fc6926b01a3437d88fc906d318049e" prot="public" virt="non-virtual"><scope>lava::tooltip_list</scope><name>format_string</name></member>
+      <member refid="structlava_1_1tooltip__list_1a91a5b41781db1d73c7dd58355133af0b" prot="public" virt="non-virtual"><scope>lava::tooltip_list</scope><name>get_list</name></member>
+      <member refid="structlava_1_1tooltip__list_1a202cfadf46f1b157bf621607429a7096" prot="private" virt="non-virtual"><scope>lava::tooltip_list</scope><name>m_tooltips</name></member>
+      <member refid="structlava_1_1tooltip__list_1ae4277a89fd3ea7c6de287e1184d58494" prot="public" virt="non-virtual"><scope>lava::tooltip_list</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

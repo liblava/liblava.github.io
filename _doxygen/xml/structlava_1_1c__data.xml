@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1c__data" kind="struct" language="C++" prot="public">
+    <compoundname>lava::c_data</compoundname>
+    <includes refid="data_8hpp" local="no">data.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1c__data_1af79805daac5977755e5636b86b97c9d6" prot="public" static="no">
+        <type><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref> const  &amp;</type>
+        <definition>using lava::c_data::ref =  c_data const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::c_data::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to const data wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="240" column="5" bodyfile="liblava/core/data.hpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1c__data_1ad8a6f003c614108ad5f3e5f8ba533db6" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1data_1adbf9c722e987bd8211e40ecf58aacc09" kindref="member">data::c_ptr</ref></type>
+        <definition>data::c_ptr lava::c_data::addr</definition>
+        <argsstring></argsstring>
+        <name>addr</name>
+        <qualifiedname>lava::c_data::addr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Const data pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="264" column="17" bodyfile="liblava/core/data.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1c__data_1ae32d30ad3186a66fc02520e797e46a6f" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+        <definition>size_t lava::c_data::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>lava::c_data::size</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Size of data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="267" column="12" bodyfile="liblava/core/data.hpp" bodystart="267" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1c__data_1a81ea9dd90b59038b19896f869fcf4791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::c_data::c_data</definition>
+        <argsstring>()=default</argsstring>
+        <name>c_data</name>
+        <qualifiedname>lava::c_data::c_data</qualifiedname>
+        <briefdescription>
+<para>Construct a new const data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="245" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1c__data_1ad0480942398fc53db6469d762256b993" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::c_data::c_data</definition>
+        <argsstring>(void const *addr, size_t length)</argsstring>
+        <name>c_data</name>
+        <qualifiedname>lava::c_data::c_data</qualifiedname>
+        <param>
+          <type>void const *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new const data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="252" column="5" bodyfile="liblava/core/data.hpp" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1c__data_1a1224abeec864d37556aaef9bc35c0eaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::c_data::c_data</definition>
+        <argsstring>(data::ref data)</argsstring>
+        <name>c_data</name>
+        <qualifiedname>lava::c_data::c_data</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1af45fa6169fcd0b92cfa6692099fedc73" kindref="member">data::ref</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new const data from other data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/data.hpp" line="260" column="5" bodyfile="liblava/core/data.hpp" bodystart="260" bodyend="261"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Const data wrapper. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/core/data.hpp" line="238" column="1" bodyfile="liblava/core/data.hpp" bodystart="238" bodyend="268"/>
+    <listofallmembers>
+      <member refid="structlava_1_1c__data_1ad8a6f003c614108ad5f3e5f8ba533db6" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>addr</name></member>
+      <member refid="structlava_1_1c__data_1a81ea9dd90b59038b19896f869fcf4791" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>c_data</name></member>
+      <member refid="structlava_1_1c__data_1ad0480942398fc53db6469d762256b993" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>c_data</name></member>
+      <member refid="structlava_1_1c__data_1a1224abeec864d37556aaef9bc35c0eaf" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>c_data</name></member>
+      <member refid="structlava_1_1c__data_1af79805daac5977755e5636b86b97c9d6" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>ref</name></member>
+      <member refid="structlava_1_1c__data_1ae32d30ad3186a66fc02520e797e46a6f" prot="public" virt="non-virtual"><scope>lava::c_data</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

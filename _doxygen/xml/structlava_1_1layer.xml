@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1layer" kind="struct" language="C++" prot="public">
+    <compoundname>lava::layer</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="layer_8hpp" local="no">layer.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1layer" kindref="compound">layer</ref> &gt;</type>
+        <definition>using lava::layer::s_ptr =  std::shared_ptr&lt;layer&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::layer::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="20" column="5" bodyfile="liblava/util/layer.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1layer_1a2ce2652496e02f8d4ccad26859743cf9" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::layer::map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>lava::layer::map</qualifiedname>
+        <briefdescription>
+<para>Map of layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="23" column="5" bodyfile="liblava/util/layer.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1layer_1ac23feca341c4ad6f951ea07c111abfe1" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::layer::list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::layer::list</qualifiedname>
+        <briefdescription>
+<para>List of layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="26" column="5" bodyfile="liblava/util/layer.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1layer_1a9c5bccef81b2a6cd2fe69be881f18ccb" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using lava::layer::func =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <qualifiedname>lava::layer::func</qualifiedname>
+        <briefdescription>
+<para>Layer function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="29" column="5" bodyfile="liblava/util/layer.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1layer_1a6a0a48784033515d2a2b6b554d942544" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1layer_1a9c5bccef81b2a6cd2fe69be881f18ccb" kindref="member">func</ref></type>
+        <definition>func lava::layer::on_func</definition>
+        <argsstring></argsstring>
+        <name>on_func</name>
+        <qualifiedname>lava::layer::on_func</qualifiedname>
+        <briefdescription>
+<para>Called by layering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="48" column="10" bodyfile="liblava/util/layer.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1layer_1ac8bd4f7abe65c610a44afd6c80aa0a93" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::layer::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <qualifiedname>lava::layer::active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="51" column="10" bodyfile="liblava/util/layer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1layer_1a3ee9d3fee537879a04326faa14a830a1" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::layer::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>lava::layer::name</qualifiedname>
+        <briefdescription>
+<para>Name of layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="54" column="12" bodyfile="liblava/util/layer.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1layer_1a0ccd6d1fd4eafeff2858002ddf4c8755" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::layer::make</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::layer::make</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Make a new layer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of layer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" kindref="member">s_ptr</ref> Shared pointer to layer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="36" column="18" bodyfile="liblava/util/layer.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1layer_1ab7f45c663b9e2b8c4a942f746a5c4fd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::layer::layer</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>layer</name>
+        <qualifiedname>lava::layer::layer</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new layer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of layer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/layer.hpp" line="44" column="5" bodyfile="liblava/util/layer.hpp" bodystart="44" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Layer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::layer</label>
+        <link refid="structlava_1_1layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::layer</label>
+        <link refid="structlava_1_1layer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/util/layer.hpp" line="18" column="1" bodyfile="liblava/util/layer.hpp" bodystart="18" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structlava_1_1layer_1ac8bd4f7abe65c610a44afd6c80aa0a93" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>active</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>entity</name></member>
+      <member refid="structlava_1_1layer_1a9c5bccef81b2a6cd2fe69be881f18ccb" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>func</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>get_id</name></member>
+      <member refid="structlava_1_1layer_1ab7f45c663b9e2b8c4a942f746a5c4fd8" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>layer</name></member>
+      <member refid="structlava_1_1layer_1ac23feca341c4ad6f951ea07c111abfe1" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>list</name></member>
+      <member refid="structlava_1_1layer_1a0ccd6d1fd4eafeff2858002ddf4c8755" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>make</name></member>
+      <member refid="structlava_1_1layer_1a2ce2652496e02f8d4ccad26859743cf9" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>map</name></member>
+      <member refid="structlava_1_1layer_1a3ee9d3fee537879a04326faa14a830a1" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>name</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1layer_1a6a0a48784033515d2a2b6b554d942544" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>on_func</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>operator=</name></member>
+      <member refid="structlava_1_1layer_1a815521a2637c57868794214fc011c22f" prot="public" virt="non-virtual"><scope>lava::layer</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::layer</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

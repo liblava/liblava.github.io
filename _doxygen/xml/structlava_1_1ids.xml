@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1ids" kind="struct" language="C++" prot="public">
+    <compoundname>lava::ids</compoundname>
+    <includes refid="id_8hpp" local="no">id.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1ids_1a59af781320af382d557f1662d19c02c3" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref> &gt;</type>
+        <definition>std::atomic&lt;index&gt; lava::ids::m_next</definition>
+        <argsstring></argsstring>
+        <name>m_next</name>
+        <qualifiedname>lava::ids::m_next</qualifiedname>
+        <initializer>= {<ref refid="types_8hpp_1a90deae5aeca0497b3b7e6c6316ac5105" kindref="member">no_index</ref>}</initializer>
+        <briefdescription>
+<para>Next id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="126" column="17" bodyfile="liblava/core/id.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1ids_1a6ac8629822301912e5ba3f9f787a1d40" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1ids" kindref="compound">ids</ref> &amp;</type>
+        <definition>static ids &amp; lava::ids::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <qualifiedname>lava::ids::instance</qualifiedname>
+        <briefdescription>
+<para>Get id factory instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ids&amp; Id factory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="111" column="16" bodyfile="liblava/core/id.hpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1ids_1a7dddb91a681d2250c2b8f8f89e64eadb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::ids::next</definition>
+        <argsstring>()</argsstring>
+        <name>next</name>
+        <qualifiedname>lava::ids::next</qualifiedname>
+        <briefdescription>
+<para>Get next id from factory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>id Next id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="120" column="8" bodyfile="liblava/core/id.hpp" bodystart="120" bodyend="122"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Id factory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/core/id.hpp" line="106" column="1" bodyfile="liblava/core/id.hpp" bodystart="106" bodyend="127"/>
+    <listofallmembers>
+      <member refid="structlava_1_1ids_1a6ac8629822301912e5ba3f9f787a1d40" prot="public" virt="non-virtual"><scope>lava::ids</scope><name>instance</name></member>
+      <member refid="structlava_1_1ids_1a59af781320af382d557f1662d19c02c3" prot="private" virt="non-virtual"><scope>lava::ids</scope><name>m_next</name></member>
+      <member refid="structlava_1_1ids_1a7dddb91a681d2250c2b8f8f89e64eadb" prot="public" virt="non-virtual"><scope>lava::ids</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

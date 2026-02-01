@@ -1,0 +1,216 @@
+\doxysection{liblava/resource/mesh.hpp File Reference}
+\hypertarget{mesh_8hpp}{}\label{mesh_8hpp}\index{liblava/resource/mesh.hpp@{liblava/resource/mesh.hpp}}
+
+
+Vulkan mesh.  
+
+
+{\ttfamily \#include "{}liblava/core/misc.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/resource/buffer.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/resource/primitive.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/hex.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/log.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1mesh__template__data}{lava\+::mesh\+\_\+template\+\_\+data$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Templated mesh data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Temporary templated mesh. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1mesh__meta}{lava\+::mesh\+\_\+meta}}
+\begin{DoxyCompactList}\small\item\em Mesh meta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mesh_8hpp_a516a3f121aa952cd1a58450ffac5b334}\label{mesh_8hpp_a516a3f121aa952cd1a58450ffac5b334} 
+using {\bfseries lava\+::mesh\+\_\+data} = \mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$\mbox{\hyperlink{structlava_1_1vertex}{vertex}}$>$
+\begin{DoxyCompactList}\small\item\em Mesh data with default vertex. \end{DoxyCompactList}\item 
+\Hypertarget{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341}\label{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341} 
+using {\bfseries lava\+::mesh} = \mbox{\hyperlink{structlava_1_1mesh__template}{mesh\+\_\+template}}$<$\mbox{\hyperlink{structlava_1_1vertex}{vertex}}$>$
+\begin{DoxyCompactList}\small\item\em Mesh with default vertex. \end{DoxyCompactList}\item 
+\Hypertarget{mesh_8hpp_ac3126f4b1b7a55199bb1b6c6bd4cff56}\label{mesh_8hpp_ac3126f4b1b7a55199bb1b6c6bd4cff56} 
+using {\bfseries lava\+::mesh\+\_\+registry} = \mbox{\hyperlink{structlava_1_1id__registry}{id\+\_\+registry}}$<$\mbox{\hyperlink{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341}{mesh}}, \mbox{\hyperlink{structlava_1_1mesh__meta}{mesh\+\_\+meta}}$>$
+\begin{DoxyCompactList}\small\item\em Mesh registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T = vertex, bool generate\+\_\+colors = true, bool generate\+\_\+normals = true, bool generate\+\_\+uvs = true, bool has\+\_\+colors = true, bool has\+\_\+normals = true, bool has\+\_\+uvs = true$>$ }\\\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ \mbox{\hyperlink{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693}{lava\+::create\+\_\+mesh\+\_\+data}} (\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em Create a new primitive \doxylink{mesh_8hpp_a516a3f121aa952cd1a58450ffac5b334}{mesh\+\_\+data}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T = vertex, bool generate\+\_\+colors = true, bool generate\+\_\+normals = true, bool generate\+\_\+uvs = true, bool has\+\_\+colors = true, bool has\+\_\+normals = true, bool has\+\_\+uvs = true$>$ }\\std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structlava_1_1mesh__template}{mesh\+\_\+template}}$<$ T $>$ $>$ \mbox{\hyperlink{mesh_8hpp_a25995a38215b3b15ea88b0da495cec74}{lava\+::create\+\_\+mesh}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \&\mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}} type)
+\begin{DoxyCompactList}\small\item\em Create a new primitive mesh. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Pos\+Type, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} vert\+\_\+count, bool is\+\_\+complex$>$ }\\constexpr std\+::array$<$ Pos\+Type, vert\+\_\+count $>$ \mbox{\hyperlink{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b}{lava\+::make\+\_\+primitive\+\_\+positions\+\_\+cube}} ()
+\begin{DoxyCompactList}\small\item\em Make primitive positions for cube. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool is\+\_\+complex$>$ }\\std\+::vector$<$ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} $>$ \mbox{\hyperlink{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238}{lava\+::make\+\_\+primitive\+\_\+indices\+\_\+cube}} ()
+\begin{DoxyCompactList}\small\item\em Make primitive indices for cube. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Norm\+Type$>$ }\\constexpr std\+::array$<$ Norm\+Type, 6 $>$ \mbox{\hyperlink{mesh_8hpp_af87a63e28c639e3fcce909291d92117f}{lava\+::make\+\_\+primitive\+\_\+normals\+\_\+cube}} ()
+\begin{DoxyCompactList}\small\item\em Make primitive normals for cube. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename UVType$>$ }\\constexpr std\+::array$<$ UVType, 24 $>$ \mbox{\hyperlink{mesh_8hpp_a30ccf5eed07b27155682ddd4597e4a92}{lava\+::make\+\_\+primitive\+\_\+uvs\+\_\+cube}} ()
+\begin{DoxyCompactList}\small\item\em Make primitive uvs for cube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan mesh. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mesh_8hpp_a25995a38215b3b15ea88b0da495cec74}\index{mesh.hpp@{mesh.hpp}!create\_mesh@{create\_mesh}}
+\index{create\_mesh@{create\_mesh}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_mesh()}{create\_mesh()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_a25995a38215b3b15ea88b0da495cec74} 
+template$<$typename T = vertex, bool generate\+\_\+colors = true, bool generate\+\_\+normals = true, bool generate\+\_\+uvs = true, bool has\+\_\+colors = true, bool has\+\_\+normals = true, bool has\+\_\+uvs = true$>$ \\
+std\+::shared\+\_\+ptr$<$ mesh\+\_\+template$<$ T $>$ $>$ lava\+::create\+\_\+mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \&}]{device}{, }\item[{\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Create a new primitive mesh. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of vertex struct \\
+\hline
+{\em generate\+\_\+colors} & If color may be generated \\
+\hline
+{\em generate\+\_\+normals} & If normals may be generated \\
+\hline
+{\em generate\+\_\+uvs} & If UVs may be generated \\
+\hline
+{\em has\+\_\+colors} & On MSVC, specifies if a {\ttfamily color} field exists \\
+\hline
+{\em has\+\_\+normals} & On MSVC, specifies if a {\ttfamily normal} field exists \\
+\hline
+{\em has\+\_\+uvs} & On MSVC, specifies if a {\ttfamily uv} field exists \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em type} & Mesh type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$mesh\+\_\+template$<$\+T$>$$>$ Shared pointer to mesh 
+\end{DoxyReturn}
+\Hypertarget{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693}\index{mesh.hpp@{mesh.hpp}!create\_mesh\_data@{create\_mesh\_data}}
+\index{create\_mesh\_data@{create\_mesh\_data}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_mesh\_data()}{create\_mesh\_data()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_af8b68ead65c4b87bb71accae44b5e693} 
+template$<$typename T = vertex, bool generate\+\_\+colors = true, bool generate\+\_\+normals = true, bool generate\+\_\+uvs = true, bool has\+\_\+colors = true, bool has\+\_\+normals = true, bool has\+\_\+uvs = true$>$ \\
+mesh\+\_\+template\+\_\+data$<$ T $>$ lava\+::create\+\_\+mesh\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Create a new primitive mesh\+\_\+data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of vertex struct \\
+\hline
+{\em generate\+\_\+colors} & If color may be generated \\
+\hline
+{\em generate\+\_\+normals} & If normals may be generated \\
+\hline
+{\em generate\+\_\+uvs} & If UVs may be generated \\
+\hline
+{\em has\+\_\+colors} & On MSVC, specifies if a {\ttfamily color} field exists \\
+\hline
+{\em has\+\_\+normals} & On MSVC, specifies if a {\ttfamily normal} field exists \\
+\hline
+{\em has\+\_\+uvs} & On MSVC, specifies if a {\ttfamily uv} field exists \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mesh type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mesh\+\_\+template\+\_\+data$<$\+T$>$ Mesh data 
+\end{DoxyReturn}
+\Hypertarget{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238}\index{mesh.hpp@{mesh.hpp}!make\_primitive\_indices\_cube@{make\_primitive\_indices\_cube}}
+\index{make\_primitive\_indices\_cube@{make\_primitive\_indices\_cube}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_primitive\_indices\_cube()}{make\_primitive\_indices\_cube()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_ae50e966abbcab53539b2b30ec1cc1238} 
+template$<$bool is\+\_\+complex$>$ \\
+std\+::vector$<$ index $>$ lava\+::make\+\_\+primitive\+\_\+indices\+\_\+cube (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Make primitive indices for cube. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em is\+\_\+complex} & Complex state \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$index$>$ Array for indices 
+\end{DoxyReturn}
+\Hypertarget{mesh_8hpp_af87a63e28c639e3fcce909291d92117f}\index{mesh.hpp@{mesh.hpp}!make\_primitive\_normals\_cube@{make\_primitive\_normals\_cube}}
+\index{make\_primitive\_normals\_cube@{make\_primitive\_normals\_cube}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_primitive\_normals\_cube()}{make\_primitive\_normals\_cube()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_af87a63e28c639e3fcce909291d92117f} 
+template$<$typename Norm\+Type$>$ \\
+std\+::array$<$ Norm\+Type, 6 $>$ lava\+::make\+\_\+primitive\+\_\+normals\+\_\+cube (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Make primitive normals for cube. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Norm\+Type} & Type of normal \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+constexpr std\+::array$<$\+Norm\+Type, 6$>$ Array of normals 
+\end{DoxyReturn}
+\Hypertarget{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b}\index{mesh.hpp@{mesh.hpp}!make\_primitive\_positions\_cube@{make\_primitive\_positions\_cube}}
+\index{make\_primitive\_positions\_cube@{make\_primitive\_positions\_cube}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_primitive\_positions\_cube()}{make\_primitive\_positions\_cube()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_a312d360329d073e59e7ce7a7fd9a663b} 
+template$<$typename Pos\+Type, size\+\_\+t vert\+\_\+count, bool is\+\_\+complex$>$ \\
+std\+::array$<$ Pos\+Type, vert\+\_\+count $>$ lava\+::make\+\_\+primitive\+\_\+positions\+\_\+cube (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Make primitive positions for cube. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Pos\+Type} & Type of position \\
+\hline
+{\em vert\+\_\+count} & Number of vertices \\
+\hline
+{\em is\+\_\+complex} & Complex state \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+constexpr std\+::array$<$\+Pos\+Type, vert\+\_\+count$>$ Array of positions 
+\end{DoxyReturn}
+\Hypertarget{mesh_8hpp_a30ccf5eed07b27155682ddd4597e4a92}\index{mesh.hpp@{mesh.hpp}!make\_primitive\_uvs\_cube@{make\_primitive\_uvs\_cube}}
+\index{make\_primitive\_uvs\_cube@{make\_primitive\_uvs\_cube}!mesh.hpp@{mesh.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_primitive\_uvs\_cube()}{make\_primitive\_uvs\_cube()}}
+{\footnotesize\ttfamily \label{mesh_8hpp_a30ccf5eed07b27155682ddd4597e4a92} 
+template$<$typename UVType$>$ \\
+std\+::array$<$ UVType, 24 $>$ lava\+::make\+\_\+primitive\+\_\+uvs\+\_\+cube (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Make primitive uvs for cube. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em UVType} & Type of uv \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+constexpr std\+::array$<$\+UVType, 24$>$ Array of uvs 
+\end{DoxyReturn}

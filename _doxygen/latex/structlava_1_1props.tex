@@ -1,0 +1,339 @@
+\doxysection{lava\+::props Struct Reference}
+\hypertarget{structlava_1_1props}{}\label{structlava_1_1props}\index{lava::props@{lava::props}}
+
+
+Props.  
+
+
+
+
+{\ttfamily \#include $<$props.\+hpp$>$}
+
+Inheritance diagram for lava\+::props\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1props}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1props_1_1item}{item}}
+\begin{DoxyCompactList}\small\item\em Prop item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1props_a9cb82f30e415ccf71867b8189e44be98}{add}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Add a prop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1props_ada1da0525ec93c125324ba5da55f5267}{remove}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Remove a prop. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_ab66f81299ee18649b389758de9db3ad9}{install}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Install a prop (add + load) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} \mbox{\hyperlink{structlava_1_1props_a8032390e6d55db128b5c2a3c6ea7acab}{operator()}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Get prop data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1props_afcd37a3851649268f3773b24fc1187fd}{get\+\_\+filename}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}) const
+\begin{DoxyCompactList}\small\item\em Get file name of prop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1props_a37c03bf239c5f470c9048bfbf2c8dcf1}{set\+\_\+filename}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename)
+\begin{DoxyCompactList}\small\item\em Set filename of prop. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_a32f0bb10aadeb0a26745b282911113a8}{exists}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}) const
+\begin{DoxyCompactList}\small\item\em Check if prop exists. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_a16da4c4fc548281a6b0b1265b2eb489c}{empty}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}) const
+\begin{DoxyCompactList}\small\item\em Check if prop data is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_a64c10f2815edd6f84d39e375e7155e2f}{load}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Load prop data (reload if loaded) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1props_ad7070c344779dacf176a87b00c594057}{unload}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Unload prop data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_a75d485ab6b65a933e69e5e8378ca1115}{load\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Load all prop data (reload if loaded) \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1props_aa64c6d4e612d63205c194e25d88c56bb}\label{structlava_1_1props_aa64c6d4e612d63205c194e25d88c56bb} 
+void {\bfseries unload\+\_\+all} ()
+\begin{DoxyCompactList}\small\item\em Unload all prop data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1props_a8d8644c500df25d2aa18163c9a5c718c}{check}} ()
+\begin{DoxyCompactList}\small\item\em Check whether all props are available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1props_afd288a93ed39bff1e82d8cc3f72333f8}{parse}} (\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}})
+\begin{DoxyCompactList}\small\item\em Parse prop overloads. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1props_a045acb0efc60c95198bbb34f79f5a2fa}\label{structlava_1_1props_a045acb0efc60c95198bbb34f79f5a2fa} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all props. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1props_1_1item_ac837ec42717d0e7370925ecff4356f78}{item\+::map}} const \& \mbox{\hyperlink{structlava_1_1props_a5fb8c6dce23e20b5cc192c23cc47862b}{get\+\_\+all}} () const
+\begin{DoxyCompactList}\small\item\em Get all props. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1props_af14af72d2081d93b4b7d932487ee3876}{set\+\_\+json}} (json\+\_\+ref j) override
+\item 
+json \mbox{\hyperlink{structlava_1_1props_a1d5efad4d33dcb70b8dc7ad12ed38352}{get\+\_\+json}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1props_a142dd02f8599f19f2f69e230c7b7c9d0}\label{structlava_1_1props_a142dd02f8599f19f2f69e230c7b7c9d0} 
+\mbox{\hyperlink{structlava_1_1engine}{engine}} \texorpdfstring{$\ast$}{*} {\bfseries app} = nullptr
+\begin{DoxyCompactList}\small\item\em Engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Props. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1props_a9cb82f30e415ccf71867b8189e44be98}\index{lava::props@{lava::props}!add@{add}}
+\index{add@{add}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a9cb82f30e415ccf71867b8189e44be98} 
+void lava\+::props\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Add a prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+{\em filename} & File name of prop \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1props_a8d8644c500df25d2aa18163c9a5c718c}\index{lava::props@{lava::props}!check@{check}}
+\index{check@{check}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a8d8644c500df25d2aa18163c9a5c718c} 
+bool lava\+::props\+::check (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check whether all props are available. 
+
+\begin{DoxyReturn}{Returns}
+All props are there or are missing (see log) 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a16da4c4fc548281a6b0b1265b2eb489c}\index{lava::props@{lava::props}!empty@{empty}}
+\index{empty@{empty}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a16da4c4fc548281a6b0b1265b2eb489c} 
+bool lava\+::props\+::empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if prop data is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prop data is empty or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a32f0bb10aadeb0a26745b282911113a8}\index{lava::props@{lava::props}!exists@{exists}}
+\index{exists@{exists}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a32f0bb10aadeb0a26745b282911113a8} 
+bool lava\+::props\+::exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if prop exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prop exists or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a5fb8c6dce23e20b5cc192c23cc47862b}\index{lava::props@{lava::props}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a5fb8c6dce23e20b5cc192c23cc47862b} 
+\mbox{\hyperlink{structlava_1_1props_1_1item_ac837ec42717d0e7370925ecff4356f78}{item\+::map}} const  \& lava\+::props\+::get\+\_\+all (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all props. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1props_1_1item_ac837ec42717d0e7370925ecff4356f78}{item\+::map} const\& Map of props 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_afcd37a3851649268f3773b24fc1187fd}\index{lava::props@{lava::props}!get\_filename@{get\_filename}}
+\index{get\_filename@{get\_filename}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{get\_filename()}{get\_filename()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_afcd37a3851649268f3773b24fc1187fd} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::props\+::get\+\_\+filename (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get file name of prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref} File name 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a1d5efad4d33dcb70b8dc7ad12ed38352}\index{lava::props@{lava::props}!get\_json@{get\_json}}
+\index{get\_json@{get\_json}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{get\_json()}{get\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a1d5efad4d33dcb70b8dc7ad12ed38352} 
+json lava\+::props\+::get\+\_\+json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}{configurable\+::get\+\_\+json} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}{lava\+::configurable}}.
+
+\Hypertarget{structlava_1_1props_ab66f81299ee18649b389758de9db3ad9}\index{lava::props@{lava::props}!install@{install}}
+\index{install@{install}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_ab66f81299ee18649b389758de9db3ad9} 
+bool lava\+::props\+::install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Install a prop (add + load) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+{\em filename} & File name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Install was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a64c10f2815edd6f84d39e375e7155e2f}\index{lava::props@{lava::props}!load@{load}}
+\index{load@{load}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a64c10f2815edd6f84d39e375e7155e2f} 
+bool lava\+::props\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Load prop data (reload if loaded) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Load was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a75d485ab6b65a933e69e5e8378ca1115}\index{lava::props@{lava::props}!load\_all@{load\_all}}
+\index{load\_all@{load\_all}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{load\_all()}{load\_all()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a75d485ab6b65a933e69e5e8378ca1115} 
+bool lava\+::props\+::load\+\_\+all (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load all prop data (reload if loaded) 
+
+\begin{DoxyReturn}{Returns}
+Load was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_a8032390e6d55db128b5c2a3c6ea7acab}\index{lava::props@{lava::props}!operator()@{operator()}}
+\index{operator()@{operator()}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a8032390e6d55db128b5c2a3c6ea7acab} 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} lava\+::props\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Get prop data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1c__data}{c\+\_\+data} Prop const data 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1props_afd288a93ed39bff1e82d8cc3f72333f8}\index{lava::props@{lava::props}!parse@{parse}}
+\index{parse@{parse}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_afd288a93ed39bff1e82d8cc3f72333f8} 
+void lava\+::props\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}}]{cmd\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Parse prop overloads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1props_ada1da0525ec93c125324ba5da55f5267}\index{lava::props@{lava::props}!remove@{remove}}
+\index{remove@{remove}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_ada1da0525ec93c125324ba5da55f5267} 
+void lava\+::props\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Remove a prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1props_a37c03bf239c5f470c9048bfbf2c8dcf1}\index{lava::props@{lava::props}!set\_filename@{set\_filename}}
+\index{set\_filename@{set\_filename}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{set\_filename()}{set\_filename()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_a37c03bf239c5f470c9048bfbf2c8dcf1} 
+void lava\+::props\+::set\+\_\+filename (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set filename of prop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1props_af14af72d2081d93b4b7d932487ee3876}\index{lava::props@{lava::props}!set\_json@{set\_json}}
+\index{set\_json@{set\_json}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{set\_json()}{set\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_af14af72d2081d93b4b7d932487ee3876} 
+void lava\+::props\+::set\+\_\+json (\begin{DoxyParamCaption}\item[{json\+\_\+ref}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}{configurable\+::set\+\_\+json} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}{lava\+::configurable}}.
+
+\Hypertarget{structlava_1_1props_ad7070c344779dacf176a87b00c594057}\index{lava::props@{lava::props}!unload@{unload}}
+\index{unload@{unload}!lava::props@{lava::props}}
+\doxysubsubsection{\texorpdfstring{unload()}{unload()}}
+{\footnotesize\ttfamily \label{structlava_1_1props_ad7070c344779dacf176a87b00c594057} 
+void lava\+::props\+::unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unload prop data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/engine/\mbox{\hyperlink{props_8hpp}{props.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\doxysection{lava\+::queue Struct Reference}
+\hypertarget{structlava_1_1queue}{}\label{structlava_1_1queue}\index{lava::queue@{lava::queue}}
+
+
+Device queue.  
+
+
+
+
+{\ttfamily \#include $<$queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}\label{structlava_1_1queue_a21b58152469b4f79d777688117dd655b} 
+using {\bfseries list} = std\+::deque$<$\mbox{\hyperlink{structlava_1_1queue}{queue}}$>$
+\begin{DoxyCompactList}\small\item\em List of queues. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}\label{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1queue}{queue}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1queue_a8c9c2ecc9a2fe7ad64da0a2cc66a253c}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if queue is valid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1queue_a5170f20bc30c95371856be53fbb0e41b}{operator$<$}} (\mbox{\hyperlink{structlava_1_1queue}{queue}} const \&other) const
+\begin{DoxyCompactList}\small\item\em Queue priority compare operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1queue_a3d39db83595291f24fc52c74c736d107}\label{structlava_1_1queue_a3d39db83595291f24fc52c74c736d107} 
+Vk\+Queue {\bfseries vk\+\_\+queue} = nullptr
+\begin{DoxyCompactList}\small\item\em Vulkan queue. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue_aca97ae9b3b7e040daac58116647b104b}\label{structlava_1_1queue_aca97ae9b3b7e040daac58116647b104b} 
+Vk\+Queue\+Flags {\bfseries flags} = 0
+\begin{DoxyCompactList}\small\item\em Queue flags. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue_ab085c28ba85b1ae3b01719e3e59a1fa7}\label{structlava_1_1queue_ab085c28ba85b1ae3b01719e3e59a1fa7} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries family} = 0
+\begin{DoxyCompactList}\small\item\em Queue family index. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue_a96bb451532bb15ed5da445112fed7b69}\label{structlava_1_1queue_a96bb451532bb15ed5da445112fed7b69} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries priority} = 1.f
+\begin{DoxyCompactList}\small\item\em Queue priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Device queue. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1queue_a5170f20bc30c95371856be53fbb0e41b}\index{lava::queue@{lava::queue}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!lava::queue@{lava::queue}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{structlava_1_1queue_a5170f20bc30c95371856be53fbb0e41b} 
+bool lava\+::queue\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue}{queue}} const \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Queue priority compare operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Queue to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Priority of queue is higher or lower and equal 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1queue_a8c9c2ecc9a2fe7ad64da0a2cc66a253c}\index{lava::queue@{lava::queue}!valid@{valid}}
+\index{valid@{valid}!lava::queue@{lava::queue}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily \label{structlava_1_1queue_a8c9c2ecc9a2fe7ad64da0a2cc66a253c} 
+bool lava\+::queue\+::valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if queue is valid. 
+
+\begin{DoxyReturn}{Returns}
+Queue is valid or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{queue_8hpp}{queue.\+hpp}}\end{DoxyCompactItemize}

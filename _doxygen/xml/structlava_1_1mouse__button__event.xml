@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1mouse__button__event" kind="struct" language="C++" prot="public">
+    <compoundname>lava::mouse_button_event</compoundname>
+    <includes refid="input_8hpp" local="no">input.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1mouse__button__event_1af57e7a6430042611d34525eccd7a36b7" prot="public" static="no">
+        <type><ref refid="structlava_1_1mouse__button__event" kindref="compound">mouse_button_event</ref> const  &amp;</type>
+        <definition>using lava::mouse_button_event::ref =  mouse_button_event const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::mouse_button_event::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to mouse button event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="410" column="5" bodyfile="liblava/frame/input.hpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mouse__button__event_1af132bcbe066dc15d70a54a5586f3beaa" prot="public" static="no">
+        <type>std::function&lt; bool(<ref refid="structlava_1_1mouse__button__event_1af57e7a6430042611d34525eccd7a36b7" kindref="member">ref</ref>)&gt;</type>
+        <definition>using lava::mouse_button_event::func =  std::function&lt;bool(ref)&gt;</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <qualifiedname>lava::mouse_button_event::func</qualifiedname>
+        <briefdescription>
+<para>Mouse button event function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="413" column="5" bodyfile="liblava/frame/input.hpp" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mouse__button__event_1a5e5766a1b469819c15d6a3ec5d3973dd" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1mouse__button__event_1af132bcbe066dc15d70a54a5586f3beaa" kindref="member">func</ref> &gt;</type>
+        <definition>using lava::mouse_button_event::listeners =  std::map&lt;id, func&gt;</definition>
+        <argsstring></argsstring>
+        <name>listeners</name>
+        <qualifiedname>lava::mouse_button_event::listeners</qualifiedname>
+        <briefdescription>
+<para>List of mouse button event listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="416" column="5" bodyfile="liblava/frame/input.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1mouse__button__event_1a39918baa114b08b8fddbd85e01cf85ce" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1mouse__button__event" kindref="compound">mouse_button_event</ref> &gt;</type>
+        <definition>using lava::mouse_button_event::list =  std::vector&lt;mouse_button_event&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::mouse_button_event::list</qualifiedname>
+        <briefdescription>
+<para>List of mouse button events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="419" column="5" bodyfile="liblava/frame/input.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1mouse__button__event_1a95ab34209794bce897cfaa9911749025" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::mouse_button_event::sender</definition>
+        <argsstring></argsstring>
+        <name>sender</name>
+        <qualifiedname>lava::mouse_button_event::sender</qualifiedname>
+        <briefdescription>
+<para>Sender id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="422" column="8" bodyfile="liblava/frame/input.hpp" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mouse__button__event_1aef4d31ecfa367c9b1161889bd20ed80e" prot="public" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1a9917bd3554a799bdfb5ec83161676125" kindref="member">mouse_button</ref></type>
+        <definition>mouse_button lava::mouse_button_event::button</definition>
+        <argsstring></argsstring>
+        <name>button</name>
+        <qualifiedname>lava::mouse_button_event::button</qualifiedname>
+        <briefdescription>
+<para>Input mouse button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="425" column="18" bodyfile="liblava/frame/input.hpp" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mouse__button__event_1a68d1ebdb544b1e423fb767bdd1e36bba" prot="public" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1a12e8d7909c4de4a74e281bb91cd4a5e7" kindref="member">lava::action</ref></type>
+        <definition>lava::action lava::mouse_button_event::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <qualifiedname>lava::mouse_button_event::action</qualifiedname>
+        <briefdescription>
+<para>Input action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="428" column="18" bodyfile="liblava/frame/input.hpp" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1mouse__button__event_1aafc8f67155786298997002f0c21925eb" prot="public" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1a83cec806a5f7af14a6981b4760aef6fb" kindref="member">lava::mod</ref></type>
+        <definition>lava::mod lava::mouse_button_event::mod</definition>
+        <argsstring></argsstring>
+        <name>mod</name>
+        <qualifiedname>lava::mouse_button_event::mod</qualifiedname>
+        <briefdescription>
+<para>Input mod. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="431" column="15" bodyfile="liblava/frame/input.hpp" bodystart="431" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1mouse__button__event_1a1090bb7697687e420ae801d04eb0480e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::mouse_button_event::pressed</definition>
+        <argsstring>(mouse_button_ref b) const</argsstring>
+        <name>pressed</name>
+        <qualifiedname>lava::mouse_button_event::pressed</qualifiedname>
+        <param>
+          <type><ref refid="input_8hpp_1aae253d3da456f719a42e05251866c319" kindref="member">mouse_button_ref</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Check if mouse button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse button to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mouse button is pressed or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="438" column="10" bodyfile="liblava/frame/input.hpp" bodystart="438" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1mouse__button__event_1a93fae05971838957ffae462cb4862f88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::mouse_button_event::released</definition>
+        <argsstring>(mouse_button_ref b) const</argsstring>
+        <name>released</name>
+        <qualifiedname>lava::mouse_button_event::released</qualifiedname>
+        <param>
+          <type><ref refid="input_8hpp_1aae253d3da456f719a42e05251866c319" kindref="member">mouse_button_ref</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Check if mouse button is released. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse button to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mouse button is released or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="447" column="10" bodyfile="liblava/frame/input.hpp" bodystart="447" bodyend="449"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Mouse button event. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::id</label>
+        <link refid="structlava_1_1id"/>
+      </node>
+      <node id="1">
+        <label>lava::mouse_button_event</label>
+        <link refid="structlava_1_1mouse__button__event"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sender</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/frame/input.hpp" line="408" column="1" bodyfile="liblava/frame/input.hpp" bodystart="408" bodyend="450"/>
+    <listofallmembers>
+      <member refid="structlava_1_1mouse__button__event_1a68d1ebdb544b1e423fb767bdd1e36bba" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>action</name></member>
+      <member refid="structlava_1_1mouse__button__event_1aef4d31ecfa367c9b1161889bd20ed80e" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>button</name></member>
+      <member refid="structlava_1_1mouse__button__event_1af132bcbe066dc15d70a54a5586f3beaa" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>func</name></member>
+      <member refid="structlava_1_1mouse__button__event_1a39918baa114b08b8fddbd85e01cf85ce" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>list</name></member>
+      <member refid="structlava_1_1mouse__button__event_1a5e5766a1b469819c15d6a3ec5d3973dd" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>listeners</name></member>
+      <member refid="structlava_1_1mouse__button__event_1aafc8f67155786298997002f0c21925eb" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>mod</name></member>
+      <member refid="structlava_1_1mouse__button__event_1a1090bb7697687e420ae801d04eb0480e" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>pressed</name></member>
+      <member refid="structlava_1_1mouse__button__event_1af57e7a6430042611d34525eccd7a36b7" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>ref</name></member>
+      <member refid="structlava_1_1mouse__button__event_1a93fae05971838957ffae462cb4862f88" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>released</name></member>
+      <member refid="structlava_1_1mouse__button__event_1a95ab34209794bce897cfaa9911749025" prot="public" virt="non-virtual"><scope>lava::mouse_button_event</scope><name>sender</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

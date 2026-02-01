@@ -1,0 +1,1057 @@
+\doxysection{liblava/base/debug\+\_\+utils.hpp File Reference}
+\hypertarget{debug__utils_8hpp}{}\label{debug__utils_8hpp}\index{liblava/base/debug\_utils.hpp@{liblava/base/debug\_utils.hpp}}
+
+
+Debug utilities.  
+
+
+{\ttfamily \#include "{}liblava/base/base.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/def.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1scoped__label}{lava\+::scoped\+\_\+label$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Scoped debug util label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{debug__utils_8hpp_a1217a91925c50202c8de48c844fef5a2}\label{debug__utils_8hpp_a1217a91925c50202c8de48c844fef5a2} 
+\#define {\bfseries LAVA\+\_\+\+DEBUG\+\_\+\+UTILS}~LAVA\+\_\+\+DEBUG
+\begin{DoxyCompactList}\small\item\em Only active in debug -\/ enable for release profiling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e}{lava\+::begin\+\_\+label}} (Vk\+Command\+Buffer cmd\+\_\+buf, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} label, \mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}} color)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120}{lava\+::end\+\_\+label}} (Vk\+Command\+Buffer cmd\+\_\+buf)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a3431b58eaf31d73206bdc46d2bbbe399}{lava\+::insert\+\_\+label}} (Vk\+Command\+Buffer cmd\+\_\+buf, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} label, \mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}} color)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab939e1f8857ce88f0d06da2310cf0a21}{lava\+::begin\+\_\+label}} (Vk\+Queue \mbox{\hyperlink{structlava_1_1queue}{queue}}, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} label, \mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}} color)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ad6160e88f7bbbca581d6413260efb521}{lava\+::end\+\_\+label}} (Vk\+Queue \mbox{\hyperlink{structlava_1_1queue}{queue}})
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a74a4410e8e021a8197672a2b802c4bca}{lava\+::insert\+\_\+label}} (Vk\+Queue \mbox{\hyperlink{structlava_1_1queue}{queue}}, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} label, \mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}} color)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}{lava\+::set\+\_\+object\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Object\+Type type, \mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}} handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a582601e7588ceb7c358c7ffb20804547}{lava\+::set\+\_\+object\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Object\+Type type, \mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}} handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ad5061ad46b6cd6193ad510db8f30e64f}{lava\+::set\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}} handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\begin{DoxyCompactList}\small\item\em Set the object name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a22e5f44149477265ed78d8478acb682c}{lava\+::set\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}} handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\begin{DoxyCompactList}\small\item\em Set the object tag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a9ca6fb449238bc8f13143909a00b5662}{lava\+::set\+\_\+instance\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Instance handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a862aefdda3a65568a86c3d9213b9d92f}{lava\+::set\+\_\+instance\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Instance handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab72267034c5c9b340a1afbc3799f6f47}{lava\+::set\+\_\+physical\+\_\+device\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Physical\+Device handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a71c63c74d9adb93042d268948afd9f6f}{lava\+::set\+\_\+physical\+\_\+device\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Physical\+Device handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_acf17f194d476935553848fbd95fb3fe3}{lava\+::set\+\_\+device\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a811cf474564ef3681e56d28db6971fa0}{lava\+::set\+\_\+device\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_adec43fe09dfaac4e8b5873992352f9f2}{lava\+::set\+\_\+queue\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Queue handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a02bef8712aba2026f5dfb21f23eb34c1}{lava\+::set\+\_\+queue\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Queue handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a113744f9cbe4b3de7daca899d8ed1cd6}{lava\+::set\+\_\+semaphore\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Semaphore handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af03957988af23d156e7d5232fbf0bfcb}{lava\+::set\+\_\+semaphore\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Semaphore handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a9f91d723414960068dc43f2612f43ef2}{lava\+::set\+\_\+command\+\_\+buffer\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Command\+Buffer handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a54ea1f7216c749bc3e348955a1c23928}{lava\+::set\+\_\+command\+\_\+buffer\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Command\+Buffer handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a1575aaf97b8ac41556bb6df89c6141a0}{lava\+::set\+\_\+fence\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Fence handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a86425bab312d6cb90d339bc7c7a5c864}{lava\+::set\+\_\+fence\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Fence handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a49ddcfde13928ab6be2fa31accef96a9}{lava\+::set\+\_\+device\+\_\+memory\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Device\+Memory handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a9c4488cf6f8e876e9c0b02b0c0c73c35}{lava\+::set\+\_\+device\+\_\+memory\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Device\+Memory handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aa78eb0eda53c024afc7ad957e95cc47f}{lava\+::set\+\_\+buffer\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Buffer handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a9ec2b54864408523d1cdb87c9b4e94d9}{lava\+::set\+\_\+buffer\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Buffer handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a15cd6c2df3bdbf648f37e62bbe255a1d}{lava\+::set\+\_\+image\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Image handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aaa5966380e6e043ea0e4792064b3ed84}{lava\+::set\+\_\+image\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Image handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a5eb0028a9227a352df569313207ade61}{lava\+::set\+\_\+event\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Event handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a139202bb6e639e9308fb547edf2eaa53}{lava\+::set\+\_\+event\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Event handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a6a958cf59787688161fb4d9bbfa2755f}{lava\+::set\+\_\+query\+\_\+pool\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Query\+Pool handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aa9ca12983959ede7f9364b12d8d7f5e1}{lava\+::set\+\_\+query\+\_\+pool\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Query\+Pool handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a5b32c4e749c554b97e058a3ab1ec077e}{lava\+::set\+\_\+buffer\+\_\+view\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Buffer\+View handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a919f769d89c6bdcc7ff7e8a007a47893}{lava\+::set\+\_\+buffer\+\_\+view\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Buffer\+View handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_afa6d83d47cc29d0e41f865c264d2b267}{lava\+::set\+\_\+image\+\_\+view\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Image\+View handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ad830d70d02c8c7c3c0cfcf2968bb1e29}{lava\+::set\+\_\+image\+\_\+view\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Image\+View handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af657ced147a13788fba6b16c241d6b2f}{lava\+::set\+\_\+shader\+\_\+module\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Shader\+Module handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a47b22a539da035dec2b42f6486eb6883}{lava\+::set\+\_\+shader\+\_\+module\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Shader\+Module handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a24d9f76f247afc9667acc39e6c452943}{lava\+::set\+\_\+pipeline\+\_\+cache\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Cache handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a35913c6b5d166b0c65d6ad35beec0d9c}{lava\+::set\+\_\+pipeline\+\_\+cache\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Cache handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af5cf190f01a235568236447afdf7a6af}{lava\+::set\+\_\+pipeline\+\_\+layout\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Layout handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_add039348cf69867998cbd8d2019ac741}{lava\+::set\+\_\+pipeline\+\_\+layout\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline\+Layout handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aaaca6badd896f2ca7c706b956af0812f}{lava\+::set\+\_\+render\+\_\+pass\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Render\+Pass handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a458ae9b600c853a03110a86e0d2de8be}{lava\+::set\+\_\+render\+\_\+pass\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Render\+Pass handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a75e72cd5e1e7c75f9cf78c78682b0e49}{lava\+::set\+\_\+pipeline\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_abdd596c299936ec4c11712c12c34d92d}{lava\+::set\+\_\+pipeline\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Pipeline handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a68bd37a2f9ca497e73c7a96bd18e5195}{lava\+::set\+\_\+descriptor\+\_\+set\+\_\+layout\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Set\+Layout handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a5a1598f49eba2a40fb60af25842c69f8}{lava\+::set\+\_\+descriptor\+\_\+set\+\_\+layout\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Set\+Layout handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a31d51c0c71b82a07f2c7c04a2eb89854}{lava\+::set\+\_\+sampler\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Sampler handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a9d9377faf07558e0f9de38dab2eb9226}{lava\+::set\+\_\+sampler\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Sampler handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a4b7b8ce28933ac0d4e5f350738e142b6}{lava\+::set\+\_\+descriptor\+\_\+pool\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Pool handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af283dddf045048f67577b6eeb0581aba}{lava\+::set\+\_\+descriptor\+\_\+pool\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Pool handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aa98b23878c543bc2fcc6797f689619db}{lava\+::set\+\_\+descriptor\+\_\+set\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Set handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_adc27541f09cd8c220da0f95674155136}{lava\+::set\+\_\+descriptor\+\_\+set\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Set handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af3265a5a4f1288e9522ccb618038afe9}{lava\+::set\+\_\+framebuffer\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Framebuffer handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ae30fef0c60edfed034d80d87b50269f2}{lava\+::set\+\_\+framebuffer\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Framebuffer handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a515d5b38271de06c797fdc985206fb20}{lava\+::set\+\_\+command\+\_\+pool\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Command\+Pool handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aad44711c9f4718f0d59d8a42f4fcca4c}{lava\+::set\+\_\+command\+\_\+pool\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Command\+Pool handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a361e5f2f8e977f8bdd1b177403eb9b84}{lava\+::set\+\_\+sampler\+\_\+ycbcr\+\_\+conversion\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Sampler\+Ycbcr\+Conversion handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ac8830070a733c3da3ed0778c1c0d35ac}{lava\+::set\+\_\+sampler\+\_\+ycbcr\+\_\+conversion\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Sampler\+Ycbcr\+Conversion handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aed1646e4df5f8b74f61ef1fe328b3980}{lava\+::set\+\_\+descriptor\+\_\+update\+\_\+template\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Update\+Template handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aa6342795468f66cfc155ed4f66cd4f86}{lava\+::set\+\_\+descriptor\+\_\+update\+\_\+template\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Descriptor\+Update\+Template handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a10e59f1daaa7f4ea37f9f1dbca89ed6b}{lava\+::set\+\_\+surface\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Surface\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a15468ffa6600d82b0407918d94114ba1}{lava\+::set\+\_\+surface\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Surface\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a0aeb0764e8b67fef86fa067452317a2e}{lava\+::set\+\_\+swapchain\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Swapchain\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ad5f3dd68c51a3206eb3604479fb540a8}{lava\+::set\+\_\+swapchain\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Swapchain\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ac3dbb020518bd0f2a9951c9e989a08d8}{lava\+::set\+\_\+display\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Display\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_adb2d37cc4526ce47a8cdb70c938b2cf1}{lava\+::set\+\_\+display\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Display\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_aa89bf505707ae2bdf8d1ab5f6dd372dc}{lava\+::set\+\_\+display\+\_\+mode\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Display\+Mode\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_acc6e704231a4e559065d8a0cb720bf3d}{lava\+::set\+\_\+display\+\_\+mode\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Display\+Mode\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a1a7d81226199ad3d3bba273cc8410c7c}{lava\+::set\+\_\+debug\+\_\+report\+\_\+callback\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Debug\+Report\+Callback\+EXT handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a693168b342306033cda510cf6d0b69ff}{lava\+::set\+\_\+debug\+\_\+report\+\_\+callback\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Debug\+Report\+Callback\+EXT handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a6a1636c4b6ee438b2bc6d58ae529fd5c}{lava\+::set\+\_\+indirect\+\_\+commands\+\_\+layout\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Indirect\+Commands\+Layout\+NV handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_af3d6680e063f3837dd8f21a22adbb0d4}{lava\+::set\+\_\+indirect\+\_\+commands\+\_\+layout\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Indirect\+Commands\+Layout\+NV handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ac313bc536eec88a57529c3ad2c847a66}{lava\+::set\+\_\+debug\+\_\+utils\+\_\+messenger\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Debug\+Utils\+Messenger\+EXT handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ac8c49987eb20e29e75633bf64d6d1df7}{lava\+::set\+\_\+debug\+\_\+utils\+\_\+messenger\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Debug\+Utils\+Messenger\+EXT handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_afa9ecdf0d2ede4519ce5b844a4f20e6b}{lava\+::set\+\_\+validation\+\_\+cache\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Validation\+Cache\+EXT handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_afa4916245cb32cf3742d57c91d572fe8}{lava\+::set\+\_\+validation\+\_\+cache\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Validation\+Cache\+EXT handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a559f908838c26789c5dea7de8e3059b9}{lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+nv\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Acceleration\+Structure\+NV handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a5bbca18af2bba44f3b11095915d8648f}{lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+nv\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Acceleration\+Structure\+NV handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_acac1efcd9a235faea2867659cae05532}{lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Acceleration\+Structure\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a87a279c7dab6cddd8205d50b23e4e0aa}{lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Acceleration\+Structure\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a6db6b5408619d9bf6622502d78219912}{lava\+::set\+\_\+performance\+\_\+configuration\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Performance\+Configuration\+INTEL handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ac59a6515ab3f8120eda203af1d94441e}{lava\+::set\+\_\+performance\+\_\+configuration\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Performance\+Configuration\+INTEL handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab952d94354da8e059c5495f6bfde0baf}{lava\+::set\+\_\+deferred\+\_\+operation\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Deferred\+Operation\+KHR handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab751af1c8673b294692b3962cc2b4e93}{lava\+::set\+\_\+deferred\+\_\+operation\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Deferred\+Operation\+KHR handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_a128aa5324effec6720427eb63fc04cfa}{lava\+::set\+\_\+private\+\_\+data\+\_\+slot\+\_\+name}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Private\+Data\+Slot\+EXT handle, \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} object)
+\item 
+void \mbox{\hyperlink{debug__utils_8hpp_ab8bfe89a6a345d8a8d8c170d506e00ea}{lava\+::set\+\_\+private\+\_\+data\+\_\+slot\+\_\+tag}} (Vk\+Device \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Private\+Data\+Slot\+EXT handle, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}} tag, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Debug utilities. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e}\index{debug\_utils.hpp@{debug\_utils.hpp}!begin\_label@{begin\_label}}
+\index{begin\_label@{begin\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{begin\_label()}{begin\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a11514932c54311316ad01bf47c76479e} 
+void lava\+::begin\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{label}{, }\item[{\mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+begin\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab939e1f8857ce88f0d06da2310cf0a21}\index{debug\_utils.hpp@{debug\_utils.hpp}!begin\_label@{begin\_label}}
+\index{begin\_label@{begin\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{begin\_label()}{begin\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab939e1f8857ce88f0d06da2310cf0a21} 
+void lava\+::begin\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Queue}]{queue}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{label}{, }\item[{\mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+begin\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120}\index{debug\_utils.hpp@{debug\_utils.hpp}!end\_label@{end\_label}}
+\index{end\_label@{end\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{end\_label()}{end\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab5e43f5658b8b2ca1b863c6bfc004120} 
+void lava\+::end\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+end\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ad6160e88f7bbbca581d6413260efb521}\index{debug\_utils.hpp@{debug\_utils.hpp}!end\_label@{end\_label}}
+\index{end\_label@{end\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{end\_label()}{end\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ad6160e88f7bbbca581d6413260efb521} 
+void lava\+::end\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Queue}]{queue}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+end\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a3431b58eaf31d73206bdc46d2bbbe399}\index{debug\_utils.hpp@{debug\_utils.hpp}!insert\_label@{insert\_label}}
+\index{insert\_label@{insert\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{insert\_label()}{insert\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a3431b58eaf31d73206bdc46d2bbbe399} 
+void lava\+::insert\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{label}{, }\item[{\mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+insert\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a74a4410e8e021a8197672a2b802c4bca}\index{debug\_utils.hpp@{debug\_utils.hpp}!insert\_label@{insert\_label}}
+\index{insert\_label@{insert\_label}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{insert\_label()}{insert\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a74a4410e8e021a8197672a2b802c4bca} 
+void lava\+::insert\+\_\+label (\begin{DoxyParamCaption}\item[{Vk\+Queue}]{queue}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{label}{, }\item[{\mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+insert\+\_\+label 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_acac1efcd9a235faea2867659cae05532}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_acceleration\_structure\_name@{set\_acceleration\_structure\_name}}
+\index{set\_acceleration\_structure\_name@{set\_acceleration\_structure\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_acceleration\_structure\_name()}{set\_acceleration\_structure\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_acac1efcd9a235faea2867659cae05532} 
+void lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Acceleration\+Structure\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a559f908838c26789c5dea7de8e3059b9}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_acceleration\_structure\_nv\_name@{set\_acceleration\_structure\_nv\_name}}
+\index{set\_acceleration\_structure\_nv\_name@{set\_acceleration\_structure\_nv\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_acceleration\_structure\_nv\_name()}{set\_acceleration\_structure\_nv\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a559f908838c26789c5dea7de8e3059b9} 
+void lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+nv\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Acceleration\+Structure\+NV}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a5bbca18af2bba44f3b11095915d8648f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_acceleration\_structure\_nv\_tag@{set\_acceleration\_structure\_nv\_tag}}
+\index{set\_acceleration\_structure\_nv\_tag@{set\_acceleration\_structure\_nv\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_acceleration\_structure\_nv\_tag()}{set\_acceleration\_structure\_nv\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a5bbca18af2bba44f3b11095915d8648f} 
+void lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+nv\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Acceleration\+Structure\+NV}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a87a279c7dab6cddd8205d50b23e4e0aa}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_acceleration\_structure\_tag@{set\_acceleration\_structure\_tag}}
+\index{set\_acceleration\_structure\_tag@{set\_acceleration\_structure\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_acceleration\_structure\_tag()}{set\_acceleration\_structure\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a87a279c7dab6cddd8205d50b23e4e0aa} 
+void lava\+::set\+\_\+acceleration\+\_\+structure\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Acceleration\+Structure\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aa78eb0eda53c024afc7ad957e95cc47f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_buffer\_name@{set\_buffer\_name}}
+\index{set\_buffer\_name@{set\_buffer\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_buffer\_name()}{set\_buffer\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aa78eb0eda53c024afc7ad957e95cc47f} 
+void lava\+::set\+\_\+buffer\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Buffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a9ec2b54864408523d1cdb87c9b4e94d9}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_buffer\_tag@{set\_buffer\_tag}}
+\index{set\_buffer\_tag@{set\_buffer\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_buffer\_tag()}{set\_buffer\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a9ec2b54864408523d1cdb87c9b4e94d9} 
+void lava\+::set\+\_\+buffer\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Buffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a5b32c4e749c554b97e058a3ab1ec077e}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_buffer\_view\_name@{set\_buffer\_view\_name}}
+\index{set\_buffer\_view\_name@{set\_buffer\_view\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_buffer\_view\_name()}{set\_buffer\_view\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a5b32c4e749c554b97e058a3ab1ec077e} 
+void lava\+::set\+\_\+buffer\+\_\+view\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Buffer\+View}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a919f769d89c6bdcc7ff7e8a007a47893}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_buffer\_view\_tag@{set\_buffer\_view\_tag}}
+\index{set\_buffer\_view\_tag@{set\_buffer\_view\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_buffer\_view\_tag()}{set\_buffer\_view\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a919f769d89c6bdcc7ff7e8a007a47893} 
+void lava\+::set\+\_\+buffer\+\_\+view\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Buffer\+View}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a9f91d723414960068dc43f2612f43ef2}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_command\_buffer\_name@{set\_command\_buffer\_name}}
+\index{set\_command\_buffer\_name@{set\_command\_buffer\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_command\_buffer\_name()}{set\_command\_buffer\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a9f91d723414960068dc43f2612f43ef2} 
+void lava\+::set\+\_\+command\+\_\+buffer\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Command\+Buffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a54ea1f7216c749bc3e348955a1c23928}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_command\_buffer\_tag@{set\_command\_buffer\_tag}}
+\index{set\_command\_buffer\_tag@{set\_command\_buffer\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_command\_buffer\_tag()}{set\_command\_buffer\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a54ea1f7216c749bc3e348955a1c23928} 
+void lava\+::set\+\_\+command\+\_\+buffer\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Command\+Buffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a515d5b38271de06c797fdc985206fb20}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_command\_pool\_name@{set\_command\_pool\_name}}
+\index{set\_command\_pool\_name@{set\_command\_pool\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_command\_pool\_name()}{set\_command\_pool\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a515d5b38271de06c797fdc985206fb20} 
+void lava\+::set\+\_\+command\+\_\+pool\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Command\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aad44711c9f4718f0d59d8a42f4fcca4c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_command\_pool\_tag@{set\_command\_pool\_tag}}
+\index{set\_command\_pool\_tag@{set\_command\_pool\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_command\_pool\_tag()}{set\_command\_pool\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aad44711c9f4718f0d59d8a42f4fcca4c} 
+void lava\+::set\+\_\+command\+\_\+pool\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Command\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a1a7d81226199ad3d3bba273cc8410c7c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_debug\_report\_callback\_name@{set\_debug\_report\_callback\_name}}
+\index{set\_debug\_report\_callback\_name@{set\_debug\_report\_callback\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_debug\_report\_callback\_name()}{set\_debug\_report\_callback\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a1a7d81226199ad3d3bba273cc8410c7c} 
+void lava\+::set\+\_\+debug\+\_\+report\+\_\+callback\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Debug\+Report\+Callback\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a693168b342306033cda510cf6d0b69ff}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_debug\_report\_callback\_tag@{set\_debug\_report\_callback\_tag}}
+\index{set\_debug\_report\_callback\_tag@{set\_debug\_report\_callback\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_debug\_report\_callback\_tag()}{set\_debug\_report\_callback\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a693168b342306033cda510cf6d0b69ff} 
+void lava\+::set\+\_\+debug\+\_\+report\+\_\+callback\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Debug\+Report\+Callback\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ac313bc536eec88a57529c3ad2c847a66}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_debug\_utils\_messenger\_name@{set\_debug\_utils\_messenger\_name}}
+\index{set\_debug\_utils\_messenger\_name@{set\_debug\_utils\_messenger\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_debug\_utils\_messenger\_name()}{set\_debug\_utils\_messenger\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ac313bc536eec88a57529c3ad2c847a66} 
+void lava\+::set\+\_\+debug\+\_\+utils\+\_\+messenger\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Debug\+Utils\+Messenger\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ac8c49987eb20e29e75633bf64d6d1df7}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_debug\_utils\_messenger\_tag@{set\_debug\_utils\_messenger\_tag}}
+\index{set\_debug\_utils\_messenger\_tag@{set\_debug\_utils\_messenger\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_debug\_utils\_messenger\_tag()}{set\_debug\_utils\_messenger\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ac8c49987eb20e29e75633bf64d6d1df7} 
+void lava\+::set\+\_\+debug\+\_\+utils\+\_\+messenger\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Debug\+Utils\+Messenger\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab952d94354da8e059c5495f6bfde0baf}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_deferred\_operation\_name@{set\_deferred\_operation\_name}}
+\index{set\_deferred\_operation\_name@{set\_deferred\_operation\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_deferred\_operation\_name()}{set\_deferred\_operation\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab952d94354da8e059c5495f6bfde0baf} 
+void lava\+::set\+\_\+deferred\+\_\+operation\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Deferred\+Operation\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab751af1c8673b294692b3962cc2b4e93}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_deferred\_operation\_tag@{set\_deferred\_operation\_tag}}
+\index{set\_deferred\_operation\_tag@{set\_deferred\_operation\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_deferred\_operation\_tag()}{set\_deferred\_operation\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab751af1c8673b294692b3962cc2b4e93} 
+void lava\+::set\+\_\+deferred\+\_\+operation\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Deferred\+Operation\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a4b7b8ce28933ac0d4e5f350738e142b6}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_pool\_name@{set\_descriptor\_pool\_name}}
+\index{set\_descriptor\_pool\_name@{set\_descriptor\_pool\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_pool\_name()}{set\_descriptor\_pool\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a4b7b8ce28933ac0d4e5f350738e142b6} 
+void lava\+::set\+\_\+descriptor\+\_\+pool\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af283dddf045048f67577b6eeb0581aba}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_pool\_tag@{set\_descriptor\_pool\_tag}}
+\index{set\_descriptor\_pool\_tag@{set\_descriptor\_pool\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_pool\_tag()}{set\_descriptor\_pool\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af283dddf045048f67577b6eeb0581aba} 
+void lava\+::set\+\_\+descriptor\+\_\+pool\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a68bd37a2f9ca497e73c7a96bd18e5195}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_set\_layout\_name@{set\_descriptor\_set\_layout\_name}}
+\index{set\_descriptor\_set\_layout\_name@{set\_descriptor\_set\_layout\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_set\_layout\_name()}{set\_descriptor\_set\_layout\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a68bd37a2f9ca497e73c7a96bd18e5195} 
+void lava\+::set\+\_\+descriptor\+\_\+set\+\_\+layout\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Set\+Layout}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a5a1598f49eba2a40fb60af25842c69f8}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_set\_layout\_tag@{set\_descriptor\_set\_layout\_tag}}
+\index{set\_descriptor\_set\_layout\_tag@{set\_descriptor\_set\_layout\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_set\_layout\_tag()}{set\_descriptor\_set\_layout\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a5a1598f49eba2a40fb60af25842c69f8} 
+void lava\+::set\+\_\+descriptor\+\_\+set\+\_\+layout\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Set\+Layout}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aa98b23878c543bc2fcc6797f689619db}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_set\_name@{set\_descriptor\_set\_name}}
+\index{set\_descriptor\_set\_name@{set\_descriptor\_set\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_set\_name()}{set\_descriptor\_set\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aa98b23878c543bc2fcc6797f689619db} 
+void lava\+::set\+\_\+descriptor\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Set}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_adc27541f09cd8c220da0f95674155136}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_set\_tag@{set\_descriptor\_set\_tag}}
+\index{set\_descriptor\_set\_tag@{set\_descriptor\_set\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_set\_tag()}{set\_descriptor\_set\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_adc27541f09cd8c220da0f95674155136} 
+void lava\+::set\+\_\+descriptor\+\_\+set\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Set}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aed1646e4df5f8b74f61ef1fe328b3980}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_update\_template\_name@{set\_descriptor\_update\_template\_name}}
+\index{set\_descriptor\_update\_template\_name@{set\_descriptor\_update\_template\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_update\_template\_name()}{set\_descriptor\_update\_template\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aed1646e4df5f8b74f61ef1fe328b3980} 
+void lava\+::set\+\_\+descriptor\+\_\+update\+\_\+template\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Update\+Template}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aa6342795468f66cfc155ed4f66cd4f86}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_descriptor\_update\_template\_tag@{set\_descriptor\_update\_template\_tag}}
+\index{set\_descriptor\_update\_template\_tag@{set\_descriptor\_update\_template\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_descriptor\_update\_template\_tag()}{set\_descriptor\_update\_template\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aa6342795468f66cfc155ed4f66cd4f86} 
+void lava\+::set\+\_\+descriptor\+\_\+update\+\_\+template\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Descriptor\+Update\+Template}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a49ddcfde13928ab6be2fa31accef96a9}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_device\_memory\_name@{set\_device\_memory\_name}}
+\index{set\_device\_memory\_name@{set\_device\_memory\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_device\_memory\_name()}{set\_device\_memory\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a49ddcfde13928ab6be2fa31accef96a9} 
+void lava\+::set\+\_\+device\+\_\+memory\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Device\+Memory}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a9c4488cf6f8e876e9c0b02b0c0c73c35}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_device\_memory\_tag@{set\_device\_memory\_tag}}
+\index{set\_device\_memory\_tag@{set\_device\_memory\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_device\_memory\_tag()}{set\_device\_memory\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a9c4488cf6f8e876e9c0b02b0c0c73c35} 
+void lava\+::set\+\_\+device\+\_\+memory\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Device\+Memory}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_acf17f194d476935553848fbd95fb3fe3}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_device\_name@{set\_device\_name}}
+\index{set\_device\_name@{set\_device\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_device\_name()}{set\_device\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_acf17f194d476935553848fbd95fb3fe3} 
+void lava\+::set\+\_\+device\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a811cf474564ef3681e56d28db6971fa0}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_device\_tag@{set\_device\_tag}}
+\index{set\_device\_tag@{set\_device\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_device\_tag()}{set\_device\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a811cf474564ef3681e56d28db6971fa0} 
+void lava\+::set\+\_\+device\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aa89bf505707ae2bdf8d1ab5f6dd372dc}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_display\_mode\_name@{set\_display\_mode\_name}}
+\index{set\_display\_mode\_name@{set\_display\_mode\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_display\_mode\_name()}{set\_display\_mode\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aa89bf505707ae2bdf8d1ab5f6dd372dc} 
+void lava\+::set\+\_\+display\+\_\+mode\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Display\+Mode\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_acc6e704231a4e559065d8a0cb720bf3d}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_display\_mode\_tag@{set\_display\_mode\_tag}}
+\index{set\_display\_mode\_tag@{set\_display\_mode\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_display\_mode\_tag()}{set\_display\_mode\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_acc6e704231a4e559065d8a0cb720bf3d} 
+void lava\+::set\+\_\+display\+\_\+mode\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Display\+Mode\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ac3dbb020518bd0f2a9951c9e989a08d8}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_display\_name@{set\_display\_name}}
+\index{set\_display\_name@{set\_display\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_display\_name()}{set\_display\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ac3dbb020518bd0f2a9951c9e989a08d8} 
+void lava\+::set\+\_\+display\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Display\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_adb2d37cc4526ce47a8cdb70c938b2cf1}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_display\_tag@{set\_display\_tag}}
+\index{set\_display\_tag@{set\_display\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_display\_tag()}{set\_display\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_adb2d37cc4526ce47a8cdb70c938b2cf1} 
+void lava\+::set\+\_\+display\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Display\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a5eb0028a9227a352df569313207ade61}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_event\_name@{set\_event\_name}}
+\index{set\_event\_name@{set\_event\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_event\_name()}{set\_event\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a5eb0028a9227a352df569313207ade61} 
+void lava\+::set\+\_\+event\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Event}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a139202bb6e639e9308fb547edf2eaa53}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_event\_tag@{set\_event\_tag}}
+\index{set\_event\_tag@{set\_event\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_event\_tag()}{set\_event\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a139202bb6e639e9308fb547edf2eaa53} 
+void lava\+::set\+\_\+event\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Event}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a1575aaf97b8ac41556bb6df89c6141a0}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_fence\_name@{set\_fence\_name}}
+\index{set\_fence\_name@{set\_fence\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_fence\_name()}{set\_fence\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a1575aaf97b8ac41556bb6df89c6141a0} 
+void lava\+::set\+\_\+fence\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Fence}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a86425bab312d6cb90d339bc7c7a5c864}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_fence\_tag@{set\_fence\_tag}}
+\index{set\_fence\_tag@{set\_fence\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_fence\_tag()}{set\_fence\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a86425bab312d6cb90d339bc7c7a5c864} 
+void lava\+::set\+\_\+fence\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Fence}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af3265a5a4f1288e9522ccb618038afe9}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_framebuffer\_name@{set\_framebuffer\_name}}
+\index{set\_framebuffer\_name@{set\_framebuffer\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_framebuffer\_name()}{set\_framebuffer\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af3265a5a4f1288e9522ccb618038afe9} 
+void lava\+::set\+\_\+framebuffer\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Framebuffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ae30fef0c60edfed034d80d87b50269f2}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_framebuffer\_tag@{set\_framebuffer\_tag}}
+\index{set\_framebuffer\_tag@{set\_framebuffer\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_framebuffer\_tag()}{set\_framebuffer\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ae30fef0c60edfed034d80d87b50269f2} 
+void lava\+::set\+\_\+framebuffer\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Framebuffer}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a15cd6c2df3bdbf648f37e62bbe255a1d}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_image\_name@{set\_image\_name}}
+\index{set\_image\_name@{set\_image\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_name()}{set\_image\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a15cd6c2df3bdbf648f37e62bbe255a1d} 
+void lava\+::set\+\_\+image\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Image}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aaa5966380e6e043ea0e4792064b3ed84}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_image\_tag@{set\_image\_tag}}
+\index{set\_image\_tag@{set\_image\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_tag()}{set\_image\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aaa5966380e6e043ea0e4792064b3ed84} 
+void lava\+::set\+\_\+image\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Image}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_afa6d83d47cc29d0e41f865c264d2b267}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_image\_view\_name@{set\_image\_view\_name}}
+\index{set\_image\_view\_name@{set\_image\_view\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_view\_name()}{set\_image\_view\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_afa6d83d47cc29d0e41f865c264d2b267} 
+void lava\+::set\+\_\+image\+\_\+view\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Image\+View}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ad830d70d02c8c7c3c0cfcf2968bb1e29}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_image\_view\_tag@{set\_image\_view\_tag}}
+\index{set\_image\_view\_tag@{set\_image\_view\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_image\_view\_tag()}{set\_image\_view\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ad830d70d02c8c7c3c0cfcf2968bb1e29} 
+void lava\+::set\+\_\+image\+\_\+view\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Image\+View}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a6a1636c4b6ee438b2bc6d58ae529fd5c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_indirect\_commands\_layout\_name@{set\_indirect\_commands\_layout\_name}}
+\index{set\_indirect\_commands\_layout\_name@{set\_indirect\_commands\_layout\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_indirect\_commands\_layout\_name()}{set\_indirect\_commands\_layout\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a6a1636c4b6ee438b2bc6d58ae529fd5c} 
+void lava\+::set\+\_\+indirect\+\_\+commands\+\_\+layout\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Indirect\+Commands\+Layout\+NV}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af3d6680e063f3837dd8f21a22adbb0d4}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_indirect\_commands\_layout\_tag@{set\_indirect\_commands\_layout\_tag}}
+\index{set\_indirect\_commands\_layout\_tag@{set\_indirect\_commands\_layout\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_indirect\_commands\_layout\_tag()}{set\_indirect\_commands\_layout\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af3d6680e063f3837dd8f21a22adbb0d4} 
+void lava\+::set\+\_\+indirect\+\_\+commands\+\_\+layout\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Indirect\+Commands\+Layout\+NV}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a9ca6fb449238bc8f13143909a00b5662}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_instance\_name@{set\_instance\_name}}
+\index{set\_instance\_name@{set\_instance\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_instance\_name()}{set\_instance\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a9ca6fb449238bc8f13143909a00b5662} 
+void lava\+::set\+\_\+instance\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Instance}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a862aefdda3a65568a86c3d9213b9d92f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_instance\_tag@{set\_instance\_tag}}
+\index{set\_instance\_tag@{set\_instance\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_instance\_tag()}{set\_instance\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a862aefdda3a65568a86c3d9213b9d92f} 
+void lava\+::set\+\_\+instance\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Instance}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ad5061ad46b6cd6193ad510db8f30e64f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ad5061ad46b6cd6193ad510db8f30e64f} 
+void lava\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}}}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the object name. 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html}{\texttt{ https\+://www.\+khronos.\+org/registry/vulkan/specs/1.\+3-\/extensions/man/html/\+Vk\+Object\+Type.\+html}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em handle} & Object handle \\
+\hline
+{\em object} & Name of object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_object\_name@{set\_object\_name}}
+\index{set\_object\_name@{set\_object\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_object\_name()}{set\_object\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ad4631d2dc8c7f4f5d29c89f4b82d5f8c} 
+void lava\+::set\+\_\+object\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Object\+Type}]{type}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}}}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+object\+\_\+name 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a582601e7588ceb7c358c7ffb20804547}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_object\_tag@{set\_object\_tag}}
+\index{set\_object\_tag@{set\_object\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_object\_tag()}{set\_object\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a582601e7588ceb7c358c7ffb20804547} 
+void lava\+::set\+\_\+object\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Object\+Type}]{type}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}}}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+object\+\_\+tag 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a6db6b5408619d9bf6622502d78219912}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_performance\_configuration\_name@{set\_performance\_configuration\_name}}
+\index{set\_performance\_configuration\_name@{set\_performance\_configuration\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_performance\_configuration\_name()}{set\_performance\_configuration\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a6db6b5408619d9bf6622502d78219912} 
+void lava\+::set\+\_\+performance\+\_\+configuration\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Performance\+Configuration\+INTEL}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ac59a6515ab3f8120eda203af1d94441e}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_performance\_configuration\_tag@{set\_performance\_configuration\_tag}}
+\index{set\_performance\_configuration\_tag@{set\_performance\_configuration\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_performance\_configuration\_tag()}{set\_performance\_configuration\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ac59a6515ab3f8120eda203af1d94441e} 
+void lava\+::set\+\_\+performance\+\_\+configuration\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Performance\+Configuration\+INTEL}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab72267034c5c9b340a1afbc3799f6f47}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_physical\_device\_name@{set\_physical\_device\_name}}
+\index{set\_physical\_device\_name@{set\_physical\_device\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_physical\_device\_name()}{set\_physical\_device\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab72267034c5c9b340a1afbc3799f6f47} 
+void lava\+::set\+\_\+physical\+\_\+device\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Physical\+Device}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a71c63c74d9adb93042d268948afd9f6f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_physical\_device\_tag@{set\_physical\_device\_tag}}
+\index{set\_physical\_device\_tag@{set\_physical\_device\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_physical\_device\_tag()}{set\_physical\_device\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a71c63c74d9adb93042d268948afd9f6f} 
+void lava\+::set\+\_\+physical\+\_\+device\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Physical\+Device}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a24d9f76f247afc9667acc39e6c452943}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_cache\_name@{set\_pipeline\_cache\_name}}
+\index{set\_pipeline\_cache\_name@{set\_pipeline\_cache\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_cache\_name()}{set\_pipeline\_cache\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a24d9f76f247afc9667acc39e6c452943} 
+void lava\+::set\+\_\+pipeline\+\_\+cache\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline\+Cache}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a35913c6b5d166b0c65d6ad35beec0d9c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_cache\_tag@{set\_pipeline\_cache\_tag}}
+\index{set\_pipeline\_cache\_tag@{set\_pipeline\_cache\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_cache\_tag()}{set\_pipeline\_cache\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a35913c6b5d166b0c65d6ad35beec0d9c} 
+void lava\+::set\+\_\+pipeline\+\_\+cache\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline\+Cache}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af5cf190f01a235568236447afdf7a6af}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_layout\_name@{set\_pipeline\_layout\_name}}
+\index{set\_pipeline\_layout\_name@{set\_pipeline\_layout\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_layout\_name()}{set\_pipeline\_layout\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af5cf190f01a235568236447afdf7a6af} 
+void lava\+::set\+\_\+pipeline\+\_\+layout\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline\+Layout}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_add039348cf69867998cbd8d2019ac741}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_layout\_tag@{set\_pipeline\_layout\_tag}}
+\index{set\_pipeline\_layout\_tag@{set\_pipeline\_layout\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_layout\_tag()}{set\_pipeline\_layout\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_add039348cf69867998cbd8d2019ac741} 
+void lava\+::set\+\_\+pipeline\+\_\+layout\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline\+Layout}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a75e72cd5e1e7c75f9cf78c78682b0e49}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_name@{set\_pipeline\_name}}
+\index{set\_pipeline\_name@{set\_pipeline\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_name()}{set\_pipeline\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a75e72cd5e1e7c75f9cf78c78682b0e49} 
+void lava\+::set\+\_\+pipeline\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_abdd596c299936ec4c11712c12c34d92d}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_pipeline\_tag@{set\_pipeline\_tag}}
+\index{set\_pipeline\_tag@{set\_pipeline\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_pipeline\_tag()}{set\_pipeline\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_abdd596c299936ec4c11712c12c34d92d} 
+void lava\+::set\+\_\+pipeline\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Pipeline}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a128aa5324effec6720427eb63fc04cfa}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_private\_data\_slot\_name@{set\_private\_data\_slot\_name}}
+\index{set\_private\_data\_slot\_name@{set\_private\_data\_slot\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_private\_data\_slot\_name()}{set\_private\_data\_slot\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a128aa5324effec6720427eb63fc04cfa} 
+void lava\+::set\+\_\+private\+\_\+data\+\_\+slot\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Private\+Data\+Slot\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ab8bfe89a6a345d8a8d8c170d506e00ea}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_private\_data\_slot\_tag@{set\_private\_data\_slot\_tag}}
+\index{set\_private\_data\_slot\_tag@{set\_private\_data\_slot\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_private\_data\_slot\_tag()}{set\_private\_data\_slot\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ab8bfe89a6a345d8a8d8c170d506e00ea} 
+void lava\+::set\+\_\+private\+\_\+data\+\_\+slot\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Private\+Data\+Slot\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a6a958cf59787688161fb4d9bbfa2755f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_query\_pool\_name@{set\_query\_pool\_name}}
+\index{set\_query\_pool\_name@{set\_query\_pool\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_query\_pool\_name()}{set\_query\_pool\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a6a958cf59787688161fb4d9bbfa2755f} 
+void lava\+::set\+\_\+query\+\_\+pool\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Query\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aa9ca12983959ede7f9364b12d8d7f5e1}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_query\_pool\_tag@{set\_query\_pool\_tag}}
+\index{set\_query\_pool\_tag@{set\_query\_pool\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_query\_pool\_tag()}{set\_query\_pool\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aa9ca12983959ede7f9364b12d8d7f5e1} 
+void lava\+::set\+\_\+query\+\_\+pool\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Query\+Pool}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_adec43fe09dfaac4e8b5873992352f9f2}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_queue\_name@{set\_queue\_name}}
+\index{set\_queue\_name@{set\_queue\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_queue\_name()}{set\_queue\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_adec43fe09dfaac4e8b5873992352f9f2} 
+void lava\+::set\+\_\+queue\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Queue}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a02bef8712aba2026f5dfb21f23eb34c1}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_queue\_tag@{set\_queue\_tag}}
+\index{set\_queue\_tag@{set\_queue\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_queue\_tag()}{set\_queue\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a02bef8712aba2026f5dfb21f23eb34c1} 
+void lava\+::set\+\_\+queue\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Queue}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_aaaca6badd896f2ca7c706b956af0812f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_render\_pass\_name@{set\_render\_pass\_name}}
+\index{set\_render\_pass\_name@{set\_render\_pass\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_render\_pass\_name()}{set\_render\_pass\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_aaaca6badd896f2ca7c706b956af0812f} 
+void lava\+::set\+\_\+render\+\_\+pass\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Render\+Pass}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a458ae9b600c853a03110a86e0d2de8be}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_render\_pass\_tag@{set\_render\_pass\_tag}}
+\index{set\_render\_pass\_tag@{set\_render\_pass\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_render\_pass\_tag()}{set\_render\_pass\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a458ae9b600c853a03110a86e0d2de8be} 
+void lava\+::set\+\_\+render\+\_\+pass\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Render\+Pass}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a31d51c0c71b82a07f2c7c04a2eb89854}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_sampler\_name@{set\_sampler\_name}}
+\index{set\_sampler\_name@{set\_sampler\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_sampler\_name()}{set\_sampler\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a31d51c0c71b82a07f2c7c04a2eb89854} 
+void lava\+::set\+\_\+sampler\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Sampler}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a9d9377faf07558e0f9de38dab2eb9226}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_sampler\_tag@{set\_sampler\_tag}}
+\index{set\_sampler\_tag@{set\_sampler\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_sampler\_tag()}{set\_sampler\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a9d9377faf07558e0f9de38dab2eb9226} 
+void lava\+::set\+\_\+sampler\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Sampler}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a361e5f2f8e977f8bdd1b177403eb9b84}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_sampler\_ycbcr\_conversion\_name@{set\_sampler\_ycbcr\_conversion\_name}}
+\index{set\_sampler\_ycbcr\_conversion\_name@{set\_sampler\_ycbcr\_conversion\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_sampler\_ycbcr\_conversion\_name()}{set\_sampler\_ycbcr\_conversion\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a361e5f2f8e977f8bdd1b177403eb9b84} 
+void lava\+::set\+\_\+sampler\+\_\+ycbcr\+\_\+conversion\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Sampler\+Ycbcr\+Conversion}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ac8830070a733c3da3ed0778c1c0d35ac}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_sampler\_ycbcr\_conversion\_tag@{set\_sampler\_ycbcr\_conversion\_tag}}
+\index{set\_sampler\_ycbcr\_conversion\_tag@{set\_sampler\_ycbcr\_conversion\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_sampler\_ycbcr\_conversion\_tag()}{set\_sampler\_ycbcr\_conversion\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ac8830070a733c3da3ed0778c1c0d35ac} 
+void lava\+::set\+\_\+sampler\+\_\+ycbcr\+\_\+conversion\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Sampler\+Ycbcr\+Conversion}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a113744f9cbe4b3de7daca899d8ed1cd6}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_semaphore\_name@{set\_semaphore\_name}}
+\index{set\_semaphore\_name@{set\_semaphore\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_semaphore\_name()}{set\_semaphore\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a113744f9cbe4b3de7daca899d8ed1cd6} 
+void lava\+::set\+\_\+semaphore\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Semaphore}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af03957988af23d156e7d5232fbf0bfcb}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_semaphore\_tag@{set\_semaphore\_tag}}
+\index{set\_semaphore\_tag@{set\_semaphore\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_semaphore\_tag()}{set\_semaphore\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af03957988af23d156e7d5232fbf0bfcb} 
+void lava\+::set\+\_\+semaphore\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Semaphore}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_af657ced147a13788fba6b16c241d6b2f}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_shader\_module\_name@{set\_shader\_module\_name}}
+\index{set\_shader\_module\_name@{set\_shader\_module\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_shader\_module\_name()}{set\_shader\_module\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_af657ced147a13788fba6b16c241d6b2f} 
+void lava\+::set\+\_\+shader\+\_\+module\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Shader\+Module}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a47b22a539da035dec2b42f6486eb6883}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_shader\_module\_tag@{set\_shader\_module\_tag}}
+\index{set\_shader\_module\_tag@{set\_shader\_module\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_shader\_module\_tag()}{set\_shader\_module\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a47b22a539da035dec2b42f6486eb6883} 
+void lava\+::set\+\_\+shader\+\_\+module\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Shader\+Module}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a10e59f1daaa7f4ea37f9f1dbca89ed6b}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_surface\_name@{set\_surface\_name}}
+\index{set\_surface\_name@{set\_surface\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_surface\_name()}{set\_surface\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a10e59f1daaa7f4ea37f9f1dbca89ed6b} 
+void lava\+::set\+\_\+surface\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Surface\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a15468ffa6600d82b0407918d94114ba1}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_surface\_tag@{set\_surface\_tag}}
+\index{set\_surface\_tag@{set\_surface\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_surface\_tag()}{set\_surface\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a15468ffa6600d82b0407918d94114ba1} 
+void lava\+::set\+\_\+surface\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Surface\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a0aeb0764e8b67fef86fa067452317a2e}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_swapchain\_name@{set\_swapchain\_name}}
+\index{set\_swapchain\_name@{set\_swapchain\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_swapchain\_name()}{set\_swapchain\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a0aeb0764e8b67fef86fa067452317a2e} 
+void lava\+::set\+\_\+swapchain\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Swapchain\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_ad5f3dd68c51a3206eb3604479fb540a8}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_swapchain\_tag@{set\_swapchain\_tag}}
+\index{set\_swapchain\_tag@{set\_swapchain\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_swapchain\_tag()}{set\_swapchain\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_ad5f3dd68c51a3206eb3604479fb540a8} 
+void lava\+::set\+\_\+swapchain\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Swapchain\+KHR}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_a22e5f44149477265ed78d8478acb682c}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_tag@{set\_tag}}
+\index{set\_tag@{set\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_tag()}{set\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_a22e5f44149477265ed78d8478acb682c} 
+void lava\+::set\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}{Vk\+Object\+Handle}}}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the object tag. 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkObjectType.html}{\texttt{ https\+://www.\+khronos.\+org/registry/vulkan/specs/1.\+3-\/extensions/man/html/\+Vk\+Object\+Type.\+html}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em handle} & Object handle \\
+\hline
+{\em name} & Name of tag \\
+\hline
+{\em tag} & Tag data \\
+\hline
+{\em size} & Size of tag data \\
+\hline
+\end{DoxyParams}
+\Hypertarget{debug__utils_8hpp_afa9ecdf0d2ede4519ce5b844a4f20e6b}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_validation\_cache\_name@{set\_validation\_cache\_name}}
+\index{set\_validation\_cache\_name@{set\_validation\_cache\_name}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_validation\_cache\_name()}{set\_validation\_cache\_name()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_afa9ecdf0d2ede4519ce5b844a4f20e6b} 
+void lava\+::set\+\_\+validation\+\_\+cache\+\_\+name (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Validation\+Cache\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+name() 
+\end{DoxySeeAlso}
+\Hypertarget{debug__utils_8hpp_afa4916245cb32cf3742d57c91d572fe8}\index{debug\_utils.hpp@{debug\_utils.hpp}!set\_validation\_cache\_tag@{set\_validation\_cache\_tag}}
+\index{set\_validation\_cache\_tag@{set\_validation\_cache\_tag}!debug\_utils.hpp@{debug\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_validation\_cache\_tag()}{set\_validation\_cache\_tag()}}
+{\footnotesize\ttfamily \label{debug__utils_8hpp_afa4916245cb32cf3742d57c91d572fe8} 
+void lava\+::set\+\_\+validation\+\_\+cache\+\_\+tag (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vk\+Validation\+Cache\+EXT}]{handle}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}{void\+\_\+c\+\_\+ptr}}}]{tag}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+set\+\_\+tag() 
+\end{DoxySeeAlso}

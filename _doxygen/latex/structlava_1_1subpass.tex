@@ -1,0 +1,456 @@
+\doxysection{lava\+::subpass Struct Reference}
+\hypertarget{structlava_1_1subpass}{}\label{structlava_1_1subpass}\index{lava::subpass@{lava::subpass}}
+
+
+Subpass.  
+
+
+
+
+{\ttfamily \#include $<$subpass.\+hpp$>$}
+
+Inheritance diagram for lava\+::subpass\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1subpass}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}\label{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1subpass}{subpass}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to subpass. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1subpass_ad47bf8080d9808aa631430944f1eb610}\label{structlava_1_1subpass_ad47bf8080d9808aa631430944f1eb610} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of subpasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1subpass_a76dd25aac48480780adc0258469513f9}\label{structlava_1_1subpass_a76dd25aac48480780adc0258469513f9} 
+{\bfseries subpass} ()
+\begin{DoxyCompactList}\small\item\em Construct a new subpass. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1subpass_a4fde2abcb620256255f350e44d0b44f8}\label{structlava_1_1subpass_a4fde2abcb620256255f350e44d0b44f8} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a75e4fca5924ed90f5fe0e716373fb828}{add}} (\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} const \&\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}})
+\begin{DoxyCompactList}\small\item\em Add a render pipeline to the back of the subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a807829577f57c1c098632227a9cb26dd}{add\+\_\+front}} (\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} const \&\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}})
+\begin{DoxyCompactList}\small\item\em Add a render pipeline to the fronst of the subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a8f847d6f6b867e49f5b250865b64f830}{remove}} (\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}})
+\begin{DoxyCompactList}\small\item\em Remove the render pipeline. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1subpass_a05c9f1f878dfbed31e7e25377e1a4458}\label{structlava_1_1subpass_a05c9f1f878dfbed31e7e25377e1a4458} 
+void {\bfseries clear\+\_\+pipelines} ()
+\begin{DoxyCompactList}\small\item\em Clear all pipelines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a3ae1c5277bddba721dcc7b48082e98bc}{process}} (Vk\+Command\+Buffer cmd\+\_\+buf, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size)
+\begin{DoxyCompactList}\small\item\em Process the subpass. \end{DoxyCompactList}\item 
+Vk\+Subpass\+Description const \& \mbox{\hyperlink{structlava_1_1subpass_a1e4da0a00327b8da1792079df42725cd}{get\+\_\+description}} () const
+\begin{DoxyCompactList}\small\item\em Get the description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_ad19be3f1e899928dd0efe30eaf1da84a}{set}} (Vk\+Pipeline\+Bind\+Point pipeline\+\_\+bind\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Set pipeline bind point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a07c8108157a3f833a54895474fb59c49}{set\+\_\+color\+\_\+attachment}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1attachment}{attachment}}, Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the color attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a04e391ff3ee209bc6c7f6d3177074898}{set\+\_\+color\+\_\+attachment}} (Vk\+Attachment\+Reference \mbox{\hyperlink{structlava_1_1attachment}{attachment}})
+\begin{DoxyCompactList}\small\item\em Set the color attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_ab4024a06eaa5fdd6608aedb64e03d1d3}{set\+\_\+color\+\_\+attachments}} (\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&attachments)
+\begin{DoxyCompactList}\small\item\em Set the color attachments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_ad870bc766852f9adae9514b281102ead}{set\+\_\+depth\+\_\+stencil\+\_\+attachment}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1attachment}{attachment}}, Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the depth stencil attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_aeb9f9d0858ba6573712d218d4044e47a}{set\+\_\+depth\+\_\+stencil\+\_\+attachment}} (Vk\+Attachment\+Reference \mbox{\hyperlink{structlava_1_1attachment}{attachment}})
+\begin{DoxyCompactList}\small\item\em Set the depth stencil attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a68d540bc77bc6b62d53824991f5ff855}{set\+\_\+input\+\_\+attachment}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1attachment}{attachment}}, Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the input attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a327b7254cd476fe596f0f4a2e80eedfb}{set\+\_\+input\+\_\+attachment}} (Vk\+Attachment\+Reference \mbox{\hyperlink{structlava_1_1attachment}{attachment}})
+\begin{DoxyCompactList}\small\item\em Set the input attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a6d974580a8b1de95a2d260a29fa11636}{set\+\_\+input\+\_\+attachments}} (\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&attachments)
+\begin{DoxyCompactList}\small\item\em Set the input attachments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a98a3ccafe55c4b7ff19f608ed16a31d1}{set\+\_\+resolve\+\_\+attachment}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1attachment}{attachment}}, Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the resolve attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a0424377a7d502ef733fbc4b88da7cec3}{set\+\_\+resolve\+\_\+attachment}} (Vk\+Attachment\+Reference \mbox{\hyperlink{structlava_1_1attachment}{attachment}})
+\begin{DoxyCompactList}\small\item\em Set the resolve attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a9012ff1423ff76824633e60c0751e571}{set\+\_\+resolve\+\_\+attachments}} (\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&attachments)
+\begin{DoxyCompactList}\small\item\em Set the resolve attachments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a79fe7e33a020f5f7694e4bfdc5c48ae6}{add\+\_\+preserve\+\_\+attachment}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1attachment}{attachment}})
+\begin{DoxyCompactList}\small\item\em Add preserve attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a5cd9c4124bc0e7eecbecf0ca710c4995}{set\+\_\+preserve\+\_\+attachments}} (\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} const \&attachments)
+\begin{DoxyCompactList}\small\item\em Set the preserve attachments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass_a6fe9b5ae07617946e7ae71a008dd31d7}{set\+\_\+active}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Activate or deactivate the subpass. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1subpass_aec07eb2ef2df0960fa64d88ac3437921}{activated}} () const
+\begin{DoxyCompactList}\small\item\em Check if subpass is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1subpass_a793ed6c510811e14008650290209035b}{make}} (Vk\+Pipeline\+Bind\+Point pipeline\+\_\+bind\+\_\+point=VK\+\_\+\+PIPELINE\+\_\+\+BIND\+\_\+\+POINT\+\_\+\+GRAPHICS)
+\begin{DoxyCompactList}\small\item\em Make a new subpass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subpass. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1subpass_aec07eb2ef2df0960fa64d88ac3437921}\index{lava::subpass@{lava::subpass}!activated@{activated}}
+\index{activated@{activated}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_aec07eb2ef2df0960fa64d88ac3437921} 
+bool lava\+::subpass\+::activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if subpass is active. 
+
+\begin{DoxyReturn}{Returns}
+Subpass is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1subpass_a75e4fca5924ed90f5fe0e716373fb828}\index{lava::subpass@{lava::subpass}!add@{add}}
+\index{add@{add}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a75e4fca5924ed90f5fe0e716373fb828} 
+void lava\+::subpass\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} const \&}]{pipeline}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a render pipeline to the back of the subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & Render pipeline \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a807829577f57c1c098632227a9cb26dd}\index{lava::subpass@{lava::subpass}!add\_front@{add\_front}}
+\index{add\_front@{add\_front}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{add\_front()}{add\_front()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a807829577f57c1c098632227a9cb26dd} 
+void lava\+::subpass\+::add\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}} const \&}]{pipeline}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a render pipeline to the fronst of the subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & Render pipeline \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a79fe7e33a020f5f7694e4bfdc5c48ae6}\index{lava::subpass@{lava::subpass}!add\_preserve\_attachment@{add\_preserve\_attachment}}
+\index{add\_preserve\_attachment@{add\_preserve\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{add\_preserve\_attachment()}{add\_preserve\_attachment()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a79fe7e33a020f5f7694e4bfdc5c48ae6} 
+void lava\+::subpass\+::add\+\_\+preserve\+\_\+attachment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{attachment}{}\end{DoxyParamCaption})}
+
+
+
+Add preserve attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Index of attachment \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a1e4da0a00327b8da1792079df42725cd}\index{lava::subpass@{lava::subpass}!get\_description@{get\_description}}
+\index{get\_description@{get\_description}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{get\_description()}{get\_description()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a1e4da0a00327b8da1792079df42725cd} 
+Vk\+Subpass\+Description const  \& lava\+::subpass\+::get\+\_\+description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the description. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Subpass\+Description const\& Subpass description 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1subpass_a793ed6c510811e14008650290209035b}\index{lava::subpass@{lava::subpass}!make@{make}}
+\index{make@{make}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a793ed6c510811e14008650290209035b} 
+static \mbox{\hyperlink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\+\_\+ptr}} lava\+::subpass\+::make (\begin{DoxyParamCaption}\item[{Vk\+Pipeline\+Bind\+Point}]{pipeline\+\_\+bind\+\_\+point}{ = {\ttfamily VK\+\_\+PIPELINE\+\_\+BIND\+\_\+POINT\+\_\+GRAPHICS}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline\+\_\+bind\+\_\+point} & Pipeline bind point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\+\_\+ptr} Shared pointer to subpass 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1subpass_a3ae1c5277bddba721dcc7b48082e98bc}\index{lava::subpass@{lava::subpass}!process@{process}}
+\index{process@{process}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a3ae1c5277bddba721dcc7b48082e98bc} 
+void lava\+::subpass\+::process (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Process the subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+{\em size} & Size of render pass \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a8f847d6f6b867e49f5b250865b64f830}\index{lava::subpass@{lava::subpass}!remove@{remove}}
+\index{remove@{remove}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a8f847d6f6b867e49f5b250865b64f830} 
+void lava\+::subpass\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\+\_\+pipeline\+::s\+\_\+ptr}}}]{pipeline}{}\end{DoxyParamCaption})}
+
+
+
+Remove the render pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & Render pipeline \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_ad19be3f1e899928dd0efe30eaf1da84a}\index{lava::subpass@{lava::subpass}!set@{set}}
+\index{set@{set}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_ad19be3f1e899928dd0efe30eaf1da84a} 
+void lava\+::subpass\+::set (\begin{DoxyParamCaption}\item[{Vk\+Pipeline\+Bind\+Point}]{pipeline\+\_\+bind\+\_\+point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pipeline bind point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline\+\_\+bind\+\_\+point} & Pipeline bind point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a6fe9b5ae07617946e7ae71a008dd31d7}\index{lava::subpass@{lava::subpass}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a6fe9b5ae07617946e7ae71a008dd31d7} 
+void lava\+::subpass\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{bool}]{value}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Activate or deactivate the subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Enable state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a07c8108157a3f833a54895474fb59c49}\index{lava::subpass@{lava::subpass}!set\_color\_attachment@{set\_color\_attachment}}
+\index{set\_color\_attachment@{set\_color\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_color\_attachment()}{set\_color\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a07c8108157a3f833a54895474fb59c49} 
+void lava\+::subpass\+::set\+\_\+color\+\_\+attachment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{attachment}{, }\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})}
+
+
+
+Set the color attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Index of attachment \\
+\hline
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a04e391ff3ee209bc6c7f6d3177074898}\index{lava::subpass@{lava::subpass}!set\_color\_attachment@{set\_color\_attachment}}
+\index{set\_color\_attachment@{set\_color\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_color\_attachment()}{set\_color\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a04e391ff3ee209bc6c7f6d3177074898} 
+void lava\+::subpass\+::set\+\_\+color\+\_\+attachment (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Reference}]{attachment}{}\end{DoxyParamCaption})}
+
+
+
+Set the color attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Attachment reference \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_ab4024a06eaa5fdd6608aedb64e03d1d3}\index{lava::subpass@{lava::subpass}!set\_color\_attachments@{set\_color\_attachments}}
+\index{set\_color\_attachments@{set\_color\_attachments}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_color\_attachments()}{set\_color\_attachments()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_ab4024a06eaa5fdd6608aedb64e03d1d3} 
+void lava\+::subpass\+::set\+\_\+color\+\_\+attachments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&}]{attachments}{}\end{DoxyParamCaption})}
+
+
+
+Set the color attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachments} & List of attachment references \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_ad870bc766852f9adae9514b281102ead}\index{lava::subpass@{lava::subpass}!set\_depth\_stencil\_attachment@{set\_depth\_stencil\_attachment}}
+\index{set\_depth\_stencil\_attachment@{set\_depth\_stencil\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_depth\_stencil\_attachment()}{set\_depth\_stencil\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_ad870bc766852f9adae9514b281102ead} 
+void lava\+::subpass\+::set\+\_\+depth\+\_\+stencil\+\_\+attachment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{attachment}{, }\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})}
+
+
+
+Set the depth stencil attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Index of attachment \\
+\hline
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_aeb9f9d0858ba6573712d218d4044e47a}\index{lava::subpass@{lava::subpass}!set\_depth\_stencil\_attachment@{set\_depth\_stencil\_attachment}}
+\index{set\_depth\_stencil\_attachment@{set\_depth\_stencil\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_depth\_stencil\_attachment()}{set\_depth\_stencil\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_aeb9f9d0858ba6573712d218d4044e47a} 
+void lava\+::subpass\+::set\+\_\+depth\+\_\+stencil\+\_\+attachment (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Reference}]{attachment}{}\end{DoxyParamCaption})}
+
+
+
+Set the depth stencil attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Attachment reference \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a68d540bc77bc6b62d53824991f5ff855}\index{lava::subpass@{lava::subpass}!set\_input\_attachment@{set\_input\_attachment}}
+\index{set\_input\_attachment@{set\_input\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_input\_attachment()}{set\_input\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a68d540bc77bc6b62d53824991f5ff855} 
+void lava\+::subpass\+::set\+\_\+input\+\_\+attachment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{attachment}{, }\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})}
+
+
+
+Set the input attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Index of attachment \\
+\hline
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a327b7254cd476fe596f0f4a2e80eedfb}\index{lava::subpass@{lava::subpass}!set\_input\_attachment@{set\_input\_attachment}}
+\index{set\_input\_attachment@{set\_input\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_input\_attachment()}{set\_input\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a327b7254cd476fe596f0f4a2e80eedfb} 
+void lava\+::subpass\+::set\+\_\+input\+\_\+attachment (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Reference}]{attachment}{}\end{DoxyParamCaption})}
+
+
+
+Set the input attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Attachment reference \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a6d974580a8b1de95a2d260a29fa11636}\index{lava::subpass@{lava::subpass}!set\_input\_attachments@{set\_input\_attachments}}
+\index{set\_input\_attachments@{set\_input\_attachments}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_input\_attachments()}{set\_input\_attachments()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a6d974580a8b1de95a2d260a29fa11636} 
+void lava\+::subpass\+::set\+\_\+input\+\_\+attachments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&}]{attachments}{}\end{DoxyParamCaption})}
+
+
+
+Set the input attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachments} & List of attachment references \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a5cd9c4124bc0e7eecbecf0ca710c4995}\index{lava::subpass@{lava::subpass}!set\_preserve\_attachments@{set\_preserve\_attachments}}
+\index{set\_preserve\_attachments@{set\_preserve\_attachments}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_preserve\_attachments()}{set\_preserve\_attachments()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a5cd9c4124bc0e7eecbecf0ca710c4995} 
+void lava\+::subpass\+::set\+\_\+preserve\+\_\+attachments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} const \&}]{attachments}{}\end{DoxyParamCaption})}
+
+
+
+Set the preserve attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachments} & List of indices \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a98a3ccafe55c4b7ff19f608ed16a31d1}\index{lava::subpass@{lava::subpass}!set\_resolve\_attachment@{set\_resolve\_attachment}}
+\index{set\_resolve\_attachment@{set\_resolve\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_resolve\_attachment()}{set\_resolve\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a98a3ccafe55c4b7ff19f608ed16a31d1} 
+void lava\+::subpass\+::set\+\_\+resolve\+\_\+attachment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{attachment}{, }\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})}
+
+
+
+Set the resolve attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Index of attachment \\
+\hline
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a0424377a7d502ef733fbc4b88da7cec3}\index{lava::subpass@{lava::subpass}!set\_resolve\_attachment@{set\_resolve\_attachment}}
+\index{set\_resolve\_attachment@{set\_resolve\_attachment}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_resolve\_attachment()}{set\_resolve\_attachment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a0424377a7d502ef733fbc4b88da7cec3} 
+void lava\+::subpass\+::set\+\_\+resolve\+\_\+attachment (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Reference}]{attachment}{}\end{DoxyParamCaption})}
+
+
+
+Set the resolve attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachment} & Attachment reference \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass_a9012ff1423ff76824633e60c0751e571}\index{lava::subpass@{lava::subpass}!set\_resolve\_attachments@{set\_resolve\_attachments}}
+\index{set\_resolve\_attachments@{set\_resolve\_attachments}!lava::subpass@{lava::subpass}}
+\doxysubsubsection{\texorpdfstring{set\_resolve\_attachments()}{set\_resolve\_attachments()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass_a9012ff1423ff76824633e60c0751e571} 
+void lava\+::subpass\+::set\+\_\+resolve\+\_\+attachments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{Vk\+Attachment\+References}} const \&}]{attachments}{}\end{DoxyParamCaption})}
+
+
+
+Set the resolve attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attachments} & List of attachment references \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{subpass_8hpp}{subpass.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1pseudorandom__generator" kind="struct" language="C++" prot="public">
+    <compoundname>lava::pseudorandom_generator</compoundname>
+    <includes refid="random_8hpp" local="no">random.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1pseudorandom__generator_1a20e13bd7454eea5249b23a58c2127ff4" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::pseudorandom_generator::m_seed</definition>
+        <argsstring></argsstring>
+        <name>m_seed</name>
+        <qualifiedname>lava::pseudorandom_generator::m_seed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Generator seed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="104" column="10" bodyfile="liblava/util/random.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1pseudorandom__generator_1a3ca2c625b52e49dc088b41b653973702" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::pseudorandom_generator::pseudorandom_generator</definition>
+        <argsstring>(ui32 seed)</argsstring>
+        <name>pseudorandom_generator</name>
+        <qualifiedname>lava::pseudorandom_generator::pseudorandom_generator</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new pseudorandom generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seed for generator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="83" column="14" bodyfile="liblava/util/random.hpp" bodystart="83" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pseudorandom__generator_1afcb9a4b2dc18f67f66a26613c5f48710" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pseudorandom_generator::set_seed</definition>
+        <argsstring>(ui32 value)</argsstring>
+        <name>set_seed</name>
+        <qualifiedname>lava::pseudorandom_generator::set_seed</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the seed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Generator seed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="90" column="10" bodyfile="liblava/util/random.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pseudorandom__generator_1a06ec24a95d622393b84dc40cd9924df3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::pseudorandom_generator::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::pseudorandom_generator::get</qualifiedname>
+        <briefdescription>
+<para>Get next pseudorandom number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> Random number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="98" column="10" bodyfile="liblava/util/random.hpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1pseudorandom__generator_1a8d4a140da8e843c8d8eef5e898781629" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::pseudorandom_generator::generate_fast</definition>
+        <argsstring>()</argsstring>
+        <name>generate_fast</name>
+        <qualifiedname>lava::pseudorandom_generator::generate_fast</qualifiedname>
+        <briefdescription>
+<para>Generate fast random number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> Random number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="110" column="10" bodyfile="liblava/util/random.hpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Pseudorandom generator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/util/random.hpp" line="78" column="1" bodyfile="liblava/util/random.hpp" bodystart="78" bodyend="113"/>
+    <listofallmembers>
+      <member refid="structlava_1_1pseudorandom__generator_1a8d4a140da8e843c8d8eef5e898781629" prot="private" virt="non-virtual"><scope>lava::pseudorandom_generator</scope><name>generate_fast</name></member>
+      <member refid="structlava_1_1pseudorandom__generator_1a06ec24a95d622393b84dc40cd9924df3" prot="public" virt="non-virtual"><scope>lava::pseudorandom_generator</scope><name>get</name></member>
+      <member refid="structlava_1_1pseudorandom__generator_1a20e13bd7454eea5249b23a58c2127ff4" prot="private" virt="non-virtual"><scope>lava::pseudorandom_generator</scope><name>m_seed</name></member>
+      <member refid="structlava_1_1pseudorandom__generator_1a3ca2c625b52e49dc088b41b653973702" prot="public" virt="non-virtual"><scope>lava::pseudorandom_generator</scope><name>pseudorandom_generator</name></member>
+      <member refid="structlava_1_1pseudorandom__generator_1afcb9a4b2dc18f67f66a26613c5f48710" prot="public" virt="non-virtual"><scope>lava::pseudorandom_generator</scope><name>set_seed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

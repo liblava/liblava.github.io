@@ -1,0 +1,664 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1pipeline" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>lava::pipeline</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <derivedcompoundref refid="structlava_1_1compute__pipeline" prot="public" virt="non-virtual">lava::compute_pipeline</derivedcompoundref>
+    <derivedcompoundref refid="structlava_1_1render__pipeline" prot="public" virt="non-virtual">lava::render_pipeline</derivedcompoundref>
+    <includes refid="pipeline_8hpp" local="no">pipeline.hpp</includes>
+    <innerclass refid="structlava_1_1pipeline_1_1shader__stage" prot="public">lava::pipeline::shader_stage</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1pipeline_1a13486e544e64c0e5270cbf67c77e0727" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref> &gt;</type>
+        <definition>using lava::pipeline::s_ptr =  std::shared_ptr&lt;pipeline&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::pipeline::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="19" column="5" bodyfile="liblava/block/pipeline.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1pipeline_1a659da7821360bbf766efa713d51cfbc1" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1pipeline_1a13486e544e64c0e5270cbf67c77e0727" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::pipeline::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::pipeline::s_list</qualifiedname>
+        <briefdescription>
+<para>List of pipelines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="22" column="5" bodyfile="liblava/block/pipeline.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1pipeline_1a2cdd9f46ddc9b493421680c53a2a5f68" prot="public" static="no">
+        <type>std::function&lt; void(VkCommandBuffer)&gt;</type>
+        <definition>using lava::pipeline::process_func =  std::function&lt;void(VkCommandBuffer)&gt;</definition>
+        <argsstring></argsstring>
+        <name>process_func</name>
+        <qualifiedname>lava::pipeline::process_func</qualifiedname>
+        <briefdescription>
+<para>Pipeline process function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="25" column="5" bodyfile="liblava/block/pipeline.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1pipeline_1a27840fc2c5f4ea19de106acc6fe631cc" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1pipeline_1a2cdd9f46ddc9b493421680c53a2a5f68" kindref="member">process_func</ref></type>
+        <definition>process_func lava::pipeline::on_process</definition>
+        <argsstring></argsstring>
+        <name>on_process</name>
+        <qualifiedname>lava::pipeline::on_process</qualifiedname>
+        <briefdescription>
+<para>Called on pipeline process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="28" column="18" bodyfile="liblava/block/pipeline.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structlava_1_1pipeline_1a8a72b44697ce13c68e3423180ca5c218" prot="protected" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::pipeline::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::pipeline::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="238" column="17" bodyfile="liblava/block/pipeline.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1a278f28e7409250e047736c3f10a54837" prot="protected" static="no" mutable="no">
+        <type>VkPipeline</type>
+        <definition>VkPipeline lava::pipeline::m_vk_pipeline</definition>
+        <argsstring></argsstring>
+        <name>m_vk_pipeline</name>
+        <qualifiedname>lava::pipeline::m_vk_pipeline</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="241" column="16" bodyfile="liblava/block/pipeline.hpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1a63c6f7a69bdc7ea1c56e955a32029e6c" prot="protected" static="no" mutable="no">
+        <type>VkPipelineCache</type>
+        <definition>VkPipelineCache lava::pipeline::m_pipeline_cache</definition>
+        <argsstring></argsstring>
+        <name>m_pipeline_cache</name>
+        <qualifiedname>lava::pipeline::m_pipeline_cache</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan pipeline cache. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="244" column="21" bodyfile="liblava/block/pipeline.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1ae7a2117e4f94e470e051852ea7dc7c3c" prot="protected" static="no" mutable="no">
+        <type><ref refid="structlava_1_1pipeline__layout_1adeb6bacc906e605536e0d1533907c492" kindref="member">pipeline_layout::s_ptr</ref></type>
+        <definition>pipeline_layout::s_ptr lava::pipeline::m_layout</definition>
+        <argsstring></argsstring>
+        <name>m_layout</name>
+        <qualifiedname>lava::pipeline::m_layout</qualifiedname>
+        <briefdescription>
+<para>Pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="247" column="28" bodyfile="liblava/block/pipeline.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1pipeline_1a7a6ed34ed1aacda60dde0d40449c9480" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::pipeline::m_active</definition>
+        <argsstring></argsstring>
+        <name>m_active</name>
+        <qualifiedname>lava::pipeline::m_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="251" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1pipeline_1ae07514dccf62108552c13cf732275f3e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::pipeline::m_auto_bind_active</definition>
+        <argsstring></argsstring>
+        <name>m_auto_bind_active</name>
+        <qualifiedname>lava::pipeline::m_auto_bind_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Auto bind state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="254" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1pipeline_1a532e33a3caacd4f71ba16d26111a0c5b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::pipeline::pipeline</definition>
+        <argsstring>(device::ptr device, VkPipelineCache pipeline_cache=0)</argsstring>
+        <name>pipeline</name>
+        <qualifiedname>lava::pipeline::pipeline</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkPipelineCache</type>
+          <declname>pipeline_cache</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pipeline_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline cache </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="35" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1aa558324b8630b342dd0ece7dadaae821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::pipeline::~pipeline</definition>
+        <argsstring>() override</argsstring>
+        <name>~pipeline</name>
+        <qualifiedname>lava::pipeline::~pipeline</qualifiedname>
+        <briefdescription>
+<para>Destroy the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a9efe4f61250e2e1cca7d64530691eab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::pipeline::create</qualifiedname>
+        <briefdescription>
+<para>Create a new pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="47" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1ad75a43fefcc8feae90feee4e0ccf097b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::pipeline::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a4fbab953063b31a88987dd050ee9289c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void lava::pipeline::bind</definition>
+        <argsstring>(VkCommandBuffer cmd_buf)=0</argsstring>
+        <name>bind</name>
+        <qualifiedname>lava::pipeline::bind</qualifiedname>
+        <reimplementedby refid="structlava_1_1compute__pipeline_1a7be06c2bd664c103661e4848f1bc2854">bind</reimplementedby>
+        <reimplementedby refid="structlava_1_1render__pipeline_1ac25707c49c52b336b4378be0cf20f2f4">bind</reimplementedby>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Bind the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="58" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a8917bd488924a0c7c509535ac6d45769" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::set_active</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>set_active</name>
+        <qualifiedname>lava::pipeline::set_active</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set pipeline active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="64" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1af1ed6d08db3d755b3011fcb8b423f416" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline::activated</definition>
+        <argsstring>() const</argsstring>
+        <name>activated</name>
+        <qualifiedname>lava::pipeline::activated</qualifiedname>
+        <briefdescription>
+<para>Check if pipeline is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pipeline is active or note </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="72" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1acd76893861c4cfd8f840280613d3479f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::toggle</definition>
+        <argsstring>()</argsstring>
+        <name>toggle</name>
+        <qualifiedname>lava::pipeline::toggle</qualifiedname>
+        <briefdescription>
+<para>Toggle activation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="79" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1ad5b46469c6de88ce4bde0f9cbff570b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::set_auto_bind</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>set_auto_bind</name>
+        <qualifiedname>lava::pipeline::set_auto_bind</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set auto bind. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="87" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a102ce500ee05cfdf242423703188b9d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline::auto_bind</definition>
+        <argsstring>() const</argsstring>
+        <name>auto_bind</name>
+        <qualifiedname>lava::pipeline::auto_bind</qualifiedname>
+        <briefdescription>
+<para>Check if auto bind is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Auto bind is enabled or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="95" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a9246051bc496565d046631ac64cd8a26" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::pipeline::ready</definition>
+        <argsstring>() const</argsstring>
+        <name>ready</name>
+        <qualifiedname>lava::pipeline::ready</qualifiedname>
+        <briefdescription>
+<para>Check if pipeline is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pipeline is ready or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="103" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a3e37bdce392138b2058e7a811fcbcbb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPipeline</type>
+        <definition>VkPipeline lava::pipeline::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::pipeline::get</qualifiedname>
+        <briefdescription>
+<para>Get the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPipeline Vulkan pipeline </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="111" column="16" bodyfile="liblava/block/pipeline.hpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a26ba013d7a0d579a4c12ff4d221249cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::pipeline::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::pipeline::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="119" column="17" bodyfile="liblava/block/pipeline.hpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a823e84dc3b4d26211e1cccad7d74918b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1pipeline__layout_1adeb6bacc906e605536e0d1533907c492" kindref="member">pipeline_layout::s_ptr</ref></type>
+        <definition>pipeline_layout::s_ptr lava::pipeline::get_layout</definition>
+        <argsstring>() const</argsstring>
+        <name>get_layout</name>
+        <qualifiedname>lava::pipeline::get_layout</qualifiedname>
+        <briefdescription>
+<para>Get the layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1pipeline__layout_1adeb6bacc906e605536e0d1533907c492" kindref="member">pipeline_layout::s_ptr</ref> Pipeline layout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="127" column="28" bodyfile="liblava/block/pipeline.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a5300f14b8065ad8b1fba7cd1bd7a68a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::pipeline::set_layout</definition>
+        <argsstring>(pipeline_layout::s_ptr const &amp;value)</argsstring>
+        <name>set_layout</name>
+        <qualifiedname>lava::pipeline::set_layout</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1pipeline__layout_1adeb6bacc906e605536e0d1533907c492" kindref="member">pipeline_layout::s_ptr</ref> const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="135" column="10" bodyfile="liblava/block/pipeline.hpp" bodystart="135" bodyend="137"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="structlava_1_1pipeline_1a1e10d18f9f3eaeece74d6110f6b1b59e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool lava::pipeline::setup</definition>
+        <argsstring>()=0</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::pipeline::setup</qualifiedname>
+        <reimplementedby refid="structlava_1_1compute__pipeline_1a51a47735bcc7cd0af710afa48d55ef0f">setup</reimplementedby>
+        <reimplementedby refid="structlava_1_1render__pipeline_1addd3f55aaf896310f9eab8167e6aa74e">setup</reimplementedby>
+        <briefdescription>
+<para>Set up the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Setup was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="230" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1pipeline_1a0e1556ac325e63b3c5f0e705bfbf42d3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void lava::pipeline::teardown</definition>
+        <argsstring>()=0</argsstring>
+        <name>teardown</name>
+        <qualifiedname>lava::pipeline::teardown</qualifiedname>
+        <reimplementedby refid="structlava_1_1compute__pipeline_1a620bc5505cd1a11ff2e2bb2b95e22c52">teardown</reimplementedby>
+        <reimplementedby refid="structlava_1_1render__pipeline_1ab8c0b1db66d29f98d2432189bfddcde9">teardown</reimplementedby>
+        <briefdescription>
+<para>Tear down the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/pipeline.hpp" line="235" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Pipeline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>lava::compute_pipeline</label>
+        <link refid="structlava_1_1compute__pipeline"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::pipeline</label>
+        <link refid="structlava_1_1pipeline"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lava::render_pipeline</label>
+        <link refid="structlava_1_1render__pipeline"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::pipeline</label>
+        <link refid="structlava_1_1pipeline"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_device</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/pipeline.hpp" line="17" column="1" bodyfile="liblava/block/pipeline.hpp" bodystart="17" bodyend="255"/>
+    <listofallmembers>
+      <member refid="structlava_1_1pipeline_1af1ed6d08db3d755b3011fcb8b423f416" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>activated</name></member>
+      <member refid="structlava_1_1pipeline_1a102ce500ee05cfdf242423703188b9d7" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>auto_bind</name></member>
+      <member refid="structlava_1_1pipeline_1a4fbab953063b31a88987dd050ee9289c" prot="public" virt="pure-virtual"><scope>lava::pipeline</scope><name>bind</name></member>
+      <member refid="structlava_1_1pipeline_1a9efe4f61250e2e1cca7d64530691eab0" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>create</name></member>
+      <member refid="structlava_1_1pipeline_1ad75a43fefcc8feae90feee4e0ccf097b" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>entity</name></member>
+      <member refid="structlava_1_1pipeline_1a3e37bdce392138b2058e7a811fcbcbb9" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>get</name></member>
+      <member refid="structlava_1_1pipeline_1a26ba013d7a0d579a4c12ff4d221249cb" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>get_device</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>get_id</name></member>
+      <member refid="structlava_1_1pipeline_1a823e84dc3b4d26211e1cccad7d74918b" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>get_layout</name></member>
+      <member refid="structlava_1_1pipeline_1a7a6ed34ed1aacda60dde0d40449c9480" prot="private" virt="non-virtual"><scope>lava::pipeline</scope><name>m_active</name></member>
+      <member refid="structlava_1_1pipeline_1ae07514dccf62108552c13cf732275f3e" prot="private" virt="non-virtual"><scope>lava::pipeline</scope><name>m_auto_bind_active</name></member>
+      <member refid="structlava_1_1pipeline_1a8a72b44697ce13c68e3423180ca5c218" prot="protected" virt="non-virtual"><scope>lava::pipeline</scope><name>m_device</name></member>
+      <member refid="structlava_1_1pipeline_1ae7a2117e4f94e470e051852ea7dc7c3c" prot="protected" virt="non-virtual"><scope>lava::pipeline</scope><name>m_layout</name></member>
+      <member refid="structlava_1_1pipeline_1a63c6f7a69bdc7ea1c56e955a32029e6c" prot="protected" virt="non-virtual"><scope>lava::pipeline</scope><name>m_pipeline_cache</name></member>
+      <member refid="structlava_1_1pipeline_1a278f28e7409250e047736c3f10a54837" prot="protected" virt="non-virtual"><scope>lava::pipeline</scope><name>m_vk_pipeline</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1pipeline_1a27840fc2c5f4ea19de106acc6fe631cc" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>on_process</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>operator=</name></member>
+      <member refid="structlava_1_1pipeline_1a532e33a3caacd4f71ba16d26111a0c5b" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>pipeline</name></member>
+      <member refid="structlava_1_1pipeline_1a2cdd9f46ddc9b493421680c53a2a5f68" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>process_func</name></member>
+      <member refid="structlava_1_1pipeline_1a9246051bc496565d046631ac64cd8a26" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>ready</name></member>
+      <member refid="structlava_1_1pipeline_1a659da7821360bbf766efa713d51cfbc1" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>s_list</name></member>
+      <member refid="structlava_1_1pipeline_1a13486e544e64c0e5270cbf67c77e0727" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1pipeline_1a8917bd488924a0c7c509535ac6d45769" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>set_active</name></member>
+      <member refid="structlava_1_1pipeline_1ad5b46469c6de88ce4bde0f9cbff570b4" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>set_auto_bind</name></member>
+      <member refid="structlava_1_1pipeline_1a5300f14b8065ad8b1fba7cd1bd7a68a4" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>set_layout</name></member>
+      <member refid="structlava_1_1pipeline_1a1e10d18f9f3eaeece74d6110f6b1b59e" prot="protected" virt="pure-virtual"><scope>lava::pipeline</scope><name>setup</name></member>
+      <member refid="structlava_1_1pipeline_1a0e1556ac325e63b3c5f0e705bfbf42d3" prot="protected" virt="pure-virtual"><scope>lava::pipeline</scope><name>teardown</name></member>
+      <member refid="structlava_1_1pipeline_1acd76893861c4cfd8f840280613d3479f" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>toggle</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::pipeline</scope><name>~interface</name></member>
+      <member refid="structlava_1_1pipeline_1aa558324b8630b342dd0ece7dadaae821" prot="public" virt="non-virtual"><scope>lava::pipeline</scope><name>~pipeline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

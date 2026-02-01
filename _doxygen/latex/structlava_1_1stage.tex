@@ -1,0 +1,67 @@
+\doxysection{lava\+::stage Struct Reference}
+\hypertarget{structlava_1_1stage}{}\label{structlava_1_1stage}\index{lava::stage@{lava::stage}}
+
+
+Stage.  
+
+
+
+
+{\ttfamily \#include $<$driver.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}\label{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9} 
+using {\bfseries map} = std\+::map$<$\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}, \mbox{\hyperlink{structlava_1_1stage}{stage}}\texorpdfstring{$\ast$}{*}$>$
+\begin{DoxyCompactList}\small\item\em Map of stages. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}\label{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7} 
+using {\bfseries func} = std\+::function$<$\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}(argh\+::parser)$>$
+\begin{DoxyCompactList}\small\item\em Stage function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1stage_a825e08db257906413e57ce438e4fd887}{stage}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}} \mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}})
+\begin{DoxyCompactList}\small\item\em Construct a new stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1stage_ad4bd99d638a787dba404c92e61d18de0}\label{structlava_1_1stage_ad4bd99d638a787dba404c92e61d18de0} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries id} = 0
+\begin{DoxyCompactList}\small\item\em Stage id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1stage_aa1f7cf27be9025a80d4a8b1dd9c9aaa4}\label{structlava_1_1stage_aa1f7cf27be9025a80d4a8b1dd9c9aaa4} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Stage name. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1stage_aa342228af68538573490437bb069fafc}\label{structlava_1_1stage_aa342228af68538573490437bb069fafc} 
+\mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}} {\bfseries on\+\_\+func}
+\begin{DoxyCompactList}\small\item\em Called on stage run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stage. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1stage_a825e08db257906413e57ce438e4fd887}\index{lava::stage@{lava::stage}!stage@{stage}}
+\index{stage@{stage}!lava::stage@{lava::stage}}
+\doxysubsubsection{\texorpdfstring{stage()}{stage()}}
+{\footnotesize\ttfamily \label{structlava_1_1stage_a825e08db257906413e57ce438e4fd887} 
+lava\+::stage\+::stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{id}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{structlava_1_1stage_a3696a5b9bb5ab7ff168ebf97804f8bb7}{func}}}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Stage id \\
+\hline
+{\em name} & Stage name \\
+\hline
+{\em func} & Stage function \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{driver_8hpp}{driver.\+hpp}}\end{DoxyCompactItemize}

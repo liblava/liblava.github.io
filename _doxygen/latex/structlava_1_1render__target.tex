@@ -1,0 +1,349 @@
+\doxysection{lava\+::render\+\_\+target Struct Reference}
+\hypertarget{structlava_1_1render__target}{}\label{structlava_1_1render__target}\index{lava::render\_target@{lava::render\_target}}
+
+
+Render target.  
+
+
+
+
+{\ttfamily \#include $<$render\+\_\+target.\+hpp$>$}
+
+Inheritance diagram for lava\+::render\+\_\+target\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1render__target}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}\label{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1render__target}{render\+\_\+target}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to render target. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a53c3ba123a96274bb102dcd3b19c8a66}\label{structlava_1_1render__target_a53c3ba123a96274bb102dcd3b19c8a66} 
+using {\bfseries swapchain\+\_\+start\+\_\+func} = std\+::function$<$bool()$>$
+\begin{DoxyCompactList}\small\item\em Swapchain start function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_ad225db9919281437dc746d842d3423d9}\label{structlava_1_1render__target_ad225db9919281437dc746d842d3423d9} 
+using {\bfseries swapchain\+\_\+stop\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Swapchain stop function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_ac6437b57e099c1634ffd7097b5529530}\label{structlava_1_1render__target_ac6437b57e099c1634ffd7097b5529530} 
+using {\bfseries create\+\_\+attachments\+\_\+func} = std\+::function$<$\mbox{\hyperlink{base_2base_8hpp_ae73891efe81ae4e16da96190b745cd04}{Vk\+Attachments}}()$>$
+\begin{DoxyCompactList}\small\item\em Create attachments function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a1399870998b83f8dd2c16ed2cc22b90b}\label{structlava_1_1render__target_a1399870998b83f8dd2c16ed2cc22b90b} 
+using {\bfseries destroy\+\_\+attachments\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Destroy attachments function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1render__target_aa51aed39c9c8256dca7973239d112f84}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Surface\+KHR surface, Vk\+Surface\+Format\+KHR format, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, bool v\+\_\+sync=false, bool triple\+\_\+buffer=true)
+\begin{DoxyCompactList}\small\item\em Create a new render target. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_ab0e92ac251d59794f72e6ec2c20201d7}\label{structlava_1_1render__target_ab0e92ac251d59794f72e6ec2c20201d7} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the render target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1render__target_a83f63ffa66e7aad0a3ebe6c384204b61}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the render target. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1render__target_a176bdcded8934fb8d3a059ae79d6b912}{resize}} (\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Resize the render target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1render__target_a1ae9573fcf4671ad09682d52781080ca}{get\+\_\+frame\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Get the frame count. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1render__target_ac577b50a89a6400820c45fd0c6175b28}{reload\+\_\+request}} () const
+\begin{DoxyCompactList}\small\item\em Check if render target requests a reload. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a66c6d3dc246964ab9451b84fd2074ec3}\label{structlava_1_1render__target_a66c6d3dc246964ab9451b84fd2074ec3} 
+void {\bfseries reload} ()
+\begin{DoxyCompactList}\small\item\em Reload the render target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1render__target_aa9938595b2c45cf0075dda0c1caceb14}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1render__target_ab4a13859707e84521bc74d65dfd30df5}{get\+\_\+swapchain}} ()
+\begin{DoxyCompactList}\small\item\em Get the swapchain. \end{DoxyCompactList}\item 
+Vk\+Format \mbox{\hyperlink{structlava_1_1render__target_ac99a9f92213a16589d8c39df453010ba}{get\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Get the format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1render__target_ae48cb86ce5d9338af04cd6d5044f1ec1}{get\+\_\+backbuffers}} () const
+\begin{DoxyCompactList}\small\item\em Get the backbuffers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1render__target_ad8de8b477cbf54903a86870854c63e70}{get\+\_\+backbuffer}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}})
+\begin{DoxyCompactList}\small\item\em Get the backbuffer by frame index. \end{DoxyCompactList}\item 
+Vk\+Image \mbox{\hyperlink{structlava_1_1render__target_a677cb7acde667620bf71de4aba71fcd6}{get\+\_\+backbuffer\+\_\+image}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}})
+\begin{DoxyCompactList}\small\item\em Get the backbuffer image by index. \end{DoxyCompactList}\item 
+Vk\+Image \mbox{\hyperlink{structlava_1_1render__target_a24c2e4d72801d5ffb21203cad461cd13}{get\+\_\+image}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}})
+\item 
+void \mbox{\hyperlink{structlava_1_1render__target_a12a431bae74abad84178838082706bb3}{add\+\_\+callback}} (\mbox{\hyperlink{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}{target\+\_\+callback\+::c\+\_\+ptr}} callback)
+\begin{DoxyCompactList}\small\item\em Add callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1render__target_a4e660879381b0a99cab239c6b47e1187}{remove\+\_\+callback}} (\mbox{\hyperlink{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}{target\+\_\+callback\+::c\+\_\+ptr}} callback)
+\begin{DoxyCompactList}\small\item\em Remove callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1render__target_aa790d872a992ea5f97b2188a5e482979}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1render__target_a58f278bd93328b72587937758f5a5899}\label{structlava_1_1render__target_a58f278bd93328b72587937758f5a5899} 
+\mbox{\hyperlink{structlava_1_1render__target_a53c3ba123a96274bb102dcd3b19c8a66}{swapchain\+\_\+start\+\_\+func}} {\bfseries on\+\_\+swapchain\+\_\+start}
+\begin{DoxyCompactList}\small\item\em Called on swapchain start. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a53b20dd5845a5f92135ddc2b622477be}\label{structlava_1_1render__target_a53b20dd5845a5f92135ddc2b622477be} 
+\mbox{\hyperlink{structlava_1_1render__target_ad225db9919281437dc746d842d3423d9}{swapchain\+\_\+stop\+\_\+func}} {\bfseries on\+\_\+swapchain\+\_\+stop}
+\begin{DoxyCompactList}\small\item\em Called on swapchain stop. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a84e99bb2cb142be099356015f17b5c9f}\label{structlava_1_1render__target_a84e99bb2cb142be099356015f17b5c9f} 
+\mbox{\hyperlink{structlava_1_1render__target_ac6437b57e099c1634ffd7097b5529530}{create\+\_\+attachments\+\_\+func}} {\bfseries on\+\_\+create\+\_\+attachments}
+\begin{DoxyCompactList}\small\item\em Called on create attachments. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1render__target_a7a9ac2cfda4f8692d14a1a8b7c146c47}\label{structlava_1_1render__target_a7a9ac2cfda4f8692d14a1a8b7c146c47} 
+\mbox{\hyperlink{structlava_1_1render__target_a1399870998b83f8dd2c16ed2cc22b90b}{destroy\+\_\+attachments\+\_\+func}} {\bfseries on\+\_\+destroy\+\_\+attachments}
+\begin{DoxyCompactList}\small\item\em Called on destroy attachments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Render target. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1render__target_a12a431bae74abad84178838082706bb3}\index{lava::render\_target@{lava::render\_target}!add\_callback@{add\_callback}}
+\index{add\_callback@{add\_callback}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{add\_callback()}{add\_callback()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a12a431bae74abad84178838082706bb3} 
+void lava\+::render\+\_\+target\+::add\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}{target\+\_\+callback\+::c\+\_\+ptr}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Target callback \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1render__target_aa51aed39c9c8256dca7973239d112f84}\index{lava::render\_target@{lava::render\_target}!create@{create}}
+\index{create@{create}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_aa51aed39c9c8256dca7973239d112f84} 
+bool lava\+::render\+\_\+target\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{Vk\+Surface\+KHR}]{surface}{, }\item[{Vk\+Surface\+Format\+KHR}]{format}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{, }\item[{bool}]{v\+\_\+sync}{ = {\ttfamily false}, }\item[{bool}]{triple\+\_\+buffer}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Create a new render target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em surface} & Vulkan surface \\
+\hline
+{\em format} & Surface format \\
+\hline
+{\em size} & Size of target \\
+\hline
+{\em v\+\_\+sync} & V-\/\+Sync enabled \\
+\hline
+{\em triple\+\_\+buffer} & VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_ad8de8b477cbf54903a86870854c63e70}\index{lava::render\_target@{lava::render\_target}!get\_backbuffer@{get\_backbuffer}}
+\index{get\_backbuffer@{get\_backbuffer}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_backbuffer()}{get\_backbuffer()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_ad8de8b477cbf54903a86870854c63e70} 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} lava\+::render\+\_\+target\+::get\+\_\+backbuffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the backbuffer by frame index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Frame index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr} Backbuffer image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_a677cb7acde667620bf71de4aba71fcd6}\index{lava::render\_target@{lava::render\_target}!get\_backbuffer\_image@{get\_backbuffer\_image}}
+\index{get\_backbuffer\_image@{get\_backbuffer\_image}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_backbuffer\_image()}{get\_backbuffer\_image()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a677cb7acde667620bf71de4aba71fcd6} 
+Vk\+Image lava\+::render\+\_\+target\+::get\+\_\+backbuffer\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the backbuffer image by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Frame index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Image Vulkan image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_ae48cb86ce5d9338af04cd6d5044f1ec1}\index{lava::render\_target@{lava::render\_target}!get\_backbuffers@{get\_backbuffers}}
+\index{get\_backbuffers@{get\_backbuffers}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_backbuffers()}{get\_backbuffers()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_ae48cb86ce5d9338af04cd6d5044f1ec1} 
+\mbox{\hyperlink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list}} const  \& lava\+::render\+\_\+target\+::get\+\_\+backbuffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the backbuffers. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list} const\& List of backbuffer images 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_aa9938595b2c45cf0075dda0c1caceb14}\index{lava::render\_target@{lava::render\_target}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_aa9938595b2c45cf0075dda0c1caceb14} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::render\+\_\+target\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_ac99a9f92213a16589d8c39df453010ba}\index{lava::render\_target@{lava::render\_target}!get\_format@{get\_format}}
+\index{get\_format@{get\_format}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_format()}{get\_format()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_ac99a9f92213a16589d8c39df453010ba} 
+Vk\+Format lava\+::render\+\_\+target\+::get\+\_\+format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the format. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Format Target format 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_a1ae9573fcf4671ad09682d52781080ca}\index{lava::render\_target@{lava::render\_target}!get\_frame\_count@{get\_frame\_count}}
+\index{get\_frame\_count@{get\_frame\_count}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_frame\_count()}{get\_frame\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a1ae9573fcf4671ad09682d52781080ca} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::render\+\_\+target\+::get\+\_\+frame\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the frame count. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Number of frames 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_a24c2e4d72801d5ffb21203cad461cd13}\index{lava::render\_target@{lava::render\_target}!get\_image@{get\_image}}
+\index{get\_image@{get\_image}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_image()}{get\_image()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a24c2e4d72801d5ffb21203cad461cd13} 
+Vk\+Image lava\+::render\+\_\+target\+::get\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1render__target_a677cb7acde667620bf71de4aba71fcd6}{get\+\_\+backbuffer\+\_\+image} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1render__target_a83f63ffa66e7aad0a3ebe6c384204b61}\index{lava::render\_target@{lava::render\_target}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a83f63ffa66e7aad0a3ebe6c384204b61} 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::render\+\_\+target\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the render target. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2} Size of render target 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_ab4a13859707e84521bc74d65dfd30df5}\index{lava::render\_target@{lava::render\_target}!get\_swapchain@{get\_swapchain}}
+\index{get\_swapchain@{get\_swapchain}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{get\_swapchain()}{get\_swapchain()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_ab4a13859707e84521bc74d65dfd30df5} 
+\mbox{\hyperlink{structlava_1_1swapchain}{swapchain}} \texorpdfstring{$\ast$}{*} lava\+::render\+\_\+target\+::get\+\_\+swapchain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the swapchain. 
+
+\begin{DoxyReturn}{Returns}
+swapchain\texorpdfstring{$\ast$}{*} Target swapchain 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_aa790d872a992ea5f97b2188a5e482979}\index{lava::render\_target@{lava::render\_target}!make@{make}}
+\index{make@{make}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_aa790d872a992ea5f97b2188a5e482979} 
+static \mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{s\+\_\+ptr}} lava\+::render\+\_\+target\+::make (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new render target. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{s\+\_\+ptr} Shared pointer to render target 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_ac577b50a89a6400820c45fd0c6175b28}\index{lava::render\_target@{lava::render\_target}!reload\_request@{reload\_request}}
+\index{reload\_request@{reload\_request}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{reload\_request()}{reload\_request()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_ac577b50a89a6400820c45fd0c6175b28} 
+bool lava\+::render\+\_\+target\+::reload\+\_\+request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if render target requests a reload. 
+
+\begin{DoxyReturn}{Returns}
+Request reload or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1render__target_a4e660879381b0a99cab239c6b47e1187}\index{lava::render\_target@{lava::render\_target}!remove\_callback@{remove\_callback}}
+\index{remove\_callback@{remove\_callback}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{remove\_callback()}{remove\_callback()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a4e660879381b0a99cab239c6b47e1187} 
+void lava\+::render\+\_\+target\+::remove\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1target__callback_adc04944c6c1ad2bcd12db8714c2fbee0}{target\+\_\+callback\+::c\+\_\+ptr}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Target callback \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1render__target_a176bdcded8934fb8d3a059ae79d6b912}\index{lava::render\_target@{lava::render\_target}!resize@{resize}}
+\index{resize@{resize}!lava::render\_target@{lava::render\_target}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily \label{structlava_1_1render__target_a176bdcded8934fb8d3a059ae79d6b912} 
+bool lava\+::render\+\_\+target\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{new\+\_\+size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resize the render target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+size} & New render target size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resize was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{render__target_8hpp}{render\+\_\+target.\+hpp}}\end{DoxyCompactItemize}

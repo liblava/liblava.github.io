@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1json__file" kind="struct" language="C++" prot="public">
+    <compoundname>lava::json_file</compoundname>
+    <includes refid="json__file_8hpp" local="no">json_file.hpp</includes>
+    <innerclass refid="structlava_1_1json__file_1_1callback" prot="public">lava::json_file::callback</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1json__file_1a860ee82b9a9d9a6f7e5b0d5be7f1654f" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::json_file::m_path</definition>
+        <argsstring></argsstring>
+        <name>m_path</name>
+        <qualifiedname>lava::json_file::m_path</qualifiedname>
+        <briefdescription>
+<para>Name of file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="93" column="12" bodyfile="liblava/file/json_file.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1json__file_1a899ef2f0e0ddd1b068386a22cfc5806c" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1json__file_1_1callback_1a62a29ad820e89a9ed921993e818e00b1" kindref="member">callback::list</ref></type>
+        <definition>callback::list lava::json_file::m_callbacks</definition>
+        <argsstring></argsstring>
+        <name>m_callbacks</name>
+        <qualifiedname>lava::json_file::m_callbacks</qualifiedname>
+        <briefdescription>
+<para>List of callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="96" column="20" bodyfile="liblava/file/json_file.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1json__file_1ac1a7e52bf524153c11c55c856022c9de" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::json_file::json_file</definition>
+        <argsstring>(string_ref path=&quot;config.json&quot;)</argsstring>
+        <name>json_file</name>
+        <qualifiedname>lava::json_file::json_file</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+          <defval>&quot;config.json&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1afae0540df27bf7bfa0f0c669a534577e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::json_file::add</definition>
+        <argsstring>(callback *callback)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::json_file::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref> *</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Add callback to json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1a03ccb249c96a5c28282cd0a814d65a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::json_file::remove</definition>
+        <argsstring>(callback *callback)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::json_file::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref> *</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Remove callback from json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1a882c2ebe6f850e5d9ad30281d062b0be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::json_file::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::json_file::clear</qualifiedname>
+        <briefdescription>
+<para>Clear all callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="59" column="10" bodyfile="liblava/file/json_file.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1a0618669ca032de3d8c3a6b28da6d3b22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::json_file::set</definition>
+        <argsstring>(string_ref value)</argsstring>
+        <name>set</name>
+        <qualifiedname>lava::json_file::set</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set path of the json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="67" column="10" bodyfile="liblava/file/json_file.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1a24ab8dd1c900bbefca20e75791670b03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::json_file::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::json_file::get</qualifiedname>
+        <briefdescription>
+<para>Get path of the json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>name Name of file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="75" column="16" bodyfile="liblava/file/json_file.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1af4614ce9c2d36a9ae763abe822cc640c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::json_file::load</definition>
+        <argsstring>()</argsstring>
+        <name>load</name>
+        <qualifiedname>lava::json_file::load</qualifiedname>
+        <briefdescription>
+<para>Load the json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Load was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1json__file_1a8174ad57c686d1004bcd33ab016a4689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::json_file::save</definition>
+        <argsstring>()</argsstring>
+        <name>save</name>
+        <qualifiedname>lava::json_file::save</qualifiedname>
+        <briefdescription>
+<para>Save the json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Save was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json_file.hpp" line="89" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Json file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/file/json_file.hpp" line="17" column="1" bodyfile="liblava/file/json_file.hpp" bodystart="17" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structlava_1_1json__file_1afae0540df27bf7bfa0f0c669a534577e" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>add</name></member>
+      <member refid="structlava_1_1json__file_1a882c2ebe6f850e5d9ad30281d062b0be" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>clear</name></member>
+      <member refid="structlava_1_1json__file_1a24ab8dd1c900bbefca20e75791670b03" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>get</name></member>
+      <member refid="structlava_1_1json__file_1ac1a7e52bf524153c11c55c856022c9de" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>json_file</name></member>
+      <member refid="structlava_1_1json__file_1af4614ce9c2d36a9ae763abe822cc640c" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>load</name></member>
+      <member refid="structlava_1_1json__file_1a899ef2f0e0ddd1b068386a22cfc5806c" prot="private" virt="non-virtual"><scope>lava::json_file</scope><name>m_callbacks</name></member>
+      <member refid="structlava_1_1json__file_1a860ee82b9a9d9a6f7e5b0d5be7f1654f" prot="private" virt="non-virtual"><scope>lava::json_file</scope><name>m_path</name></member>
+      <member refid="structlava_1_1json__file_1a03ccb249c96a5c28282cd0a814d65a64" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>remove</name></member>
+      <member refid="structlava_1_1json__file_1a8174ad57c686d1004bcd33ab016a4689" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>save</name></member>
+      <member refid="structlava_1_1json__file_1a0618669ca032de3d8c3a6b28da6d3b22" prot="public" virt="non-virtual"><scope>lava::json_file</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

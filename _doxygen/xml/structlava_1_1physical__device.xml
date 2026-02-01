@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1physical__device" kind="struct" language="C++" prot="public">
+    <compoundname>lava::physical_device</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="physical__device_8hpp" local="no">physical_device.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1physical__device_1aa4b2204c8d67f3a2214b009d0502a1cd" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1physical__device" kindref="compound">physical_device</ref> &gt;</type>
+        <definition>using lava::physical_device::s_ptr =  std::shared_ptr&lt;physical_device&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::physical_device::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="19" column="5" bodyfile="liblava/base/physical_device.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1physical__device_1af97370e82248ac90728d234353f3bd06" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1physical__device_1aa4b2204c8d67f3a2214b009d0502a1cd" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::physical_device::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::physical_device::s_list</qualifiedname>
+        <briefdescription>
+<para>List of physical devices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="22" column="5" bodyfile="liblava/base/physical_device.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1physical__device_1a6ed241d5a685257e826434c5e393bf1b" prot="public" static="no">
+        <type><ref refid="structlava_1_1physical__device" kindref="compound">physical_device</ref> const  &amp;</type>
+        <definition>using lava::physical_device::ref =  physical_device const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::physical_device::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="25" column="5" bodyfile="liblava/base/physical_device.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1physical__device_1a6ede5359cfee863674d244780395b155" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDevice</type>
+        <definition>VkPhysicalDevice lava::physical_device::m_vk_physical_device</definition>
+        <argsstring></argsstring>
+        <name>m_vk_physical_device</name>
+        <qualifiedname>lava::physical_device::m_vk_physical_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="157" column="22" bodyfile="liblava/base/physical_device.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1physical__device_1a0f359d103e15034e0b940d9bd0d8d745" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDeviceProperties</type>
+        <definition>VkPhysicalDeviceProperties lava::physical_device::m_properties</definition>
+        <argsstring></argsstring>
+        <name>m_properties</name>
+        <qualifiedname>lava::physical_device::m_properties</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Physical device properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="160" column="32" bodyfile="liblava/base/physical_device.hpp" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1physical__device_1abb2234723d55ff4b72aaef04e4ebbb7c" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDeviceFeatures</type>
+        <definition>VkPhysicalDeviceFeatures lava::physical_device::m_features</definition>
+        <argsstring></argsstring>
+        <name>m_features</name>
+        <qualifiedname>lava::physical_device::m_features</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Physical device features. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="163" column="30" bodyfile="liblava/base/physical_device.hpp" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1physical__device_1a0cc4b94b614c881a3c6b0a6c71debb8e" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDeviceMemoryProperties</type>
+        <definition>VkPhysicalDeviceMemoryProperties lava::physical_device::m_memory_properties</definition>
+        <argsstring></argsstring>
+        <name>m_memory_properties</name>
+        <qualifiedname>lava::physical_device::m_memory_properties</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Physical device memory properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="166" column="38" bodyfile="liblava/base/physical_device.hpp" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1physical__device_1ac403ad256481c6608d96b4431023dfae" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1abf600c76d74b79d839b9f25aa7ae8228" kindref="member">VkQueueFamilyPropertiesList</ref></type>
+        <definition>VkQueueFamilyPropertiesList lava::physical_device::m_queue_family_properties</definition>
+        <argsstring></argsstring>
+        <name>m_queue_family_properties</name>
+        <qualifiedname>lava::physical_device::m_queue_family_properties</qualifiedname>
+        <briefdescription>
+<para>List of queue family properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="169" column="33" bodyfile="liblava/base/physical_device.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1physical__device_1ae1b377eaa8ec77eb196cb1a6b23de861" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" kindref="member">VkExtensionPropertiesList</ref></type>
+        <definition>VkExtensionPropertiesList lava::physical_device::m_extension_properties</definition>
+        <argsstring></argsstring>
+        <name>m_extension_properties</name>
+        <qualifiedname>lava::physical_device::m_extension_properties</qualifiedname>
+        <briefdescription>
+<para>List of extension properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="172" column="31" bodyfile="liblava/base/physical_device.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1physical__device_1a1e05103a70031752339eb528f41b421d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1physical__device_1aa4b2204c8d67f3a2214b009d0502a1cd" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::physical_device::make</definition>
+        <argsstring>(VkPhysicalDevice vk_physical_device)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::physical_device::make</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>vk_physical_device</declname>
+        </param>
+        <briefdescription>
+<para>Make a new physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vk_physical_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan physical device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1physical__device_1aa4b2204c8d67f3a2214b009d0502a1cd" kindref="member">s_ptr</ref> Shared pointer to physical device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="32" column="18" bodyfile="liblava/base/physical_device.hpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1physical__device_1ac22d0d61fcacb3140b0b5d2778c7aa36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::physical_device::physical_device</definition>
+        <argsstring>()=default</argsstring>
+        <name>physical_device</name>
+        <qualifiedname>lava::physical_device::physical_device</qualifiedname>
+        <briefdescription>
+<para>Construct a new physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a4f8c91658cf3903da01f95568c9b4fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::physical_device::physical_device</definition>
+        <argsstring>(VkPhysicalDevice vk_physical_device)</argsstring>
+        <name>physical_device</name>
+        <qualifiedname>lava::physical_device::physical_device</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>vk_physical_device</declname>
+        </param>
+        <briefdescription>
+<para>Construct and initialize a new physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vk_physical_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan physical device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a33aa6284e03105f50f2a1db614bdb1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::physical_device::initialize</definition>
+        <argsstring>(VkPhysicalDevice vk_physical_device)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>lava::physical_device::initialize</qualifiedname>
+        <param>
+          <type>VkPhysicalDevice</type>
+          <declname>vk_physical_device</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vk_physical_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan physical device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="51" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1ab1fb3b0629f71631c7ecb25973c1e860" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::physical_device::supported</definition>
+        <argsstring>(string_ref extension) const</argsstring>
+        <name>supported</name>
+        <qualifiedname>lava::physical_device::supported</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Check if extension is supported. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extension to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Extension is supported or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a46facd60eac419fb7c58271dfe62e61b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::physical_device::get_queue_family</definition>
+        <argsstring>(index &amp;index, VkQueueFlags flags) const</argsstring>
+        <name>get_queue_family</name>
+        <qualifiedname>lava::physical_device::get_queue_family</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>VkQueueFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get the queue family. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned index of queue family </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue flags that must be set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Found a queue family or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a3124b44643d102fa6cbb99164a7e71e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1_1create__param" kindref="compound">device::create_param</ref></type>
+        <definition>device::create_param lava::physical_device::create_default_device_param</definition>
+        <argsstring>() const</argsstring>
+        <name>create_default_device_param</name>
+        <qualifiedname>lava::physical_device::create_default_device_param</qualifiedname>
+        <briefdescription>
+<para>Create default device parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1_1create__param" kindref="compound">device::create_param</ref> Device create parameters </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="72" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a419ba98c5496010e3b16615e958faa64" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPhysicalDeviceProperties const &amp;</type>
+        <definition>VkPhysicalDeviceProperties const  &amp; lava::physical_device::get_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_properties</name>
+        <qualifiedname>lava::physical_device::get_properties</qualifiedname>
+        <briefdescription>
+<para>Get the properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDeviceProperties const&amp; Physical device properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="78" column="38" bodyfile="liblava/base/physical_device.hpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a066365a839361413d93ed97ea0da7b2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPhysicalDeviceFeatures const &amp;</type>
+        <definition>VkPhysicalDeviceFeatures const  &amp; lava::physical_device::get_features</definition>
+        <argsstring>() const</argsstring>
+        <name>get_features</name>
+        <qualifiedname>lava::physical_device::get_features</qualifiedname>
+        <briefdescription>
+<para>Get the features. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDeviceFeatures const&amp; Physical device features </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="86" column="36" bodyfile="liblava/base/physical_device.hpp" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a6c9a2ede47f64403dce789d6951579fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPhysicalDeviceMemoryProperties const &amp;</type>
+        <definition>VkPhysicalDeviceMemoryProperties const  &amp; lava::physical_device::get_memory_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_memory_properties</name>
+        <qualifiedname>lava::physical_device::get_memory_properties</qualifiedname>
+        <briefdescription>
+<para>Get the memory properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDeviceMemoryProperties const&amp; Physical device memory properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="94" column="44" bodyfile="liblava/base/physical_device.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a3fbf67058c35ecadff7466a0236c19e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1abf600c76d74b79d839b9f25aa7ae8228" kindref="member">VkQueueFamilyPropertiesList</ref> const &amp;</type>
+        <definition>VkQueueFamilyPropertiesList const  &amp; lava::physical_device::get_queue_family_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_queue_family_properties</name>
+        <qualifiedname>lava::physical_device::get_queue_family_properties</qualifiedname>
+        <briefdescription>
+<para>Get the queue family properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="base_2base_8hpp_1abf600c76d74b79d839b9f25aa7ae8228" kindref="member">VkQueueFamilyPropertiesList</ref> const&amp; List of queue family properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="102" column="39" bodyfile="liblava/base/physical_device.hpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a528eab432ebfa509f36b2b4984de3f68" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" kindref="member">VkExtensionPropertiesList</ref> const &amp;</type>
+        <definition>VkExtensionPropertiesList const  &amp; lava::physical_device::get_extension_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_extension_properties</name>
+        <qualifiedname>lava::physical_device::get_extension_properties</qualifiedname>
+        <briefdescription>
+<para>Get the extension properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" kindref="member">VkExtensionPropertiesList</ref> const&amp; List of extension properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="110" column="37" bodyfile="liblava/base/physical_device.hpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a2396c619c1678650af362056d8a2dda7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkPhysicalDevice</type>
+        <definition>VkPhysicalDevice lava::physical_device::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::physical_device::get</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDevice Vulkan physical device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="118" column="22" bodyfile="liblava/base/physical_device.hpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a79805ffd9a70c561b8145f1663105d82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref></type>
+        <definition>name lava::physical_device::get_device_name</definition>
+        <argsstring>() const</argsstring>
+        <name>get_device_name</name>
+        <qualifiedname>lava::physical_device::get_device_name</qualifiedname>
+        <briefdescription>
+<para>Get the device name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>name Name of device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="126" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a2b8c80b347fc031082f483f072f7542b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::physical_device::get_device_type_string</definition>
+        <argsstring>() const</argsstring>
+        <name>get_device_type_string</name>
+        <qualifiedname>lava::physical_device::get_device_type_string</qualifiedname>
+        <briefdescription>
+<para>Get the device type as string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string String representation of device type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="132" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a045e2daa2121da2e7512977c443ae4c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref></type>
+        <definition>sem_version lava::physical_device::get_driver_version</definition>
+        <argsstring>() const</argsstring>
+        <name>get_driver_version</name>
+        <qualifiedname>lava::physical_device::get_driver_version</qualifiedname>
+        <briefdescription>
+<para>Get the driver version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref> Driver version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="138" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1a233738a476ca4e179ff4de370c68e401" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::physical_device::swapchain_supported</definition>
+        <argsstring>() const</argsstring>
+        <name>swapchain_supported</name>
+        <qualifiedname>lava::physical_device::swapchain_supported</qualifiedname>
+        <briefdescription>
+<para>Check if swapchain is supported. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Swapchain is supported or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="144" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1physical__device_1adbdb48a8c48725399d8bef8fb7176a3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::physical_device::surface_supported</definition>
+        <argsstring>(index queue_family, VkSurfaceKHR surface) const</argsstring>
+        <name>surface_supported</name>
+        <qualifiedname>lava::physical_device::surface_supported</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>queue_family</declname>
+        </param>
+        <param>
+          <type>VkSurfaceKHR</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+<para>Check if surface is supported. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue_family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of queue family </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan surface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Surface is supported or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/physical_device.hpp" line="152" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Vulkan physical device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::physical_device</label>
+        <link refid="structlava_1_1physical__device"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::physical_device</label>
+        <link refid="structlava_1_1physical__device"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/base/physical_device.hpp" line="17" column="1" bodyfile="liblava/base/physical_device.hpp" bodystart="17" bodyend="173"/>
+    <listofallmembers>
+      <member refid="structlava_1_1physical__device_1a3124b44643d102fa6cbb99164a7e71e2" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>create_default_device_param</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>entity</name></member>
+      <member refid="structlava_1_1physical__device_1a2396c619c1678650af362056d8a2dda7" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get</name></member>
+      <member refid="structlava_1_1physical__device_1a79805ffd9a70c561b8145f1663105d82" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_device_name</name></member>
+      <member refid="structlava_1_1physical__device_1a2b8c80b347fc031082f483f072f7542b" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_device_type_string</name></member>
+      <member refid="structlava_1_1physical__device_1a045e2daa2121da2e7512977c443ae4c5" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_driver_version</name></member>
+      <member refid="structlava_1_1physical__device_1a528eab432ebfa509f36b2b4984de3f68" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_extension_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a066365a839361413d93ed97ea0da7b2f" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_features</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_id</name></member>
+      <member refid="structlava_1_1physical__device_1a6c9a2ede47f64403dce789d6951579fc" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_memory_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a419ba98c5496010e3b16615e958faa64" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a46facd60eac419fb7c58271dfe62e61b" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_queue_family</name></member>
+      <member refid="structlava_1_1physical__device_1a3fbf67058c35ecadff7466a0236c19e1" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>get_queue_family_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a33aa6284e03105f50f2a1db614bdb1a8" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>initialize</name></member>
+      <member refid="structlava_1_1physical__device_1ae1b377eaa8ec77eb196cb1a6b23de861" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_extension_properties</name></member>
+      <member refid="structlava_1_1physical__device_1abb2234723d55ff4b72aaef04e4ebbb7c" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_features</name></member>
+      <member refid="structlava_1_1physical__device_1a0cc4b94b614c881a3c6b0a6c71debb8e" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_memory_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a0f359d103e15034e0b940d9bd0d8d745" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_properties</name></member>
+      <member refid="structlava_1_1physical__device_1ac403ad256481c6608d96b4431023dfae" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_queue_family_properties</name></member>
+      <member refid="structlava_1_1physical__device_1a6ede5359cfee863674d244780395b155" prot="private" virt="non-virtual"><scope>lava::physical_device</scope><name>m_vk_physical_device</name></member>
+      <member refid="structlava_1_1physical__device_1a1e05103a70031752339eb528f41b421d" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>operator=</name></member>
+      <member refid="structlava_1_1physical__device_1ac22d0d61fcacb3140b0b5d2778c7aa36" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>physical_device</name></member>
+      <member refid="structlava_1_1physical__device_1a4f8c91658cf3903da01f95568c9b4fd5" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>physical_device</name></member>
+      <member refid="structlava_1_1physical__device_1a6ed241d5a685257e826434c5e393bf1b" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>ref</name></member>
+      <member refid="structlava_1_1physical__device_1af97370e82248ac90728d234353f3bd06" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>s_list</name></member>
+      <member refid="structlava_1_1physical__device_1aa4b2204c8d67f3a2214b009d0502a1cd" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1physical__device_1ab1fb3b0629f71631c7ecb25973c1e860" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>supported</name></member>
+      <member refid="structlava_1_1physical__device_1adbdb48a8c48725399d8bef8fb7176a3f" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>surface_supported</name></member>
+      <member refid="structlava_1_1physical__device_1a233738a476ca4e179ff4de370c68e401" prot="public" virt="non-virtual"><scope>lava::physical_device</scope><name>swapchain_supported</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::physical_device</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

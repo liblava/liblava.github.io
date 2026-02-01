@@ -1,0 +1,95 @@
+\doxysection{lava\+::mouse\+\_\+button\+\_\+event Struct Reference}
+\hypertarget{structlava_1_1mouse__button__event}{}\label{structlava_1_1mouse__button__event}\index{lava::mouse\_button\_event@{lava::mouse\_button\_event}}
+
+
+Mouse button event.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}\label{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1mouse__button__event}{mouse\+\_\+button\+\_\+event}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to mouse button event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa}\label{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa} 
+using {\bfseries func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{ref}})$>$
+\begin{DoxyCompactList}\small\item\em Mouse button event function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_a5e5766a1b469819c15d6a3ec5d3973dd}\label{structlava_1_1mouse__button__event_a5e5766a1b469819c15d6a3ec5d3973dd} 
+using {\bfseries listeners} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa}{func}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse button event listeners. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_a39918baa114b08b8fddbd85e01cf85ce}\label{structlava_1_1mouse__button__event_a39918baa114b08b8fddbd85e01cf85ce} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1mouse__button__event}{mouse\+\_\+button\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse button events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1mouse__button__event_a1090bb7697687e420ae801d04eb0480e}{pressed}} (\mbox{\hyperlink{input_8hpp_aae253d3da456f719a42e05251866c319}{mouse\+\_\+button\+\_\+ref}} b) const
+\begin{DoxyCompactList}\small\item\em Check if mouse button is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1mouse__button__event_a93fae05971838957ffae462cb4862f88}{released}} (\mbox{\hyperlink{input_8hpp_aae253d3da456f719a42e05251866c319}{mouse\+\_\+button\+\_\+ref}} b) const
+\begin{DoxyCompactList}\small\item\em Check if mouse button is released. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mouse__button__event_a95ab34209794bce897cfaa9911749025}\label{structlava_1_1mouse__button__event_a95ab34209794bce897cfaa9911749025} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries sender}
+\begin{DoxyCompactList}\small\item\em Sender id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_aef4d31ecfa367c9b1161889bd20ed80e}\label{structlava_1_1mouse__button__event_aef4d31ecfa367c9b1161889bd20ed80e} 
+\mbox{\hyperlink{input_8hpp_a9917bd3554a799bdfb5ec83161676125}{mouse\+\_\+button}} {\bfseries button}
+\begin{DoxyCompactList}\small\item\em Input mouse button. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_a68d1ebdb544b1e423fb767bdd1e36bba}\label{structlava_1_1mouse__button__event_a68d1ebdb544b1e423fb767bdd1e36bba} 
+\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{lava\+::action}} {\bfseries action}
+\begin{DoxyCompactList}\small\item\em Input action. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__button__event_aafc8f67155786298997002f0c21925eb}\label{structlava_1_1mouse__button__event_aafc8f67155786298997002f0c21925eb} 
+\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{lava\+::mod}} {\bfseries mod}
+\begin{DoxyCompactList}\small\item\em Input mod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mouse button event. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1mouse__button__event_a1090bb7697687e420ae801d04eb0480e}\index{lava::mouse\_button\_event@{lava::mouse\_button\_event}!pressed@{pressed}}
+\index{pressed@{pressed}!lava::mouse\_button\_event@{lava::mouse\_button\_event}}
+\doxysubsubsection{\texorpdfstring{pressed()}{pressed()}}
+{\footnotesize\ttfamily \label{structlava_1_1mouse__button__event_a1090bb7697687e420ae801d04eb0480e} 
+bool lava\+::mouse\+\_\+button\+\_\+event\+::pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aae253d3da456f719a42e05251866c319}{mouse\+\_\+button\+\_\+ref}}}]{b}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if mouse button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Mouse button to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mouse button is pressed or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mouse__button__event_a93fae05971838957ffae462cb4862f88}\index{lava::mouse\_button\_event@{lava::mouse\_button\_event}!released@{released}}
+\index{released@{released}!lava::mouse\_button\_event@{lava::mouse\_button\_event}}
+\doxysubsubsection{\texorpdfstring{released()}{released()}}
+{\footnotesize\ttfamily \label{structlava_1_1mouse__button__event_a93fae05971838957ffae462cb4862f88} 
+bool lava\+::mouse\+\_\+button\+\_\+event\+::released (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aae253d3da456f719a42e05251866c319}{mouse\+\_\+button\+\_\+ref}}}]{b}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if mouse button is released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Mouse button to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mouse button is released or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

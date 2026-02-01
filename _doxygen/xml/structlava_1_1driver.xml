@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1driver" kind="struct" language="C++" prot="public">
+    <compoundname>lava::driver</compoundname>
+    <includes refid="driver_8hpp" local="no">driver.hpp</includes>
+    <innerclass refid="structlava_1_1driver_1_1result" prot="public">lava::driver::result</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84" prot="public" static="no" strong="no">
+        <type></type>
+        <name>error</name>
+        <qualifiedname>lava::driver::error</qualifiedname>
+        <enumvalue id="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84a704bcc3ac951b159471e0357819af7c5" prot="public">
+          <name>stages_empty</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84a24548edbcd14d071fb7348ff6979221a" prot="public">
+          <name>stage_not_found</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84aefcbc46224378df418ad3e1730912486" prot="public">
+          <name>undef_run</name>
+          <initializer>= -3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Driver error codes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="51" column="5" bodyfile="liblava/frame/driver.hpp" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1driver_1a17f884fcfa3e5acb85f36da82a5b9240" prot="public" static="no">
+        <type>std::function&lt; <ref refid="structlava_1_1driver_1_1result" kindref="compound">result</ref>(argh::parser)&gt;</type>
+        <definition>using lava::driver::run_func =  std::function&lt;result(argh::parser)&gt;</definition>
+        <argsstring></argsstring>
+        <name>run_func</name>
+        <qualifiedname>lava::driver::run_func</qualifiedname>
+        <briefdescription>
+<para>Run function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="102" column="5" bodyfile="liblava/frame/driver.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1driver_1aae9102b766adabd740bb293e26c7e60c" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1driver_1a17f884fcfa3e5acb85f36da82a5b9240" kindref="member">run_func</ref></type>
+        <definition>run_func lava::driver::on_run</definition>
+        <argsstring></argsstring>
+        <name>on_run</name>
+        <qualifiedname>lava::driver::on_run</qualifiedname>
+        <briefdescription>
+<para>Called if no stage has been selected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="105" column="14" bodyfile="liblava/frame/driver.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1driver_1ae7a893869a3c49f1a9a55885d23e8358" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1stage_1af9a5dffac53f1f39a6d201f775d40bb9" kindref="member">stage::map</ref></type>
+        <definition>stage::map lava::driver::m_stages</definition>
+        <argsstring></argsstring>
+        <name>m_stages</name>
+        <qualifiedname>lava::driver::m_stages</qualifiedname>
+        <briefdescription>
+<para>Map of stages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="114" column="16" bodyfile="liblava/frame/driver.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1driver_1ade12629f76d50f187860954ec93e5b15" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1driver" kindref="compound">driver</ref> &amp;</type>
+        <definition>static driver &amp; lava::driver::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <qualifiedname>lava::driver::instance</qualifiedname>
+        <briefdescription>
+<para>Get driver instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>driver&amp; Stage driver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="72" column="19" bodyfile="liblava/frame/driver.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1driver_1a10b1666387c2aac2ee2c3fcc0b56d87a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::driver::add_stage</definition>
+        <argsstring>(stage *stage)</argsstring>
+        <name>add_stage</name>
+        <qualifiedname>lava::driver::add_stage</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1stage" kindref="compound">stage</ref> *</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+<para>Add a stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stage to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="81" column="10" bodyfile="liblava/frame/driver.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1driver_1acd24daf28a3186453991f5ef1201e39e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1stage_1af9a5dffac53f1f39a6d201f775d40bb9" kindref="member">stage::map</ref> const &amp;</type>
+        <definition>stage::map const  &amp; lava::driver::get_stages</definition>
+        <argsstring>() const</argsstring>
+        <name>get_stages</name>
+        <qualifiedname>lava::driver::get_stages</qualifiedname>
+        <briefdescription>
+<para>Get all stages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1stage_1af9a5dffac53f1f39a6d201f775d40bb9" kindref="member">stage::map</ref> const&amp; Map of stages </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="90" column="22" bodyfile="liblava/frame/driver.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1driver_1a8d80fe8735c05b7a898439d1a6ca7da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+        <definition>i32 lava::driver::run</definition>
+        <argsstring>(argh::parser cmd_line={})</argsstring>
+        <name>run</name>
+        <qualifiedname>lava::driver::run</qualifiedname>
+        <param>
+          <type>argh::parser</type>
+          <declname>cmd_line</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Run the driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="argh_8hpp_1a0ec69c8269dd4598981cbfeea2cc88d1" kindref="member">cmd_line</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command line arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref> Result code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="99" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1driver_1a0d51214bc8ac2efbd9835f2a4defe7a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::driver::driver</definition>
+        <argsstring>()=default</argsstring>
+        <name>driver</name>
+        <qualifiedname>lava::driver::driver</qualifiedname>
+        <briefdescription>
+<para>Construct a new driver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/driver.hpp" line="111" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Stage driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/frame/driver.hpp" line="47" column="1" bodyfile="liblava/frame/driver.hpp" bodystart="47" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structlava_1_1driver_1a10b1666387c2aac2ee2c3fcc0b56d87a" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>add_stage</name></member>
+      <member refid="structlava_1_1driver_1a0d51214bc8ac2efbd9835f2a4defe7a1" prot="private" virt="non-virtual"><scope>lava::driver</scope><name>driver</name></member>
+      <member refid="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>error</name></member>
+      <member refid="structlava_1_1driver_1acd24daf28a3186453991f5ef1201e39e" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>get_stages</name></member>
+      <member refid="structlava_1_1driver_1ade12629f76d50f187860954ec93e5b15" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>instance</name></member>
+      <member refid="structlava_1_1driver_1ae7a893869a3c49f1a9a55885d23e8358" prot="private" virt="non-virtual"><scope>lava::driver</scope><name>m_stages</name></member>
+      <member refid="structlava_1_1driver_1aae9102b766adabd740bb293e26c7e60c" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>on_run</name></member>
+      <member refid="structlava_1_1driver_1a8d80fe8735c05b7a898439d1a6ca7da0" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>run</name></member>
+      <member refid="structlava_1_1driver_1a17f884fcfa3e5acb85f36da82a5b9240" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>run_func</name></member>
+      <member refid="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84a24548edbcd14d071fb7348ff6979221a" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>stage_not_found</name></member>
+      <member refid="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84a704bcc3ac951b159471e0357819af7c5" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>stages_empty</name></member>
+      <member refid="structlava_1_1driver_1a46bcb3fcede1d91f250dd6bef15bba84aefcbc46224378df418ad3e1730912486" prot="public" virt="non-virtual"><scope>lava::driver</scope><name>undef_run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

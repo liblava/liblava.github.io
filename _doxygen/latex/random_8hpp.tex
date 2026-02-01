@@ -1,0 +1,75 @@
+\doxysection{liblava/util/random.hpp File Reference}
+\hypertarget{random_8hpp}{}\label{random_8hpp}\index{liblava/util/random.hpp@{liblava/util/random.hpp}}
+
+
+Random generator.  
+
+
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+{\ttfamily \#include $<$random$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1random__generator}{lava\+::random\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Random generator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1pseudorandom__generator}{lava\+::pseudorandom\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Pseudorandom generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{random_8hpp_a2b30833553c956eae25b0b04e5b1f04a}{lava\+::random}} (auto low, auto high)
+\begin{DoxyCompactList}\small\item\em Get next random number. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{random_8hpp_ab8d0f846d47c3f6b005c344dc3583411}{lava\+::random}} (auto high)
+\begin{DoxyCompactList}\small\item\em Get next random number (lowest is 0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Random generator. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{random_8hpp_ab8d0f846d47c3f6b005c344dc3583411}\index{random.hpp@{random.hpp}!random@{random}}
+\index{random@{random}!random.hpp@{random.hpp}}
+\doxysubsubsection{\texorpdfstring{random()}{random()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{random_8hpp_ab8d0f846d47c3f6b005c344dc3583411} 
+auto lava\+::random (\begin{DoxyParamCaption}\item[{auto}]{high}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get next random number (lowest is 0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high} & Highest number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Random number 
+\end{DoxyReturn}
+\Hypertarget{random_8hpp_a2b30833553c956eae25b0b04e5b1f04a}\index{random.hpp@{random.hpp}!random@{random}}
+\index{random@{random}!random.hpp@{random.hpp}}
+\doxysubsubsection{\texorpdfstring{random()}{random()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{random_8hpp_a2b30833553c956eae25b0b04e5b1f04a} 
+auto lava\+::random (\begin{DoxyParamCaption}\item[{auto}]{low}{, }\item[{auto}]{high}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get next random number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em low} & Lowest number \\
+\hline
+{\em high} & Highest number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto Random number 
+\end{DoxyReturn}

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1queue" kind="struct" language="C++" prot="public">
+    <compoundname>lava::queue</compoundname>
+    <includes refid="queue_8hpp" local="no">queue.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" prot="public" static="no">
+        <type>std::deque&lt; <ref refid="structlava_1_1queue" kindref="compound">queue</ref> &gt;</type>
+        <definition>using lava::queue::list =  std::deque&lt;queue&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::queue::list</qualifiedname>
+        <briefdescription>
+<para>List of queues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="20" column="5" bodyfile="liblava/base/queue.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" prot="public" static="no">
+        <type><ref refid="structlava_1_1queue" kindref="compound">queue</ref> const  &amp;</type>
+        <definition>using lava::queue::ref =  queue const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::queue::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="23" column="5" bodyfile="liblava/base/queue.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1queue_1a3d39db83595291f24fc52c74c736d107" prot="public" static="no" mutable="no">
+        <type>VkQueue</type>
+        <definition>VkQueue lava::queue::vk_queue</definition>
+        <argsstring></argsstring>
+        <name>vk_queue</name>
+        <qualifiedname>lava::queue::vk_queue</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="26" column="13" bodyfile="liblava/base/queue.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1queue_1aca97ae9b3b7e040daac58116647b104b" prot="public" static="no" mutable="no">
+        <type>VkQueueFlags</type>
+        <definition>VkQueueFlags lava::queue::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <qualifiedname>lava::queue::flags</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Queue flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="29" column="18" bodyfile="liblava/base/queue.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1queue_1ab085c28ba85b1ae3b01719e3e59a1fa7" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::queue::family</definition>
+        <argsstring></argsstring>
+        <name>family</name>
+        <qualifiedname>lava::queue::family</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Queue family index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="32" column="11" bodyfile="liblava/base/queue.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1queue_1a96bb451532bb15ed5da445112fed7b69" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::queue::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <qualifiedname>lava::queue::priority</qualifiedname>
+        <initializer>= 1.f</initializer>
+        <briefdescription>
+<para>Queue priority. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="35" column="9" bodyfile="liblava/base/queue.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1queue_1a8c9c2ecc9a2fe7ad64da0a2cc66a253c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::queue::valid</definition>
+        <argsstring>() const</argsstring>
+        <name>valid</name>
+        <qualifiedname>lava::queue::valid</qualifiedname>
+        <briefdescription>
+<para>Check if queue is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Queue is valid or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="41" column="10" bodyfile="liblava/base/queue.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1queue_1a5170f20bc30c95371856be53fbb0e41b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::queue::operator&lt;</definition>
+        <argsstring>(queue const &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>lava::queue::operator&lt;</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1queue" kindref="compound">queue</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Queue priority compare operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue to compare </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Priority of queue is higher or lower and equal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/queue.hpp" line="50" column="5" bodyfile="liblava/base/queue.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Device queue. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/base/queue.hpp" line="18" column="1" bodyfile="liblava/base/queue.hpp" bodystart="18" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structlava_1_1queue_1ab085c28ba85b1ae3b01719e3e59a1fa7" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>family</name></member>
+      <member refid="structlava_1_1queue_1aca97ae9b3b7e040daac58116647b104b" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>flags</name></member>
+      <member refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>list</name></member>
+      <member refid="structlava_1_1queue_1a5170f20bc30c95371856be53fbb0e41b" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>operator&lt;</name></member>
+      <member refid="structlava_1_1queue_1a96bb451532bb15ed5da445112fed7b69" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>priority</name></member>
+      <member refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>ref</name></member>
+      <member refid="structlava_1_1queue_1a8c9c2ecc9a2fe7ad64da0a2cc66a253c" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>valid</name></member>
+      <member refid="structlava_1_1queue_1a3d39db83595291f24fc52c74c736d107" prot="public" virt="non-virtual"><scope>lava::queue</scope><name>vk_queue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

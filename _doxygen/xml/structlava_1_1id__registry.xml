@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1id__registry" kind="struct" language="C++" prot="public">
+    <compoundname>lava::id_registry</compoundname>
+    <includes refid="id_8hpp" local="no">id.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Meta</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" prot="public" static="no">
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>using lava::id_registry&lt; T, Meta &gt;::s_ptr =  std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::id_registry::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to id registry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="230" column="5" bodyfile="liblava/core/id.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1id__registry_1a485b50a5c6a7566d10d70675b002db70" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::id_registry&lt; T, Meta &gt;::s_map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <qualifiedname>lava::id_registry::s_map</qualifiedname>
+        <briefdescription>
+<para>Map of id registries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="233" column="5" bodyfile="liblava/core/id.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1id__registry_1aba3cc34d6a51590b48e6b611f48e04b2" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, Meta &gt;</type>
+        <definition>using lava::id_registry&lt; T, Meta &gt;::meta_map =  std::map&lt;id, Meta&gt;</definition>
+        <argsstring></argsstring>
+        <name>meta_map</name>
+        <qualifiedname>lava::id_registry::meta_map</qualifiedname>
+        <briefdescription>
+<para>Map of ids with meta. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="236" column="5" bodyfile="liblava/core/id.hpp" bodystart="236" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1id__registry_1acc803b7459c08a2e613f0a596ddb3773" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id__registry_1a485b50a5c6a7566d10d70675b002db70" kindref="member">s_map</ref></type>
+        <definition>s_map lava::id_registry&lt; T, Meta &gt;::m_objects</definition>
+        <argsstring></argsstring>
+        <name>m_objects</name>
+        <qualifiedname>lava::id_registry::m_objects</qualifiedname>
+        <briefdescription>
+<para>Map of objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="338" column="11" bodyfile="liblava/core/id.hpp" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1id__registry_1a07206426c9fa906f5c6b71a66980673d" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id__registry_1aba3cc34d6a51590b48e6b611f48e04b2" kindref="member">meta_map</ref></type>
+        <definition>meta_map lava::id_registry&lt; T, Meta &gt;::m_meta</definition>
+        <argsstring></argsstring>
+        <name>m_meta</name>
+        <qualifiedname>lava::id_registry::m_meta</qualifiedname>
+        <briefdescription>
+<para>Map of metas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="341" column="14" bodyfile="liblava/core/id.hpp" bodystart="341" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1id__registry_1a17f7cda234e50ef2b3baa76a4d3f4234" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::id_registry&lt; T, Meta &gt;::create</definition>
+        <argsstring>(Meta info={})</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::id_registry::create</qualifiedname>
+        <param>
+          <type>Meta</type>
+          <declname>info</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Create a new object in registry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Meta information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id Object id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="243" column="8" bodyfile="liblava/core/id.hpp" bodystart="243" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a5b0bf79cb4c321728640787613735f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::id_registry&lt; T, Meta &gt;::add</definition>
+        <argsstring>(s_ptr object, Meta info={})</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::id_registry::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" kindref="member">s_ptr</ref></type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>Meta</type>
+          <declname>info</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Add a object with meta to registry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Meta of object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="255" column="10" bodyfile="liblava/core/id.hpp" bodystart="255" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a1ef7f586431ea57e7e1cd8046ce4e5d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::id_registry&lt; T, Meta &gt;::exists</definition>
+        <argsstring>(id::ref object_id) const</argsstring>
+        <name>exists</name>
+        <qualifiedname>lava::id_registry::exists</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>object_id</declname>
+        </param>
+        <briefdescription>
+<para>Check if object exists in registry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object exists or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="266" column="10" bodyfile="liblava/core/id.hpp" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1ad307cb6ec788483366d6388424d78241" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" kindref="member">s_ptr</ref></type>
+        <definition>s_ptr lava::id_registry&lt; T, Meta &gt;::get</definition>
+        <argsstring>(id::ref object_id) const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::id_registry::get</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>object_id</declname>
+        </param>
+        <briefdescription>
+<para>Get the object by id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" kindref="member">s_ptr</ref> Shared pointer to object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="275" column="11" bodyfile="liblava/core/id.hpp" bodystart="275" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1aa44e8196ff58f515776f7395779f3860" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Meta const &amp;</type>
+        <definition>Meta const  &amp; lava::id_registry&lt; T, Meta &gt;::get_meta</definition>
+        <argsstring>(id::ref object_id) const</argsstring>
+        <name>get_meta</name>
+        <qualifiedname>lava::id_registry::get_meta</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>object_id</declname>
+        </param>
+        <briefdescription>
+<para>Get the meta by id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Meta Meta object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="284" column="16" bodyfile="liblava/core/id.hpp" bodystart="284" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a34fdce0eeaec6102cc6d6447b2c1306f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id__registry_1a485b50a5c6a7566d10d70675b002db70" kindref="member">s_map</ref> const &amp;</type>
+        <definition>s_map const  &amp; lava::id_registry&lt; T, Meta &gt;::get_all</definition>
+        <argsstring>() const</argsstring>
+        <name>get_all</name>
+        <qualifiedname>lava::id_registry::get_all</qualifiedname>
+        <briefdescription>
+<para>Get all objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1id__registry_1a485b50a5c6a7566d10d70675b002db70" kindref="member">s_map</ref> const&amp; Map with objects </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="292" column="17" bodyfile="liblava/core/id.hpp" bodystart="292" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1abe1072366fcd4133bf88fe572c437c02" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id__registry_1aba3cc34d6a51590b48e6b611f48e04b2" kindref="member">meta_map</ref> const &amp;</type>
+        <definition>meta_map const  &amp; lava::id_registry&lt; T, Meta &gt;::get_all_meta</definition>
+        <argsstring>() const</argsstring>
+        <name>get_all_meta</name>
+        <qualifiedname>lava::id_registry::get_all_meta</qualifiedname>
+        <briefdescription>
+<para>Get all meta objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1id__registry_1aba3cc34d6a51590b48e6b611f48e04b2" kindref="member">meta_map</ref> const&amp; Map with metas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="300" column="20" bodyfile="liblava/core/id.hpp" bodystart="300" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a538de7261d27bb2f3618fd955a59cfce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::id_registry&lt; T, Meta &gt;::update</definition>
+        <argsstring>(id::ref object_id, Meta const &amp;meta)</argsstring>
+        <name>update</name>
+        <qualifiedname>lava::id_registry::update</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>object_id</declname>
+        </param>
+        <param>
+          <type>Meta const &amp;</type>
+          <declname>meta</declname>
+        </param>
+        <briefdescription>
+<para>Update meta of object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Meta to update </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Meta updated or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="310" column="10" bodyfile="liblava/core/id.hpp" bodystart="310" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a5f050d3ebb14fb5e3d2ba1e3afad1468" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::id_registry&lt; T, Meta &gt;::remove</definition>
+        <argsstring>(id::ref object_id)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::id_registry::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>object_id</declname>
+        </param>
+        <briefdescription>
+<para>Remove object from registry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="323" column="10" bodyfile="liblava/core/id.hpp" bodystart="323" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__registry_1a46dc3451b22f67ca87c551529565ace6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::id_registry&lt; T, Meta &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::id_registry::clear</qualifiedname>
+        <briefdescription>
+<para>Clear the registry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="331" column="10" bodyfile="liblava/core/id.hpp" bodystart="331" bodyend="334"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Id registry. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of objects hold in registry </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Meta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Meta type for object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="liblava/core/id.hpp" line="228" column="1" bodyfile="liblava/core/id.hpp" bodystart="228" bodyend="342"/>
+    <listofallmembers>
+      <member refid="structlava_1_1id__registry_1a5b0bf79cb4c321728640787613735f3f" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>add</name></member>
+      <member refid="structlava_1_1id__registry_1a46dc3451b22f67ca87c551529565ace6" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>clear</name></member>
+      <member refid="structlava_1_1id__registry_1a17f7cda234e50ef2b3baa76a4d3f4234" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>create</name></member>
+      <member refid="structlava_1_1id__registry_1a1ef7f586431ea57e7e1cd8046ce4e5d7" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>exists</name></member>
+      <member refid="structlava_1_1id__registry_1ad307cb6ec788483366d6388424d78241" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>get</name></member>
+      <member refid="structlava_1_1id__registry_1a34fdce0eeaec6102cc6d6447b2c1306f" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>get_all</name></member>
+      <member refid="structlava_1_1id__registry_1abe1072366fcd4133bf88fe572c437c02" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>get_all_meta</name></member>
+      <member refid="structlava_1_1id__registry_1aa44e8196ff58f515776f7395779f3860" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>get_meta</name></member>
+      <member refid="structlava_1_1id__registry_1a07206426c9fa906f5c6b71a66980673d" prot="private" virt="non-virtual"><scope>lava::id_registry</scope><name>m_meta</name></member>
+      <member refid="structlava_1_1id__registry_1acc803b7459c08a2e613f0a596ddb3773" prot="private" virt="non-virtual"><scope>lava::id_registry</scope><name>m_objects</name></member>
+      <member refid="structlava_1_1id__registry_1aba3cc34d6a51590b48e6b611f48e04b2" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>meta_map</name></member>
+      <member refid="structlava_1_1id__registry_1a5f050d3ebb14fb5e3d2ba1e3afad1468" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>remove</name></member>
+      <member refid="structlava_1_1id__registry_1a485b50a5c6a7566d10d70675b002db70" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>s_map</name></member>
+      <member refid="structlava_1_1id__registry_1aace8a32d21e2f7ae833d156314ec5234" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1id__registry_1a538de7261d27bb2f3618fd955a59cfce" prot="public" virt="non-virtual"><scope>lava::id_registry</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

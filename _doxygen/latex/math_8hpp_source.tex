@@ -1,0 +1,129 @@
+\doxysection{math.\+hpp}
+\hypertarget{math_8hpp_source}{}\label{math_8hpp_source}\index{liblava/util/math.hpp@{liblava/util/math.hpp}}
+\mbox{\hyperlink{math_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}picosha2.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_RADIANS}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_DEPTH\_ZERO\_TO\_ONE}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}glm/glm.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}glm/gtc/matrix\_transform.hpp"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}glm/gtc/type\_ptr.hpp"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_a4e3a0adf51090a120cdae77cc06ec2a1}{v2}}\ =\ glm::vec2;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ =\ glm::vec3;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}\ =\ glm::vec4;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ =\ glm::uvec2;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_a9f15b92db378c4620d41e072a530d0df}{mat3}}\ =\ glm::mat3;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ =\ glm::mat4;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ =\ glm::ivec2;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{using\ }\mbox{\hyperlink{math_8hpp_aad07ac9f8537f6d9ddf687d152431200}{iv3}}\ =\ glm::ivec3;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a}{rect}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}{ref}}\ =\ \mbox{\hyperlink{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a}{rect}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a}{rect}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_a3d0f4f5754c31997269ed57b81ec6ef1}{rect}}(\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}\ left,\ \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}\ top,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ width,\ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ height)}
+\DoxyCodeLine{00066\ \ \ \ \ :\ m\_left\_top(\{left,\ top\})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\{width,\ height\});}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_ac5ed6ef38b816c3960821013d261187d}{rect}}(\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ \textcolor{keyword}{const}\&\ left\_top,}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ width,\ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ height)}
+\DoxyCodeLine{00078\ \ \ \ \ :\ m\_left\_top(left\_top)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\{width,\ height\});}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_aba98af4909b983af8ca2461a0f79a394}{rect}}(\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ \textcolor{keyword}{const}\&\ left\_top,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ \textcolor{keyword}{const}\&\ size)}
+\DoxyCodeLine{00089\ \ \ \ \ :\ m\_left\_top(left\_top)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(size);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1rect_a1bb7aa44bc739dc0d56569f39b9392c6}{get\_origin}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_left\_top;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1rect_aa85aa770875eac252d6477451ab55e23}{get\_end\_point}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_right\_bottom;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ \mbox{\hyperlink{structlava_1_1rect_aaeaf65436bf93bcfb312be45aa751806}{get\_size}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ LAVA\_ASSERT(m\_left\_top.x\ <=\ m\_right\_bottom.x);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ LAVA\_ASSERT(m\_left\_top.y\ <=\ m\_right\_bottom.y);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{m\_right\_bottom.x\ -\/\ m\_left\_top.x,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_right\_bottom.y\ -\/\ m\_left\_top.y\};}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\_size}}(\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ \textcolor{keyword}{const}\&\ size)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ m\_right\_bottom.x\ =\ m\_left\_top.x\ +\ size.x;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ m\_right\_bottom.y\ =\ m\_left\_top.y\ +\ size.y;}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1rect_af28e1e3c0610aae0d1619ef89c93e419}{move}}(\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ \textcolor{keyword}{const}\&\ offset)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ m\_left\_top\ +=\ offset;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ m\_right\_bottom\ +=\ offset;}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1rect_a706360205e786afeafb94b91802162a3}{contains}}(\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ point)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (m\_left\_top.x\ <\ point.x)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (m\_left\_top.y\ <\ point.y)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (m\_right\_bottom.x\ >\ point.x)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (m\_right\_bottom.y\ >\ point.y);}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ m\_left\_top\ =\ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}\ m\_right\_bottom\ =\ \mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}();}
+\DoxyCodeLine{00156\ \};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{math_8hpp_a29d6bb9c11a24947cd7e1ea649ed626b}{ceil\_div}}(\textcolor{keyword}{auto}\ x,\ \textcolor{keyword}{auto}\ y)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{return}\ (x\ +\ y\ -\/\ 1)\ /\ y;}
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00169\ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{math_8hpp_afe888185f07103e7eee3daa64a4e0f04}{default\_color}}\ =\ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\{0.8118f,}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0627f,}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.1255f\};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}}\ \mbox{\hyperlink{math_8hpp_a3a95d0862fb9fdf36a0fa9e3d5f67c1c}{perspective\_matrix}}(\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ size,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ fov\ =\ 90.f,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ far\_plane\ =\ 5.f)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ Vulkan\ NDC\ is\ right-\/handed\ with\ Y\ pointing\ down}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//\ we\ flip\ Y\ which\ makes\ it\ left-\/handed}}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ glm::scale(glm::identity<glm::mat4>(),}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{1.f,\ -\/1.f,\ 1.f\})}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ *\ glm::perspectiveLH\_ZO(}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::radians(fov),}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}(size.x)\ /\ size.y,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.1f,}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ far\_plane);}
+\DoxyCodeLine{00192\ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{math_8hpp_ab4d9c1b9eb7d51228db5de1a164d07d4}{hash256}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ value)\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ std::vector<uc8>\ hash(picosha2::k\_digest\_size);}
+\DoxyCodeLine{00201\ \ \ \ \ picosha2::hash256(value.begin(),\ value.end(),}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hash.begin(),\ hash.end());}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordflow}{return}\ picosha2::bytes\_to\_hex\_string(hash.begin(),\ hash.end());}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

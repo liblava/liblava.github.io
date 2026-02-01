@@ -1,0 +1,149 @@
+\doxysection{lava\+::json\+\_\+file Struct Reference}
+\hypertarget{structlava_1_1json__file}{}\label{structlava_1_1json__file}\index{lava::json\_file@{lava::json\_file}}
+
+
+Json file.  
+
+
+
+
+{\ttfamily \#include $<$json\+\_\+file.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}}
+\begin{DoxyCompactList}\small\item\em Json file callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1json__file_ac1a7e52bf524153c11c55c856022c9de}{json\+\_\+file}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path="{}config.\+json"{})
+\begin{DoxyCompactList}\small\item\em Construct a new json file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1json__file_afae0540df27bf7bfa0f0c669a534577e}{add}} (\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}})
+\begin{DoxyCompactList}\small\item\em Add callback to json file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1json__file_a03ccb249c96a5c28282cd0a814d65a64}{remove}} (\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}})
+\begin{DoxyCompactList}\small\item\em Remove callback from json file. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1json__file_a882c2ebe6f850e5d9ad30281d062b0be}\label{structlava_1_1json__file_a882c2ebe6f850e5d9ad30281d062b0be} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1json__file_a0618669ca032de3d8c3a6b28da6d3b22}{set}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} value)
+\begin{DoxyCompactList}\small\item\em Set path of the json file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1json__file_a24ab8dd1c900bbefca20e75791670b03}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get path of the json file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1json__file_af4614ce9c2d36a9ae763abe822cc640c}{load}} ()
+\begin{DoxyCompactList}\small\item\em Load the json file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1json__file_a8174ad57c686d1004bcd33ab016a4689}{save}} ()
+\begin{DoxyCompactList}\small\item\em Save the json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Json file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1json__file_ac1a7e52bf524153c11c55c856022c9de}\index{lava::json\_file@{lava::json\_file}!json\_file@{json\_file}}
+\index{json\_file@{json\_file}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{json\_file()}{json\_file()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_ac1a7e52bf524153c11c55c856022c9de} 
+lava\+::json\+\_\+file\+::json\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{ = {\ttfamily "{}config.json"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1json__file_afae0540df27bf7bfa0f0c669a534577e}\index{lava::json\_file@{lava::json\_file}!add@{add}}
+\index{add@{add}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_afae0540df27bf7bfa0f0c669a534577e} 
+void lava\+::json\+\_\+file\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Add callback to json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1json__file_a24ab8dd1c900bbefca20e75791670b03}\index{lava::json\_file@{lava::json\_file}!get@{get}}
+\index{get@{get}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_a24ab8dd1c900bbefca20e75791670b03} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::json\+\_\+file\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get path of the json file. 
+
+\begin{DoxyReturn}{Returns}
+name Name of file 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1json__file_af4614ce9c2d36a9ae763abe822cc640c}\index{lava::json\_file@{lava::json\_file}!load@{load}}
+\index{load@{load}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_af4614ce9c2d36a9ae763abe822cc640c} 
+bool lava\+::json\+\_\+file\+::load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the json file. 
+
+\begin{DoxyReturn}{Returns}
+Load was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1json__file_a03ccb249c96a5c28282cd0a814d65a64}\index{lava::json\_file@{lava::json\_file}!remove@{remove}}
+\index{remove@{remove}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_a03ccb249c96a5c28282cd0a814d65a64} 
+void lava\+::json\+\_\+file\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1json__file_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Remove callback from json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1json__file_a8174ad57c686d1004bcd33ab016a4689}\index{lava::json\_file@{lava::json\_file}!save@{save}}
+\index{save@{save}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_a8174ad57c686d1004bcd33ab016a4689} 
+bool lava\+::json\+\_\+file\+::save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Save the json file. 
+
+\begin{DoxyReturn}{Returns}
+Save was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1json__file_a0618669ca032de3d8c3a6b28da6d3b22}\index{lava::json\_file@{lava::json\_file}!set@{set}}
+\index{set@{set}!lava::json\_file@{lava::json\_file}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \label{structlava_1_1json__file_a0618669ca032de3d8c3a6b28da6d3b22} 
+void lava\+::json\+\_\+file\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set path of the json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Name of file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/file/\mbox{\hyperlink{json__file_8hpp}{json\+\_\+file.\+hpp}}\end{DoxyCompactItemize}

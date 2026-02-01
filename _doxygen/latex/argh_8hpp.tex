@@ -1,0 +1,73 @@
+\doxysection{liblava/frame/argh.hpp File Reference}
+\hypertarget{argh_8hpp}{}\label{argh_8hpp}\index{liblava/frame/argh.hpp@{liblava/frame/argh.hpp}}
+
+
+Json.  
+
+
+{\ttfamily \#include "{}argh.\+h"{}}\newline
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}\label{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1} 
+using {\bfseries lava\+::cmd\+\_\+line} = argh\+::parser const\&
+\begin{DoxyCompactList}\small\item\em Command line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{argh_8hpp_afd197b24f5f0a6899e5c789be5423d44}{lava\+::log\+\_\+command\+\_\+line}} (\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}})
+\begin{DoxyCompactList}\small\item\em Log command line. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{argh_8hpp_a062975a34441fc9c4bdebaac998431c2}{lava\+::get\+\_\+cmd}} (\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}, std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} const $>$ \mbox{\hyperlink{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82}{names}})
+\begin{DoxyCompactList}\small\item\em Get the value from command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Json. 
+
+Command line arguments.
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{argh_8hpp_a062975a34441fc9c4bdebaac998431c2}\index{argh.hpp@{argh.hpp}!get\_cmd@{get\_cmd}}
+\index{get\_cmd@{get\_cmd}!argh.hpp@{argh.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_cmd()}{get\_cmd()}}
+{\footnotesize\ttfamily \label{argh_8hpp_a062975a34441fc9c4bdebaac998431c2} 
+string lava\+::get\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}}]{cmd\+\_\+line}{, }\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} const $>$}]{names}{}\end{DoxyParamCaption})}
+
+
+
+Get the value from command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+line} & Command line arguments \\
+\hline
+{\em names} & Argument names \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Value of command line argument 
+\end{DoxyReturn}
+\Hypertarget{argh_8hpp_afd197b24f5f0a6899e5c789be5423d44}\index{argh.hpp@{argh.hpp}!log\_command\_line@{log\_command\_line}}
+\index{log\_command\_line@{log\_command\_line}!argh.hpp@{argh.hpp}}
+\doxysubsubsection{\texorpdfstring{log\_command\_line()}{log\_command\_line()}}
+{\footnotesize\ttfamily \label{argh_8hpp_afd197b24f5f0a6899e5c789be5423d44} 
+void lava\+::log\+\_\+command\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}}]{cmd\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+Log command line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+line} & Command line arguments \\
+\hline
+\end{DoxyParams}

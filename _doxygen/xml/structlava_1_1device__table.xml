@@ -1,0 +1,1143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1device__table" kind="struct" language="C++" prot="public">
+    <compoundname>lava::device_table</compoundname>
+    <derivedcompoundref refid="structlava_1_1device" prot="public" virt="non-virtual">lava::device</derivedcompoundref>
+    <includes refid="device__table_8hpp" local="no">device_table.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1device__table_1a77e8f0bf98ac04eaaf68cc5406ff72d6" prot="public" static="no" mutable="no">
+        <type>VkDevice</type>
+        <definition>VkDevice lava::device_table::vk_device</definition>
+        <argsstring></argsstring>
+        <name>vk_device</name>
+        <qualifiedname>lava::device_table::vk_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="457" column="14" bodyfile="liblava/base/device_table.hpp" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device__table_1a1d871a98c3349b449c4d67f079b5798f" prot="public" static="no" mutable="no">
+        <type>VolkDeviceTable</type>
+        <definition>VolkDeviceTable lava::device_table::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <qualifiedname>lava::device_table::table</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Volk device table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="460" column="21" bodyfile="liblava/base/device_table.hpp" bodystart="460" bodyend="460"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1device__table_1a6485fcde506d9a6e3510091921efe673" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::load_table</definition>
+        <argsstring>()</argsstring>
+        <name>load_table</name>
+        <qualifiedname>lava::device_table::load_table</qualifiedname>
+        <briefdescription>
+<para>Load device table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="21" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ab9605d308a708e8b3f4265d8a3eaec0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateImageView</definition>
+        <argsstring>(const VkImageViewCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkImageView *pView)</argsstring>
+        <name>vkCreateImageView</name>
+        <qualifiedname>lava::device_table::vkCreateImageView</qualifiedname>
+        <param>
+          <type>const VkImageViewCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkImageView *</type>
+          <declname>pView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateImageView">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateImageView</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="28" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="28" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1aef2eaad651f261618611d22f0fb94626" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateImageView</definition>
+        <argsstring>(const VkImageViewCreateInfo *pCreateInfo, VkImageView *pView)</argsstring>
+        <name>vkCreateImageView</name>
+        <qualifiedname>lava::device_table::vkCreateImageView</qualifiedname>
+        <param>
+          <type>const VkImageViewCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkImageView *</type>
+          <declname>pView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateImageView">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateImageView</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="41" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ab852b5ff8b09ece6fb864658f7dfd39b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSampler</definition>
+        <argsstring>(const VkSamplerCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkSampler *pSampler)</argsstring>
+        <name>vkCreateSampler</name>
+        <qualifiedname>lava::device_table::vkCreateSampler</qualifiedname>
+        <param>
+          <type>const VkSamplerCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkSampler *</type>
+          <declname>pSampler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSampler">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSampler</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="51" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a110d109b567d5db1b1d2b2b4e76a2246" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSampler</definition>
+        <argsstring>(const VkSamplerCreateInfo *pCreateInfo, VkSampler *pSampler)</argsstring>
+        <name>vkCreateSampler</name>
+        <qualifiedname>lava::device_table::vkCreateSampler</qualifiedname>
+        <param>
+          <type>const VkSamplerCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkSampler *</type>
+          <declname>pSampler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSampler">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSampler</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="64" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a12f6dafcb7308c0b688504636ab289d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateShaderModule</definition>
+        <argsstring>(const VkShaderModuleCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkShaderModule *pShaderModule)</argsstring>
+        <name>vkCreateShaderModule</name>
+        <qualifiedname>lava::device_table::vkCreateShaderModule</qualifiedname>
+        <param>
+          <type>const VkShaderModuleCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkShaderModule *</type>
+          <declname>pShaderModule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateShaderModule">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateShaderModule</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="74" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="74" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1acb12213e27a3fac40fc35cc9f55d9080" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateShaderModule</definition>
+        <argsstring>(const VkShaderModuleCreateInfo *pCreateInfo, VkShaderModule *pShaderModule)</argsstring>
+        <name>vkCreateShaderModule</name>
+        <qualifiedname>lava::device_table::vkCreateShaderModule</qualifiedname>
+        <param>
+          <type>const VkShaderModuleCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkShaderModule *</type>
+          <declname>pShaderModule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateShaderModule">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateShaderModule</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="87" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ace420dd11554de96dc86707ccf5c5cb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateFence</definition>
+        <argsstring>(const VkFenceCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkFence *pFence)</argsstring>
+        <name>vkCreateFence</name>
+        <qualifiedname>lava::device_table::vkCreateFence</qualifiedname>
+        <param>
+          <type>const VkFenceCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkFence *</type>
+          <declname>pFence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateFence">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateFence</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="97" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="97" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a0b08e70562ea67ef07f4917d88152dd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateFence</definition>
+        <argsstring>(const VkFenceCreateInfo *pCreateInfo, VkFence *pFence)</argsstring>
+        <name>vkCreateFence</name>
+        <qualifiedname>lava::device_table::vkCreateFence</qualifiedname>
+        <param>
+          <type>const VkFenceCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkFence *</type>
+          <declname>pFence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateFence">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateFence</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="110" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="110" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ab64d37f196d30dc191d36e5c33f5cd76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSemaphore</definition>
+        <argsstring>(const VkSemaphoreCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkSemaphore *pSemaphore)</argsstring>
+        <name>vkCreateSemaphore</name>
+        <qualifiedname>lava::device_table::vkCreateSemaphore</qualifiedname>
+        <param>
+          <type>const VkSemaphoreCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkSemaphore *</type>
+          <declname>pSemaphore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSemaphore">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSemaphore</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="120" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="120" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a184c655d31f896a706b8437d38d45e8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSemaphore</definition>
+        <argsstring>(const VkSemaphoreCreateInfo *pCreateInfo, VkSemaphore *pSemaphore)</argsstring>
+        <name>vkCreateSemaphore</name>
+        <qualifiedname>lava::device_table::vkCreateSemaphore</qualifiedname>
+        <param>
+          <type>const VkSemaphoreCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkSemaphore *</type>
+          <declname>pSemaphore</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSemaphore">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateSemaphore</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="133" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="133" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1aa7c0adca236066bc65a7a3d4fd5470ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkWaitForFences</definition>
+        <argsstring>(uint32_t fenceCount, const VkFence *pFences, VkBool32 waitAll, uint64_t timeout)</argsstring>
+        <name>vkWaitForFences</name>
+        <qualifiedname>lava::device_table::vkWaitForFences</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>fenceCount</declname>
+        </param>
+        <param>
+          <type>const VkFence *</type>
+          <declname>pFences</declname>
+        </param>
+        <param>
+          <type>VkBool32</type>
+          <declname>waitAll</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkWaitForFences">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkWaitForFences</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="143" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="143" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1adef9da910b0272301e340556fb6202df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkResetFences</definition>
+        <argsstring>(uint32_t fenceCount, const VkFence *pFences)</argsstring>
+        <name>vkResetFences</name>
+        <qualifiedname>lava::device_table::vkResetFences</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>fenceCount</declname>
+        </param>
+        <param>
+          <type>const VkFence *</type>
+          <declname>pFences</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkResetFences">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkResetFences</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="161" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="161" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ad19039936fdba57790ef1abedcfd7a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkQueueSubmit</definition>
+        <argsstring>(VkQueue queue, uint32_t submitCount, const VkSubmitInfo *pSubmits, VkFence fence)</argsstring>
+        <name>vkQueueSubmit</name>
+        <qualifiedname>lava::device_table::vkQueueSubmit</qualifiedname>
+        <param>
+          <type>VkQueue</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>submitCount</declname>
+        </param>
+        <param>
+          <type>const VkSubmitInfo *</type>
+          <declname>pSubmits</declname>
+        </param>
+        <param>
+          <type>VkFence</type>
+          <declname>fence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkQueueSubmit">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkQueueSubmit</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="172" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="172" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1afd39bd9756ec036ee2c587b5579fc024" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkAcquireNextImageKHR</definition>
+        <argsstring>(VkSwapchainKHR swapchain, uint64_t timeout, VkSemaphore semaphore, VkFence fence, uint32_t *pImageIndex)</argsstring>
+        <name>vkAcquireNextImageKHR</name>
+        <qualifiedname>lava::device_table::vkAcquireNextImageKHR</qualifiedname>
+        <param>
+          <type>VkSwapchainKHR</type>
+          <declname>swapchain</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>timeout</declname>
+        </param>
+        <param>
+          <type>VkSemaphore</type>
+          <declname>semaphore</declname>
+        </param>
+        <param>
+          <type>VkFence</type>
+          <declname>fence</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pImageIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="186" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="186" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ac9136218e3ba69707769209b45b58f55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkQueuePresentKHR</definition>
+        <argsstring>(VkQueue queue, const VkPresentInfoKHR *pPresentInfo)</argsstring>
+        <name>vkQueuePresentKHR</name>
+        <qualifiedname>lava::device_table::vkQueuePresentKHR</qualifiedname>
+        <param>
+          <type>VkQueue</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>const VkPresentInfoKHR *</type>
+          <declname>pPresentInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="203" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="203" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a76d5dd53c1f3076c68c43ccc25bd012c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSwapchainKHR</definition>
+        <argsstring>(const VkSwapchainCreateInfoKHR *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkSwapchainKHR *pSwapchain)</argsstring>
+        <name>vkCreateSwapchainKHR</name>
+        <qualifiedname>lava::device_table::vkCreateSwapchainKHR</qualifiedname>
+        <param>
+          <type>const VkSwapchainCreateInfoKHR *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkSwapchainKHR *</type>
+          <declname>pSwapchain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="213" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="213" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a0c4548c0e147bfb52c3a80f92884b7d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateSwapchainKHR</definition>
+        <argsstring>(const VkSwapchainCreateInfoKHR *pCreateInfo, VkSwapchainKHR *pSwapchain)</argsstring>
+        <name>vkCreateSwapchainKHR</name>
+        <qualifiedname>lava::device_table::vkCreateSwapchainKHR</qualifiedname>
+        <param>
+          <type>const VkSwapchainCreateInfoKHR *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkSwapchainKHR *</type>
+          <declname>pSwapchain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="226" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="226" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a44f74c998ac94fc7740b218a76836e48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroySwapchainKHR</definition>
+        <argsstring>(VkSwapchainKHR swapchain, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroySwapchainKHR</name>
+        <qualifiedname>lava::device_table::vkDestroySwapchainKHR</qualifiedname>
+        <param>
+          <type>VkSwapchainKHR</type>
+          <declname>swapchain</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="236" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a6cf01e1682a6013ed4a3746899b370e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkGetSwapchainImagesKHR</definition>
+        <argsstring>(VkSwapchainKHR swapchain, uint32_t *pSwapchainImageCount, VkImage *pSwapchainImages)</argsstring>
+        <name>vkGetSwapchainImagesKHR</name>
+        <qualifiedname>lava::device_table::vkGetSwapchainImagesKHR</qualifiedname>
+        <param>
+          <type>VkSwapchainKHR</type>
+          <declname>swapchain</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pSwapchainImageCount</declname>
+        </param>
+        <param>
+          <type>VkImage *</type>
+          <declname>pSwapchainImages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html">https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="246" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="246" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a9a8c35c91887b67800b79ab49b0afd19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateCommandPool</definition>
+        <argsstring>(const VkCommandPoolCreateInfo *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkCommandPool *pCommandPool)</argsstring>
+        <name>vkCreateCommandPool</name>
+        <qualifiedname>lava::device_table::vkCreateCommandPool</qualifiedname>
+        <param>
+          <type>const VkCommandPoolCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type>VkCommandPool *</type>
+          <declname>pCommandPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="258" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="258" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1af2535c85ababbe9ef4751dffd72d7786" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateCommandPool</definition>
+        <argsstring>(const VkCommandPoolCreateInfo *pCreateInfo, VkCommandPool *pCommandPool)</argsstring>
+        <name>vkCreateCommandPool</name>
+        <qualifiedname>lava::device_table::vkCreateCommandPool</qualifiedname>
+        <param>
+          <type>const VkCommandPoolCreateInfo *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type>VkCommandPool *</type>
+          <declname>pCommandPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="271" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="271" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ac597c59730634ceda15077c5c90df561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkCreateCommandPool</definition>
+        <argsstring>(index queue_family, VkCommandPool *pCommandPool)</argsstring>
+        <name>vkCreateCommandPool</name>
+        <qualifiedname>lava::device_table::vkCreateCommandPool</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>queue_family</declname>
+        </param>
+        <param>
+          <type>VkCommandPool *</type>
+          <declname>pCommandPool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkCreateCommandPool</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="281" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="281" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1aa0d68e90568a79083ba2909b3b2a5cd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkAllocateCommandBuffers</definition>
+        <argsstring>(const VkCommandBufferAllocateInfo *pAllocateInfo, VkCommandBuffer *pCommandBuffers)</argsstring>
+        <name>vkAllocateCommandBuffers</name>
+        <qualifiedname>lava::device_table::vkAllocateCommandBuffers</qualifiedname>
+        <param>
+          <type>const VkCommandBufferAllocateInfo *</type>
+          <declname>pAllocateInfo</declname>
+        </param>
+        <param>
+          <type>VkCommandBuffer *</type>
+          <declname>pCommandBuffers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkAllocateCommandBuffers">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkAllocateCommandBuffers</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="294" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="294" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1af7a2f81296f9b39fb0827524ae441013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref></type>
+        <definition>vk_result lava::device_table::vkAllocateCommandBuffers</definition>
+        <argsstring>(VkCommandPool commandPool, uint32_t commandBufferCount, VkCommandBuffer *pCommandBuffers, VkCommandBufferLevel level=VK_COMMAND_BUFFER_LEVEL_PRIMARY)</argsstring>
+        <name>vkAllocateCommandBuffers</name>
+        <qualifiedname>lava::device_table::vkAllocateCommandBuffers</qualifiedname>
+        <param>
+          <type>VkCommandPool</type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>commandBufferCount</declname>
+        </param>
+        <param>
+          <type>VkCommandBuffer *</type>
+          <declname>pCommandBuffers</declname>
+        </param>
+        <param>
+          <type>VkCommandBufferLevel</type>
+          <declname>level</declname>
+          <defval>VK_COMMAND_BUFFER_LEVEL_PRIMARY</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkAllocateCommandBuffers">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkAllocateCommandBuffers</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="305" column="15" bodyfile="liblava/base/device_table.hpp" bodystart="305" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a4a50fe66466940a0fb52e778490f3d4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroyImageView</definition>
+        <argsstring>(VkImageView imageView, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroyImageView</name>
+        <qualifiedname>lava::device_table::vkDestroyImageView</qualifiedname>
+        <param>
+          <type>VkImageView</type>
+          <declname>imageView</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyImageView">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyImageView</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="322" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="322" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a11175cb5263c36f2a4cfbd9acfd7a0d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroyFence</definition>
+        <argsstring>(VkFence fence, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroyFence</name>
+        <qualifiedname>lava::device_table::vkDestroyFence</qualifiedname>
+        <param>
+          <type>VkFence</type>
+          <declname>fence</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyFence">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyFence</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="332" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="332" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a86814faa0636a23a5eedb3a85e27bb2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroySemaphore</definition>
+        <argsstring>(VkSemaphore semaphore, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroySemaphore</name>
+        <qualifiedname>lava::device_table::vkDestroySemaphore</qualifiedname>
+        <param>
+          <type>VkSemaphore</type>
+          <declname>semaphore</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroySemaphore">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroySemaphore</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="342" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="342" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a3571dfe2e1a1a885dda6cdbb89a16b76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkFreeCommandBuffers</definition>
+        <argsstring>(VkCommandPool commandPool, uint32_t commandBufferCount, const VkCommandBuffer *pCommandBuffers)</argsstring>
+        <name>vkFreeCommandBuffers</name>
+        <qualifiedname>lava::device_table::vkFreeCommandBuffers</qualifiedname>
+        <param>
+          <type>VkCommandPool</type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>commandBufferCount</declname>
+        </param>
+        <param>
+          <type>const VkCommandBuffer *</type>
+          <declname>pCommandBuffers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkFreeCommandBuffers">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkFreeCommandBuffers</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="352" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="352" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a24a2a350988afa38eb13a2f8485ce9a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroyCommandPool</definition>
+        <argsstring>(VkCommandPool commandPool, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroyCommandPool</name>
+        <qualifiedname>lava::device_table::vkDestroyCommandPool</qualifiedname>
+        <param>
+          <type>VkCommandPool</type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyCommandPool">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroyCommandPool</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="364" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="364" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a82932056a1901a4bff4608079b0e54ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkDestroySampler</definition>
+        <argsstring>(VkSampler sampler, const VkAllocationCallbacks *pAllocator=memory::instance().alloc())</argsstring>
+        <name>vkDestroySampler</name>
+        <qualifiedname>lava::device_table::vkDestroySampler</qualifiedname>
+        <param>
+          <type>VkSampler</type>
+          <declname>sampler</declname>
+        </param>
+        <param>
+          <type>const VkAllocationCallbacks *</type>
+          <declname>pAllocator</declname>
+          <defval><ref refid="structlava_1_1memory_1afd4beb821e264e14ccb8ac4ce7385142" kindref="member">memory::instance</ref>().alloc()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroySampler">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkDestroySampler</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="374" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="374" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1abbeacc45f13d0fd86a7e99312367f74e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(uint32_t descriptorWriteCount, const VkWriteDescriptorSet *pDescriptorWrites, uint32_t descriptorCopyCount=0, const VkCopyDescriptorSet *pDescriptorCopies=nullptr)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>descriptorWriteCount</declname>
+        </param>
+        <param>
+          <type>const VkWriteDescriptorSet *</type>
+          <declname>pDescriptorWrites</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>descriptorCopyCount</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const VkCopyDescriptorSet *</type>
+          <declname>pDescriptorCopies</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="384" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="384" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ac5b1bdf0e6788c38aa7ca5b5118b8e21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>SIZE</declname>
+            <defname>SIZE</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::array&lt; VkWriteDescriptorSet, SIZE &gt; const &amp;descriptor_writes)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::array&lt; VkWriteDescriptorSet, SIZE &gt; const &amp;</type>
+          <declname>descriptor_writes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="399" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="399" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1ab17fd51c1c6392952327467a3ee11977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>SIZE</declname>
+            <defname>SIZE</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::array&lt; VkCopyDescriptorSet, SIZE &gt; const &amp;descriptor_copies)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::array&lt; VkCopyDescriptorSet, SIZE &gt; const &amp;</type>
+          <declname>descriptor_copies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="408" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="408" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a6e5ebced33181a52e33baa1ae73f0a0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>WRITE_SIZE</declname>
+            <defname>WRITE_SIZE</defname>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>COPY_SIZE</declname>
+            <defname>COPY_SIZE</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::array&lt; VkWriteDescriptorSet, WRITE_SIZE &gt; const &amp;descriptor_writes, std::array&lt; VkCopyDescriptorSet, COPY_SIZE &gt; const &amp;descriptor_copies)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::array&lt; VkWriteDescriptorSet, WRITE_SIZE &gt; const &amp;</type>
+          <declname>descriptor_writes</declname>
+        </param>
+        <param>
+          <type>std::array&lt; VkCopyDescriptorSet, COPY_SIZE &gt; const &amp;</type>
+          <declname>descriptor_copies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="419" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="419" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a669ace4d084d396f15a54ca4c8e6cdf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::initializer_list&lt; VkWriteDescriptorSet &gt; descriptor_writes)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; VkWriteDescriptorSet &gt;</type>
+          <declname>descriptor_writes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="430" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="430" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a8fa8a5d4f870928bcd13da11a8f2632a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::initializer_list&lt; VkCopyDescriptorSet &gt; descriptor_copies)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; VkCopyDescriptorSet &gt;</type>
+          <declname>descriptor_copies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="438" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="438" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device__table_1a6283dfdf1eb4ce3f09e7e9aec64cd5ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device_table::vkUpdateDescriptorSets</definition>
+        <argsstring>(std::initializer_list&lt; VkWriteDescriptorSet &gt; descriptor_writes, std::initializer_list&lt; VkCopyDescriptorSet &gt; descriptor_copies)</argsstring>
+        <name>vkUpdateDescriptorSets</name>
+        <qualifiedname>lava::device_table::vkUpdateDescriptorSets</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; VkWriteDescriptorSet &gt;</type>
+          <declname>descriptor_writes</declname>
+        </param>
+        <param>
+          <type>std::initializer_list&lt; VkCopyDescriptorSet &gt;</type>
+          <declname>descriptor_copies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets">https://www.khronos.org/registry/vulkan/specs/1.3/html/vkspec.html#vkUpdateDescriptorSets</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device_table.hpp" line="448" column="10" bodyfile="liblava/base/device_table.hpp" bodystart="448" bodyend="454"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Device functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+    </inheritancegraph>
+    <location file="liblava/base/device_table.hpp" line="17" column="1" bodyfile="liblava/base/device_table.hpp" bodystart="17" bodyend="461"/>
+    <listofallmembers>
+      <member refid="structlava_1_1device__table_1a6485fcde506d9a6e3510091921efe673" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>load_table</name></member>
+      <member refid="structlava_1_1device__table_1a1d871a98c3349b449c4d67f079b5798f" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>table</name></member>
+      <member refid="structlava_1_1device__table_1a77e8f0bf98ac04eaaf68cc5406ff72d6" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vk_device</name></member>
+      <member refid="structlava_1_1device__table_1afd39bd9756ec036ee2c587b5579fc024" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkAcquireNextImageKHR</name></member>
+      <member refid="structlava_1_1device__table_1aa0d68e90568a79083ba2909b3b2a5cd9" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkAllocateCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1af7a2f81296f9b39fb0827524ae441013" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkAllocateCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1a9a8c35c91887b67800b79ab49b0afd19" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1af2535c85ababbe9ef4751dffd72d7786" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1ac597c59730634ceda15077c5c90df561" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1ace420dd11554de96dc86707ccf5c5cb6" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateFence</name></member>
+      <member refid="structlava_1_1device__table_1a0b08e70562ea67ef07f4917d88152dd2" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateFence</name></member>
+      <member refid="structlava_1_1device__table_1ab9605d308a708e8b3f4265d8a3eaec0f" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateImageView</name></member>
+      <member refid="structlava_1_1device__table_1aef2eaad651f261618611d22f0fb94626" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateImageView</name></member>
+      <member refid="structlava_1_1device__table_1ab852b5ff8b09ece6fb864658f7dfd39b" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSampler</name></member>
+      <member refid="structlava_1_1device__table_1a110d109b567d5db1b1d2b2b4e76a2246" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSampler</name></member>
+      <member refid="structlava_1_1device__table_1ab64d37f196d30dc191d36e5c33f5cd76" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a184c655d31f896a706b8437d38d45e8c" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a12f6dafcb7308c0b688504636ab289d8" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateShaderModule</name></member>
+      <member refid="structlava_1_1device__table_1acb12213e27a3fac40fc35cc9f55d9080" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateShaderModule</name></member>
+      <member refid="structlava_1_1device__table_1a76d5dd53c1f3076c68c43ccc25bd012c" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a0c4548c0e147bfb52c3a80f92884b7d9" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkCreateSwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a24a2a350988afa38eb13a2f8485ce9a1" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroyCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1a11175cb5263c36f2a4cfbd9acfd7a0d7" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroyFence</name></member>
+      <member refid="structlava_1_1device__table_1a4a50fe66466940a0fb52e778490f3d4d" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroyImageView</name></member>
+      <member refid="structlava_1_1device__table_1a82932056a1901a4bff4608079b0e54ed" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroySampler</name></member>
+      <member refid="structlava_1_1device__table_1a86814faa0636a23a5eedb3a85e27bb2f" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroySemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a44f74c998ac94fc7740b218a76836e48" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkDestroySwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a3571dfe2e1a1a885dda6cdbb89a16b76" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkFreeCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1a6cf01e1682a6013ed4a3746899b370e2" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkGetSwapchainImagesKHR</name></member>
+      <member refid="structlava_1_1device__table_1ac9136218e3ba69707769209b45b58f55" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkQueuePresentKHR</name></member>
+      <member refid="structlava_1_1device__table_1ad19039936fdba57790ef1abedcfd7a4b" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkQueueSubmit</name></member>
+      <member refid="structlava_1_1device__table_1adef9da910b0272301e340556fb6202df" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkResetFences</name></member>
+      <member refid="structlava_1_1device__table_1abbeacc45f13d0fd86a7e99312367f74e" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1ac5b1bdf0e6788c38aa7ca5b5118b8e21" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1ab17fd51c1c6392952327467a3ee11977" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a6e5ebced33181a52e33baa1ae73f0a0b" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a669ace4d084d396f15a54ca4c8e6cdf2" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a8fa8a5d4f870928bcd13da11a8f2632a" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a6283dfdf1eb4ce3f09e7e9aec64cd5ec" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1aa7c0adca236066bc65a7a3d4fd5470ed" prot="public" virt="non-virtual"><scope>lava::device_table</scope><name>vkWaitForFences</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

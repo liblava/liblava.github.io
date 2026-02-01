@@ -1,0 +1,823 @@
+\doxysection{liblava/util/hex.hpp File Reference}
+\hypertarget{hex_8hpp}{}\label{hex_8hpp}\index{liblava/util/hex.hpp@{liblava/util/hex.hpp}}
+
+
+Hex point, cell and grid.  
+
+
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$numbers$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1hex__point}{lava\+::hex\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em Hex point. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__cell}{lava\+::hex\+\_\+cell}}
+\begin{DoxyCompactList}\small\item\em Hex cell. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{lava\+::hex\+\_\+fractional\+\_\+cell}}
+\begin{DoxyCompactList}\small\item\em Hex fractional cell. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__offset__coord}{lava\+::hex\+\_\+offset\+\_\+coord}}
+\begin{DoxyCompactList}\small\item\em Hex offset coordinates. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__orientation}{lava\+::hex\+\_\+orientation}}
+\begin{DoxyCompactList}\small\item\em Hex orientation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__layout}{lava\+::hex\+\_\+layout}}
+\begin{DoxyCompactList}\small\item\em Hex layout. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1hex__grid}{lava\+::hex\+\_\+grid}}
+\begin{DoxyCompactList}\small\item\em Hex grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}\label{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a} 
+using {\bfseries lava\+::hex\+\_\+frac\+\_\+cell} = \mbox{\hyperlink{structlava_1_1hex__fractional__cell}{hex\+\_\+fractional\+\_\+cell}}
+\begin{DoxyCompactList}\small\item\em Hex fractional cell. \end{DoxyCompactList}\item 
+\Hypertarget{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}\label{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb} 
+using {\bfseries lava\+::hex\+\_\+doubled\+\_\+coord} = \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}}
+\begin{DoxyCompactList}\small\item\em Hex doubled coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hex_8hpp_ab4521519620230034db22e97e95d42b3}\label{hex_8hpp_ab4521519620230034db22e97e95d42b3} 
+enum class \mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{lava\+::hex\+\_\+offset}} \+: i32 \{ {\bfseries odd} = -\/1
+, {\bfseries even} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Hex offsets. \end{DoxyCompactList}\item 
+\Hypertarget{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}\label{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c} 
+enum class \mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{lava\+::hex\+\_\+cardinal\+\_\+direction}} \+: index \{ \newline
+{\bfseries NE} = 0
+, {\bfseries E}
+, {\bfseries SE}
+, {\bfseries SW}
+, \newline
+{\bfseries W}
+, {\bfseries NW}
+ \}
+\begin{DoxyCompactList}\small\item\em Hex cardinal directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{hex_8hpp_a7ca014ec5e5a02dda82dc24ba4eda276}{lava\+::hex\+\_\+get\+\_\+s}} (\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} q, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} r)
+\begin{DoxyCompactList}\small\item\em Get S axis from Q and R axes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_ad5e454169eed0c6193064321c2f290ef}{lava\+::hex\+\_\+cell\+\_\+from\+\_\+pair}} (\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{hex\+\_\+cell\+::pair}} const \&pair)
+\begin{DoxyCompactList}\small\item\em Get hex cell from pair. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{hex_8hpp_a9182ebdc614f1415b3482ec84f809ca5}{lava\+::hex\+\_\+is\+\_\+valid}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Check if hex cell is valid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a8a16da974409e2757c6f17d3c6a04145}{lava\+::hex\+\_\+direction}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} direction)
+\begin{DoxyCompactList}\small\item\em Get the hex cell from direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a898ffd15cb1a51808d3c2d78f5025ec6}{lava\+::hex\+\_\+neighbor}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} direction)
+\begin{DoxyCompactList}\small\item\em Get the neighbor of hex cell by direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_adfb53fa51a50b93e353e5101d9a03e3e}{lava\+::hex\+\_\+diagonal}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} direction)
+\begin{DoxyCompactList}\small\item\em Get the diagonal from direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_ad5acac030efb7626bb99fb663324da8a}{lava\+::hex\+\_\+diagonal\+\_\+neighbor}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} direction)
+\begin{DoxyCompactList}\small\item\em Get the diagonal neighbor of hex cell by direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{hex_8hpp_aacff1394173374911b79331d353ef449}{lava\+::hex\+\_\+length}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the length of hex cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{hex_8hpp_a5c5b747307cac342033640acf1b22b37}{lava\+::hex\+\_\+distance}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&a, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&b)
+\begin{DoxyCompactList}\small\item\em Get the distance between 2 hex cells. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9}{lava\+::hex\+\_\+round}} (\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Round a fractional cell to hex cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a79131e23aba708d19fb30fe1f6fa77a5}{lava\+::hex\+\_\+lerp}} (\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&a, \mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&b, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} t)
+\begin{DoxyCompactList}\small\item\em Get the linear interpolation between 2 hex cells. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\+\_\+cell\+::list}} \mbox{\hyperlink{hex_8hpp_a01c50ea26d302c05a4eede033863ca9b}{lava\+::hex\+\_\+line}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&a, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&b)
+\begin{DoxyCompactList}\small\item\em Get the line between 2 hex cells. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} \mbox{\hyperlink{hex_8hpp_aa509932a3cb8382abc5086b699f55d99}{lava\+::hex\+\_\+q\+\_\+offset\+\_\+from\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}} offset, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the Q offset from hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a3e916b0ac0ab4fe8198c90554e6c388b}{lava\+::hex\+\_\+q\+\_\+offset\+\_\+to\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}} offset, \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} const \&coord)
+\begin{DoxyCompactList}\small\item\em Get the Q offset to hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} \mbox{\hyperlink{hex_8hpp_a140bd9814b6cef5a138c7001866fcf78}{lava\+::hex\+\_\+r\+\_\+offset\+\_\+from\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}} offset, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the R offset from hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a03b854cf6039784e37ae5f5a5d2a9aff}{lava\+::hex\+\_\+r\+\_\+offset\+\_\+to\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}} offset, \mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} const \&coord)
+\begin{DoxyCompactList}\small\item\em Get the R offset to hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} \mbox{\hyperlink{hex_8hpp_a5d65e4531828807f633a0a62525c22c1}{lava\+::hex\+\_\+q\+\_\+doubled\+\_\+from\+\_\+cube}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the Q doubled from hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a4fee9dc0368a70ba9aac2d0b5640084b}{lava\+::hex\+\_\+q\+\_\+doubled\+\_\+to\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} const \&coord)
+\begin{DoxyCompactList}\small\item\em Get the Q doubled to hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} \mbox{\hyperlink{hex_8hpp_aa4a3c70aa527a679eae96f56273e0d59}{lava\+::hex\+\_\+r\+\_\+doubled\+\_\+from\+\_\+cube}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the R offset from hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a94c56d07872b9ee1b320751f7ea36981}{lava\+::hex\+\_\+r\+\_\+doubled\+\_\+to\+\_\+cube}} (\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} const \&coord)
+\begin{DoxyCompactList}\small\item\em Get the R doubled to hex cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} \mbox{\hyperlink{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd}{lava\+::hex\+\_\+to\+\_\+pixel}} (\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&layout, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Convert the hex cell to pixel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_a904901a544a66a5b6226e373ab97da4c}{lava\+::hex\+\_\+pixel\+\_\+to\+\_\+cell}} (\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&layout, \mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} const \&p)
+\begin{DoxyCompactList}\small\item\em Convert the hex point to cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} \mbox{\hyperlink{hex_8hpp_a05b05a162ad716a49e8f5b7d36874bc3}{lava\+::hex\+\_\+corner\+\_\+offset}} (\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&layout, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} corner)
+\begin{DoxyCompactList}\small\item\em Get the hex corner offset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__point_a139ad44afadb839dcf388aada3c9c453}{hex\+\_\+point\+::list}} \mbox{\hyperlink{hex_8hpp_ac22679ea22e6cd067c6518fb6e3d5d54}{lava\+::hex\+\_\+polygon\+\_\+corners}} (\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&layout, \mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Get the hex polygon corners. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} \mbox{\hyperlink{hex_8hpp_a026a5d0c6b45925419404ac88ad8fb3a}{lava\+::hex\+\_\+get\+\_\+corner}} (\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} const \&center, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} size, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} corner)
+\begin{DoxyCompactList}\small\item\em Get the hex point by corner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{hex_8hpp_ab5f02791afaefe97df2a144c6b741b50}{lava\+::to\+\_\+string}} (\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}} direction)
+\begin{DoxyCompactList}\small\item\em Convert hex cardinal direction to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} \mbox{\hyperlink{hex_8hpp_adc50c7ed8b575685efb41a2b886fa29f}{lava\+::hex\+\_\+get}} (\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}} direction)
+\begin{DoxyCompactList}\small\item\em Get the hex cell from cardinal direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}} \mbox{\hyperlink{hex_8hpp_a0a89eb0e36e8f5b7633e1dd99a7408ef}{lava\+::hex\+\_\+opposite}} (\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}} direction)
+\begin{DoxyCompactList}\small\item\em Get the opposite cardinal direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} \mbox{\hyperlink{hex_8hpp_a9dff4b533bda410b478b9529e27fe289}{lava\+::hex\+\_\+calculate\+\_\+inner\+\_\+radius}} (\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} outer\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Get the hex inner radius from outer radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\+\_\+cell\+::list}} const \mbox{\hyperlink{hex_8hpp_a9e0563c523141e347ff5dba0e0dd54c6}{lava\+::hex\+\_\+directions}}
+\begin{DoxyCompactList}\small\item\em List of hex directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\+\_\+cell\+::list}} const \mbox{\hyperlink{hex_8hpp_a813c3a54be3abeb12fe6814fb84167b4}{lava\+::hex\+\_\+diagonals}}
+\begin{DoxyCompactList}\small\item\em List of hex diagonals. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\+\_\+orientation}} const \mbox{\hyperlink{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}{lava\+::hex\+\_\+layout\+\_\+point\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Hex point Y layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__orientation}{hex\+\_\+orientation}} const \mbox{\hyperlink{hex_8hpp_a73418d6cc574517a81fad81c3818158f}{lava\+::hex\+\_\+layout\+\_\+flat}}
+\begin{DoxyCompactList}\small\item\em Hex flat layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}{hex\+\_\+cell\+::list}} const \mbox{\hyperlink{hex_8hpp_a0f36d2510bc406178144b0eb524e67ad}{lava\+::hex\+\_\+cardinal\+\_\+directions}}
+\begin{DoxyCompactList}\small\item\em List of hex cardinal directions. \end{DoxyCompactList}\item 
+\Hypertarget{hex_8hpp_a0bc43ac417551495eb0dd2c587afa071}\label{hex_8hpp_a0bc43ac417551495eb0dd2c587afa071} 
+constexpr \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} const {\bfseries lava\+::hex\+\_\+inner\+\_\+radius\+\_\+factor} = 0.\+866025404f
+\begin{DoxyCompactList}\small\item\em Hex inner radius factor = sqrt(3) / 2. \end{DoxyCompactList}\item 
+\Hypertarget{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae}\label{hex_8hpp_a56f700cb1f640b51f18963e2b63649ae} 
+constexpr \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} const {\bfseries lava\+::hex\+\_\+default\+\_\+outer\+\_\+radius} = 1.f
+\begin{DoxyCompactList}\small\item\em Hex default outer radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hex point, cell and grid. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.redblobgames.com/grids/hexagons/}{\texttt{ https\+://www.\+redblobgames.\+com/grids/hexagons/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hex_8hpp_a9dff4b533bda410b478b9529e27fe289}\index{hex.hpp@{hex.hpp}!hex\_calculate\_inner\_radius@{hex\_calculate\_inner\_radius}}
+\index{hex\_calculate\_inner\_radius@{hex\_calculate\_inner\_radius}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_calculate\_inner\_radius()}{hex\_calculate\_inner\_radius()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a9dff4b533bda410b478b9529e27fe289} 
+r32 lava\+::hex\+\_\+calculate\+\_\+inner\+\_\+radius (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{outer\+\_\+radius}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex inner radius from outer radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outer\+\_\+radius} & Hex outer radius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+r32 Hex inner radius 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_ad5e454169eed0c6193064321c2f290ef}\index{hex.hpp@{hex.hpp}!hex\_cell\_from\_pair@{hex\_cell\_from\_pair}}
+\index{hex\_cell\_from\_pair@{hex\_cell\_from\_pair}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_cell\_from\_pair()}{hex\_cell\_from\_pair()}}
+{\footnotesize\ttfamily \label{hex_8hpp_ad5e454169eed0c6193064321c2f290ef} 
+hex\+\_\+cell lava\+::hex\+\_\+cell\+\_\+from\+\_\+pair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{hex\+\_\+cell\+::pair}} const \&}]{pair}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get hex cell from pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pair} & Hex pair \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a05b05a162ad716a49e8f5b7d36874bc3}\index{hex.hpp@{hex.hpp}!hex\_corner\_offset@{hex\_corner\_offset}}
+\index{hex\_corner\_offset@{hex\_corner\_offset}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_corner\_offset()}{hex\_corner\_offset()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a05b05a162ad716a49e8f5b7d36874bc3} 
+hex\+\_\+point lava\+::hex\+\_\+corner\+\_\+offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&}]{layout}{, }\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{corner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex corner offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Hex layout \\
+\hline
+{\em corner} & Corner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+point Hex point 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_adfb53fa51a50b93e353e5101d9a03e3e}\index{hex.hpp@{hex.hpp}!hex\_diagonal@{hex\_diagonal}}
+\index{hex\_diagonal@{hex\_diagonal}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_diagonal()}{hex\_diagonal()}}
+{\footnotesize\ttfamily \label{hex_8hpp_adfb53fa51a50b93e353e5101d9a03e3e} 
+hex\+\_\+cell lava\+::hex\+\_\+diagonal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the diagonal from direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_ad5acac030efb7626bb99fb663324da8a}\index{hex.hpp@{hex.hpp}!hex\_diagonal\_neighbor@{hex\_diagonal\_neighbor}}
+\index{hex\_diagonal\_neighbor@{hex\_diagonal\_neighbor}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_diagonal\_neighbor()}{hex\_diagonal\_neighbor()}}
+{\footnotesize\ttfamily \label{hex_8hpp_ad5acac030efb7626bb99fb663324da8a} 
+hex\+\_\+cell lava\+::hex\+\_\+diagonal\+\_\+neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the diagonal neighbor of hex cell by direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Target hex cell \\
+\hline
+{\em direction} & Direction index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Diagonal neighbor hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a8a16da974409e2757c6f17d3c6a04145}\index{hex.hpp@{hex.hpp}!hex\_direction@{hex\_direction}}
+\index{hex\_direction@{hex\_direction}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_direction()}{hex\_direction()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a8a16da974409e2757c6f17d3c6a04145} 
+hex\+\_\+cell lava\+::hex\+\_\+direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex cell from direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a5c5b747307cac342033640acf1b22b37}\index{hex.hpp@{hex.hpp}!hex\_distance@{hex\_distance}}
+\index{hex\_distance@{hex\_distance}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_distance()}{hex\_distance()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a5c5b747307cac342033640acf1b22b37} 
+i32 lava\+::hex\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{a}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the distance between 2 hex cells. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Source hex cell \\
+\hline
+{\em b} & Target hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i32 Distance 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_adc50c7ed8b575685efb41a2b886fa29f}\index{hex.hpp@{hex.hpp}!hex\_get@{hex\_get}}
+\index{hex\_get@{hex\_get}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_get()}{hex\_get()}}
+{\footnotesize\ttfamily \label{hex_8hpp_adc50c7ed8b575685efb41a2b886fa29f} 
+hex\+\_\+cell lava\+::hex\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex cell from cardinal direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Hex cardinal direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a026a5d0c6b45925419404ac88ad8fb3a}\index{hex.hpp@{hex.hpp}!hex\_get\_corner@{hex\_get\_corner}}
+\index{hex\_get\_corner@{hex\_get\_corner}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_get\_corner()}{hex\_get\_corner()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a026a5d0c6b45925419404ac88ad8fb3a} 
+hex\+\_\+point lava\+::hex\+\_\+get\+\_\+corner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} const \&}]{center}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{size}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{corner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex point by corner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Center hex point \\
+\hline
+{\em size} & Size of hex cell \\
+\hline
+{\em corner} & Corner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+point Hex point 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a7ca014ec5e5a02dda82dc24ba4eda276}\index{hex.hpp@{hex.hpp}!hex\_get\_s@{hex\_get\_s}}
+\index{hex\_get\_s@{hex\_get\_s}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_get\_s()}{hex\_get\_s()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a7ca014ec5e5a02dda82dc24ba4eda276} 
+i32 lava\+::hex\+\_\+get\+\_\+s (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{q}{, }\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get S axis from Q and R axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Q axis \\
+\hline
+{\em r} & R axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i32 S axis 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a9182ebdc614f1415b3482ec84f809ca5}\index{hex.hpp@{hex.hpp}!hex\_is\_valid@{hex\_is\_valid}}
+\index{hex\_is\_valid@{hex\_is\_valid}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_is\_valid()}{hex\_is\_valid()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a9182ebdc614f1415b3482ec84f809ca5} 
+bool lava\+::hex\+\_\+is\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if hex cell is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Hex cell to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hex cell is valid or not 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_aacff1394173374911b79331d353ef449}\index{hex.hpp@{hex.hpp}!hex\_length@{hex\_length}}
+\index{hex\_length@{hex\_length}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_length()}{hex\_length()}}
+{\footnotesize\ttfamily \label{hex_8hpp_aacff1394173374911b79331d353ef449} 
+i32 lava\+::hex\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the length of hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Target hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i32 Length of hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a79131e23aba708d19fb30fe1f6fa77a5}\index{hex.hpp@{hex.hpp}!hex\_lerp@{hex\_lerp}}
+\index{hex\_lerp@{hex\_lerp}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_lerp()}{hex\_lerp()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a79131e23aba708d19fb30fe1f6fa77a5} 
+hex\+\_\+frac\+\_\+cell lava\+::hex\+\_\+lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&}]{a}{, }\item[{\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&}]{b}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the linear interpolation between 2 hex cells. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Source fractional hex cell \\
+\hline
+{\em b} & Target fractional hex cell \\
+\hline
+{\em t} & Factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+frac\+\_\+cell Fractional hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a01c50ea26d302c05a4eede033863ca9b}\index{hex.hpp@{hex.hpp}!hex\_line@{hex\_line}}
+\index{hex\_line@{hex\_line}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_line()}{hex\_line()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a01c50ea26d302c05a4eede033863ca9b} 
+hex\+\_\+cell\+::list lava\+::hex\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{a}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the line between 2 hex cells. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Source hex cell \\
+\hline
+{\em b} & Target hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell\+::list List of hex cells 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a898ffd15cb1a51808d3c2d78f5025ec6}\index{hex.hpp@{hex.hpp}!hex\_neighbor@{hex\_neighbor}}
+\index{hex\_neighbor@{hex\_neighbor}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_neighbor()}{hex\_neighbor()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a898ffd15cb1a51808d3c2d78f5025ec6} 
+hex\+\_\+cell lava\+::hex\+\_\+neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the neighbor of hex cell by direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Target hex cell \\
+\hline
+{\em direction} & Direction index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Neighbor hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a0a89eb0e36e8f5b7633e1dd99a7408ef}\index{hex.hpp@{hex.hpp}!hex\_opposite@{hex\_opposite}}
+\index{hex\_opposite@{hex\_opposite}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_opposite()}{hex\_opposite()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a0a89eb0e36e8f5b7633e1dd99a7408ef} 
+hex\+\_\+cardinal\+\_\+direction lava\+::hex\+\_\+opposite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the opposite cardinal direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Hex cardinal direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cardinal\+\_\+direction Hex cardinal direction 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a904901a544a66a5b6226e373ab97da4c}\index{hex.hpp@{hex.hpp}!hex\_pixel\_to\_cell@{hex\_pixel\_to\_cell}}
+\index{hex\_pixel\_to\_cell@{hex\_pixel\_to\_cell}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_pixel\_to\_cell()}{hex\_pixel\_to\_cell()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a904901a544a66a5b6226e373ab97da4c} 
+hex\+\_\+frac\+\_\+cell lava\+::hex\+\_\+pixel\+\_\+to\+\_\+cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&}]{layout}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__point}{hex\+\_\+point}} const \&}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the hex point to cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Hex layout \\
+\hline
+{\em p} & Hex point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+frac\+\_\+cell Hex fractional cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_ac22679ea22e6cd067c6518fb6e3d5d54}\index{hex.hpp@{hex.hpp}!hex\_polygon\_corners@{hex\_polygon\_corners}}
+\index{hex\_polygon\_corners@{hex\_polygon\_corners}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_polygon\_corners()}{hex\_polygon\_corners()}}
+{\footnotesize\ttfamily \label{hex_8hpp_ac22679ea22e6cd067c6518fb6e3d5d54} 
+hex\+\_\+point\+::list lava\+::hex\+\_\+polygon\+\_\+corners (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&}]{layout}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the hex polygon corners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Hex layout \\
+\hline
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+point\+::list List of hex points 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a5d65e4531828807f633a0a62525c22c1}\index{hex.hpp@{hex.hpp}!hex\_q\_doubled\_from\_cube@{hex\_q\_doubled\_from\_cube}}
+\index{hex\_q\_doubled\_from\_cube@{hex\_q\_doubled\_from\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_q\_doubled\_from\_cube()}{hex\_q\_doubled\_from\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a5d65e4531828807f633a0a62525c22c1} 
+hex\+\_\+doubled\+\_\+coord lava\+::hex\+\_\+q\+\_\+doubled\+\_\+from\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Q doubled from hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+doubled\+\_\+coord Hex doubled coordinates 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a4fee9dc0368a70ba9aac2d0b5640084b}\index{hex.hpp@{hex.hpp}!hex\_q\_doubled\_to\_cube@{hex\_q\_doubled\_to\_cube}}
+\index{hex\_q\_doubled\_to\_cube@{hex\_q\_doubled\_to\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_q\_doubled\_to\_cube()}{hex\_q\_doubled\_to\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a4fee9dc0368a70ba9aac2d0b5640084b} 
+hex\+\_\+cell lava\+::hex\+\_\+q\+\_\+doubled\+\_\+to\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} const \&}]{coord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Q doubled to hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & Hex doubled coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_aa509932a3cb8382abc5086b699f55d99}\index{hex.hpp@{hex.hpp}!hex\_q\_offset\_from\_cube@{hex\_q\_offset\_from\_cube}}
+\index{hex\_q\_offset\_from\_cube@{hex\_q\_offset\_from\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_q\_offset\_from\_cube()}{hex\_q\_offset\_from\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_aa509932a3cb8382abc5086b699f55d99} 
+hex\+\_\+offset\+\_\+coord lava\+::hex\+\_\+q\+\_\+offset\+\_\+from\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}}}]{offset}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Q offset from hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Hex offset \\
+\hline
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+offset\+\_\+coord Hex offset coordinates 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a3e916b0ac0ab4fe8198c90554e6c388b}\index{hex.hpp@{hex.hpp}!hex\_q\_offset\_to\_cube@{hex\_q\_offset\_to\_cube}}
+\index{hex\_q\_offset\_to\_cube@{hex\_q\_offset\_to\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_q\_offset\_to\_cube()}{hex\_q\_offset\_to\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a3e916b0ac0ab4fe8198c90554e6c388b} 
+hex\+\_\+cell lava\+::hex\+\_\+q\+\_\+offset\+\_\+to\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}}}]{offset}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} const \&}]{coord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Q offset to hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Hex offset \\
+\hline
+{\em coord} & Hex offset coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_aa4a3c70aa527a679eae96f56273e0d59}\index{hex.hpp@{hex.hpp}!hex\_r\_doubled\_from\_cube@{hex\_r\_doubled\_from\_cube}}
+\index{hex\_r\_doubled\_from\_cube@{hex\_r\_doubled\_from\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_r\_doubled\_from\_cube()}{hex\_r\_doubled\_from\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_aa4a3c70aa527a679eae96f56273e0d59} 
+hex\+\_\+doubled\+\_\+coord lava\+::hex\+\_\+r\+\_\+doubled\+\_\+from\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the R offset from hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+doubled\+\_\+coord Hex doubled coordinates 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a94c56d07872b9ee1b320751f7ea36981}\index{hex.hpp@{hex.hpp}!hex\_r\_doubled\_to\_cube@{hex\_r\_doubled\_to\_cube}}
+\index{hex\_r\_doubled\_to\_cube@{hex\_r\_doubled\_to\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_r\_doubled\_to\_cube()}{hex\_r\_doubled\_to\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a94c56d07872b9ee1b320751f7ea36981} 
+hex\+\_\+cell lava\+::hex\+\_\+r\+\_\+doubled\+\_\+to\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_a84c9d74193a06be5b9c461dc1fef2ecb}{hex\+\_\+doubled\+\_\+coord}} const \&}]{coord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the R doubled to hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & Hex doubled coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a140bd9814b6cef5a138c7001866fcf78}\index{hex.hpp@{hex.hpp}!hex\_r\_offset\_from\_cube@{hex\_r\_offset\_from\_cube}}
+\index{hex\_r\_offset\_from\_cube@{hex\_r\_offset\_from\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_r\_offset\_from\_cube()}{hex\_r\_offset\_from\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a140bd9814b6cef5a138c7001866fcf78} 
+hex\+\_\+offset\+\_\+coord lava\+::hex\+\_\+r\+\_\+offset\+\_\+from\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}}}]{offset}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the R offset from hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Hex offset \\
+\hline
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+offset\+\_\+coord Hex offset coordinates 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a03b854cf6039784e37ae5f5a5d2a9aff}\index{hex.hpp@{hex.hpp}!hex\_r\_offset\_to\_cube@{hex\_r\_offset\_to\_cube}}
+\index{hex\_r\_offset\_to\_cube@{hex\_r\_offset\_to\_cube}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_r\_offset\_to\_cube()}{hex\_r\_offset\_to\_cube()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a03b854cf6039784e37ae5f5a5d2a9aff} 
+hex\+\_\+cell lava\+::hex\+\_\+r\+\_\+offset\+\_\+to\+\_\+cube (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_ab4521519620230034db22e97e95d42b3}{hex\+\_\+offset}}}]{offset}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__offset__coord}{hex\+\_\+offset\+\_\+coord}} const \&}]{coord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the R offset to hex cube. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Hex offset \\
+\hline
+{\em coord} & Hex offset coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9}\index{hex.hpp@{hex.hpp}!hex\_round@{hex\_round}}
+\index{hex\_round@{hex\_round}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_round()}{hex\_round()}}
+{\footnotesize\ttfamily \label{hex_8hpp_ae4c5b0472d2d467bc97987ec0c8308f9} 
+hex\+\_\+cell lava\+::hex\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_a32178b9e3e4755c33909cdd40922fe4a}{hex\+\_\+frac\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Round a fractional cell to hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Target fractional cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+cell Rounded hex cell 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd}\index{hex.hpp@{hex.hpp}!hex\_to\_pixel@{hex\_to\_pixel}}
+\index{hex\_to\_pixel@{hex\_to\_pixel}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_to\_pixel()}{hex\_to\_pixel()}}
+{\footnotesize\ttfamily \label{hex_8hpp_a742ae7a0920b028dbd4100ab164769bd} 
+hex\+\_\+point lava\+::hex\+\_\+to\+\_\+pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__layout}{hex\+\_\+layout}} const \&}]{layout}{, }\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the hex cell to pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Hex layout \\
+\hline
+{\em cell} & Hex cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hex\+\_\+point Hex point 
+\end{DoxyReturn}
+\Hypertarget{hex_8hpp_ab5f02791afaefe97df2a144c6b741b50}\index{hex.hpp@{hex.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{hex_8hpp_ab5f02791afaefe97df2a144c6b741b50} 
+string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{hex_8hpp_aa2a7be3655f90512c22f774dadf1a25c}{hex\+\_\+cardinal\+\_\+direction}}}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert hex cardinal direction to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Hex cardinal direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String representation 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{hex_8hpp_a0f36d2510bc406178144b0eb524e67ad}\index{hex.hpp@{hex.hpp}!hex\_cardinal\_directions@{hex\_cardinal\_directions}}
+\index{hex\_cardinal\_directions@{hex\_cardinal\_directions}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_cardinal\_directions}{hex\_cardinal\_directions}}
+{\footnotesize\ttfamily \label{hex_8hpp_a0f36d2510bc406178144b0eb524e67ad} 
+hex\+\_\+cell\+::list const lava\+::hex\+\_\+cardinal\+\_\+directions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \{1,\ 0,\ -\/1\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 1,\ -\/1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ 1,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ 0,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ -\/1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ -\/1,\ 0\}\}}
+
+\end{DoxyCode}
+
+
+List of hex cardinal directions. 
+
+\Hypertarget{hex_8hpp_a813c3a54be3abeb12fe6814fb84167b4}\index{hex.hpp@{hex.hpp}!hex\_diagonals@{hex\_diagonals}}
+\index{hex\_diagonals@{hex\_diagonals}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_diagonals}{hex\_diagonals}}
+{\footnotesize\ttfamily \label{hex_8hpp_a813c3a54be3abeb12fe6814fb84167b4} 
+hex\+\_\+cell\+::list const lava\+::hex\+\_\+diagonals}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \{2,\ -\/1,\ -\/1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ -\/2,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ -\/1,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{-\/2,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ 2,\ -\/1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ -\/2\}\}}
+
+\end{DoxyCode}
+
+
+List of hex diagonals. 
+
+\Hypertarget{hex_8hpp_a9e0563c523141e347ff5dba0e0dd54c6}\index{hex.hpp@{hex.hpp}!hex\_directions@{hex\_directions}}
+\index{hex\_directions@{hex\_directions}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_directions}{hex\_directions}}
+{\footnotesize\ttfamily \label{hex_8hpp_a9e0563c523141e347ff5dba0e0dd54c6} 
+hex\+\_\+cell\+::list const lava\+::hex\+\_\+directions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \{1,\ 0,\ -\/1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ -\/1,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ -\/1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ 0,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{-\/1,\ 1,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 1,\ -\/1\}\}}
+
+\end{DoxyCode}
+
+
+List of hex directions. 
+
+\Hypertarget{hex_8hpp_a73418d6cc574517a81fad81c3818158f}\index{hex.hpp@{hex.hpp}!hex\_layout\_flat@{hex\_layout\_flat}}
+\index{hex\_layout\_flat@{hex\_layout\_flat}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_layout\_flat}{hex\_layout\_flat}}
+{\footnotesize\ttfamily \label{hex_8hpp_a73418d6cc574517a81fad81c3818158f} 
+hex\+\_\+orientation const lava\+::hex\+\_\+layout\+\_\+flat}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 3.f\ /\ 2.f,}
+\DoxyCodeLine{\ \ \ \ 0.f,}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f)\ /\ 2.f,}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f),}
+\DoxyCodeLine{\ \ \ \ 2.f\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ 0.f,}
+\DoxyCodeLine{\ \ \ \ -\/1.f\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f)\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ 0.f\}}
+
+\end{DoxyCode}
+
+
+Hex flat layout. 
+
+\Hypertarget{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d}\index{hex.hpp@{hex.hpp}!hex\_layout\_point\_y@{hex\_layout\_point\_y}}
+\index{hex\_layout\_point\_y@{hex\_layout\_point\_y}!hex.hpp@{hex.hpp}}
+\doxysubsubsection{\texorpdfstring{hex\_layout\_point\_y}{hex\_layout\_point\_y}}
+{\footnotesize\ttfamily \label{hex_8hpp_a5d537da1c2076b8e4a95694c88758b5d} 
+hex\+\_\+orientation const lava\+::hex\+\_\+layout\+\_\+point\+\_\+y}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f),}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f)\ /\ 2.f,}
+\DoxyCodeLine{\ \ \ \ 0.f,}
+\DoxyCodeLine{\ \ \ \ 3.f\ /\ 2.f,}
+\DoxyCodeLine{\ \ \ \ std::sqrt(3.f)\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ -\/1.f\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ 0.f,}
+\DoxyCodeLine{\ \ \ \ 2.f\ /\ 3.f,}
+\DoxyCodeLine{\ \ \ \ 0.5f\}}
+
+\end{DoxyCode}
+
+
+Hex point Y layout. 
+

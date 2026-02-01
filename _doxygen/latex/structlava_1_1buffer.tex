@@ -1,0 +1,324 @@
+\doxysection{lava\+::buffer Struct Reference}
+\hypertarget{structlava_1_1buffer}{}\label{structlava_1_1buffer}\index{lava::buffer@{lava::buffer}}
+
+
+Buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+Inheritance diagram for lava\+::buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1buffer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}\label{structlava_1_1buffer_a0f51976de6893d420896e888899858a1} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1buffer}{buffer}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to buffer. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1buffer_a7c5d7d6ab2b3c692c08165dea735b326}\label{structlava_1_1buffer_a7c5d7d6ab2b3c692c08165dea735b326} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1buffer_acbfbf425c490bca4e6aeea592ec1c559}\label{structlava_1_1buffer_acbfbf425c490bca4e6aeea592ec1c559} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}buffer} ()
+\begin{DoxyCompactList}\small\item\em Destroy the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1buffer_af24ed968ef0f5c7b4559e98def7f4031}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, void const \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size, Vk\+Buffer\+Usage\+Flags usage, bool mapped=false, Vma\+Memory\+Usage memory\+\_\+usage=VMA\+\_\+\+MEMORY\+\_\+\+USAGE\+\_\+\+GPU\+\_\+\+ONLY, Vk\+Sharing\+Mode sharing\+\_\+mode=VK\+\_\+\+SHARING\+\_\+\+MODE\+\_\+\+EXCLUSIVE, std\+::vector$<$ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} $>$ const \&shared\+\_\+queue\+\_\+family\+\_\+indices=\{\}, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} alignment=\mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}})
+\begin{DoxyCompactList}\small\item\em Create a new buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1buffer_ac651d5a31824013c20d2845a83ae3311}{create\+\_\+mapped}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, void const \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} size, Vk\+Buffer\+Usage\+Flags usage, Vma\+Memory\+Usage memory\+\_\+usage=VMA\+\_\+\+MEMORY\+\_\+\+USAGE\+\_\+\+CPU\+\_\+\+TO\+\_\+\+GPU, Vk\+Sharing\+Mode sharing\+\_\+mode=VK\+\_\+\+SHARING\+\_\+\+MODE\+\_\+\+EXCLUSIVE, std\+::vector$<$ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} $>$ const \&shared\+\_\+queue\+\_\+family\+\_\+indices=\{\}, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} alignment=\mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}})
+\begin{DoxyCompactList}\small\item\em Create a new mapped buffer. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1buffer_a90f1403a96a5a041114bdfe2482e1c96}\label{structlava_1_1buffer_a90f1403a96a5a041114bdfe2482e1c96} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1buffer_a105ea4d4cb0cbc11d0b2d3321a1f0376}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1buffer_a0be51673d622a473bd6da8756f4bb8cd}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if the buffer is valid. \end{DoxyCompactList}\item 
+Vk\+Buffer \mbox{\hyperlink{structlava_1_1buffer_aabb19a74c0cdbfa5ca4b2f35e3033a76}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the buffer. \end{DoxyCompactList}\item 
+Vk\+Descriptor\+Buffer\+Info const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1buffer_ac6af491dceda2d1ab9bad86f88628e08}{get\+\_\+descriptor\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the descriptor information. \end{DoxyCompactList}\item 
+Vk\+Device\+Address \mbox{\hyperlink{structlava_1_1buffer_ae40ffbd255fe3b4b73cc760084df848d}{get\+\_\+address}} () const
+\begin{DoxyCompactList}\small\item\em Get the address of the buffer. \end{DoxyCompactList}\item 
+Vk\+Device\+Size \mbox{\hyperlink{structlava_1_1buffer_a56f97212f4a442bd52b3df9f76a6dbb9}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the buffer. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1buffer_a6c0f7285793b973adc1d2de9545ca62f}{get\+\_\+mapped\+\_\+data}} () const
+\begin{DoxyCompactList}\small\item\em Get the mapped data. \end{DoxyCompactList}\item 
+Vk\+Device\+Memory \mbox{\hyperlink{structlava_1_1buffer_af0860571b26fa50f6cab16545828b299}{get\+\_\+device\+\_\+memory}} () const
+\begin{DoxyCompactList}\small\item\em Get the device memory of the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1buffer_a0b41bbf173c5f3a79deddf927cbd09d4}{flush}} (Vk\+Device\+Size offset=0, Vk\+Device\+Size size=VK\+\_\+\+WHOLE\+\_\+\+SIZE)
+\begin{DoxyCompactList}\small\item\em Flush the buffer data. \end{DoxyCompactList}\item 
+Vma\+Allocation const \& \mbox{\hyperlink{structlava_1_1buffer_a2f2014025a50390b8cdbe204a9042400}{get\+\_\+allocation}} () const
+\begin{DoxyCompactList}\small\item\em Get the allocation. \end{DoxyCompactList}\item 
+Vma\+Allocation\+Info const \& \mbox{\hyperlink{structlava_1_1buffer_a86c5d2f8a4ae6452b5df9c8c33d94717}{get\+\_\+allocation\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the allocation information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1buffer_a6ab5524063c2c3b56e701df74be2e8c2}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Buffer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1buffer_af24ed968ef0f5c7b4559e98def7f4031}\index{lava::buffer@{lava::buffer}!create@{create}}
+\index{create@{create}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_af24ed968ef0f5c7b4559e98def7f4031} 
+bool lava\+::buffer\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{void const \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{, }\item[{Vk\+Buffer\+Usage\+Flags}]{usage}{, }\item[{bool}]{mapped}{ = {\ttfamily false}, }\item[{Vma\+Memory\+Usage}]{memory\+\_\+usage}{ = {\ttfamily VMA\+\_\+MEMORY\+\_\+USAGE\+\_\+GPU\+\_\+ONLY}, }\item[{Vk\+Sharing\+Mode}]{sharing\+\_\+mode}{ = {\ttfamily VK\+\_\+SHARING\+\_\+MODE\+\_\+EXCLUSIVE}, }\item[{std\+::vector$<$ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} $>$ const \&}]{shared\+\_\+queue\+\_\+family\+\_\+indices}{ = {\ttfamily \{\}}, }\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{alignment}{ = {\ttfamily \mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}}}}\end{DoxyParamCaption})}
+
+
+
+Create a new buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em data} & Buffer data \\
+\hline
+{\em size} & Data size \\
+\hline
+{\em usage} & Buffer usage flags \\
+\hline
+{\em mapped} & Map the buffer \\
+\hline
+{\em memory\+\_\+usage} & Memory usage \\
+\hline
+{\em sharing\+\_\+mode} & Sharing mode \\
+\hline
+{\em shared\+\_\+queue\+\_\+family\+\_\+indices} & Queue indices (ignored unless sharing\+\_\+mode == VK\+\_\+\+SHARING\+\_\+\+MODE\+\_\+\+CONCURRENT) \\
+\hline
+{\em alignment} & Minimum alignment to be used when placing the buffer inside a larger memory block negative -\/\texorpdfstring{$>$}{>} no minimum alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_ac651d5a31824013c20d2845a83ae3311}\index{lava::buffer@{lava::buffer}!create\_mapped@{create\_mapped}}
+\index{create\_mapped@{create\_mapped}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{create\_mapped()}{create\_mapped()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_ac651d5a31824013c20d2845a83ae3311} 
+bool lava\+::buffer\+::create\+\_\+mapped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{void const \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{, }\item[{Vk\+Buffer\+Usage\+Flags}]{usage}{, }\item[{Vma\+Memory\+Usage}]{memory\+\_\+usage}{ = {\ttfamily VMA\+\_\+MEMORY\+\_\+USAGE\+\_\+CPU\+\_\+TO\+\_\+GPU}, }\item[{Vk\+Sharing\+Mode}]{sharing\+\_\+mode}{ = {\ttfamily VK\+\_\+SHARING\+\_\+MODE\+\_\+EXCLUSIVE}, }\item[{std\+::vector$<$ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} $>$ const \&}]{shared\+\_\+queue\+\_\+family\+\_\+indices}{ = {\ttfamily \{\}}, }\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{alignment}{ = {\ttfamily \mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}}}}\end{DoxyParamCaption})}
+
+
+
+Create a new mapped buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em data} & Buffer data \\
+\hline
+{\em size} & Data size \\
+\hline
+{\em usage} & Buffer usage flags \\
+\hline
+{\em memory\+\_\+usage} & Memory usage \\
+\hline
+{\em sharing\+\_\+mode} & Sharing mode \\
+\hline
+{\em shared\+\_\+queue\+\_\+family\+\_\+indices} & Queue indices (ignored unless sharing\+\_\+mode == VK\+\_\+\+SHARING\+\_\+\+MODE\+\_\+\+CONCURRENT) \\
+\hline
+{\em alignment} & Minimum alignment to be used when placing the buffer inside a larger memory block negative -\/\texorpdfstring{$>$}{>} no minimum alignment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a0b41bbf173c5f3a79deddf927cbd09d4}\index{lava::buffer@{lava::buffer}!flush@{flush}}
+\index{flush@{flush}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a0b41bbf173c5f3a79deddf927cbd09d4} 
+void lava\+::buffer\+::flush (\begin{DoxyParamCaption}\item[{Vk\+Device\+Size}]{offset}{ = {\ttfamily 0}, }\item[{Vk\+Device\+Size}]{size}{ = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE}}\end{DoxyParamCaption})}
+
+
+
+Flush the buffer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset device size \\
+\hline
+{\em size} & Data device size \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1buffer_aabb19a74c0cdbfa5ca4b2f35e3033a76}\index{lava::buffer@{lava::buffer}!get@{get}}
+\index{get@{get}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_aabb19a74c0cdbfa5ca4b2f35e3033a76} 
+Vk\+Buffer lava\+::buffer\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Buffer Vulkan buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_ae40ffbd255fe3b4b73cc760084df848d}\index{lava::buffer@{lava::buffer}!get\_address@{get\_address}}
+\index{get\_address@{get\_address}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_address()}{get\_address()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_ae40ffbd255fe3b4b73cc760084df848d} 
+Vk\+Device\+Address lava\+::buffer\+::get\+\_\+address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the address of the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Device\+Address Device address 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a2f2014025a50390b8cdbe204a9042400}\index{lava::buffer@{lava::buffer}!get\_allocation@{get\_allocation}}
+\index{get\_allocation@{get\_allocation}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_allocation()}{get\_allocation()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a2f2014025a50390b8cdbe204a9042400} 
+Vma\+Allocation const  \& lava\+::buffer\+::get\+\_\+allocation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the allocation. 
+
+\begin{DoxyReturn}{Returns}
+Vma\+Allocation const\& Allocation 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a86c5d2f8a4ae6452b5df9c8c33d94717}\index{lava::buffer@{lava::buffer}!get\_allocation\_info@{get\_allocation\_info}}
+\index{get\_allocation\_info@{get\_allocation\_info}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_allocation\_info()}{get\_allocation\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a86c5d2f8a4ae6452b5df9c8c33d94717} 
+Vma\+Allocation\+Info const  \& lava\+::buffer\+::get\+\_\+allocation\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the allocation information. 
+
+\begin{DoxyReturn}{Returns}
+Vma\+Allocation\+Info const\& Allocation information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_ac6af491dceda2d1ab9bad86f88628e08}\index{lava::buffer@{lava::buffer}!get\_descriptor\_info@{get\_descriptor\_info}}
+\index{get\_descriptor\_info@{get\_descriptor\_info}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_descriptor\_info()}{get\_descriptor\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_ac6af491dceda2d1ab9bad86f88628e08} 
+Vk\+Descriptor\+Buffer\+Info const  \texorpdfstring{$\ast$}{*} lava\+::buffer\+::get\+\_\+descriptor\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the descriptor information. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Descriptor\+Buffer\+Info const\texorpdfstring{$\ast$}{*} Descriptor buffer information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a105ea4d4cb0cbc11d0b2d3321a1f0376}\index{lava::buffer@{lava::buffer}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a105ea4d4cb0cbc11d0b2d3321a1f0376} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::buffer\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_af0860571b26fa50f6cab16545828b299}\index{lava::buffer@{lava::buffer}!get\_device\_memory@{get\_device\_memory}}
+\index{get\_device\_memory@{get\_device\_memory}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_device\_memory()}{get\_device\_memory()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_af0860571b26fa50f6cab16545828b299} 
+Vk\+Device\+Memory lava\+::buffer\+::get\+\_\+device\+\_\+memory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device memory of the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Device\+Memory Device memory 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a6c0f7285793b973adc1d2de9545ca62f}\index{lava::buffer@{lava::buffer}!get\_mapped\_data@{get\_mapped\_data}}
+\index{get\_mapped\_data@{get\_mapped\_data}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_mapped\_data()}{get\_mapped\_data()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a6c0f7285793b973adc1d2de9545ca62f} 
+void \texorpdfstring{$\ast$}{*} lava\+::buffer\+::get\+\_\+mapped\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the mapped data. 
+
+\begin{DoxyReturn}{Returns}
+void\texorpdfstring{$\ast$}{*} Pointer to data 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a56f97212f4a442bd52b3df9f76a6dbb9}\index{lava::buffer@{lava::buffer}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a56f97212f4a442bd52b3df9f76a6dbb9} 
+Vk\+Device\+Size lava\+::buffer\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Device\+Size Device size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a6ab5524063c2c3b56e701df74be2e8c2}\index{lava::buffer@{lava::buffer}!make@{make}}
+\index{make@{make}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a6ab5524063c2c3b56e701df74be2e8c2} 
+static \mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{s\+\_\+ptr}} lava\+::buffer\+::make (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new buffer. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{s\+\_\+ptr} Shared pointer to buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1buffer_a0be51673d622a473bd6da8756f4bb8cd}\index{lava::buffer@{lava::buffer}!valid@{valid}}
+\index{valid@{valid}!lava::buffer@{lava::buffer}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily \label{structlava_1_1buffer_a0be51673d622a473bd6da8756f4bb8cd} 
+bool lava\+::buffer\+::valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the buffer is valid. 
+
+\begin{DoxyReturn}{Returns}
+Buffer is valid or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{buffer_8hpp}{buffer.\+hpp}}\end{DoxyCompactItemize}

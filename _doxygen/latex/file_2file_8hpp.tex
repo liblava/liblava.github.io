@@ -1,0 +1,71 @@
+\doxysection{liblava/file/file.hpp File Reference}
+\hypertarget{file_2file_8hpp}{}\label{file_2file_8hpp}\index{liblava/file/file.hpp@{liblava/file/file.hpp}}
+
+
+File access.  
+
+
+{\ttfamily \#include "{}liblava/core/data.\+hpp"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1file}{lava\+::file}}
+\begin{DoxyCompactList}\small\item\em File. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}\label{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5} 
+enum class \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{lava\+::file\+\_\+type}} \+: index \{ {\bfseries none} = 0
+, {\bfseries fs}
+, {\bfseries f\+\_\+stream}
+ \}
+\begin{DoxyCompactList}\small\item\em File types. \end{DoxyCompactList}\item 
+\Hypertarget{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}\label{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff} 
+enum class \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{lava\+::file\+\_\+mode}} \+: index \{ {\bfseries read} = 0
+, {\bfseries write}
+ \}
+\begin{DoxyCompactList}\small\item\em File modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{file_2file_8hpp_a7aaf917bd12b10e762020a0bd7bf009d}{lava\+::file\+\_\+error}} (\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} result)
+\begin{DoxyCompactList}\small\item\em Check file error result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c}\label{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c} 
+constexpr \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} const {\bfseries lava\+::file\+\_\+error\+\_\+result} = \mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}}
+\begin{DoxyCompactList}\small\item\em File error result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File access. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{file_2file_8hpp_a7aaf917bd12b10e762020a0bd7bf009d}\index{file.hpp@{file.hpp}!file\_error@{file\_error}}
+\index{file\_error@{file\_error}!file.hpp@{file.hpp}}
+\doxysubsubsection{\texorpdfstring{file\_error()}{file\_error()}}
+{\footnotesize\ttfamily \label{file_2file_8hpp_a7aaf917bd12b10e762020a0bd7bf009d} 
+bool lava\+::file\+\_\+error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check file error result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Result code to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error result or okay 
+\end{DoxyReturn}

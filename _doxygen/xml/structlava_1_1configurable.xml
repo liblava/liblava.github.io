@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1configurable" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>lava::configurable</compoundname>
+    <basecompoundref refid="structlava_1_1interface" prot="public" virt="non-virtual">lava::interface</basecompoundref>
+    <derivedcompoundref refid="structlava_1_1app__config" prot="public" virt="non-virtual">lava::app_config</derivedcompoundref>
+    <derivedcompoundref refid="structlava_1_1props" prot="public" virt="non-virtual">lava::props</derivedcompoundref>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1configurable_1adea3f5e14b54e32b9f176c8f75ef029c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void lava::configurable::set_json</definition>
+        <argsstring>(json_ref j)=0</argsstring>
+        <name>set_json</name>
+        <qualifiedname>lava::configurable::set_json</qualifiedname>
+        <reimplementedby refid="structlava_1_1app__config_1a65eeb9550ec619a14adf28da9054c68b">set_json</reimplementedby>
+        <reimplementedby refid="structlava_1_1props_1af14af72d2081d93b4b7d932487ee3876">set_json</reimplementedby>
+        <param>
+          <type>json_ref</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Set json config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Json file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json.hpp" line="29" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1configurable_1a4d820633e763f6e1fe5de468ac84b22c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>json</type>
+        <definition>virtual json lava::configurable::get_json</definition>
+        <argsstring>() const =0</argsstring>
+        <name>get_json</name>
+        <qualifiedname>lava::configurable::get_json</qualifiedname>
+        <reimplementedby refid="structlava_1_1app__config_1a89c8dfbd34042d7b3c8dfe2bd42619a5">get_json</reimplementedby>
+        <reimplementedby refid="structlava_1_1props_1a1d5efad4d33dcb70b8dc7ad12ed38352">get_json</reimplementedby>
+        <briefdescription>
+<para>Get json config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>json Json file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/json.hpp" line="35" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Configurable interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>lava::app_config</label>
+        <link refid="structlava_1_1app__config"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="4">
+        <label>lava::props</label>
+        <link refid="structlava_1_1props"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/file/json.hpp" line="24" column="1" bodyfile="liblava/file/json.hpp" bodystart="24" bodyend="36"/>
+    <listofallmembers>
+      <member refid="structlava_1_1configurable_1a4d820633e763f6e1fe5de468ac84b22c" prot="public" virt="pure-virtual"><scope>lava::configurable</scope><name>get_json</name></member>
+      <member refid="structlava_1_1configurable_1adea3f5e14b54e32b9f176c8f75ef029c" prot="public" virt="pure-virtual"><scope>lava::configurable</scope><name>set_json</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::configurable</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,697 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1engine" kind="struct" language="C++" prot="public">
+    <compoundname>lava::engine</compoundname>
+    <basecompoundref refid="structlava_1_1app" prot="public" virt="non-virtual">lava::app</basecompoundref>
+    <includes refid="engine_2engine_8hpp" local="no">engine.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1engine_1a8d97caac9829c6770045c90792d46250" prot="public" static="no">
+        <type><ref refid="structlava_1_1engine" kindref="compound">engine</ref> *</type>
+        <definition>using lava::engine::ptr =  engine*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::engine::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="24" column="5" bodyfile="liblava/engine/engine.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1engine_1aeb6a7c03d75cbee98c3e8a97d1c86e15" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using lava::engine::hud_menu_func =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>hud_menu_func</name>
+        <qualifiedname>lava::engine::hud_menu_func</qualifiedname>
+        <briefdescription>
+<para>Hud menu function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="42" column="5" bodyfile="liblava/engine/engine.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1engine_1a9100d6f342f15239b9db76af73b9cd74" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1props" kindref="compound">lava::props</ref></type>
+        <definition>lava::props lava::engine::props</definition>
+        <argsstring></argsstring>
+        <name>props</name>
+        <qualifiedname>lava::engine::props</qualifiedname>
+        <briefdescription>
+<para>Props. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="36" column="17" bodyfile="liblava/engine/engine.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1engine_1a25acffe4cf0d148de7b64b39f946e26b" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1producer" kindref="compound">lava::producer</ref></type>
+        <definition>lava::producer lava::engine::producer</definition>
+        <argsstring></argsstring>
+        <name>producer</name>
+        <qualifiedname>lava::engine::producer</qualifiedname>
+        <briefdescription>
+<para>Producer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="39" column="20" bodyfile="liblava/engine/engine.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1engine_1a0bfb6967a08014bb4e98634c6e6edf07" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1engine_1aeb6a7c03d75cbee98c3e8a97d1c86e15" kindref="member">hud_menu_func</ref></type>
+        <definition>hud_menu_func lava::engine::on_menu</definition>
+        <argsstring></argsstring>
+        <name>on_menu</name>
+        <qualifiedname>lava::engine::on_menu</qualifiedname>
+        <briefdescription>
+<para>Function called on hud menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="45" column="19" bodyfile="liblava/engine/engine.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1engine_1ad80db3fd3b9f2aa0e0605d5c4bdf0e2c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::engine::hud_active</definition>
+        <argsstring></argsstring>
+        <name>hud_active</name>
+        <qualifiedname>lava::engine::hud_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Hud active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="48" column="10" bodyfile="liblava/engine/engine.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1engine_1aafa228d71d870270b550b46f750dd1f2" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::engine::m_menu_layer</definition>
+        <argsstring></argsstring>
+        <name>m_menu_layer</name>
+        <qualifiedname>lava::engine::m_menu_layer</qualifiedname>
+        <briefdescription>
+<para>Hud menu id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="62" column="8" bodyfile="liblava/engine/engine.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1engine_1a0673ada7016f774ad85f85d742186075" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">json_file::callback</ref></type>
+        <definition>json_file::callback lava::engine::m_config_callback</definition>
+        <argsstring></argsstring>
+        <name>m_config_callback</name>
+        <qualifiedname>lava::engine::m_config_callback</qualifiedname>
+        <briefdescription>
+<para>Configuration file callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="70" column="25" bodyfile="liblava/engine/engine.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1engine_1a3790f6a8595f91b51d4e2b46ffffbb0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool lava::engine::setup</definition>
+        <argsstring>() override</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::engine::setup</qualifiedname>
+        <reimplements refid="structlava_1_1app_1a18ddb2206f58754914a2126a68ce9b95">setup</reimplements>
+        <briefdescription>
+<para>Set up the engine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Setup was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1engine_1ad06bc981f99fe2edf32f425a92589de6" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::app::app</definition>
+        <argsstring>(frame_env::ref env)</argsstring>
+        <name>app</name>
+        <qualifiedname>lava::engine::app</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1frame__env_1ade8cafeb094c26f88fcee27114a42287" kindref="member">frame_env::ref</ref></type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+<para>App constructors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1engine_1a5e61eba36abb18ff4bb8cfb1a997effe" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::app::app</definition>
+        <argsstring>(name name, argh::parser cmd_line={})</argsstring>
+        <name>app</name>
+        <qualifiedname>lava::engine::app</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>argh::parser</type>
+          <declname>cmd_line</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>App constructors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="27" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1engine_1aa286f39b5483e5af71f276285930c1a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::engine::handle_config</definition>
+        <argsstring>()</argsstring>
+        <name>handle_config</name>
+        <qualifiedname>lava::engine::handle_config</qualifiedname>
+        <briefdescription>
+<para>Handle configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1engine_1a10a829219f67600b2d665c022d067006" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::engine::hud_menu</definition>
+        <argsstring>()</argsstring>
+        <name>hud_menu</name>
+        <qualifiedname>lava::engine::hud_menu</qualifiedname>
+        <briefdescription>
+<para>Handle hud menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/engine.hpp" line="59" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Engine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::app</label>
+        <link refid="structlava_1_1app"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::engine</label>
+        <link refid="structlava_1_1engine"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::frame</label>
+        <link refid="structlava_1_1frame"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="5">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>key_event::list</label>
+      </node>
+      <node id="2">
+        <label>lava::app</label>
+        <link refid="structlava_1_1app"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>window</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>imgui</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>imgui_config</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>tooltips</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>staging</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>block</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>shading</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>fs</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>config_file</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>lava::app_config</label>
+        <link refid="structlava_1_1app__config"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>imgui_font</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>lava::block</label>
+        <link refid="structlava_1_1block"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>lava::camera</label>
+        <link refid="structlava_1_1camera"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>lava::data</label>
+        <link refid="structlava_1_1data"/>
+      </node>
+      <node id="31">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="1">
+        <label>lava::engine</label>
+        <link refid="structlava_1_1engine"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>props</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>producer</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>lava::file_system</label>
+        <link refid="structlava_1_1file__system"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>lava::forward_shading</label>
+        <link refid="structlava_1_1forward__shading"/>
+      </node>
+      <node id="3">
+        <label>lava::frame</label>
+        <link refid="structlava_1_1frame"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>run_time</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>platform</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>telegraph</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>lava::gamepad</label>
+        <link refid="structlava_1_1gamepad"/>
+      </node>
+      <node id="47">
+        <label>lava::id_registry&lt; lava::mesh_template&lt; vertex &gt;, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="48">
+        <label>lava::id_registry&lt; lava::texture, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="25">
+        <label>lava::imgui</label>
+        <link refid="structlava_1_1imgui"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>layers</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>lava::imgui::config</label>
+        <link refid="structlava_1_1imgui_1_1config"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>icon</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>lava::imgui::font</label>
+        <link refid="structlava_1_1imgui_1_1font"/>
+      </node>
+      <node id="29">
+        <label>lava::imgui::icon_font</label>
+        <link refid="structlava_1_1imgui_1_1icon__font"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>lava::input</label>
+        <link refid="structlava_1_1input"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>scroll</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mouse_move</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mouse_button</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>mouse_active</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>path_drop</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>lava::input_events&lt; key_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>lava::input_events&lt; mouse_active_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>lava::input_events&lt; mouse_button_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>lava::input_events&lt; mouse_move_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>lava::input_events&lt; path_drop_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>lava::input_events&lt; scroll_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="44">
+        <label>lava::json_file</label>
+        <link refid="structlava_1_1json__file"/>
+      </node>
+      <node id="26">
+        <label>lava::layer_list</label>
+        <link refid="structlava_1_1layer__list"/>
+      </node>
+      <node id="8">
+        <label>lava::message_dispatcher</label>
+        <link refid="structlava_1_1message__dispatcher"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="7">
+        <label>lava::platform</label>
+        <link refid="structlava_1_1platform"/>
+      </node>
+      <node id="46">
+        <label>lava::producer</label>
+        <link refid="structlava_1_1producer"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>meshes</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>textures</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>lava::props</label>
+        <link refid="structlava_1_1props"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>lava::renderer</label>
+        <link refid="structlava_1_1renderer"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lava::run_time</label>
+        <link refid="structlava_1_1run__time"/>
+      </node>
+      <node id="35">
+        <label>lava::staging</label>
+        <link refid="structlava_1_1staging"/>
+      </node>
+      <node id="42">
+        <label>lava::surface_format_request</label>
+        <link refid="structlava_1_1surface__format__request"/>
+      </node>
+      <node id="9">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>lava::tooltip_list</label>
+        <link refid="structlava_1_1tooltip__list"/>
+      </node>
+      <node id="10">
+        <label>lava::window</label>
+        <link refid="structlava_1_1window"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>mouse_active_event::list</label>
+      </node>
+      <node id="20">
+        <label>mouse_button_event::list</label>
+      </node>
+      <node id="18">
+        <label>mouse_move_event::list</label>
+      </node>
+      <node id="24">
+        <label>path_drop_event::list</label>
+      </node>
+      <node id="16">
+        <label>scroll_event::list</label>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/engine/engine.hpp" line="22" column="1" bodyfile="liblava/engine/engine.hpp" bodystart="22" bodyend="71"/>
+    <listofallmembers>
+      <member refid="structlava_1_1frame_1a43ee9210bb4360cc0224cc9c145f2283" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>add_run</name></member>
+      <member refid="structlava_1_1frame_1abe68c5f38b2de4bda065ec3234ab2597" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>add_run_end</name></member>
+      <member refid="structlava_1_1frame_1a1390550e2be9d636d5f461c998a23f0c" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>add_run_once</name></member>
+      <member refid="structlava_1_1engine_1ad06bc981f99fe2edf32f425a92589de6" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>app</name></member>
+      <member refid="structlava_1_1engine_1a5e61eba36abb18ff4bb8cfb1a997effe" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>app</name></member>
+      <member refid="structlava_1_1app_1a08b1eb2de663a2d9bb8ab0fd332acdba" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>block</name></member>
+      <member refid="structlava_1_1app_1a84c6aa586cd8f67e80877fb94856e3aa" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>block_cmd</name></member>
+      <member refid="structlava_1_1app_1a4ebabdb190622e29d2c13a7a9dfb7c65" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>camera</name></member>
+      <member refid="structlava_1_1app_1ae7cdae16cb28325502f9db6aff1056c9" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>config</name></member>
+      <member refid="structlava_1_1app_1a4bcfb3d71c89887b6d0f8ef491a50e6e" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>config_file</name></member>
+      <member refid="structlava_1_1app_1a96680da62c60dab7bfdf2989d83f8896" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>create_func</name></member>
+      <member refid="structlava_1_1app_1ae02449e4c2bdc355979becff808ee1bd" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>destroy_func</name></member>
+      <member refid="structlava_1_1app_1a41fce192059626409f92d8567c07cbd1" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>device</name></member>
+      <member refid="structlava_1_1app_1a002d0a91be6d7824780db128e6660016" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>draw_about</name></member>
+      <member refid="structlava_1_1app_1a478b16d80fbb6bc5fcf9f335a53c8167" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>fps_cap</name></member>
+      <member refid="structlava_1_1frame_1a3654649fa6870251276af0149e04fa4d" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>frame</name></member>
+      <member refid="structlava_1_1frame_1aff834432bc9fe1b5e3b6c8ed322abab0" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>frame</name></member>
+      <member refid="structlava_1_1app_1a5d7fe4cc9aed8b3377fd2e149b462117" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>fs</name></member>
+      <member refid="structlava_1_1frame_1a5f59d71443b1c39fb0493687bdeec739" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_cmd_line</name></member>
+      <member refid="structlava_1_1frame_1a83fad308a14053ddf4fa606c4eb249be" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_env</name></member>
+      <member refid="structlava_1_1app_1aa00ab08c71c841b4a0e0e46abd95c405" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_fps_info</name></member>
+      <member refid="structlava_1_1app_1af053e9d9b31d702a29ac45053337a690" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_frame_counter</name></member>
+      <member refid="structlava_1_1frame_1a41b099b4b77b7f9929e9645aa6f31a78" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_name</name></member>
+      <member refid="structlava_1_1frame_1a0d0853f9375ba76b11f5b9af8fc43ec8" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_running_time</name></member>
+      <member refid="structlava_1_1frame_1a3c57694f474bd765f413dec540cad1f1" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>get_running_time_sec</name></member>
+      <member refid="structlava_1_1engine_1aa286f39b5483e5af71f276285930c1a0" prot="private" virt="non-virtual"><scope>lava::engine</scope><name>handle_config</name></member>
+      <member refid="structlava_1_1app_1a69bc64a8b17addc0115c33fca14d61fe" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>headless</name></member>
+      <member refid="structlava_1_1engine_1ad80db3fd3b9f2aa0e0605d5c4bdf0e2c" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>hud_active</name></member>
+      <member refid="structlava_1_1engine_1a10a829219f67600b2d665c022d067006" prot="private" virt="non-virtual"><scope>lava::engine</scope><name>hud_menu</name></member>
+      <member refid="structlava_1_1engine_1aeb6a7c03d75cbee98c3e8a97d1c86e15" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>hud_menu_func</name></member>
+      <member refid="structlava_1_1app_1ae2ce76cf40c6cd415de4df413500693b" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>imgui</name></member>
+      <member refid="structlava_1_1app_1aef89da855f9ef63f2038aad3be842c11" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>imgui_config</name></member>
+      <member refid="structlava_1_1app_1a3a9114b0751ea247fbb08653ea1a7bdc" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>input</name></member>
+      <member refid="structlava_1_1engine_1a0673ada7016f774ad85f85d742186075" prot="private" virt="non-virtual"><scope>lava::engine</scope><name>m_config_callback</name></member>
+      <member refid="structlava_1_1engine_1aafa228d71d870270b550b46f750dd1f2" prot="private" virt="non-virtual"><scope>lava::engine</scope><name>m_menu_layer</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1app_1ab963eb1299fa1eb47e38da934aac4a69" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_create</name></member>
+      <member refid="structlava_1_1app_1a0557e2075c0cf1de8aaedf52eb38748d" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_destroy</name></member>
+      <member refid="structlava_1_1engine_1a0bfb6967a08014bb4e98634c6e6edf07" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_menu</name></member>
+      <member refid="structlava_1_1app_1a5c17cb5b2a515f8c5dc01cc95da5b6d1" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_process</name></member>
+      <member refid="structlava_1_1app_1a5e454966a7b9d3c6258301f0be195430" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_setup</name></member>
+      <member refid="structlava_1_1app_1aa27cf6d48a492de23be274768e439244" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>on_update</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>operator=</name></member>
+      <member refid="structlava_1_1app_1abe75dc7374213ed5aaf69490d60afd95" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>pad</name></member>
+      <member refid="structlava_1_1app_1ad46890b76b882ffcf553d14c5e257a39" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>pipeline_cache</name></member>
+      <member refid="structlava_1_1frame_1abcf81b8a82712413d2dbeb6365b7dd44" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>platform</name></member>
+      <member refid="structlava_1_1app_1a6fb5960dad3358265fcd2dd2668ee736" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>process_func</name></member>
+      <member refid="structlava_1_1engine_1a25acffe4cf0d148de7b64b39f946e26b" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>producer</name></member>
+      <member refid="structlava_1_1engine_1a9100d6f342f15239b9db76af73b9cd74" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>props</name></member>
+      <member refid="structlava_1_1engine_1a8d97caac9829c6770045c90792d46250" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>ptr</name></member>
+      <member refid="structlava_1_1frame_1ae8f1c745f9086f7e93e2a925cbd6362a" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>ready</name></member>
+      <member refid="structlava_1_1frame_1a40025a8683f4c903b1166642cdf90132" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>remove</name></member>
+      <member refid="structlava_1_1app_1a43900cdbb05810362738b1c04dbccad1" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>renderer</name></member>
+      <member refid="structlava_1_1frame_1ac3d3f9da01ee70a15024a715c7523635" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>result</name></member>
+      <member refid="structlava_1_1frame_1a956030d60fc69b88fa171e5a772cb2e6" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run</name></member>
+      <member refid="structlava_1_1frame_1a52ca74283525108201d243f0436d9d52" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_end_func</name></member>
+      <member refid="structlava_1_1frame_1a246c5dc377aa229b796c273443fd6c2a" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_end_func_ref</name></member>
+      <member refid="structlava_1_1frame_1ad4239b17e8ea083fd2e26055a2053dd8" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_func</name></member>
+      <member refid="structlava_1_1frame_1a1baf2b13b19143c32816bcec0dc44e1a" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_func_ref</name></member>
+      <member refid="structlava_1_1frame_1a745267e2a6632ea6b0fa30c2d0223812" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_once_func</name></member>
+      <member refid="structlava_1_1frame_1a36e6af9024658dca86df983f3d8d1539" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_once_func_ref</name></member>
+      <member refid="structlava_1_1frame_1abdb3e371ff2b0383d17bba36c824ef0a" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>run_time</name></member>
+      <member refid="structlava_1_1frame_1adaea615ada78d449d51078340bbd05fd" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1app_1a0338a7a92ef9177ac4dfdb876be463b4" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>screenshot</name></member>
+      <member refid="structlava_1_1frame_1ae98d1fd17b5ab7f856c0aa6cc1eff60b" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>set_wait_for_events</name></member>
+      <member refid="structlava_1_1engine_1a3790f6a8595f91b51d4e2b46ffffbb0e" prot="public" virt="virtual"><scope>lava::engine</scope><name>setup</name></member>
+      <member refid="structlava_1_1app_1aad899b6ea566b9f1dd739918f8c5ef94" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>setup_func</name></member>
+      <member refid="structlava_1_1app_1a47a375f0f1c6de884fb3bce66cd2b148" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>shading</name></member>
+      <member refid="structlava_1_1frame_1ac8bfcb3b1bd090953d2f6897b4f98247" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>shut_down</name></member>
+      <member refid="structlava_1_1app_1affadb2e50b717316254d0a8ba81aed66" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>staging</name></member>
+      <member refid="structlava_1_1app_1a9120f5c469f59cdb9eeeb156077ce5da" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>switch_config</name></member>
+      <member refid="structlava_1_1app_1a2bef0a354bee0705aed093e47b4a231a" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>target</name></member>
+      <member refid="structlava_1_1frame_1ae0c4e5e2186c452aa59a9214ab347ed0" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>telegraph</name></member>
+      <member refid="structlava_1_1app_1ad2ba6491a55093e438d79b762ed0dd72" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>tooltips</name></member>
+      <member refid="structlava_1_1app_1acea2a9ee4a2be2dfd06a1eb42a271816" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>triple_buffer</name></member>
+      <member refid="structlava_1_1app_1a5c1329ac87cde932c175102c2a25f98f" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>update_func</name></member>
+      <member refid="structlava_1_1app_1aa902740e3023becfdb87b9ad780a74f6" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>v_sync</name></member>
+      <member refid="structlava_1_1frame_1a6622e4273b1399a9aff90889ffbe4547" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>waiting_for_events</name></member>
+      <member refid="structlava_1_1app_1a5906d9025f9c7e29a339df92abc3d7d7" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>window</name></member>
+      <member refid="structlava_1_1frame_1a913bcba53dadc062fd078e57df76ed41" prot="public" virt="non-virtual"><scope>lava::engine</scope><name>~frame</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::engine</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

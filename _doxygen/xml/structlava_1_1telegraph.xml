@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1telegraph" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>lava::telegraph</compoundname>
+    <basecompoundref refid="structlava_1_1interface" prot="public" virt="non-virtual">lava::interface</basecompoundref>
+    <derivedcompoundref refid="structlava_1_1message__dispatcher" prot="public" virt="non-virtual">lava::message_dispatcher</derivedcompoundref>
+    <includes refid="telegram_8hpp" local="no">telegram.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1telegraph_1a8c4cbde81019f05bf51f91327d529196" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void lava::telegraph::send_message</definition>
+        <argsstring>(id::ref receiver, id::ref sender, index message, ms delay={}, any const &amp;info={})=0</argsstring>
+        <name>send_message</name>
+        <qualifiedname>lava::telegraph::send_message</qualifiedname>
+        <reimplementedby refid="structlava_1_1message__dispatcher_1aac8ade56ddd9f9b837095fae1263b584">send_message</reimplementedby>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type><ref refid="time_8hpp_1a8cc2ca1333c2a464b07f9c54326a4569" kindref="member">ms</ref></type>
+          <declname>delay</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type><ref refid="telegram_8hpp_1adc5d467e5360109773d4eed7e273255d" kindref="member">any</ref> const &amp;</type>
+          <declname>info</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Send message to dispatcher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receiver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Receiver id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Telegram information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="102" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Telegraph station. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::message_dispatcher</label>
+        <link refid="structlava_1_1message__dispatcher"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/util/telegram.hpp" line="93" column="1" bodyfile="liblava/util/telegram.hpp" bodystart="93" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structlava_1_1telegraph_1a8c4cbde81019f05bf51f91327d529196" prot="public" virt="pure-virtual"><scope>lava::telegraph</scope><name>send_message</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::telegraph</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

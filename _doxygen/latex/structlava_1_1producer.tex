@@ -1,0 +1,255 @@
+\doxysection{lava\+::producer Struct Reference}
+\hypertarget{structlava_1_1producer}{}\label{structlava_1_1producer}\index{lava::producer@{lava::producer}}
+
+
+Producer.  
+
+
+
+
+{\ttfamily \#include $<$producer.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}\label{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396} 
+enum \mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\+\_\+optimization}} \+: index \{ {\bfseries none} = 0
+, {\bfseries size}
+, {\bfseries performance}
+ \}
+\begin{DoxyCompactList}\small\item\em Shader optimization level. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}\label{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb} 
+enum \mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\+\_\+language}} \+: index \{ {\bfseries glsl} = 0
+, {\bfseries hlsl}
+ \}
+\begin{DoxyCompactList}\small\item\em Shader source language. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_a1c35bbf5017f998e492ec5fa8b161a8f}\label{structlava_1_1producer_a1c35bbf5017f998e492ec5fa8b161a8f} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1producer}{producer}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to producer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1producer_a15fbf775b6c4477dedcba17f905860bc}{create\+\_\+mesh}} (\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}} \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}})
+\begin{DoxyCompactList}\small\item\em Create a mesh product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1producer_af51971921ad6b75df9578d89f24849cd}{get\+\_\+mesh}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Get mesh by prop name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1producer_a794527d9bd34d7fd42c9d4e44985cd9b}{add\+\_\+mesh}} (\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}} \mbox{\hyperlink{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341}{mesh}})
+\begin{DoxyCompactList}\small\item\em Add mesh to products. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1producer_af44cc8412da26682a3961e8cd3c66590}{create\+\_\+texture}} (\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size)
+\begin{DoxyCompactList}\small\item\em Create a texture product. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1producer_a7017f850dad5f8c9800629aa107427d1}{get\+\_\+texture}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Get texture by prop name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1producer_afcc8c8b59d1d6ead4e728ff321c5fd17}{add\+\_\+texture}} (\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} product)
+\begin{DoxyCompactList}\small\item\em Add texture to products. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} \mbox{\hyperlink{structlava_1_1producer_a5efa0fdbad2f60aa21d9f9c4a72161d9}{get\+\_\+shader}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, bool reload=false)
+\begin{DoxyCompactList}\small\item\em Generate shader by prop name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} \mbox{\hyperlink{structlava_1_1producer_a1e0b2eb5de50571933068b22a1f9a997}{reload\+\_\+shader}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Regenerate shader by prop name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1data}{data}} \mbox{\hyperlink{structlava_1_1producer_a7646ea144e25fbb1e176bacbb943276c}{compile\+\_\+shader}} (\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} product, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} filename) const
+\begin{DoxyCompactList}\small\item\em Compile shader. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_aeea5c08661de1850daf7c392aee1d99d}\label{structlava_1_1producer_aeea5c08661de1850daf7c392aee1d99d} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy all products. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_a66b908590b9c22b43cbefd78b4553b9f}\label{structlava_1_1producer_a66b908590b9c22b43cbefd78b4553b9f} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all products. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1producer_a0246341f434c17fa0b727e552c496488}\label{structlava_1_1producer_a0246341f434c17fa0b727e552c496488} 
+\mbox{\hyperlink{structlava_1_1engine}{engine}} \texorpdfstring{$\ast$}{*} {\bfseries app} = nullptr
+\begin{DoxyCompactList}\small\item\em Engine. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_ad7ec786d9a89d95bd28c3c7cd380aea2}\label{structlava_1_1producer_ad7ec786d9a89d95bd28c3c7cd380aea2} 
+\mbox{\hyperlink{structlava_1_1id__registry}{id\+\_\+registry}}$<$ \mbox{\hyperlink{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341}{mesh}}, \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} $>$ {\bfseries meshes}
+\begin{DoxyCompactList}\small\item\em Mesh products. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_af03bcb173ef9d6633556d5f08d90f081}\label{structlava_1_1producer_af03bcb173ef9d6633556d5f08d90f081} 
+\mbox{\hyperlink{structlava_1_1id__registry}{id\+\_\+registry}}$<$ \mbox{\hyperlink{structlava_1_1texture}{texture}}, \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} $>$ {\bfseries textures}
+\begin{DoxyCompactList}\small\item\em Texture products. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_a50036267bb97fc294b73d18b41471498}\label{structlava_1_1producer_a50036267bb97fc294b73d18b41471498} 
+\mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\+\_\+optimization}} {\bfseries shader\+\_\+opt} = shader\+\_\+optimization\+::performance
+\begin{DoxyCompactList}\small\item\em Shader optimization level. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_aa4c66fdc83b093ce2269af2f5d5fa977}\label{structlava_1_1producer_aa4c66fdc83b093ce2269af2f5d5fa977} 
+\mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\+\_\+language}} {\bfseries shader\+\_\+lang} = shader\+\_\+language\+::glsl
+\begin{DoxyCompactList}\small\item\em Shader source language. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1producer_ab3bc54229e400f0803732a80223fb8c6}\label{structlava_1_1producer_ab3bc54229e400f0803732a80223fb8c6} 
+bool {\bfseries shader\+\_\+debug} = false
+\begin{DoxyCompactList}\small\item\em Shader debug information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Producer. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1producer_a794527d9bd34d7fd42c9d4e44985cd9b}\index{lava::producer@{lava::producer}!add\_mesh@{add\_mesh}}
+\index{add\_mesh@{add\_mesh}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{add\_mesh()}{add\_mesh()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a794527d9bd34d7fd42c9d4e44985cd9b} 
+bool lava\+::producer\+::add\+\_\+mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}}}]{mesh}{}\end{DoxyParamCaption})}
+
+
+
+Add mesh to products. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & Mesh \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Added to products or already exists 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_afcc8c8b59d1d6ead4e728ff321c5fd17}\index{lava::producer@{lava::producer}!add\_texture@{add\_texture}}
+\index{add\_texture@{add\_texture}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{add\_texture()}{add\_texture()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_afcc8c8b59d1d6ead4e728ff321c5fd17} 
+bool lava\+::producer\+::add\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}}}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Add texture to products. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & Texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Added to products or already exists 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_a7646ea144e25fbb1e176bacbb943276c}\index{lava::producer@{lava::producer}!compile\_shader@{compile\_shader}}
+\index{compile\_shader@{compile\_shader}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{compile\_shader()}{compile\_shader()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a7646ea144e25fbb1e176bacbb943276c} 
+\mbox{\hyperlink{structlava_1_1data}{data}} lava\+::producer\+::compile\+\_\+shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}}}]{product}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+Compile shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & Shader data \\
+\hline
+{\em name} & Shader name \\
+\hline
+{\em filename} & Shader filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data Compiled shader data 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_a15fbf775b6c4477dedcba17f905860bc}\index{lava::producer@{lava::producer}!create\_mesh@{create\_mesh}}
+\index{create\_mesh@{create\_mesh}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{create\_mesh()}{create\_mesh()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a15fbf775b6c4477dedcba17f905860bc} 
+\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}} lava\+::producer\+::create\+\_\+mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}}}]{mesh\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+Create a mesh product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\+\_\+type}} & Type of mesh \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr} Mesh 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_af44cc8412da26682a3961e8cd3c66590}\index{lava::producer@{lava::producer}!create\_texture@{create\_texture}}
+\index{create\_texture@{create\_texture}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{create\_texture()}{create\_texture()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_af44cc8412da26682a3961e8cd3c66590} 
+\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} lava\+::producer\+::create\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Create a texture product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr} Default texture 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_af51971921ad6b75df9578d89f24849cd}\index{lava::producer@{lava::producer}!get\_mesh@{get\_mesh}}
+\index{get\_mesh@{get\_mesh}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{get\_mesh()}{get\_mesh()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_af51971921ad6b75df9578d89f24849cd} 
+\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr}} lava\+::producer\+::get\+\_\+mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Get mesh by prop name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh\+::s\+\_\+ptr} Mesh 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_a5efa0fdbad2f60aa21d9f9c4a72161d9}\index{lava::producer@{lava::producer}!get\_shader@{get\_shader}}
+\index{get\_shader@{get\_shader}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{get\_shader()}{get\_shader()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a5efa0fdbad2f60aa21d9f9c4a72161d9} 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} lava\+::producer\+::get\+\_\+shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{bool}]{reload}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Generate shader by prop name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of shader \\
+\hline
+{\em reload} & Reload shader \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1c__data}{c\+\_\+data} Shader data 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_a7017f850dad5f8c9800629aa107427d1}\index{lava::producer@{lava::producer}!get\_texture@{get\_texture}}
+\index{get\_texture@{get\_texture}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{get\_texture()}{get\_texture()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a7017f850dad5f8c9800629aa107427d1} 
+\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr}} lava\+::producer\+::get\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Get texture by prop name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of prop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture\+::s\+\_\+ptr} Texture 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1producer_a1e0b2eb5de50571933068b22a1f9a997}\index{lava::producer@{lava::producer}!reload\_shader@{reload\_shader}}
+\index{reload\_shader@{reload\_shader}!lava::producer@{lava::producer}}
+\doxysubsubsection{\texorpdfstring{reload\_shader()}{reload\_shader()}}
+{\footnotesize\ttfamily \label{structlava_1_1producer_a1e0b2eb5de50571933068b22a1f9a997} 
+\mbox{\hyperlink{structlava_1_1c__data}{c\+\_\+data}} lava\+::producer\+::reload\+\_\+shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regenerate shader by prop name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of shader \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1c__data}{c\+\_\+data} Shader data 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/engine/\mbox{\hyperlink{producer_8hpp}{producer.\+hpp}}\end{DoxyCompactItemize}

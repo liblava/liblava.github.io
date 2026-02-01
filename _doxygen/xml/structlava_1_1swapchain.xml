@@ -1,0 +1,799 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1swapchain" kind="struct" language="C++" prot="public">
+    <compoundname>lava::swapchain</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="swapchain_8hpp" local="no">swapchain.hpp</includes>
+    <innerclass refid="structlava_1_1swapchain_1_1callback" prot="public">lava::swapchain::callback</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a5748a8df57b20051e8067858ad2295d0" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::swapchain::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::swapchain::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="205" column="17" bodyfile="liblava/frame/swapchain.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a41f7c773f327c603fd6c7e393cba378c" prot="private" static="no" mutable="no">
+        <type>VkSurfaceKHR</type>
+        <definition>VkSurfaceKHR lava::swapchain::m_surface</definition>
+        <argsstring></argsstring>
+        <name>m_surface</name>
+        <qualifiedname>lava::swapchain::m_surface</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan surface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="208" column="18" bodyfile="liblava/frame/swapchain.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a3780ef7cb4f8cecd27c8495fe0b46d89" prot="private" static="no" mutable="no">
+        <type>VkSurfaceFormatKHR</type>
+        <definition>VkSurfaceFormatKHR lava::swapchain::m_format</definition>
+        <argsstring></argsstring>
+        <name>m_format</name>
+        <qualifiedname>lava::swapchain::m_format</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Surface format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="211" column="24" bodyfile="liblava/frame/swapchain.hpp" bodystart="211" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1ae02681ea5e0c61824e47fdefbf10641d" prot="private" static="no" mutable="no">
+        <type>VkSwapchainKHR</type>
+        <definition>VkSwapchainKHR lava::swapchain::m_vk_swapchain</definition>
+        <argsstring></argsstring>
+        <name>m_vk_swapchain</name>
+        <qualifiedname>lava::swapchain::m_vk_swapchain</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="214" column="20" bodyfile="liblava/frame/swapchain.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1ac0a556726beb7b2d1bd67253741ece3f" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1image_1a5e307b53ee5524d733a67eb086060d4c" kindref="member">image::s_list</ref></type>
+        <definition>image::s_list lava::swapchain::m_backbuffers</definition>
+        <argsstring></argsstring>
+        <name>m_backbuffers</name>
+        <qualifiedname>lava::swapchain::m_backbuffers</qualifiedname>
+        <briefdescription>
+<para>List of backbuffer images. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="217" column="19" bodyfile="liblava/frame/swapchain.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a1f10ee01b720a4b3cb70fe15780b19f5" prot="private" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::swapchain::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <qualifiedname>lava::swapchain::m_size</qualifiedname>
+        <briefdescription>
+<para>Size of swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="220" column="9" bodyfile="liblava/frame/swapchain.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a6357cf3031d660c571e42fe88d7812ed" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::swapchain::m_reload_request_active</definition>
+        <argsstring></argsstring>
+        <name>m_reload_request_active</name>
+        <qualifiedname>lava::swapchain::m_reload_request_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Reload request active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="223" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a9c56cfde3f811f0eb5ca0eeae4f5efb1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::swapchain::m_v_sync_active</definition>
+        <argsstring></argsstring>
+        <name>m_v_sync_active</name>
+        <qualifiedname>lava::swapchain::m_v_sync_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>V-Sync active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="226" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1aa1fec41d4ad708e42b8370b838302651" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::swapchain::m_triple_buffer_active</definition>
+        <argsstring></argsstring>
+        <name>m_triple_buffer_active</name>
+        <qualifiedname>lava::swapchain::m_triple_buffer_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Prefer VK_PRESENT_MODE_MAILBOX_KHR over VK_PRESENT_MODE_IMMEDIATE_KHR state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="229" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1swapchain_1a5c9dc06af95596d66275bd779e65c526" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1swapchain_1_1callback_1a23250ad3fa53f8a95fef00c79c2ae96b" kindref="member">callback::list</ref></type>
+        <definition>callback::list lava::swapchain::m_callbacks</definition>
+        <argsstring></argsstring>
+        <name>m_callbacks</name>
+        <qualifiedname>lava::swapchain::m_callbacks</qualifiedname>
+        <briefdescription>
+<para>List of swapchain callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="232" column="20" bodyfile="liblava/frame/swapchain.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1swapchain_1af8b9630411168cbdc416cf0d24dfea39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::create</definition>
+        <argsstring>(device::ptr device, VkSurfaceKHR surface, VkSurfaceFormatKHR format, uv2 size, bool v_sync=false, bool triple_buffer=true)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::swapchain::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkSurfaceKHR</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>VkSurfaceFormatKHR</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>v_sync</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>triple_buffer</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Create a new swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan surface </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Surface format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of swapchain </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v_sync</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>V-Sync enabled </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>triple_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VK_PRESENT_MODE_MAILBOX_KHR preferred over VK_PRESENT_MODE_IMMEDIATE_KHR </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a5e3664831939f1ced3c5c352656b7e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::swapchain::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1aa07ecb458ba621fb1ca281969de51611" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::resize</definition>
+        <argsstring>(uv2 new_size)</argsstring>
+        <name>resize</name>
+        <qualifiedname>lava::swapchain::resize</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>new_size</declname>
+        </param>
+        <briefdescription>
+<para>Resize the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New size of swapchain </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resize was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a521e6a4d528080bb7f08b270acfc55d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::request_reload</definition>
+        <argsstring>()</argsstring>
+        <name>request_reload</name>
+        <qualifiedname>lava::swapchain::request_reload</qualifiedname>
+        <briefdescription>
+<para>Request a reload of the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="50" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a5329fb28a938b547f44896200bafbb69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::reload_request</definition>
+        <argsstring>() const</argsstring>
+        <name>reload_request</name>
+        <qualifiedname>lava::swapchain::reload_request</qualifiedname>
+        <briefdescription>
+<para>Check if reload of the swapchain is requested. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reload is requested or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="58" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a6bc4d9f17fbe1f26963dcdef108c8d19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::swapchain::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::swapchain::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="66" column="17" bodyfile="liblava/frame/swapchain.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a215d372f28ff63e9380daa6bdb1b20d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::swapchain::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::swapchain::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size of the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> Swapchain size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="74" column="9" bodyfile="liblava/frame/swapchain.hpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1ac89fc6e2cc8808b2535b8a922696873f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat lava::swapchain::get_format</definition>
+        <argsstring>() const</argsstring>
+        <name>get_format</name>
+        <qualifiedname>lava::swapchain::get_format</qualifiedname>
+        <briefdescription>
+<para>Get the format of the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkFormat Swapchain format </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="82" column="14" bodyfile="liblava/frame/swapchain.hpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1acb79990c2af08536400fcd2ce0ee5c1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkColorSpaceKHR</type>
+        <definition>VkColorSpaceKHR lava::swapchain::get_color_space</definition>
+        <argsstring>() const</argsstring>
+        <name>get_color_space</name>
+        <qualifiedname>lava::swapchain::get_color_space</qualifiedname>
+        <briefdescription>
+<para>Get the color space of the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkColorSpaceKHR Swapchain color space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="90" column="21" bodyfile="liblava/frame/swapchain.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1ae9cdc4102b140aa080aecee6b8c30672" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkSwapchainKHR</type>
+        <definition>VkSwapchainKHR lava::swapchain::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::swapchain::get</qualifiedname>
+        <briefdescription>
+<para>Get the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkSwapchainKHR Vulkan swapchain </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="98" column="20" bodyfile="liblava/frame/swapchain.hpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a3fae6439a7f077ab240de83932ad23c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::swapchain::get_backbuffer_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_backbuffer_count</name>
+        <qualifiedname>lava::swapchain::get_backbuffer_count</qualifiedname>
+        <briefdescription>
+<para>Get the backbuffer count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> Number of backbuffers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="106" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a5e4dbed644ce36b141b4f8bbe74fb642" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1image_1a5e307b53ee5524d733a67eb086060d4c" kindref="member">image::s_list</ref> const &amp;</type>
+        <definition>image::s_list const  &amp; lava::swapchain::get_backbuffers</definition>
+        <argsstring>() const</argsstring>
+        <name>get_backbuffers</name>
+        <qualifiedname>lava::swapchain::get_backbuffers</qualifiedname>
+        <briefdescription>
+<para>Get the backbuffers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1image_1a5e307b53ee5524d733a67eb086060d4c" kindref="member">image::s_list</ref> const&amp; List of backbuffer images </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="114" column="25" bodyfile="liblava/frame/swapchain.hpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1aa0f1dc61fdbd6d90d70602216824569a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::add_callback</definition>
+        <argsstring>(callback *cb)</argsstring>
+        <name>add_callback</name>
+        <qualifiedname>lava::swapchain::add_callback</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1swapchain_1_1callback" kindref="compound">callback</ref> *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Add callback to swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="142" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a3492a31d76e85ead2eb089e19d041032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::remove_callback</definition>
+        <argsstring>(callback *cb)</argsstring>
+        <name>remove_callback</name>
+        <qualifiedname>lava::swapchain::remove_callback</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1swapchain_1_1callback" kindref="compound">callback</ref> *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Remove callback from swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="148" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1af524788d4411c4205db54d5ed9454b88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::v_sync</definition>
+        <argsstring>() const</argsstring>
+        <name>v_sync</name>
+        <qualifiedname>lava::swapchain::v_sync</qualifiedname>
+        <briefdescription>
+<para>Check if V-Sync is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>V-Sync is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="154" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a0b65d216e6be2dcf797b65d27dba5b6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::triple_buffer</definition>
+        <argsstring>() const</argsstring>
+        <name>triple_buffer</name>
+        <qualifiedname>lava::swapchain::triple_buffer</qualifiedname>
+        <briefdescription>
+<para>Check if VK_PRESENT_MODE_MAILBOX_KHR is preferred over VK_PRESENT_MODE_IMMEDIATE_KHR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VK_PRESENT_MODE_MAILBOX_KHR preferred over VK_PRESENT_MODE_IMMEDIATE_KHR or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="162" column="10" bodyfile="liblava/frame/swapchain.hpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a2ba8d162d3d6159cd197ca0a540c6b68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::surface_supported</definition>
+        <argsstring>(index queue_family) const</argsstring>
+        <name>surface_supported</name>
+        <qualifiedname>lava::swapchain::surface_supported</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>queue_family</declname>
+        </param>
+        <briefdescription>
+<para>Check if surface is supported by queue family index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue_family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue family index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Surface is supported by queue family or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="171" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1swapchain_1a761bc054d2999ca74c518838f8f42ddd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPresentModeKHR</type>
+        <definition>VkPresentModeKHR lava::swapchain::choose_present_mode</definition>
+        <argsstring>(VkPresentModeKHRs const &amp;present_modes) const</argsstring>
+        <name>choose_present_mode</name>
+        <qualifiedname>lava::swapchain::choose_present_mode</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a31e005633f6b721fd471413d4d306cff" kindref="member">VkPresentModeKHRs</ref> const &amp;</type>
+          <declname>present_modes</declname>
+        </param>
+        <briefdescription>
+<para>Choose present mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>present_modes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of present modes to choose </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>VkPresentModeKHR Chosen present mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="179" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a050108daa81a81a1b9c138e2888f00b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSwapchainCreateInfoKHR</type>
+        <definition>VkSwapchainCreateInfoKHR lava::swapchain::create_info</definition>
+        <argsstring>(VkPresentModeKHRs present_modes)</argsstring>
+        <name>create_info</name>
+        <qualifiedname>lava::swapchain::create_info</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a31e005633f6b721fd471413d4d306cff" kindref="member">VkPresentModeKHRs</ref></type>
+          <declname>present_modes</declname>
+        </param>
+        <briefdescription>
+<para>Create a swapchain create infomation (helper) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>present_modes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of present modes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>VkSwapchainCreateInfoKHR Swapchain create information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="186" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a21510938bcff120b9644bb7dd1097e84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::swapchain::setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::swapchain::setup</qualifiedname>
+        <briefdescription>
+<para>Set up the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Setup was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="192" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a621aefbde964983341c33e2567ac4b80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::teardown</definition>
+        <argsstring>()</argsstring>
+        <name>teardown</name>
+        <qualifiedname>lava::swapchain::teardown</qualifiedname>
+        <briefdescription>
+<para>Tear down the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="197" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1swapchain_1a48e998207a99ea86fc7f64ba70b192d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::swapchain::destroy_backbuffer_views</definition>
+        <argsstring>()</argsstring>
+        <name>destroy_backbuffer_views</name>
+        <qualifiedname>lava::swapchain::destroy_backbuffer_views</qualifiedname>
+        <briefdescription>
+<para>Destroy swapchain backbuffer views. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/swapchain.hpp" line="202" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Swaphchain. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::swapchain</label>
+        <link refid="structlava_1_1swapchain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::swapchain</label>
+        <link refid="structlava_1_1swapchain"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/frame/swapchain.hpp" line="17" column="1" bodyfile="liblava/frame/swapchain.hpp" bodystart="17" bodyend="233"/>
+    <listofallmembers>
+      <member refid="structlava_1_1swapchain_1aa0f1dc61fdbd6d90d70602216824569a" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>add_callback</name></member>
+      <member refid="structlava_1_1swapchain_1a761bc054d2999ca74c518838f8f42ddd" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>choose_present_mode</name></member>
+      <member refid="structlava_1_1swapchain_1af8b9630411168cbdc416cf0d24dfea39" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>create</name></member>
+      <member refid="structlava_1_1swapchain_1a050108daa81a81a1b9c138e2888f00b0" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>create_info</name></member>
+      <member refid="structlava_1_1swapchain_1a5e3664831939f1ced3c5c352656b7e56" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>destroy</name></member>
+      <member refid="structlava_1_1swapchain_1a48e998207a99ea86fc7f64ba70b192d0" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>destroy_backbuffer_views</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>entity</name></member>
+      <member refid="structlava_1_1swapchain_1ae9cdc4102b140aa080aecee6b8c30672" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get</name></member>
+      <member refid="structlava_1_1swapchain_1a3fae6439a7f077ab240de83932ad23c2" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_backbuffer_count</name></member>
+      <member refid="structlava_1_1swapchain_1a5e4dbed644ce36b141b4f8bbe74fb642" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_backbuffers</name></member>
+      <member refid="structlava_1_1swapchain_1acb79990c2af08536400fcd2ce0ee5c1f" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_color_space</name></member>
+      <member refid="structlava_1_1swapchain_1a6bc4d9f17fbe1f26963dcdef108c8d19" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_device</name></member>
+      <member refid="structlava_1_1swapchain_1ac89fc6e2cc8808b2535b8a922696873f" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_format</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_id</name></member>
+      <member refid="structlava_1_1swapchain_1a215d372f28ff63e9380daa6bdb1b20d4" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>get_size</name></member>
+      <member refid="structlava_1_1swapchain_1ac0a556726beb7b2d1bd67253741ece3f" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_backbuffers</name></member>
+      <member refid="structlava_1_1swapchain_1a5c9dc06af95596d66275bd779e65c526" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_callbacks</name></member>
+      <member refid="structlava_1_1swapchain_1a5748a8df57b20051e8067858ad2295d0" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_device</name></member>
+      <member refid="structlava_1_1swapchain_1a3780ef7cb4f8cecd27c8495fe0b46d89" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_format</name></member>
+      <member refid="structlava_1_1swapchain_1a6357cf3031d660c571e42fe88d7812ed" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_reload_request_active</name></member>
+      <member refid="structlava_1_1swapchain_1a1f10ee01b720a4b3cb70fe15780b19f5" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_size</name></member>
+      <member refid="structlava_1_1swapchain_1a41f7c773f327c603fd6c7e393cba378c" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_surface</name></member>
+      <member refid="structlava_1_1swapchain_1aa1fec41d4ad708e42b8370b838302651" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_triple_buffer_active</name></member>
+      <member refid="structlava_1_1swapchain_1a9c56cfde3f811f0eb5ca0eeae4f5efb1" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_v_sync_active</name></member>
+      <member refid="structlava_1_1swapchain_1ae02681ea5e0c61824e47fdefbf10641d" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>m_vk_swapchain</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>operator=</name></member>
+      <member refid="structlava_1_1swapchain_1a5329fb28a938b547f44896200bafbb69" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>reload_request</name></member>
+      <member refid="structlava_1_1swapchain_1a3492a31d76e85ead2eb089e19d041032" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>remove_callback</name></member>
+      <member refid="structlava_1_1swapchain_1a521e6a4d528080bb7f08b270acfc55d9" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>request_reload</name></member>
+      <member refid="structlava_1_1swapchain_1aa07ecb458ba621fb1ca281969de51611" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>resize</name></member>
+      <member refid="structlava_1_1swapchain_1a21510938bcff120b9644bb7dd1097e84" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>setup</name></member>
+      <member refid="structlava_1_1swapchain_1a2ba8d162d3d6159cd197ca0a540c6b68" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>surface_supported</name></member>
+      <member refid="structlava_1_1swapchain_1a621aefbde964983341c33e2567ac4b80" prot="private" virt="non-virtual"><scope>lava::swapchain</scope><name>teardown</name></member>
+      <member refid="structlava_1_1swapchain_1a0b65d216e6be2dcf797b65d27dba5b6c" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>triple_buffer</name></member>
+      <member refid="structlava_1_1swapchain_1af524788d4411c4205db54d5ed9454b88" prot="public" virt="non-virtual"><scope>lava::swapchain</scope><name>v_sync</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::swapchain</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

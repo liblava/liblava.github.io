@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1compute__pipeline" kind="struct" language="C++" prot="public">
+    <compoundname>lava::compute_pipeline</compoundname>
+    <basecompoundref refid="structlava_1_1pipeline" prot="public" virt="non-virtual">lava::pipeline</basecompoundref>
+    <includes refid="compute__pipeline_8hpp" local="no">compute_pipeline.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1compute__pipeline" kindref="compound">compute_pipeline</ref> &gt;</type>
+        <definition>using lava::compute_pipeline::s_ptr =  std::shared_ptr&lt;compute_pipeline&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::compute_pipeline::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to compute pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="19" column="5" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1compute__pipeline_1a33901cde9309728a619f73f50a088fa9" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::compute_pipeline::s_map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <qualifiedname>lava::compute_pipeline::s_map</qualifiedname>
+        <briefdescription>
+<para>Map of compute pipelines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="22" column="5" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1compute__pipeline_1a6a9c746d5846cafa94a55e6e54e5536b" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::compute_pipeline::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::compute_pipeline::s_list</qualifiedname>
+        <briefdescription>
+<para>List of compute pipelines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="25" column="5" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1compute__pipeline_1ad0fa3473b189fbf44c728c2f3c28d351" prot="private" static="no" mutable="no">
+        <type>shader_stage::s_ptr</type>
+        <definition>shader_stage::s_ptr lava::compute_pipeline::m_shader_stage</definition>
+        <argsstring></argsstring>
+        <name>m_shader_stage</name>
+        <qualifiedname>lava::compute_pipeline::m_shader_stage</qualifiedname>
+        <briefdescription>
+<para>Shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="99" column="25" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a68ba75889ccd5fc123df93c7dce69748" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::compute_pipeline::make</definition>
+        <argsstring>(device::ptr device, VkPipelineCache pipeline_cache=0)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::compute_pipeline::make</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkPipelineCache</type>
+          <declname>pipeline_cache</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Make a new compute pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pipeline_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline cache </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" kindref="member">s_ptr</ref> Shared pointer to compute pipeline </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="33" column="18" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a7be06c2bd664c103661e4848f1bc2854" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void lava::compute_pipeline::bind</definition>
+        <argsstring>(VkCommandBuffer cmdBuffer) override</argsstring>
+        <name>bind</name>
+        <qualifiedname>lava::compute_pipeline::bind</qualifiedname>
+        <reimplements refid="structlava_1_1pipeline_1a4fbab953063b31a88987dd050ee9289c">bind</reimplements>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmdBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Bind the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmdBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1aab1a488ab2989de7d24be27d92902e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::compute_pipeline::set_shader_stage</definition>
+        <argsstring>(c_data::ref data, VkShaderStageFlagBits stage)</argsstring>
+        <name>set_shader_stage</name>
+        <qualifiedname>lava::compute_pipeline::set_shader_stage</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1c__data_1af79805daac5977755e5636b86b97c9d6" kindref="member">c_data::ref</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>VkShaderStageFlagBits</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+<para>Set shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader stage flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Set was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a3e6d479c2feb57b00f2ac16ba1a1e37a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::compute_pipeline::set</definition>
+        <argsstring>(shader_stage::s_ptr const &amp;stage)</argsstring>
+        <name>set</name>
+        <qualifiedname>lava::compute_pipeline::set</qualifiedname>
+        <param>
+          <type>shader_stage::s_ptr const &amp;</type>
+          <declname>stage</declname>
+        </param>
+        <briefdescription>
+<para>Set shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="60" column="10" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a142115babe5cd3924f277f0515e98e54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>shader_stage::s_ptr const &amp;</type>
+        <definition>shader_stage::s_ptr const  &amp; lava::compute_pipeline::get_shader_stage</definition>
+        <argsstring>() const</argsstring>
+        <name>get_shader_stage</name>
+        <qualifiedname>lava::compute_pipeline::get_shader_stage</qualifiedname>
+        <briefdescription>
+<para>Get the shader stage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>shader_stage::s_ptr const&amp; Shader state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="68" column="31" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a63ae45c6b38d4b07d57d3f5ace6e528b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::compute_pipeline::copy_to</definition>
+        <argsstring>(compute_pipeline *target) const</argsstring>
+        <name>copy_to</name>
+        <qualifiedname>lava::compute_pipeline::copy_to</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1compute__pipeline" kindref="compound">compute_pipeline</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Copy configuration to target pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Compute pipeline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="76" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a654ed7e149bedc432734be580211391f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::compute_pipeline::copy_from</definition>
+        <argsstring>(s_ptr const &amp;source)</argsstring>
+        <name>copy_from</name>
+        <qualifiedname>lava::compute_pipeline::copy_from</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" kindref="member">s_ptr</ref> const &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Copy configuration from source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Compute pipeline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="82" column="10" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a532e33a3caacd4f71ba16d26111a0c5b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::pipeline::pipeline</definition>
+        <argsstring>(device::ptr device, VkPipelineCache pipeline_cache=0)</argsstring>
+        <name>pipeline</name>
+        <qualifiedname>lava::compute_pipeline::pipeline</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VkPipelineCache</type>
+          <declname>pipeline_cache</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Pipeline constructors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="39" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a51a47735bcc7cd0af710afa48d55ef0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool lava::compute_pipeline::setup</definition>
+        <argsstring>() override</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::compute_pipeline::setup</qualifiedname>
+        <reimplements refid="structlava_1_1pipeline_1a1e10d18f9f3eaeece74d6110f6b1b59e">setup</reimplements>
+        <briefdescription>
+<para>Set up the compute pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Setup was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="91" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1compute__pipeline_1a620bc5505cd1a11ff2e2bb2b95e22c52" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void lava::compute_pipeline::teardown</definition>
+        <argsstring>() override</argsstring>
+        <name>teardown</name>
+        <qualifiedname>lava::compute_pipeline::teardown</qualifiedname>
+        <reimplements refid="structlava_1_1pipeline_1a0e1556ac325e63b3c5f0e705bfbf42d3">teardown</reimplements>
+        <briefdescription>
+<para>Tear down the compute pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/compute_pipeline.hpp" line="96" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Compute pipeline. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::compute_pipeline</label>
+        <link refid="structlava_1_1compute__pipeline"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="4">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="2">
+        <label>lava::pipeline</label>
+        <link refid="structlava_1_1pipeline"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::compute_pipeline</label>
+        <link refid="structlava_1_1compute__pipeline"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="3">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="4">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="2">
+        <label>lava::pipeline</label>
+        <link refid="structlava_1_1pipeline"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_device</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/compute_pipeline.hpp" line="17" column="1" bodyfile="liblava/block/compute_pipeline.hpp" bodystart="17" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structlava_1_1pipeline_1af1ed6d08db3d755b3011fcb8b423f416" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>activated</name></member>
+      <member refid="structlava_1_1pipeline_1a102ce500ee05cfdf242423703188b9d7" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>auto_bind</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a7be06c2bd664c103661e4848f1bc2854" prot="public" virt="virtual"><scope>lava::compute_pipeline</scope><name>bind</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a654ed7e149bedc432734be580211391f" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>copy_from</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a63ae45c6b38d4b07d57d3f5ace6e528b" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>copy_to</name></member>
+      <member refid="structlava_1_1pipeline_1a9efe4f61250e2e1cca7d64530691eab0" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>create</name></member>
+      <member refid="structlava_1_1pipeline_1ad75a43fefcc8feae90feee4e0ccf097b" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>entity</name></member>
+      <member refid="structlava_1_1pipeline_1a3e37bdce392138b2058e7a811fcbcbb9" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>get</name></member>
+      <member refid="structlava_1_1pipeline_1a26ba013d7a0d579a4c12ff4d221249cb" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>get_device</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>get_id</name></member>
+      <member refid="structlava_1_1pipeline_1a823e84dc3b4d26211e1cccad7d74918b" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>get_layout</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a142115babe5cd3924f277f0515e98e54" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>get_shader_stage</name></member>
+      <member refid="structlava_1_1pipeline_1a8a72b44697ce13c68e3423180ca5c218" prot="protected" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>m_device</name></member>
+      <member refid="structlava_1_1pipeline_1ae7a2117e4f94e470e051852ea7dc7c3c" prot="protected" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>m_layout</name></member>
+      <member refid="structlava_1_1pipeline_1a63c6f7a69bdc7ea1c56e955a32029e6c" prot="protected" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>m_pipeline_cache</name></member>
+      <member refid="structlava_1_1compute__pipeline_1ad0fa3473b189fbf44c728c2f3c28d351" prot="private" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>m_shader_stage</name></member>
+      <member refid="structlava_1_1pipeline_1a278f28e7409250e047736c3f10a54837" prot="protected" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>m_vk_pipeline</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a68ba75889ccd5fc123df93c7dce69748" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1pipeline_1a27840fc2c5f4ea19de106acc6fe631cc" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>on_process</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>operator=</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a532e33a3caacd4f71ba16d26111a0c5b" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>pipeline</name></member>
+      <member refid="structlava_1_1pipeline_1a2cdd9f46ddc9b493421680c53a2a5f68" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>process_func</name></member>
+      <member refid="structlava_1_1pipeline_1a9246051bc496565d046631ac64cd8a26" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>ready</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a6a9c746d5846cafa94a55e6e54e5536b" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>s_list</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a33901cde9309728a619f73f50a088fa9" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>s_map</name></member>
+      <member refid="structlava_1_1compute__pipeline_1ae8fba0dfd11efb20667131a53b53918f" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a3e6d479c2feb57b00f2ac16ba1a1e37a" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>set</name></member>
+      <member refid="structlava_1_1pipeline_1a8917bd488924a0c7c509535ac6d45769" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>set_active</name></member>
+      <member refid="structlava_1_1pipeline_1ad5b46469c6de88ce4bde0f9cbff570b4" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>set_auto_bind</name></member>
+      <member refid="structlava_1_1pipeline_1a5300f14b8065ad8b1fba7cd1bd7a68a4" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>set_layout</name></member>
+      <member refid="structlava_1_1compute__pipeline_1aab1a488ab2989de7d24be27d92902e1a" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>set_shader_stage</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a51a47735bcc7cd0af710afa48d55ef0f" prot="private" virt="virtual"><scope>lava::compute_pipeline</scope><name>setup</name></member>
+      <member refid="structlava_1_1compute__pipeline_1a620bc5505cd1a11ff2e2bb2b95e22c52" prot="private" virt="virtual"><scope>lava::compute_pipeline</scope><name>teardown</name></member>
+      <member refid="structlava_1_1pipeline_1acd76893861c4cfd8f840280613d3479f" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>toggle</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::compute_pipeline</scope><name>~interface</name></member>
+      <member refid="structlava_1_1pipeline_1aa558324b8630b342dd0ece7dadaae821" prot="public" virt="non-virtual"><scope>lava::compute_pipeline</scope><name>~pipeline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

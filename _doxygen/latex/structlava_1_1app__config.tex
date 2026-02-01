@@ -1,0 +1,111 @@
+\doxysection{lava\+::app\+\_\+config Struct Reference}
+\hypertarget{structlava_1_1app__config}{}\label{structlava_1_1app__config}\index{lava::app\_config@{lava::app\_config}}
+
+
+Application configuration.  
+
+
+
+
+{\ttfamily \#include $<$config.\+hpp$>$}
+
+Inheritance diagram for lava\+::app\+\_\+config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1app__config}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1app__config_a65eeb9550ec619a14adf28da9054c68b}{set\+\_\+json}} (json\+\_\+ref j) override
+\item 
+json \mbox{\hyperlink{structlava_1_1app__config_a89c8dfbd34042d7b3c8dfe2bd42619a5}{get\+\_\+json}} () const override
+\item 
+\Hypertarget{structlava_1_1app__config_ad3f257517689f3dd0d115b304f06619d}\label{structlava_1_1app__config_ad3f257517689f3dd0d115b304f06619d} 
+void {\bfseries update\+\_\+window\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Update window state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1app__config_aa5ce69738a59165cf8928bc4b7392738}\label{structlava_1_1app__config_aa5ce69738a59165cf8928bc4b7392738} 
+\mbox{\hyperlink{structlava_1_1app}{app}} \texorpdfstring{$\ast$}{*} {\bfseries context} = nullptr
+\begin{DoxyCompactList}\small\item\em Application. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_ae761448b2402cb3bdf7c62a9bd51cb29}\label{structlava_1_1app__config_ae761448b2402cb3bdf7c62a9bd51cb29} 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries org} = \mbox{\hyperlink{types_8hpp_a5463322f2e652628790c04fe97367db0}{\+\_\+liblava\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Organization name. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_acce23cf4709049fe780fe62a8d84372d}\label{structlava_1_1app__config_acce23cf4709049fe780fe62a8d84372d} 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries ext} = "{}zip"{}
+\begin{DoxyCompactList}\small\item\em Preferred compression file format. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_a5666129d8f3b0aa3823d6c6a086b0b57}\label{structlava_1_1app__config_a5666129d8f3b0aa3823d6c6a086b0b57} 
+bool {\bfseries save\+\_\+window} = true
+\begin{DoxyCompactList}\small\item\em Save window state. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_af41ba3e4aa66a34c45ba308a2d6c16eb}\label{structlava_1_1app__config_af41ba3e4aa66a34c45ba308a2d6c16eb} 
+bool {\bfseries handle\+\_\+key\+\_\+events} = true
+\begin{DoxyCompactList}\small\item\em Handle key events. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_ac5315d258095909eb9f2a13846b0435f}\label{structlava_1_1app__config_ac5315d258095909eb9f2a13846b0435f} 
+bool {\bfseries v\+\_\+sync} = false
+\begin{DoxyCompactList}\small\item\em Activate V-\/\+Sync. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_a8ec77a1b0570b5e6da97b44a3ef54722}\label{structlava_1_1app__config_a8ec77a1b0570b5e6da97b44a3ef54722} 
+bool {\bfseries triple\+\_\+buffer} = true
+\begin{DoxyCompactList}\small\item\em Prefer VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_ab3ad29e7198c987c2edfba15a65c111d}\label{structlava_1_1app__config_ab3ad29e7198c987c2edfba15a65c111d} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} {\bfseries fps\+\_\+cap} = 0
+\begin{DoxyCompactList}\small\item\em Frames per second cap. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_ae9f86485bed9c49bec981c63cfc3597e}\label{structlava_1_1app__config_ae9f86485bed9c49bec981c63cfc3597e} 
+\mbox{\hyperlink{structlava_1_1surface__format__request}{surface\+\_\+format\+\_\+request}} {\bfseries surface}
+\begin{DoxyCompactList}\small\item\em Request surface formats. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_ad208fa387b9b912d80df442a788d4fcc}\label{structlava_1_1app__config_ad208fa387b9b912d80df442a788d4fcc} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries physical\+\_\+device} = 0
+\begin{DoxyCompactList}\small\item\em Physical device index. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_aa608fd9df4970566bdfc0c23d7fdbd02}\label{structlava_1_1app__config_aa608fd9df4970566bdfc0c23d7fdbd02} 
+\mbox{\hyperlink{structlava_1_1imgui_1_1font}{imgui\+::font}} {\bfseries imgui\+\_\+font}
+\begin{DoxyCompactList}\small\item\em Im\+Gui font settings. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_acffbf02267d6443a8af75e3ec4fdfb86}\label{structlava_1_1app__config_acffbf02267d6443a8af75e3ec4fdfb86} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} {\bfseries name\+\_\+id} = \mbox{\hyperlink{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c}{\+\_\+default\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Identification. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1app__config_a475f12e6dd8a5c90055a7e7077f8243d}\label{structlava_1_1app__config_a475f12e6dd8a5c90055a7e7077f8243d} 
+\mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{window\+::state\+::optional}} {\bfseries window\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Window state if available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application configuration. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1app__config_a89c8dfbd34042d7b3c8dfe2bd42619a5}\index{lava::app\_config@{lava::app\_config}!get\_json@{get\_json}}
+\index{get\_json@{get\_json}!lava::app\_config@{lava::app\_config}}
+\doxysubsubsection{\texorpdfstring{get\_json()}{get\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1app__config_a89c8dfbd34042d7b3c8dfe2bd42619a5} 
+json lava\+::app\+\_\+config\+::get\+\_\+json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}{configurable\+::get\+\_\+json} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}{lava\+::configurable}}.
+
+\Hypertarget{structlava_1_1app__config_a65eeb9550ec619a14adf28da9054c68b}\index{lava::app\_config@{lava::app\_config}!set\_json@{set\_json}}
+\index{set\_json@{set\_json}!lava::app\_config@{lava::app\_config}}
+\doxysubsubsection{\texorpdfstring{set\_json()}{set\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1app__config_a65eeb9550ec619a14adf28da9054c68b} 
+void lava\+::app\+\_\+config\+::set\+\_\+json (\begin{DoxyParamCaption}\item[{json\+\_\+ref}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}{configurable\+::set\+\_\+json} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}{lava\+::configurable}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/app/\mbox{\hyperlink{config_8hpp}{config.\+hpp}}\end{DoxyCompactItemize}

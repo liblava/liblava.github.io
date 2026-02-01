@@ -1,0 +1,109 @@
+\doxysection{lava\+::mesh\+\_\+template\+\_\+data\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structlava_1_1mesh__template__data}{}\label{structlava_1_1mesh__template__data}\index{lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}}
+
+
+Templated mesh data.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Pos\+Type = r32$>$ }\\void \mbox{\hyperlink{structlava_1_1mesh__template__data_a8d2b9b4c5acc8f9cfe76c6ffec26c4ef}{move}} (std\+::array$<$ Pos\+Type, 3 $>$ offset)
+\begin{DoxyCompactList}\small\item\em Move mesh data by offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template__data_aff275dacb2a30293406e4593ce72c810}{scale}} (auto factor)
+\begin{DoxyCompactList}\small\item\em Scale mesh data by factor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Pos\+Type = r32$>$ }\\void \mbox{\hyperlink{structlava_1_1mesh__template__data_abafc87baf585d01b7188d6017015bcb2}{scale\+\_\+vector}} (std\+::array$<$ Pos\+Type, 3 $>$ factors)
+\begin{DoxyCompactList}\small\item\em Scale mesh data by vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e}\label{structlava_1_1mesh__template__data_ace972e5b51f41b5de9661dd05b0aac6e} 
+std\+::vector$<$ T $>$ {\bfseries vertices}
+\begin{DoxyCompactList}\small\item\em List of vertices. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308}\label{structlava_1_1mesh__template__data_aa5c0a88e73897cae6b828408a95d1308} 
+\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} {\bfseries indices}
+\begin{DoxyCompactList}\small\item\em List of indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = vertex$>$\newline
+struct lava\+::mesh\+\_\+template\+\_\+data$<$ T $>$}
+Templated mesh data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Input vertex struct \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1mesh__template__data_a8d2b9b4c5acc8f9cfe76c6ffec26c4ef}\index{lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}!move@{move}}
+\index{move@{move}!lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template__data_a8d2b9b4c5acc8f9cfe76c6ffec26c4ef} 
+template$<$typename T = vertex$>$ \\
+template$<$typename Pos\+Type = r32$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template__data}{lava\+::mesh\+\_\+template\+\_\+data}}$<$ T $>$\+::move (\begin{DoxyParamCaption}\item[{std\+::array$<$ Pos\+Type, 3 $>$}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move mesh data by offset. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Pos\+Type} & Coordinate element typename \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Position offset \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template__data_aff275dacb2a30293406e4593ce72c810}\index{lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}!scale@{scale}}
+\index{scale@{scale}!lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template__data_aff275dacb2a30293406e4593ce72c810} 
+template$<$typename T = vertex$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template__data}{lava\+::mesh\+\_\+template\+\_\+data}}$<$ T $>$\+::scale (\begin{DoxyParamCaption}\item[{auto}]{factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale mesh data by factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & Position scaling factor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template__data_abafc87baf585d01b7188d6017015bcb2}\index{lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}!scale\_vector@{scale\_vector}}
+\index{scale\_vector@{scale\_vector}!lava::mesh\_template\_data$<$ T $>$@{lava::mesh\_template\_data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{scale\_vector()}{scale\_vector()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template__data_abafc87baf585d01b7188d6017015bcb2} 
+template$<$typename T = vertex$>$ \\
+template$<$typename Pos\+Type = r32$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template__data}{lava\+::mesh\+\_\+template\+\_\+data}}$<$ T $>$\+::scale\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::array$<$ Pos\+Type, 3 $>$}]{factors}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale mesh data by vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Pos\+Type} & Coordinate element typename \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em factors} & Array of position scaling factors \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{mesh_8hpp}{mesh.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1input__callback" kind="struct" language="C++" prot="public">
+    <compoundname>lava::input_callback</compoundname>
+    <includes refid="input_8hpp" local="no">input.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1input__callback_1a2c972ff8e44d60f360c13e7757658e4e" prot="public" static="no">
+        <type><ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref> const  *</type>
+        <definition>using lava::input_callback::cptr =  input_callback const*</definition>
+        <argsstring></argsstring>
+        <name>cptr</name>
+        <qualifiedname>lava::input_callback::cptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to input callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="503" column="5" bodyfile="liblava/frame/input.hpp" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1input__callback_1abb9c6298031decc24dd960373ebfdb6a" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref> * &gt;</type>
+        <definition>using lava::input_callback::list =  std::vector&lt;input_callback*&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::input_callback::list</qualifiedname>
+        <briefdescription>
+<para>List of input callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="506" column="5" bodyfile="liblava/frame/input.hpp" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1input__callback_1a10239e1631583796cb373223a6921945" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1input__callback_1a2c972ff8e44d60f360c13e7757658e4e" kindref="member">cptr</ref> &gt;</type>
+        <definition>using lava::input_callback::clist =  std::vector&lt;cptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>clist</name>
+        <qualifiedname>lava::input_callback::clist</qualifiedname>
+        <briefdescription>
+<para>List of const input callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="509" column="5" bodyfile="liblava/frame/input.hpp" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1input__callback_1ae12caf1409f8cb46dbe97de6876a2a42" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::function&lt; bool(typename T::ref)&gt;</type>
+        <definition>using lava::input_callback::func =  std::function&lt;bool(typename T::ref)&gt;</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <qualifiedname>lava::input_callback::func</qualifiedname>
+        <briefdescription>
+<para>Input callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="516" column="5" bodyfile="liblava/frame/input.hpp" bodystart="516" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1input__callback_1a15e6ab42f64d047fc92a1b5e8df2e877" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1key__event_1af46f759e9b0e04649ddaeb728e6319bb" kindref="member">key_event::func</ref></type>
+        <definition>key_event::func lava::input_callback::on_key_event</definition>
+        <argsstring></argsstring>
+        <name>on_key_event</name>
+        <qualifiedname>lava::input_callback::on_key_event</qualifiedname>
+        <briefdescription>
+<para>Called on key event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="519" column="21" bodyfile="liblava/frame/input.hpp" bodystart="519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1input__callback_1ac5bade394647d7860e02b3ea59ddcd17" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1scroll__event_1a2494a4a22f196d6ff881b579b6a78d74" kindref="member">scroll_event::func</ref></type>
+        <definition>scroll_event::func lava::input_callback::on_scroll_event</definition>
+        <argsstring></argsstring>
+        <name>on_scroll_event</name>
+        <qualifiedname>lava::input_callback::on_scroll_event</qualifiedname>
+        <briefdescription>
+<para>Called on scroll event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="522" column="24" bodyfile="liblava/frame/input.hpp" bodystart="522" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1input__callback_1a6e7de5a1d54143950923a5d830cb762c" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1mouse__move__event_1a988cc8b1a34fa1d81033db5b97f38188" kindref="member">mouse_move_event::func</ref></type>
+        <definition>mouse_move_event::func lava::input_callback::on_mouse_move_event</definition>
+        <argsstring></argsstring>
+        <name>on_mouse_move_event</name>
+        <qualifiedname>lava::input_callback::on_mouse_move_event</qualifiedname>
+        <briefdescription>
+<para>Called on mouse move event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="525" column="28" bodyfile="liblava/frame/input.hpp" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1input__callback_1af242d055d858eaa390f933fa491251b9" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1mouse__button__event_1af132bcbe066dc15d70a54a5586f3beaa" kindref="member">mouse_button_event::func</ref></type>
+        <definition>mouse_button_event::func lava::input_callback::on_mouse_button_event</definition>
+        <argsstring></argsstring>
+        <name>on_mouse_button_event</name>
+        <qualifiedname>lava::input_callback::on_mouse_button_event</qualifiedname>
+        <briefdescription>
+<para>Called on mouse button event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="528" column="30" bodyfile="liblava/frame/input.hpp" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1input__callback_1a479849fc1d527dc3ef83ecce821889f5" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1mouse__active__event_1ab1f097b85a595f3fa6dde0da5ced2d40" kindref="member">mouse_active_event::func</ref></type>
+        <definition>mouse_active_event::func lava::input_callback::on_mouse_active_event</definition>
+        <argsstring></argsstring>
+        <name>on_mouse_active_event</name>
+        <qualifiedname>lava::input_callback::on_mouse_active_event</qualifiedname>
+        <briefdescription>
+<para>Called on mouse active event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="531" column="30" bodyfile="liblava/frame/input.hpp" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1input__callback_1a9866ee7e9135e230e1ac2d35831f37cf" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1path__drop__event_1a73a774e2649235422bdc30cc0ba7e780" kindref="member">path_drop_event::func</ref></type>
+        <definition>path_drop_event::func lava::input_callback::on_path_drop_event</definition>
+        <argsstring></argsstring>
+        <name>on_path_drop_event</name>
+        <qualifiedname>lava::input_callback::on_path_drop_event</qualifiedname>
+        <briefdescription>
+<para>Called on path drop event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/input.hpp" line="534" column="27" bodyfile="liblava/frame/input.hpp" bodystart="534" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Input callback. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/frame/input.hpp" line="501" column="1" bodyfile="liblava/frame/input.hpp" bodystart="501" bodyend="535"/>
+    <listofallmembers>
+      <member refid="structlava_1_1input__callback_1a10239e1631583796cb373223a6921945" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>clist</name></member>
+      <member refid="structlava_1_1input__callback_1a2c972ff8e44d60f360c13e7757658e4e" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>cptr</name></member>
+      <member refid="structlava_1_1input__callback_1ae12caf1409f8cb46dbe97de6876a2a42" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>func</name></member>
+      <member refid="structlava_1_1input__callback_1abb9c6298031decc24dd960373ebfdb6a" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>list</name></member>
+      <member refid="structlava_1_1input__callback_1a15e6ab42f64d047fc92a1b5e8df2e877" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_key_event</name></member>
+      <member refid="structlava_1_1input__callback_1a479849fc1d527dc3ef83ecce821889f5" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_mouse_active_event</name></member>
+      <member refid="structlava_1_1input__callback_1af242d055d858eaa390f933fa491251b9" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_mouse_button_event</name></member>
+      <member refid="structlava_1_1input__callback_1a6e7de5a1d54143950923a5d830cb762c" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_mouse_move_event</name></member>
+      <member refid="structlava_1_1input__callback_1a9866ee7e9135e230e1ac2d35831f37cf" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_path_drop_event</name></member>
+      <member refid="structlava_1_1input__callback_1ac5bade394647d7860e02b3ea59ddcd17" prot="public" virt="non-virtual"><scope>lava::input_callback</scope><name>on_scroll_event</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

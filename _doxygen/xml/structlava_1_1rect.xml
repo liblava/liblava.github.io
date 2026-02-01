@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1rect" kind="struct" language="C++" prot="public">
+    <compoundname>lava::rect</compoundname>
+    <includes refid="math_8hpp" local="no">math.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" prot="public" static="no">
+        <type><ref refid="structlava_1_1rect" kindref="compound">rect</ref> const  &amp;</type>
+        <definition>using lava::rect::ref =  rect const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::rect::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to rect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="50" column="5" bodyfile="liblava/util/math.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1rect_1a4469ccd662f9e0f9b432dfba5a62d89c" prot="private" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref></type>
+        <definition>iv2 lava::rect::m_left_top</definition>
+        <argsstring></argsstring>
+        <name>m_left_top</name>
+        <qualifiedname>lava::rect::m_left_top</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref>()</initializer>
+        <briefdescription>
+<para>Left top position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="152" column="9" bodyfile="liblava/util/math.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1rect_1a44d0aed8e3744926fd351ab46213c03d" prot="private" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref></type>
+        <definition>iv2 lava::rect::m_right_bottom</definition>
+        <argsstring></argsstring>
+        <name>m_right_bottom</name>
+        <qualifiedname>lava::rect::m_right_bottom</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref>()</initializer>
+        <briefdescription>
+<para>Right bottom position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="155" column="9" bodyfile="liblava/util/math.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1rect_1af4f9c4f39ba23fd25b15731b85582a7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::rect::rect</definition>
+        <argsstring>()=default</argsstring>
+        <name>rect</name>
+        <qualifiedname>lava::rect::rect</qualifiedname>
+        <briefdescription>
+<para>Construct a new rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1a3d0f4f5754c31997269ed57b81ec6ef1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::rect::rect</definition>
+        <argsstring>(i32 left, i32 top, ui32 width, ui32 height)</argsstring>
+        <name>rect</name>
+        <qualifiedname>lava::rect::rect</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="64" column="5" bodyfile="liblava/util/math.hpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1ac5ed6ef38b816c3960821013d261187d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::rect::rect</definition>
+        <argsstring>(iv2 const &amp;left_top, ui32 width, ui32 height)</argsstring>
+        <name>rect</name>
+        <qualifiedname>lava::rect::rect</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const &amp;</type>
+          <declname>left_top</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left top position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="76" column="5" bodyfile="liblava/util/math.hpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1aba98af4909b983af8ca2461a0f79a394" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::rect::rect</definition>
+        <argsstring>(iv2 const &amp;left_top, uv2 const &amp;size)</argsstring>
+        <name>rect</name>
+        <qualifiedname>lava::rect::rect</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const &amp;</type>
+          <declname>left_top</declname>
+        </param>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> const &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left top position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of rectangle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="87" column="5" bodyfile="liblava/util/math.hpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1a1bb7aa44bc739dc0d56569f39b9392c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const &amp;</type>
+        <definition>iv2 const  &amp; lava::rect::get_origin</definition>
+        <argsstring>() const</argsstring>
+        <name>get_origin</name>
+        <qualifiedname>lava::rect::get_origin</qualifiedname>
+        <briefdescription>
+<para>Get the origin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const&amp; Left top position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="97" column="15" bodyfile="liblava/util/math.hpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1aa85aa770875eac252d6477451ab55e23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const &amp;</type>
+        <definition>iv2 const  &amp; lava::rect::get_end_point</definition>
+        <argsstring>() const</argsstring>
+        <name>get_end_point</name>
+        <qualifiedname>lava::rect::get_end_point</qualifiedname>
+        <briefdescription>
+<para>Get the end point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const&amp; Right bottom position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="105" column="15" bodyfile="liblava/util/math.hpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1aaeaf65436bf93bcfb312be45aa751806" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::rect::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::rect::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> Width and height </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="113" column="9" bodyfile="liblava/util/math.hpp" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1a9f8290cecce3076e7d392b898b56d976" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::rect::set_size</definition>
+        <argsstring>(uv2 const &amp;size)</argsstring>
+        <name>set_size</name>
+        <qualifiedname>lava::rect::set_size</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> const &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Set the size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width and height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="124" column="10" bodyfile="liblava/util/math.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1af28e1e3c0610aae0d1619ef89c93e419" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::rect::move</definition>
+        <argsstring>(iv2 const &amp;offset)</argsstring>
+        <name>move</name>
+        <qualifiedname>lava::rect::move</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref> const &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+<para>Move the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to move </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="133" column="10" bodyfile="liblava/util/math.hpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1rect_1a706360205e786afeafb94b91802162a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::rect::contains</definition>
+        <argsstring>(iv2 point) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>lava::rect::contains</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ab2e34b7023f2e4da184beb734a31ee11" kindref="member">iv2</ref></type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Check if point is inside the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Point is inside or out </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/math.hpp" line="143" column="10" bodyfile="liblava/util/math.hpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Rectangle. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/util/math.hpp" line="48" column="1" bodyfile="liblava/util/math.hpp" bodystart="48" bodyend="156"/>
+    <listofallmembers>
+      <member refid="structlava_1_1rect_1a706360205e786afeafb94b91802162a3" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>contains</name></member>
+      <member refid="structlava_1_1rect_1aa85aa770875eac252d6477451ab55e23" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>get_end_point</name></member>
+      <member refid="structlava_1_1rect_1a1bb7aa44bc739dc0d56569f39b9392c6" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>get_origin</name></member>
+      <member refid="structlava_1_1rect_1aaeaf65436bf93bcfb312be45aa751806" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>get_size</name></member>
+      <member refid="structlava_1_1rect_1a4469ccd662f9e0f9b432dfba5a62d89c" prot="private" virt="non-virtual"><scope>lava::rect</scope><name>m_left_top</name></member>
+      <member refid="structlava_1_1rect_1a44d0aed8e3744926fd351ab46213c03d" prot="private" virt="non-virtual"><scope>lava::rect</scope><name>m_right_bottom</name></member>
+      <member refid="structlava_1_1rect_1af28e1e3c0610aae0d1619ef89c93e419" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>move</name></member>
+      <member refid="structlava_1_1rect_1af4f9c4f39ba23fd25b15731b85582a7a" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>rect</name></member>
+      <member refid="structlava_1_1rect_1a3d0f4f5754c31997269ed57b81ec6ef1" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>rect</name></member>
+      <member refid="structlava_1_1rect_1ac5ed6ef38b816c3960821013d261187d" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>rect</name></member>
+      <member refid="structlava_1_1rect_1aba98af4909b983af8ca2461a0f79a394" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>rect</name></member>
+      <member refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>ref</name></member>
+      <member refid="structlava_1_1rect_1a9f8290cecce3076e7d392b898b56d976" prot="public" virt="non-virtual"><scope>lava::rect</scope><name>set_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

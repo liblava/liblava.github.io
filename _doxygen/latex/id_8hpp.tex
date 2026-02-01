@@ -1,0 +1,131 @@
+\doxysection{liblava/core/id.hpp File Reference}
+\hypertarget{id_8hpp}{}\label{id_8hpp}\index{liblava/core/id.hpp@{liblava/core/id.hpp}}
+
+
+Object Identification.  
+
+
+{\ttfamily \#include "{}liblava/core/types.\+hpp"{}}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1id}{lava\+::id}}
+\begin{DoxyCompactList}\small\item\em Identification. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1ids}{lava\+::ids}}
+\begin{DoxyCompactList}\small\item\em Id factory. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1id__listeners}{lava\+::id\+\_\+listeners$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Id listeners. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}
+\begin{DoxyCompactList}\small\item\em Entity. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1id__registry}{lava\+::id\+\_\+registry$<$ T, Meta $>$}}
+\begin{DoxyCompactList}\small\item\em Id registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{id_8hpp_a2d3147f9bf9e67cdbc6ac4a2f39d13b6}\label{id_8hpp_a2d3147f9bf9e67cdbc6ac4a2f39d13b6} 
+using {\bfseries lava\+::string\+\_\+id\+\_\+map} = std\+::map$<$\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}, \mbox{\hyperlink{structlava_1_1id}{id}}$>$
+\begin{DoxyCompactList}\small\item\em Map of string ids. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{id_8hpp_afddb4bf323e954e08ff48b8514cb573e}{lava\+::to\+\_\+id}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{id_8hpp_a41a466c284bc15c02b328e694b8ea3da}{lava\+::add\+\_\+id\+\_\+map}} (T const \&object, std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, T $>$ \&map)
+\begin{DoxyCompactList}\small\item\em Add object to id map. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\bool \mbox{\hyperlink{id_8hpp_aecb510e0885f800ae029d60aa3c9e131}{lava\+::remove\+\_\+id\+\_\+map}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} object\+\_\+id, std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, T $>$ \&map)
+\begin{DoxyCompactList}\small\item\em Remove object from id map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{id_8hpp_aa17c8404456cc4dbfea9a0762a615de5}\label{id_8hpp_aa17c8404456cc4dbfea9a0762a615de5} 
+constexpr \mbox{\hyperlink{structlava_1_1id}{id}} const {\bfseries lava\+::undef\+\_\+id} = \mbox{\hyperlink{structlava_1_1id}{id}}()
+\begin{DoxyCompactList}\small\item\em Undefined id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Object Identification. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{id_8hpp_a41a466c284bc15c02b328e694b8ea3da}\index{id.hpp@{id.hpp}!add\_id\_map@{add\_id\_map}}
+\index{add\_id\_map@{add\_id\_map}!id.hpp@{id.hpp}}
+\doxysubsubsection{\texorpdfstring{add\_id\_map()}{add\_id\_map()}}
+{\footnotesize\ttfamily \label{id_8hpp_a41a466c284bc15c02b328e694b8ea3da} 
+template$<$typename T$>$ \\
+id lava\+::add\+\_\+id\+\_\+map (\begin{DoxyParamCaption}\item[{T const \&}]{object}{, }\item[{std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, T $>$ \&}]{map}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add object to id map. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Object to add \\
+\hline
+{\em map} & Target map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of object in map 
+\end{DoxyReturn}
+\Hypertarget{id_8hpp_aecb510e0885f800ae029d60aa3c9e131}\index{id.hpp@{id.hpp}!remove\_id\_map@{remove\_id\_map}}
+\index{remove\_id\_map@{remove\_id\_map}!id.hpp@{id.hpp}}
+\doxysubsubsection{\texorpdfstring{remove\_id\_map()}{remove\_id\_map()}}
+{\footnotesize\ttfamily \label{id_8hpp_aecb510e0885f800ae029d60aa3c9e131} 
+template$<$typename T$>$ \\
+bool lava\+::remove\+\_\+id\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{object\+\_\+id}{, }\item[{std\+::map$<$ \mbox{\hyperlink{structlava_1_1id}{id}}, T $>$ \&}]{map}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove object from id map. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em object\+\_\+id} & Object to remove \\
+\hline
+{\em map} & Target map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Removed object from map or object not found 
+\end{DoxyReturn}
+\Hypertarget{id_8hpp_afddb4bf323e954e08ff48b8514cb573e}\index{id.hpp@{id.hpp}!to\_id@{to\_id}}
+\index{to\_id@{to\_id}!id.hpp@{id.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_id()}{to\_id()}}
+{\footnotesize\ttfamily \label{id_8hpp_afddb4bf323e954e08ff48b8514cb573e} 
+id lava\+::to\+\_\+id (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Converted value 
+\end{DoxyReturn}

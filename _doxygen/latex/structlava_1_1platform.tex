@@ -1,0 +1,141 @@
+\doxysection{lava\+::platform Struct Reference}
+\hypertarget{structlava_1_1platform}{}\label{structlava_1_1platform}\index{lava::platform@{lava::platform}}
+
+
+Stage platform.  
+
+
+
+
+{\ttfamily \#include $<$platform.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1platform_a804d1c6344c71df02428ca2b5f42e286}\label{structlava_1_1platform_a804d1c6344c71df02428ca2b5f42e286} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1platform}{platform}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to platform. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1platform_a394d22d0bc7339bb446cc10cde021895}\label{structlava_1_1platform_a394d22d0bc7339bb446cc10cde021895} 
+using {\bfseries create\+\_\+param\+\_\+func} = std\+::function$<$void(\mbox{\hyperlink{structlava_1_1device_1_1create__param}{device\+::create\+\_\+param}}\&)$>$
+\begin{DoxyCompactList}\small\item\em Create parameter function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1platform_acc8990717eeaf72b967e34b20a8fdbb0}{create}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1physical__device}{physical\+\_\+device}}=0)
+\begin{DoxyCompactList}\small\item\em Create a managed device from a physical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1platform_ae53ca1c7ce200688c15cbb07f4375b05}{create}} (\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{device\+::create\+\_\+param\+::ref}} param)
+\begin{DoxyCompactList}\small\item\em Create a managed device with create parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1platform_ad8c92fb882e5df968c3eee54de280c8f}{create\+\_\+device}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1physical__device}{physical\+\_\+device}}=0)
+\begin{DoxyCompactList}\small\item\em Create a managed device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a8169f8aeb9080ac355a8764ee7a4827b}{device\+::s\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1platform_a99bd2eb05dae301e7ba4e68798b48f1c}{get\+\_\+devices}} () const
+\begin{DoxyCompactList}\small\item\em Get all devices. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1platform_a7a74dab7b396cb2bf35cb0ce5f60c987}\label{structlava_1_1platform_a7a74dab7b396cb2bf35cb0ce5f60c987} 
+void {\bfseries wait\+\_\+idle} ()
+\begin{DoxyCompactList}\small\item\em Wait for idle on all managed devices. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1platform_aa9f0c3a4956cad217783b13b53597ef5}{remove}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove device from platform. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1platform_a197da16d082fb67b9f4f6efb52e7abf4}\label{structlava_1_1platform_a197da16d082fb67b9f4f6efb52e7abf4} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all managed devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1platform_a540e774cad983aa99fa00681188ae0da}\label{structlava_1_1platform_a540e774cad983aa99fa00681188ae0da} 
+\mbox{\hyperlink{structlava_1_1platform_a394d22d0bc7339bb446cc10cde021895}{create\+\_\+param\+\_\+func}} {\bfseries on\+\_\+create\+\_\+param}
+\begin{DoxyCompactList}\small\item\em Called on create to adjust the create parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stage platform. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1platform_ae53ca1c7ce200688c15cbb07f4375b05}\index{lava::platform@{lava::platform}!create@{create}}
+\index{create@{create}!lava::platform@{lava::platform}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1platform_ae53ca1c7ce200688c15cbb07f4375b05} 
+\mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr}} lava\+::platform\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{device\+::create\+\_\+param\+::ref}}}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Create a managed device with create parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Create parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1platform_acc8990717eeaf72b967e34b20a8fdbb0}\index{lava::platform@{lava::platform}!create@{create}}
+\index{create@{create}!lava::platform@{lava::platform}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1platform_acc8990717eeaf72b967e34b20a8fdbb0} 
+\mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr}} lava\+::platform\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{physical\+\_\+device}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Create a managed device from a physical device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structlava_1_1physical__device}{physical\+\_\+device}} & Index of physical device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1platform_ad8c92fb882e5df968c3eee54de280c8f}\index{lava::platform@{lava::platform}!create\_device@{create\_device}}
+\index{create\_device@{create\_device}!lava::platform@{lava::platform}}
+\doxysubsubsection{\texorpdfstring{create\_device()}{create\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1platform_ad8c92fb882e5df968c3eee54de280c8f} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::platform\+::create\+\_\+device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{physical\+\_\+device}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Create a managed device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structlava_1_1physical__device}{physical\+\_\+device}} & Physical device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{device\+::s\+\_\+ptr} Pointer to device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1platform_a99bd2eb05dae301e7ba4e68798b48f1c}\index{lava::platform@{lava::platform}!get\_devices@{get\_devices}}
+\index{get\_devices@{get\_devices}!lava::platform@{lava::platform}}
+\doxysubsubsection{\texorpdfstring{get\_devices()}{get\_devices()}}
+{\footnotesize\ttfamily \label{structlava_1_1platform_a99bd2eb05dae301e7ba4e68798b48f1c} 
+\mbox{\hyperlink{structlava_1_1device_a8169f8aeb9080ac355a8764ee7a4827b}{device\+::s\+\_\+list}} const  \& lava\+::platform\+::get\+\_\+devices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all devices. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a8169f8aeb9080ac355a8764ee7a4827b}{device\+::s\+\_\+list} const\& List of devices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1platform_aa9f0c3a4956cad217783b13b53597ef5}\index{lava::platform@{lava::platform}!remove@{remove}}
+\index{remove@{remove}!lava::platform@{lava::platform}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1platform_aa9f0c3a4956cad217783b13b53597ef5} 
+bool lava\+::platform\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{device\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Remove device from platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+id} & Id of device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remove was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{platform_8hpp}{platform.\+hpp}}\end{DoxyCompactItemize}

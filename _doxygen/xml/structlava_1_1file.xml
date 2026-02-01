@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1file" kind="struct" language="C++" prot="public">
+    <compoundname>lava::file</compoundname>
+    <basecompoundref refid="structlava_1_1no__copy__no__move" prot="public" virt="non-virtual">lava::no_copy_no_move</basecompoundref>
+    <includes refid="file_2file_8hpp" local="no">file.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1file_1a9a38fd427cf4038bf38f422c275b2cad" prot="public" static="no">
+        <type><ref refid="structlava_1_1file" kindref="compound">file</ref> const  &amp;</type>
+        <definition>using lava::file::ref =  file const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::file::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="52" column="5" bodyfile="liblava/file/file.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1file_1ac3bf7c2e0ac3b0412e3b6f8210b87ff7" prot="private" static="no" mutable="no">
+        <type><ref refid="file_2file_8hpp_1a503873db26179fd7f334e1b56bd029d5" kindref="member">file_type</ref></type>
+        <definition>file_type lava::file::m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <qualifiedname>lava::file::m_type</qualifiedname>
+        <initializer>= file_type::none</initializer>
+        <briefdescription>
+<para>File type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="158" column="15" bodyfile="liblava/file/file.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file_1a527ef86a8a5c7d7bd100d4b653e6b5fa" prot="private" static="no" mutable="no">
+        <type><ref refid="file_2file_8hpp_1ae04e055ef72d0683eda59470d89849ff" kindref="member">file_mode</ref></type>
+        <definition>file_mode lava::file::m_mode</definition>
+        <argsstring></argsstring>
+        <name>m_mode</name>
+        <qualifiedname>lava::file::m_mode</qualifiedname>
+        <initializer>= file_mode::read</initializer>
+        <briefdescription>
+<para>File mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="161" column="15" bodyfile="liblava/file/file.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file_1a791c79a3578b99112dc259b8fc1fde6a" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file::m_path</definition>
+        <argsstring></argsstring>
+        <name>m_path</name>
+        <qualifiedname>lava::file::m_path</qualifiedname>
+        <briefdescription>
+<para>File path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="164" column="12" bodyfile="liblava/file/file.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file_1ab66392ee131f41944b1decab9109518d" prot="private" static="no" mutable="no">
+        <type>PHYSFS_File *</type>
+        <definition>PHYSFS_File* lava::file::m_file</definition>
+        <argsstring></argsstring>
+        <name>m_file</name>
+        <qualifiedname>lava::file::m_file</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Physfs file handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="167" column="17" bodyfile="liblava/file/file.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file_1af7f7efe273e63eebe67a72b2250a7b9a" prot="private" static="no" mutable="yes">
+        <type>std::ifstream</type>
+        <definition>std::ifstream lava::file::m_istream</definition>
+        <argsstring></argsstring>
+        <name>m_istream</name>
+        <qualifiedname>lava::file::m_istream</qualifiedname>
+        <briefdescription>
+<para>Std input file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="170" column="27" bodyfile="liblava/file/file.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file_1adbf9b77e048e604ed3e630a8a7487e50" prot="private" static="no" mutable="yes">
+        <type>std::ofstream</type>
+        <definition>std::ofstream lava::file::m_ostream</definition>
+        <argsstring></argsstring>
+        <name>m_ostream</name>
+        <qualifiedname>lava::file::m_ostream</qualifiedname>
+        <briefdescription>
+<para>Std output file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="173" column="27" bodyfile="liblava/file/file.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1file_1a2e577777719e646fe07900fd35955135" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::file::file</definition>
+        <argsstring>(string_ref path=&quot;&quot;, file_mode mode=file_mode::read)</argsstring>
+        <name>file</name>
+        <qualifiedname>lava::file::file</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="file_2file_8hpp_1ae04e055ef72d0683eda59470d89849ff" kindref="member">file_mode</ref></type>
+          <declname>mode</declname>
+          <defval>file_mode::read</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="59" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1ab870ec4da9026e9e6986590d94a155b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::file::~file</definition>
+        <argsstring>()</argsstring>
+        <name>~file</name>
+        <qualifiedname>lava::file::~file</qualifiedname>
+        <briefdescription>
+<para>Destroy the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="65" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a5978b972d71c28a1d6b5ab23054e51b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file::open</definition>
+        <argsstring>(string_ref path, file_mode mode=file_mode::read)</argsstring>
+        <name>open</name>
+        <qualifiedname>lava::file::open</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="file_2file_8hpp_1ae04e055ef72d0683eda59470d89849ff" kindref="member">file_mode</ref></type>
+          <declname>mode</declname>
+          <defval>file_mode::read</defval>
+        </param>
+        <briefdescription>
+<para>Open the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Open was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="73" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a6ff92cdcc2b249ffc58a323306e4d7c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::file::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>lava::file::close</qualifiedname>
+        <briefdescription>
+<para>Close the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="79" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1ad04cef21b98035fd3edee2dbd857ce98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file::opened</definition>
+        <argsstring>() const</argsstring>
+        <name>opened</name>
+        <qualifiedname>lava::file::opened</qualifiedname>
+        <briefdescription>
+<para>Check if the file is opened. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>File is opened or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a8c78d97f2a73db2b7c7d99bc7cbee7d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::file::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size of the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> File size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="91" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a761e7bdfd3f76ab05d5032e3763f8fb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::read</definition>
+        <argsstring>(data::ptr data)</argsstring>
+        <name>read</name>
+        <qualifiedname>lava::file::read</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Read data from file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> File size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="98" column="9" bodyfile="liblava/file/file.hpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a88b182b8ac6e33396fd93157346b9e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::read</definition>
+        <argsstring>(data::ptr data, ui64 size)</argsstring>
+        <name>read</name>
+        <qualifiedname>lava::file::read</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read data from file (limited size) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> File size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="109" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1af1c3403a3edd5210691126fc4cb8c79a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::write</definition>
+        <argsstring>(data::c_ptr data, ui64 size)</argsstring>
+        <name>write</name>
+        <qualifiedname>lava::file::write</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1adbf9c722e987bd8211e40ecf58aacc09" kindref="member">data::c_ptr</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write data to file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> File size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="117" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a86a14d3cb72e0f73126a3608c066309e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::seek</definition>
+        <argsstring>(ui64 position)</argsstring>
+        <name>seek</name>
+        <qualifiedname>lava::file::seek</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Seek to position in the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to seek to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> Current position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="124" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1aa61df64db7c99e73e3ce3471956d9f29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></type>
+        <definition>i64 lava::file::tell</definition>
+        <argsstring>() const</argsstring>
+        <name>tell</name>
+        <qualifiedname>lava::file::tell</qualifiedname>
+        <briefdescription>
+<para>Get the current position in the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref> Current position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="130" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a7cd953262a017883f91f3411182773a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file::writable</definition>
+        <argsstring>() const</argsstring>
+        <name>writable</name>
+        <qualifiedname>lava::file::writable</qualifiedname>
+        <briefdescription>
+<para>Check if the file is in write mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>File is writable or only readable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="136" column="10" bodyfile="liblava/file/file.hpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1abada804bc55603748cbbe269a0fadaa3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="file_2file_8hpp_1a503873db26179fd7f334e1b56bd029d5" kindref="member">file_type</ref></type>
+        <definition>file_type lava::file::get_type</definition>
+        <argsstring>() const</argsstring>
+        <name>get_type</name>
+        <qualifiedname>lava::file::get_type</qualifiedname>
+        <briefdescription>
+<para>Get the file type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="file_2file_8hpp_1a503873db26179fd7f334e1b56bd029d5" kindref="member">file_type</ref> Type of file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="144" column="15" bodyfile="liblava/file/file.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file_1a091e149d0cc93f5cefc7814df316027f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::file::get_path</definition>
+        <argsstring>() const</argsstring>
+        <name>get_path</name>
+        <qualifiedname>lava::file::get_path</qualifiedname>
+        <briefdescription>
+<para>Get the path of the file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>name File path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file.hpp" line="152" column="16" bodyfile="liblava/file/file.hpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>File. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::file</label>
+        <link refid="structlava_1_1file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::file</label>
+        <link refid="structlava_1_1file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/file/file.hpp" line="50" column="1" bodyfile="liblava/file/file.hpp" bodystart="50" bodyend="174"/>
+    <listofallmembers>
+      <member refid="structlava_1_1file_1a6ff92cdcc2b249ffc58a323306e4d7c7" prot="public" virt="non-virtual"><scope>lava::file</scope><name>close</name></member>
+      <member refid="structlava_1_1file_1a2e577777719e646fe07900fd35955135" prot="public" virt="non-virtual"><scope>lava::file</scope><name>file</name></member>
+      <member refid="structlava_1_1file_1a091e149d0cc93f5cefc7814df316027f" prot="public" virt="non-virtual"><scope>lava::file</scope><name>get_path</name></member>
+      <member refid="structlava_1_1file_1a8c78d97f2a73db2b7c7d99bc7cbee7d2" prot="public" virt="non-virtual"><scope>lava::file</scope><name>get_size</name></member>
+      <member refid="structlava_1_1file_1abada804bc55603748cbbe269a0fadaa3" prot="public" virt="non-virtual"><scope>lava::file</scope><name>get_type</name></member>
+      <member refid="structlava_1_1file_1ab66392ee131f41944b1decab9109518d" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_file</name></member>
+      <member refid="structlava_1_1file_1af7f7efe273e63eebe67a72b2250a7b9a" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_istream</name></member>
+      <member refid="structlava_1_1file_1a527ef86a8a5c7d7bd100d4b653e6b5fa" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_mode</name></member>
+      <member refid="structlava_1_1file_1adbf9b77e048e604ed3e630a8a7487e50" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_ostream</name></member>
+      <member refid="structlava_1_1file_1a791c79a3578b99112dc259b8fc1fde6a" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_path</name></member>
+      <member refid="structlava_1_1file_1ac3bf7c2e0ac3b0412e3b6f8210b87ff7" prot="private" virt="non-virtual"><scope>lava::file</scope><name>m_type</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::file</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::file</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1file_1a5978b972d71c28a1d6b5ab23054e51b4" prot="public" virt="non-virtual"><scope>lava::file</scope><name>open</name></member>
+      <member refid="structlava_1_1file_1ad04cef21b98035fd3edee2dbd857ce98" prot="public" virt="non-virtual"><scope>lava::file</scope><name>opened</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::file</scope><name>operator=</name></member>
+      <member refid="structlava_1_1file_1a761e7bdfd3f76ab05d5032e3763f8fb6" prot="public" virt="non-virtual"><scope>lava::file</scope><name>read</name></member>
+      <member refid="structlava_1_1file_1a88b182b8ac6e33396fd93157346b9e52" prot="public" virt="non-virtual"><scope>lava::file</scope><name>read</name></member>
+      <member refid="structlava_1_1file_1a9a38fd427cf4038bf38f422c275b2cad" prot="public" virt="non-virtual"><scope>lava::file</scope><name>ref</name></member>
+      <member refid="structlava_1_1file_1a86a14d3cb72e0f73126a3608c066309e" prot="public" virt="non-virtual"><scope>lava::file</scope><name>seek</name></member>
+      <member refid="structlava_1_1file_1aa61df64db7c99e73e3ce3471956d9f29" prot="public" virt="non-virtual"><scope>lava::file</scope><name>tell</name></member>
+      <member refid="structlava_1_1file_1a7cd953262a017883f91f3411182773a3" prot="public" virt="non-virtual"><scope>lava::file</scope><name>writable</name></member>
+      <member refid="structlava_1_1file_1af1c3403a3edd5210691126fc4cb8c79a" prot="public" virt="non-virtual"><scope>lava::file</scope><name>write</name></member>
+      <member refid="structlava_1_1file_1ab870ec4da9026e9e6986590d94a155b2" prot="public" virt="non-virtual"><scope>lava::file</scope><name>~file</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

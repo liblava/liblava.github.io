@@ -1,0 +1,54 @@
+\doxysection{config.\+hpp}
+\hypertarget{config_8hpp_source}{}\label{config_8hpp_source}\index{liblava/app/config.hpp@{liblava/app/config.hpp}}
+\mbox{\hyperlink{config_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{imgui_8hpp}{liblava/app/imgui.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{window_8hpp}{liblava/frame/window.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}liblava/fwd.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{format_8hpp}{liblava/resource/format.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1app__config}{app\_config}}\ :\ \mbox{\hyperlink{structlava_1_1configurable}{configurable}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structlava_1_1app}{app}}*\ \mbox{\hyperlink{structlava_1_1app__config_aa5ce69738a59165cf8928bc4b7392738}{context}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{structlava_1_1app__config_ae761448b2402cb3bdf7c62a9bd51cb29}{org}}\ =\ \mbox{\hyperlink{types_8hpp_a5463322f2e652628790c04fe97367db0}{\_liblava\_}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{structlava_1_1app__config_acce23cf4709049fe780fe62a8d84372d}{ext}}\ =\ \textcolor{stringliteral}{"{}zip"{}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1app__config_a5666129d8f3b0aa3823d6c6a086b0b57}{save\_window}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1app__config_af41ba3e4aa66a34c45ba308a2d6c16eb}{handle\_key\_events}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1app__config_ac5315d258095909eb9f2a13846b0435f}{v\_sync}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1app__config_a8ec77a1b0570b5e6da97b44a3ef54722}{triple\_buffer}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ \mbox{\hyperlink{structlava_1_1app__config_ab3ad29e7198c987c2edfba15a65c111d}{fps\_cap}}\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structlava_1_1surface__format__request}{surface\_format\_request}}\ \mbox{\hyperlink{structlava_1_1app__config_ae9f86485bed9c49bec981c63cfc3597e}{surface}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1app__config_ad208fa387b9b912d80df442a788d4fcc}{physical\_device}}\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structlava_1_1imgui_1_1font}{imgui::font}}\ \mbox{\hyperlink{structlava_1_1app__config_aa608fd9df4970566bdfc0c23d7fdbd02}{imgui\_font}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structlava_1_1app__config_acffbf02267d6443a8af75e3ec4fdfb86}{name\_id}}\ =\ \mbox{\hyperlink{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c}{\_default\_}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1app__config_a65eeb9550ec619a14adf28da9054c68b}{set\_json}}(json\_ref\ j)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ json\ \mbox{\hyperlink{structlava_1_1app__config_a89c8dfbd34042d7b3c8dfe2bd42619a5}{get\_json}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1app__config_ad3f257517689f3dd0d115b304f06619d}{update\_window\_state}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{structlava_1_1window_1_1state_a14243ffff776397926556212cf311b96}{window::state::optional}}\ \mbox{\hyperlink{structlava_1_1app__config_a475f12e6dd8a5c90055a7e7077f8243d}{window\_state}};}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{config_8hpp_aad95a34591ffc7d28083692b53ea99e6}{set\_window\_icon}}(\mbox{\hyperlink{structlava_1_1window}{window}}\&\ \mbox{\hyperlink{structlava_1_1window}{window}},\ \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ icon\_file\ =\ \textcolor{stringliteral}{"{}icon.png"{}});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

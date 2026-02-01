@@ -1,0 +1,216 @@
+\doxysection{device.\+hpp}
+\hypertarget{device_8hpp_source}{}\label{device_8hpp_source}\index{liblava/base/device.hpp@{liblava/base/device.hpp}}
+\mbox{\hyperlink{device_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device__table_8hpp}{liblava/base/device\_table.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queue_8hpp}{liblava/base/queue.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data_8hpp}{liblava/core/data.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{id_8hpp}{liblava/core/id.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}liblava/fwd.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1device}{device}}\ :\ \mbox{\hyperlink{structlava_1_1device__table}{device\_table}},\ \mbox{\hyperlink{structlava_1_1entity_a39066de3954adf265c61c28f0a3b521c}{entity}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{ptr}}\ =\ \mbox{\hyperlink{structlava_1_1device}{device}}*;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_a18e3059933af0d92784e333a186e5bad}{c\_ptr}}\ =\ \mbox{\hyperlink{structlava_1_1device}{device}}\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{s\_ptr}}\ =\ std::shared\_ptr<device>;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_a8169f8aeb9080ac355a8764ee7a4827b}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_a638ed2eeaedbd9279dced2459597ef08}{physical\_device\_c\_ptr}}\ =\ \mbox{\hyperlink{structlava_1_1physical__device}{physical\_device}}\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1device_1_1create__param}{create\_param}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{ref}}\ =\ \mbox{\hyperlink{structlava_1_1device_1_1create__param}{create\_param}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_a638ed2eeaedbd9279dced2459597ef08}{physical\_device\_c\_ptr}}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_acf0b5ffad255a4d798c7d2d35f2a69e6}{physical\_device}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ VmaAllocatorCreateFlags\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a9d4434f9911f4a84422ffc8edfe6acdc}{vma\_flags}}\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82}{names}}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a7110fdf52990771c740800ca33bf402d}{extensions}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ VkPhysicalDeviceFeatures\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a9a7a5b78bb51bc8c8e1366cbf9f8f1d9}{features}}\{\};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a56ec3c62a2de1f5a1778259282b7822e}{has\_features\_2}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{const}*\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a1f185da2fae871e6ee6eb4f00b713669}{next}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\_family\_info::list}}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_aef8e4d7165f60ed03515f4ce780e09a6}{queue\_family\_infos}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_abb8acc1142dc927be6a309254809837b}{add\_swapchain\_extension}}()\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a7110fdf52990771c740800ca33bf402d}{extensions}}.push\_back(\textcolor{stringliteral}{"{}VK\_KHR\_swapchain"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a95c5d8652590ce370bea505a45911351}{add\_portability\_subset\_extension}}()\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a7110fdf52990771c740800ca33bf402d}{extensions}}.push\_back(\textcolor{stringliteral}{"{}VK\_KHR\_portability\_subset"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a1d08f72242fec927ae17fc88b8f92bc9}{set\_default\_queues}}()\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{queue_8hpp_a3a95d4fb6a75e074295c1a46695397ce}{lava::set\_default\_queues}}(\mbox{\hyperlink{structlava_1_1device_1_1create__param_aef8e4d7165f60ed03515f4ce780e09a6}{queue\_family\_infos}});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_ab2b35db9332cfa42bf36bb9fd07e35a8}{set\_all\_queues}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a0f876587d41c35a0ed7fcc84a696ef81}{add\_queue}}(VkQueueFlags\ flags,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ priority\ =\ 1.f)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a8c2a71cf9ef13487dc189fca65ea6cd8}{add\_queues}}(flags,\ 1,\ priority);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a8c2a71cf9ef13487dc189fca65ea6cd8}{add\_queues}}(VkQueueFlags\ flags,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ count,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ priority\ =\ 1.f);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_a32a12a18c5b5c0cf4ee84f108861018f}{add\_dedicated\_queues}}(\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ priority\ =\ 1.f);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\_queues\_result}}\ \mbox{\hyperlink{structlava_1_1device_1_1create__param_aa84f2bf2efebec07f4ac8c25a0c3d3d9}{verify\_queues}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ \ \ \ \ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1device_a0f818905b248104d2238558fe1cd4086}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1device_a2645a8b20da02961cfb9a44c26873efd}{make}}()\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<device>();}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_a5533b7847b993c68e68c3015b72ad32d}{\string~device}}()\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_a74045c4c30a3afaa400421c0f60af3e3}{destroy}}();}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_a1e3ccc0106503deb957d554f9a3d0c0d}{create}}(\mbox{\hyperlink{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}{create\_param::ref}}\ param);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_a74045c4c30a3afaa400421c0f60af3e3}{destroy}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}{get\_graphics\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}{get\_graphics\_queues}}().at(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_a78176765160f50f099b4e8202ce13bb9}{graphics\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_af33f2cb669183fd69636b092f4ae3b31}{get\_graphics\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}{get\_compute\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}{get\_compute\_queues}}().at(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_a05571936798d869f9e6640b688feda8b}{compute\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_aba4807924b558826ebc30989b15ea4ac}{get\_compute\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}{get\_transfer\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}{get\_transfer\_queues}}().at(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1device_a7f62fa3f60987ec4305637ba490ea6d2}{transfer\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ =\ 0)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_a2da8d1cf2f97d6c8991eab6c84359466}{get\_transfer\_queue}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}});}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}{get\_graphics\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_graphics\_queue\_list;}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00213\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_aa81e365bde440a6587e8836e32538204}{graphics\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_ab78a2471ef3fa8836ff5fa773f50f852}{get\_graphics\_queues}}();}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}{get\_compute\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_compute\_queue\_list;}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a60e3dda7b16f899e980dec87d7bce118}{compute\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_aca136ff0ba56830978fe6b0d3dbc2be8}{get\_compute\_queues}}();}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00236\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}{get\_transfer\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_transfer\_queue\_list;}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_aaa49cf894a2afa7e6e050a0c167e635f}{transfer\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_a3fe482d828234b28011fe208eef57bb0}{get\_transfer\_queues}}();}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00251\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a327236b92200ab829a6b7de58968f847}{get\_queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_queue\_list;}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_aa2a41a0eb47c6a218f3092ebbd56efaa}{queues}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device_a327236b92200ab829a6b7de58968f847}{get\_queues}}();}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00266\ \ \ \ \ VkDevice\ \mbox{\hyperlink{structlava_1_1device_a45cad0d3df6eefd926226495e49411da}{get}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}};}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00274\ \ \ \ \ VolkDeviceTable\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a6bc4fe6711c01a1c50f2fce6fed901b2}{call}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1device__table_a1d871a98c3349b449c4d67f079b5798f}{table}};}
+\DoxyCodeLine{00276\ \ \ \ \ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_a0fda93f987ef8655e375cc8d7180c7e7}{wait\_for\_idle}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{check}}(\mbox{\hyperlink{structlava_1_1device_a6bc4fe6711c01a1c50f2fce6fed901b2}{call}}().vkDeviceWaitIdle(\mbox{\hyperlink{structlava_1_1device__table_a77e8f0bf98ac04eaaf68cc5406ff72d6}{vk\_device}}));}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00290\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_a638ed2eeaedbd9279dced2459597ef08}{physical\_device\_c\_ptr}}\ \mbox{\hyperlink{structlava_1_1device_a57b00a06f2ff1f8e9a61eb22e4af4538}{get\_physical\_device}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_physical\_device;}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00298\ \ \ \ \ VkPhysicalDevice\ \mbox{\hyperlink{structlava_1_1device_afb9bba83954f5d9299b0eaaad5f66a8c}{get\_vk\_physical\_device}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00304\ \ \ \ \ VkPhysicalDeviceFeatures\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a4bf266a2e0ea67fcd72e878448ee4c87}{get\_features}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00310\ \ \ \ \ VkPhysicalDeviceProperties\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1device_a7205f9a0bb651770091720af171bb5c5}{get\_properties}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1device_ac7fc2bbef2544362ce16dbd118fbae04}{surface\_supported}}(VkSurfaceKHR\ surface)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1device_a538b8ed6232c24f45f2ded25cfcb4e4a}{set\_allocator}}(\mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{allocator::s\_ptr}}\ value)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ m\_mem\_allocator\ =\ value;}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00331\ \ \ \ \ \mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{allocator::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1device_acce8de0b64611afd01d98fbea398c17b}{get\_allocator}}()\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_mem\_allocator;}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00339\ \ \ \ \ VmaAllocator\ \mbox{\hyperlink{structlava_1_1device_a9ef9942f9eb91c9412c4735a1cdf83fe}{alloc}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_mem\_allocator\ !=\ \textcolor{keyword}{nullptr}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ m\_mem\_allocator-\/>get()}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00347\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_a638ed2eeaedbd9279dced2459597ef08}{physical\_device\_c\_ptr}}\ m\_physical\_device\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00350\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ m\_graphics\_queue\_list;}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00353\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ m\_compute\_queue\_list;}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00356\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ m\_transfer\_queue\_list;}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00359\ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_a21b58152469b4f79d777688117dd655b}{queue::list}}\ m\_queue\_list;}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00362\ \ \ \ \ VkPhysicalDeviceFeatures\ m\_features\{\};}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00365\ \ \ \ \ \mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{allocator::s\_ptr}}\ m\_mem\_allocator;}
+\DoxyCodeLine{00366\ \};}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00374\ VkShaderModule\ \mbox{\hyperlink{device_8hpp_ad0623c3984b28b17fe0bc5be7d0230b9}{create\_shader\_module}}(\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device::ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\_data::ref}}\ \mbox{\hyperlink{structlava_1_1data}{data}});}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00378\ \textcolor{keyword}{using\ }\mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\_time\_command\_func}}\ =\ std::function<void(VkCommandBuffer)>;}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00388\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{device_8hpp_a522d7268899231c4bcc6a32250572fe6}{one\_time\_submit\_pool}}(\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device::ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkCommandPool\ pool,}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\_time\_command\_func}}\ callback);}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00400\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{device_8hpp_ae5805fb1642e6a4c2162639e3b245a1f}{one\_time\_submit}}(\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device::ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue::ref}}\ \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\_time\_command\_func}}\ callback)\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{device_8hpp_a522d7268899231c4bcc6a32250572fe6}{one\_time\_submit\_pool}}(\mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_NULL\_HANDLE,}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1queue}{queue}},}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ callback);}
+\DoxyCodeLine{00407\ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

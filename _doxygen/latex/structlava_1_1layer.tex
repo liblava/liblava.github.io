@@ -1,0 +1,122 @@
+\doxysection{lava\+::layer Struct Reference}
+\hypertarget{structlava_1_1layer}{}\label{structlava_1_1layer}\index{lava::layer@{lava::layer}}
+
+
+Layer.  
+
+
+
+
+{\ttfamily \#include $<$layer.\+hpp$>$}
+
+Inheritance diagram for lava\+::layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1layer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1layer_a815521a2637c57868794214fc011c22f}\label{structlava_1_1layer_a815521a2637c57868794214fc011c22f} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1layer}{layer}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to layer. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer_a2ce2652496e02f8d4ccad26859743cf9}\label{structlava_1_1layer_a2ce2652496e02f8d4ccad26859743cf9} 
+using {\bfseries map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of layers. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer_ac23feca341c4ad6f951ea07c111abfe1}\label{structlava_1_1layer_ac23feca341c4ad6f951ea07c111abfe1} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of layers. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}\label{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb} 
+using {\bfseries func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Layer function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1layer_ab7f45c663b9e2b8c4a942f746a5c4fd8}{layer}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Construct a new layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1layer_a0ccd6d1fd4eafeff2858002ddf4c8755}{make}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})
+\begin{DoxyCompactList}\small\item\em Make a new layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1layer_a6a0a48784033515d2a2b6b554d942544}\label{structlava_1_1layer_a6a0a48784033515d2a2b6b554d942544} 
+\mbox{\hyperlink{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}{func}} {\bfseries on\+\_\+func}
+\begin{DoxyCompactList}\small\item\em Called by layering. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer_ac8bd4f7abe65c610a44afd6c80aa0a93}\label{structlava_1_1layer_ac8bd4f7abe65c610a44afd6c80aa0a93} 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Active state. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer_a3ee9d3fee537879a04326faa14a830a1}\label{structlava_1_1layer_a3ee9d3fee537879a04326faa14a830a1} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Layer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1layer_ab7f45c663b9e2b8c4a942f746a5c4fd8}\index{lava::layer@{lava::layer}!layer@{layer}}
+\index{layer@{layer}!lava::layer@{lava::layer}}
+\doxysubsubsection{\texorpdfstring{layer()}{layer()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer_ab7f45c663b9e2b8c4a942f746a5c4fd8} 
+lava\+::layer\+::layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of layer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1layer_a0ccd6d1fd4eafeff2858002ddf4c8755}\index{lava::layer@{lava::layer}!make@{make}}
+\index{make@{make}!lava::layer@{lava::layer}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer_a0ccd6d1fd4eafeff2858002ddf4c8755} 
+static \mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{s\+\_\+ptr}} lava\+::layer\+::make (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of layer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{s\+\_\+ptr} Shared pointer to layer 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{layer_8hpp}{layer.\+hpp}}\end{DoxyCompactItemize}

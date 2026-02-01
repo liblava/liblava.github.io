@@ -1,0 +1,148 @@
+\doxysection{lava\+::device\+::create\+\_\+param Struct Reference}
+\hypertarget{structlava_1_1device_1_1create__param}{}\label{structlava_1_1device_1_1create__param}\index{lava::device::create\_param@{lava::device::create\_param}}
+
+
+Device create parameters.  
+
+
+
+
+{\ttfamily \#include $<$device.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0}\label{structlava_1_1device_1_1create__param_a9461eed9d139014e80e2eed33d835cb0} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1device_1_1create__param}{create\+\_\+param}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to device create parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1device_1_1create__param_abb8acc1142dc927be6a309254809837b}\label{structlava_1_1device_1_1create__param_abb8acc1142dc927be6a309254809837b} 
+void {\bfseries add\+\_\+swapchain\+\_\+extension} ()
+\begin{DoxyCompactList}\small\item\em Add swapchain extension. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a95c5d8652590ce370bea505a45911351}\label{structlava_1_1device_1_1create__param_a95c5d8652590ce370bea505a45911351} 
+void {\bfseries add\+\_\+portability\+\_\+subset\+\_\+extension} ()
+\begin{DoxyCompactList}\small\item\em Add portability subset extension. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a1d08f72242fec927ae17fc88b8f92bc9}\label{structlava_1_1device_1_1create__param_a1d08f72242fec927ae17fc88b8f92bc9} 
+void {\bfseries set\+\_\+default\+\_\+queues} ()
+\begin{DoxyCompactList}\small\item\em Set the default queues. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_ab2b35db9332cfa42bf36bb9fd07e35a8}\label{structlava_1_1device_1_1create__param_ab2b35db9332cfa42bf36bb9fd07e35a8} 
+void {\bfseries set\+\_\+all\+\_\+queues} ()
+\begin{DoxyCompactList}\small\item\em Set the all queues. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_1_1create__param_a0f876587d41c35a0ed7fcc84a696ef81}{add\+\_\+queue}} (Vk\+Queue\+Flags flags, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_1_1create__param_a8c2a71cf9ef13487dc189fca65ea6cd8}{add\+\_\+queues}} (Vk\+Queue\+Flags flags, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} count, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add queues. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1device_1_1create__param_a32a12a18c5b5c0cf4ee84f108861018f}{add\+\_\+dedicated\+\_\+queues}} (\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add all dedicated queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\+\_\+queues\+\_\+result}} \mbox{\hyperlink{structlava_1_1device_1_1create__param_aa84f2bf2efebec07f4ac8c25a0c3d3d9}{verify\+\_\+queues}} () const
+\begin{DoxyCompactList}\small\item\em Verify queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1device_1_1create__param_acf0b5ffad255a4d798c7d2d35f2a69e6}\label{structlava_1_1device_1_1create__param_acf0b5ffad255a4d798c7d2d35f2a69e6} 
+\mbox{\hyperlink{structlava_1_1device_a638ed2eeaedbd9279dced2459597ef08}{physical\+\_\+device\+\_\+c\+\_\+ptr}} {\bfseries physical\+\_\+device} = nullptr
+\begin{DoxyCompactList}\small\item\em Physical device. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a9d4434f9911f4a84422ffc8edfe6acdc}\label{structlava_1_1device_1_1create__param_a9d4434f9911f4a84422ffc8edfe6acdc} 
+Vma\+Allocator\+Create\+Flags {\bfseries vma\+\_\+flags} = 0
+\begin{DoxyCompactList}\small\item\em VMA flags. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a7110fdf52990771c740800ca33bf402d}\label{structlava_1_1device_1_1create__param_a7110fdf52990771c740800ca33bf402d} 
+\mbox{\hyperlink{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82}{names}} {\bfseries extensions}
+\begin{DoxyCompactList}\small\item\em List of extensions to enable. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a9a7a5b78bb51bc8c8e1366cbf9f8f1d9}\label{structlava_1_1device_1_1create__param_a9a7a5b78bb51bc8c8e1366cbf9f8f1d9} 
+Vk\+Physical\+Device\+Features {\bfseries features} \{\}
+\begin{DoxyCompactList}\small\item\em List of physical device features to enable. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a56ec3c62a2de1f5a1778259282b7822e}\label{structlava_1_1device_1_1create__param_a56ec3c62a2de1f5a1778259282b7822e} 
+bool {\bfseries has\+\_\+features\+\_\+2} = false
+\begin{DoxyCompactList}\small\item\em Must be true if .next points to a Vk\+Physical\+Device2 instance. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_a1f185da2fae871e6ee6eb4f00b713669}\label{structlava_1_1device_1_1create__param_a1f185da2fae871e6ee6eb4f00b713669} 
+void const  \texorpdfstring{$\ast$}{*} {\bfseries next} = nullptr
+\begin{DoxyCompactList}\small\item\em Create parameter next pointer (p\+Next) \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1device_1_1create__param_aef8e4d7165f60ed03515f4ce780e09a6}\label{structlava_1_1device_1_1create__param_aef8e4d7165f60ed03515f4ce780e09a6} 
+\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} {\bfseries queue\+\_\+family\+\_\+infos}
+\begin{DoxyCompactList}\small\item\em List of queue famiy infos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Device create parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1device_1_1create__param_a32a12a18c5b5c0cf4ee84f108861018f}\index{lava::device::create\_param@{lava::device::create\_param}!add\_dedicated\_queues@{add\_dedicated\_queues}}
+\index{add\_dedicated\_queues@{add\_dedicated\_queues}!lava::device::create\_param@{lava::device::create\_param}}
+\doxysubsubsection{\texorpdfstring{add\_dedicated\_queues()}{add\_dedicated\_queues()}}
+{\footnotesize\ttfamily \label{structlava_1_1device_1_1create__param_a32a12a18c5b5c0cf4ee84f108861018f} 
+bool lava\+::device\+::create\+\_\+param\+::add\+\_\+dedicated\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})}
+
+
+
+Add all dedicated queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & Priority for queues \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Add was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1device_1_1create__param_a0f876587d41c35a0ed7fcc84a696ef81}\index{lava::device::create\_param@{lava::device::create\_param}!add\_queue@{add\_queue}}
+\index{add\_queue@{add\_queue}!lava::device::create\_param@{lava::device::create\_param}}
+\doxysubsubsection{\texorpdfstring{add\_queue()}{add\_queue()}}
+{\footnotesize\ttfamily \label{structlava_1_1device_1_1create__param_a0f876587d41c35a0ed7fcc84a696ef81} 
+bool lava\+::device\+::create\+\_\+param\+::add\+\_\+queue (\begin{DoxyParamCaption}\item[{Vk\+Queue\+Flags}]{flags}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Queue flags \\
+\hline
+{\em priority} & Priority for queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Add was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1device_1_1create__param_a8c2a71cf9ef13487dc189fca65ea6cd8}\index{lava::device::create\_param@{lava::device::create\_param}!add\_queues@{add\_queues}}
+\index{add\_queues@{add\_queues}!lava::device::create\_param@{lava::device::create\_param}}
+\doxysubsubsection{\texorpdfstring{add\_queues()}{add\_queues()}}
+{\footnotesize\ttfamily \label{structlava_1_1device_1_1create__param_a8c2a71cf9ef13487dc189fca65ea6cd8} 
+bool lava\+::device\+::create\+\_\+param\+::add\+\_\+queues (\begin{DoxyParamCaption}\item[{Vk\+Queue\+Flags}]{flags}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{count}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})}
+
+
+
+Add queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Queue flags \\
+\hline
+{\em count} & Number of queues \\
+\hline
+{\em priority} & Priority for queues \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Add was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1device_1_1create__param_aa84f2bf2efebec07f4ac8c25a0c3d3d9}\index{lava::device::create\_param@{lava::device::create\_param}!verify\_queues@{verify\_queues}}
+\index{verify\_queues@{verify\_queues}!lava::device::create\_param@{lava::device::create\_param}}
+\doxysubsubsection{\texorpdfstring{verify\_queues()}{verify\_queues()}}
+{\footnotesize\ttfamily \label{structlava_1_1device_1_1create__param_aa84f2bf2efebec07f4ac8c25a0c3d3d9} 
+\mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\+\_\+queues\+\_\+result}} lava\+::device\+::create\+\_\+param\+::verify\+\_\+queues (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Verify queues. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\+\_\+queues\+\_\+result} Verification result 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{device_8hpp}{device.\+hpp}}\end{DoxyCompactItemize}

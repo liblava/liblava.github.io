@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="file__system_8hpp" kind="file" language="C++">
+    <compoundname>file_system.hpp</compoundname>
+    <includes refid="version_8hpp" local="yes">liblava/core/version.hpp</includes>
+    <includes local="no">filesystem</includes>
+    <includedby refid="file_8hpp" local="yes">liblava/file.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/core/version.hpp</label>
+        <link refid="version_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/file/file_system.hpp</label>
+        <link refid="file__system_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="11">
+        <label>filesystem</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>string_view</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/app/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/file/file_system.hpp</label>
+        <link refid="file__system_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1file__system" prot="public">lava::file_system</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <briefdescription>
+<para>File system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="version_8hpp" kindref="compound">liblava/core/version.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structlava_1_1file__system" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1file__system" kindref="compound">file_system</ref><sp/>:<sp/><ref refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" kindref="member">no_copy_no_move</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="structlava_1_1file__system_1a128a19889fc6c0de45ab016dcdcbae04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref><sp/><ref refid="structlava_1_1file__system_1a128a19889fc6c0de45ab016dcdcbae04" kindref="member">get_version</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structlava_1_1file__system_1ae2412b2813ed104cfb47760f6dab9a99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1ae2412b2813ed104cfb47760f6dab9a99" kindref="member">get_base_dir</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structlava_1_1file__system_1a6035a06dbfcbbc8f832b84eeaf770a53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a6035a06dbfcbbc8f832b84eeaf770a53" kindref="member">get_full_base_dir</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>path);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structlava_1_1file__system_1aa06b58dc745cc8e0163fcc126ab4d00d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1aa06b58dc745cc8e0163fcc126ab4d00d" kindref="member">get_pref_dir</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structlava_1_1file__system_1ab0864cd05da14b30699cb6aadc1e6a46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1ab0864cd05da14b30699cb6aadc1e6a46" kindref="member">get_res_dir</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structlava_1_1file__system_1a498847d0f265e3df79050101a7ac9d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a498847d0f265e3df79050101a7ac9d77" kindref="member">mount</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>path);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structlava_1_1file__system_1a7786077f80c21a8a7c7d0f82833de29b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a7786077f80c21a8a7c7d0f82833de29b" kindref="member">mount_base</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>base_dir_path);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structlava_1_1file__system_1a5b5b87ef6ffe06b17c6e5238220dcdcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a5b5b87ef6ffe06b17c6e5238220dcdcb" kindref="member">exists</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1file" kindref="compound">file</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="structlava_1_1file__system_1a1453846158d92eb16facc5844e814efe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a1453846158d92eb16facc5844e814efe" kindref="member">get_real_dir</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1file" kindref="compound">file</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structlava_1_1file__system_1a06d5636ef1511179db0285aca220db00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref><sp/><ref refid="structlava_1_1file__system_1a06d5636ef1511179db0285aca220db00" kindref="member">enumerate_files</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>path);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structlava_1_1file__system_1a6d3e702b2ee354cb72e5c420ab710dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a6d3e702b2ee354cb72e5c420ab710dd3" kindref="member">initialize</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>argv_0,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>org,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1app" kindref="compound">app</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>ext);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structlava_1_1file__system_1a01a492befb85c3c57c195740855e27bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a01a492befb85c3c57c195740855e27bd" kindref="member">terminate</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structlava_1_1file__system_1ab140c6dd0a6aaa4bbd3cd2271afcb0f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref><sp/><ref refid="structlava_1_1file__system_1ab140c6dd0a6aaa4bbd3cd2271afcb0f4" kindref="member">mount_res</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structlava_1_1file__system_1a266374e602590d8a24b177de626a9891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a266374e602590d8a24b177de626a9891" kindref="member">create_folder</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;data&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="structlava_1_1file__system_1a69cc544f63441f63a1b33e36b4415dd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a69cc544f63441f63a1b33e36b4415dd2" kindref="member">clean_pref_dir</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structlava_1_1file__system_1af8c3a743a0e7b022e54977348f8d27c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1file__system_1af8c3a743a0e7b022e54977348f8d27c5" kindref="member">get_org</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_org;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="structlava_1_1file__system_1adbcfe405006ac93429fe305908d154e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1file__system_1adbcfe405006ac93429fe305908d154e1" kindref="member">get_app</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_app;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structlava_1_1file__system_1ac0947f2e2a9bd3358228867be381b704" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1file__system_1ac0947f2e2a9bd3358228867be381b704" kindref="member">get_ext</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_ext;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structlava_1_1file__system_1a15797e70806e2ef869462ae8726278cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1file__system_1a15797e70806e2ef869462ae8726278cc" kindref="member">ready</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_initialized;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_initialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_org;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_app;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_ext;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_res_path;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/file/file_system.hpp"/>
+  </compounddef>
+</doxygen>

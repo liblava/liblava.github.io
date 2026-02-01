@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="json__file_8hpp" kind="file" language="C++">
+    <compoundname>json_file.hpp</compoundname>
+    <includes refid="json_8hpp" local="yes">liblava/file/json.hpp</includes>
+    <includedby refid="file_8hpp" local="yes">liblava/file.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/file/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/file/json_file.hpp</label>
+        <link refid="json__file_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="11">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>string_view</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/app/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/file/json_file.hpp</label>
+        <link refid="json__file_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1json__file" prot="public">lava::json_file</innerclass>
+    <innerclass refid="structlava_1_1json__file_1_1callback" prot="public">lava::json_file::callback</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <briefdescription>
+<para>Json file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblava/file/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structlava_1_1json__file" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1json__file_1ac1a7e52bf524153c11c55c856022c9de" kindref="member">json_file</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="structlava_1_1json__file_1ac1a7e52bf524153c11c55c856022c9de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1ac1a7e52bf524153c11c55c856022c9de" kindref="member">json_file</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>path<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;config.json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structlava_1_1json__file_1_1callback" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structlava_1_1json__file_1_1callback_1a62a29ad820e89a9ed921993e818e00b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1json__file_1_1callback_1a62a29ad820e89a9ed921993e818e00b1" kindref="member">list</ref><sp/>=<sp/>std::vector&lt;callback*&gt;;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structlava_1_1json__file_1_1callback_1ae8d62fe3f5aa4fa89c35e5ae8a7f7aba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1json__file_1_1callback_1ae8d62fe3f5aa4fa89c35e5ae8a7f7aba" kindref="member">load_func</ref><sp/>=<sp/>std::function&lt;void(json_ref)&gt;;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structlava_1_1json__file_1_1callback_1acd4c87929d47fae6ed5d9d58a1142fcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1json__file_1_1callback_1ae8d62fe3f5aa4fa89c35e5ae8a7f7aba" kindref="member">load_func</ref><sp/><ref refid="structlava_1_1json__file_1_1callback_1acd4c87929d47fae6ed5d9d58a1142fcb" kindref="member">on_load</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structlava_1_1json__file_1_1callback_1a665e2fc08e78e701e579fb4e369c6556" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1json__file_1_1callback_1a665e2fc08e78e701e579fb4e369c6556" kindref="member">save_func</ref><sp/>=<sp/>std::function&lt;json()&gt;;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structlava_1_1json__file_1_1callback_1a4bf90d7df332bd8d8e789699b1284efd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1json__file_1_1callback_1a665e2fc08e78e701e579fb4e369c6556" kindref="member">save_func</ref><sp/><ref refid="structlava_1_1json__file_1_1callback_1a4bf90d7df332bd8d8e789699b1284efd" kindref="member">on_save</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structlava_1_1json__file_1afae0540df27bf7bfa0f0c669a534577e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1afae0540df27bf7bfa0f0c669a534577e" kindref="member">add</ref>(<ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref>*<sp/><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structlava_1_1json__file_1a03ccb249c96a5c28282cd0a814d65a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1a03ccb249c96a5c28282cd0a814d65a64" kindref="member">remove</ref>(<ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref>*<sp/><ref refid="structlava_1_1json__file_1_1callback" kindref="compound">callback</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structlava_1_1json__file_1a882c2ebe6f850e5d9ad30281d062b0be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1a882c2ebe6f850e5d9ad30281d062b0be" kindref="member">clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_callbacks.clear();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structlava_1_1json__file_1a0618669ca032de3d8c3a6b28da6d3b22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1a0618669ca032de3d8c3a6b28da6d3b22" kindref="member">set</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_path<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structlava_1_1json__file_1a24ab8dd1c900bbefca20e75791670b03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/><ref refid="structlava_1_1json__file_1a24ab8dd1c900bbefca20e75791670b03" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_path;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structlava_1_1json__file_1af4614ce9c2d36a9ae763abe822cc640c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1af4614ce9c2d36a9ae763abe822cc640c" kindref="member">load</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structlava_1_1json__file_1a8174ad57c686d1004bcd33ab016a4689" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1json__file_1a8174ad57c686d1004bcd33ab016a4689" kindref="member">save</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_path;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1json__file_1_1callback_1a62a29ad820e89a9ed921993e818e00b1" kindref="member">callback::list</ref><sp/>m_callbacks;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/file/json_file.hpp"/>
+  </compounddef>
+</doxygen>

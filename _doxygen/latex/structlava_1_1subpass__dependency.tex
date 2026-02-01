@@ -1,0 +1,255 @@
+\doxysection{lava\+::subpass\+\_\+dependency Struct Reference}
+\hypertarget{structlava_1_1subpass__dependency}{}\label{structlava_1_1subpass__dependency}\index{lava::subpass\_dependency@{lava::subpass\_dependency}}
+
+
+Subpass dependency.  
+
+
+
+
+{\ttfamily \#include $<$subpass.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}\label{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1subpass__dependency}{subpass\+\_\+dependency}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to subpass dependency. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1subpass__dependency_a6ace8aff487ed1ff9434ff974c9165d8}\label{structlava_1_1subpass__dependency_a6ace8aff487ed1ff9434ff974c9165d8} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of subpass dependencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1subpass__dependency_a09932e40b5288003f4994b761ae125ac}\label{structlava_1_1subpass__dependency_a09932e40b5288003f4994b761ae125ac} 
+{\bfseries subpass\+\_\+dependency} ()
+\begin{DoxyCompactList}\small\item\em Construct a new subpass dependency. \end{DoxyCompactList}\item 
+Vk\+Subpass\+Dependency const \& \mbox{\hyperlink{structlava_1_1subpass__dependency_ac662a4d3ba93e434c86b5eefe7b86bc9}{get\+\_\+dependency}} () const
+\begin{DoxyCompactList}\small\item\em Get the dependency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a85b6178eff7ddf3701530b9ac710da14}{set\+\_\+subpass}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} src, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} dst)
+\begin{DoxyCompactList}\small\item\em Set the subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a5862d316b3946df5db84bac1f2644c69}{set\+\_\+src\+\_\+subpass}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} src)
+\begin{DoxyCompactList}\small\item\em Set the source subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a608b3a485457f7aab9c5ab4897c83afe}{set\+\_\+dst\+\_\+subpass}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} dst)
+\begin{DoxyCompactList}\small\item\em Set the dst subpass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a01bb876275018c9976f31e15901b0ded}{set\+\_\+stage\+\_\+mask}} (Vk\+Pipeline\+Stage\+Flags src, Vk\+Pipeline\+Stage\+Flags dst)
+\begin{DoxyCompactList}\small\item\em Set the stage mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a56e19c9fc37e12b79caee3b7d6ae17f4}{set\+\_\+src\+\_\+stage\+\_\+mask}} (Vk\+Pipeline\+Stage\+Flags mask)
+\begin{DoxyCompactList}\small\item\em Set the source stage mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a4a01d8ea3ca09831cd353dc3341f42e8}{set\+\_\+dst\+\_\+stage\+\_\+mask}} (Vk\+Pipeline\+Stage\+Flags mask)
+\begin{DoxyCompactList}\small\item\em Set the destination stage mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a1b99106dc94c0455d1e74ec95369f0f5}{set\+\_\+access\+\_\+mask}} (Vk\+Access\+Flags src, Vk\+Access\+Flags dst)
+\begin{DoxyCompactList}\small\item\em Set the access mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a09ef6ed67f4f10e21496b6a20899cd17}{set\+\_\+src\+\_\+access\+\_\+mask}} (Vk\+Access\+Flags mask)
+\begin{DoxyCompactList}\small\item\em Set the src access mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_acbe61b1487dbed939c60d34c744aa569}{set\+\_\+dst\+\_\+access\+\_\+mask}} (Vk\+Access\+Flags mask)
+\begin{DoxyCompactList}\small\item\em Set the dst access mask. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1subpass__dependency_a13896063593fd87487f2c726a0c1ec8e}{set\+\_\+dependency\+\_\+flags}} (Vk\+Dependency\+Flags flags)
+\begin{DoxyCompactList}\small\item\em Set the dependency flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1subpass__dependency_a6fcc0a0c3eac93adaff1843703cb9ebb}{make}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} src\+\_\+subpass, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} dst\+\_\+subpass, Vk\+Dependency\+Flags dependency\+\_\+flags=VK\+\_\+\+DEPENDENCY\+\_\+\+BY\+\_\+\+REGION\+\_\+\+BIT)
+\begin{DoxyCompactList}\small\item\em Make a new subpass dependency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subpass dependency. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1subpass__dependency_ac662a4d3ba93e434c86b5eefe7b86bc9}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!get\_dependency@{get\_dependency}}
+\index{get\_dependency@{get\_dependency}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{get\_dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_ac662a4d3ba93e434c86b5eefe7b86bc9} 
+Vk\+Subpass\+Dependency const  \& lava\+::subpass\+\_\+dependency\+::get\+\_\+dependency (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the dependency. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Subpass\+Dependency const\& Vulkan subpass dependency 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1subpass__dependency_a6fcc0a0c3eac93adaff1843703cb9ebb}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!make@{make}}
+\index{make@{make}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a6fcc0a0c3eac93adaff1843703cb9ebb} 
+static \mbox{\hyperlink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\+\_\+ptr}} lava\+::subpass\+\_\+dependency\+::make (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{src\+\_\+subpass}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{dst\+\_\+subpass}{, }\item[{Vk\+Dependency\+Flags}]{dependency\+\_\+flags}{ = {\ttfamily VK\+\_\+DEPENDENCY\+\_\+BY\+\_\+REGION\+\_\+BIT}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new subpass dependency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+\_\+subpass} & Source subpass \\
+\hline
+{\em dst\+\_\+subpass} & Destination subpass \\
+\hline
+{\em dependency\+\_\+flags} & Dependency flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\+\_\+ptr} Shared pointer to subpass dependency 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1subpass__dependency_a1b99106dc94c0455d1e74ec95369f0f5}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_access\_mask@{set\_access\_mask}}
+\index{set\_access\_mask@{set\_access\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_access\_mask()}{set\_access\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a1b99106dc94c0455d1e74ec95369f0f5} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+access\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Access\+Flags}]{src}{, }\item[{Vk\+Access\+Flags}]{dst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the access mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source access flags \\
+\hline
+{\em dst} & Destination access flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a13896063593fd87487f2c726a0c1ec8e}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_dependency\_flags@{set\_dependency\_flags}}
+\index{set\_dependency\_flags@{set\_dependency\_flags}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_dependency\_flags()}{set\_dependency\_flags()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a13896063593fd87487f2c726a0c1ec8e} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+dependency\+\_\+flags (\begin{DoxyParamCaption}\item[{Vk\+Dependency\+Flags}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the dependency flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Dependency flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_acbe61b1487dbed939c60d34c744aa569}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_dst\_access\_mask@{set\_dst\_access\_mask}}
+\index{set\_dst\_access\_mask@{set\_dst\_access\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_dst\_access\_mask()}{set\_dst\_access\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_acbe61b1487dbed939c60d34c744aa569} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+dst\+\_\+access\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Access\+Flags}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the dst access mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & Access flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a4a01d8ea3ca09831cd353dc3341f42e8}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_dst\_stage\_mask@{set\_dst\_stage\_mask}}
+\index{set\_dst\_stage\_mask@{set\_dst\_stage\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_dst\_stage\_mask()}{set\_dst\_stage\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a4a01d8ea3ca09831cd353dc3341f42e8} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+dst\+\_\+stage\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Pipeline\+Stage\+Flags}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the destination stage mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & Pipeline stage flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a608b3a485457f7aab9c5ab4897c83afe}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_dst\_subpass@{set\_dst\_subpass}}
+\index{set\_dst\_subpass@{set\_dst\_subpass}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_dst\_subpass()}{set\_dst\_subpass()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a608b3a485457f7aab9c5ab4897c83afe} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+dst\+\_\+subpass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{dst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the dst subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & Destination subpass \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a09ef6ed67f4f10e21496b6a20899cd17}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_src\_access\_mask@{set\_src\_access\_mask}}
+\index{set\_src\_access\_mask@{set\_src\_access\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_src\_access\_mask()}{set\_src\_access\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a09ef6ed67f4f10e21496b6a20899cd17} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+src\+\_\+access\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Access\+Flags}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the src access mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & Access flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a56e19c9fc37e12b79caee3b7d6ae17f4}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_src\_stage\_mask@{set\_src\_stage\_mask}}
+\index{set\_src\_stage\_mask@{set\_src\_stage\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_src\_stage\_mask()}{set\_src\_stage\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a56e19c9fc37e12b79caee3b7d6ae17f4} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+src\+\_\+stage\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Pipeline\+Stage\+Flags}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the source stage mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & Pipeline stage flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a5862d316b3946df5db84bac1f2644c69}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_src\_subpass@{set\_src\_subpass}}
+\index{set\_src\_subpass@{set\_src\_subpass}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_src\_subpass()}{set\_src\_subpass()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a5862d316b3946df5db84bac1f2644c69} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+src\+\_\+subpass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the source subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source Subpass \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a01bb876275018c9976f31e15901b0ded}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_stage\_mask@{set\_stage\_mask}}
+\index{set\_stage\_mask@{set\_stage\_mask}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_stage\_mask()}{set\_stage\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a01bb876275018c9976f31e15901b0ded} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+stage\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Pipeline\+Stage\+Flags}]{src}{, }\item[{Vk\+Pipeline\+Stage\+Flags}]{dst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stage mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source pipeline stage flags \\
+\hline
+{\em dst} & Destination pipeline stage flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1subpass__dependency_a85b6178eff7ddf3701530b9ac710da14}\index{lava::subpass\_dependency@{lava::subpass\_dependency}!set\_subpass@{set\_subpass}}
+\index{set\_subpass@{set\_subpass}!lava::subpass\_dependency@{lava::subpass\_dependency}}
+\doxysubsubsection{\texorpdfstring{set\_subpass()}{set\_subpass()}}
+{\footnotesize\ttfamily \label{structlava_1_1subpass__dependency_a85b6178eff7ddf3701530b9ac710da14} 
+void lava\+::subpass\+\_\+dependency\+::set\+\_\+subpass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{src}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{dst}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the subpass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Source Subpass \\
+\hline
+{\em dst} & Destination Subpass \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{subpass_8hpp}{subpass.\+hpp}}\end{DoxyCompactItemize}

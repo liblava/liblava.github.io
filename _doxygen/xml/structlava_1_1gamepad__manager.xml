@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1gamepad__manager" kind="struct" language="C++" prot="public">
+    <compoundname>lava::gamepad_manager</compoundname>
+    <includes refid="gamepad_8hpp" local="no">gamepad.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1gamepad__manager_1ae5af976eebf84c9ec5ce530ac6fea316" prot="public" static="no">
+        <type>std::function&lt; bool(<ref refid="structlava_1_1gamepad" kindref="compound">gamepad</ref>, bool)&gt;</type>
+        <definition>using lava::gamepad_manager::listener_func =  std::function&lt;bool(gamepad, bool)&gt;</definition>
+        <argsstring></argsstring>
+        <name>listener_func</name>
+        <qualifiedname>lava::gamepad_manager::listener_func</qualifiedname>
+        <briefdescription>
+<para>Gamepad listener function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="193" column="5" bodyfile="liblava/frame/gamepad.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structlava_1_1gamepad__manager_1a36c7507dd7d12013c7efe00846a21b92" prot="private" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1gamepad__manager_1ae5af976eebf84c9ec5ce530ac6fea316" kindref="member">listener_func</ref> &gt;</type>
+        <definition>using lava::gamepad_manager::listener_map =  std::map&lt;id, listener_func&gt;</definition>
+        <argsstring></argsstring>
+        <name>listener_map</name>
+        <qualifiedname>lava::gamepad_manager::listener_map</qualifiedname>
+        <briefdescription>
+<para>Map of gamepad listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="224" column="5" bodyfile="liblava/frame/gamepad.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1gamepad__manager_1a608daa0201d48d35d86a159afafbcd31" prot="private" static="no" mutable="no">
+        <type>listener_map</type>
+        <definition>listener_map lava::gamepad_manager::m_map</definition>
+        <argsstring></argsstring>
+        <name>m_map</name>
+        <qualifiedname>lava::gamepad_manager::m_map</qualifiedname>
+        <briefdescription>
+<para>Map of gamepad listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="227" column="18" bodyfile="liblava/frame/gamepad.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1gamepad__manager_1afad0d16868d78fd3b67e255b26284de3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1gamepad__manager" kindref="compound">gamepad_manager</ref> &amp;</type>
+        <definition>static gamepad_manager &amp; lava::gamepad_manager::singleton</definition>
+        <argsstring>()</argsstring>
+        <name>singleton</name>
+        <qualifiedname>lava::gamepad_manager::singleton</qualifiedname>
+        <briefdescription>
+<para>Get gamepad manager singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1gamepad__manager" kindref="compound">gamepad_manager</ref>&amp; Gamepad manager </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="199" column="28" bodyfile="liblava/frame/gamepad.hpp" bodystart="199" bodyend="202"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1gamepad__manager_1a39bb10a613ff406dbebf41d4c122ba1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::gamepad_manager::add</definition>
+        <argsstring>(listener_func listener)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::gamepad_manager::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1gamepad__manager_1ae5af976eebf84c9ec5ce530ac6fea316" kindref="member">listener_func</ref></type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Add listener. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gamepad listener function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id Id of function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="209" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1gamepad__manager_1a4006326be8e458c1c1cca8ffe19f4e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::gamepad_manager::remove</definition>
+        <argsstring>(id::ref func_id)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::gamepad_manager::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>func_id</declname>
+        </param>
+        <briefdescription>
+<para>Remove listener. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="215" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1gamepad__manager_1af3d1f4727cea65172454749095d00c36" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::gamepad_manager::gamepad_manager</definition>
+        <argsstring>()</argsstring>
+        <name>gamepad_manager</name>
+        <qualifiedname>lava::gamepad_manager::gamepad_manager</qualifiedname>
+        <briefdescription>
+<para>Construct a new gamepad manager. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/gamepad.hpp" line="221" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Gamepad manager. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/frame/gamepad.hpp" line="191" column="1" bodyfile="liblava/frame/gamepad.hpp" bodystart="191" bodyend="228"/>
+    <listofallmembers>
+      <member refid="structlava_1_1gamepad__manager_1a39bb10a613ff406dbebf41d4c122ba1d" prot="public" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>add</name></member>
+      <member refid="structlava_1_1gamepad__manager_1af3d1f4727cea65172454749095d00c36" prot="private" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>gamepad_manager</name></member>
+      <member refid="structlava_1_1gamepad__manager_1ae5af976eebf84c9ec5ce530ac6fea316" prot="public" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>listener_func</name></member>
+      <member refid="structlava_1_1gamepad__manager_1a36c7507dd7d12013c7efe00846a21b92" prot="private" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>listener_map</name></member>
+      <member refid="structlava_1_1gamepad__manager_1a608daa0201d48d35d86a159afafbcd31" prot="private" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>m_map</name></member>
+      <member refid="structlava_1_1gamepad__manager_1a4006326be8e458c1c1cca8ffe19f4e66" prot="public" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>remove</name></member>
+      <member refid="structlava_1_1gamepad__manager_1afad0d16868d78fd3b67e255b26284de3" prot="public" virt="non-virtual"><scope>lava::gamepad_manager</scope><name>singleton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

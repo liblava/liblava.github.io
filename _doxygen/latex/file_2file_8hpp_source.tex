@@ -1,0 +1,92 @@
+\doxysection{file.\+hpp}
+\hypertarget{file_2file_8hpp_source}{}\label{file_2file_8hpp_source}\index{liblava/file/file.hpp@{liblava/file/file.hpp}}
+\mbox{\hyperlink{file_2file_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{data_8hpp}{liblava/core/data.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ fwd}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }PHYSFS\_File;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ none\ =\ 0,}
+\DoxyCodeLine{00023\ \ \ \ \ fs,}
+\DoxyCodeLine{00024\ \ \ \ \ f\_stream}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c}{file\_error\_result}}\ =\ \mbox{\hyperlink{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}{undef}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{file_2file_8hpp_a7aaf917bd12b10e762020a0bd7bf009d}{file\_error}}(\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ result)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ result\ ==\ \mbox{\hyperlink{file_2file_8hpp_a5fd9c8afc71c65dcf9b5b38e0cae533c}{file\_error\_result}};}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ read\ =\ 0,}
+\DoxyCodeLine{00044\ \ \ \ \ write}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1file_a2e577777719e646fe07900fd35955135}{file}}\ :\ \mbox{\hyperlink{structlava_1_1no__copy__no__move_ac97369ee1b1a70996ab3b9b24bf26432}{no\_copy\_no\_move}}\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1file_a9a38fd427cf4038bf38f422c275b2cad}{ref}}\ =\ \mbox{\hyperlink{structlava_1_1file_a2e577777719e646fe07900fd35955135}{file}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1file_a2e577777719e646fe07900fd35955135}{file}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ path\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}}\ mode\ =\ file\_mode::read);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{structlava_1_1file_ab870ec4da9026e9e6986590d94a155b2}{\string~file}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1file_a5978b972d71c28a1d6b5ab23054e51b4}{open}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ path,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}}\ mode\ =\ file\_mode::read);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1file_a6ff92cdcc2b249ffc58a323306e4d7c7}{close}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1file_ad04cef21b98035fd3edee2dbd857ce98}{opened}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}{get\_size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_a761e7bdfd3f76ab05d5032e3763f8fb6}{read}}(\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data::ptr}}\ \mbox{\hyperlink{structlava_1_1data}{data}})\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1file_a761e7bdfd3f76ab05d5032e3763f8fb6}{read}}(\mbox{\hyperlink{structlava_1_1data}{data}},}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a52a659311126b89d05817c269505f14d}{to\_ui64}}(\mbox{\hyperlink{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}{get\_size}}()));}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_a88b182b8ac6e33396fd93157346b9e52}{read}}(\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data::ptr}}\ \mbox{\hyperlink{structlava_1_1data}{data}},\ \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}\ size);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_af1c3403a3edd5210691126fc4cb8c79a}{write}}(\mbox{\hyperlink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{data::c\_ptr}}\ \mbox{\hyperlink{structlava_1_1data}{data}},\ \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}\ size);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_a86a14d3cb72e0f73126a3608c066309e}{seek}}(\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}\ position);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}}\ \mbox{\hyperlink{structlava_1_1file_aa61df64db7c99e73e3ce3471956d9f29}{tell}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1file_a7cd953262a017883f91f3411182773a3}{writable}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_mode\ ==\ file\_mode::write;}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}}\ \mbox{\hyperlink{structlava_1_1file_abada804bc55603748cbbe269a0fadaa3}{get\_type}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_type;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{structlava_1_1file_a091e149d0cc93f5cefc7814df316027f}{get\_path}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_path;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\_type}}\ m\_type\ =\ file\_type::none;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\_mode}}\ m\_mode\ =\ file\_mode::read;}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{string}\ m\_path;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00167\ \ \ \ \ PHYSFS\_File*\ m\_file\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{mutable}\ std::ifstream\ m\_istream;}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{mutable}\ std::ofstream\ m\_ostream;}
+\DoxyCodeLine{00174\ \};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

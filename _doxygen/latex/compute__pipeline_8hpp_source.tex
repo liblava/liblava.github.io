@@ -1,0 +1,56 @@
+\doxysection{compute\+\_\+pipeline.\+hpp}
+\hypertarget{compute__pipeline_8hpp_source}{}\label{compute__pipeline_8hpp_source}\index{liblava/block/compute\_pipeline.hpp@{liblava/block/compute\_pipeline.hpp}}
+\mbox{\hyperlink{compute__pipeline_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pipeline_8hpp}{liblava/block/pipeline.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1compute__pipeline}{compute\_pipeline}}\ :\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a532e33a3caacd4f71ba16d26111a0c5b}{pipeline}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1compute__pipeline_ae8fba0dfd11efb20667131a53b53918f}{s\_ptr}}\ =\ std::shared\_ptr<compute\_pipeline>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1compute__pipeline_a33901cde9309728a619f73f50a088fa9}{s\_map}}\ =\ std::map<id,\ s\_ptr>;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1compute__pipeline_a6a9c746d5846cafa94a55e6e54e5536b}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_ae8fba0dfd11efb20667131a53b53918f}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a68ba75889ccd5fc123df93c7dce69748}{make}}(\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device::ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPipelineCache\ pipeline\_cache\ =\ 0)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<compute\_pipeline>(\mbox{\hyperlink{structlava_1_1device}{device}},\ pipeline\_cache);}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1pipeline_a532e33a3caacd4f71ba16d26111a0c5b}{pipeline::pipeline}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a7be06c2bd664c103661e4848f1bc2854}{bind}}(VkCommandBuffer\ cmdBuffer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_aab1a488ab2989de7d24be27d92902e1a}{set\_shader\_stage}}(\mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\_data::ref}}\ \mbox{\hyperlink{structlava_1_1data}{data}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkShaderStageFlagBits\ \mbox{\hyperlink{structlava_1_1stage}{stage}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a3e6d479c2feb57b00f2ac16ba1a1e37a}{set}}(shader\_stage::s\_ptr\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1stage}{stage}})\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ m\_shader\_stage\ =\ \mbox{\hyperlink{structlava_1_1stage}{stage}};}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ shader\_stage::s\_ptr\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a142115babe5cd3924f277f0515e98e54}{get\_shader\_stage}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_shader\_stage;}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a63ae45c6b38d4b07d57d3f5ace6e528b}{copy\_to}}(\mbox{\hyperlink{structlava_1_1compute__pipeline}{compute\_pipeline}}*\ target)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1compute__pipeline_a654ed7e149bedc432734be580211391f}{copy\_from}}(\mbox{\hyperlink{structlava_1_1compute__pipeline_ae8fba0dfd11efb20667131a53b53918f}{s\_ptr}}\ \textcolor{keyword}{const}\&\ source)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ source-\/>copy\_to(\textcolor{keyword}{this});}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ setup()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ teardown()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ shader\_stage::s\_ptr\ m\_shader\_stage;}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

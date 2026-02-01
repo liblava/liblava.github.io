@@ -1,0 +1,1025 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="types_8hpp" kind="file" language="C++">
+    <compoundname>types.hpp</compoundname>
+    <includes local="yes">liblava/core/def.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string_view</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="icon_8hpp" local="yes">liblava/app/icon.hpp</includedby>
+    <includedby refid="core_8hpp" local="yes">liblava/core.hpp</includedby>
+    <includedby refid="data_8hpp" local="yes">liblava/core/data.hpp</includedby>
+    <includedby refid="id_8hpp" local="yes">liblava/core/id.hpp</includedby>
+    <includedby refid="misc_8hpp" local="yes">liblava/core/misc.hpp</includedby>
+    <includedby refid="time_8hpp" local="yes">liblava/core/time.hpp</includedby>
+    <includedby refid="version_8hpp" local="yes">liblava/core/version.hpp</includedby>
+    <includedby refid="json_8hpp" local="yes">liblava/file/json.hpp</includedby>
+    <includedby refid="argh_8hpp" local="yes">liblava/frame/argh.hpp</includedby>
+    <includedby refid="hex_8hpp" local="yes">liblava/util/hex.hpp</includedby>
+    <includedby refid="math_8hpp" local="yes">liblava/util/math.hpp</includedby>
+    <includedby refid="random_8hpp" local="yes">liblava/util/random.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>string_view</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>liblava/app/benchmark.hpp</label>
+        <link refid="benchmark_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>liblava/app/camera.hpp</label>
+        <link refid="camera_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>liblava/app/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>liblava/app/forward_shading.hpp</label>
+        <link refid="forward__shading_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/app/icon.hpp</label>
+        <link refid="icon_8hpp"/>
+      </node>
+      <node id="26">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>liblava/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>liblava/asset/load_image.hpp</label>
+        <link refid="load__image_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>liblava/asset/load_mesh.hpp</label>
+        <link refid="load__mesh_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>liblava/asset/load_texture.hpp</label>
+        <link refid="load__texture_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>liblava/asset/write_image.hpp</label>
+        <link refid="write__image_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/base.hpp</label>
+        <link refid="base_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>liblava/base/base.hpp</label>
+        <link refid="base_2base_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>liblava/base/debug_utils.hpp</label>
+        <link refid="debug__utils_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/base/device.hpp</label>
+        <link refid="device_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>liblava/base/device_table.hpp</label>
+        <link refid="device__table_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>liblava/base/instance.hpp</label>
+        <link refid="instance_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>liblava/base/memory.hpp</label>
+        <link refid="memory_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/base/physical_device.hpp</label>
+        <link refid="physical__device_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>liblava/base/platform.hpp</label>
+        <link refid="platform_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>liblava/base/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>liblava/block.hpp</label>
+        <link refid="block_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>liblava/block/attachment.hpp</label>
+        <link refid="attachment_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>liblava/block/block.hpp</label>
+        <link refid="block_2block_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>liblava/block/compute_pipeline.hpp</label>
+        <link refid="compute__pipeline_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>liblava/block/descriptor.hpp</label>
+        <link refid="descriptor_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>liblava/block/pipeline.hpp</label>
+        <link refid="pipeline_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>liblava/block/pipeline_layout.hpp</label>
+        <link refid="pipeline__layout_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>liblava/block/render_pass.hpp</label>
+        <link refid="render__pass_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>liblava/block/render_pipeline.hpp</label>
+        <link refid="render__pipeline_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>liblava/block/subpass.hpp</label>
+        <link refid="subpass_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/core/data.hpp</label>
+        <link refid="data_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>liblava/core/id.hpp</label>
+        <link refid="id_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>liblava/core/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>liblava/core/time.hpp</label>
+        <link refid="time_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>liblava/core/version.hpp</label>
+        <link refid="version_8hpp"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>liblava/engine/producer.hpp</label>
+        <link refid="producer_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>liblava/engine/props.hpp</label>
+        <link refid="props_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>liblava/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>liblava/file/file.hpp</label>
+        <link refid="file_2file_8hpp"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>liblava/file/file_system.hpp</label>
+        <link refid="file__system_8hpp"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>liblava/file/file_utils.hpp</label>
+        <link refid="file__utils_8hpp"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>liblava/file/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>liblava/file/json_file.hpp</label>
+        <link refid="json__file_8hpp"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>liblava/frame.hpp</label>
+        <link refid="frame_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>liblava/frame/argh.hpp</label>
+        <link refid="argh_8hpp"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>liblava/frame/driver.hpp</label>
+        <link refid="driver_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>liblava/frame/frame.hpp</label>
+        <link refid="frame_2frame_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>liblava/frame/gamepad.hpp</label>
+        <link refid="gamepad_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>liblava/frame/input.hpp</label>
+        <link refid="input_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>liblava/frame/render_target.hpp</label>
+        <link refid="render__target_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>liblava/frame/renderer.hpp</label>
+        <link refid="renderer_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>liblava/frame/swapchain.hpp</label>
+        <link refid="swapchain_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>liblava/frame/window.hpp</label>
+        <link refid="window_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>liblava/resource.hpp</label>
+        <link refid="resource_8hpp"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>liblava/resource/buffer.hpp</label>
+        <link refid="buffer_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>liblava/resource/format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>liblava/resource/image.hpp</label>
+        <link refid="image_8hpp"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>liblava/resource/mesh.hpp</label>
+        <link refid="mesh_8hpp"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>liblava/resource/primitive.hpp</label>
+        <link refid="primitive_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>liblava/resource/texture.hpp</label>
+        <link refid="texture_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+      <node id="56">
+        <label>liblava/util.hpp</label>
+        <link refid="util_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>liblava/util/hex.hpp</label>
+        <link refid="hex_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>liblava/util/layer.hpp</label>
+        <link refid="layer_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>liblava/util/log.hpp</label>
+        <link refid="log_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>liblava/util/math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>liblava/util/random.hpp</label>
+        <link refid="random_8hpp"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>liblava/util/telegram.hpp</label>
+        <link refid="telegram_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>liblava/util/thread.hpp</label>
+        <link refid="thread_8hpp"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1no__copy__no__move" prot="public">lava::no_copy_no_move</innerclass>
+    <innerclass refid="structlava_1_1interface" prot="public">lava::interface</innerclass>
+    <innerclass refid="structlava_1_1pair__hash" prot="public">lava::pair_hash</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="types_8hpp_1a5f16c262ac0dcfeba2db0564b8a57cfe" prot="public" static="no">
+        <name>ENUM_FLAG_OPERATORS</name>
+        <param><defname>T</defname></param>
+        <initializer>    inline T operator~(T a) { \
+        return static_cast&lt;T&gt;(~static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a)); \
+    } \
+    inline T operator|(T a, T b) { \
+        return static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a) | static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    } \
+    inline T operator&amp;(T a, T b) { \
+        return static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a) &amp; static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    } \
+    inline T operator^(T a, T b) { \
+        return static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a) ^ static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    } \
+    inline T&amp; operator|=(T&amp; a, T b) { \
+        return reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a) |= static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    } \
+    inline T&amp; operator&amp;=(T&amp; a, T b) { \
+        return reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a) &amp;= static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    } \
+    inline T&amp; operator^=(T&amp; a, T b) { \
+        return reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a) ^= static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b)); \
+    }</initializer>
+        <briefdescription>
+<para>Enum flag operators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/types.hpp" line="373" column="9" bodyfile="liblava/core/types.hpp" bodystart="373" bodyend="394"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Basic types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;liblava/core/def.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="types_8hpp_1a5154ade211be67b8729c4f489002045b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a5154ade211be67b8729c4f489002045b" kindref="member">int8</ref><sp/>=<sp/>std::int8_t;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="types_8hpp_1af15938d3c73dfa1a28307da6452a0cb3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1af15938d3c73dfa1a28307da6452a0cb3" kindref="member">i8</ref><sp/>=<sp/><ref refid="types_8hpp_1a5154ade211be67b8729c4f489002045b" kindref="member">int8</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="types_8hpp_1aa9e9c1a0e47380050cfb430fccd8e7e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aa9e9c1a0e47380050cfb430fccd8e7e5" kindref="member">uint8</ref><sp/>=<sp/>std::uint8_t;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="types_8hpp_1a744c3fa12bcea9cd3344aaf347ca410c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a744c3fa12bcea9cd3344aaf347ca410c" kindref="member">ui8</ref><sp/>=<sp/><ref refid="types_8hpp_1aa9e9c1a0e47380050cfb430fccd8e7e5" kindref="member">uint8</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="types_8hpp_1a73261f35c60d2a9b92a61d06dc3ef019" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a73261f35c60d2a9b92a61d06dc3ef019" kindref="member">int16</ref><sp/>=<sp/>std::int16_t;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="types_8hpp_1aef911a7c061636ef7845c53160a2b72d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aef911a7c061636ef7845c53160a2b72d" kindref="member">i16</ref><sp/>=<sp/><ref refid="types_8hpp_1a73261f35c60d2a9b92a61d06dc3ef019" kindref="member">int16</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="types_8hpp_1ac5eb62e8bf41e04442b27a47f9c8a90b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1ac5eb62e8bf41e04442b27a47f9c8a90b" kindref="member">uint16</ref><sp/>=<sp/>std::uint16_t;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="types_8hpp_1a9726d8b17deae0ffa37db333759f197f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a9726d8b17deae0ffa37db333759f197f" kindref="member">ui16</ref><sp/>=<sp/><ref refid="types_8hpp_1ac5eb62e8bf41e04442b27a47f9c8a90b" kindref="member">uint16</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="types_8hpp_1a5dfdbbdd8d939fec9b223d5addc53d9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a5dfdbbdd8d939fec9b223d5addc53d9e" kindref="member">int32</ref><sp/>=<sp/>std::int32_t;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref><sp/>=<sp/><ref refid="types_8hpp_1a5dfdbbdd8d939fec9b223d5addc53d9e" kindref="member">int32</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="types_8hpp_1a869fac794d31861c7016670617a2a8a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a869fac794d31861c7016670617a2a8a2" kindref="member">uint32</ref><sp/>=<sp/>std::uint32_t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/>=<sp/><ref refid="types_8hpp_1a869fac794d31861c7016670617a2a8a2" kindref="member">uint32</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="types_8hpp_1af04f91997c3547d0a81f9a3016f7c26d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1af04f91997c3547d0a81f9a3016f7c26d" kindref="member">int64</ref><sp/>=<sp/>std::int64_t;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="types_8hpp_1af894ded8dd233c6505155b19777af556" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref><sp/>=<sp/><ref refid="types_8hpp_1af04f91997c3547d0a81f9a3016f7c26d" kindref="member">int64</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="types_8hpp_1ad239ef8e5d3f7f1d883582d563a794ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1ad239ef8e5d3f7f1d883582d563a794ef" kindref="member">uint64</ref><sp/>=<sp/>std::uint64_t;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref><sp/>=<sp/><ref refid="types_8hpp_1ad239ef8e5d3f7f1d883582d563a794ef" kindref="member">uint64</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="types_8hpp_1aa411a8d0c2ffd62ba6b3e61c26c7be44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aa411a8d0c2ffd62ba6b3e61c26c7be44" kindref="member">char8</ref><sp/>=<sp/>std::int_fast8_t;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="types_8hpp_1a1bb7daf385cfc0f8087becb05fe969d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a1bb7daf385cfc0f8087becb05fe969d1" kindref="member">c8</ref><sp/>=<sp/><ref refid="types_8hpp_1aa411a8d0c2ffd62ba6b3e61c26c7be44" kindref="member">char8</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="types_8hpp_1a5c0dda8c4dbba47fca28d7db7ffbc543" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a5c0dda8c4dbba47fca28d7db7ffbc543" kindref="member">uchar8</ref><sp/>=<sp/>std::uint_fast8_t;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="types_8hpp_1a0ecb6fcf4d77775908a270bd9cf09167" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a0ecb6fcf4d77775908a270bd9cf09167" kindref="member">uc8</ref><sp/>=<sp/><ref refid="types_8hpp_1a5c0dda8c4dbba47fca28d7db7ffbc543" kindref="member">uchar8</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="types_8hpp_1abac15b7a8e76a60d8f51bd272828ca1d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1abac15b7a8e76a60d8f51bd272828ca1d" kindref="member">char16</ref><sp/>=<sp/><ref refid="types_8hpp_1a73261f35c60d2a9b92a61d06dc3ef019" kindref="member">int16</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="types_8hpp_1a80835499e7debfc06d5639cb62ebb9bd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a80835499e7debfc06d5639cb62ebb9bd" kindref="member">c16</ref><sp/>=<sp/><ref refid="types_8hpp_1abac15b7a8e76a60d8f51bd272828ca1d" kindref="member">char16</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="types_8hpp_1a72675261098c206ded6ca480480f064d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a72675261098c206ded6ca480480f064d" kindref="member">uchar16</ref><sp/>=<sp/><ref refid="types_8hpp_1ac5eb62e8bf41e04442b27a47f9c8a90b" kindref="member">uint16</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="types_8hpp_1a16ef2a3466e94f8f41729ed943fa4ca4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a16ef2a3466e94f8f41729ed943fa4ca4" kindref="member">uc16</ref><sp/>=<sp/><ref refid="types_8hpp_1a72675261098c206ded6ca480480f064d" kindref="member">uchar16</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="types_8hpp_1a5f15b17b871196e02acf9d8987f74889" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a5f15b17b871196e02acf9d8987f74889" kindref="member">char32</ref><sp/>=<sp/><ref refid="types_8hpp_1a5dfdbbdd8d939fec9b223d5addc53d9e" kindref="member">int32</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="types_8hpp_1a67c9d7331632668362b53a5fead63759" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a67c9d7331632668362b53a5fead63759" kindref="member">c32</ref><sp/>=<sp/><ref refid="types_8hpp_1a5f15b17b871196e02acf9d8987f74889" kindref="member">char32</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="types_8hpp_1afea8942c1eba831445b17b35c5f755e0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1afea8942c1eba831445b17b35c5f755e0" kindref="member">uchar32</ref><sp/>=<sp/><ref refid="types_8hpp_1a869fac794d31861c7016670617a2a8a2" kindref="member">uint32</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="types_8hpp_1a7db11466788d79f658b64786438784a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a7db11466788d79f658b64786438784a4" kindref="member">uc32</ref><sp/>=<sp/><ref refid="types_8hpp_1afea8942c1eba831445b17b35c5f755e0" kindref="member">uchar32</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref><sp/>=<sp/>std::size_t;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="types_8hpp_1a4d505d1722d977311ee2a14d104f10f3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a4d505d1722d977311ee2a14d104f10f3" kindref="member">uchar</ref><sp/>=<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref><sp/>=<sp/>float;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref><sp/>=<sp/>double;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="types_8hpp_1ac5a07aee91729f6ed77bd47fd1095218" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1ac5a07aee91729f6ed77bd47fd1095218" kindref="member">real</ref><sp/>=<sp/><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="types_8hpp_1a5b5c372cf05c5834c538aad2b937aa9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a5b5c372cf05c5834c538aad2b937aa9b" kindref="member">delta</ref><sp/>=<sp/><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="types_8hpp_1a94e873533b956efd41caa29bea06d498" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a94e873533b956efd41caa29bea06d498" kindref="member">void_ptr</ref><sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="types_8hpp_1a100af5d025fb75927f65cb6f3fbc8e5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a100af5d025fb75927f65cb6f3fbc8e5c" kindref="member">void_c_ptr</ref><sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="types_8hpp_1a276426bd2813c3fc0cb1c6bf20a8cbae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a276426bd2813c3fc0cb1c6bf20a8cbae" kindref="member">undef</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="types_8hpp_1a4a11496a1f0e914f75c325f33d21a216" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a4a11496a1f0e914f75c325f33d21a216" kindref="member">flag</ref><sp/>=<sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/>=<sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="types_8hpp_1a90deae5aeca0497b3b7e6c6316ac5105" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a90deae5aeca0497b3b7e6c6316ac5105" kindref="member">no_index</ref><sp/>=<sp/>0xffffffff;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="types_8hpp_1acc29b973e1c2c9dc4fb5fcc76836c851" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1acc29b973e1c2c9dc4fb5fcc76836c851" kindref="member">index_list</ref><sp/>=<sp/>std::vector&lt;index&gt;;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="types_8hpp_1aa671ee4059a4d958ca5a009e48c5edb6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aa671ee4059a4d958ca5a009e48c5edb6" kindref="member">index_map</ref><sp/>=<sp/>std::map&lt;index,<sp/>index&gt;;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref><sp/>=<sp/>std::string;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref><sp/>=<sp/>std::vector&lt;string&gt;;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="types_8hpp_1a84b64f09909c198d14fadc65b0776272" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a84b64f09909c198d14fadc65b0776272" kindref="member">string_list_ref</ref><sp/>=<sp/><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="types_8hpp_1a484f91e9e4dfc30e3b64b3fa6bf80f57" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a484f91e9e4dfc30e3b64b3fa6bf80f57" kindref="member">string_view</ref><sp/>=<sp/>std::string_view;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="types_8hpp_1aaaa9ebb8b8e302a77d4a0d5c6c612ed3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aaaa9ebb8b8e302a77d4a0d5c6c612ed3" kindref="member">string_map</ref><sp/>=<sp/>std::map&lt;string,<sp/>string&gt;;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="types_8hpp_1acd143c32ef342857c26c8623ac1fc92c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1acd143c32ef342857c26c8623ac1fc92c" kindref="member">string_map_ref</ref><sp/>=<sp/><ref refid="types_8hpp_1aaaa9ebb8b8e302a77d4a0d5c6c612ed3" kindref="member">string_map</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="types_8hpp_1a3f3772093a3aae135dc0d8eab715804b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a3f3772093a3aae135dc0d8eab715804b" kindref="member">name_ref</ref><sp/>=<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="types_8hpp_1aafb4d185126f5f9c34e5c6a19f49ee82" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1aafb4d185126f5f9c34e5c6a19f49ee82" kindref="member">names</ref><sp/>=<sp/>std::vector&lt;name&gt;;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="types_8hpp_1a1daaccd9a417ece0398eabcc0b82c0a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="types_8hpp_1a1daaccd9a417ece0398eabcc0b82c0a1" kindref="member">names_ref</ref><sp/>=<sp/><ref refid="types_8hpp_1aafb4d185126f5f9c34e5c6a19f49ee82" kindref="member">names</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="types_8hpp_1aa6f0dfe4257894c2b7439582eeea0bec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/><ref refid="types_8hpp_1aa6f0dfe4257894c2b7439582eeea0bec" kindref="member">_lava_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;lava&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="types_8hpp_1a5463322f2e652628790c04fe97367db0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/><ref refid="types_8hpp_1a5463322f2e652628790c04fe97367db0" kindref="member">_liblava_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;liblava&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="types_8hpp_1ab60340ffa807e0a1c02cb8a37c96e81c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/><ref refid="types_8hpp_1ab60340ffa807e0a1c02cb8a37c96e81c" kindref="member">_default_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;default&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="types_8hpp_1ad11094258ce2dac54b79917ae31198b6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref><sp/><ref refid="types_8hpp_1ad11094258ce2dac54b79917ae31198b6" kindref="member">str</ref>(<ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.c_str();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="types_8hpp_1ad3df134e8770529a2644dd8a4673ce22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref><sp/><ref refid="types_8hpp_1ad3df134e8770529a2644dd8a4673ce22" kindref="member">to_r32</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="types_8hpp_1afe30d55ad7a71c535f6b19ea62da8fa1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref><sp/><ref refid="types_8hpp_1afe30d55ad7a71c535f6b19ea62da8fa1" kindref="member">to_r64</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="types_8hpp_1a39cae746a7d2b802c1bd35d63b899532" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref><sp/><ref refid="types_8hpp_1a39cae746a7d2b802c1bd35d63b899532" kindref="member">to_i32</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="types_8hpp_1a45314ec1799c5849eb937045cb65c5e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref><sp/><ref refid="types_8hpp_1a45314ec1799c5849eb937045cb65c5e2" kindref="member">to_i64</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1af894ded8dd233c6505155b19777af556" kindref="member">i64</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="types_8hpp_1aeeecf3eba131cdad020bbd82d0db68c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/><ref refid="types_8hpp_1aeeecf3eba131cdad020bbd82d0db68c9" kindref="member">to_ui32</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="types_8hpp_1a52a659311126b89d05817c269505f14d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref><sp/><ref refid="types_8hpp_1a52a659311126b89d05817c269505f14d" kindref="member">to_ui64</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="types_8hpp_1ab8e6637fd6f18692d24992fd9df90171" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ab8e6637fd6f18692d24992fd9df90171" kindref="member">to_size_t</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="types_8hpp_1a5da1a3211b6ee5bed1b706d8962ad10b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="types_8hpp_1a5da1a3211b6ee5bed1b706d8962ad10b" kindref="member">to_index</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="types_8hpp_1a591d8f47274518e2cf3f33c42a8995ca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="types_8hpp_1a591d8f47274518e2cf3f33c42a8995ca" kindref="member">to_char</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*)value;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="structlava_1_1no__copy__no__move" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" kindref="member">no_copy_no_move</ref><sp/>{</highlight></codeline>
+<codeline lineno="285" refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" kindref="member">no_copy_no_move</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" kindref="member">no_copy_no_move</ref>(<ref refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" kindref="member">no_copy_no_move</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" kindref="member">operator=</ref>(<ref refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" kindref="member">no_copy_no_move</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="structlava_1_1interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1interface" kindref="compound">interface</ref><sp/>{</highlight></codeline>
+<codeline lineno="305" refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" kindref="member">~interface</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="316" refid="types_8hpp_1a5572f85d1a8e98f9312e25f986d59c1c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a5572f85d1a8e98f9312e25f986d59c1c" kindref="member">hash_combine</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>seed,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>val)<sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>seed<sp/>^=<sp/>std::hash&lt;T&gt;()(val)<sp/>+<sp/>0x9e3779b9</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(seed<sp/>&lt;&lt;<sp/>6)<sp/>+<sp/>(seed<sp/>&gt;&gt;<sp/>2);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="329" refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>seed,</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>val)<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a5572f85d1a8e98f9312e25f986d59c1c" kindref="member">hash_combine</ref>(seed,<sp/>val);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Types&gt;</highlight></codeline>
+<codeline lineno="338" refid="types_8hpp_1ac1b95fd404d9e4e4318d37da61dae384" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">&amp;<sp/>seed,</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>val,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Types<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a5572f85d1a8e98f9312e25f986d59c1c" kindref="member">hash_combine</ref>(seed,<sp/>val);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(seed,<sp/>args...);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Types&gt;</highlight></codeline>
+<codeline lineno="349" refid="types_8hpp_1a854d276fa6bb3bbc17ce3bc01600fa12" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(Types<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>seed<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(seed,<sp/>args...);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>seed;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358" refid="structlava_1_1pair__hash" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1pair__hash" kindref="compound">pair_hash</ref><sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T2&gt;</highlight></codeline>
+<codeline lineno="367" refid="structlava_1_1pair__hash_1a7c6e7d7c4148f18f52bed7200394017d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1pair__hash_1a7c6e7d7c4148f18f52bed7200394017d" kindref="member">operator()</ref>(std::pair&lt;T1,<sp/>T2&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>p)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a53cef41aea160cf568aa5dd576c9bd6b" kindref="member">hash_value</ref>(p.first,<sp/>p.second);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373" refid="types_8hpp_1a5f16c262ac0dcfeba2db0564b8a57cfe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM_FLAG_OPERATORS(T)<sp/>\</highlight></codeline>
+<codeline lineno="374"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T<sp/>operator~(T<sp/>a)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="375"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>static_cast&lt;T&gt;(~static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a));<sp/>\</highlight></codeline>
+<codeline lineno="376"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="377"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T<sp/>operator|(T<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="378"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a)<sp/>|<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="379"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="380"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T<sp/>operator&amp;(T<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="381"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a)<sp/>&amp;<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="382"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T<sp/>operator^(T<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="384"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>static_cast&lt;T&gt;(static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(a)<sp/>^<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="385"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="386"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T&amp;<sp/>operator|=(T&amp;<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="387"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a)<sp/>|=<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="388"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="389"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T&amp;<sp/>operator&amp;=(T&amp;<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="390"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a)<sp/>&amp;=<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="391"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="392"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>inline<sp/>T&amp;<sp/>operator^=(T&amp;<sp/>a,<sp/>T<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="393"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>reinterpret_cast&lt;T&amp;&gt;(reinterpret_cast&lt;std::underlying_type&lt;T&gt;::type&amp;&gt;(a)<sp/>^=<sp/>static_cast&lt;std::underlying_type&lt;T&gt;::type&gt;(b));<sp/>\</highlight></codeline>
+<codeline lineno="394"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/core/types.hpp"/>
+  </compounddef>
+</doxygen>

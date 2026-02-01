@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1target__callback" kind="struct" language="C++" prot="public">
+    <compoundname>lava::target_callback</compoundname>
+    <includes refid="base_2base_8hpp" local="no">base.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1target__callback_1adc04944c6c1ad2bcd12db8714c2fbee0" prot="public" static="no">
+        <type><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref> const  *</type>
+        <definition>using lava::target_callback::c_ptr =  target_callback const*</definition>
+        <argsstring></argsstring>
+        <name>c_ptr</name>
+        <qualifiedname>lava::target_callback::c_ptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to target callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="216" column="5" bodyfile="liblava/base/base.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1target__callback_1ab14f4c45a5fc1bede89a2f8a5bd3f2f7" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref> * &gt;</type>
+        <definition>using lava::target_callback::list =  std::vector&lt;target_callback*&gt;</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <qualifiedname>lava::target_callback::list</qualifiedname>
+        <briefdescription>
+<para>List of target callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="219" column="5" bodyfile="liblava/base/base.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1target__callback_1ab70ab60d51666d3b8ab9e78b72381703" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1target__callback_1adc04944c6c1ad2bcd12db8714c2fbee0" kindref="member">c_ptr</ref> &gt;</type>
+        <definition>using lava::target_callback::c_list =  std::vector&lt;c_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>c_list</name>
+        <qualifiedname>lava::target_callback::c_list</qualifiedname>
+        <briefdescription>
+<para>Const list of target callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="222" column="5" bodyfile="liblava/base/base.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" prot="public" static="no">
+        <type>std::function&lt; bool(<ref refid="base_2base_8hpp_1a5d9774191fbb48cbd1d60cd9216a5e1b" kindref="member">VkAttachmentsRef</ref>, <ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref>)&gt;</type>
+        <definition>using lava::target_callback::created_func =  std::function&lt;bool(VkAttachmentsRef, rect::ref)&gt;</definition>
+        <argsstring></argsstring>
+        <name>created_func</name>
+        <qualifiedname>lava::target_callback::created_func</qualifiedname>
+        <briefdescription>
+<para>Created function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="225" column="5" bodyfile="liblava/base/base.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using lava::target_callback::destroyed_func =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>destroyed_func</name>
+        <qualifiedname>lava::target_callback::destroyed_func</qualifiedname>
+        <briefdescription>
+<para>Destroy function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="231" column="5" bodyfile="liblava/base/base.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1target__callback_1a4ea94b6dab645ca198d1a96598d52572" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" kindref="member">created_func</ref></type>
+        <definition>created_func lava::target_callback::on_created</definition>
+        <argsstring></argsstring>
+        <name>on_created</name>
+        <qualifiedname>lava::target_callback::on_created</qualifiedname>
+        <briefdescription>
+<para>Called on target created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="228" column="18" bodyfile="liblava/base/base.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1target__callback_1ae3eb3ddc8de72e2e9db50375ef40b3f7" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" kindref="member">destroyed_func</ref></type>
+        <definition>destroyed_func lava::target_callback::on_destroyed</definition>
+        <argsstring></argsstring>
+        <name>on_destroyed</name>
+        <qualifiedname>lava::target_callback::on_destroyed</qualifiedname>
+        <briefdescription>
+<para>Called on target destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="234" column="20" bodyfile="liblava/base/base.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Target callback. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/base/base.hpp" line="214" column="1" bodyfile="liblava/base/base.hpp" bodystart="214" bodyend="235"/>
+    <listofallmembers>
+      <member refid="structlava_1_1target__callback_1ab70ab60d51666d3b8ab9e78b72381703" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>c_list</name></member>
+      <member refid="structlava_1_1target__callback_1adc04944c6c1ad2bcd12db8714c2fbee0" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>c_ptr</name></member>
+      <member refid="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>created_func</name></member>
+      <member refid="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>destroyed_func</name></member>
+      <member refid="structlava_1_1target__callback_1ab14f4c45a5fc1bede89a2f8a5bd3f2f7" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>list</name></member>
+      <member refid="structlava_1_1target__callback_1a4ea94b6dab645ca198d1a96598d52572" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>on_created</name></member>
+      <member refid="structlava_1_1target__callback_1ae3eb3ddc8de72e2e9db50375ef40b3f7" prot="public" virt="non-virtual"><scope>lava::target_callback</scope><name>on_destroyed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

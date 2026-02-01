@@ -1,0 +1,1849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1window" kind="struct" language="C++" prot="public">
+    <compoundname>lava::window</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="window_8hpp" local="no">window.hpp</includes>
+    <innerclass refid="structlava_1_1window_1_1state" prot="public">lava::window::state</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1window_1a23d50b141667f81a39e553da5b43a638" prot="public" static="no">
+        <type><ref refid="structlava_1_1window" kindref="compound">window</ref> *</type>
+        <definition>using lava::window::ptr =  window*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::window::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="74" column="5" bodyfile="liblava/frame/window.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1window_1a7662cfc2945a20fba0f9933d5fa52c5d" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1window" kindref="compound">window</ref> &gt;</type>
+        <definition>using lava::window::s_ptr =  std::shared_ptr&lt;window&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::window::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="77" column="5" bodyfile="liblava/frame/window.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1window_1a3a205669663ef5204601f7fa3334be52" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="structlava_1_1window_1a7662cfc2945a20fba0f9933d5fa52c5d" kindref="member">s_ptr</ref>)&gt;</type>
+        <definition>using lava::window::event =  std::function&lt;void(s_ptr)&gt;</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <qualifiedname>lava::window::event</qualifiedname>
+        <briefdescription>
+<para>Window event function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="80" column="5" bodyfile="liblava/frame/window.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1window_1a70080a12238292fc0ba7e73dc7b7ee89" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1window_1a7662cfc2945a20fba0f9933d5fa52c5d" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::window::s_map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <qualifiedname>lava::window::s_map</qualifiedname>
+        <briefdescription>
+<para>Map of windows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="83" column="5" bodyfile="liblava/frame/window.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1window_1a2f49c43ec33876f8da7397b1122bec51" prot="public" static="no">
+        <type><ref refid="structlava_1_1window" kindref="compound">window</ref> const  &amp;</type>
+        <definition>using lava::window::ref =  window const&amp;</definition>
+        <argsstring></argsstring>
+        <name>ref</name>
+        <qualifiedname>lava::window::ref</qualifiedname>
+        <briefdescription>
+<para>Reference to window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="86" column="5" bodyfile="liblava/frame/window.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1window_1ad8337254c42fa78e9b3731edd65ad518" prot="public" static="no">
+        <type>std::function&lt; bool(<ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref>, <ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref>)&gt;</type>
+        <definition>using lava::window::resize_func =  std::function&lt;bool(ui32, ui32)&gt;</definition>
+        <argsstring></argsstring>
+        <name>resize_func</name>
+        <qualifiedname>lava::window::resize_func</qualifiedname>
+        <briefdescription>
+<para>Resize window function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="416" column="5" bodyfile="liblava/frame/window.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1window_1a381cc0b877cb32e27a90894b7ed48f0c" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1window_1ad8337254c42fa78e9b3731edd65ad518" kindref="member">resize_func</ref></type>
+        <definition>resize_func lava::window::on_resize</definition>
+        <argsstring></argsstring>
+        <name>on_resize</name>
+        <qualifiedname>lava::window::on_resize</qualifiedname>
+        <briefdescription>
+<para>Called on window resize. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="419" column="17" bodyfile="liblava/frame/window.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1window_1af3a0e628be9aa16c31dc2716180ec96d" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* lava::window::m_handle</definition>
+        <argsstring></argsstring>
+        <name>m_handle</name>
+        <qualifiedname>lava::window::m_handle</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>GLFW window handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="488" column="16" bodyfile="liblava/frame/window.hpp" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a198e59af82476450c4b71f89896d5a7e" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1input_1aa3c9f0f8d21128c78bf15c08e58c0df1" kindref="member">input::ptr</ref></type>
+        <definition>input::ptr lava::window::m_input</definition>
+        <argsstring></argsstring>
+        <name>m_input</name>
+        <qualifiedname>lava::window::m_input</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Input handling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="491" column="16" bodyfile="liblava/frame/window.hpp" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ac636171aec3634a5f855fcf34b3fb684" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::window::m_title</definition>
+        <argsstring></argsstring>
+        <name>m_title</name>
+        <qualifiedname>lava::window::m_title</qualifiedname>
+        <initializer>= <ref refid="types_8hpp_1aa6f0dfe4257894c2b7439582eeea0bec" kindref="member">_lava_</ref></initializer>
+        <briefdescription>
+<para>Window title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="494" column="12" bodyfile="liblava/frame/window.hpp" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a6fdb8acbbdf4e84a5d9c6946d3fc028d" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::window::m_save_name</definition>
+        <argsstring></argsstring>
+        <name>m_save_name</name>
+        <qualifiedname>lava::window::m_save_name</qualifiedname>
+        <initializer>= <ref refid="types_8hpp_1ab60340ffa807e0a1c02cb8a37c96e81c" kindref="member">_default_</ref></initializer>
+        <briefdescription>
+<para>Window save name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="497" column="12" bodyfile="liblava/frame/window.hpp" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ae3a136b7a4fa6880f4dd68ae4c13c02c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::window::m_fullscreen_active</definition>
+        <argsstring></argsstring>
+        <name>m_fullscreen_active</name>
+        <qualifiedname>lava::window::m_fullscreen_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Fullscreen state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="500" column="10" bodyfile="liblava/frame/window.hpp" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1aae8b0f6a5c46059961e33232c95725f8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::window::m_save_title_active</definition>
+        <argsstring></argsstring>
+        <name>m_save_title_active</name>
+        <qualifiedname>lava::window::m_save_title_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Save title state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="503" column="10" bodyfile="liblava/frame/window.hpp" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a863982f85545b2579e738ad78740f05f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::window::m_switch_mode_request_active</definition>
+        <argsstring></argsstring>
+        <name>m_switch_mode_request_active</name>
+        <qualifiedname>lava::window::m_switch_mode_request_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Switch mode request state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="506" column="10" bodyfile="liblava/frame/window.hpp" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ae811d0d1fa8e7cbc59003d19b502caf3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::window::m_resize_request_active</definition>
+        <argsstring></argsstring>
+        <name>m_resize_request_active</name>
+        <qualifiedname>lava::window::m_resize_request_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Resize request state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="509" column="10" bodyfile="liblava/frame/window.hpp" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ace0538ae6f19c005c67b150c93263366" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::window::m_framebuffer_width</definition>
+        <argsstring></argsstring>
+        <name>m_framebuffer_width</name>
+        <qualifiedname>lava::window::m_framebuffer_width</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Framebuffer width. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="512" column="10" bodyfile="liblava/frame/window.hpp" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a05665c621c0a71f3eefac207456ed0a5" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::window::m_framebuffer_height</definition>
+        <argsstring></argsstring>
+        <name>m_framebuffer_height</name>
+        <qualifiedname>lava::window::m_framebuffer_height</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Framebuffer height. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="515" column="10" bodyfile="liblava/frame/window.hpp" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a5695ad5d7588a806788fe4c9dd4168fa" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+        <definition>i32 lava::window::m_pos_x</definition>
+        <argsstring></argsstring>
+        <name>m_pos_x</name>
+        <qualifiedname>lava::window::m_pos_x</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Window X position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="518" column="9" bodyfile="liblava/frame/window.hpp" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1a65c2d7375a68d1d9feb2f68f276d9f7c" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+        <definition>i32 lava::window::m_pos_y</definition>
+        <argsstring></argsstring>
+        <name>m_pos_y</name>
+        <qualifiedname>lava::window::m_pos_y</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Window Y position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="521" column="9" bodyfile="liblava/frame/window.hpp" bodystart="521" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ae84f156e398a7b347c89692a05999a53" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::window::m_width</definition>
+        <argsstring></argsstring>
+        <name>m_width</name>
+        <qualifiedname>lava::window::m_width</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Window width. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="524" column="10" bodyfile="liblava/frame/window.hpp" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1window_1ad87d6a8b85d7fd64ccbc207ca7c06300" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::window::m_height</definition>
+        <argsstring></argsstring>
+        <name>m_height</name>
+        <qualifiedname>lava::window::m_height</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Window height. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="527" column="10" bodyfile="liblava/frame/window.hpp" bodystart="527" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1window_1ae6f5bdd9cccc663b26da7ca28fb14ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::window::window</definition>
+        <argsstring>()=default</argsstring>
+        <name>window</name>
+        <qualifiedname>lava::window::window</qualifiedname>
+        <briefdescription>
+<para>Construct a new window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a6b1a26244ca5ede1e543b614200bb278" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::window::window</definition>
+        <argsstring>(name title)</argsstring>
+        <name>window</name>
+        <qualifiedname>lava::window::window</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a6ac8e87ce8d5b170084592abbef3b8c9" kindref="member">name</ref></type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="97" column="14" bodyfile="liblava/frame/window.hpp" bodystart="97" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a780a81f8022d4f6d575ccb278852d777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::create</definition>
+        <argsstring>(state::optional state={})</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::window::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1window_1_1state_1a14243ffff776397926556212cf311b96" kindref="member">state::optional</ref></type>
+          <declname>state</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Create a new window with optional state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="105" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ac16858698e4332b4083b0d374f7e068e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::window::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="110" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ae97792c44b60d2caeba694d8d535c650" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1window_1_1state" kindref="compound">state</ref></type>
+        <definition>state lava::window::get_state</definition>
+        <argsstring>() const</argsstring>
+        <name>get_state</name>
+        <qualifiedname>lava::window::get_state</qualifiedname>
+        <briefdescription>
+<para>Get the window state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>state Window state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="116" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1aabefcd19d1f0dd17f9f224c90579c817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_state</definition>
+        <argsstring>(state &amp;s)</argsstring>
+        <name>set_state</name>
+        <qualifiedname>lava::window::set_state</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1window_1_1state" kindref="compound">state</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set the window state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="122" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1aefbf4e32d2366c86eda425a085eac03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_title</definition>
+        <argsstring>(string_ref text)</argsstring>
+        <name>set_title</name>
+        <qualifiedname>lava::window::set_title</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Set the window title. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="128" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a69dd8fb6ebbbe23d67eeeb1d80b543aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::window::get_title</definition>
+        <argsstring>() const</argsstring>
+        <name>get_title</name>
+        <qualifiedname>lava::window::get_title</qualifiedname>
+        <briefdescription>
+<para>Get the window title. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>name Title of window </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="134" column="16" bodyfile="liblava/frame/window.hpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a2c8a7a9e8283ef9b1e86eb1ee36f2f38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_save_name</definition>
+        <argsstring>(string_ref save)</argsstring>
+        <name>set_save_name</name>
+        <qualifiedname>lava::window::set_save_name</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>save</declname>
+        </param>
+        <briefdescription>
+<para>Set the save name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>save</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save name of window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="142" column="10" bodyfile="liblava/frame/window.hpp" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a0c6a210efe2c66bd5de24124a735b025" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::window::get_save_name</definition>
+        <argsstring>() const</argsstring>
+        <name>get_save_name</name>
+        <qualifiedname>lava::window::get_save_name</qualifiedname>
+        <briefdescription>
+<para>Get the save name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>name Save name of window </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="150" column="16" bodyfile="liblava/frame/window.hpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a7dfb5b209b52fe79dcf4b31922c3381d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_position</definition>
+        <argsstring>(i32 x, i32 y)</argsstring>
+        <name>set_position</name>
+        <qualifiedname>lava::window::set_position</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Set the position of window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X positoin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="159" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a678da9602f4332749c0a16c78428b5e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::get_position</definition>
+        <argsstring>(i32 &amp;x, i32 &amp;y) const</argsstring>
+        <name>get_position</name>
+        <qualifiedname>lava::window::get_position</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the position of window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="166" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a238cbc1cf2aa62cdbb76f6fdceb60251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_size</definition>
+        <argsstring>(ui32 width, ui32 height)</argsstring>
+        <name>set_size</name>
+        <qualifiedname>lava::window::set_size</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Set the size of window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="173" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ae9277346b20a71317bae96cd284eb1dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::get_size</definition>
+        <argsstring>(ui32 &amp;width, ui32 &amp;height) const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::window::get_size</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &amp;</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &amp;</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="180" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a38d840058ccaa23cc1e94d03ab676fe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::get_framebuffer_size</definition>
+        <argsstring>(ui32 &amp;width, ui32 &amp;height) const</argsstring>
+        <name>get_framebuffer_size</name>
+        <qualifiedname>lava::window::get_framebuffer_size</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &amp;</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &amp;</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Get the framebuffer size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Framebuffer width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Framebuffer height </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="187" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a3e5cbb58f82f4edcc4dc2c56e55c1632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::window::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::window::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> Size of window </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="193" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a1ded761d4ae5347f765f98fb774afca3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::window::get_framebuffer_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_framebuffer_size</name>
+        <qualifiedname>lava::window::get_framebuffer_size</qualifiedname>
+        <briefdescription>
+<para>Get the framebuffer size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> Size of framebuffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="199" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a9f9ef97dc8d0b9e6f8a838287fe269bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_mouse_position</definition>
+        <argsstring>(r64 x, r64 y)</argsstring>
+        <name>set_mouse_position</name>
+        <qualifiedname>lava::window::set_mouse_position</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Set the mouse position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse X position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse Y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="206" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a514366df46e3ce881a3f6e44ae16148b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::get_mouse_position</definition>
+        <argsstring>(r64 &amp;x, r64 &amp;y) const</argsstring>
+        <name>get_mouse_position</name>
+        <qualifiedname>lava::window::get_mouse_position</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the mouse position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse X position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse Y position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="213" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a00b4c645fd75aba1c55185788c5a84c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1a4e3a0adf51090a120cdae77cc06ec2a1" kindref="member">v2</ref></type>
+        <definition>v2 lava::window::get_content_scale</definition>
+        <argsstring>() const</argsstring>
+        <name>get_content_scale</name>
+        <qualifiedname>lava::window::get_content_scale</qualifiedname>
+        <briefdescription>
+<para>Get the content scale. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1a4e3a0adf51090a120cdae77cc06ec2a1" kindref="member">v2</ref> Window content scale </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="219" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a1d53ce70ca68cb5f1e63e5192cd4e0aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1mouse__position" kindref="compound">mouse_position</ref></type>
+        <definition>mouse_position lava::window::get_mouse_position</definition>
+        <argsstring>() const</argsstring>
+        <name>get_mouse_position</name>
+        <qualifiedname>lava::window::get_mouse_position</qualifiedname>
+        <briefdescription>
+<para>Get the mouse position in window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1mouse__position" kindref="compound">mouse_position</ref> Position of mouse </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="225" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a19eef73e7b8e5d23298f73d8cd8f47a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::hide_mouse_cursor</definition>
+        <argsstring>()</argsstring>
+        <name>hide_mouse_cursor</name>
+        <qualifiedname>lava::window::hide_mouse_cursor</qualifiedname>
+        <briefdescription>
+<para>Hide mouse cursor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="230" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a8349ff92537391276ec8d2ae326a48cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::show_mouse_cursor</definition>
+        <argsstring>()</argsstring>
+        <name>show_mouse_cursor</name>
+        <qualifiedname>lava::window::show_mouse_cursor</qualifiedname>
+        <briefdescription>
+<para>Show mouse cursor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="235" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a6792db3d58cc0dbdecc03c4b35fe37dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::window::get_aspect_ratio</definition>
+        <argsstring>() const</argsstring>
+        <name>get_aspect_ratio</name>
+        <qualifiedname>lava::window::get_aspect_ratio</qualifiedname>
+        <briefdescription>
+<para>Get the aspect ratio of window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref> Aspect ratio </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="241" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a8fedf2b02c9d76d1dc6f69cfaa45da6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <qualifiedname>lava::window::show</qualifiedname>
+        <briefdescription>
+<para>Show the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="246" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a0086ea35ec0353b3f5fa1007ad910f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::hide</definition>
+        <argsstring>()</argsstring>
+        <name>hide</name>
+        <qualifiedname>lava::window::hide</qualifiedname>
+        <briefdescription>
+<para>Hide the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="251" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a4ce6512c5e14f1441560c86f9ecf9243" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::visible</definition>
+        <argsstring>() const</argsstring>
+        <name>visible</name>
+        <qualifiedname>lava::window::visible</qualifiedname>
+        <briefdescription>
+<para>Check if window is visible. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is visible or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="257" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a17ee815e1884cc759a2999350fca33d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::iconify</definition>
+        <argsstring>()</argsstring>
+        <name>iconify</name>
+        <qualifiedname>lava::window::iconify</qualifiedname>
+        <briefdescription>
+<para>Iconify the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="262" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a95e2a1be57126bd34cebf8974ec261bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::iconified</definition>
+        <argsstring>() const</argsstring>
+        <name>iconified</name>
+        <qualifiedname>lava::window::iconified</qualifiedname>
+        <briefdescription>
+<para>Check if the window is iconified. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is iconified or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="268" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a97971fb1a3d69a0ff8ab80e1667b3b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::restore</definition>
+        <argsstring>()</argsstring>
+        <name>restore</name>
+        <qualifiedname>lava::window::restore</qualifiedname>
+        <briefdescription>
+<para>Restore the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="273" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a05b63c9fc8c2d4959f1e8301e175f525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::maximize</definition>
+        <argsstring>()</argsstring>
+        <name>maximize</name>
+        <qualifiedname>lava::window::maximize</qualifiedname>
+        <briefdescription>
+<para>Maximize the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="278" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a5c8067cc7d9d1a5fec3167ca88a4ec55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::maximized</definition>
+        <argsstring>() const</argsstring>
+        <name>maximized</name>
+        <qualifiedname>lava::window::maximized</qualifiedname>
+        <briefdescription>
+<para>Check if the window is maximized. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is maximized or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="284" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a9a2b261a1db6b7a2ac4c197ffaf55bc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::focus</definition>
+        <argsstring>()</argsstring>
+        <name>focus</name>
+        <qualifiedname>lava::window::focus</qualifiedname>
+        <briefdescription>
+<para>Focus the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="289" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1aa55afc417e3cf53d8d702c03df855a9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::focused</definition>
+        <argsstring>() const</argsstring>
+        <name>focused</name>
+        <qualifiedname>lava::window::focused</qualifiedname>
+        <briefdescription>
+<para>Check if the window is focused. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is focused or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="295" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ab8531946fe9d71cdbcbda68fc4316031" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_fullscreen</definition>
+        <argsstring>(bool active)</argsstring>
+        <name>set_fullscreen</name>
+        <qualifiedname>lava::window::set_fullscreen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Set the window to fullscreen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>active</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fullscreen or windowed mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="301" column="10" bodyfile="liblava/frame/window.hpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a4bb058810f581ee6fe2d0d587d9ebef8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::fullscreen</definition>
+        <argsstring>() const</argsstring>
+        <name>fullscreen</name>
+        <qualifiedname>lava::window::fullscreen</qualifiedname>
+        <briefdescription>
+<para>Check if the window is fullscreen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is fullscreen or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="310" column="10" bodyfile="liblava/frame/window.hpp" bodystart="310" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a50d31411756196d58387d25a3ef9b553" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::hovered</definition>
+        <argsstring>() const</argsstring>
+        <name>hovered</name>
+        <qualifiedname>lava::window::hovered</qualifiedname>
+        <briefdescription>
+<para>Check if mouse hovered over the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Mouse hovered or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="318" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1aac73df0c28d7e87ef5f7a766f9d39dce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::resizable</definition>
+        <argsstring>() const</argsstring>
+        <name>resizable</name>
+        <qualifiedname>lava::window::resizable</qualifiedname>
+        <briefdescription>
+<para>Check if the window is resizable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is resizable or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="324" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a64c5220c8ae6dd54443c1d7559c025fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_resizable</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>set_resizable</name>
+        <qualifiedname>lava::window::set_resizable</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the window resizable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resizable state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="330" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a4ade3b30b8cd79547dc453a6aebc02ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::decorated</definition>
+        <argsstring>() const</argsstring>
+        <name>decorated</name>
+        <qualifiedname>lava::window::decorated</qualifiedname>
+        <briefdescription>
+<para>Check if the window is decorated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is decorated or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="336" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a1d43b29b7bf1f1b0fb35769c1fb8decf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_decorated</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>set_decorated</name>
+        <qualifiedname>lava::window::set_decorated</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the window decorated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decorated state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="342" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a09c1bea3dd04ace1d19af70e8bce1792" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::floating</definition>
+        <argsstring>() const</argsstring>
+        <name>floating</name>
+        <qualifiedname>lava::window::floating</qualifiedname>
+        <briefdescription>
+<para>Check if the window is floating. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window is floating or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="348" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a3a3d5383edb51ea16d816842eee685ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_floating</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>set_floating</name>
+        <qualifiedname>lava::window::set_floating</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the window floating. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Floating state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="354" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a05b4168065393cd10196977bea2894a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::close_request</definition>
+        <argsstring>() const</argsstring>
+        <name>close_request</name>
+        <qualifiedname>lava::window::close_request</qualifiedname>
+        <briefdescription>
+<para>Check if the window request to close. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window has close request or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="360" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a8a3a092c3618d55d1a1d1cffbd9c78cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::switch_mode_request</definition>
+        <argsstring>() const</argsstring>
+        <name>switch_mode_request</name>
+        <qualifiedname>lava::window::switch_mode_request</qualifiedname>
+        <briefdescription>
+<para>Check if the window request to switch mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window has switch mode request or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="366" column="10" bodyfile="liblava/frame/window.hpp" bodystart="366" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a635165df128073843c48a139ab076fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::switch_mode</definition>
+        <argsstring>(state::optional state={})</argsstring>
+        <name>switch_mode</name>
+        <qualifiedname>lava::window::switch_mode</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1window_1_1state_1a14243ffff776397926556212cf311b96" kindref="member">state::optional</ref></type>
+          <declname>state</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Switch mode of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target window state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Switch was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="375" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a3f223af037dc955d8f4559ac89e67596" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow * lava::window::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::window::get</qualifiedname>
+        <briefdescription>
+<para>Get GLFW handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>GLFWwindow* GLFW window handle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="381" column="16" bodyfile="liblava/frame/window.hpp" bodystart="381" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a043cfb04185f8ee4fad8da66e348e4ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::resize_request</definition>
+        <argsstring>() const</argsstring>
+        <name>resize_request</name>
+        <qualifiedname>lava::window::resize_request</qualifiedname>
+        <briefdescription>
+<para>Check if the window request to resize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Window has resize request or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="389" column="10" bodyfile="liblava/frame/window.hpp" bodystart="389" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a1edce74223d7f4a5128507265cfa8bdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::handle_resize</definition>
+        <argsstring>()</argsstring>
+        <name>handle_resize</name>
+        <qualifiedname>lava::window::handle_resize</qualifiedname>
+        <briefdescription>
+<para>Handle window resize. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Resize was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="397" column="10" bodyfile="liblava/frame/window.hpp" bodystart="397" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1aeb42b88332a7dad151c99e47860a36d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::update_state</definition>
+        <argsstring>()</argsstring>
+        <name>update_state</name>
+        <qualifiedname>lava::window::update_state</qualifiedname>
+        <briefdescription>
+<para>Update window state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="410" column="10" bodyfile="liblava/frame/window.hpp" bodystart="410" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a9b6694b80725ef408dc79784b011ed14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::assign</definition>
+        <argsstring>(input::ptr callback)</argsstring>
+        <name>assign</name>
+        <qualifiedname>lava::window::assign</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1input_1aa3c9f0f8d21128c78bf15c08e58c0df1" kindref="member">input::ptr</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Assign input callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input callbacl </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="425" column="10" bodyfile="liblava/frame/window.hpp" bodystart="425" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ad29839f5dc01f891976c1b2cbdcdddfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::show_save_title</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>show_save_title</name>
+        <qualifiedname>lava::window::show_save_title</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Show the save title in the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save title state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="433" column="10" bodyfile="liblava/frame/window.hpp" bodystart="433" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1af75137379b53997c16b570563f1959b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::window::save_title</definition>
+        <argsstring>() const</argsstring>
+        <name>save_title</name>
+        <qualifiedname>lava::window::save_title</qualifiedname>
+        <briefdescription>
+<para>Check the show save title state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Save title is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="441" column="10" bodyfile="liblava/frame/window.hpp" bodystart="441" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1af57852b3c6f815c06bddfdaa34ff4566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::update_title</definition>
+        <argsstring>()</argsstring>
+        <name>update_title</name>
+        <qualifiedname>lava::window::update_title</qualifiedname>
+        <briefdescription>
+<para>Update the window title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="448" column="10" bodyfile="liblava/frame/window.hpp" bodystart="448" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a2ee0994d3d79dbf189f76774543b42f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>VkSurfaceKHR</type>
+        <definition>VkSurfaceKHR lava::window::create_surface</definition>
+        <argsstring>()</argsstring>
+        <name>create_surface</name>
+        <qualifiedname>lava::window::create_surface</qualifiedname>
+        <briefdescription>
+<para>Create a surface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkSurfaceKHR Vulkan surface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="456" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a0387f6db203b6936bc786659886ba666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::set_icon</definition>
+        <argsstring>(data::c_ptr data, uv2 size)</argsstring>
+        <name>set_icon</name>
+        <qualifiedname>lava::window::set_icon</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1adbf9c722e987bd8211e40ecf58aacc09" kindref="member">data::c_ptr</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Set the window icon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="463" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1ab5c15c1adfea6a902267b8532b110f79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::window::detect_monitor</definition>
+        <argsstring>() const</argsstring>
+        <name>detect_monitor</name>
+        <qualifiedname>lava::window::detect_monitor</qualifiedname>
+        <briefdescription>
+<para>Detect the monitor index of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index Monitor index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="469" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a9210b5003665a00a6afec8d19ac503c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::center</definition>
+        <argsstring>()</argsstring>
+        <name>center</name>
+        <qualifiedname>lava::window::center</qualifiedname>
+        <briefdescription>
+<para>Center the window on the monitor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="474" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1window_1a962b4fe349c73eac627fc3851ee5d0da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::handle_message</definition>
+        <argsstring>()</argsstring>
+        <name>handle_message</name>
+        <qualifiedname>lava::window::handle_message</qualifiedname>
+        <briefdescription>
+<para>Handle window message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="480" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1window_1a1644fd56aa3cdb72be206e0ba8a2882d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::window::handle_mouse_message</definition>
+        <argsstring>()</argsstring>
+        <name>handle_mouse_message</name>
+        <qualifiedname>lava::window::handle_mouse_message</qualifiedname>
+        <briefdescription>
+<para>Handle window mouse message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/window.hpp" line="485" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Window. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::window</label>
+        <link refid="structlava_1_1window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::window</label>
+        <link refid="structlava_1_1window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/frame/window.hpp" line="26" column="1" bodyfile="liblava/frame/window.hpp" bodystart="26" bodyend="528"/>
+    <listofallmembers>
+      <member refid="structlava_1_1window_1a9b6694b80725ef408dc79784b011ed14" prot="public" virt="non-virtual"><scope>lava::window</scope><name>assign</name></member>
+      <member refid="structlava_1_1window_1a9210b5003665a00a6afec8d19ac503c8" prot="public" virt="non-virtual"><scope>lava::window</scope><name>center</name></member>
+      <member refid="structlava_1_1window_1a05b4168065393cd10196977bea2894a2" prot="public" virt="non-virtual"><scope>lava::window</scope><name>close_request</name></member>
+      <member refid="structlava_1_1window_1a780a81f8022d4f6d575ccb278852d777" prot="public" virt="non-virtual"><scope>lava::window</scope><name>create</name></member>
+      <member refid="structlava_1_1window_1a2ee0994d3d79dbf189f76774543b42f4" prot="public" virt="non-virtual"><scope>lava::window</scope><name>create_surface</name></member>
+      <member refid="structlava_1_1window_1a4ade3b30b8cd79547dc453a6aebc02ab" prot="public" virt="non-virtual"><scope>lava::window</scope><name>decorated</name></member>
+      <member refid="structlava_1_1window_1ac16858698e4332b4083b0d374f7e068e" prot="public" virt="non-virtual"><scope>lava::window</scope><name>destroy</name></member>
+      <member refid="structlava_1_1window_1ab5c15c1adfea6a902267b8532b110f79" prot="public" virt="non-virtual"><scope>lava::window</scope><name>detect_monitor</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::window</scope><name>entity</name></member>
+      <member refid="structlava_1_1window_1a3a205669663ef5204601f7fa3334be52" prot="public" virt="non-virtual"><scope>lava::window</scope><name>event</name></member>
+      <member refid="structlava_1_1window_1a09c1bea3dd04ace1d19af70e8bce1792" prot="public" virt="non-virtual"><scope>lava::window</scope><name>floating</name></member>
+      <member refid="structlava_1_1window_1a9a2b261a1db6b7a2ac4c197ffaf55bc9" prot="public" virt="non-virtual"><scope>lava::window</scope><name>focus</name></member>
+      <member refid="structlava_1_1window_1aa55afc417e3cf53d8d702c03df855a9f" prot="public" virt="non-virtual"><scope>lava::window</scope><name>focused</name></member>
+      <member refid="structlava_1_1window_1a4bb058810f581ee6fe2d0d587d9ebef8" prot="public" virt="non-virtual"><scope>lava::window</scope><name>fullscreen</name></member>
+      <member refid="structlava_1_1window_1a3f223af037dc955d8f4559ac89e67596" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get</name></member>
+      <member refid="structlava_1_1window_1a6792db3d58cc0dbdecc03c4b35fe37dc" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_aspect_ratio</name></member>
+      <member refid="structlava_1_1window_1a00b4c645fd75aba1c55185788c5a84c3" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_content_scale</name></member>
+      <member refid="structlava_1_1window_1a38d840058ccaa23cc1e94d03ab676fe0" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_framebuffer_size</name></member>
+      <member refid="structlava_1_1window_1a1ded761d4ae5347f765f98fb774afca3" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_framebuffer_size</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_id</name></member>
+      <member refid="structlava_1_1window_1a514366df46e3ce881a3f6e44ae16148b" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_mouse_position</name></member>
+      <member refid="structlava_1_1window_1a1d53ce70ca68cb5f1e63e5192cd4e0aa" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_mouse_position</name></member>
+      <member refid="structlava_1_1window_1a678da9602f4332749c0a16c78428b5e7" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_position</name></member>
+      <member refid="structlava_1_1window_1a0c6a210efe2c66bd5de24124a735b025" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_save_name</name></member>
+      <member refid="structlava_1_1window_1ae9277346b20a71317bae96cd284eb1dd" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_size</name></member>
+      <member refid="structlava_1_1window_1a3e5cbb58f82f4edcc4dc2c56e55c1632" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_size</name></member>
+      <member refid="structlava_1_1window_1ae97792c44b60d2caeba694d8d535c650" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_state</name></member>
+      <member refid="structlava_1_1window_1a69dd8fb6ebbbe23d67eeeb1d80b543aa" prot="public" virt="non-virtual"><scope>lava::window</scope><name>get_title</name></member>
+      <member refid="structlava_1_1window_1a962b4fe349c73eac627fc3851ee5d0da" prot="private" virt="non-virtual"><scope>lava::window</scope><name>handle_message</name></member>
+      <member refid="structlava_1_1window_1a1644fd56aa3cdb72be206e0ba8a2882d" prot="private" virt="non-virtual"><scope>lava::window</scope><name>handle_mouse_message</name></member>
+      <member refid="structlava_1_1window_1a1edce74223d7f4a5128507265cfa8bdb" prot="public" virt="non-virtual"><scope>lava::window</scope><name>handle_resize</name></member>
+      <member refid="structlava_1_1window_1a0086ea35ec0353b3f5fa1007ad910f50" prot="public" virt="non-virtual"><scope>lava::window</scope><name>hide</name></member>
+      <member refid="structlava_1_1window_1a19eef73e7b8e5d23298f73d8cd8f47a7" prot="public" virt="non-virtual"><scope>lava::window</scope><name>hide_mouse_cursor</name></member>
+      <member refid="structlava_1_1window_1a50d31411756196d58387d25a3ef9b553" prot="public" virt="non-virtual"><scope>lava::window</scope><name>hovered</name></member>
+      <member refid="structlava_1_1window_1a95e2a1be57126bd34cebf8974ec261bf" prot="public" virt="non-virtual"><scope>lava::window</scope><name>iconified</name></member>
+      <member refid="structlava_1_1window_1a17ee815e1884cc759a2999350fca33d2" prot="public" virt="non-virtual"><scope>lava::window</scope><name>iconify</name></member>
+      <member refid="structlava_1_1window_1a05665c621c0a71f3eefac207456ed0a5" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_framebuffer_height</name></member>
+      <member refid="structlava_1_1window_1ace0538ae6f19c005c67b150c93263366" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_framebuffer_width</name></member>
+      <member refid="structlava_1_1window_1ae3a136b7a4fa6880f4dd68ae4c13c02c" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_fullscreen_active</name></member>
+      <member refid="structlava_1_1window_1af3a0e628be9aa16c31dc2716180ec96d" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_handle</name></member>
+      <member refid="structlava_1_1window_1ad87d6a8b85d7fd64ccbc207ca7c06300" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_height</name></member>
+      <member refid="structlava_1_1window_1a198e59af82476450c4b71f89896d5a7e" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_input</name></member>
+      <member refid="structlava_1_1window_1a5695ad5d7588a806788fe4c9dd4168fa" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_pos_x</name></member>
+      <member refid="structlava_1_1window_1a65c2d7375a68d1d9feb2f68f276d9f7c" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_pos_y</name></member>
+      <member refid="structlava_1_1window_1ae811d0d1fa8e7cbc59003d19b502caf3" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_resize_request_active</name></member>
+      <member refid="structlava_1_1window_1a6fdb8acbbdf4e84a5d9c6946d3fc028d" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_save_name</name></member>
+      <member refid="structlava_1_1window_1aae8b0f6a5c46059961e33232c95725f8" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_save_title_active</name></member>
+      <member refid="structlava_1_1window_1a863982f85545b2579e738ad78740f05f" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_switch_mode_request_active</name></member>
+      <member refid="structlava_1_1window_1ac636171aec3634a5f855fcf34b3fb684" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_title</name></member>
+      <member refid="structlava_1_1window_1ae84f156e398a7b347c89692a05999a53" prot="private" virt="non-virtual"><scope>lava::window</scope><name>m_width</name></member>
+      <member refid="structlava_1_1window_1a05b63c9fc8c2d4959f1e8301e175f525" prot="public" virt="non-virtual"><scope>lava::window</scope><name>maximize</name></member>
+      <member refid="structlava_1_1window_1a5c8067cc7d9d1a5fec3167ca88a4ec55" prot="public" virt="non-virtual"><scope>lava::window</scope><name>maximized</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::window</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::window</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1window_1a381cc0b877cb32e27a90894b7ed48f0c" prot="public" virt="non-virtual"><scope>lava::window</scope><name>on_resize</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::window</scope><name>operator=</name></member>
+      <member refid="structlava_1_1window_1a23d50b141667f81a39e553da5b43a638" prot="public" virt="non-virtual"><scope>lava::window</scope><name>ptr</name></member>
+      <member refid="structlava_1_1window_1a2f49c43ec33876f8da7397b1122bec51" prot="public" virt="non-virtual"><scope>lava::window</scope><name>ref</name></member>
+      <member refid="structlava_1_1window_1aac73df0c28d7e87ef5f7a766f9d39dce" prot="public" virt="non-virtual"><scope>lava::window</scope><name>resizable</name></member>
+      <member refid="structlava_1_1window_1ad8337254c42fa78e9b3731edd65ad518" prot="public" virt="non-virtual"><scope>lava::window</scope><name>resize_func</name></member>
+      <member refid="structlava_1_1window_1a043cfb04185f8ee4fad8da66e348e4ec" prot="public" virt="non-virtual"><scope>lava::window</scope><name>resize_request</name></member>
+      <member refid="structlava_1_1window_1a97971fb1a3d69a0ff8ab80e1667b3b6b" prot="public" virt="non-virtual"><scope>lava::window</scope><name>restore</name></member>
+      <member refid="structlava_1_1window_1a70080a12238292fc0ba7e73dc7b7ee89" prot="public" virt="non-virtual"><scope>lava::window</scope><name>s_map</name></member>
+      <member refid="structlava_1_1window_1a7662cfc2945a20fba0f9933d5fa52c5d" prot="public" virt="non-virtual"><scope>lava::window</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1window_1af75137379b53997c16b570563f1959b4" prot="public" virt="non-virtual"><scope>lava::window</scope><name>save_title</name></member>
+      <member refid="structlava_1_1window_1a1d43b29b7bf1f1b0fb35769c1fb8decf" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_decorated</name></member>
+      <member refid="structlava_1_1window_1a3a3d5383edb51ea16d816842eee685ef" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_floating</name></member>
+      <member refid="structlava_1_1window_1ab8531946fe9d71cdbcbda68fc4316031" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_fullscreen</name></member>
+      <member refid="structlava_1_1window_1a0387f6db203b6936bc786659886ba666" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_icon</name></member>
+      <member refid="structlava_1_1window_1a9f9ef97dc8d0b9e6f8a838287fe269bb" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_mouse_position</name></member>
+      <member refid="structlava_1_1window_1a7dfb5b209b52fe79dcf4b31922c3381d" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_position</name></member>
+      <member refid="structlava_1_1window_1a64c5220c8ae6dd54443c1d7559c025fd" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_resizable</name></member>
+      <member refid="structlava_1_1window_1a2c8a7a9e8283ef9b1e86eb1ee36f2f38" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_save_name</name></member>
+      <member refid="structlava_1_1window_1a238cbc1cf2aa62cdbb76f6fdceb60251" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_size</name></member>
+      <member refid="structlava_1_1window_1aabefcd19d1f0dd17f9f224c90579c817" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_state</name></member>
+      <member refid="structlava_1_1window_1aefbf4e32d2366c86eda425a085eac03b" prot="public" virt="non-virtual"><scope>lava::window</scope><name>set_title</name></member>
+      <member refid="structlava_1_1window_1a8fedf2b02c9d76d1dc6f69cfaa45da6c" prot="public" virt="non-virtual"><scope>lava::window</scope><name>show</name></member>
+      <member refid="structlava_1_1window_1a8349ff92537391276ec8d2ae326a48cb" prot="public" virt="non-virtual"><scope>lava::window</scope><name>show_mouse_cursor</name></member>
+      <member refid="structlava_1_1window_1ad29839f5dc01f891976c1b2cbdcdddfc" prot="public" virt="non-virtual"><scope>lava::window</scope><name>show_save_title</name></member>
+      <member refid="structlava_1_1window_1a635165df128073843c48a139ab076fce" prot="public" virt="non-virtual"><scope>lava::window</scope><name>switch_mode</name></member>
+      <member refid="structlava_1_1window_1a8a3a092c3618d55d1a1d1cffbd9c78cc" prot="public" virt="non-virtual"><scope>lava::window</scope><name>switch_mode_request</name></member>
+      <member refid="structlava_1_1window_1aeb42b88332a7dad151c99e47860a36d2" prot="public" virt="non-virtual"><scope>lava::window</scope><name>update_state</name></member>
+      <member refid="structlava_1_1window_1af57852b3c6f815c06bddfdaa34ff4566" prot="public" virt="non-virtual"><scope>lava::window</scope><name>update_title</name></member>
+      <member refid="structlava_1_1window_1a4ce6512c5e14f1441560c86f9ecf9243" prot="public" virt="non-virtual"><scope>lava::window</scope><name>visible</name></member>
+      <member refid="structlava_1_1window_1ae6f5bdd9cccc663b26da7ca28fb14ae2" prot="public" virt="non-virtual"><scope>lava::window</scope><name>window</name></member>
+      <member refid="structlava_1_1window_1a6b1a26244ca5ede1e543b614200bb278" prot="public" virt="non-virtual"><scope>lava::window</scope><name>window</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::window</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

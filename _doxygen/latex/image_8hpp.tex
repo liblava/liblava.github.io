@@ -1,0 +1,78 @@
+\doxysection{liblava/resource/image.hpp File Reference}
+\hypertarget{image_8hpp}{}\label{image_8hpp}\index{liblava/resource/image.hpp@{liblava/resource/image.hpp}}
+
+
+Vulkan image.  
+
+
+{\ttfamily \#include "{}liblava/base/device.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1image__data}{lava\+::image\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Image data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1image}{lava\+::image}}
+\begin{DoxyCompactList}\small\item\em Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} \mbox{\hyperlink{image_8hpp_a29e7772ec45fe3ace0a7d7be184cf67f}{lava\+::create\+\_\+image}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Format format, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, Vk\+Image vk\+\_\+image=0)
+\begin{DoxyCompactList}\small\item\em Create a new image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} \mbox{\hyperlink{image_8hpp_a452ed8cdca15befcd7d903f435edb805}{lava\+::grab\+\_\+image}} (\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} source)
+\begin{DoxyCompactList}\small\item\em Grab an image (with blit/copy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan image. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{image_8hpp_a29e7772ec45fe3ace0a7d7be184cf67f}\index{image.hpp@{image.hpp}!create\_image@{create\_image}}
+\index{create\_image@{create\_image}!image.hpp@{image.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_image()}{create\_image()}}
+{\footnotesize\ttfamily \label{image_8hpp_a29e7772ec45fe3ace0a7d7be184cf67f} 
+image\+::s\+\_\+ptr lava\+::create\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{Vk\+Format}]{format}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{, }\item[{Vk\+Image}]{vk\+\_\+image}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Create a new image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em format} & Image format \\
+\hline
+{\em size} & Image size \\
+\hline
+{\em vk\+\_\+image} & Vulkan image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+::s\+\_\+ptr Shared pointer to image 
+\end{DoxyReturn}
+\Hypertarget{image_8hpp_a452ed8cdca15befcd7d903f435edb805}\index{image.hpp@{image.hpp}!grab\_image@{grab\_image}}
+\index{grab\_image@{grab\_image}!image.hpp@{image.hpp}}
+\doxysubsubsection{\texorpdfstring{grab\_image()}{grab\_image()}}
+{\footnotesize\ttfamily \label{image_8hpp_a452ed8cdca15befcd7d903f435edb805} 
+image\+::s\+\_\+ptr lava\+::grab\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}}}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Grab an image (with blit/copy) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+::s\+\_\+ptr Grabbed image 
+\end{DoxyReturn}

@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1buffer" kind="struct" language="C++" prot="public">
+    <compoundname>lava::buffer</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="buffer_8hpp" local="no">buffer.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1buffer" kindref="compound">buffer</ref> &gt;</type>
+        <definition>using lava::buffer::s_ptr =  std::shared_ptr&lt;buffer&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::buffer::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="19" column="5" bodyfile="liblava/resource/buffer.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1buffer_1a7c5d7d6ab2b3c692c08165dea735b326" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::buffer::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::buffer::s_list</qualifiedname>
+        <briefdescription>
+<para>List of buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="22" column="5" bodyfile="liblava/resource/buffer.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1buffer_1abb32bd2bb91e3bbdc6601f21e0f41c34" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::buffer::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::buffer::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="176" column="17" bodyfile="liblava/resource/buffer.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1buffer_1a27b41e9166a557b1c07047daaf845166" prot="private" static="no" mutable="no">
+        <type>VkBuffer</type>
+        <definition>VkBuffer lava::buffer::m_vk_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_vk_buffer</name>
+        <qualifiedname>lava::buffer::m_vk_buffer</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="179" column="14" bodyfile="liblava/resource/buffer.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1buffer_1aeae6d843699fc9704ff6cf561dda5aaa" prot="private" static="no" mutable="no">
+        <type>VmaAllocation</type>
+        <definition>VmaAllocation lava::buffer::m_allocation</definition>
+        <argsstring></argsstring>
+        <name>m_allocation</name>
+        <qualifiedname>lava::buffer::m_allocation</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="182" column="19" bodyfile="liblava/resource/buffer.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1buffer_1a4808b5e0b4e237b159a1c45e49a2e8ab" prot="private" static="no" mutable="no">
+        <type>VmaAllocationInfo</type>
+        <definition>VmaAllocationInfo lava::buffer::m_allocation_info</definition>
+        <argsstring></argsstring>
+        <name>m_allocation_info</name>
+        <qualifiedname>lava::buffer::m_allocation_info</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Allocation information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="185" column="23" bodyfile="liblava/resource/buffer.hpp" bodystart="185" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1buffer_1a58c44c678301b20d9d3fba194afb613f" prot="private" static="no" mutable="no">
+        <type>VkDescriptorBufferInfo</type>
+        <definition>VkDescriptorBufferInfo lava::buffer::m_descriptor</definition>
+        <argsstring></argsstring>
+        <name>m_descriptor</name>
+        <qualifiedname>lava::buffer::m_descriptor</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Descriptor buffer information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="188" column="28" bodyfile="liblava/resource/buffer.hpp" bodystart="188" bodyend="188"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1buffer_1a6ab5524063c2c3b56e701df74be2e8c2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::buffer::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::buffer::make</qualifiedname>
+        <briefdescription>
+<para>Make a new buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" kindref="member">s_ptr</ref> Shared pointer to buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="28" column="18" bodyfile="liblava/resource/buffer.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1buffer_1acbfbf425c490bca4e6aeea592ec1c559" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::buffer::~buffer</definition>
+        <argsstring>()</argsstring>
+        <name>~buffer</name>
+        <qualifiedname>lava::buffer::~buffer</qualifiedname>
+        <briefdescription>
+<para>Destroy the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="35" column="5" bodyfile="liblava/resource/buffer.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1af24ed968ef0f5c7b4559e98def7f4031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::buffer::create</definition>
+        <argsstring>(device::ptr device, void const *data, size_t size, VkBufferUsageFlags usage, bool mapped=false, VmaMemoryUsage memory_usage=VMA_MEMORY_USAGE_GPU_ONLY, VkSharingMode sharing_mode=VK_SHARING_MODE_EXCLUSIVE, std::vector&lt; ui32 &gt; const &amp;shared_queue_family_indices={}, i32 alignment=undef)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::buffer::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>void const *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VkBufferUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mapped</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>VmaMemoryUsage</type>
+          <declname>memory_usage</declname>
+          <defval>VMA_MEMORY_USAGE_GPU_ONLY</defval>
+        </param>
+        <param>
+          <type>VkSharingMode</type>
+          <declname>sharing_mode</declname>
+          <defval>VK_SHARING_MODE_EXCLUSIVE</defval>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &gt; const &amp;</type>
+          <declname>shared_queue_family_indices</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>alignment</declname>
+          <defval><ref refid="types_8hpp_1a276426bd2813c3fc0cb1c6bf20a8cbae" kindref="member">undef</ref></defval>
+        </param>
+        <briefdescription>
+<para>Create a new buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer usage flags </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mapped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map the buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memory_usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Memory usage </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sharing_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sharing mode </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shared_queue_family_indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue indices (ignored unless sharing_mode == VK_SHARING_MODE_CONCURRENT) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alignment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum alignment to be used when placing the buffer inside a larger memory block negative -&gt; no minimum alignment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1ac651d5a31824013c20d2845a83ae3311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::buffer::create_mapped</definition>
+        <argsstring>(device::ptr device, void const *data, size_t size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage=VMA_MEMORY_USAGE_CPU_TO_GPU, VkSharingMode sharing_mode=VK_SHARING_MODE_EXCLUSIVE, std::vector&lt; ui32 &gt; const &amp;shared_queue_family_indices={}, i32 alignment=undef)</argsstring>
+        <name>create_mapped</name>
+        <qualifiedname>lava::buffer::create_mapped</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>void const *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VkBufferUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type>VmaMemoryUsage</type>
+          <declname>memory_usage</declname>
+          <defval>VMA_MEMORY_USAGE_CPU_TO_GPU</defval>
+        </param>
+        <param>
+          <type>VkSharingMode</type>
+          <declname>sharing_mode</declname>
+          <defval>VK_SHARING_MODE_EXCLUSIVE</defval>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> &gt; const &amp;</type>
+          <declname>shared_queue_family_indices</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>alignment</declname>
+          <defval><ref refid="types_8hpp_1a276426bd2813c3fc0cb1c6bf20a8cbae" kindref="member">undef</ref></defval>
+        </param>
+        <briefdescription>
+<para>Create a new mapped buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer usage flags </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memory_usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Memory usage </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sharing_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sharing mode </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shared_queue_family_indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue indices (ignored unless sharing_mode == VK_SHARING_MODE_CONCURRENT) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alignment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum alignment to be used when placing the buffer inside a larger memory block negative -&gt; no minimum alignment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a90f1403a96a5a041114bdfe2482e1c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::buffer::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::buffer::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a105ea4d4cb0cbc11d0b2d3321a1f0376" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::buffer::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::buffer::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="92" column="17" bodyfile="liblava/resource/buffer.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a0be51673d622a473bd6da8756f4bb8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::buffer::valid</definition>
+        <argsstring>() const</argsstring>
+        <name>valid</name>
+        <qualifiedname>lava::buffer::valid</qualifiedname>
+        <briefdescription>
+<para>Check if the buffer is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Buffer is valid or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="100" column="10" bodyfile="liblava/resource/buffer.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1aabb19a74c0cdbfa5ca4b2f35e3033a76" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkBuffer</type>
+        <definition>VkBuffer lava::buffer::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::buffer::get</qualifiedname>
+        <briefdescription>
+<para>Get the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkBuffer Vulkan buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="108" column="14" bodyfile="liblava/resource/buffer.hpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1ac6af491dceda2d1ab9bad86f88628e08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorBufferInfo const *</type>
+        <definition>VkDescriptorBufferInfo const  * lava::buffer::get_descriptor_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_descriptor_info</name>
+        <qualifiedname>lava::buffer::get_descriptor_info</qualifiedname>
+        <briefdescription>
+<para>Get the descriptor information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDescriptorBufferInfo const* Descriptor buffer information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="116" column="34" bodyfile="liblava/resource/buffer.hpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1ae40ffbd255fe3b4b73cc760084df848d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkDeviceAddress</type>
+        <definition>VkDeviceAddress lava::buffer::get_address</definition>
+        <argsstring>() const</argsstring>
+        <name>get_address</name>
+        <qualifiedname>lava::buffer::get_address</qualifiedname>
+        <briefdescription>
+<para>Get the address of the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDeviceAddress Device address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="124" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a56f97212f4a442bd52b3df9f76a6dbb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDeviceSize</type>
+        <definition>VkDeviceSize lava::buffer::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::buffer::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size of the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDeviceSize Device size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="130" column="18" bodyfile="liblava/resource/buffer.hpp" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a6c0f7285793b973adc1d2de9545ca62f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * lava::buffer::get_mapped_data</definition>
+        <argsstring>() const</argsstring>
+        <name>get_mapped_data</name>
+        <qualifiedname>lava::buffer::get_mapped_data</qualifiedname>
+        <briefdescription>
+<para>Get the mapped data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void* Pointer to data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="138" column="10" bodyfile="liblava/resource/buffer.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1af0860571b26fa50f6cab16545828b299" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDeviceMemory</type>
+        <definition>VkDeviceMemory lava::buffer::get_device_memory</definition>
+        <argsstring>() const</argsstring>
+        <name>get_device_memory</name>
+        <qualifiedname>lava::buffer::get_device_memory</qualifiedname>
+        <briefdescription>
+<para>Get the device memory of the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDeviceMemory Device memory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="146" column="20" bodyfile="liblava/resource/buffer.hpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a0b41bbf173c5f3a79deddf927cbd09d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::buffer::flush</definition>
+        <argsstring>(VkDeviceSize offset=0, VkDeviceSize size=VK_WHOLE_SIZE)</argsstring>
+        <name>flush</name>
+        <qualifiedname>lava::buffer::flush</qualifiedname>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>VkDeviceSize</type>
+          <declname>size</declname>
+          <defval>VK_WHOLE_SIZE</defval>
+        </param>
+        <briefdescription>
+<para>Flush the buffer data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset device size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data device size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="155" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a2f2014025a50390b8cdbe204a9042400" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VmaAllocation const &amp;</type>
+        <definition>VmaAllocation const  &amp; lava::buffer::get_allocation</definition>
+        <argsstring>() const</argsstring>
+        <name>get_allocation</name>
+        <qualifiedname>lava::buffer::get_allocation</qualifiedname>
+        <briefdescription>
+<para>Get the allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VmaAllocation const&amp; Allocation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="162" column="25" bodyfile="liblava/resource/buffer.hpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1buffer_1a86c5d2f8a4ae6452b5df9c8c33d94717" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VmaAllocationInfo const &amp;</type>
+        <definition>VmaAllocationInfo const  &amp; lava::buffer::get_allocation_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_allocation_info</name>
+        <qualifiedname>lava::buffer::get_allocation_info</qualifiedname>
+        <briefdescription>
+<para>Get the allocation information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VmaAllocationInfo const&amp; Allocation information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/buffer.hpp" line="170" column="29" bodyfile="liblava/resource/buffer.hpp" bodystart="170" bodyend="172"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::buffer</label>
+        <link refid="structlava_1_1buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::buffer</label>
+        <link refid="structlava_1_1buffer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/resource/buffer.hpp" line="17" column="1" bodyfile="liblava/resource/buffer.hpp" bodystart="17" bodyend="189"/>
+    <listofallmembers>
+      <member refid="structlava_1_1buffer_1af24ed968ef0f5c7b4559e98def7f4031" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>create</name></member>
+      <member refid="structlava_1_1buffer_1ac651d5a31824013c20d2845a83ae3311" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>create_mapped</name></member>
+      <member refid="structlava_1_1buffer_1a90f1403a96a5a041114bdfe2482e1c96" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>entity</name></member>
+      <member refid="structlava_1_1buffer_1a0b41bbf173c5f3a79deddf927cbd09d4" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>flush</name></member>
+      <member refid="structlava_1_1buffer_1aabb19a74c0cdbfa5ca4b2f35e3033a76" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get</name></member>
+      <member refid="structlava_1_1buffer_1ae40ffbd255fe3b4b73cc760084df848d" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_address</name></member>
+      <member refid="structlava_1_1buffer_1a2f2014025a50390b8cdbe204a9042400" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_allocation</name></member>
+      <member refid="structlava_1_1buffer_1a86c5d2f8a4ae6452b5df9c8c33d94717" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_allocation_info</name></member>
+      <member refid="structlava_1_1buffer_1ac6af491dceda2d1ab9bad86f88628e08" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_descriptor_info</name></member>
+      <member refid="structlava_1_1buffer_1a105ea4d4cb0cbc11d0b2d3321a1f0376" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_device</name></member>
+      <member refid="structlava_1_1buffer_1af0860571b26fa50f6cab16545828b299" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_device_memory</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_id</name></member>
+      <member refid="structlava_1_1buffer_1a6c0f7285793b973adc1d2de9545ca62f" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_mapped_data</name></member>
+      <member refid="structlava_1_1buffer_1a56f97212f4a442bd52b3df9f76a6dbb9" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>get_size</name></member>
+      <member refid="structlava_1_1buffer_1aeae6d843699fc9704ff6cf561dda5aaa" prot="private" virt="non-virtual"><scope>lava::buffer</scope><name>m_allocation</name></member>
+      <member refid="structlava_1_1buffer_1a4808b5e0b4e237b159a1c45e49a2e8ab" prot="private" virt="non-virtual"><scope>lava::buffer</scope><name>m_allocation_info</name></member>
+      <member refid="structlava_1_1buffer_1a58c44c678301b20d9d3fba194afb613f" prot="private" virt="non-virtual"><scope>lava::buffer</scope><name>m_descriptor</name></member>
+      <member refid="structlava_1_1buffer_1abb32bd2bb91e3bbdc6601f21e0f41c34" prot="private" virt="non-virtual"><scope>lava::buffer</scope><name>m_device</name></member>
+      <member refid="structlava_1_1buffer_1a27b41e9166a557b1c07047daaf845166" prot="private" virt="non-virtual"><scope>lava::buffer</scope><name>m_vk_buffer</name></member>
+      <member refid="structlava_1_1buffer_1a6ab5524063c2c3b56e701df74be2e8c2" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>operator=</name></member>
+      <member refid="structlava_1_1buffer_1a7c5d7d6ab2b3c692c08165dea735b326" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>s_list</name></member>
+      <member refid="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1buffer_1a0be51673d622a473bd6da8756f4bb8cd" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>valid</name></member>
+      <member refid="structlava_1_1buffer_1acbfbf425c490bca4e6aeea592ec1c559" prot="public" virt="non-virtual"><scope>lava::buffer</scope><name>~buffer</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::buffer</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

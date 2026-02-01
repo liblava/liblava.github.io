@@ -1,0 +1,199 @@
+\doxysection{lava\+::rect Struct Reference}
+\hypertarget{structlava_1_1rect}{}\label{structlava_1_1rect}\index{lava::rect@{lava::rect}}
+
+
+Rectangle.  
+
+
+
+
+{\ttfamily \#include $<$math.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b}\label{structlava_1_1rect_a1ed1fdead3bf333d3f93e65920392d5b} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1rect}{rect}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to rect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a}\label{structlava_1_1rect_af4f9c4f39ba23fd25b15731b85582a7a} 
+{\bfseries rect} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new rectangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1rect_a3d0f4f5754c31997269ed57b81ec6ef1}{rect}} (\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} left, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} top, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} width, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} height)
+\begin{DoxyCompactList}\small\item\em Construct a new rectangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1rect_ac5ed6ef38b816c3960821013d261187d}{rect}} (\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&left\+\_\+top, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} width, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} height)
+\begin{DoxyCompactList}\small\item\em Construct a new rectangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1rect_aba98af4909b983af8ca2461a0f79a394}{rect}} (\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&left\+\_\+top, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} const \&size)
+\begin{DoxyCompactList}\small\item\em Construct a new rectangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \& \mbox{\hyperlink{structlava_1_1rect_a1bb7aa44bc739dc0d56569f39b9392c6}{get\+\_\+origin}} () const
+\begin{DoxyCompactList}\small\item\em Get the origin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \& \mbox{\hyperlink{structlava_1_1rect_aa85aa770875eac252d6477451ab55e23}{get\+\_\+end\+\_\+point}} () const
+\begin{DoxyCompactList}\small\item\em Get the end point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1rect_aaeaf65436bf93bcfb312be45aa751806}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}{set\+\_\+size}} (\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} const \&size)
+\begin{DoxyCompactList}\small\item\em Set the size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1rect_af28e1e3c0610aae0d1619ef89c93e419}{move}} (\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&offset)
+\begin{DoxyCompactList}\small\item\em Move the rectangle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1rect_a706360205e786afeafb94b91802162a3}{contains}} (\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} point) const
+\begin{DoxyCompactList}\small\item\em Check if point is inside the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rectangle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1rect_a3d0f4f5754c31997269ed57b81ec6ef1}\index{lava::rect@{lava::rect}!rect@{rect}}
+\index{rect@{rect}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_a3d0f4f5754c31997269ed57b81ec6ef1} 
+lava\+::rect\+::rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{left}{, }\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{top}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{width}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left position \\
+\hline
+{\em top} & Top position \\
+\hline
+{\em width} & Rectangle width \\
+\hline
+{\em height} & Rectangle height \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1rect_ac5ed6ef38b816c3960821013d261187d}\index{lava::rect@{lava::rect}!rect@{rect}}
+\index{rect@{rect}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_ac5ed6ef38b816c3960821013d261187d} 
+lava\+::rect\+::rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&}]{left\+\_\+top}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{width}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+top} & Left top position \\
+\hline
+{\em width} & Rectangle width \\
+\hline
+{\em height} & Rectangle height \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1rect_aba98af4909b983af8ca2461a0f79a394}\index{lava::rect@{lava::rect}!rect@{rect}}
+\index{rect@{rect}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_aba98af4909b983af8ca2461a0f79a394} 
+lava\+::rect\+::rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&}]{left\+\_\+top}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} const \&}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+top} & Left top position \\
+\hline
+{\em size} & Size of rectangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1rect_a706360205e786afeafb94b91802162a3}\index{lava::rect@{lava::rect}!contains@{contains}}
+\index{contains@{contains}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_a706360205e786afeafb94b91802162a3} 
+bool lava\+::rect\+::contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}}}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if point is inside the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Point to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Point is inside or out 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1rect_aa85aa770875eac252d6477451ab55e23}\index{lava::rect@{lava::rect}!get\_end\_point@{get\_end\_point}}
+\index{get\_end\_point@{get\_end\_point}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{get\_end\_point()}{get\_end\_point()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_aa85aa770875eac252d6477451ab55e23} 
+\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const  \& lava\+::rect\+::get\+\_\+end\+\_\+point (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the end point. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2} const\& Right bottom position 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1rect_a1bb7aa44bc739dc0d56569f39b9392c6}\index{lava::rect@{lava::rect}!get\_origin@{get\_origin}}
+\index{get\_origin@{get\_origin}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{get\_origin()}{get\_origin()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_a1bb7aa44bc739dc0d56569f39b9392c6} 
+\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const  \& lava\+::rect\+::get\+\_\+origin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the origin. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2} const\& Left top position 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1rect_aaeaf65436bf93bcfb312be45aa751806}\index{lava::rect@{lava::rect}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_aaeaf65436bf93bcfb312be45aa751806} 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::rect\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2} Width and height 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1rect_af28e1e3c0610aae0d1619ef89c93e419}\index{lava::rect@{lava::rect}!move@{move}}
+\index{move@{move}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_af28e1e3c0610aae0d1619ef89c93e419} 
+void lava\+::rect\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ab2e34b7023f2e4da184beb734a31ee11}{iv2}} const \&}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move the rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset to move \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976}\index{lava::rect@{lava::rect}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!lava::rect@{lava::rect}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1rect_a9f8290cecce3076e7d392b898b56d976} 
+void lava\+::rect\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} const \&}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Width and height \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{math_8hpp}{math.\+hpp}}\end{DoxyCompactItemize}

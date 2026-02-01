@@ -1,0 +1,87 @@
+\doxysection{physical\+\_\+device.\+hpp}
+\hypertarget{physical__device_8hpp_source}{}\label{physical__device_8hpp_source}\index{liblava/base/physical\_device.hpp@{liblava/base/physical\_device.hpp}}
+\mbox{\hyperlink{physical__device_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{device_8hpp}{liblava/base/device.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1physical__device_ac22d0d61fcacb3140b0b5d2778c7aa36}{physical\_device}}\ :\ \mbox{\hyperlink{structlava_1_1entity_a39066de3954adf265c61c28f0a3b521c}{entity}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\_ptr}}\ =\ std::shared\_ptr<physical\_device>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b}{ref}}\ =\ \mbox{\hyperlink{structlava_1_1physical__device_ac22d0d61fcacb3140b0b5d2778c7aa36}{physical\_device}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1physical__device_a1e05103a70031752339eb528f41b421d}{make}}(VkPhysicalDevice\ vk\_physical\_device)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<physical\_device>(vk\_physical\_device);}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structlava_1_1physical__device_ac22d0d61fcacb3140b0b5d2778c7aa36}{physical\_device}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structlava_1_1physical__device_a4f8c91658cf3903da01f95568c9b4fd5}{physical\_device}}(VkPhysicalDevice\ vk\_physical\_device);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1physical__device_a33aa6284e03105f50f2a1db614bdb1a8}{initialize}}(VkPhysicalDevice\ vk\_physical\_device);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1physical__device_ab1fb3b0629f71631c7ecb25973c1e860}{supported}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{file__utils_8hpp_ae1308f8f78ed75e822b67a4e2a29bdc6}{extension}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1physical__device_a46facd60eac419fb7c58271dfe62e61b}{get\_queue\_family}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\&\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}},\ VkQueueFlags\ flags)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{structlava_1_1device_1_1create__param}{device::create\_param}}\ \mbox{\hyperlink{structlava_1_1physical__device_a3124b44643d102fa6cbb99164a7e71e2}{create\_default\_device\_param}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ VkPhysicalDeviceProperties\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1physical__device_a419ba98c5496010e3b16615e958faa64}{get\_properties}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_properties;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ VkPhysicalDeviceFeatures\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1physical__device_a066365a839361413d93ed97ea0da7b2f}{get\_features}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_features;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ VkPhysicalDeviceMemoryProperties\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1physical__device_a6c9a2ede47f64403dce789d6951579fc}{get\_memory\_properties}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_memory\_properties;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{VkQueueFamilyPropertiesList}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1physical__device_a3fbf67058c35ecadff7466a0236c19e1}{get\_queue\_family\_properties}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_queue\_family\_properties;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{VkExtensionPropertiesList}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1physical__device_a528eab432ebfa509f36b2b4984de3f68}{get\_extension\_properties}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_extension\_properties;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ VkPhysicalDevice\ \mbox{\hyperlink{structlava_1_1physical__device_a2396c619c1678650af362056d8a2dda7}{get}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_vk\_physical\_device;}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{structlava_1_1physical__device_a79805ffd9a70c561b8145f1663105d82}{get\_device\_name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structlava_1_1physical__device_a2b8c80b347fc031082f483f072f7542b}{get\_device\_type\_string}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\_version}}\ \mbox{\hyperlink{structlava_1_1physical__device_a045e2daa2121da2e7512977c443ae4c5}{get\_driver\_version}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1physical__device_a233738a476ca4e179ff4de370c68e401}{swapchain\_supported}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1physical__device_adbdb48a8c48725399d8bef8fb7176a3f}{surface\_supported}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ queue\_family,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSurfaceKHR\ surface)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00157\ \ \ \ \ VkPhysicalDevice\ m\_vk\_physical\_device\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00160\ \ \ \ \ VkPhysicalDeviceProperties\ m\_properties\ =\ \{\};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00163\ \ \ \ \ VkPhysicalDeviceFeatures\ m\_features\ =\ \{\};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00166\ \ \ \ \ VkPhysicalDeviceMemoryProperties\ m\_memory\_properties\ =\ \{\};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{VkQueueFamilyPropertiesList}}\ m\_queue\_family\_properties;}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{VkExtensionPropertiesList}}\ m\_extension\_properties;}
+\DoxyCodeLine{00173\ \};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

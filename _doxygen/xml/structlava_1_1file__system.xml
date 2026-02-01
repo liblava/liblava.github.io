@@ -1,0 +1,624 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1file__system" kind="struct" language="C++" prot="public">
+    <compoundname>lava::file_system</compoundname>
+    <basecompoundref refid="structlava_1_1no__copy__no__move" prot="public" virt="non-virtual">lava::no_copy_no_move</basecompoundref>
+    <includes refid="file__system_8hpp" local="no">file_system.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1file__system_1aec1982edb8f8deaf19e3eff88cc695f6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::file_system::m_initialized</definition>
+        <argsstring></argsstring>
+        <name>m_initialized</name>
+        <qualifiedname>lava::file_system::m_initialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Initialized state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="155" column="10" bodyfile="liblava/file/file_system.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file__system_1a0440f2f670cc090bc234c1f39578ba08" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::m_org</definition>
+        <argsstring></argsstring>
+        <name>m_org</name>
+        <qualifiedname>lava::file_system::m_org</qualifiedname>
+        <briefdescription>
+<para>Organization name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="158" column="12" bodyfile="liblava/file/file_system.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file__system_1aec73bb73a5321b92725e6745f0d8af4f" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::m_app</definition>
+        <argsstring></argsstring>
+        <name>m_app</name>
+        <qualifiedname>lava::file_system::m_app</qualifiedname>
+        <briefdescription>
+<para>Application name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="161" column="12" bodyfile="liblava/file/file_system.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file__system_1ac2e7b808ed4b330de4e05579a9f2844d" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::m_ext</definition>
+        <argsstring></argsstring>
+        <name>m_ext</name>
+        <qualifiedname>lava::file_system::m_ext</qualifiedname>
+        <briefdescription>
+<para>Extension name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="164" column="12" bodyfile="liblava/file/file_system.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1file__system_1a885e88039f95f0bb6880650affe52e28" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::m_res_path</definition>
+        <argsstring></argsstring>
+        <name>m_res_path</name>
+        <qualifiedname>lava::file_system::m_res_path</qualifiedname>
+        <briefdescription>
+<para>Path to resources. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="167" column="12" bodyfile="liblava/file/file_system.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1file__system_1a128a19889fc6c0de45ab016dcdcbae04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref></type>
+        <definition>sem_version lava::file_system::get_version</definition>
+        <argsstring>()</argsstring>
+        <name>get_version</name>
+        <qualifiedname>lava::file_system::get_version</qualifiedname>
+        <briefdescription>
+<para>Get the version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref> Semantic version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="23" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1ae2412b2813ed104cfb47760f6dab9a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::get_base_dir</definition>
+        <argsstring>()</argsstring>
+        <name>get_base_dir</name>
+        <qualifiedname>lava::file_system::get_base_dir</qualifiedname>
+        <briefdescription>
+<para>Get the base directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Base directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="29" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a6035a06dbfcbbc8f832b84eeaf770a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::get_full_base_dir</definition>
+        <argsstring>(string_ref path)</argsstring>
+        <name>get_full_base_dir</name>
+        <qualifiedname>lava::file_system::get_full_base_dir</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Get the path relative to base directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to add to base directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string Relative base directory path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="36" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1aa06b58dc745cc8e0163fcc126ab4d00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::get_pref_dir</definition>
+        <argsstring>()</argsstring>
+        <name>get_pref_dir</name>
+        <qualifiedname>lava::file_system::get_pref_dir</qualifiedname>
+        <briefdescription>
+<para>Get the preferences directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Preferences directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="42" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1ab0864cd05da14b30699cb6aadc1e6a46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::get_res_dir</definition>
+        <argsstring>()</argsstring>
+        <name>get_res_dir</name>
+        <qualifiedname>lava::file_system::get_res_dir</qualifiedname>
+        <briefdescription>
+<para>Get the resource directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string Resource directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="48" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a498847d0f265e3df79050101a7ac9d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::mount</definition>
+        <argsstring>(string_ref path)</argsstring>
+        <name>mount</name>
+        <qualifiedname>lava::file_system::mount</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Mount path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to mount </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mount was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a7786077f80c21a8a7c7d0f82833de29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::mount_base</definition>
+        <argsstring>(string_ref base_dir_path)</argsstring>
+        <name>mount_base</name>
+        <qualifiedname>lava::file_system::mount_base</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>base_dir_path</declname>
+        </param>
+        <briefdescription>
+<para>Mount base directory path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_dir_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base directory path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Mount was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a5b5b87ef6ffe06b17c6e5238220dcdcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::exists</definition>
+        <argsstring>(string_ref file)</argsstring>
+        <name>exists</name>
+        <qualifiedname>lava::file_system::exists</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Check if file exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>File exists or not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a1453846158d92eb16facc5844e814efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::file_system::get_real_dir</definition>
+        <argsstring>(string_ref file)</argsstring>
+        <name>get_real_dir</name>
+        <qualifiedname>lava::file_system::get_real_dir</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Get the real directory of file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string Real directory of file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="76" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a06d5636ef1511179db0285aca220db00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref></type>
+        <definition>string_list lava::file_system::enumerate_files</definition>
+        <argsstring>(string_ref path)</argsstring>
+        <name>enumerate_files</name>
+        <qualifiedname>lava::file_system::enumerate_files</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Enumerate files in directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref> List of files </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="83" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a6d3e702b2ee354cb72e5c420ab710dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::initialize</definition>
+        <argsstring>(string_ref argv_0, string_ref org, string_ref app, string_ref ext)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>lava::file_system::initialize</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>argv_0</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>org</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>app</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>ext</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the file system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argv_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First command line argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>org</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Organization name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>app</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extension name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Initialize was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a01a492befb85c3c57c195740855e27bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::file_system::terminate</definition>
+        <argsstring>()</argsstring>
+        <name>terminate</name>
+        <qualifiedname>lava::file_system::terminate</qualifiedname>
+        <briefdescription>
+<para>Terminate the file system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1ab140c6dd0a6aaa4bbd3cd2271afcb0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref></type>
+        <definition>string_list lava::file_system::mount_res</definition>
+        <argsstring>()</argsstring>
+        <name>mount_res</name>
+        <qualifiedname>lava::file_system::mount_res</qualifiedname>
+        <briefdescription>
+<para>Mount resource directories and files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1ac4015b12eb0458ac72d8f779573e91de" kindref="member">string_list</ref> List of mounted resources </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="107" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a266374e602590d8a24b177de626a9891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::create_folder</definition>
+        <argsstring>(string_ref name=&quot;data&quot;)</argsstring>
+        <name>create_folder</name>
+        <qualifiedname>lava::file_system::create_folder</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+          <defval>&quot;data&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Create a folder in the preferences directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of folder (default: data) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Folder created or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="114" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a69cc544f63441f63a1b33e36b4415dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::file_system::clean_pref_dir</definition>
+        <argsstring>()</argsstring>
+        <name>clean_pref_dir</name>
+        <qualifiedname>lava::file_system::clean_pref_dir</qualifiedname>
+        <briefdescription>
+<para>Clean preferences directory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="119" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1af8c3a743a0e7b022e54977348f8d27c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::file_system::get_org</definition>
+        <argsstring>() const</argsstring>
+        <name>get_org</name>
+        <qualifiedname>lava::file_system::get_org</qualifiedname>
+        <briefdescription>
+<para>Get the organization name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref> Name of organization </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="125" column="16" bodyfile="liblava/file/file_system.hpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1adbcfe405006ac93429fe305908d154e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::file_system::get_app</definition>
+        <argsstring>() const</argsstring>
+        <name>get_app</name>
+        <qualifiedname>lava::file_system::get_app</qualifiedname>
+        <briefdescription>
+<para>Get the application name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref> Name of application </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="133" column="16" bodyfile="liblava/file/file_system.hpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1ac0947f2e2a9bd3358228867be381b704" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+        <definition>string_ref lava::file_system::get_ext</definition>
+        <argsstring>() const</argsstring>
+        <name>get_ext</name>
+        <qualifiedname>lava::file_system::get_ext</qualifiedname>
+        <briefdescription>
+<para>Get the extension name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref> Name of extension </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="141" column="16" bodyfile="liblava/file/file_system.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1file__system_1a15797e70806e2ef869462ae8726278cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::file_system::ready</definition>
+        <argsstring>() const</argsstring>
+        <name>ready</name>
+        <qualifiedname>lava::file_system::ready</qualifiedname>
+        <briefdescription>
+<para>Check if file system is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>File system is ready or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/file/file_system.hpp" line="149" column="10" bodyfile="liblava/file/file_system.hpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>File system. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::file_system</label>
+        <link refid="structlava_1_1file__system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::file_system</label>
+        <link refid="structlava_1_1file__system"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/file/file_system.hpp" line="18" column="1" bodyfile="liblava/file/file_system.hpp" bodystart="18" bodyend="168"/>
+    <listofallmembers>
+      <member refid="structlava_1_1file__system_1a69cc544f63441f63a1b33e36b4415dd2" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>clean_pref_dir</name></member>
+      <member refid="structlava_1_1file__system_1a266374e602590d8a24b177de626a9891" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>create_folder</name></member>
+      <member refid="structlava_1_1file__system_1a06d5636ef1511179db0285aca220db00" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>enumerate_files</name></member>
+      <member refid="structlava_1_1file__system_1a5b5b87ef6ffe06b17c6e5238220dcdcb" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>exists</name></member>
+      <member refid="structlava_1_1file__system_1adbcfe405006ac93429fe305908d154e1" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_app</name></member>
+      <member refid="structlava_1_1file__system_1ae2412b2813ed104cfb47760f6dab9a99" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_base_dir</name></member>
+      <member refid="structlava_1_1file__system_1ac0947f2e2a9bd3358228867be381b704" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_ext</name></member>
+      <member refid="structlava_1_1file__system_1a6035a06dbfcbbc8f832b84eeaf770a53" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_full_base_dir</name></member>
+      <member refid="structlava_1_1file__system_1af8c3a743a0e7b022e54977348f8d27c5" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_org</name></member>
+      <member refid="structlava_1_1file__system_1aa06b58dc745cc8e0163fcc126ab4d00d" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_pref_dir</name></member>
+      <member refid="structlava_1_1file__system_1a1453846158d92eb16facc5844e814efe" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_real_dir</name></member>
+      <member refid="structlava_1_1file__system_1ab0864cd05da14b30699cb6aadc1e6a46" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_res_dir</name></member>
+      <member refid="structlava_1_1file__system_1a128a19889fc6c0de45ab016dcdcbae04" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>get_version</name></member>
+      <member refid="structlava_1_1file__system_1a6d3e702b2ee354cb72e5c420ab710dd3" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>initialize</name></member>
+      <member refid="structlava_1_1file__system_1aec73bb73a5321b92725e6745f0d8af4f" prot="private" virt="non-virtual"><scope>lava::file_system</scope><name>m_app</name></member>
+      <member refid="structlava_1_1file__system_1ac2e7b808ed4b330de4e05579a9f2844d" prot="private" virt="non-virtual"><scope>lava::file_system</scope><name>m_ext</name></member>
+      <member refid="structlava_1_1file__system_1aec1982edb8f8deaf19e3eff88cc695f6" prot="private" virt="non-virtual"><scope>lava::file_system</scope><name>m_initialized</name></member>
+      <member refid="structlava_1_1file__system_1a0440f2f670cc090bc234c1f39578ba08" prot="private" virt="non-virtual"><scope>lava::file_system</scope><name>m_org</name></member>
+      <member refid="structlava_1_1file__system_1a885e88039f95f0bb6880650affe52e28" prot="private" virt="non-virtual"><scope>lava::file_system</scope><name>m_res_path</name></member>
+      <member refid="structlava_1_1file__system_1a498847d0f265e3df79050101a7ac9d77" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>mount</name></member>
+      <member refid="structlava_1_1file__system_1a7786077f80c21a8a7c7d0f82833de29b" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>mount_base</name></member>
+      <member refid="structlava_1_1file__system_1ab140c6dd0a6aaa4bbd3cd2271afcb0f4" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>mount_res</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>operator=</name></member>
+      <member refid="structlava_1_1file__system_1a15797e70806e2ef869462ae8726278cc" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>ready</name></member>
+      <member refid="structlava_1_1file__system_1a01a492befb85c3c57c195740855e27bd" prot="public" virt="non-virtual"><scope>lava::file_system</scope><name>terminate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

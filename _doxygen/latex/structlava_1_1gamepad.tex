@@ -1,0 +1,169 @@
+\doxysection{lava\+::gamepad Struct Reference}
+\hypertarget{structlava_1_1gamepad}{}\label{structlava_1_1gamepad}\index{lava::gamepad@{lava::gamepad}}
+
+
+Gamepad.  
+
+
+
+
+{\ttfamily \#include $<$gamepad.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1gamepad_a4f3fd03973e46439e28b2579567c66c5}\label{structlava_1_1gamepad_a4f3fd03973e46439e28b2579567c66c5} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1gamepad}{gamepad}}$>$
+\begin{DoxyCompactList}\small\item\em List of gamepads. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1gamepad_ae9c3ebf9c404adc56a5415c6f364a081}\label{structlava_1_1gamepad_ae9c3ebf9c404adc56a5415c6f364a081} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1gamepad}{gamepad}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to gamepad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1gamepad_ae95abf4ad788bf24bfa1ec1e3da3916f}{gamepad}} (\mbox{\hyperlink{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}{gamepad\+\_\+id\+\_\+ref}} pad\+\_\+id=gamepad\+\_\+id\+::\+\_\+1)
+\begin{DoxyCompactList}\small\item\em Construct a new gamepad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1gamepad_acabe1c062826b2dcb67f0fc00154a160}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if gamepad is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1gamepad_aabac3d30d01e9dd375ead54c1c5b10bd}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update gamepad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1gamepad_ac90d1eee47035ca9b82532ab0b7d884c}{pressed}} (\mbox{\hyperlink{gamepad_8hpp_a2580191222c823be813184b47dfd2cdb}{gamepad\+\_\+button\+\_\+ref}} button) const
+\begin{DoxyCompactList}\small\item\em Check if gamepad button is pressed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} \mbox{\hyperlink{structlava_1_1gamepad_ad220c7bd9e52c4e815f1a20b63a861a5}{value}} (\mbox{\hyperlink{gamepad_8hpp_a366d568b96562a9477efd0c619ebdfe0}{gamepad\+\_\+axis\+\_\+ref}} axis) const
+\begin{DoxyCompactList}\small\item\em Get value of axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}{gamepad\+\_\+id\+\_\+ref}} \mbox{\hyperlink{structlava_1_1gamepad_a7f1f6e3f29fa9b39c4057558bd2fd56c}{get\+\_\+pad\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the gamepad id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1gamepad_abcfae8ef0a2df6257fea46813ddcb4f2}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the gamepad id as integer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} \mbox{\hyperlink{structlava_1_1gamepad_ad09f81e751d7878d88448f787d446a72}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gamepad. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1gamepad_ae95abf4ad788bf24bfa1ec1e3da3916f}\index{lava::gamepad@{lava::gamepad}!gamepad@{gamepad}}
+\index{gamepad@{gamepad}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{gamepad()}{gamepad()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_ae95abf4ad788bf24bfa1ec1e3da3916f} 
+lava\+::gamepad\+::gamepad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}{gamepad\+\_\+id\+\_\+ref}}}]{pad\+\_\+id}{ = {\ttfamily gamepad\+\_\+id\+:\+:\+\_\+1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new gamepad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pad\+\_\+id} & Gamepad id \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1gamepad_abcfae8ef0a2df6257fea46813ddcb4f2}\index{lava::gamepad@{lava::gamepad}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_abcfae8ef0a2df6257fea46813ddcb4f2} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::gamepad\+::get\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the gamepad id as integer. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Integer gamepad id 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_ad09f81e751d7878d88448f787d446a72}\index{lava::gamepad@{lava::gamepad}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_ad09f81e751d7878d88448f787d446a72} 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} lava\+::gamepad\+::get\+\_\+name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the name. 
+
+\begin{DoxyReturn}{Returns}
+name Name of gamepad 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_a7f1f6e3f29fa9b39c4057558bd2fd56c}\index{lava::gamepad@{lava::gamepad}!get\_pad\_id@{get\_pad\_id}}
+\index{get\_pad\_id@{get\_pad\_id}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{get\_pad\_id()}{get\_pad\_id()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_a7f1f6e3f29fa9b39c4057558bd2fd56c} 
+\mbox{\hyperlink{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}{gamepad\+\_\+id\+\_\+ref}} lava\+::gamepad\+::get\+\_\+pad\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the gamepad id. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{gamepad_8hpp_aafe3c39cabffbb74a87fb4a5b62c1d88}{gamepad\+\_\+id\+\_\+ref} Gamepad id 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_ac90d1eee47035ca9b82532ab0b7d884c}\index{lava::gamepad@{lava::gamepad}!pressed@{pressed}}
+\index{pressed@{pressed}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{pressed()}{pressed()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_ac90d1eee47035ca9b82532ab0b7d884c} 
+bool lava\+::gamepad\+::pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gamepad_8hpp_a2580191222c823be813184b47dfd2cdb}{gamepad\+\_\+button\+\_\+ref}}}]{button}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if gamepad button is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Gamepad button to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Button is pressed or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_acabe1c062826b2dcb67f0fc00154a160}\index{lava::gamepad@{lava::gamepad}!ready@{ready}}
+\index{ready@{ready}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_acabe1c062826b2dcb67f0fc00154a160} 
+bool lava\+::gamepad\+::ready (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if gamepad is active. 
+
+\begin{DoxyReturn}{Returns}
+Gamepad is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_aabac3d30d01e9dd375ead54c1c5b10bd}\index{lava::gamepad@{lava::gamepad}!update@{update}}
+\index{update@{update}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_aabac3d30d01e9dd375ead54c1c5b10bd} 
+bool lava\+::gamepad\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Update gamepad. 
+
+\begin{DoxyReturn}{Returns}
+Update was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad_ad220c7bd9e52c4e815f1a20b63a861a5}\index{lava::gamepad@{lava::gamepad}!value@{value}}
+\index{value@{value}!lava::gamepad@{lava::gamepad}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad_ad220c7bd9e52c4e815f1a20b63a861a5} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} lava\+::gamepad\+::value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gamepad_8hpp_a366d568b96562a9477efd0c619ebdfe0}{gamepad\+\_\+axis\+\_\+ref}}}]{axis}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get value of axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & Target axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32} Axis value 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{gamepad_8hpp}{gamepad.\+hpp}}\end{DoxyCompactItemize}

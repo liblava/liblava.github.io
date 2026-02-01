@@ -1,0 +1,76 @@
+\doxysection{liblava/frame/window.hpp File Reference}
+\hypertarget{window_8hpp}{}\label{window_8hpp}\index{liblava/frame/window.hpp@{liblava/frame/window.hpp}}
+
+
+Window.  
+
+
+{\ttfamily \#include "{}liblava/core/data.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/frame/input.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/math.\+hpp"{}}\newline
+{\ttfamily \#include "{}vulkan/vulkan.\+h"{}}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1window}{lava\+::window}}
+\begin{DoxyCompactList}\small\item\em Window. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1window_1_1state}{lava\+::window\+::state}}
+\begin{DoxyCompactList}\small\item\em Window state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Surface\+KHR \mbox{\hyperlink{window_8hpp_a83bdbe791a46c86d3096a037a1c260ca}{lava\+::create\+\_\+surface}} (GLFWwindow \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1window}{window}})
+\begin{DoxyCompactList}\small\item\em Create a new surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1window}{window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{window_8hpp_ac53aead78134d695be87a92e4e784e1b}{lava\+::get\+\_\+window}} (GLFWwindow \texorpdfstring{$\ast$}{*}handle)
+\begin{DoxyCompactList}\small\item\em Get the window by GLFW handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Window. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{window_8hpp_a83bdbe791a46c86d3096a037a1c260ca}\index{window.hpp@{window.hpp}!create\_surface@{create\_surface}}
+\index{create\_surface@{create\_surface}!window.hpp@{window.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_surface()}{create\_surface()}}
+{\footnotesize\ttfamily \label{window_8hpp_a83bdbe791a46c86d3096a037a1c260ca} 
+Vk\+Surface\+KHR lava\+::create\+\_\+surface (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+
+
+Create a new surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & GLFW window handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Surface\+KHR Vulkan surface 
+\end{DoxyReturn}
+\Hypertarget{window_8hpp_ac53aead78134d695be87a92e4e784e1b}\index{window.hpp@{window.hpp}!get\_window@{get\_window}}
+\index{get\_window@{get\_window}!window.hpp@{window.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_window()}{get\_window()}}
+{\footnotesize\ttfamily \label{window_8hpp_ac53aead78134d695be87a92e4e784e1b} 
+window \texorpdfstring{$\ast$}{*} lava\+::get\+\_\+window (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Get the window by GLFW handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & GLFW window handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+window\texorpdfstring{$\ast$}{*} Assigned Window 
+\end{DoxyReturn}

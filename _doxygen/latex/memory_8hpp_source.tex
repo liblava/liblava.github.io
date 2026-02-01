@@ -1,0 +1,99 @@
+\doxysection{memory.\+hpp}
+\hypertarget{memory_8hpp_source}{}\label{memory_8hpp_source}\index{liblava/base/memory.hpp@{liblava/base/memory.hpp}}
+\mbox{\hyperlink{memory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ clang-\/format\ off}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base_2base_8hpp}{liblava/base/base.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}liblava/fwd.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}vk\_mem\_alloc.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ clang-\/format\ on}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}{allocator}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{s\_ptr}}\ =\ std::shared\_ptr<allocator>;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1allocator_ac694ae1eb7b09a888504a757a63ef08e}{device\_c\_ptr}}\ =\ \mbox{\hyperlink{structlava_1_1device}{device}}\ \textcolor{keyword}{const}*;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1allocator_a1ac4e448d0e97b6e4a3fc96d10af2947}{make}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<allocator>();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}{allocator}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1allocator_a104549380e2442ee141fc82a3665391c}{allocator}}(VmaAllocator\ \mbox{\hyperlink{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}{allocator}})}
+\DoxyCodeLine{00049\ \ \ \ \ :\ m\_allocator(\mbox{\hyperlink{structlava_1_1allocator_a43595f4de65311f903bdaf3f0a920d54}{allocator}})\ \{\}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1allocator_a9a166cb659c6c4b1512c419842431b2d}{create}}(\mbox{\hyperlink{structlava_1_1allocator_ac694ae1eb7b09a888504a757a63ef08e}{device\_c\_ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VmaAllocatorCreateFlags\ flags\ =\ 0);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1allocator_a07c98ecaa86fbf0184c2082a810ce484}{destroy}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1allocator_a4b9ce048e3a652edca92cd4f183e7de3}{valid}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_allocator\ !=\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ VmaAllocator\ \mbox{\hyperlink{structlava_1_1allocator_ad0b6446682e0edef271d7afbbb7aa97f}{get}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_allocator;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ VmaAllocator\ m\_allocator\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{allocator::s\_ptr}}\ \mbox{\hyperlink{memory_8hpp_a021206737032024500fda8195795e5ae}{create\_allocator}}(\mbox{\hyperlink{structlava_1_1allocator_ac694ae1eb7b09a888504a757a63ef08e}{allocator::device\_c\_ptr}}\ \mbox{\hyperlink{structlava_1_1device}{device}},}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VmaAllocatorCreateFlags\ flags\ =\ 0)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ \mbox{\hyperlink{structlava_1_1allocator_a1ac4e448d0e97b6e4a3fc96d10af2947}{allocator::make}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (!result-\/>create(\mbox{\hyperlink{structlava_1_1device}{device}},\ flags))}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}}\ :\ \mbox{\hyperlink{structlava_1_1no__copy__no__move_ac97369ee1b1a70996ab3b9b24bf26432}{no\_copy\_no\_move}}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}}\&\ \mbox{\hyperlink{structlava_1_1memory_afd4beb821e264e14ccb8ac4ce7385142}{instance}}()\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}}\ \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1memory_a742915f645a3e53af3bb3099cb150d45}{memory}};}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ VkAllocationCallbacks*\ \mbox{\hyperlink{structlava_1_1memory_a2bff8517a31a95e3f74e981dce64ee64}{alloc}}()\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_use\_custom\_cpu\_callbacks)}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_vk\_callbacks;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1memory_aa6cf33bee632e9ca622bd398a2023860}{set\_callbacks}}(VkAllocationCallbacks\ \textcolor{keyword}{const}\&\ callbacks)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ m\_vk\_callbacks\ =\ callbacks;}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1memory_a304445836b73d2d86aa08c33b1df6ba6}{set\_use\_custom\_cpu\_callbacks}}(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ m\_use\_custom\_cpu\_callbacks\ =\ value;}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_use\_custom\_cpu\_callbacks\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00151\ \ \ \ \ VkAllocationCallbacks\ m\_vk\_callbacks\ =\ \{\};}
+\DoxyCodeLine{00152\ \};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{memory_8hpp_a033009b2750404dee2dbcaa5f7a869a6}{find\_memory\_type\_with\_properties}}(VkPhysicalDeviceMemoryProperties\ properties,}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ type\_bits,}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkMemoryPropertyFlags\ required\_properties);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00172\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{memory_8hpp_a82f310a9f64c8e0390df94cdaccad831}{find\_memory\_type}}(VkPhysicalDevice\ gpu,}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkMemoryPropertyFlags\ properties,}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ type\_bits);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

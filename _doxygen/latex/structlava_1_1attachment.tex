@@ -1,0 +1,289 @@
+\doxysection{lava\+::attachment Struct Reference}
+\hypertarget{structlava_1_1attachment}{}\label{structlava_1_1attachment}\index{lava::attachment@{lava::attachment}}
+
+
+Attachment description.  
+
+
+
+
+{\ttfamily \#include $<$attachment.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}\label{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1attachment}{attachment}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to attachment. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1attachment_ac9aa19183cdf766e9a809966602ca265}\label{structlava_1_1attachment_ac9aa19183cdf766e9a809966602ca265} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of attachments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1attachment_ab1392899ab63234e2c8f2f2dbd3cf90b}{attachment}} (Vk\+Format format=VK\+\_\+\+FORMAT\+\_\+\+UNDEFINED, Vk\+Sample\+Count\+Flag\+Bits samples=VK\+\_\+\+SAMPLE\+\_\+\+COUNT\+\_\+1\+\_\+\+BIT)
+\begin{DoxyCompactList}\small\item\em Construct a new attachment. \end{DoxyCompactList}\item 
+Vk\+Attachment\+Description const \& \mbox{\hyperlink{structlava_1_1attachment_abad7ffb45a38e9083a6cbd7dd234e6df}{get\+\_\+description}} () const
+\begin{DoxyCompactList}\small\item\em Get the description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_ac73648e3bcc9fb0fa941548b740e5518}{set\+\_\+format}} (Vk\+Format format)
+\begin{DoxyCompactList}\small\item\em Set the format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_ad4f9434466abb598f4cf71c5a6b45f8d}{set\+\_\+samples}} (Vk\+Sample\+Count\+Flag\+Bits samples)
+\begin{DoxyCompactList}\small\item\em Set the samples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_a5dc7bc53fc74f95398f3340d57cfe150}{set\+\_\+op}} (Vk\+Attachment\+Load\+Op load\+\_\+op, Vk\+Attachment\+Store\+Op store\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_a83f658457ee737dded0de77eb241f667}{set\+\_\+load\+\_\+op}} (Vk\+Attachment\+Load\+Op load\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the load op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_a85df5ee119ce63bb476b4232720bf3f2}{set\+\_\+store\+\_\+op}} (Vk\+Attachment\+Store\+Op store\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the store op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_ac886ea2e70da3904f47a4b67f2062951}{set\+\_\+stencil\+\_\+op}} (Vk\+Attachment\+Load\+Op load\+\_\+op, Vk\+Attachment\+Store\+Op store\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the stencil op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_acc264368d12704b2ca95d5c8b5f80b38}{set\+\_\+stencil\+\_\+load\+\_\+op}} (Vk\+Attachment\+Load\+Op load\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the stencil load op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_aa6dc44ba5f4efdabf2801fdd7b17132b}{set\+\_\+stencil\+\_\+store\+\_\+op}} (Vk\+Attachment\+Store\+Op store\+\_\+op)
+\begin{DoxyCompactList}\small\item\em Set the stencil store op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_acc06388a2ddb6f95632c2aa1d7295aeb}{set\+\_\+layouts}} (Vk\+Image\+Layout initial, Vk\+Image\+Layout final)
+\begin{DoxyCompactList}\small\item\em Set the layouts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_af0d326486fb9c7c3a68104a3e7aa56ca}{set\+\_\+initial\+\_\+layout}} (Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the initial layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1attachment_a5e543579f671f6b3c943b91db798f054}{set\+\_\+final\+\_\+layout}} (Vk\+Image\+Layout layout)
+\begin{DoxyCompactList}\small\item\em Set the final layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1attachment_a0c411f8ba4d54cab48f82464d837c06d}{make}} (Vk\+Format format=VK\+\_\+\+FORMAT\+\_\+\+UNDEFINED, Vk\+Sample\+Count\+Flag\+Bits samples=VK\+\_\+\+SAMPLE\+\_\+\+COUNT\+\_\+1\+\_\+\+BIT)
+\begin{DoxyCompactList}\small\item\em Make a new attachment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Attachment description. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1attachment_ab1392899ab63234e2c8f2f2dbd3cf90b}\index{lava::attachment@{lava::attachment}!attachment@{attachment}}
+\index{attachment@{attachment}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{attachment()}{attachment()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_ab1392899ab63234e2c8f2f2dbd3cf90b} 
+lava\+::attachment\+::attachment (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format}{ = {\ttfamily VK\+\_\+FORMAT\+\_\+UNDEFINED}, }\item[{Vk\+Sample\+Count\+Flag\+Bits}]{samples}{ = {\ttfamily VK\+\_\+SAMPLE\+\_\+COUNT\+\_\+1\+\_\+BIT}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Attachment format \\
+\hline
+{\em samples} & Sample count flag bits \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1attachment_abad7ffb45a38e9083a6cbd7dd234e6df}\index{lava::attachment@{lava::attachment}!get\_description@{get\_description}}
+\index{get\_description@{get\_description}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{get\_description()}{get\_description()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_abad7ffb45a38e9083a6cbd7dd234e6df} 
+Vk\+Attachment\+Description const  \& lava\+::attachment\+::get\+\_\+description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the description. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Attachment\+Description const\& Attachment description 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1attachment_a0c411f8ba4d54cab48f82464d837c06d}\index{lava::attachment@{lava::attachment}!make@{make}}
+\index{make@{make}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_a0c411f8ba4d54cab48f82464d837c06d} 
+static \mbox{\hyperlink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\+\_\+ptr}} lava\+::attachment\+::make (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format}{ = {\ttfamily VK\+\_\+FORMAT\+\_\+UNDEFINED}, }\item[{Vk\+Sample\+Count\+Flag\+Bits}]{samples}{ = {\ttfamily VK\+\_\+SAMPLE\+\_\+COUNT\+\_\+1\+\_\+BIT}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Attachment format \\
+\hline
+{\em samples} & Sample count flag bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\+\_\+ptr} Shared pointer to attachment 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1attachment_a5e543579f671f6b3c943b91db798f054}\index{lava::attachment@{lava::attachment}!set\_final\_layout@{set\_final\_layout}}
+\index{set\_final\_layout@{set\_final\_layout}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_final\_layout()}{set\_final\_layout()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_a5e543579f671f6b3c943b91db798f054} 
+void lava\+::attachment\+::set\+\_\+final\+\_\+layout (\begin{DoxyParamCaption}\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the final layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_ac73648e3bcc9fb0fa941548b740e5518}\index{lava::attachment@{lava::attachment}!set\_format@{set\_format}}
+\index{set\_format@{set\_format}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_format()}{set\_format()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_ac73648e3bcc9fb0fa941548b740e5518} 
+void lava\+::attachment\+::set\+\_\+format (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Attachment format \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_af0d326486fb9c7c3a68104a3e7aa56ca}\index{lava::attachment@{lava::attachment}!set\_initial\_layout@{set\_initial\_layout}}
+\index{set\_initial\_layout@{set\_initial\_layout}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_initial\_layout()}{set\_initial\_layout()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_af0d326486fb9c7c3a68104a3e7aa56ca} 
+void lava\+::attachment\+::set\+\_\+initial\+\_\+layout (\begin{DoxyParamCaption}\item[{Vk\+Image\+Layout}]{layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layout} & Image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_acc06388a2ddb6f95632c2aa1d7295aeb}\index{lava::attachment@{lava::attachment}!set\_layouts@{set\_layouts}}
+\index{set\_layouts@{set\_layouts}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_layouts()}{set\_layouts()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_acc06388a2ddb6f95632c2aa1d7295aeb} 
+void lava\+::attachment\+::set\+\_\+layouts (\begin{DoxyParamCaption}\item[{Vk\+Image\+Layout}]{initial}{, }\item[{Vk\+Image\+Layout}]{final}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the layouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial} & Initial image layout \\
+\hline
+{\em final} & Final image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_a83f658457ee737dded0de77eb241f667}\index{lava::attachment@{lava::attachment}!set\_load\_op@{set\_load\_op}}
+\index{set\_load\_op@{set\_load\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_load\_op()}{set\_load\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_a83f658457ee737dded0de77eb241f667} 
+void lava\+::attachment\+::set\+\_\+load\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Load\+Op}]{load\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the load op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em load\+\_\+op} & Attachment load op \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_a5dc7bc53fc74f95398f3340d57cfe150}\index{lava::attachment@{lava::attachment}!set\_op@{set\_op}}
+\index{set\_op@{set\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_op()}{set\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_a5dc7bc53fc74f95398f3340d57cfe150} 
+void lava\+::attachment\+::set\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Load\+Op}]{load\+\_\+op}{, }\item[{Vk\+Attachment\+Store\+Op}]{store\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em load\+\_\+op} & Attachment load op \\
+\hline
+{\em store\+\_\+op} & Attachment store op \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_ad4f9434466abb598f4cf71c5a6b45f8d}\index{lava::attachment@{lava::attachment}!set\_samples@{set\_samples}}
+\index{set\_samples@{set\_samples}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_samples()}{set\_samples()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_ad4f9434466abb598f4cf71c5a6b45f8d} 
+void lava\+::attachment\+::set\+\_\+samples (\begin{DoxyParamCaption}\item[{Vk\+Sample\+Count\+Flag\+Bits}]{samples}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the samples. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples} & Attachment sample count flag bits \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_acc264368d12704b2ca95d5c8b5f80b38}\index{lava::attachment@{lava::attachment}!set\_stencil\_load\_op@{set\_stencil\_load\_op}}
+\index{set\_stencil\_load\_op@{set\_stencil\_load\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_stencil\_load\_op()}{set\_stencil\_load\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_acc264368d12704b2ca95d5c8b5f80b38} 
+void lava\+::attachment\+::set\+\_\+stencil\+\_\+load\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Load\+Op}]{load\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stencil load op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em load\+\_\+op} & Attachment load op \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_ac886ea2e70da3904f47a4b67f2062951}\index{lava::attachment@{lava::attachment}!set\_stencil\_op@{set\_stencil\_op}}
+\index{set\_stencil\_op@{set\_stencil\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_stencil\_op()}{set\_stencil\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_ac886ea2e70da3904f47a4b67f2062951} 
+void lava\+::attachment\+::set\+\_\+stencil\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Load\+Op}]{load\+\_\+op}{, }\item[{Vk\+Attachment\+Store\+Op}]{store\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stencil op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em load\+\_\+op} & Attachment load op \\
+\hline
+{\em store\+\_\+op} & Attachment store op \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_aa6dc44ba5f4efdabf2801fdd7b17132b}\index{lava::attachment@{lava::attachment}!set\_stencil\_store\_op@{set\_stencil\_store\_op}}
+\index{set\_stencil\_store\_op@{set\_stencil\_store\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_stencil\_store\_op()}{set\_stencil\_store\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_aa6dc44ba5f4efdabf2801fdd7b17132b} 
+void lava\+::attachment\+::set\+\_\+stencil\+\_\+store\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Store\+Op}]{store\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the stencil store op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em store\+\_\+op} & Attachment store op \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1attachment_a85df5ee119ce63bb476b4232720bf3f2}\index{lava::attachment@{lava::attachment}!set\_store\_op@{set\_store\_op}}
+\index{set\_store\_op@{set\_store\_op}!lava::attachment@{lava::attachment}}
+\doxysubsubsection{\texorpdfstring{set\_store\_op()}{set\_store\_op()}}
+{\footnotesize\ttfamily \label{structlava_1_1attachment_a85df5ee119ce63bb476b4232720bf3f2} 
+void lava\+::attachment\+::set\+\_\+store\+\_\+op (\begin{DoxyParamCaption}\item[{Vk\+Attachment\+Store\+Op}]{store\+\_\+op}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the store op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em store\+\_\+op} & Attachment store op \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{attachment_8hpp}{attachment.\+hpp}}\end{DoxyCompactItemize}

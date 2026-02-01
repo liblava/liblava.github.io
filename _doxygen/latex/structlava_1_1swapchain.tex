@@ -1,0 +1,317 @@
+\doxysection{lava\+::swapchain Struct Reference}
+\hypertarget{structlava_1_1swapchain}{}\label{structlava_1_1swapchain}\index{lava::swapchain@{lava::swapchain}}
+
+
+Swaphchain.  
+
+
+
+
+{\ttfamily \#include $<$swapchain.\+hpp$>$}
+
+Inheritance diagram for lava\+::swapchain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1swapchain}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}}
+\begin{DoxyCompactList}\small\item\em Swapchain callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_af8b9630411168cbdc416cf0d24dfea39}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Surface\+KHR surface, Vk\+Surface\+Format\+KHR format, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, bool \mbox{\hyperlink{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88}{v\+\_\+sync}}=false, bool \mbox{\hyperlink{structlava_1_1swapchain_a0b65d216e6be2dcf797b65d27dba5b6c}{triple\+\_\+buffer}}=true)
+\begin{DoxyCompactList}\small\item\em Create a new swapchain. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1swapchain_a5e3664831939f1ced3c5c352656b7e56}\label{structlava_1_1swapchain_a5e3664831939f1ced3c5c352656b7e56} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the swapchain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_aa07ecb458ba621fb1ca281969de51611}{resize}} (\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Resize the swapchain. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1swapchain_a521e6a4d528080bb7f08b270acfc55d9}\label{structlava_1_1swapchain_a521e6a4d528080bb7f08b270acfc55d9} 
+void {\bfseries request\+\_\+reload} ()
+\begin{DoxyCompactList}\small\item\em Request a reload of the swapchain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_a5329fb28a938b547f44896200bafbb69}{reload\+\_\+request}} () const
+\begin{DoxyCompactList}\small\item\em Check if reload of the swapchain is requested. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1swapchain_a6bc4d9f17fbe1f26963dcdef108c8d19}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1swapchain_a215d372f28ff63e9380daa6bdb1b20d4}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the swapchain. \end{DoxyCompactList}\item 
+Vk\+Format \mbox{\hyperlink{structlava_1_1swapchain_ac89fc6e2cc8808b2535b8a922696873f}{get\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Get the format of the swapchain. \end{DoxyCompactList}\item 
+Vk\+Color\+Space\+KHR \mbox{\hyperlink{structlava_1_1swapchain_acb79990c2af08536400fcd2ce0ee5c1f}{get\+\_\+color\+\_\+space}} () const
+\begin{DoxyCompactList}\small\item\em Get the color space of the swapchain. \end{DoxyCompactList}\item 
+Vk\+Swapchain\+KHR \mbox{\hyperlink{structlava_1_1swapchain_ae9cdc4102b140aa080aecee6b8c30672}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1swapchain_a3fae6439a7f077ab240de83932ad23c2}{get\+\_\+backbuffer\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Get the backbuffer count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1swapchain_a5e4dbed644ce36b141b4f8bbe74fb642}{get\+\_\+backbuffers}} () const
+\begin{DoxyCompactList}\small\item\em Get the backbuffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1swapchain_aa0f1dc61fdbd6d90d70602216824569a}{add\+\_\+callback}} (\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}cb)
+\begin{DoxyCompactList}\small\item\em Add callback to swapchain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1swapchain_a3492a31d76e85ead2eb089e19d041032}{remove\+\_\+callback}} (\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}cb)
+\begin{DoxyCompactList}\small\item\em Remove callback from swapchain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88}{v\+\_\+sync}} () const
+\begin{DoxyCompactList}\small\item\em Check if V-\/\+Sync is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_a0b65d216e6be2dcf797b65d27dba5b6c}{triple\+\_\+buffer}} () const
+\begin{DoxyCompactList}\small\item\em Check if VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR is preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1swapchain_a2ba8d162d3d6159cd197ca0a540c6b68}{surface\+\_\+supported}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} queue\+\_\+family) const
+\begin{DoxyCompactList}\small\item\em Check if surface is supported by queue family index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Swaphchain. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1swapchain_aa0f1dc61fdbd6d90d70602216824569a}\index{lava::swapchain@{lava::swapchain}!add\_callback@{add\_callback}}
+\index{add\_callback@{add\_callback}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{add\_callback()}{add\_callback()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_aa0f1dc61fdbd6d90d70602216824569a} 
+void lava\+::swapchain\+::add\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Add callback to swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & Callback to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1swapchain_af8b9630411168cbdc416cf0d24dfea39}\index{lava::swapchain@{lava::swapchain}!create@{create}}
+\index{create@{create}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_af8b9630411168cbdc416cf0d24dfea39} 
+bool lava\+::swapchain\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{Vk\+Surface\+KHR}]{surface}{, }\item[{Vk\+Surface\+Format\+KHR}]{format}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{, }\item[{bool}]{v\+\_\+sync}{ = {\ttfamily false}, }\item[{bool}]{triple\+\_\+buffer}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Create a new swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em surface} & Vulkan surface \\
+\hline
+{\em format} & Surface format \\
+\hline
+{\em size} & Size of swapchain \\
+\hline
+{\em v\+\_\+sync} & V-\/\+Sync enabled \\
+\hline
+{\em triple\+\_\+buffer} & VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_ae9cdc4102b140aa080aecee6b8c30672}\index{lava::swapchain@{lava::swapchain}!get@{get}}
+\index{get@{get}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_ae9cdc4102b140aa080aecee6b8c30672} 
+Vk\+Swapchain\+KHR lava\+::swapchain\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the swapchain. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Swapchain\+KHR Vulkan swapchain 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a3fae6439a7f077ab240de83932ad23c2}\index{lava::swapchain@{lava::swapchain}!get\_backbuffer\_count@{get\_backbuffer\_count}}
+\index{get\_backbuffer\_count@{get\_backbuffer\_count}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_backbuffer\_count()}{get\_backbuffer\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a3fae6439a7f077ab240de83932ad23c2} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::swapchain\+::get\+\_\+backbuffer\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the backbuffer count. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Number of backbuffers 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a5e4dbed644ce36b141b4f8bbe74fb642}\index{lava::swapchain@{lava::swapchain}!get\_backbuffers@{get\_backbuffers}}
+\index{get\_backbuffers@{get\_backbuffers}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_backbuffers()}{get\_backbuffers()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a5e4dbed644ce36b141b4f8bbe74fb642} 
+\mbox{\hyperlink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list}} const  \& lava\+::swapchain\+::get\+\_\+backbuffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the backbuffers. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}{image\+::s\+\_\+list} const\& List of backbuffer images 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_acb79990c2af08536400fcd2ce0ee5c1f}\index{lava::swapchain@{lava::swapchain}!get\_color\_space@{get\_color\_space}}
+\index{get\_color\_space@{get\_color\_space}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_color\_space()}{get\_color\_space()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_acb79990c2af08536400fcd2ce0ee5c1f} 
+Vk\+Color\+Space\+KHR lava\+::swapchain\+::get\+\_\+color\+\_\+space (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the color space of the swapchain. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Color\+Space\+KHR Swapchain color space 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a6bc4d9f17fbe1f26963dcdef108c8d19}\index{lava::swapchain@{lava::swapchain}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a6bc4d9f17fbe1f26963dcdef108c8d19} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::swapchain\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_ac89fc6e2cc8808b2535b8a922696873f}\index{lava::swapchain@{lava::swapchain}!get\_format@{get\_format}}
+\index{get\_format@{get\_format}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_format()}{get\_format()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_ac89fc6e2cc8808b2535b8a922696873f} 
+Vk\+Format lava\+::swapchain\+::get\+\_\+format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the format of the swapchain. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Format Swapchain format 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a215d372f28ff63e9380daa6bdb1b20d4}\index{lava::swapchain@{lava::swapchain}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a215d372f28ff63e9380daa6bdb1b20d4} 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::swapchain\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the swapchain. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2} Swapchain size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a5329fb28a938b547f44896200bafbb69}\index{lava::swapchain@{lava::swapchain}!reload\_request@{reload\_request}}
+\index{reload\_request@{reload\_request}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{reload\_request()}{reload\_request()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a5329fb28a938b547f44896200bafbb69} 
+bool lava\+::swapchain\+::reload\+\_\+request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if reload of the swapchain is requested. 
+
+\begin{DoxyReturn}{Returns}
+Reload is requested or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a3492a31d76e85ead2eb089e19d041032}\index{lava::swapchain@{lava::swapchain}!remove\_callback@{remove\_callback}}
+\index{remove\_callback@{remove\_callback}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{remove\_callback()}{remove\_callback()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a3492a31d76e85ead2eb089e19d041032} 
+void lava\+::swapchain\+::remove\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1swapchain_1_1callback}{callback}} \texorpdfstring{$\ast$}{*}}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Remove callback from swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & Callback to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1swapchain_aa07ecb458ba621fb1ca281969de51611}\index{lava::swapchain@{lava::swapchain}!resize@{resize}}
+\index{resize@{resize}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_aa07ecb458ba621fb1ca281969de51611} 
+bool lava\+::swapchain\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{new\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Resize the swapchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+size} & New size of swapchain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resize was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a2ba8d162d3d6159cd197ca0a540c6b68}\index{lava::swapchain@{lava::swapchain}!surface\_supported@{surface\_supported}}
+\index{surface\_supported@{surface\_supported}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{surface\_supported()}{surface\_supported()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a2ba8d162d3d6159cd197ca0a540c6b68} 
+bool lava\+::swapchain\+::surface\+\_\+supported (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{queue\+\_\+family}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if surface is supported by queue family index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\+\_\+family} & Queue family index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Surface is supported by queue family or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_a0b65d216e6be2dcf797b65d27dba5b6c}\index{lava::swapchain@{lava::swapchain}!triple\_buffer@{triple\_buffer}}
+\index{triple\_buffer@{triple\_buffer}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{triple\_buffer()}{triple\_buffer()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_a0b65d216e6be2dcf797b65d27dba5b6c} 
+bool lava\+::swapchain\+::triple\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR is preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR. 
+
+\begin{DoxyReturn}{Returns}
+VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+MAILBOX\+\_\+\+KHR preferred over VK\+\_\+\+PRESENT\+\_\+\+MODE\+\_\+\+IMMEDIATE\+\_\+\+KHR or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88}\index{lava::swapchain@{lava::swapchain}!v\_sync@{v\_sync}}
+\index{v\_sync@{v\_sync}!lava::swapchain@{lava::swapchain}}
+\doxysubsubsection{\texorpdfstring{v\_sync()}{v\_sync()}}
+{\footnotesize\ttfamily \label{structlava_1_1swapchain_af524788d4411c4205db54d5ed9454b88} 
+bool lava\+::swapchain\+::v\+\_\+sync (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if V-\/\+Sync is enabled. 
+
+\begin{DoxyReturn}{Returns}
+V-\/\+Sync is active or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{swapchain_8hpp}{swapchain.\+hpp}}\end{DoxyCompactItemize}

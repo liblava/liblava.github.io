@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1renderer" kind="struct" language="C++" prot="public">
+    <compoundname>lava::renderer</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="renderer_8hpp" local="no">renderer.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1renderer_1a5f254f3dc61a0ff1050645d3a70b0f6e" prot="public" static="no">
+        <type><ref refid="structlava_1_1renderer" kindref="compound">renderer</ref> *</type>
+        <definition>using lava::renderer::ptr =  renderer*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::renderer::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="23" column="5" bodyfile="liblava/frame/renderer.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1renderer_1a8a81825f7d0d459e036c50bdd48cd4f6" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using lava::renderer::destroy_func =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>destroy_func</name>
+        <qualifiedname>lava::renderer::destroy_func</qualifiedname>
+        <briefdescription>
+<para>Destroy function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="88" column="5" bodyfile="liblava/frame/renderer.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1renderer_1a6e86bebea6907c3eba78f567a5f6eba6" prot="public" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" kindref="member">VkSemaphores</ref></type>
+        <definition>VkSemaphores lava::renderer::user_frame_wait_semaphores</definition>
+        <argsstring></argsstring>
+        <name>user_frame_wait_semaphores</name>
+        <qualifiedname>lava::renderer::user_frame_wait_semaphores</qualifiedname>
+        <briefdescription>
+<para>The frame waits additionally for these semaphores (Usefully for additional CommandBuffers) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="79" column="18" bodyfile="liblava/frame/renderer.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1ab2b38a102fa1d20678f15a4a92fe0598" prot="public" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a776c45a697b1300f9460e2015e99b69d" kindref="member">VkPipelineStageFlagsList</ref></type>
+        <definition>VkPipelineStageFlagsList lava::renderer::user_frame_wait_stages</definition>
+        <argsstring></argsstring>
+        <name>user_frame_wait_stages</name>
+        <qualifiedname>lava::renderer::user_frame_wait_stages</qualifiedname>
+        <briefdescription>
+<para>To user_frame_wait_semaphores corresponding pipeline wait stages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="82" column="30" bodyfile="liblava/frame/renderer.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a13467ddbc1f09b2e5c74c91b747e3f18" prot="public" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" kindref="member">VkSemaphores</ref></type>
+        <definition>VkSemaphores lava::renderer::user_frame_signal_semaphores</definition>
+        <argsstring></argsstring>
+        <name>user_frame_signal_semaphores</name>
+        <qualifiedname>lava::renderer::user_frame_signal_semaphores</qualifiedname>
+        <briefdescription>
+<para>The frame additionally signals these semaphores (Usefully for additional CommandBuffers) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="85" column="18" bodyfile="liblava/frame/renderer.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a2400aee51a31b1edd61bf29e2870da21" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1renderer_1a8a81825f7d0d459e036c50bdd48cd4f6" kindref="member">destroy_func</ref></type>
+        <definition>destroy_func lava::renderer::on_destroy</definition>
+        <argsstring></argsstring>
+        <name>on_destroy</name>
+        <qualifiedname>lava::renderer::on_destroy</qualifiedname>
+        <briefdescription>
+<para>Called on renderer destroy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="91" column="18" bodyfile="liblava/frame/renderer.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1aa8927a2cacb8b75863dae7a26e99b44d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::renderer::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <qualifiedname>lava::renderer::active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="94" column="10" bodyfile="liblava/frame/renderer.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1renderer_1a2f3295081b85eb92cc5fe357e4a8e7e4" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::renderer::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::renderer::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="98" column="17" bodyfile="liblava/frame/renderer.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1ac9988fc46354394d5bee01c2f0e056c7" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1queue" kindref="compound">queue</ref></type>
+        <definition>queue lava::renderer::m_graphics_queue</definition>
+        <argsstring></argsstring>
+        <name>m_graphics_queue</name>
+        <qualifiedname>lava::renderer::m_graphics_queue</qualifiedname>
+        <briefdescription>
+<para>Graphics queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="101" column="11" bodyfile="liblava/frame/renderer.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1aaded1b875d3812c5951e76dced304f29" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1swapchain" kindref="compound">swapchain</ref> *</type>
+        <definition>swapchain* lava::renderer::m_target</definition>
+        <argsstring></argsstring>
+        <name>m_target</name>
+        <qualifiedname>lava::renderer::m_target</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Swapchain target. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="104" column="15" bodyfile="liblava/frame/renderer.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1aa5af5e74f31a832df4f0a41e25bd21fc" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::renderer::m_current_frame</definition>
+        <argsstring></argsstring>
+        <name>m_current_frame</name>
+        <qualifiedname>lava::renderer::m_current_frame</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="107" column="11" bodyfile="liblava/frame/renderer.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a3ecd563dbb70a2455cb5b67f1fc5cae5" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::renderer::m_queued_frames</definition>
+        <argsstring></argsstring>
+        <name>m_queued_frames</name>
+        <qualifiedname>lava::renderer::m_queued_frames</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Number of queued frames. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="110" column="10" bodyfile="liblava/frame/renderer.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a526723c8d5246a7672601824994be514" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::renderer::m_current_sync</definition>
+        <argsstring></argsstring>
+        <name>m_current_sync</name>
+        <qualifiedname>lava::renderer::m_current_sync</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current sync frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="113" column="10" bodyfile="liblava/frame/renderer.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1ae95b89e2d01549ba894a583cc5b0c113" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1afc7a081f8c97f8d4b753a70c91270d3f" kindref="member">VkFences</ref></type>
+        <definition>VkFences lava::renderer::m_fences</definition>
+        <argsstring></argsstring>
+        <name>m_fences</name>
+        <qualifiedname>lava::renderer::m_fences</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of fences. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="116" column="14" bodyfile="liblava/frame/renderer.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a80ab4ca335a895e54ac39035e38cb161" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1afc7a081f8c97f8d4b753a70c91270d3f" kindref="member">VkFences</ref></type>
+        <definition>VkFences lava::renderer::m_fences_in_use</definition>
+        <argsstring></argsstring>
+        <name>m_fences_in_use</name>
+        <qualifiedname>lava::renderer::m_fences_in_use</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of fences in use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="119" column="14" bodyfile="liblava/frame/renderer.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1aff9af3faa3bc21618b2e07db9d0a052c" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" kindref="member">VkSemaphores</ref></type>
+        <definition>VkSemaphores lava::renderer::m_image_acquired_semaphores</definition>
+        <argsstring></argsstring>
+        <name>m_image_acquired_semaphores</name>
+        <qualifiedname>lava::renderer::m_image_acquired_semaphores</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of image acquired semaphores. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="122" column="18" bodyfile="liblava/frame/renderer.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1renderer_1a22b404d1c5db1554f2eb111547079c9c" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" kindref="member">VkSemaphores</ref></type>
+        <definition>VkSemaphores lava::renderer::m_render_complete_semaphores</definition>
+        <argsstring></argsstring>
+        <name>m_render_complete_semaphores</name>
+        <qualifiedname>lava::renderer::m_render_complete_semaphores</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of render complete semaphores. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="125" column="18" bodyfile="liblava/frame/renderer.hpp" bodystart="125" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1renderer_1acf20693eee0e74e63712dfeffbf4c6fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::renderer::create</definition>
+        <argsstring>(swapchain *target)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::renderer::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1swapchain" kindref="compound">swapchain</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Create a new renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Swapchain target </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1ad98c7125833d129b5dc15fb363a5162a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::renderer::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::renderer::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1a6d619cb1a8aeb50a0ed075ea1477601d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="renderer_8hpp_1a3faafb72c76506d092019c336b0e8c61" kindref="member">optional_index</ref></type>
+        <definition>optional_index lava::renderer::begin_frame</definition>
+        <argsstring>()</argsstring>
+        <name>begin_frame</name>
+        <qualifiedname>lava::renderer::begin_frame</qualifiedname>
+        <briefdescription>
+<para>Begin to render a frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="renderer_8hpp_1a3faafb72c76506d092019c336b0e8c61" kindref="member">optional_index</ref> Frame index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="41" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1ae667b73be54b89bfe1a2df94258bb429" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::renderer::end_frame</definition>
+        <argsstring>(VkCommandBuffers const &amp;cmd_buffers)</argsstring>
+        <name>end_frame</name>
+        <qualifiedname>lava::renderer::end_frame</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1ace97a755b9ed66f2467c625c05a29c0e" kindref="member">VkCommandBuffers</ref> const &amp;</type>
+          <declname>cmd_buffers</declname>
+        </param>
+        <briefdescription>
+<para>End of frame rendering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buffers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of command buffers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>End was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1ab4f090f364f811424edb2b08b4b50d44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::renderer::frame</definition>
+        <argsstring>(VkCommandBuffers const &amp;cmd_buffers)</argsstring>
+        <name>frame</name>
+        <qualifiedname>lava::renderer::frame</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1ace97a755b9ed66f2467c625c05a29c0e" kindref="member">VkCommandBuffers</ref> const &amp;</type>
+          <declname>cmd_buffers</declname>
+        </param>
+        <briefdescription>
+<para>Render a frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buffers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of command buffers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Render was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="55" column="10" bodyfile="liblava/frame/renderer.hpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1a1706d7aef2be7db41fe625af63d63e6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::renderer::get_frame</definition>
+        <argsstring>() const</argsstring>
+        <name>get_frame</name>
+        <qualifiedname>lava::renderer::get_frame</qualifiedname>
+        <briefdescription>
+<para>Get the current frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index Frame index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="66" column="11" bodyfile="liblava/frame/renderer.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1renderer_1a9761377f19184fed17c77f45acc68605" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::renderer::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::renderer::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/frame/renderer.hpp" line="74" column="17" bodyfile="liblava/frame/renderer.hpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Plain renderer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::renderer</label>
+        <link refid="structlava_1_1renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::renderer</label>
+        <link refid="structlava_1_1renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/frame/renderer.hpp" line="21" column="1" bodyfile="liblava/frame/renderer.hpp" bodystart="21" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structlava_1_1renderer_1aa8927a2cacb8b75863dae7a26e99b44d" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>active</name></member>
+      <member refid="structlava_1_1renderer_1a6d619cb1a8aeb50a0ed075ea1477601d" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>begin_frame</name></member>
+      <member refid="structlava_1_1renderer_1acf20693eee0e74e63712dfeffbf4c6fa" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>create</name></member>
+      <member refid="structlava_1_1renderer_1ad98c7125833d129b5dc15fb363a5162a" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>destroy</name></member>
+      <member refid="structlava_1_1renderer_1a8a81825f7d0d459e036c50bdd48cd4f6" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>destroy_func</name></member>
+      <member refid="structlava_1_1renderer_1ae667b73be54b89bfe1a2df94258bb429" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>end_frame</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>entity</name></member>
+      <member refid="structlava_1_1renderer_1ab4f090f364f811424edb2b08b4b50d44" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>frame</name></member>
+      <member refid="structlava_1_1renderer_1a9761377f19184fed17c77f45acc68605" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>get_device</name></member>
+      <member refid="structlava_1_1renderer_1a1706d7aef2be7db41fe625af63d63e6c" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>get_frame</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>get_id</name></member>
+      <member refid="structlava_1_1renderer_1aa5af5e74f31a832df4f0a41e25bd21fc" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_current_frame</name></member>
+      <member refid="structlava_1_1renderer_1a526723c8d5246a7672601824994be514" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_current_sync</name></member>
+      <member refid="structlava_1_1renderer_1a2f3295081b85eb92cc5fe357e4a8e7e4" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_device</name></member>
+      <member refid="structlava_1_1renderer_1ae95b89e2d01549ba894a583cc5b0c113" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_fences</name></member>
+      <member refid="structlava_1_1renderer_1a80ab4ca335a895e54ac39035e38cb161" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_fences_in_use</name></member>
+      <member refid="structlava_1_1renderer_1ac9988fc46354394d5bee01c2f0e056c7" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_graphics_queue</name></member>
+      <member refid="structlava_1_1renderer_1aff9af3faa3bc21618b2e07db9d0a052c" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_image_acquired_semaphores</name></member>
+      <member refid="structlava_1_1renderer_1a3ecd563dbb70a2455cb5b67f1fc5cae5" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_queued_frames</name></member>
+      <member refid="structlava_1_1renderer_1a22b404d1c5db1554f2eb111547079c9c" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_render_complete_semaphores</name></member>
+      <member refid="structlava_1_1renderer_1aaded1b875d3812c5951e76dced304f29" prot="private" virt="non-virtual"><scope>lava::renderer</scope><name>m_target</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1renderer_1a2400aee51a31b1edd61bf29e2870da21" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>on_destroy</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>operator=</name></member>
+      <member refid="structlava_1_1renderer_1a5f254f3dc61a0ff1050645d3a70b0f6e" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>ptr</name></member>
+      <member refid="structlava_1_1renderer_1a13467ddbc1f09b2e5c74c91b747e3f18" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>user_frame_signal_semaphores</name></member>
+      <member refid="structlava_1_1renderer_1a6e86bebea6907c3eba78f567a5f6eba6" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>user_frame_wait_semaphores</name></member>
+      <member refid="structlava_1_1renderer_1ab2b38a102fa1d20678f15a4a92fe0598" prot="public" virt="non-virtual"><scope>lava::renderer</scope><name>user_frame_wait_stages</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::renderer</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

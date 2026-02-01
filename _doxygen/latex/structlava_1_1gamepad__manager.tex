@@ -1,0 +1,86 @@
+\doxysection{lava\+::gamepad\+\_\+manager Struct Reference}
+\hypertarget{structlava_1_1gamepad__manager}{}\label{structlava_1_1gamepad__manager}\index{lava::gamepad\_manager@{lava::gamepad\_manager}}
+
+
+Gamepad manager.  
+
+
+
+
+{\ttfamily \#include $<$gamepad.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1gamepad__manager_ae5af976eebf84c9ec5ce530ac6fea316}\label{structlava_1_1gamepad__manager_ae5af976eebf84c9ec5ce530ac6fea316} 
+using {\bfseries listener\+\_\+func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1gamepad}{gamepad}}, bool)$>$
+\begin{DoxyCompactList}\small\item\em Gamepad listener function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1gamepad__manager_a39bb10a613ff406dbebf41d4c122ba1d}{add}} (\mbox{\hyperlink{structlava_1_1gamepad__manager_ae5af976eebf84c9ec5ce530ac6fea316}{listener\+\_\+func}} listener)
+\begin{DoxyCompactList}\small\item\em Add listener. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1gamepad__manager_a4006326be8e458c1c1cca8ffe19f4e66}{remove}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} func\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove listener. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1gamepad__manager}{gamepad\+\_\+manager}} \& \mbox{\hyperlink{structlava_1_1gamepad__manager_afad0d16868d78fd3b67e255b26284de3}{singleton}} ()
+\begin{DoxyCompactList}\small\item\em Get gamepad manager singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gamepad manager. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1gamepad__manager_a39bb10a613ff406dbebf41d4c122ba1d}\index{lava::gamepad\_manager@{lava::gamepad\_manager}!add@{add}}
+\index{add@{add}!lava::gamepad\_manager@{lava::gamepad\_manager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad__manager_a39bb10a613ff406dbebf41d4c122ba1d} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::gamepad\+\_\+manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1gamepad__manager_ae5af976eebf84c9ec5ce530ac6fea316}{listener\+\_\+func}}}]{listener}{}\end{DoxyParamCaption})}
+
+
+
+Add listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Gamepad listener function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of function 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1gamepad__manager_a4006326be8e458c1c1cca8ffe19f4e66}\index{lava::gamepad\_manager@{lava::gamepad\_manager}!remove@{remove}}
+\index{remove@{remove}!lava::gamepad\_manager@{lava::gamepad\_manager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad__manager_a4006326be8e458c1c1cca8ffe19f4e66} 
+void lava\+::gamepad\+\_\+manager\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{func\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Remove listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\+\_\+id} & Id of function \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1gamepad__manager_afad0d16868d78fd3b67e255b26284de3}\index{lava::gamepad\_manager@{lava::gamepad\_manager}!singleton@{singleton}}
+\index{singleton@{singleton}!lava::gamepad\_manager@{lava::gamepad\_manager}}
+\doxysubsubsection{\texorpdfstring{singleton()}{singleton()}}
+{\footnotesize\ttfamily \label{structlava_1_1gamepad__manager_afad0d16868d78fd3b67e255b26284de3} 
+static \mbox{\hyperlink{structlava_1_1gamepad__manager}{gamepad\+\_\+manager}} \& lava\+::gamepad\+\_\+manager\+::singleton (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get gamepad manager singleton. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1gamepad__manager}{gamepad\+\_\+manager}\& Gamepad manager 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{gamepad_8hpp}{gamepad.\+hpp}}\end{DoxyCompactItemize}

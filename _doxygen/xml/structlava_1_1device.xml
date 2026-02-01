@@ -1,0 +1,958 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1device" kind="struct" language="C++" prot="public">
+    <compoundname>lava::device</compoundname>
+    <basecompoundref refid="structlava_1_1device__table" prot="public" virt="non-virtual">lava::device_table</basecompoundref>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="device_8hpp" local="no">device.hpp</includes>
+    <innerclass refid="structlava_1_1device_1_1create__param" prot="public">lava::device::create_param</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" prot="public" static="no">
+        <type><ref refid="structlava_1_1device" kindref="compound">device</ref> *</type>
+        <definition>using lava::device::ptr =  device*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::device::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="23" column="5" bodyfile="liblava/base/device.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1device_1a18e3059933af0d92784e333a186e5bad" prot="public" static="no">
+        <type><ref refid="structlava_1_1device" kindref="compound">device</ref> const  *</type>
+        <definition>using lava::device::c_ptr =  device const*</definition>
+        <argsstring></argsstring>
+        <name>c_ptr</name>
+        <qualifiedname>lava::device::c_ptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="26" column="5" bodyfile="liblava/base/device.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1device" kindref="compound">device</ref> &gt;</type>
+        <definition>using lava::device::s_ptr =  std::shared_ptr&lt;device&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::device::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to a device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="29" column="5" bodyfile="liblava/base/device.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1device_1a8169f8aeb9080ac355a8764ee7a4827b" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::device::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::device::s_list</qualifiedname>
+        <briefdescription>
+<para>List of devices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="32" column="5" bodyfile="liblava/base/device.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1device_1a638ed2eeaedbd9279dced2459597ef08" prot="public" static="no">
+        <type><ref refid="structlava_1_1physical__device" kindref="compound">physical_device</ref> const  *</type>
+        <definition>using lava::device::physical_device_c_ptr =  physical_device const*</definition>
+        <argsstring></argsstring>
+        <name>physical_device_c_ptr</name>
+        <qualifiedname>lava::device::physical_device_c_ptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to a physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="35" column="5" bodyfile="liblava/base/device.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1device_1adab562f490e1ff96e467d4631ae4ae82" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a638ed2eeaedbd9279dced2459597ef08" kindref="member">physical_device_c_ptr</ref></type>
+        <definition>physical_device_c_ptr lava::device::m_physical_device</definition>
+        <argsstring></argsstring>
+        <name>m_physical_device</name>
+        <qualifiedname>lava::device::m_physical_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="347" column="27" bodyfile="liblava/base/device.hpp" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1ac8231ee5b180b8a0a3cf033b5e048571" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref></type>
+        <definition>queue::list lava::device::m_graphics_queue_list</definition>
+        <argsstring></argsstring>
+        <name>m_graphics_queue_list</name>
+        <qualifiedname>lava::device::m_graphics_queue_list</qualifiedname>
+        <briefdescription>
+<para>List of qraphics queues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="350" column="17" bodyfile="liblava/base/device.hpp" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1a96e035b021ae6b6a2baffdcbdc152fdd" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref></type>
+        <definition>queue::list lava::device::m_compute_queue_list</definition>
+        <argsstring></argsstring>
+        <name>m_compute_queue_list</name>
+        <qualifiedname>lava::device::m_compute_queue_list</qualifiedname>
+        <briefdescription>
+<para>List of compute queues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="353" column="17" bodyfile="liblava/base/device.hpp" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1adfe1c4898e4e09256f710e4402586862" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref></type>
+        <definition>queue::list lava::device::m_transfer_queue_list</definition>
+        <argsstring></argsstring>
+        <name>m_transfer_queue_list</name>
+        <qualifiedname>lava::device::m_transfer_queue_list</qualifiedname>
+        <briefdescription>
+<para>List of transfer queues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="356" column="17" bodyfile="liblava/base/device.hpp" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1af971272d633fd5e75aefad4fb2945c69" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref></type>
+        <definition>queue::list lava::device::m_queue_list</definition>
+        <argsstring></argsstring>
+        <name>m_queue_list</name>
+        <qualifiedname>lava::device::m_queue_list</qualifiedname>
+        <briefdescription>
+<para>List of all queues. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="359" column="17" bodyfile="liblava/base/device.hpp" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1a6cf6a2d004de96e1b496d91ceafae4f5" prot="private" static="no" mutable="no">
+        <type>VkPhysicalDeviceFeatures</type>
+        <definition>VkPhysicalDeviceFeatures lava::device::m_features</definition>
+        <argsstring></argsstring>
+        <name>m_features</name>
+        <qualifiedname>lava::device::m_features</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Device features. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="362" column="30" bodyfile="liblava/base/device.hpp" bodystart="362" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1device_1acf426c425a0fabd94fdad4b26e72a35f" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">allocator::s_ptr</ref></type>
+        <definition>allocator::s_ptr lava::device::m_mem_allocator</definition>
+        <argsstring></argsstring>
+        <name>m_mem_allocator</name>
+        <qualifiedname>lava::device::m_mem_allocator</qualifiedname>
+        <briefdescription>
+<para>Device allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="365" column="22" bodyfile="liblava/base/device.hpp" bodystart="365" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1device_1a2645a8b20da02961cfb9a44c26873efd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::device::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::device::make</qualifiedname>
+        <briefdescription>
+<para>Make a new device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">s_ptr</ref> Shared pointer to device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="131" column="18" bodyfile="liblava/base/device.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1device_1a5533b7847b993c68e68c3015b72ad32d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::device::~device</definition>
+        <argsstring>()</argsstring>
+        <name>~device</name>
+        <qualifiedname>lava::device::~device</qualifiedname>
+        <briefdescription>
+<para>Destroy the device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="138" column="5" bodyfile="liblava/base/device.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a1e3ccc0106503deb957d554f9a3d0c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::device::create</definition>
+        <argsstring>(create_param::ref param)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::device::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1_1create__param_1a9461eed9d139014e80e2eed33d835cb0" kindref="member">create_param::ref</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Create a new device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Create parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a74045c4c30a3afaa400421c0f60af3e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::device::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1af33f2cb669183fd69636b092f4ae3b31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::get_graphics_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>get_graphics_queue</name>
+        <qualifiedname>lava::device::get_graphics_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get a graphics queue by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref> Graphics queue </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="159" column="16" bodyfile="liblava/base/device.hpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a78176765160f50f099b4e8202ce13bb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::graphics_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>graphics_queue</name>
+        <qualifiedname>lava::device::graphics_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1af33f2cb669183fd69636b092f4ae3b31" kindref="member">get_graphics_queue</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="166" column="16" bodyfile="liblava/base/device.hpp" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1aba4807924b558826ebc30989b15ea4ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::get_compute_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>get_compute_queue</name>
+        <qualifiedname>lava::device::get_compute_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get a compute queue by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref> Compute queue </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="175" column="16" bodyfile="liblava/base/device.hpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a05571936798d869f9e6640b688feda8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::compute_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>compute_queue</name>
+        <qualifiedname>lava::device::compute_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1aba4807924b558826ebc30989b15ea4ac" kindref="member">get_compute_queue</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="182" column="16" bodyfile="liblava/base/device.hpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a2da8d1cf2f97d6c8991eab6c84359466" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::get_transfer_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>get_transfer_queue</name>
+        <qualifiedname>lava::device::get_transfer_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get a transfer queue by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref> Transfer queue </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="191" column="16" bodyfile="liblava/base/device.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a7f62fa3f60987ec4305637ba490ea6d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1af8793c31f0843b03522175736a8a16b1" kindref="member">queue::ref</ref></type>
+        <definition>queue::ref lava::device::transfer_queue</definition>
+        <argsstring>(index index=0) const</argsstring>
+        <name>transfer_queue</name>
+        <qualifiedname>lava::device::transfer_queue</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1a2da8d1cf2f97d6c8991eab6c84359466" kindref="member">get_transfer_queue</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="198" column="16" bodyfile="liblava/base/device.hpp" bodystart="198" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1ab78a2471ef3fa8836ff5fa773f50f852" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::get_graphics_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>get_graphics_queues</name>
+        <qualifiedname>lava::device::get_graphics_queues</qualifiedname>
+        <briefdescription>
+<para>Get the list of graphics queues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const&amp; Graphics queues </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="206" column="23" bodyfile="liblava/base/device.hpp" bodystart="206" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1aa81e365bde440a6587e8836e32538204" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::graphics_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>graphics_queues</name>
+        <qualifiedname>lava::device::graphics_queues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1ab78a2471ef3fa8836ff5fa773f50f852" kindref="member">get_graphics_queues</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="213" column="23" bodyfile="liblava/base/device.hpp" bodystart="213" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1aca136ff0ba56830978fe6b0d3dbc2be8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::get_compute_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>get_compute_queues</name>
+        <qualifiedname>lava::device::get_compute_queues</qualifiedname>
+        <briefdescription>
+<para>Get the list of compute queues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const&amp; Compute queues </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="221" column="23" bodyfile="liblava/base/device.hpp" bodystart="221" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a60e3dda7b16f899e980dec87d7bce118" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::compute_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>compute_queues</name>
+        <qualifiedname>lava::device::compute_queues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1aca136ff0ba56830978fe6b0d3dbc2be8" kindref="member">get_compute_queues</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="228" column="23" bodyfile="liblava/base/device.hpp" bodystart="228" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a3fe482d828234b28011fe208eef57bb0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::get_transfer_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>get_transfer_queues</name>
+        <qualifiedname>lava::device::get_transfer_queues</qualifiedname>
+        <briefdescription>
+<para>Get the list of transfer queues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const&amp; Transfer queues </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="236" column="23" bodyfile="liblava/base/device.hpp" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1aaa49cf894a2afa7e6e050a0c167e635f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::transfer_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>transfer_queues</name>
+        <qualifiedname>lava::device::transfer_queues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1a3fe482d828234b28011fe208eef57bb0" kindref="member">get_transfer_queues</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="243" column="23" bodyfile="liblava/base/device.hpp" bodystart="243" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a327236b92200ab829a6b7de58968f847" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::get_queues</definition>
+        <argsstring>() const</argsstring>
+        <name>get_queues</name>
+        <qualifiedname>lava::device::get_queues</qualifiedname>
+        <briefdescription>
+<para>Get all queues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const&amp; List of all queues </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="251" column="23" bodyfile="liblava/base/device.hpp" bodystart="251" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1aa2a41a0eb47c6a218f3092ebbd56efaa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1queue_1a21b58152469b4f79d777688117dd655b" kindref="member">queue::list</ref> const &amp;</type>
+        <definition>queue::list const  &amp; lava::device::queues</definition>
+        <argsstring>() const</argsstring>
+        <name>queues</name>
+        <qualifiedname>lava::device::queues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1device_1a327236b92200ab829a6b7de58968f847" kindref="member">get_queues</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="258" column="23" bodyfile="liblava/base/device.hpp" bodystart="258" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a45cad0d3df6eefd926226495e49411da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDevice</type>
+        <definition>VkDevice lava::device::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::device::get</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDevice Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="266" column="14" bodyfile="liblava/base/device.hpp" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a6bc4fe6711c01a1c50f2fce6fed901b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VolkDeviceTable const &amp;</type>
+        <definition>VolkDeviceTable const  &amp; lava::device::call</definition>
+        <argsstring>() const</argsstring>
+        <name>call</name>
+        <qualifiedname>lava::device::call</qualifiedname>
+        <briefdescription>
+<para>Get the Volk device table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VolkDeviceTable const&amp; Volk device table </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="274" column="27" bodyfile="liblava/base/device.hpp" bodystart="274" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a0fda93f987ef8655e375cc8d7180c7e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::device::wait_for_idle</definition>
+        <argsstring>() const</argsstring>
+        <name>wait_for_idle</name>
+        <qualifiedname>lava::device::wait_for_idle</qualifiedname>
+        <briefdescription>
+<para>Wait for idle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Wait was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="282" column="10" bodyfile="liblava/base/device.hpp" bodystart="282" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a57b00a06f2ff1f8e9a61eb22e4af4538" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a638ed2eeaedbd9279dced2459597ef08" kindref="member">physical_device_c_ptr</ref></type>
+        <definition>physical_device_c_ptr lava::device::get_physical_device</definition>
+        <argsstring>() const</argsstring>
+        <name>get_physical_device</name>
+        <qualifiedname>lava::device::get_physical_device</qualifiedname>
+        <briefdescription>
+<para>Get the physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a638ed2eeaedbd9279dced2459597ef08" kindref="member">physical_device_c_ptr</ref> Physical device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="290" column="27" bodyfile="liblava/base/device.hpp" bodystart="290" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1afb9bba83954f5d9299b0eaaad5f66a8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPhysicalDevice</type>
+        <definition>VkPhysicalDevice lava::device::get_vk_physical_device</definition>
+        <argsstring>() const</argsstring>
+        <name>get_vk_physical_device</name>
+        <qualifiedname>lava::device::get_vk_physical_device</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDevice Vulkan physical device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="298" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a4bf266a2e0ea67fcd72e878448ee4c87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPhysicalDeviceFeatures const &amp;</type>
+        <definition>VkPhysicalDeviceFeatures const  &amp; lava::device::get_features</definition>
+        <argsstring>() const</argsstring>
+        <name>get_features</name>
+        <qualifiedname>lava::device::get_features</qualifiedname>
+        <briefdescription>
+<para>Get the physical device features. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDeviceFeatures const&amp; Features </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="304" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a7205f9a0bb651770091720af171bb5c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>VkPhysicalDeviceProperties const &amp;</type>
+        <definition>VkPhysicalDeviceProperties const  &amp; lava::device::get_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_properties</name>
+        <qualifiedname>lava::device::get_properties</qualifiedname>
+        <briefdescription>
+<para>Get the physical device properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkPhysicalDeviceProperties const&amp; Properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="310" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1ac7fc2bbef2544362ce16dbd118fbae04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::device::surface_supported</definition>
+        <argsstring>(VkSurfaceKHR surface) const</argsstring>
+        <name>surface_supported</name>
+        <qualifiedname>lava::device::surface_supported</qualifiedname>
+        <param>
+          <type>VkSurfaceKHR</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+<para>Check if surface is supported by this device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Surface to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Surface is supported or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="317" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a538b8ed6232c24f45f2ded25cfcb4e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::device::set_allocator</definition>
+        <argsstring>(allocator::s_ptr value)</argsstring>
+        <name>set_allocator</name>
+        <qualifiedname>lava::device::set_allocator</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">allocator::s_ptr</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the allocator for this device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="323" column="10" bodyfile="liblava/base/device.hpp" bodystart="323" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1acce8de0b64611afd01d98fbea398c17b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">allocator::s_ptr</ref></type>
+        <definition>allocator::s_ptr lava::device::get_allocator</definition>
+        <argsstring>()</argsstring>
+        <name>get_allocator</name>
+        <qualifiedname>lava::device::get_allocator</qualifiedname>
+        <briefdescription>
+<para>Get the allocator of this device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">allocator::s_ptr</ref> Allocator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="331" column="22" bodyfile="liblava/base/device.hpp" bodystart="331" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1device_1a9ef9942f9eb91c9412c4735a1cdf83fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VmaAllocator</type>
+        <definition>VmaAllocator lava::device::alloc</definition>
+        <argsstring>() const</argsstring>
+        <name>alloc</name>
+        <qualifiedname>lava::device::alloc</qualifiedname>
+        <briefdescription>
+<para>Get the VMA allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VmaAllocator VMA allocator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/device.hpp" line="339" column="18" bodyfile="liblava/base/device.hpp" bodystart="339" bodyend="343"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Vulkan device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="3">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="4">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="3">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="4">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/base/device.hpp" line="21" column="1" bodyfile="liblava/base/device.hpp" bodystart="21" bodyend="366"/>
+    <listofallmembers>
+      <member refid="structlava_1_1device_1a9ef9942f9eb91c9412c4735a1cdf83fe" prot="public" virt="non-virtual"><scope>lava::device</scope><name>alloc</name></member>
+      <member refid="structlava_1_1device_1a18e3059933af0d92784e333a186e5bad" prot="public" virt="non-virtual"><scope>lava::device</scope><name>c_ptr</name></member>
+      <member refid="structlava_1_1device_1a6bc4fe6711c01a1c50f2fce6fed901b2" prot="public" virt="non-virtual"><scope>lava::device</scope><name>call</name></member>
+      <member refid="structlava_1_1device_1a05571936798d869f9e6640b688feda8b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>compute_queue</name></member>
+      <member refid="structlava_1_1device_1a60e3dda7b16f899e980dec87d7bce118" prot="public" virt="non-virtual"><scope>lava::device</scope><name>compute_queues</name></member>
+      <member refid="structlava_1_1device_1a1e3ccc0106503deb957d554f9a3d0c0d" prot="public" virt="non-virtual"><scope>lava::device</scope><name>create</name></member>
+      <member refid="structlava_1_1device_1a74045c4c30a3afaa400421c0f60af3e3" prot="public" virt="non-virtual"><scope>lava::device</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::device</scope><name>entity</name></member>
+      <member refid="structlava_1_1device_1a45cad0d3df6eefd926226495e49411da" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get</name></member>
+      <member refid="structlava_1_1device_1acce8de0b64611afd01d98fbea398c17b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_allocator</name></member>
+      <member refid="structlava_1_1device_1aba4807924b558826ebc30989b15ea4ac" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_compute_queue</name></member>
+      <member refid="structlava_1_1device_1aca136ff0ba56830978fe6b0d3dbc2be8" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_compute_queues</name></member>
+      <member refid="structlava_1_1device_1a4bf266a2e0ea67fcd72e878448ee4c87" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_features</name></member>
+      <member refid="structlava_1_1device_1af33f2cb669183fd69636b092f4ae3b31" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_graphics_queue</name></member>
+      <member refid="structlava_1_1device_1ab78a2471ef3fa8836ff5fa773f50f852" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_graphics_queues</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_id</name></member>
+      <member refid="structlava_1_1device_1a57b00a06f2ff1f8e9a61eb22e4af4538" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_physical_device</name></member>
+      <member refid="structlava_1_1device_1a7205f9a0bb651770091720af171bb5c5" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_properties</name></member>
+      <member refid="structlava_1_1device_1a327236b92200ab829a6b7de58968f847" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_queues</name></member>
+      <member refid="structlava_1_1device_1a2da8d1cf2f97d6c8991eab6c84359466" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_transfer_queue</name></member>
+      <member refid="structlava_1_1device_1a3fe482d828234b28011fe208eef57bb0" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_transfer_queues</name></member>
+      <member refid="structlava_1_1device_1afb9bba83954f5d9299b0eaaad5f66a8c" prot="public" virt="non-virtual"><scope>lava::device</scope><name>get_vk_physical_device</name></member>
+      <member refid="structlava_1_1device_1a78176765160f50f099b4e8202ce13bb9" prot="public" virt="non-virtual"><scope>lava::device</scope><name>graphics_queue</name></member>
+      <member refid="structlava_1_1device_1aa81e365bde440a6587e8836e32538204" prot="public" virt="non-virtual"><scope>lava::device</scope><name>graphics_queues</name></member>
+      <member refid="structlava_1_1device__table_1a6485fcde506d9a6e3510091921efe673" prot="public" virt="non-virtual"><scope>lava::device</scope><name>load_table</name></member>
+      <member refid="structlava_1_1device_1a96e035b021ae6b6a2baffdcbdc152fdd" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_compute_queue_list</name></member>
+      <member refid="structlava_1_1device_1a6cf6a2d004de96e1b496d91ceafae4f5" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_features</name></member>
+      <member refid="structlava_1_1device_1ac8231ee5b180b8a0a3cf033b5e048571" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_graphics_queue_list</name></member>
+      <member refid="structlava_1_1device_1acf426c425a0fabd94fdad4b26e72a35f" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_mem_allocator</name></member>
+      <member refid="structlava_1_1device_1adab562f490e1ff96e467d4631ae4ae82" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_physical_device</name></member>
+      <member refid="structlava_1_1device_1af971272d633fd5e75aefad4fb2945c69" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_queue_list</name></member>
+      <member refid="structlava_1_1device_1adfe1c4898e4e09256f710e4402586862" prot="private" virt="non-virtual"><scope>lava::device</scope><name>m_transfer_queue_list</name></member>
+      <member refid="structlava_1_1device_1a2645a8b20da02961cfb9a44c26873efd" prot="public" virt="non-virtual"><scope>lava::device</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::device</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::device</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::device</scope><name>operator=</name></member>
+      <member refid="structlava_1_1device_1a638ed2eeaedbd9279dced2459597ef08" prot="public" virt="non-virtual"><scope>lava::device</scope><name>physical_device_c_ptr</name></member>
+      <member refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" prot="public" virt="non-virtual"><scope>lava::device</scope><name>ptr</name></member>
+      <member refid="structlava_1_1device_1aa2a41a0eb47c6a218f3092ebbd56efaa" prot="public" virt="non-virtual"><scope>lava::device</scope><name>queues</name></member>
+      <member refid="structlava_1_1device_1a8169f8aeb9080ac355a8764ee7a4827b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>s_list</name></member>
+      <member refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" prot="public" virt="non-virtual"><scope>lava::device</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1device_1a538b8ed6232c24f45f2ded25cfcb4e4a" prot="public" virt="non-virtual"><scope>lava::device</scope><name>set_allocator</name></member>
+      <member refid="structlava_1_1device_1ac7fc2bbef2544362ce16dbd118fbae04" prot="public" virt="non-virtual"><scope>lava::device</scope><name>surface_supported</name></member>
+      <member refid="structlava_1_1device__table_1a1d871a98c3349b449c4d67f079b5798f" prot="public" virt="non-virtual"><scope>lava::device</scope><name>table</name></member>
+      <member refid="structlava_1_1device_1a7f62fa3f60987ec4305637ba490ea6d2" prot="public" virt="non-virtual"><scope>lava::device</scope><name>transfer_queue</name></member>
+      <member refid="structlava_1_1device_1aaa49cf894a2afa7e6e050a0c167e635f" prot="public" virt="non-virtual"><scope>lava::device</scope><name>transfer_queues</name></member>
+      <member refid="structlava_1_1device__table_1a77e8f0bf98ac04eaaf68cc5406ff72d6" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vk_device</name></member>
+      <member refid="structlava_1_1device__table_1afd39bd9756ec036ee2c587b5579fc024" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkAcquireNextImageKHR</name></member>
+      <member refid="structlava_1_1device__table_1aa0d68e90568a79083ba2909b3b2a5cd9" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkAllocateCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1af7a2f81296f9b39fb0827524ae441013" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkAllocateCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1a9a8c35c91887b67800b79ab49b0afd19" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1af2535c85ababbe9ef4751dffd72d7786" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1ac597c59730634ceda15077c5c90df561" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1ace420dd11554de96dc86707ccf5c5cb6" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateFence</name></member>
+      <member refid="structlava_1_1device__table_1a0b08e70562ea67ef07f4917d88152dd2" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateFence</name></member>
+      <member refid="structlava_1_1device__table_1ab9605d308a708e8b3f4265d8a3eaec0f" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateImageView</name></member>
+      <member refid="structlava_1_1device__table_1aef2eaad651f261618611d22f0fb94626" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateImageView</name></member>
+      <member refid="structlava_1_1device__table_1ab852b5ff8b09ece6fb864658f7dfd39b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSampler</name></member>
+      <member refid="structlava_1_1device__table_1a110d109b567d5db1b1d2b2b4e76a2246" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSampler</name></member>
+      <member refid="structlava_1_1device__table_1ab64d37f196d30dc191d36e5c33f5cd76" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a184c655d31f896a706b8437d38d45e8c" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a12f6dafcb7308c0b688504636ab289d8" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateShaderModule</name></member>
+      <member refid="structlava_1_1device__table_1acb12213e27a3fac40fc35cc9f55d9080" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateShaderModule</name></member>
+      <member refid="structlava_1_1device__table_1a76d5dd53c1f3076c68c43ccc25bd012c" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a0c4548c0e147bfb52c3a80f92884b7d9" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkCreateSwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a24a2a350988afa38eb13a2f8485ce9a1" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroyCommandPool</name></member>
+      <member refid="structlava_1_1device__table_1a11175cb5263c36f2a4cfbd9acfd7a0d7" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroyFence</name></member>
+      <member refid="structlava_1_1device__table_1a4a50fe66466940a0fb52e778490f3d4d" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroyImageView</name></member>
+      <member refid="structlava_1_1device__table_1a82932056a1901a4bff4608079b0e54ed" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroySampler</name></member>
+      <member refid="structlava_1_1device__table_1a86814faa0636a23a5eedb3a85e27bb2f" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroySemaphore</name></member>
+      <member refid="structlava_1_1device__table_1a44f74c998ac94fc7740b218a76836e48" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkDestroySwapchainKHR</name></member>
+      <member refid="structlava_1_1device__table_1a3571dfe2e1a1a885dda6cdbb89a16b76" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkFreeCommandBuffers</name></member>
+      <member refid="structlava_1_1device__table_1a6cf01e1682a6013ed4a3746899b370e2" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkGetSwapchainImagesKHR</name></member>
+      <member refid="structlava_1_1device__table_1ac9136218e3ba69707769209b45b58f55" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkQueuePresentKHR</name></member>
+      <member refid="structlava_1_1device__table_1ad19039936fdba57790ef1abedcfd7a4b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkQueueSubmit</name></member>
+      <member refid="structlava_1_1device__table_1adef9da910b0272301e340556fb6202df" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkResetFences</name></member>
+      <member refid="structlava_1_1device__table_1abbeacc45f13d0fd86a7e99312367f74e" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1ac5b1bdf0e6788c38aa7ca5b5118b8e21" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1ab17fd51c1c6392952327467a3ee11977" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a6e5ebced33181a52e33baa1ae73f0a0b" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a669ace4d084d396f15a54ca4c8e6cdf2" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a8fa8a5d4f870928bcd13da11a8f2632a" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1a6283dfdf1eb4ce3f09e7e9aec64cd5ec" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkUpdateDescriptorSets</name></member>
+      <member refid="structlava_1_1device__table_1aa7c0adca236066bc65a7a3d4fd5470ed" prot="public" virt="non-virtual"><scope>lava::device</scope><name>vkWaitForFences</name></member>
+      <member refid="structlava_1_1device_1a0fda93f987ef8655e375cc8d7180c7e7" prot="public" virt="non-virtual"><scope>lava::device</scope><name>wait_for_idle</name></member>
+      <member refid="structlava_1_1device_1a5533b7847b993c68e68c3015b72ad32d" prot="public" virt="non-virtual"><scope>lava::device</scope><name>~device</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::device</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="render__pass_8hpp" kind="file" language="C++">
+    <compoundname>render_pass.hpp</compoundname>
+    <includes refid="device_8hpp" local="yes">liblava/base/device.hpp</includes>
+    <includes refid="attachment_8hpp" local="yes">liblava/block/attachment.hpp</includes>
+    <includes refid="subpass_8hpp" local="yes">liblava/block/subpass.hpp</includes>
+    <includedby refid="forward__shading_8hpp" local="yes">liblava/app/forward_shading.hpp</includedby>
+    <includedby refid="block_8hpp" local="yes">liblava/block.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>liblava/base/base.hpp</label>
+        <link refid="base_2base_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/base/device.hpp</label>
+        <link refid="device_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/base/device_table.hpp</label>
+        <link refid="device__table_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/base/memory.hpp</label>
+        <link refid="memory_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>liblava/base/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>liblava/block/attachment.hpp</label>
+        <link refid="attachment_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>liblava/block/descriptor.hpp</label>
+        <link refid="descriptor_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>liblava/block/pipeline.hpp</label>
+        <link refid="pipeline_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>liblava/block/pipeline_layout.hpp</label>
+        <link refid="pipeline__layout_8hpp"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/block/render_pass.hpp</label>
+        <link refid="render__pass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>liblava/block/render_pipeline.hpp</label>
+        <link refid="render__pipeline_8hpp"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>liblava/block/subpass.hpp</label>
+        <link refid="subpass_8hpp"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>liblava/core/data.hpp</label>
+        <link refid="data_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>liblava/core/id.hpp</label>
+        <link refid="id_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/core/version.hpp</label>
+        <link refid="version_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>liblava/util/math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>atomic</label>
+      </node>
+      <node id="9">
+        <label>cstdint</label>
+      </node>
+      <node id="26">
+        <label>deque</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="17">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="18">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="19">
+        <label>glm/gtc/type_ptr.hpp</label>
+      </node>
+      <node id="8">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="22">
+        <label>liblava/fwd.hpp</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="24">
+        <label>memory</label>
+      </node>
+      <node id="31">
+        <label>mutex</label>
+      </node>
+      <node id="16">
+        <label>picosha2.h</label>
+      </node>
+      <node id="32">
+        <label>set</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="28">
+        <label>string.h</label>
+      </node>
+      <node id="13">
+        <label>string_view</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="23">
+        <label>vk_mem_alloc.h</label>
+      </node>
+      <node id="21">
+        <label>volk.h</label>
+      </node>
+      <node id="20">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/app/forward_shading.hpp</label>
+        <link refid="forward__shading_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/block.hpp</label>
+        <link refid="block_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/block/render_pass.hpp</label>
+        <link refid="render__pass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1render__pass" prot="public">lava::render_pass</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <briefdescription>
+<para>Render pass. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device_8hpp" kindref="compound">liblava/base/device.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="attachment_8hpp" kindref="compound">liblava/block/attachment.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="subpass_8hpp" kindref="compound">liblava/block/subpass.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structlava_1_1render__pass" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1render__pass_1ad7592aec10ad9cec0a89cd8b6f056b8d" kindref="member">render_pass</ref><sp/>:<sp/><ref refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" kindref="member">entity</ref><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="structlava_1_1render__pass_1a6432d705ed6721ad579bac7264eb1f34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1render__pass_1a6432d705ed6721ad579bac7264eb1f34" kindref="member">s_ptr</ref><sp/>=<sp/>std::shared_ptr&lt;render_pass&gt;;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="structlava_1_1render__pass_1a3c2be2c9e866e1e2b655f9bc6c757ca3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1render__pass_1a3c2be2c9e866e1e2b655f9bc6c757ca3" kindref="member">s_list</ref><sp/>=<sp/>std::vector&lt;s_ptr&gt;;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structlava_1_1render__pass_1a1bdb8601c9eff7675f173c574a9d4d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1a6432d705ed6721ad579bac7264eb1f34" kindref="member">s_ptr</ref><sp/><ref refid="structlava_1_1render__pass_1a1bdb8601c9eff7675f173c574a9d4d48" kindref="member">make</ref>(<ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref><sp/><ref refid="structlava_1_1device" kindref="compound">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;render_pass&gt;(<ref refid="structlava_1_1device" kindref="compound">device</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structlava_1_1render__pass_1ad7592aec10ad9cec0a89cd8b6f056b8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1ad7592aec10ad9cec0a89cd8b6f056b8d" kindref="member">render_pass</ref>(<ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref><sp/><ref refid="structlava_1_1device" kindref="compound">device</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structlava_1_1render__pass_1a78221218aef07a24578820956123dd8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1a78221218aef07a24578820956123dd8a" kindref="member">create</ref>(<ref refid="base_2base_8hpp_1a5d9774191fbb48cbd1d60cd9216a5e1b" kindref="member">VkAttachmentsRef</ref><sp/>target_attachments,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref><sp/>area);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structlava_1_1render__pass_1a5f05533d4ef4390159efbc8c28db7c65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1a5f05533d4ef4390159efbc8c28db7c65" kindref="member">destroy</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structlava_1_1render__pass_1ac05d958ee34c68f606d7c313ae30a970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1ac05d958ee34c68f606d7c313ae30a970" kindref="member">process</ref>(VkCommandBuffer<sp/>cmd_buf,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="structlava_1_1frame" kindref="compound">frame</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structlava_1_1render__pass_1a400d4d29da1b4d0b636fcdeb44645bf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref><sp/><ref refid="structlava_1_1render__pass_1a400d4d29da1b4d0b636fcdeb44645bf6" kindref="member">get_device</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_device;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structlava_1_1render__pass_1a3cf22a97116c4740f683a78a8f62f93c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>VkRenderPass<sp/><ref refid="structlava_1_1render__pass_1a3cf22a97116c4740f683a78a8f62f93c" kindref="member">get</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_vk_render_pass;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structlava_1_1render__pass_1add1bcc7c7fe347bbb63975fa052037c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/><ref refid="structlava_1_1render__pass_1add1bcc7c7fe347bbb63975fa052037c3" kindref="member">get_subpass_count</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1aeeecf3eba131cdad020bbd82d0db68c9" kindref="member">to_ui32</ref>(m_subpasses.size());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structlava_1_1render__pass_1adde61aee8afe6ed24140298a3e3a7980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1adde61aee8afe6ed24140298a3e3a7980" kindref="member">exists_subpass</ref>(<ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/>=<sp/>0)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/>&lt;<sp/>m_subpasses.size();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structlava_1_1render__pass_1af60ff6646b107eeb4749d5e56b826dda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>*<sp/><ref refid="structlava_1_1render__pass_1af60ff6646b107eeb4749d5e56b826dda" kindref="member">get_subpass</ref>(<ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_subpasses.at(<ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref>).get();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structlava_1_1render__pass_1aa2b0229d0732fa4635c61f4d358df8a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1subpass_1ad47bf8080d9808aa631430944f1eb610" kindref="member">subpass::s_list</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1render__pass_1aa2b0229d0732fa4635c61f4d358df8a4" kindref="member">get_subpasses</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_subpasses;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structlava_1_1render__pass_1ac237ae942d9d4741b8134f0730255041" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1ac237ae942d9d4741b8134f0730255041" kindref="member">add</ref>(<ref refid="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" kindref="member">attachment::s_ptr</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1attachment" kindref="compound">attachment</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_attachments.push_back(<ref refid="structlava_1_1attachment" kindref="compound">attachment</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structlava_1_1render__pass_1aeca3112d7b6c3f4c4dea882dd08290a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1aeca3112d7b6c3f4c4dea882dd08290a6" kindref="member">add</ref>(<ref refid="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" kindref="member">subpass_dependency::s_ptr</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>dependency)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_dependencies.push_back(dependency);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="structlava_1_1render__pass_1ac0decb108b116deca44d4303b2b77c52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1ac0decb108b116deca44d4303b2b77c52" kindref="member">add</ref>(<ref refid="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" kindref="member">subpass::s_ptr</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_subpasses.push_back(<ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structlava_1_1render__pass_1a714f010d5873210d139aef95568e5a81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1a714f010d5873210d139aef95568e5a81" kindref="member">set_clear_values</ref>(<ref refid="base_2base_8hpp_1a263ed5914a698556450a6132571fa854" kindref="member">VkClearValues</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_clear_values<sp/>=<sp/>values;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structlava_1_1render__pass_1af0d5e8574d21d2d25fe093aa09494cb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_2base_8hpp_1a263ed5914a698556450a6132571fa854" kindref="member">VkClearValues</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1render__pass_1af0d5e8574d21d2d25fe093aa09494cb3" kindref="member">get_clear_values</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_clear_values;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structlava_1_1render__pass_1ad319cf1e33f1825dea9e39a0dca3b538" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1ad319cf1e33f1825dea9e39a0dca3b538" kindref="member">set_clear_color</ref>(<ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref><sp/>value<sp/>=<sp/>{});</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="structlava_1_1render__pass_1a73bcdb3a9f8765397e156eb3bc6f9a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref><sp/><ref refid="structlava_1_1render__pass_1a73bcdb3a9f8765397e156eb3bc6f9a1d" kindref="member">get_clear_color</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="structlava_1_1render__pass_1af5c2408a9a6c4171dde95044abee1df6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1af5c2408a9a6c4171dde95044abee1df6" kindref="member">add</ref>(<ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref><sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_subpasses.at(<ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>)-&gt;add(<ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="structlava_1_1render__pass_1acc98481443ae51f364599944f3a9214a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1acc98481443ae51f364599944f3a9214a" kindref="member">add_front</ref>(<ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref><sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_subpasses.at(<ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>)-&gt;add_front(<ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="structlava_1_1render__pass_1a081d622664f4e7e6531195f1e4974552" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1render__pass_1a081d622664f4e7e6531195f1e4974552" kindref="member">remove</ref>(<ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref><sp/><ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/><ref refid="structlava_1_1subpass" kindref="compound">subpass</ref><sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_subpasses.at(<ref refid="structlava_1_1subpass" kindref="compound">subpass</ref>)-&gt;remove(<ref refid="structlava_1_1pipeline" kindref="compound">pipeline</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="structlava_1_1render__pass_1a97f73b004d58836f92bff74b9cfea353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="structlava_1_1render__pass_1a97f73b004d58836f92bff74b9cfea353" kindref="member">get_target_callback</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_callback;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref><sp/>m_device<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>VkRenderPass<sp/>m_vk_render_pass<sp/>=<sp/>VK_NULL_HANDLE;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="base_2base_8hpp_1a18fe5b86fb1c98ec4f07db9bde567631" kindref="member">VkFramebuffers</ref><sp/>m_framebuffers<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1attachment_1ac9aa19183cdf766e9a809966602ca265" kindref="member">attachment::s_list</ref><sp/>m_attachments;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1subpass__dependency_1a6ace8aff487ed1ff9434ff974c9165d8" kindref="member">subpass_dependency::s_list</ref><sp/>m_dependencies;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1subpass_1ad47bf8080d9808aa631430944f1eb610" kindref="member">subpass::s_list</ref><sp/>m_subpasses;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>VkClearValues<sp/>m_clear_values<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>rect<sp/>m_area;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>target_callback<sp/>m_callback;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin(VkCommandBuffer<sp/>cmd_buf,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>frame);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>end(VkCommandBuffer<sp/>cmd_buf);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>on_target_created(VkAttachmentsRef<sp/>target_attachments,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref><sp/>area);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>on_target_destroyed();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/block/render_pass.hpp"/>
+  </compounddef>
+</doxygen>

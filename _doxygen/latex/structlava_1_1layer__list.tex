@@ -1,0 +1,152 @@
+\doxysection{lava\+::layer\+\_\+list Struct Reference}
+\hypertarget{structlava_1_1layer__list}{}\label{structlava_1_1layer__list}\index{lava::layer\_list@{lava::layer\_list}}
+
+
+Layer list.  
+
+
+
+
+{\ttfamily \#include $<$layer.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1layer__list_a8adfc1b1fbaddf5bdcddc824ab8f772c}\label{structlava_1_1layer__list_a8adfc1b1fbaddf5bdcddc824ab8f772c} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1layer__list}{layer\+\_\+list}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to layer list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1layer__list_a814b18f9b3b18deb2a8ac19fab64f8f2}{add}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}{layer\+::func}} func, bool active=true)
+\begin{DoxyCompactList}\small\item\em Add a new layer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1layer__list_a3cfd7e05d64c9e9c8047929ebc86e334}{add}} (\mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{layer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1layer}{layer}})
+\begin{DoxyCompactList}\small\item\em Add a layer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1layer__list_a6a6d9ba510be7519084649c4c33f49f3}{add\+\_\+inactive}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}, \mbox{\hyperlink{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}{layer\+::func}} func)
+\begin{DoxyCompactList}\small\item\em Add a new inactive layer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{layer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1layer__list_a50634a0c3104734acf861bef857e7c2e}{get}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get layer in list by id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1layer__list_a39ee287ff412867f5d72bf56cda87c01}{remove}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove layer from list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1layer_ac23feca341c4ad6f951ea07c111abfe1}{layer\+::list}} const \& \mbox{\hyperlink{structlava_1_1layer__list_a505d57fa6edb90196af373e57ae83958}{get\+\_\+all}} () const
+\begin{DoxyCompactList}\small\item\em Get all layers. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1layer__list_a5e7a11654ffefad758d32f4b25071bfb}\label{structlava_1_1layer__list_a5e7a11654ffefad758d32f4b25071bfb} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear layer list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Layer list. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1layer__list_a3cfd7e05d64c9e9c8047929ebc86e334}\index{lava::layer\_list@{lava::layer\_list}!add@{add}}
+\index{add@{add}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a3cfd7e05d64c9e9c8047929ebc86e334} 
+void lava\+::layer\+\_\+list\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{layer\+::s\+\_\+ptr}}}]{layer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & Layer to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1layer__list_a814b18f9b3b18deb2a8ac19fab64f8f2}\index{lava::layer\_list@{lava::layer\_list}!add@{add}}
+\index{add@{add}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a814b18f9b3b18deb2a8ac19fab64f8f2} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::layer\+\_\+list\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}{layer\+::func}}}]{func}{, }\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of layer \\
+\hline
+{\em func} & Layer function \\
+\hline
+{\em active} & Layer active state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of added layer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1layer__list_a6a6d9ba510be7519084649c4c33f49f3}\index{lava::layer\_list@{lava::layer\_list}!add\_inactive@{add\_inactive}}
+\index{add\_inactive@{add\_inactive}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{add\_inactive()}{add\_inactive()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a6a6d9ba510be7519084649c4c33f49f3} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::layer\+\_\+list\+::add\+\_\+inactive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{, }\item[{\mbox{\hyperlink{structlava_1_1layer_a9c5bccef81b2a6cd2fe69be881f18ccb}{layer\+::func}}}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new inactive layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of layer \\
+\hline
+{\em func} & Layer function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of added layer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1layer__list_a50634a0c3104734acf861bef857e7c2e}\index{lava::layer\_list@{lava::layer\_list}!get@{get}}
+\index{get@{get}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a50634a0c3104734acf861bef857e7c2e} 
+\mbox{\hyperlink{structlava_1_1layer_a815521a2637c57868794214fc011c22f}{layer\+::s\+\_\+ptr}} lava\+::layer\+\_\+list\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{layer\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get layer in list by id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+\_\+id} & Id of layer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+layer\+::ptr Shared pointer to layer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1layer__list_a505d57fa6edb90196af373e57ae83958}\index{lava::layer\_list@{lava::layer\_list}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a505d57fa6edb90196af373e57ae83958} 
+\mbox{\hyperlink{structlava_1_1layer_ac23feca341c4ad6f951ea07c111abfe1}{layer\+::list}} const  \& lava\+::layer\+\_\+list\+::get\+\_\+all (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all layers. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1layer_ac23feca341c4ad6f951ea07c111abfe1}{layer\+::list} const\& List of layers 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1layer__list_a39ee287ff412867f5d72bf56cda87c01}\index{lava::layer\_list@{lava::layer\_list}!remove@{remove}}
+\index{remove@{remove}!lava::layer\_list@{lava::layer\_list}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1layer__list_a39ee287ff412867f5d72bf56cda87c01} 
+bool lava\+::layer\+\_\+list\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{layer\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove layer from list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+\_\+id} & Id of layer to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remove was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{layer_8hpp}{layer.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,1327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1imgui" kind="struct" language="C++" prot="public">
+    <compoundname>lava::imgui</compoundname>
+    <includes refid="imgui_8hpp" local="no">imgui.hpp</includes>
+    <innerclass refid="structlava_1_1imgui_1_1config" prot="public">lava::imgui::config</innerclass>
+    <innerclass refid="structlava_1_1imgui_1_1font" prot="public">lava::imgui::font</innerclass>
+    <innerclass refid="structlava_1_1imgui_1_1icon__font" prot="public">lava::imgui::icon_font</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1imgui_1abb2a1f3eb4babf73d3b1e5627f9829e7" prot="public" static="no">
+        <type><ref refid="structlava_1_1imgui" kindref="compound">imgui</ref> *</type>
+        <definition>using lava::imgui::ptr =  imgui*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::imgui::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to imgui. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="32" column="5" bodyfile="liblava/app/imgui.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using lava::imgui::draw_func =  std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>draw_func</name>
+        <qualifiedname>lava::imgui::draw_func</qualifiedname>
+        <briefdescription>
+<para>Draw function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="204" column="5" bodyfile="liblava/app/imgui.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1imgui_1a06d37097926da66b1e16aea586cb2379" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" kindref="member">draw_func</ref></type>
+        <definition>draw_func lava::imgui::on_draw</definition>
+        <argsstring></argsstring>
+        <name>on_draw</name>
+        <qualifiedname>lava::imgui::on_draw</qualifiedname>
+        <briefdescription>
+<para>Function called on ImGui draw. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="207" column="15" bodyfile="liblava/app/imgui.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1ae61916a2509cdf402c2709e3e8989f1d" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1layer__list" kindref="compound">layer_list</ref></type>
+        <definition>layer_list lava::imgui::layers</definition>
+        <argsstring></argsstring>
+        <name>layers</name>
+        <qualifiedname>lava::imgui::layers</qualifiedname>
+        <briefdescription>
+<para>Layer list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="210" column="16" bodyfile="liblava/app/imgui.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1imgui_1a65b8bb651c7f978fe44f5a8f242ebb6f" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::imgui::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::imgui::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="338" column="17" bodyfile="liblava/app/imgui.hpp" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a4f3f7716cffbf3bada5f3ded05dcd336" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::imgui::m_initialized</definition>
+        <argsstring></argsstring>
+        <name>m_initialized</name>
+        <qualifiedname>lava::imgui::m_initialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="341" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1aefd57bda60312abe33e61db510166d76" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref></type>
+        <definition>render_pipeline::s_ptr lava::imgui::m_pipeline</definition>
+        <argsstring></argsstring>
+        <name>m_pipeline</name>
+        <qualifiedname>lava::imgui::m_pipeline</qualifiedname>
+        <briefdescription>
+<para>Render pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="344" column="28" bodyfile="liblava/app/imgui.hpp" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1af6d725086de0fab26c434b58eb631fe3" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1pipeline__layout_1adeb6bacc906e605536e0d1533907c492" kindref="member">pipeline_layout::s_ptr</ref></type>
+        <definition>pipeline_layout::s_ptr lava::imgui::m_layout</definition>
+        <argsstring></argsstring>
+        <name>m_layout</name>
+        <qualifiedname>lava::imgui::m_layout</qualifiedname>
+        <briefdescription>
+<para>Pipeline layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="347" column="28" bodyfile="liblava/app/imgui.hpp" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1ad17e58e53867f15fb54fec82ff9e9b66" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+        <definition>size_t lava::imgui::m_buffer_memory_alignment</definition>
+        <argsstring></argsstring>
+        <name>m_buffer_memory_alignment</name>
+        <qualifiedname>lava::imgui::m_buffer_memory_alignment</qualifiedname>
+        <initializer>= 256</initializer>
+        <briefdescription>
+<para>Buffer memory alignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="350" column="12" bodyfile="liblava/app/imgui.hpp" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1ad50e6e80b0d0cd29b953912d25edc4b2" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::imgui::m_frame</definition>
+        <argsstring></argsstring>
+        <name>m_frame</name>
+        <qualifiedname>lava::imgui::m_frame</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="353" column="11" bodyfile="liblava/app/imgui.hpp" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1afd65f192efc4bf7ed5125a749dfa09b7" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <definition>index lava::imgui::m_max_frames</definition>
+        <argsstring></argsstring>
+        <name>m_max_frames</name>
+        <qualifiedname>lava::imgui::m_max_frames</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Number of frames. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="356" column="11" bodyfile="liblava/app/imgui.hpp" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a5754f5f7cb0d51cb57421038520e0efc" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1buffer_1a7c5d7d6ab2b3c692c08165dea735b326" kindref="member">buffer::s_list</ref></type>
+        <definition>buffer::s_list lava::imgui::m_vertex_buffers</definition>
+        <argsstring></argsstring>
+        <name>m_vertex_buffers</name>
+        <qualifiedname>lava::imgui::m_vertex_buffers</qualifiedname>
+        <briefdescription>
+<para>Vertex buffer list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="359" column="20" bodyfile="liblava/app/imgui.hpp" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a562694f2e925243360a8a6b9d1f0a856" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1buffer_1a7c5d7d6ab2b3c692c08165dea735b326" kindref="member">buffer::s_list</ref></type>
+        <definition>buffer::s_list lava::imgui::m_index_buffers</definition>
+        <argsstring></argsstring>
+        <name>m_index_buffers</name>
+        <qualifiedname>lava::imgui::m_index_buffers</qualifiedname>
+        <briefdescription>
+<para>Index buffer list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="362" column="20" bodyfile="liblava/app/imgui.hpp" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a4914fddf64828cfe16270eff84542d80" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1descriptor_1af3984dd7b4c4a1b014d21ba862f8cb08" kindref="member">descriptor::s_ptr</ref></type>
+        <definition>descriptor::s_ptr lava::imgui::m_descriptor</definition>
+        <argsstring></argsstring>
+        <name>m_descriptor</name>
+        <qualifiedname>lava::imgui::m_descriptor</qualifiedname>
+        <briefdescription>
+<para>Vulkan descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="365" column="23" bodyfile="liblava/app/imgui.hpp" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1ab83969e94490cc4491b2112d2d4efb39" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1descriptor_1_1pool_1a44d81b372dba82bb4d33a442cad51bd7" kindref="member">descriptor::pool::s_ptr</ref></type>
+        <definition>descriptor::pool::s_ptr lava::imgui::m_descriptor_pool</definition>
+        <argsstring></argsstring>
+        <name>m_descriptor_pool</name>
+        <qualifiedname>lava::imgui::m_descriptor_pool</qualifiedname>
+        <briefdescription>
+<para>Vulkan descriptor pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="368" column="29" bodyfile="liblava/app/imgui.hpp" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a2fea10b2ded14590ba353e0443122ec0" prot="private" static="no" mutable="no">
+        <type>VkDescriptorSet</type>
+        <definition>VkDescriptorSet lava::imgui::m_descriptor_set</definition>
+        <argsstring></argsstring>
+        <name>m_descriptor_set</name>
+        <qualifiedname>lava::imgui::m_descriptor_set</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan descriptor set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="371" column="21" bodyfile="liblava/app/imgui.hpp" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1abc8a2e3358f66da49684f299b9442f41" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* lava::imgui::m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <qualifiedname>lava::imgui::m_window</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Target window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="374" column="16" bodyfile="liblava/app/imgui.hpp" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1aa84a33dd2d54cc27a19d504cdb1dbb93" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::imgui::m_mouse_just_pressed[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>m_mouse_just_pressed</name>
+        <qualifiedname>lava::imgui::m_mouse_just_pressed</qualifiedname>
+        <initializer>= {false, false, false, false, false}</initializer>
+        <briefdescription>
+<para>Mouse just pressed state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="377" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="377" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a670538e0b6cde8832daabc9e15e7e6e6" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+        <definition>r64 lava::imgui::m_current_time</definition>
+        <argsstring></argsstring>
+        <name>m_current_time</name>
+        <qualifiedname>lava::imgui::m_current_time</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Current time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="380" column="9" bodyfile="liblava/app/imgui.hpp" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a70cf20793cee07f494b408f02f0a1cfa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; GLFWcursor * &gt;</type>
+        <definition>std::vector&lt;GLFWcursor*&gt; lava::imgui::m_mouse_cursors</definition>
+        <argsstring></argsstring>
+        <name>m_mouse_cursors</name>
+        <qualifiedname>lava::imgui::m_mouse_cursors</qualifiedname>
+        <briefdescription>
+<para>Mouse cursors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="383" column="17" bodyfile="liblava/app/imgui.hpp" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1ade132bd5137c3d7296210a1d4c194d72" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::imgui::m_ini_file</definition>
+        <argsstring></argsstring>
+        <name>m_ini_file</name>
+        <qualifiedname>lava::imgui::m_ini_file</qualifiedname>
+        <briefdescription>
+<para>File for state (path) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="386" column="12" bodyfile="liblava/app/imgui.hpp" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a7309ad9638e27afba885868c8c2f4eff" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::imgui::m_active</definition>
+        <argsstring></argsstring>
+        <name>m_active</name>
+        <qualifiedname>lava::imgui::m_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="389" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a6fc7919481aa076b1c1ace49e53679b7" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref></type>
+        <definition>input_callback lava::imgui::m_callback</definition>
+        <argsstring></argsstring>
+        <name>m_callback</name>
+        <qualifiedname>lava::imgui::m_callback</qualifiedname>
+        <briefdescription>
+<para>Input callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="392" column="20" bodyfile="liblava/app/imgui.hpp" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1imgui_1a2aed595c1d937ae1377a8fc394d6c9d1" prot="private" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="types_8hpp_1a9726d8b17deae0ffa37db333759f197f" kindref="member">ui16</ref>, 3 &gt;</type>
+        <definition>std::array&lt;ui16, 3&gt; lava::imgui::m_icons_range</definition>
+        <argsstring></argsstring>
+        <name>m_icons_range</name>
+        <qualifiedname>lava::imgui::m_icons_range</qualifiedname>
+        <briefdescription>
+<para>Font icons range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="395" column="16" bodyfile="liblava/app/imgui.hpp" bodystart="395" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1imgui_1a1045d179f75b8ff05d625383a2beea7c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::imgui::imgui</definition>
+        <argsstring>()=default</argsstring>
+        <name>imgui</name>
+        <qualifiedname>lava::imgui::imgui</qualifiedname>
+        <briefdescription>
+<para>Construct a new ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a38665d7779b0880b6446e0f24ce9f168" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::imgui::imgui</definition>
+        <argsstring>(GLFWwindow *window)</argsstring>
+        <name>imgui</name>
+        <qualifiedname>lava::imgui::imgui</qualifiedname>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window for ImGui </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="43" column="14" bodyfile="liblava/app/imgui.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1aed43c117003f8e9b06b5fc55845f1248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::imgui::~imgui</definition>
+        <argsstring>()</argsstring>
+        <name>~imgui</name>
+        <qualifiedname>lava::imgui::~imgui</qualifiedname>
+        <briefdescription>
+<para>Destroy the ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="50" column="5" bodyfile="liblava/app/imgui.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::setup</definition>
+        <argsstring>(GLFWwindow *window, config config)</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::imgui::setup</qualifiedname>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1imgui_1_1config" kindref="compound">config</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Set up ImGui with configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="125" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a0977c794e1fd19dda8169938d4d41e04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::setup</definition>
+        <argsstring>(GLFWwindow *win)</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::imgui::setup</qualifiedname>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+<para>Set up default ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>win</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="131" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a87e2a644485869037f569f6c18d9d975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::create</definition>
+        <argsstring>(render_pipeline::s_ptr pipeline, index max_frames)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::imgui::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref></type>
+          <declname>pipeline</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>max_frames</declname>
+        </param>
+        <briefdescription>
+<para>Create pipeline for ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_frames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frames </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a85fc2881ac35f630d3a6828c3bc33ad1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::create</definition>
+        <argsstring>(device::ptr dev, index frames, VkPipelineCache pipeline_cache)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::imgui::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>VkPipelineCache</type>
+          <declname>pipeline_cache</declname>
+        </param>
+        <briefdescription>
+<para>Create pipeline for ImGui with device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frames </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pipeline_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline cache </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="150" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a1af9de841808f809d0ef2b564423f438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::create</definition>
+        <argsstring>(device::ptr dev, index frames, VkRenderPass pass, VkPipelineCache pipeline_cache=0)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::imgui::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>frames</declname>
+        </param>
+        <param>
+          <type>VkRenderPass</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>VkPipelineCache</type>
+          <declname>pipeline_cache</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create pipeline for ImGui with device and render pass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frames </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pipeline_cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline cache </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="165" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="165" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a2570a375882a8c298eb8e4ae3b04ea32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::upload_fonts</definition>
+        <argsstring>(texture::s_ptr texture)</argsstring>
+        <name>upload_fonts</name>
+        <qualifiedname>lava::imgui::upload_fonts</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref></type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Upload font texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Texture to upload </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Upload was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="180" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1aa783551e1e9a21787c2771ae3f84556b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::imgui::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1ad8d5e0c8be33e958887174d554896870" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::ready</definition>
+        <argsstring>() const</argsstring>
+        <name>ready</name>
+        <qualifiedname>lava::imgui::ready</qualifiedname>
+        <briefdescription>
+<para>Check if ImGui is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ImGui is ready or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="191" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a4c22d7bd25a2afc858d3d9a48a790c92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref></type>
+        <definition>render_pipeline::s_ptr lava::imgui::get_pipeline</definition>
+        <argsstring>()</argsstring>
+        <name>get_pipeline</name>
+        <qualifiedname>lava::imgui::get_pipeline</qualifiedname>
+        <briefdescription>
+<para>Get the pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref> Render pipeline </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="199" column="28" bodyfile="liblava/app/imgui.hpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a0a23316f198244c282b16e636cae9cb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::capture_mouse</definition>
+        <argsstring>() const</argsstring>
+        <name>capture_mouse</name>
+        <qualifiedname>lava::imgui::capture_mouse</qualifiedname>
+        <briefdescription>
+<para>Check if mouse capture is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Capture is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="216" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a83a4b2448c40b505bea3a3e08b40314f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::capture_keyboard</definition>
+        <argsstring>() const</argsstring>
+        <name>capture_keyboard</name>
+        <qualifiedname>lava::imgui::capture_keyboard</qualifiedname>
+        <briefdescription>
+<para>Check if keyboard capture is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Capture is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="222" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a62d4f5801ad6878b0227e7fc4fd84ea6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::set_active</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>set_active</name>
+        <qualifiedname>lava::imgui::set_active</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set ImGui active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="228" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="228" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a055fbe4279fd85b1e5c918f72a7b2f39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::imgui::activated</definition>
+        <argsstring>() const</argsstring>
+        <name>activated</name>
+        <qualifiedname>lava::imgui::activated</qualifiedname>
+        <briefdescription>
+<para>Check if ImGui is activated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ImGui is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="236" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a32b4f23806260a5b1dc6a306111f1ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::toggle</definition>
+        <argsstring>()</argsstring>
+        <name>toggle</name>
+        <qualifiedname>lava::imgui::toggle</qualifiedname>
+        <briefdescription>
+<para>Togge active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="243" column="10" bodyfile="liblava/app/imgui.hpp" bodystart="243" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a922e6fafba918cc61ecfff8aef5111d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::set_ini_file</definition>
+        <argsstring>(std::filesystem::path dir)</argsstring>
+        <name>set_ini_file</name>
+        <qualifiedname>lava::imgui::set_ini_file</qualifiedname>
+        <param>
+          <type>std::filesystem::path</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Set the ini file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path for file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="251" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1aca5b4e00d34baf4f0dcd89c0188556a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path lava::imgui::get_ini_file</definition>
+        <argsstring>() const</argsstring>
+        <name>get_ini_file</name>
+        <qualifiedname>lava::imgui::get_ini_file</qualifiedname>
+        <briefdescription>
+<para>Get the ini file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>fs::path Path of file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="257" column="27" bodyfile="liblava/app/imgui.hpp" bodystart="257" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a0ae68e6629d20950c98a7ef4f1921c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::convert_style_to_srgb</definition>
+        <argsstring>()</argsstring>
+        <name>convert_style_to_srgb</name>
+        <qualifiedname>lava::imgui::convert_style_to_srgb</qualifiedname>
+        <briefdescription>
+<para>Convert style to sRGB. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="264" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a6cd3946fa85e7421226baeb43957bbf8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref> const &amp;</type>
+        <definition>input_callback const  &amp; lava::imgui::get_input_callback</definition>
+        <argsstring>() const</argsstring>
+        <name>get_input_callback</name>
+        <qualifiedname>lava::imgui::get_input_callback</qualifiedname>
+        <briefdescription>
+<para>Get the input callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1input__callback" kindref="compound">input_callback</ref> const&amp; Input callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="270" column="26" bodyfile="liblava/app/imgui.hpp" bodystart="270" bodyend="272"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1imgui_1a83e4594a95e636713caf2cac28bd106c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::handle_key_event</definition>
+        <argsstring>(i32 key, i32 scancode, i32 action, i32 mods)</argsstring>
+        <name>handle_key_event</name>
+        <qualifiedname>lava::imgui::handle_key_event</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Handle key event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scancode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scan code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mods </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="282" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a58ace3b4aa2d698edcd6154f6aec2aab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::handle_mouse_button_event</definition>
+        <argsstring>(i32 button, i32 action, i32 mods)</argsstring>
+        <name>handle_mouse_button_event</name>
+        <qualifiedname>lava::imgui::handle_mouse_button_event</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Handle mouse button event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Button </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mods </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="290" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1afe91cfd6fed9719cfdd8f2c20b709adc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::handle_scroll_event</definition>
+        <argsstring>(r64 x_offset, r64 y_offset)</argsstring>
+        <name>handle_scroll_event</name>
+        <qualifiedname>lava::imgui::handle_scroll_event</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+          <declname>x_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+          <declname>y_offset</declname>
+        </param>
+        <briefdescription>
+<para>Handle scroll event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X offset </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="297" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a32f60c4a2805c6b6c1c69730e28ca2e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::prepare_draw_lists</definition>
+        <argsstring>(ImDrawData *draw_data)</argsstring>
+        <name>prepare_draw_lists</name>
+        <qualifiedname>lava::imgui::prepare_draw_lists</qualifiedname>
+        <param>
+          <type>ImDrawData *</type>
+          <declname>draw_data</declname>
+        </param>
+        <briefdescription>
+<para>Prepare draw lists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>draw_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Draw data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="303" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a873cd76e16cb668cf802937b88ee2731" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::render_draw_lists</definition>
+        <argsstring>(VkCommandBuffer cmd_buf)</argsstring>
+        <name>render_draw_lists</name>
+        <qualifiedname>lava::imgui::render_draw_lists</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Render draw lists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="309" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a49c482b8d9b457a5242c5841c9193ff6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::invalidate_device_objects</definition>
+        <argsstring>()</argsstring>
+        <name>invalidate_device_objects</name>
+        <qualifiedname>lava::imgui::invalidate_device_objects</qualifiedname>
+        <briefdescription>
+<para>Invalidate device objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="314" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1acc114b439539e84b3065cb34fc767a78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::update_mouse_pos_and_buttons</definition>
+        <argsstring>()</argsstring>
+        <name>update_mouse_pos_and_buttons</name>
+        <qualifiedname>lava::imgui::update_mouse_pos_and_buttons</qualifiedname>
+        <briefdescription>
+<para>Update mouse position and buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="319" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1add259d60ed96c99bf97fa4579a11c0e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::update_mouse_cursor</definition>
+        <argsstring>()</argsstring>
+        <name>update_mouse_cursor</name>
+        <qualifiedname>lava::imgui::update_mouse_cursor</qualifiedname>
+        <briefdescription>
+<para>Update mouse cursor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="324" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a35a09e3cb6a9a2575fb5a4681ae182ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::new_frame</definition>
+        <argsstring>()</argsstring>
+        <name>new_frame</name>
+        <qualifiedname>lava::imgui::new_frame</qualifiedname>
+        <briefdescription>
+<para>Start new frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="329" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1imgui_1a2dfbd6c56379c02acf6d9557d3971b0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::imgui::render</definition>
+        <argsstring>(VkCommandBuffer cmd_buf)</argsstring>
+        <name>render</name>
+        <qualifiedname>lava::imgui::render</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <briefdescription>
+<para>Render ImGui. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan command buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/imgui.hpp" line="335" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>ImGui integration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::imgui</label>
+        <link refid="structlava_1_1imgui"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>layers</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::layer_list</label>
+        <link refid="structlava_1_1layer__list"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/app/imgui.hpp" line="30" column="1" bodyfile="liblava/app/imgui.hpp" bodystart="30" bodyend="396"/>
+    <listofallmembers>
+      <member refid="structlava_1_1imgui_1a055fbe4279fd85b1e5c918f72a7b2f39" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>activated</name></member>
+      <member refid="structlava_1_1imgui_1a83a4b2448c40b505bea3a3e08b40314f" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>capture_keyboard</name></member>
+      <member refid="structlava_1_1imgui_1a0a23316f198244c282b16e636cae9cb0" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>capture_mouse</name></member>
+      <member refid="structlava_1_1imgui_1a0ae68e6629d20950c98a7ef4f1921c3c" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>convert_style_to_srgb</name></member>
+      <member refid="structlava_1_1imgui_1a87e2a644485869037f569f6c18d9d975" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>create</name></member>
+      <member refid="structlava_1_1imgui_1a85fc2881ac35f630d3a6828c3bc33ad1" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>create</name></member>
+      <member refid="structlava_1_1imgui_1a1af9de841808f809d0ef2b564423f438" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>create</name></member>
+      <member refid="structlava_1_1imgui_1aa783551e1e9a21787c2771ae3f84556b" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>destroy</name></member>
+      <member refid="structlava_1_1imgui_1a867bf49531cdec799d54011a0d645d4c" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>draw_func</name></member>
+      <member refid="structlava_1_1imgui_1aca5b4e00d34baf4f0dcd89c0188556a7" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>get_ini_file</name></member>
+      <member refid="structlava_1_1imgui_1a6cd3946fa85e7421226baeb43957bbf8" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>get_input_callback</name></member>
+      <member refid="structlava_1_1imgui_1a4c22d7bd25a2afc858d3d9a48a790c92" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>get_pipeline</name></member>
+      <member refid="structlava_1_1imgui_1a83e4594a95e636713caf2cac28bd106c" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>handle_key_event</name></member>
+      <member refid="structlava_1_1imgui_1a58ace3b4aa2d698edcd6154f6aec2aab" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>handle_mouse_button_event</name></member>
+      <member refid="structlava_1_1imgui_1afe91cfd6fed9719cfdd8f2c20b709adc" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>handle_scroll_event</name></member>
+      <member refid="structlava_1_1imgui_1a1045d179f75b8ff05d625383a2beea7c" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>imgui</name></member>
+      <member refid="structlava_1_1imgui_1a38665d7779b0880b6446e0f24ce9f168" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>imgui</name></member>
+      <member refid="structlava_1_1imgui_1a49c482b8d9b457a5242c5841c9193ff6" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>invalidate_device_objects</name></member>
+      <member refid="structlava_1_1imgui_1ae61916a2509cdf402c2709e3e8989f1d" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>layers</name></member>
+      <member refid="structlava_1_1imgui_1a7309ad9638e27afba885868c8c2f4eff" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_active</name></member>
+      <member refid="structlava_1_1imgui_1ad17e58e53867f15fb54fec82ff9e9b66" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_buffer_memory_alignment</name></member>
+      <member refid="structlava_1_1imgui_1a6fc7919481aa076b1c1ace49e53679b7" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_callback</name></member>
+      <member refid="structlava_1_1imgui_1a670538e0b6cde8832daabc9e15e7e6e6" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_current_time</name></member>
+      <member refid="structlava_1_1imgui_1a4914fddf64828cfe16270eff84542d80" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_descriptor</name></member>
+      <member refid="structlava_1_1imgui_1ab83969e94490cc4491b2112d2d4efb39" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_descriptor_pool</name></member>
+      <member refid="structlava_1_1imgui_1a2fea10b2ded14590ba353e0443122ec0" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_descriptor_set</name></member>
+      <member refid="structlava_1_1imgui_1a65b8bb651c7f978fe44f5a8f242ebb6f" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_device</name></member>
+      <member refid="structlava_1_1imgui_1ad50e6e80b0d0cd29b953912d25edc4b2" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_frame</name></member>
+      <member refid="structlava_1_1imgui_1a2aed595c1d937ae1377a8fc394d6c9d1" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_icons_range</name></member>
+      <member refid="structlava_1_1imgui_1a562694f2e925243360a8a6b9d1f0a856" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_index_buffers</name></member>
+      <member refid="structlava_1_1imgui_1ade132bd5137c3d7296210a1d4c194d72" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_ini_file</name></member>
+      <member refid="structlava_1_1imgui_1a4f3f7716cffbf3bada5f3ded05dcd336" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_initialized</name></member>
+      <member refid="structlava_1_1imgui_1af6d725086de0fab26c434b58eb631fe3" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_layout</name></member>
+      <member refid="structlava_1_1imgui_1afd65f192efc4bf7ed5125a749dfa09b7" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_max_frames</name></member>
+      <member refid="structlava_1_1imgui_1a70cf20793cee07f494b408f02f0a1cfa" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_mouse_cursors</name></member>
+      <member refid="structlava_1_1imgui_1aa84a33dd2d54cc27a19d504cdb1dbb93" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_mouse_just_pressed</name></member>
+      <member refid="structlava_1_1imgui_1aefd57bda60312abe33e61db510166d76" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_pipeline</name></member>
+      <member refid="structlava_1_1imgui_1a5754f5f7cb0d51cb57421038520e0efc" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_vertex_buffers</name></member>
+      <member refid="structlava_1_1imgui_1abc8a2e3358f66da49684f299b9442f41" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>m_window</name></member>
+      <member refid="structlava_1_1imgui_1a35a09e3cb6a9a2575fb5a4681ae182ed" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>new_frame</name></member>
+      <member refid="structlava_1_1imgui_1a06d37097926da66b1e16aea586cb2379" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>on_draw</name></member>
+      <member refid="structlava_1_1imgui_1a32f60c4a2805c6b6c1c69730e28ca2e3" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>prepare_draw_lists</name></member>
+      <member refid="structlava_1_1imgui_1abb2a1f3eb4babf73d3b1e5627f9829e7" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>ptr</name></member>
+      <member refid="structlava_1_1imgui_1ad8d5e0c8be33e958887174d554896870" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>ready</name></member>
+      <member refid="structlava_1_1imgui_1a2dfbd6c56379c02acf6d9557d3971b0b" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>render</name></member>
+      <member refid="structlava_1_1imgui_1a873cd76e16cb668cf802937b88ee2731" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>render_draw_lists</name></member>
+      <member refid="structlava_1_1imgui_1a62d4f5801ad6878b0227e7fc4fd84ea6" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>set_active</name></member>
+      <member refid="structlava_1_1imgui_1a922e6fafba918cc61ecfff8aef5111d3" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>set_ini_file</name></member>
+      <member refid="structlava_1_1imgui_1aee765da69cd996a1a9d7481e0ba468cc" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>setup</name></member>
+      <member refid="structlava_1_1imgui_1a0977c794e1fd19dda8169938d4d41e04" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>setup</name></member>
+      <member refid="structlava_1_1imgui_1a32b4f23806260a5b1dc6a306111f1ea7" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>toggle</name></member>
+      <member refid="structlava_1_1imgui_1add259d60ed96c99bf97fa4579a11c0e4" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>update_mouse_cursor</name></member>
+      <member refid="structlava_1_1imgui_1acc114b439539e84b3065cb34fc767a78" prot="private" virt="non-virtual"><scope>lava::imgui</scope><name>update_mouse_pos_and_buttons</name></member>
+      <member refid="structlava_1_1imgui_1a2570a375882a8c298eb8e4ae3b04ea32" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>upload_fonts</name></member>
+      <member refid="structlava_1_1imgui_1aed43c117003f8e9b06b5fc55845f1248" prot="public" virt="non-virtual"><scope>lava::imgui</scope><name>~imgui</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

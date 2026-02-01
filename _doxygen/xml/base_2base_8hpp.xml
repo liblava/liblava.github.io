@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="base_2base_8hpp" kind="file" language="C++">
+    <compoundname>base.hpp</compoundname>
+    <includes refid="version_8hpp" local="yes">liblava/core/version.hpp</includes>
+    <includes refid="math_8hpp" local="yes">liblava/util/math.hpp</includes>
+    <includes local="yes">vulkan/vulkan.h</includes>
+    <includes local="yes">volk.h</includes>
+    <includedby refid="base_8hpp" local="yes">liblava/base.hpp</includedby>
+    <includedby refid="debug__utils_8hpp" local="yes">liblava/base/debug_utils.hpp</includedby>
+    <includedby refid="memory_8hpp" local="yes">liblava/base/memory.hpp</includedby>
+    <includedby refid="queue_8hpp" local="yes">liblava/base/queue.hpp</includedby>
+    <includedby refid="attachment_8hpp" local="yes">liblava/block/attachment.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>liblava/base/base.hpp</label>
+        <link refid="base_2base_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/core/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/core/version.hpp</label>
+        <link refid="version_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>liblava/util/math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="14">
+        <label>glm/gtc/matrix_transform.hpp</label>
+      </node>
+      <node id="15">
+        <label>glm/gtc/type_ptr.hpp</label>
+      </node>
+      <node id="4">
+        <label>liblava/core/def.hpp</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="12">
+        <label>picosha2.h</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>string_view</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="17">
+        <label>volk.h</label>
+      </node>
+      <node id="16">
+        <label>vulkan/vulkan.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>liblava/app.hpp</label>
+        <link refid="app_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>liblava/app/app.hpp</label>
+        <link refid="app_2app_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>liblava/app/benchmark.hpp</label>
+        <link refid="benchmark_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>liblava/app/camera.hpp</label>
+        <link refid="camera_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>liblava/app/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>liblava/app/forward_shading.hpp</label>
+        <link refid="forward__shading_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>liblava/app/imgui.hpp</label>
+        <link refid="imgui_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>liblava/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>liblava/asset/load_image.hpp</label>
+        <link refid="load__image_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>liblava/asset/load_mesh.hpp</label>
+        <link refid="load__mesh_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>liblava/asset/load_texture.hpp</label>
+        <link refid="load__texture_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>liblava/asset/write_image.hpp</label>
+        <link refid="write__image_8hpp"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>liblava/base.hpp</label>
+        <link refid="base_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>liblava/base/base.hpp</label>
+        <link refid="base_2base_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>liblava/base/debug_utils.hpp</label>
+        <link refid="debug__utils_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>liblava/base/device.hpp</label>
+        <link refid="device_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>liblava/base/device_table.hpp</label>
+        <link refid="device__table_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>liblava/base/instance.hpp</label>
+        <link refid="instance_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>liblava/base/memory.hpp</label>
+        <link refid="memory_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>liblava/base/physical_device.hpp</label>
+        <link refid="physical__device_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>liblava/base/platform.hpp</label>
+        <link refid="platform_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>liblava/base/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>liblava/block.hpp</label>
+        <link refid="block_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>liblava/block/attachment.hpp</label>
+        <link refid="attachment_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>liblava/block/block.hpp</label>
+        <link refid="block_2block_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>liblava/block/compute_pipeline.hpp</label>
+        <link refid="compute__pipeline_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>liblava/block/descriptor.hpp</label>
+        <link refid="descriptor_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>liblava/block/pipeline.hpp</label>
+        <link refid="pipeline_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>liblava/block/pipeline_layout.hpp</label>
+        <link refid="pipeline__layout_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>liblava/block/render_pass.hpp</label>
+        <link refid="render__pass_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>liblava/block/render_pipeline.hpp</label>
+        <link refid="render__pipeline_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>liblava/block/subpass.hpp</label>
+        <link refid="subpass_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>liblava/engine.hpp</label>
+        <link refid="engine_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>liblava/engine/engine.hpp</label>
+        <link refid="engine_2engine_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>liblava/engine/producer.hpp</label>
+        <link refid="producer_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>liblava/frame.hpp</label>
+        <link refid="frame_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>liblava/frame/frame.hpp</label>
+        <link refid="frame_2frame_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>liblava/frame/render_target.hpp</label>
+        <link refid="render__target_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>liblava/frame/renderer.hpp</label>
+        <link refid="renderer_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>liblava/frame/swapchain.hpp</label>
+        <link refid="swapchain_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>liblava/lava.hpp</label>
+        <link refid="lava_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>liblava/resource.hpp</label>
+        <link refid="resource_8hpp"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>liblava/resource/buffer.hpp</label>
+        <link refid="buffer_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>liblava/resource/format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>liblava/resource/image.hpp</label>
+        <link refid="image_8hpp"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>liblava/resource/mesh.hpp</label>
+        <link refid="mesh_8hpp"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>liblava/resource/texture.hpp</label>
+        <link refid="texture_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>liblava/test.hpp</label>
+        <link refid="test_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlava_1_1vk__result" prot="public">lava::vk_result</innerclass>
+    <innerclass refid="structlava_1_1target__callback" prot="public">lava::target_callback</innerclass>
+    <innernamespace refid="namespacelava">lava</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="base_2base_8hpp_1a2b337b495b8538a07f4009281b9799f7" prot="public" static="no">
+        <name>VK_NO_PROTOTYPES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/base.hpp" line="15" column="9" bodyfile="liblava/base/base.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Vulkan base types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Lava Block OÜ and contributors </para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2018-present, MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="version_8hpp" kindref="compound">liblava/core/version.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="math_8hpp" kindref="compound">liblava/util/math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VK_NO_PROTOTYPES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vulkan/vulkan.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;volk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">lava<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" kindref="member">VkVersion</ref><sp/>=<sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="base_2base_8hpp_1af34c931d2c918df380c5c7afba9fd1be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1af34c931d2c918df380c5c7afba9fd1be" kindref="member">VkObjectHandle</ref><sp/>=<sp/><ref refid="types_8hpp_1abd93cf188810a5c57f1e971c1ba12db6" kindref="member">ui64</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="base_2base_8hpp_1a12338e204d106f4602b9bf70a1573f8b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a12338e204d106f4602b9bf70a1573f8b" kindref="member">VkFormats</ref><sp/>=<sp/>std::vector&lt;VkFormat&gt;;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="base_2base_8hpp_1a641dc45ef8eee378e727d58a660c7479" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a641dc45ef8eee378e727d58a660c7479" kindref="member">VkImages</ref><sp/>=<sp/>std::vector&lt;VkImage&gt;;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="base_2base_8hpp_1aeff93a1fe711990342205f1e2474d7b7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1aeff93a1fe711990342205f1e2474d7b7" kindref="member">VkImagesRef</ref><sp/>=<sp/><ref refid="base_2base_8hpp_1a641dc45ef8eee378e727d58a660c7479" kindref="member">VkImages</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="base_2base_8hpp_1ad86a56760c0ea73b5beaa3147af8df3d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ad86a56760c0ea73b5beaa3147af8df3d" kindref="member">VkImageViews</ref><sp/>=<sp/>std::vector&lt;VkImageView&gt;;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="base_2base_8hpp_1a18fe5b86fb1c98ec4f07db9bde567631" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a18fe5b86fb1c98ec4f07db9bde567631" kindref="member">VkFramebuffers</ref><sp/>=<sp/>std::vector&lt;VkFramebuffer&gt;;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="base_2base_8hpp_1afe1ce1f608bd72e59916382d9c3cf615" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1afe1ce1f608bd72e59916382d9c3cf615" kindref="member">VkCommandPools</ref><sp/>=<sp/>std::vector&lt;VkCommandPool&gt;;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="base_2base_8hpp_1ace97a755b9ed66f2467c625c05a29c0e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ace97a755b9ed66f2467c625c05a29c0e" kindref="member">VkCommandBuffers</ref><sp/>=<sp/>std::vector&lt;VkCommandBuffer&gt;;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="base_2base_8hpp_1afc7a081f8c97f8d4b753a70c91270d3f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1afc7a081f8c97f8d4b753a70c91270d3f" kindref="member">VkFences</ref><sp/>=<sp/>std::vector&lt;VkFence&gt;;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a29014e3e85b809e1c9175957d5012b76" kindref="member">VkSemaphores</ref><sp/>=<sp/>std::vector&lt;VkSemaphore&gt;;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="base_2base_8hpp_1a31e005633f6b721fd471413d4d306cff" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a31e005633f6b721fd471413d4d306cff" kindref="member">VkPresentModeKHRs</ref><sp/>=<sp/>std::vector&lt;VkPresentModeKHR&gt;;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="base_2base_8hpp_1a86d1b187b311d0bacaa2656a143bdd01" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a86d1b187b311d0bacaa2656a143bdd01" kindref="member">VkDescriptorSets</ref><sp/>=<sp/>std::vector&lt;VkDescriptorSet&gt;;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="base_2base_8hpp_1ac0e6d7c298bc01a729815eae30414e36" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ac0e6d7c298bc01a729815eae30414e36" kindref="member">VkDescriptorSetLayouts</ref><sp/>=<sp/>std::vector&lt;VkDescriptorSetLayout&gt;;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="base_2base_8hpp_1a137a002a37399975e323e78d0e90db11" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a137a002a37399975e323e78d0e90db11" kindref="member">VkDescriptorSetLayoutBindings</ref><sp/>=<sp/>std::vector&lt;VkDescriptorSetLayoutBinding&gt;;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="base_2base_8hpp_1aeec9e5c423fdc50bd10ba2d59d347080" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1aeec9e5c423fdc50bd10ba2d59d347080" kindref="member">VkDescriptorPoolSizes</ref><sp/>=<sp/>std::vector&lt;VkDescriptorPoolSize&gt;;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="base_2base_8hpp_1a425746916ff6402a4032061a5e0e7da3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a425746916ff6402a4032061a5e0e7da3" kindref="member">VkDescriptorPoolSizesRef</ref><sp/>=<sp/><ref refid="base_2base_8hpp_1aeec9e5c423fdc50bd10ba2d59d347080" kindref="member">VkDescriptorPoolSizes</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="base_2base_8hpp_1a5d74309e91a4d7bd8d327cd48d279908" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a5d74309e91a4d7bd8d327cd48d279908" kindref="member">VkPushConstantRanges</ref><sp/>=<sp/>std::vector&lt;VkPushConstantRange&gt;;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref><sp/>=<sp/>std::vector&lt;VkAttachmentReference&gt;;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="base_2base_8hpp_1a263ed5914a698556450a6132571fa854" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a263ed5914a698556450a6132571fa854" kindref="member">VkClearValues</ref><sp/>=<sp/>std::vector&lt;VkClearValue&gt;;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="base_2base_8hpp_1a591f03bbd3f94bad67fe8ce6dbcf687b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a591f03bbd3f94bad67fe8ce6dbcf687b" kindref="member">VkPipelineShaderStageCreateInfos</ref><sp/>=<sp/>std::vector&lt;VkPipelineShaderStageCreateInfo&gt;;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="base_2base_8hpp_1a8e11638468d2ec440a2af3c5e974ca7c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a8e11638468d2ec440a2af3c5e974ca7c" kindref="member">VkSpecializationMapEntries</ref><sp/>=<sp/>std::vector&lt;VkSpecializationMapEntry&gt;;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="base_2base_8hpp_1a919bd0b8a2dfec094ec8cc718fdd0c9c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a919bd0b8a2dfec094ec8cc718fdd0c9c" kindref="member">VkVertexInputBindingDescriptions</ref><sp/>=<sp/>std::vector&lt;VkVertexInputBindingDescription&gt;;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="base_2base_8hpp_1acede95ebeecb8bdd7a855ba1f2b518dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1acede95ebeecb8bdd7a855ba1f2b518dc" kindref="member">VkVertexInputAttributeDescriptions</ref><sp/>=<sp/>std::vector&lt;VkVertexInputAttributeDescription&gt;;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="base_2base_8hpp_1a8f0ca12074ec9090940eb7b5f0ff61ac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a8f0ca12074ec9090940eb7b5f0ff61ac" kindref="member">VkPipelineColorBlendAttachmentStates</ref><sp/>=<sp/>std::vector&lt;VkPipelineColorBlendAttachmentState&gt;;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="base_2base_8hpp_1a776c45a697b1300f9460e2015e99b69d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a776c45a697b1300f9460e2015e99b69d" kindref="member">VkPipelineStageFlagsList</ref><sp/>=<sp/>std::vector&lt;VkPipelineStageFlags&gt;;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="base_2base_8hpp_1a740d0f8107af22a9f1dab998b0577a20" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a740d0f8107af22a9f1dab998b0577a20" kindref="member">VkDynamicStates</ref><sp/>=<sp/>std::vector&lt;VkDynamicState&gt;;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="base_2base_8hpp_1abf600c76d74b79d839b9f25aa7ae8228" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1abf600c76d74b79d839b9f25aa7ae8228" kindref="member">VkQueueFamilyPropertiesList</ref><sp/>=<sp/>std::vector&lt;VkQueueFamilyProperties&gt;;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" kindref="member">VkExtensionPropertiesList</ref><sp/>=<sp/>std::vector&lt;VkExtensionProperties&gt;;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="base_2base_8hpp_1ad7b553b09e6cd35151635ed61efbe4a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ad7b553b09e6cd35151635ed61efbe4a4" kindref="member">VkLayerPropertiesList</ref><sp/>=<sp/>std::vector&lt;VkLayerProperties&gt;;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a333be9f107cf99eb1bd039d36fc6ee02" kindref="member">VkExtensionPropertiesList</ref><sp/>=<sp/>std::vector&lt;VkExtensionProperties&gt;;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="base_2base_8hpp_1ad05e68f9a336e01ee78008158d358f77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ad05e68f9a336e01ee78008158d358f77" kindref="member">VkPhysicalDevices</ref><sp/>=<sp/>std::vector&lt;VkPhysicalDevice&gt;;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="base_2base_8hpp_1aacf9ec688051b9b2607db92396055d40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1aacf9ec688051b9b2607db92396055d40" kindref="member">check</ref>(VkResult<sp/>result);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="base_2base_8hpp_1a8c33378c47aea22ea0734f005f3160f6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a8c33378c47aea22ea0734f005f3160f6" kindref="member">failed</ref>(VkResult<sp/>result)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="base_2base_8hpp_1aacf9ec688051b9b2607db92396055d40" kindref="member">check</ref>(result);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="base_2base_8hpp_1a7f77a3e2fd6478b5d5c013607ec5bd8b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a7f77a3e2fd6478b5d5c013607ec5bd8b" kindref="member">to_string</ref>(VkResult<sp/>result);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="base_2base_8hpp_1a526fa4ab7b30e17635a0e5ff90a45b95" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a526fa4ab7b30e17635a0e5ff90a45b95" kindref="member">vk_version_to_string</ref>(<ref refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" kindref="member">VkVersion</ref><sp/><ref refid="structlava_1_1version" kindref="compound">version</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="base_2base_8hpp_1ad57acb7f3e179f57808c9c815829bd9e" refkind="member"><highlight class="normal"><ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref><sp/><ref refid="base_2base_8hpp_1ad57acb7f3e179f57808c9c815829bd9e" kindref="member">to_version</ref>(<ref refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" kindref="member">VkVersion</ref><sp/><ref refid="structlava_1_1version" kindref="compound">version</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="base_2base_8hpp_1acfad760f57f7987fa3271302d4d8377e" refkind="member"><highlight class="normal"><ref refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" kindref="member">VkVersion</ref><sp/><ref refid="base_2base_8hpp_1acfad760f57f7987fa3271302d4d8377e" kindref="member">to_vk_version</ref>(<ref refid="version_8hpp_1ad21c2311c0d3c020c4ee9a7179d3ea2a" kindref="member">sem_version</ref><sp/><ref refid="structlava_1_1version" kindref="compound">version</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="base_2base_8hpp_1a1bf135e6f61f0448a2fca3fbb9cd825a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a1bf135e6f61f0448a2fca3fbb9cd825a" kindref="member">api_version</ref><sp/>:<sp/><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>v1_0<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>v1_1,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>v1_2,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>v1_3</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="base_2base_8hpp_1a1a3d4cc6fbab4db2ed03ae3c2f7afd4c" refkind="member"><highlight class="normal"><ref refid="base_2base_8hpp_1a1bf135e6f61f0448a2fca3fbb9cd825a" kindref="member">api_version</ref><sp/><ref refid="base_2base_8hpp_1a1a3d4cc6fbab4db2ed03ae3c2f7afd4c" kindref="member">to_api_version</ref>(<ref refid="base_2base_8hpp_1aa62af46b2c296b6d19f005d5fe760670" kindref="member">VkVersion</ref><sp/><ref refid="structlava_1_1version" kindref="compound">version</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structlava_1_1vk__result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1vk__result" kindref="compound">vk_result</ref><sp/>{</highlight></codeline>
+<codeline lineno="185" refid="structlava_1_1vk__result_1acf21c93306f2ee6c0eb9800b09dc89c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1vk__result_1acf21c93306f2ee6c0eb9800b09dc89c4" kindref="member">state</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structlava_1_1vk__result_1acf04578236c3665501aa5764f9cd62ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>VkResult<sp/><ref refid="structlava_1_1vk__result_1acf04578236c3665501aa5764f9cd62ab" kindref="member">value</ref><sp/>=<sp/>VK_NOT_READY;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="structlava_1_1vk__result_1af97f3c750b2aea187886054a5054aceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlava_1_1vk__result_1acf21c93306f2ee6c0eb9800b09dc89c4" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="base_2base_8hpp_1a5ce56ce5fa9324105cd58a0573b27d36" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a5ce56ce5fa9324105cd58a0573b27d36" kindref="member">build_failed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="base_2base_8hpp_1a9113e4177ba920920f06df6a7bf39382" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a9113e4177ba920920f06df6a7bf39382" kindref="member">build_done</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="base_2base_8hpp_1ae73891efe81ae4e16da96190b745cd04" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1ae73891efe81ae4e16da96190b745cd04" kindref="member">VkAttachments</ref><sp/>=<sp/>std::vector&lt;VkImageViews&gt;;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="base_2base_8hpp_1a5d9774191fbb48cbd1d60cd9216a5e1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="base_2base_8hpp_1a5d9774191fbb48cbd1d60cd9216a5e1b" kindref="member">VkAttachmentsRef</ref><sp/>=<sp/><ref refid="base_2base_8hpp_1ae73891efe81ae4e16da96190b745cd04" kindref="member">VkAttachments</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="structlava_1_1target__callback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref><sp/>{</highlight></codeline>
+<codeline lineno="216" refid="structlava_1_1target__callback_1adc04944c6c1ad2bcd12db8714c2fbee0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback_1adc04944c6c1ad2bcd12db8714c2fbee0" kindref="member">c_ptr</ref><sp/>=<sp/><ref refid="structlava_1_1target__callback" kindref="compound">target_callback</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="structlava_1_1target__callback_1ab14f4c45a5fc1bede89a2f8a5bd3f2f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback_1ab14f4c45a5fc1bede89a2f8a5bd3f2f7" kindref="member">list</ref><sp/>=<sp/>std::vector&lt;target_callback*&gt;;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="structlava_1_1target__callback_1ab70ab60d51666d3b8ab9e78b72381703" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback_1ab70ab60d51666d3b8ab9e78b72381703" kindref="member">c_list</ref><sp/>=<sp/>std::vector&lt;c_ptr&gt;;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" kindref="member">created_func</ref><sp/>=<sp/>std::function&lt;bool(<ref refid="base_2base_8hpp_1a5d9774191fbb48cbd1d60cd9216a5e1b" kindref="member">VkAttachmentsRef</ref>,<sp/><ref refid="structlava_1_1rect_1a1ed1fdead3bf333d3f93e65920392d5b" kindref="member">rect::ref</ref>)&gt;;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="structlava_1_1target__callback_1a4ea94b6dab645ca198d1a96598d52572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1target__callback_1a6c1d6809811d792db0c3651beaf7e651" kindref="member">created_func</ref><sp/><ref refid="structlava_1_1target__callback_1a4ea94b6dab645ca198d1a96598d52572" kindref="member">on_created</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" kindref="member">destroyed_func</ref><sp/>=<sp/>std::function&lt;void()&gt;;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="structlava_1_1target__callback_1ae3eb3ddc8de72e2e9db50375ef40b3f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlava_1_1target__callback_1a31efdb007e1d6df70119b6928e4df446" kindref="member">destroyed_func</ref><sp/><ref refid="structlava_1_1target__callback_1ae3eb3ddc8de72e2e9db50375ef40b3f7" kindref="member">on_destroyed</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="base_2base_8hpp_1a013b3ebd3c49c600aded40f65edc7a9d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a013b3ebd3c49c600aded40f65edc7a9d" kindref="member">Vk_Limit_DescriptorSets</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="base_2base_8hpp_1a480388d3b3e0e985af702c9403d4a7c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a480388d3b3e0e985af702c9403d4a7c5" kindref="member">Vk_Limit_Bindings</ref><sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="base_2base_8hpp_1a89b84ce26c4099f5b7894facace71df5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a89b84ce26c4099f5b7894facace71df5" kindref="member">Vk_Limit_Attachments</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="base_2base_8hpp_1ab76e1c42f9b7e8110adf4677b9329d60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1ab76e1c42f9b7e8110adf4677b9329d60" kindref="member">Vk_Limit_VertexAttribs</ref><sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="base_2base_8hpp_1a73b2e4bc6ac162d3e220dead440586b6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a73b2e4bc6ac162d3e220dead440586b6" kindref="member">Vk_Limit_VertexBuffers</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="base_2base_8hpp_1a9b8f0c6649af56dc87910f3a33b9a6b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1a9b8f0c6649af56dc87910f3a33b9a6b1" kindref="member">Vk_Limit_PushConstant_Size</ref><sp/>=<sp/>128;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="base_2base_8hpp_1adbf9a98289504ad4fe87bb50a6aef9d2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="base_2base_8hpp_1adbf9a98289504ad4fe87bb50a6aef9d2" kindref="member">Vk_Limit_UBO_Size</ref><sp/>=<sp/>16<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>lava</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="liblava/base/base.hpp"/>
+  </compounddef>
+</doxygen>

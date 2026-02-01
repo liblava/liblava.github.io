@@ -1,0 +1,356 @@
+\doxysection{lava\+::physical\+\_\+device Struct Reference}
+\hypertarget{structlava_1_1physical__device}{}\label{structlava_1_1physical__device}\index{lava::physical\_device@{lava::physical\_device}}
+
+
+Vulkan physical device.  
+
+
+
+
+{\ttfamily \#include $<$physical\+\_\+device.\+hpp$>$}
+
+Inheritance diagram for lava\+::physical\+\_\+device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1physical__device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}\label{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1physical__device}{physical\+\_\+device}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to physical device. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06}\label{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of physical devices. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b}\label{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1physical__device}{physical\+\_\+device}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to physical device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1physical__device_ac22d0d61fcacb3140b0b5d2778c7aa36}\label{structlava_1_1physical__device_ac22d0d61fcacb3140b0b5d2778c7aa36} 
+{\bfseries physical\+\_\+device} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new physical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1physical__device_a4f8c91658cf3903da01f95568c9b4fd5}{physical\+\_\+device}} (Vk\+Physical\+Device vk\+\_\+physical\+\_\+device)
+\begin{DoxyCompactList}\small\item\em Construct and initialize a new physical device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1physical__device_a33aa6284e03105f50f2a1db614bdb1a8}{initialize}} (Vk\+Physical\+Device vk\+\_\+physical\+\_\+device)
+\begin{DoxyCompactList}\small\item\em Initialize the physical device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1physical__device_ab1fb3b0629f71631c7ecb25973c1e860}{supported}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{file__utils_8hpp_ae1308f8f78ed75e822b67a4e2a29bdc6}{extension}}) const
+\begin{DoxyCompactList}\small\item\em Check if extension is supported. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1physical__device_a46facd60eac419fb7c58271dfe62e61b}{get\+\_\+queue\+\_\+family}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \&\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}, Vk\+Queue\+Flags flags) const
+\begin{DoxyCompactList}\small\item\em Get the queue family. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_1_1create__param}{device\+::create\+\_\+param}} \mbox{\hyperlink{structlava_1_1physical__device_a3124b44643d102fa6cbb99164a7e71e2}{create\+\_\+default\+\_\+device\+\_\+param}} () const
+\begin{DoxyCompactList}\small\item\em Create default device parameters. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device\+Properties const \& \mbox{\hyperlink{structlava_1_1physical__device_a419ba98c5496010e3b16615e958faa64}{get\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the properties. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device\+Features const \& \mbox{\hyperlink{structlava_1_1physical__device_a066365a839361413d93ed97ea0da7b2f}{get\+\_\+features}} () const
+\begin{DoxyCompactList}\small\item\em Get the features. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device\+Memory\+Properties const \& \mbox{\hyperlink{structlava_1_1physical__device_a6c9a2ede47f64403dce789d6951579fc}{get\+\_\+memory\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the memory properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \& \mbox{\hyperlink{structlava_1_1physical__device_a3fbf67058c35ecadff7466a0236c19e1}{get\+\_\+queue\+\_\+family\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the queue family properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{Vk\+Extension\+Properties\+List}} const \& \mbox{\hyperlink{structlava_1_1physical__device_a528eab432ebfa509f36b2b4984de3f68}{get\+\_\+extension\+\_\+properties}} () const
+\begin{DoxyCompactList}\small\item\em Get the extension properties. \end{DoxyCompactList}\item 
+Vk\+Physical\+Device \mbox{\hyperlink{structlava_1_1physical__device_a2396c619c1678650af362056d8a2dda7}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan physical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} \mbox{\hyperlink{structlava_1_1physical__device_a79805ffd9a70c561b8145f1663105d82}{get\+\_\+device\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the device name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1physical__device_a2b8c80b347fc031082f483f072f7542b}{get\+\_\+device\+\_\+type\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Get the device type as string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{structlava_1_1physical__device_a045e2daa2121da2e7512977c443ae4c5}{get\+\_\+driver\+\_\+version}} () const
+\begin{DoxyCompactList}\small\item\em Get the driver version. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1physical__device_a233738a476ca4e179ff4de370c68e401}{swapchain\+\_\+supported}} () const
+\begin{DoxyCompactList}\small\item\em Check if swapchain is supported. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1physical__device_adbdb48a8c48725399d8bef8fb7176a3f}{surface\+\_\+supported}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} queue\+\_\+family, Vk\+Surface\+KHR surface) const
+\begin{DoxyCompactList}\small\item\em Check if surface is supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1physical__device_a1e05103a70031752339eb528f41b421d}{make}} (Vk\+Physical\+Device vk\+\_\+physical\+\_\+device)
+\begin{DoxyCompactList}\small\item\em Make a new physical device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan physical device. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1physical__device_a4f8c91658cf3903da01f95568c9b4fd5}\index{lava::physical\_device@{lava::physical\_device}!physical\_device@{physical\_device}}
+\index{physical\_device@{physical\_device}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{physical\_device()}{physical\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a4f8c91658cf3903da01f95568c9b4fd5} 
+lava\+::physical\+\_\+device\+::physical\+\_\+device (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{vk\+\_\+physical\+\_\+device}{}\end{DoxyParamCaption})}
+
+
+
+Construct and initialize a new physical device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vk\+\_\+physical\+\_\+device} & Vulkan physical device \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1physical__device_a3124b44643d102fa6cbb99164a7e71e2}\index{lava::physical\_device@{lava::physical\_device}!create\_default\_device\_param@{create\_default\_device\_param}}
+\index{create\_default\_device\_param@{create\_default\_device\_param}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{create\_default\_device\_param()}{create\_default\_device\_param()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a3124b44643d102fa6cbb99164a7e71e2} 
+\mbox{\hyperlink{structlava_1_1device_1_1create__param}{device\+::create\+\_\+param}} lava\+::physical\+\_\+device\+::create\+\_\+default\+\_\+device\+\_\+param (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Create default device parameters. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_1_1create__param}{device\+::create\+\_\+param} Device create parameters 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a2396c619c1678650af362056d8a2dda7}\index{lava::physical\_device@{lava::physical\_device}!get@{get}}
+\index{get@{get}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a2396c619c1678650af362056d8a2dda7} 
+Vk\+Physical\+Device lava\+::physical\+\_\+device\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan physical device. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device Vulkan physical device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a79805ffd9a70c561b8145f1663105d82}\index{lava::physical\_device@{lava::physical\_device}!get\_device\_name@{get\_device\_name}}
+\index{get\_device\_name@{get\_device\_name}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_device\_name()}{get\_device\_name()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a79805ffd9a70c561b8145f1663105d82} 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} lava\+::physical\+\_\+device\+::get\+\_\+device\+\_\+name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the device name. 
+
+\begin{DoxyReturn}{Returns}
+name Name of device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a2b8c80b347fc031082f483f072f7542b}\index{lava::physical\_device@{lava::physical\_device}!get\_device\_type\_string@{get\_device\_type\_string}}
+\index{get\_device\_type\_string@{get\_device\_type\_string}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_device\_type\_string()}{get\_device\_type\_string()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a2b8c80b347fc031082f483f072f7542b} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::physical\+\_\+device\+::get\+\_\+device\+\_\+type\+\_\+string (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the device type as string. 
+
+\begin{DoxyReturn}{Returns}
+string String representation of device type 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a045e2daa2121da2e7512977c443ae4c5}\index{lava::physical\_device@{lava::physical\_device}!get\_driver\_version@{get\_driver\_version}}
+\index{get\_driver\_version@{get\_driver\_version}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_driver\_version()}{get\_driver\_version()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a045e2daa2121da2e7512977c443ae4c5} 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} lava\+::physical\+\_\+device\+::get\+\_\+driver\+\_\+version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the driver version. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version} Driver version 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a528eab432ebfa509f36b2b4984de3f68}\index{lava::physical\_device@{lava::physical\_device}!get\_extension\_properties@{get\_extension\_properties}}
+\index{get\_extension\_properties@{get\_extension\_properties}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_extension\_properties()}{get\_extension\_properties()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a528eab432ebfa509f36b2b4984de3f68} 
+\mbox{\hyperlink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{Vk\+Extension\+Properties\+List}} const  \& lava\+::physical\+\_\+device\+::get\+\_\+extension\+\_\+properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the extension properties. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{Vk\+Extension\+Properties\+List} const\& List of extension properties 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a066365a839361413d93ed97ea0da7b2f}\index{lava::physical\_device@{lava::physical\_device}!get\_features@{get\_features}}
+\index{get\_features@{get\_features}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_features()}{get\_features()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a066365a839361413d93ed97ea0da7b2f} 
+Vk\+Physical\+Device\+Features const  \& lava\+::physical\+\_\+device\+::get\+\_\+features (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the features. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device\+Features const\& Physical device features 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a6c9a2ede47f64403dce789d6951579fc}\index{lava::physical\_device@{lava::physical\_device}!get\_memory\_properties@{get\_memory\_properties}}
+\index{get\_memory\_properties@{get\_memory\_properties}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_memory\_properties()}{get\_memory\_properties()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a6c9a2ede47f64403dce789d6951579fc} 
+Vk\+Physical\+Device\+Memory\+Properties const  \& lava\+::physical\+\_\+device\+::get\+\_\+memory\+\_\+properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the memory properties. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device\+Memory\+Properties const\& Physical device memory properties 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a419ba98c5496010e3b16615e958faa64}\index{lava::physical\_device@{lava::physical\_device}!get\_properties@{get\_properties}}
+\index{get\_properties@{get\_properties}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_properties()}{get\_properties()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a419ba98c5496010e3b16615e958faa64} 
+Vk\+Physical\+Device\+Properties const  \& lava\+::physical\+\_\+device\+::get\+\_\+properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the properties. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Physical\+Device\+Properties const\& Physical device properties 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a46facd60eac419fb7c58271dfe62e61b}\index{lava::physical\_device@{lava::physical\_device}!get\_queue\_family@{get\_queue\_family}}
+\index{get\_queue\_family@{get\_queue\_family}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_queue\_family()}{get\_queue\_family()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a46facd60eac419fb7c58271dfe62e61b} 
+bool lava\+::physical\+\_\+device\+::get\+\_\+queue\+\_\+family (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \&}]{index}{, }\item[{Vk\+Queue\+Flags}]{flags}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the queue family. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Returned index of queue family \\
+\hline
+{\em flags} & Queue flags that must be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Found a queue family or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a3fbf67058c35ecadff7466a0236c19e1}\index{lava::physical\_device@{lava::physical\_device}!get\_queue\_family\_properties@{get\_queue\_family\_properties}}
+\index{get\_queue\_family\_properties@{get\_queue\_family\_properties}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{get\_queue\_family\_properties()}{get\_queue\_family\_properties()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a3fbf67058c35ecadff7466a0236c19e1} 
+\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const  \& lava\+::physical\+\_\+device\+::get\+\_\+queue\+\_\+family\+\_\+properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the queue family properties. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List} const\& List of queue family properties 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a33aa6284e03105f50f2a1db614bdb1a8}\index{lava::physical\_device@{lava::physical\_device}!initialize@{initialize}}
+\index{initialize@{initialize}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a33aa6284e03105f50f2a1db614bdb1a8} 
+void lava\+::physical\+\_\+device\+::initialize (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{vk\+\_\+physical\+\_\+device}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the physical device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vk\+\_\+physical\+\_\+device} & Vulkan physical device \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1physical__device_a1e05103a70031752339eb528f41b421d}\index{lava::physical\_device@{lava::physical\_device}!make@{make}}
+\index{make@{make}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a1e05103a70031752339eb528f41b421d} 
+static \mbox{\hyperlink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\+\_\+ptr}} lava\+::physical\+\_\+device\+::make (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{vk\+\_\+physical\+\_\+device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new physical device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vk\+\_\+physical\+\_\+device} & Vulkan physical device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1physical__device_aa4b2204c8d67f3a2214b009d0502a1cd}{s\+\_\+ptr} Shared pointer to physical device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_ab1fb3b0629f71631c7ecb25973c1e860}\index{lava::physical\_device@{lava::physical\_device}!supported@{supported}}
+\index{supported@{supported}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{supported()}{supported()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_ab1fb3b0629f71631c7ecb25973c1e860} 
+bool lava\+::physical\+\_\+device\+::supported (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{extension}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if extension is supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension} & Extension to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Extension is supported or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_adbdb48a8c48725399d8bef8fb7176a3f}\index{lava::physical\_device@{lava::physical\_device}!surface\_supported@{surface\_supported}}
+\index{surface\_supported@{surface\_supported}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{surface\_supported()}{surface\_supported()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_adbdb48a8c48725399d8bef8fb7176a3f} 
+bool lava\+::physical\+\_\+device\+::surface\+\_\+supported (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{queue\+\_\+family}{, }\item[{Vk\+Surface\+KHR}]{surface}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if surface is supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\+\_\+family} & Index of queue family \\
+\hline
+{\em surface} & Vulkan surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Surface is supported or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1physical__device_a233738a476ca4e179ff4de370c68e401}\index{lava::physical\_device@{lava::physical\_device}!swapchain\_supported@{swapchain\_supported}}
+\index{swapchain\_supported@{swapchain\_supported}!lava::physical\_device@{lava::physical\_device}}
+\doxysubsubsection{\texorpdfstring{swapchain\_supported()}{swapchain\_supported()}}
+{\footnotesize\ttfamily \label{structlava_1_1physical__device_a233738a476ca4e179ff4de370c68e401} 
+bool lava\+::physical\+\_\+device\+::swapchain\+\_\+supported (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if swapchain is supported. 
+
+\begin{DoxyReturn}{Returns}
+Swapchain is supported or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{physical__device_8hpp}{physical\+\_\+device.\+hpp}}\end{DoxyCompactItemize}

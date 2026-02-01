@@ -1,0 +1,86 @@
+\doxysection{producer.\+hpp}
+\hypertarget{producer_8hpp_source}{}\label{producer_8hpp_source}\index{liblava/engine/producer.hpp@{liblava/engine/producer.hpp}}
+\mbox{\hyperlink{producer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}liblava/fwd.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resource_8hpp}{liblava/resource.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{producer_8hpp_ae6e393ea9aa1e3acee7ad1d7c50cfb66}{\_shader\_path\_}}\ =\ \textcolor{stringliteral}{"{}shader/"{}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{producer_8hpp_ac6146986ec25ff6c869aabde9484ee1a}{\_temp\_path\_}}\ =\ \textcolor{stringliteral}{"{}temp/"{}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{producer_8hpp_a69ca1e4f41adc3320c17b59617608217}{\_hash\_json\_}}\ =\ \textcolor{stringliteral}{"{}hash.json"{}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1producer}{producer}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1producer_a1c35bbf5017f998e492ec5fa8b161a8f}{ptr}}\ =\ \mbox{\hyperlink{structlava_1_1producer}{producer}}*;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structlava_1_1engine}{engine}}*\ \mbox{\hyperlink{structlava_1_1producer_a0246341f434c17fa0b727e552c496488}{app}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1producer_a15fbf775b6c4477dedcba17f905860bc}{create\_mesh}}(\mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1producer_af51971921ad6b75df9578d89f24849cd}{get\_mesh}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1producer_a794527d9bd34d7fd42c9d4e44985cd9b}{add\_mesh}}(\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{mesh::s\_ptr}}\ \mbox{\hyperlink{mesh_8hpp_ad5ed4a99e12848d76d0097c2599e6341}{mesh}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1producer_af44cc8412da26682a3961e8cd3c66590}{create\_texture}}(\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ size);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1producer_a7017f850dad5f8c9800629aa107427d1}{get\_texture}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1producer_afcc8c8b59d1d6ead4e728ff321c5fd17}{add\_texture}}(\mbox{\hyperlink{structlava_1_1texture_a0fd62a3dd974f573e5134ed498140360}{texture::s\_ptr}}\ product);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{structlava_1_1c__data}{c\_data}}\ \mbox{\hyperlink{structlava_1_1producer_a5efa0fdbad2f60aa21d9f9c4a72161d9}{get\_shader}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ reload\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{structlava_1_1c__data}{c\_data}}\ \mbox{\hyperlink{structlava_1_1producer_a1e0b2eb5de50571933068b22a1f9a997}{reload\_shader}}(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1producer_a5efa0fdbad2f60aa21d9f9c4a72161d9}{get\_shader}}(\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{structlava_1_1data}{data}}\ \mbox{\hyperlink{structlava_1_1producer_a7646ea144e25fbb1e176bacbb943276c}{compile\_shader}}(\mbox{\hyperlink{structlava_1_1c__data}{c\_data}}\ product,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}},}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1producer_aeea5c08661de1850daf7c392aee1d99d}{destroy}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1producer_a66b908590b9c22b43cbefd78b4553b9f}{clear}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry}{id\_registry<mesh,\ string>}}\ \mbox{\hyperlink{structlava_1_1producer_ad7ec786d9a89d95bd28c3c7cd380aea2}{meshes}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry}{id\_registry<texture,\ string>}}\ \mbox{\hyperlink{structlava_1_1producer_af03bcb173ef9d6633556d5f08d90f081}{textures}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\_optimization}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ none\ =\ 0,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ size,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ performance}
+\DoxyCodeLine{00128\ \ \ \ \ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{structlava_1_1producer_a33c72a1aef3a15861eee5f4ff451e396}{shader\_optimization}}\ \mbox{\hyperlink{structlava_1_1producer_a50036267bb97fc294b73d18b41471498}{shader\_opt}}\ =\ shader\_optimization::performance;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\_language}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ glsl\ =\ 0,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ hlsl}
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{structlava_1_1producer_a37e9869dd0d1999bbff93c7587575cfb}{shader\_language}}\ \mbox{\hyperlink{structlava_1_1producer_aa4c66fdc83b093ce2269af2f5d5fa977}{shader\_lang}}\ =\ shader\_language::glsl;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1producer_ab3bc54229e400f0803732a80223fb8c6}{shader\_debug}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ update\_hash(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}},}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_acd143c32ef342857c26c8623ac1fc92c}{string\_map\_ref}}\ file\_hash\_map)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_shader(\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{using\ }shader\_map\ =\ std::map<string,\ data>;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00167\ \ \ \ \ shader\_map\ m\_shaders;}
+\DoxyCodeLine{00168\ \};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

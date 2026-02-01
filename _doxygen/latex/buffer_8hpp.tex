@@ -1,0 +1,70 @@
+\doxysection{liblava/resource/buffer.hpp File Reference}
+\hypertarget{buffer_8hpp}{}\label{buffer_8hpp}\index{liblava/resource/buffer.hpp@{liblava/resource/buffer.hpp}}
+
+
+Vulkan buffer.  
+
+
+{\ttfamily \#include "{}liblava/base/device.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1buffer}{lava\+::buffer}}
+\begin{DoxyCompactList}\small\item\em Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Pipeline\+Stage\+Flags \mbox{\hyperlink{buffer_8hpp_a4fe4f0c45b11610b735dd4ec5eb1d36a}{lava\+::buffer\+\_\+usage\+\_\+to\+\_\+possible\+\_\+stages}} (Vk\+Buffer\+Usage\+Flags usage)
+\begin{DoxyCompactList}\small\item\em Get possible stages by bufferusage flags. \end{DoxyCompactList}\item 
+Vk\+Access\+Flags \mbox{\hyperlink{buffer_8hpp_a32e379ae053c501d6874da51314cf6ba}{lava\+::buffer\+\_\+usage\+\_\+to\+\_\+possible\+\_\+access}} (Vk\+Buffer\+Usage\+Flags usage)
+\begin{DoxyCompactList}\small\item\em Get possible access by buffer usage flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan buffer. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{buffer_8hpp_a32e379ae053c501d6874da51314cf6ba}\index{buffer.hpp@{buffer.hpp}!buffer\_usage\_to\_possible\_access@{buffer\_usage\_to\_possible\_access}}
+\index{buffer\_usage\_to\_possible\_access@{buffer\_usage\_to\_possible\_access}!buffer.hpp@{buffer.hpp}}
+\doxysubsubsection{\texorpdfstring{buffer\_usage\_to\_possible\_access()}{buffer\_usage\_to\_possible\_access()}}
+{\footnotesize\ttfamily \label{buffer_8hpp_a32e379ae053c501d6874da51314cf6ba} 
+Vk\+Access\+Flags lava\+::buffer\+\_\+usage\+\_\+to\+\_\+possible\+\_\+access (\begin{DoxyParamCaption}\item[{Vk\+Buffer\+Usage\+Flags}]{usage}{}\end{DoxyParamCaption})}
+
+
+
+Get possible access by buffer usage flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usage} & Buffer usage flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Access\+Flags Access flags 
+\end{DoxyReturn}
+\Hypertarget{buffer_8hpp_a4fe4f0c45b11610b735dd4ec5eb1d36a}\index{buffer.hpp@{buffer.hpp}!buffer\_usage\_to\_possible\_stages@{buffer\_usage\_to\_possible\_stages}}
+\index{buffer\_usage\_to\_possible\_stages@{buffer\_usage\_to\_possible\_stages}!buffer.hpp@{buffer.hpp}}
+\doxysubsubsection{\texorpdfstring{buffer\_usage\_to\_possible\_stages()}{buffer\_usage\_to\_possible\_stages()}}
+{\footnotesize\ttfamily \label{buffer_8hpp_a4fe4f0c45b11610b735dd4ec5eb1d36a} 
+Vk\+Pipeline\+Stage\+Flags lava\+::buffer\+\_\+usage\+\_\+to\+\_\+possible\+\_\+stages (\begin{DoxyParamCaption}\item[{Vk\+Buffer\+Usage\+Flags}]{usage}{}\end{DoxyParamCaption})}
+
+
+
+Get possible stages by bufferusage flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usage} & Buffer usage flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Pipeline\+Stage\+Flags Pipeline stage flags 
+\end{DoxyReturn}

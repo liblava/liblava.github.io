@@ -1,0 +1,179 @@
+\doxysection{subpass.\+hpp}
+\hypertarget{subpass_8hpp_source}{}\label{subpass_8hpp_source}\index{liblava/block/subpass.hpp@{liblava/block/subpass.hpp}}
+\mbox{\hyperlink{subpass_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{render__pipeline_8hpp}{liblava/block/render\_pipeline.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1subpass_a76dd25aac48480780adc0258469513f9}{subpass}}\ :\ \mbox{\hyperlink{structlava_1_1entity_a39066de3954adf265c61c28f0a3b521c}{entity}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\_ptr}}\ =\ std::shared\_ptr<subpass>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1subpass_ad47bf8080d9808aa631430944f1eb610}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1subpass_a0626da80e598a5ee3386eb0abd2b3591}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1subpass_a793ed6c510811e14008650290209035b}{make}}(VkPipelineBindPoint\ pipeline\_bind\_point\ =}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_PIPELINE\_BIND\_POINT\_GRAPHICS)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ std::make\_shared<subpass>();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ result-\/>set(pipeline\_bind\_point);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1subpass_a76dd25aac48480780adc0258469513f9}{subpass}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a4fde2abcb620256255f350e44d0b44f8}{destroy}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a75e4fca5924ed90f5fe0e716373fb828}{add}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\_pipeline::s\_ptr}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}})\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ m\_pipelines.push\_back(\mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a807829577f57c1c098632227a9cb26dd}{add\_front}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\_pipeline::s\_ptr}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}})\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ m\_pipelines.insert(m\_pipelines.begin(),\ \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a8f847d6f6b867e49f5b250865b64f830}{remove}}(\mbox{\hyperlink{structlava_1_1render__pipeline_a7177a0f9ce21dd18b6f7befe611649dd}{render\_pipeline::s\_ptr}}\ \mbox{\hyperlink{structlava_1_1pipeline}{pipeline}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a05c9f1f878dfbed31e7e25377e1a4458}{clear\_pipelines}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a3ae1c5277bddba721dcc7b48082e98bc}{process}}(VkCommandBuffer\ cmd\_buf,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}\ size);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ VkSubpassDescription\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1subpass_a1e4da0a00327b8da1792079df42725cd}{get\_description}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_description;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_ad19be3f1e899928dd0efe30eaf1da84a}{set}}(VkPipelineBindPoint\ pipeline\_bind\_point)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ m\_description.pipelineBindPoint\ =\ pipeline\_bind\_point;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a07c8108157a3f833a54895474fb59c49}{set\_color\_attachment}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}},}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ layout);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a04e391ff3ee209bc6c7f6d3177074898}{set\_color\_attachment}}(VkAttachmentReference\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_ab4024a06eaa5fdd6608aedb64e03d1d3}{set\_color\_attachments}}(\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{VkAttachmentReferences}}\ \textcolor{keyword}{const}\&\ attachments);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_ad870bc766852f9adae9514b281102ead}{set\_depth\_stencil\_attachment}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}},}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ layout);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_aeb9f9d0858ba6573712d218d4044e47a}{set\_depth\_stencil\_attachment}}(VkAttachmentReference\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a68d540bc77bc6b62d53824991f5ff855}{set\_input\_attachment}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}},}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ layout);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a327b7254cd476fe596f0f4a2e80eedfb}{set\_input\_attachment}}(VkAttachmentReference\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a6d974580a8b1de95a2d260a29fa11636}{set\_input\_attachments}}(\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{VkAttachmentReferences}}\ \textcolor{keyword}{const}\&\ attachments);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a98a3ccafe55c4b7ff19f608ed16a31d1}{set\_resolve\_attachment}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}},\ VkImageLayout\ layout);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a0424377a7d502ef733fbc4b88da7cec3}{set\_resolve\_attachment}}(VkAttachmentReference\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a9012ff1423ff76824633e60c0751e571}{set\_resolve\_attachments}}(\mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{VkAttachmentReferences}}\ \textcolor{keyword}{const}\&\ attachments);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a79fe7e33a020f5f7694e4bfdc5c48ae6}{add\_preserve\_attachment}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1attachment}{attachment}});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a5cd9c4124bc0e7eecbecf0ca710c4995}{set\_preserve\_attachments}}(\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\_list}}\ \textcolor{keyword}{const}\&\ attachments);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass_a6fe9b5ae07617946e7ae71a008dd31d7}{set\_active}}(\textcolor{keywordtype}{bool}\ value\ =\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ m\_active\ =\ value;}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1subpass_aec07eb2ef2df0960fa64d88ac3437921}{activated}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_active;}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00200\ \ \ \ \ VkSubpassDescription\ m\_description;}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_active\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}{VkAttachmentReferences}}\ m\_color\_attachments;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00209\ \ \ \ \ VkAttachmentReference\ m\_depth\_stencil\_attachment\{\};}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00212\ \ \ \ \ VkAttachmentReferences\ m\_input\_attachments;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ \ \ \ \ VkAttachmentReferences\ m\_resolve\_attachments;}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00218\ \ \ \ \ index\_list\ m\_preserve\_attachments;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{structlava_1_1render__pipeline_a4c7ab3e77536e3ab07b747165925e47c}{render\_pipeline::s\_list}}\ m\_pipelines;}
+\DoxyCodeLine{00222\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1subpass__dependency_a09932e40b5288003f4994b761ae125ac}{subpass\_dependency}}\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\_ptr}}\ =\ std::shared\_ptr<subpass\_dependency>;}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1subpass__dependency_a6ace8aff487ed1ff9434ff974c9165d8}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_ac6b906e5c158e19fce6d0f60c2e57c6c}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a6fcc0a0c3eac93adaff1843703cb9ebb}{make}}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ src\_subpass,}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ dst\_subpass,}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkDependencyFlags\ dependency\_flags\ =}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VK\_DEPENDENCY\_BY\_REGION\_BIT)\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ std::make\_shared<subpass\_dependency>();}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ result-\/>set\_subpass(src\_subpass,\ dst\_subpass);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ result-\/>set\_dependency\_flags(dependency\_flags);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a09932e40b5288003f4994b761ae125ac}{subpass\_dependency}}();}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00260\ \ \ \ \ VkSubpassDependency\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1subpass__dependency_ac662a4d3ba93e434c86b5eefe7b86bc9}{get\_dependency}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_dependency;}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a85b6178eff7ddf3701530b9ac710da14}{set\_subpass}}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ src,\ \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ dst)\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_a5862d316b3946df5db84bac1f2644c69}{set\_src\_subpass}}(src);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_a608b3a485457f7aab9c5ab4897c83afe}{set\_dst\_subpass}}(dst);}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a5862d316b3946df5db84bac1f2644c69}{set\_src\_subpass}}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ src)\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ m\_dependency.srcSubpass\ =\ src;}
+\DoxyCodeLine{00280\ \ \ \ \ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a608b3a485457f7aab9c5ab4897c83afe}{set\_dst\_subpass}}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ dst)\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ m\_dependency.dstSubpass\ =\ dst;}
+\DoxyCodeLine{00288\ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a01bb876275018c9976f31e15901b0ded}{set\_stage\_mask}}(VkPipelineStageFlags\ src,}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPipelineStageFlags\ dst)\ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_a56e19c9fc37e12b79caee3b7d6ae17f4}{set\_src\_stage\_mask}}(src);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_a4a01d8ea3ca09831cd353dc3341f42e8}{set\_dst\_stage\_mask}}(dst);}
+\DoxyCodeLine{00299\ \ \ \ \ \}}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a56e19c9fc37e12b79caee3b7d6ae17f4}{set\_src\_stage\_mask}}(VkPipelineStageFlags\ mask)\ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ m\_dependency.srcStageMask\ =\ mask;}
+\DoxyCodeLine{00307\ \ \ \ \ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a4a01d8ea3ca09831cd353dc3341f42e8}{set\_dst\_stage\_mask}}(VkPipelineStageFlags\ mask)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ m\_dependency.dstStageMask\ =\ mask;}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a1b99106dc94c0455d1e74ec95369f0f5}{set\_access\_mask}}(VkAccessFlags\ src,}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkAccessFlags\ dst)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_a09ef6ed67f4f10e21496b6a20899cd17}{set\_src\_access\_mask}}(src);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1subpass__dependency_acbe61b1487dbed939c60d34c744aa569}{set\_dst\_access\_mask}}(dst);}
+\DoxyCodeLine{00326\ \ \ \ \ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a09ef6ed67f4f10e21496b6a20899cd17}{set\_src\_access\_mask}}(VkAccessFlags\ mask)\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ m\_dependency.srcAccessMask\ =\ mask;}
+\DoxyCodeLine{00334\ \ \ \ \ \}}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_acbe61b1487dbed939c60d34c744aa569}{set\_dst\_access\_mask}}(VkAccessFlags\ mask)\ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ m\_dependency.dstAccessMask\ =\ mask;}
+\DoxyCodeLine{00342\ \ \ \ \ \}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1subpass__dependency_a13896063593fd87487f2c726a0c1ec8e}{set\_dependency\_flags}}(VkDependencyFlags\ flags)\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ m\_dependency.dependencyFlags\ =\ flags;}
+\DoxyCodeLine{00350\ \ \ \ \ \}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00354\ \ \ \ \ VkSubpassDependency\ m\_dependency;}
+\DoxyCodeLine{00355\ \};}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

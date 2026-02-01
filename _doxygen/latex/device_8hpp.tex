@@ -1,0 +1,114 @@
+\doxysection{liblava/base/device.hpp File Reference}
+\hypertarget{device_8hpp}{}\label{device_8hpp}\index{liblava/base/device.hpp@{liblava/base/device.hpp}}
+
+
+Vulkan device.  
+
+
+{\ttfamily \#include "{}liblava/base/device\+\_\+table.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/base/queue.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/data.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/core/id.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/fwd.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1device}{lava\+::device}}
+\begin{DoxyCompactList}\small\item\em Vulkan device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1device_1_1create__param}{lava\+::device\+::create\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em Device create parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{device_8hpp_a6db76d453364cce7a63819b1464a1618}\label{device_8hpp_a6db76d453364cce7a63819b1464a1618} 
+using {\bfseries lava\+::one\+\_\+time\+\_\+command\+\_\+func} = std\+::function$<$void(Vk\+Command\+Buffer)$>$
+\begin{DoxyCompactList}\small\item\em One time command function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Shader\+Module \mbox{\hyperlink{device_8hpp_ad0623c3984b28b17fe0bc5be7d0230b9}{lava\+::create\+\_\+shader\+\_\+module}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\+\_\+data\+::ref}} \mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Create a shader module. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{device_8hpp_a522d7268899231c4bcc6a32250572fe6}{lava\+::one\+\_\+time\+\_\+submit\+\_\+pool}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vk\+Command\+Pool pool, \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1queue}{queue}}, \mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\+\_\+time\+\_\+command\+\_\+func}} callback)
+\begin{DoxyCompactList}\small\item\em Submit one time command function with pool. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{device_8hpp_ae5805fb1642e6a4c2162639e3b245a1f}{lava\+::one\+\_\+time\+\_\+submit}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}} \mbox{\hyperlink{structlava_1_1queue}{queue}}, \mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\+\_\+time\+\_\+command\+\_\+func}} callback)
+\begin{DoxyCompactList}\small\item\em Submit one time command function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan device. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{device_8hpp_ad0623c3984b28b17fe0bc5be7d0230b9}\index{device.hpp@{device.hpp}!create\_shader\_module@{create\_shader\_module}}
+\index{create\_shader\_module@{create\_shader\_module}!device.hpp@{device.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_shader\_module()}{create\_shader\_module()}}
+{\footnotesize\ttfamily \label{device_8hpp_ad0623c3984b28b17fe0bc5be7d0230b9} 
+Vk\+Shader\+Module lava\+::create\+\_\+shader\+\_\+module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{structlava_1_1c__data_af79805daac5977755e5636b86b97c9d6}{c\+\_\+data\+::ref}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Create a shader module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em data} & Shader data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Shader\+Module Shader module 
+\end{DoxyReturn}
+\Hypertarget{device_8hpp_ae5805fb1642e6a4c2162639e3b245a1f}\index{device.hpp@{device.hpp}!one\_time\_submit@{one\_time\_submit}}
+\index{one\_time\_submit@{one\_time\_submit}!device.hpp@{device.hpp}}
+\doxysubsubsection{\texorpdfstring{one\_time\_submit()}{one\_time\_submit()}}
+{\footnotesize\ttfamily \label{device_8hpp_ae5805fb1642e6a4c2162639e3b245a1f} 
+bool lava\+::one\+\_\+time\+\_\+submit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}}}]{queue}{, }\item[{\mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\+\_\+time\+\_\+command\+\_\+func}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Submit one time command function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em queue} & Target queue \\
+\hline
+{\em callback} & Function to be called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Submit was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{device_8hpp_a522d7268899231c4bcc6a32250572fe6}\index{device.hpp@{device.hpp}!one\_time\_submit\_pool@{one\_time\_submit\_pool}}
+\index{one\_time\_submit\_pool@{one\_time\_submit\_pool}!device.hpp@{device.hpp}}
+\doxysubsubsection{\texorpdfstring{one\_time\_submit\_pool()}{one\_time\_submit\_pool()}}
+{\footnotesize\ttfamily \label{device_8hpp_a522d7268899231c4bcc6a32250572fe6} 
+bool lava\+::one\+\_\+time\+\_\+submit\+\_\+pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{Vk\+Command\+Pool}]{pool}{, }\item[{\mbox{\hyperlink{structlava_1_1queue_af8793c31f0843b03522175736a8a16b1}{queue\+::ref}}}]{queue}{, }\item[{\mbox{\hyperlink{device_8hpp_a6db76d453364cce7a63819b1464a1618}{one\+\_\+time\+\_\+command\+\_\+func}}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Submit one time command function with pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em pool} & Command pool (VK\+\_\+\+NULL\+\_\+\+HANDLE\+: managed) \\
+\hline
+{\em queue} & Target queue \\
+\hline
+{\em callback} & Function to be called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Submit was successful or failed 
+\end{DoxyReturn}

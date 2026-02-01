@@ -1,0 +1,347 @@
+\doxysection{lava\+::file\+\_\+system Struct Reference}
+\hypertarget{structlava_1_1file__system}{}\label{structlava_1_1file__system}\index{lava::file\_system@{lava::file\_system}}
+
+
+File system.  
+
+
+
+
+{\ttfamily \#include $<$file\+\_\+system.\+hpp$>$}
+
+Inheritance diagram for lava\+::file\+\_\+system\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structlava_1_1file__system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{structlava_1_1file__system_a128a19889fc6c0de45ab016dcdcbae04}{get\+\_\+version}} ()
+\begin{DoxyCompactList}\small\item\em Get the version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1file__system_ae2412b2813ed104cfb47760f6dab9a99}{get\+\_\+base\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Get the base directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1file__system_a6035a06dbfcbbc8f832b84eeaf770a53}{get\+\_\+full\+\_\+base\+\_\+dir}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path)
+\begin{DoxyCompactList}\small\item\em Get the path relative to base directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1file__system_aa06b58dc745cc8e0163fcc126ab4d00d}{get\+\_\+pref\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Get the preferences directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1file__system_ab0864cd05da14b30699cb6aadc1e6a46}{get\+\_\+res\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Get the resource directory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a498847d0f265e3df79050101a7ac9d77}{mount}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path)
+\begin{DoxyCompactList}\small\item\em Mount path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a7786077f80c21a8a7c7d0f82833de29b}{mount\+\_\+base}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} base\+\_\+dir\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Mount base directory path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a5b5b87ef6ffe06b17c6e5238220dcdcb}{exists}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file}{file}})
+\begin{DoxyCompactList}\small\item\em Check if file exists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{structlava_1_1file__system_a1453846158d92eb16facc5844e814efe}{get\+\_\+real\+\_\+dir}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file}{file}})
+\begin{DoxyCompactList}\small\item\em Get the real directory of file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list}} \mbox{\hyperlink{structlava_1_1file__system_a06d5636ef1511179db0285aca220db00}{enumerate\+\_\+files}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path)
+\begin{DoxyCompactList}\small\item\em Enumerate files in directory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a6d3e702b2ee354cb72e5c420ab710dd3}{initialize}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} argv\+\_\+0, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} org, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1app}{app}}, \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} ext)
+\begin{DoxyCompactList}\small\item\em Initialize the file system. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1file__system_a01a492befb85c3c57c195740855e27bd}\label{structlava_1_1file__system_a01a492befb85c3c57c195740855e27bd} 
+void {\bfseries terminate} ()
+\begin{DoxyCompactList}\small\item\em Terminate the file system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list}} \mbox{\hyperlink{structlava_1_1file__system_ab140c6dd0a6aaa4bbd3cd2271afcb0f4}{mount\+\_\+res}} ()
+\begin{DoxyCompactList}\small\item\em Mount resource directories and files. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a266374e602590d8a24b177de626a9891}{create\+\_\+folder}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}="{}data"{})
+\begin{DoxyCompactList}\small\item\em Create a folder in the preferences directory. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1file__system_a69cc544f63441f63a1b33e36b4415dd2}\label{structlava_1_1file__system_a69cc544f63441f63a1b33e36b4415dd2} 
+void {\bfseries clean\+\_\+pref\+\_\+dir} ()
+\begin{DoxyCompactList}\small\item\em Clean preferences directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file__system_af8c3a743a0e7b022e54977348f8d27c5}{get\+\_\+org}} () const
+\begin{DoxyCompactList}\small\item\em Get the organization name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file__system_adbcfe405006ac93429fe305908d154e1}{get\+\_\+app}} () const
+\begin{DoxyCompactList}\small\item\em Get the application name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file__system_ac0947f2e2a9bd3358228867be381b704}{get\+\_\+ext}} () const
+\begin{DoxyCompactList}\small\item\em Get the extension name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file__system_a15797e70806e2ef869462ae8726278cc}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if file system is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File system. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1file__system_a266374e602590d8a24b177de626a9891}\index{lava::file\_system@{lava::file\_system}!create\_folder@{create\_folder}}
+\index{create\_folder@{create\_folder}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{create\_folder()}{create\_folder()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a266374e602590d8a24b177de626a9891} 
+bool lava\+::file\+\_\+system\+::create\+\_\+folder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{name}{ = {\ttfamily "{}data"{}}}\end{DoxyParamCaption})}
+
+
+
+Create a folder in the preferences directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of folder (default\+: data) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Folder created or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a06d5636ef1511179db0285aca220db00}\index{lava::file\_system@{lava::file\_system}!enumerate\_files@{enumerate\_files}}
+\index{enumerate\_files@{enumerate\_files}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{enumerate\_files()}{enumerate\_files()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a06d5636ef1511179db0285aca220db00} 
+\mbox{\hyperlink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list}} lava\+::file\+\_\+system\+::enumerate\+\_\+files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Enumerate files in directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Target directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list} List of files 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a5b5b87ef6ffe06b17c6e5238220dcdcb}\index{lava::file\_system@{lava::file\_system}!exists@{exists}}
+\index{exists@{exists}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a5b5b87ef6ffe06b17c6e5238220dcdcb} 
+bool lava\+::file\+\_\+system\+::exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Check if file exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File exists or not found 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_adbcfe405006ac93429fe305908d154e1}\index{lava::file\_system@{lava::file\_system}!get\_app@{get\_app}}
+\index{get\_app@{get\_app}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_app()}{get\_app()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_adbcfe405006ac93429fe305908d154e1} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::file\+\_\+system\+::get\+\_\+app (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the application name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref} Name of application 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_ae2412b2813ed104cfb47760f6dab9a99}\index{lava::file\_system@{lava::file\_system}!get\_base\_dir@{get\_base\_dir}}
+\index{get\_base\_dir@{get\_base\_dir}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_base\_dir()}{get\_base\_dir()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_ae2412b2813ed104cfb47760f6dab9a99} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::file\+\_\+system\+::get\+\_\+base\+\_\+dir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the base directory. 
+
+\begin{DoxyReturn}{Returns}
+string Base directory 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_ac0947f2e2a9bd3358228867be381b704}\index{lava::file\_system@{lava::file\_system}!get\_ext@{get\_ext}}
+\index{get\_ext@{get\_ext}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_ext()}{get\_ext()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_ac0947f2e2a9bd3358228867be381b704} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::file\+\_\+system\+::get\+\_\+ext (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the extension name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref} Name of extension 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a6035a06dbfcbbc8f832b84eeaf770a53}\index{lava::file\_system@{lava::file\_system}!get\_full\_base\_dir@{get\_full\_base\_dir}}
+\index{get\_full\_base\_dir@{get\_full\_base\_dir}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_full\_base\_dir()}{get\_full\_base\_dir()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a6035a06dbfcbbc8f832b84eeaf770a53} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::file\+\_\+system\+::get\+\_\+full\+\_\+base\+\_\+dir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Get the path relative to base directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to add to base directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Relative base directory path 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_af8c3a743a0e7b022e54977348f8d27c5}\index{lava::file\_system@{lava::file\_system}!get\_org@{get\_org}}
+\index{get\_org@{get\_org}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_org()}{get\_org()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_af8c3a743a0e7b022e54977348f8d27c5} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::file\+\_\+system\+::get\+\_\+org (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the organization name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref} Name of organization 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_aa06b58dc745cc8e0163fcc126ab4d00d}\index{lava::file\_system@{lava::file\_system}!get\_pref\_dir@{get\_pref\_dir}}
+\index{get\_pref\_dir@{get\_pref\_dir}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_pref\_dir()}{get\_pref\_dir()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_aa06b58dc745cc8e0163fcc126ab4d00d} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::file\+\_\+system\+::get\+\_\+pref\+\_\+dir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the preferences directory. 
+
+\begin{DoxyReturn}{Returns}
+string Preferences directory 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a1453846158d92eb16facc5844e814efe}\index{lava::file\_system@{lava::file\_system}!get\_real\_dir@{get\_real\_dir}}
+\index{get\_real\_dir@{get\_real\_dir}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_real\_dir()}{get\_real\_dir()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a1453846158d92eb16facc5844e814efe} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::file\+\_\+system\+::get\+\_\+real\+\_\+dir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Get the real directory of file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Target file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Real directory of file 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_ab0864cd05da14b30699cb6aadc1e6a46}\index{lava::file\_system@{lava::file\_system}!get\_res\_dir@{get\_res\_dir}}
+\index{get\_res\_dir@{get\_res\_dir}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_res\_dir()}{get\_res\_dir()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_ab0864cd05da14b30699cb6aadc1e6a46} 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} lava\+::file\+\_\+system\+::get\+\_\+res\+\_\+dir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the resource directory. 
+
+\begin{DoxyReturn}{Returns}
+string Resource directory 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a128a19889fc6c0de45ab016dcdcbae04}\index{lava::file\_system@{lava::file\_system}!get\_version@{get\_version}}
+\index{get\_version@{get\_version}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{get\_version()}{get\_version()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a128a19889fc6c0de45ab016dcdcbae04} 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} lava\+::file\+\_\+system\+::get\+\_\+version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the version. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version} Semantic version 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a6d3e702b2ee354cb72e5c420ab710dd3}\index{lava::file\_system@{lava::file\_system}!initialize@{initialize}}
+\index{initialize@{initialize}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a6d3e702b2ee354cb72e5c420ab710dd3} 
+bool lava\+::file\+\_\+system\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{argv\+\_\+0}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{org}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{app}{, }\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{ext}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the file system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argv\+\_\+0} & First command line argument \\
+\hline
+{\em org} & Organization name \\
+\hline
+{\em app} & Application name \\
+\hline
+{\em ext} & Extension name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Initialize was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a498847d0f265e3df79050101a7ac9d77}\index{lava::file\_system@{lava::file\_system}!mount@{mount}}
+\index{mount@{mount}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{mount()}{mount()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a498847d0f265e3df79050101a7ac9d77} 
+bool lava\+::file\+\_\+system\+::mount (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Mount path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to mount \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mount was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a7786077f80c21a8a7c7d0f82833de29b}\index{lava::file\_system@{lava::file\_system}!mount\_base@{mount\_base}}
+\index{mount\_base@{mount\_base}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{mount\_base()}{mount\_base()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a7786077f80c21a8a7c7d0f82833de29b} 
+bool lava\+::file\+\_\+system\+::mount\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{base\+\_\+dir\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Mount base directory path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+\_\+dir\+\_\+path} & Base directory path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mount was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_ab140c6dd0a6aaa4bbd3cd2271afcb0f4}\index{lava::file\_system@{lava::file\_system}!mount\_res@{mount\_res}}
+\index{mount\_res@{mount\_res}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{mount\_res()}{mount\_res()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_ab140c6dd0a6aaa4bbd3cd2271afcb0f4} 
+\mbox{\hyperlink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list}} lava\+::file\+\_\+system\+::mount\+\_\+res (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mount resource directories and files. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list} List of mounted resources 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file__system_a15797e70806e2ef869462ae8726278cc}\index{lava::file\_system@{lava::file\_system}!ready@{ready}}
+\index{ready@{ready}!lava::file\_system@{lava::file\_system}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily \label{structlava_1_1file__system_a15797e70806e2ef869462ae8726278cc} 
+bool lava\+::file\+\_\+system\+::ready (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if file system is ready. 
+
+\begin{DoxyReturn}{Returns}
+File system is ready or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/file/\mbox{\hyperlink{file__system_8hpp}{file\+\_\+system.\+hpp}}\end{DoxyCompactItemize}

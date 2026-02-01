@@ -1,0 +1,174 @@
+\doxysection{telegram.\+hpp}
+\hypertarget{telegram_8hpp_source}{}\label{telegram_8hpp_source}\index{liblava/util/telegram.hpp@{liblava/util/telegram.hpp}}
+\mbox{\hyperlink{telegram_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{thread_8hpp}{liblava/util/thread.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <any>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{telegram_8hpp_aeaf361a2570ec05ed4abfe9db5d5508e}{telegram\_min\_delay}}\{250\};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }\mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}\ =\ std::any;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369}{telegram}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}}\ =\ \mbox{\hyperlink{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369}{telegram}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1telegram_abc8fe1e9664bd0f9aa45f80dd3085fa2}{set}}\ =\ std::multiset<telegram>;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1telegram_ad0d2a0aa3d9260bcb380f6f9e35c7369}{telegram}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ \mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ \mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ msg,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}}\ =\ \{\},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}\ \mbox{\hyperlink{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}{info}}\ =\ \{\})}
+\DoxyCodeLine{00046\ \ \ \ \ :\ \mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}}(\mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}}),\ \mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}}(\mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}}),}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1telegram_ab07e6369d48bbbaaf9ce13952e3f954b}{msg\_id}}(msg),\ \mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}}(\mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}}),}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}{info}}(std::move(\mbox{\hyperlink{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}{info}}))\ \{\}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1telegram_a5b404b8b88b2d3c13fb6ae409c85a4ac}{operator==}}(\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}}\ rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}}\ -\/\ rhs.dispatch\_time)\ <\ \mbox{\hyperlink{telegram_8hpp_aeaf361a2570ec05ed4abfe9db5d5508e}{telegram\_min\_delay}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (\mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}}\ ==\ rhs.sender)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (\mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}}\ ==\ rhs.receiver)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (\mbox{\hyperlink{structlava_1_1telegram_ab07e6369d48bbbaaf9ce13952e3f954b}{msg\_id}}\ ==\ rhs.msg\_id);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1telegram_aa59bdbe78b18bca6b81eb4f123a61a35}{operator<}}(\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{ref}}\ rhs)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*\textcolor{keyword}{this}\ ==\ rhs)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}}\ <\ rhs.dispatch\_time);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{structlava_1_1telegram_af0b1e520831aabee68669f6cf7bfb7a3}{sender}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{structlava_1_1telegram_accd1d074837d6f11b6a333f2647121a4}{receiver}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1telegram_ab07e6369d48bbbaaf9ce13952e3f954b}{msg\_id}}\ =\ \mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\_index}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1telegram_a4eef1c4bfec55c9f6fbf7f7dcd787a10}{dispatch\_time}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}\ \mbox{\hyperlink{structlava_1_1telegram_aad9940f9cb360d6323145f7765bd6bf3}{info}};}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1telegraph}{telegraph}}\ :\ \mbox{\hyperlink{structlava_1_1interface}{interface}}\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1telegraph_a8c4cbde81019f05bf51f91327d529196}{send\_message}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ receiver,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ sender,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ message,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ delay\ =\ \{\},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}\ \textcolor{keyword}{const}\&\ info\ =\ \{\})\ =\ 0;}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1message__dispatcher}{message\_dispatcher}}\ :\ \mbox{\hyperlink{structlava_1_1telegraph}{telegraph}}\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{structlava_1_1message__dispatcher_a0677dd2d564d76a27a20766095ebd574}{\string~message\_dispatcher}}()\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1message__dispatcher_afad57bbc64cbbbed74b5dab99d6c88c6}{teardown}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_aa422c136ee6a70b8ba35c729e39ca9ea}{setup}}(\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}\ thread\_count)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ m\_pool.setup(thread\_count);}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_afad57bbc64cbbbed74b5dab99d6c88c6}{teardown}}()\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ m\_pool.teardown();}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_a0d1c597dd4ff66f8da3a45bd84f338dd}{update}}(\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ current)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ m\_current\_time\ =\ current;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ dispatch\_delayed\_messages(m\_current\_time);}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_aac8ade56ddd9f9b837095fae1263b584}{send\_message}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ receiver,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ sender,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ message,}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ delay\ =\ \{\},}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{telegram_8hpp_adc5d467e5360109773d4eed7e273255d}{any}}\ \textcolor{keyword}{const}\&\ info\ =\ \{\})\ \textcolor{keyword}{override}\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ telegram\ msg(sender,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ receiver,}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ message,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_current\_time,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ info);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (delay\ ==\ ms\{0\})\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ discharge(msg);\ \textcolor{comment}{//\ now}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ msg.dispatch\_time\ +=\ delay;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ m\_messages.insert(msg);}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}{message\_func}}\ =\ std::function<void(\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{telegram::ref}},\ \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}})>;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_a390fdb43a976c51b07049b4bc2189d62}{add\_dispatch}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ target,\ \mbox{\hyperlink{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}{message\_func}}\ func)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ std::lock\_guard\ guard(m\_lock);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_dispatches.count(target))}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ m\_dispatches.emplace(target,\ func);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_ad2df99e26a91c77f226c33c190dea0e2}{remove\_dispatch}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ target)\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ std::lock\_guard\ guard(m\_lock);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_dispatches.count(target))}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ m\_dispatches.erase(target);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1message__dispatcher_a8b3ec32314f216591ab9bf59ba1db394}{has\_dispatch}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ target)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_dispatches.count(target);}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ discharge(\mbox{\hyperlink{structlava_1_1telegram_a1fab0b47a42d37f5d5eb474d95bf3caa}{telegram::ref}}\ message)\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ m\_pool.\mbox{\hyperlink{structlava_1_1thread__pool_a13d697b28f3f470d066651674a74cd1d}{enqueue}}([\&,\ message](\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ thread\_id)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ std::lock\_guard\ guard(m\_lock);}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ dispatch\ =\ get\_dispatch(message.receiver);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ LAVA\_ASSERT(dispatch);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dispatch)}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dispatch(message,\ thread\_id);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{void}\ dispatch\_delayed\_messages(ms\ time)\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!m\_messages.empty()}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ (m\_messages.begin()-\/>dispatch\_time\ <\ time))\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ discharge(*m\_messages.begin());}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ m\_messages.erase(m\_messages.begin());}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00241\ \ \ \ \ \mbox{\hyperlink{structlava_1_1message__dispatcher_ae7bf4f0d44870b3d1e6e17e03394f88f}{message\_func}}\ get\_dispatch(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ target)\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_dispatches.count(target))}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_dispatches.at(target);}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keyword}{using\ }dispatch\_map\ =\ std::map<id,\ message\_func>;}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00252\ \ \ \ \ dispatch\_map\ m\_dispatches;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00255\ \ \ \ \ std::mutex\ m\_lock;}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ m\_current\_time;}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00261\ \ \ \ \ thread\_pool\ m\_pool;}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00264\ \ \ \ \ \mbox{\hyperlink{structlava_1_1telegram_abc8fe1e9664bd0f9aa45f80dd3085fa2}{telegram::set}}\ m\_messages;}
+\DoxyCodeLine{00265\ \};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

@@ -1,0 +1,43 @@
+\doxysection{lava\+::mouse\+\_\+active\+\_\+event Struct Reference}
+\hypertarget{structlava_1_1mouse__active__event}{}\label{structlava_1_1mouse__active__event}\index{lava::mouse\_active\_event@{lava::mouse\_active\_event}}
+
+
+Mouse active event.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mouse__active__event_aca45278b110993a3277c5c659d5c1829}\label{structlava_1_1mouse__active__event_aca45278b110993a3277c5c659d5c1829} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1mouse__active__event}{mouse\+\_\+active\+\_\+event}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to mouse active event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40}\label{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40} 
+using {\bfseries func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1mouse__active__event_aca45278b110993a3277c5c659d5c1829}{ref}})$>$
+\begin{DoxyCompactList}\small\item\em Mouse active event function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__active__event_a4194cf5dbd605d8f0ee4954d60aaffe5}\label{structlava_1_1mouse__active__event_a4194cf5dbd605d8f0ee4954d60aaffe5} 
+using {\bfseries listeners} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40}{func}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse active event listeners. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__active__event_a06b38a8d022542740acbd2dc579d6fe0}\label{structlava_1_1mouse__active__event_a06b38a8d022542740acbd2dc579d6fe0} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1mouse__active__event}{mouse\+\_\+active\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of mouse active events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mouse__active__event_afb7ecec0df494161a2362e51611ec3cc}\label{structlava_1_1mouse__active__event_afb7ecec0df494161a2362e51611ec3cc} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries sender}
+\begin{DoxyCompactList}\small\item\em Sender id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mouse__active__event_a14e206a06f9e3490c5cf073b0f83bc49}\label{structlava_1_1mouse__active__event_a14e206a06f9e3490c5cf073b0f83bc49} 
+bool {\bfseries active} = false
+\begin{DoxyCompactList}\small\item\em Active state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mouse active event. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

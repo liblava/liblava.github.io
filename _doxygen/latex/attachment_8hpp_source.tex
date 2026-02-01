@@ -1,0 +1,96 @@
+\doxysection{attachment.\+hpp}
+\hypertarget{attachment_8hpp_source}{}\label{attachment_8hpp_source}\index{liblava/block/attachment.hpp@{liblava/block/attachment.hpp}}
+\mbox{\hyperlink{attachment_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base_2base_8hpp}{liblava/base/base.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1attachment_ab1392899ab63234e2c8f2f2dbd3cf90b}{attachment}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\_ptr}}\ =\ std::shared\_ptr<attachment>;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1attachment_ac9aa19183cdf766e9a809966602ca265}{s\_list}}\ =\ std::vector<s\_ptr>;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1attachment_a78a2a1ebf26152f830e38beb84276a27}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1attachment_a0c411f8ba4d54cab48f82464d837c06d}{make}}(VkFormat\ format\ =\ VK\_FORMAT\_UNDEFINED,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ samples\ =\ VK\_SAMPLE\_COUNT\_1\_BIT)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<attachment>(format,\ samples);}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structlava_1_1attachment_ab1392899ab63234e2c8f2f2dbd3cf90b}{attachment}}(VkFormat\ format\ =\ VK\_FORMAT\_UNDEFINED,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSampleCountFlagBits\ samples\ =\ VK\_SAMPLE\_COUNT\_1\_BIT)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ m\_description.flags\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ m\_description.format\ =\ format;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ m\_description.samples\ =\ samples;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ m\_description.loadOp\ =\ VK\_ATTACHMENT\_LOAD\_OP\_LOAD;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ m\_description.storeOp\ =\ VK\_ATTACHMENT\_STORE\_OP\_STORE;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ m\_description.stencilLoadOp\ =\ VK\_ATTACHMENT\_LOAD\_OP\_LOAD;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ m\_description.stencilStoreOp\ =\ VK\_ATTACHMENT\_STORE\_OP\_STORE;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ m\_description.initialLayout\ =\ VK\_IMAGE\_LAYOUT\_UNDEFINED;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ m\_description.finalLayout\ =\ VK\_IMAGE\_LAYOUT\_UNDEFINED;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ VkAttachmentDescription\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1attachment_abad7ffb45a38e9083a6cbd7dd234e6df}{get\_description}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_description;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_ac73648e3bcc9fb0fa941548b740e5518}{set\_format}}(VkFormat\ format)\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ m\_description.format\ =\ format;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_ad4f9434466abb598f4cf71c5a6b45f8d}{set\_samples}}(VkSampleCountFlagBits\ samples)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ m\_description.samples\ =\ samples;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_a5dc7bc53fc74f95398f3340d57cfe150}{set\_op}}(VkAttachmentLoadOp\ load\_op,\ VkAttachmentStoreOp\ store\_op)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_a83f658457ee737dded0de77eb241f667}{set\_load\_op}}(load\_op);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_a85df5ee119ce63bb476b4232720bf3f2}{set\_store\_op}}(store\_op);}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_a83f658457ee737dded0de77eb241f667}{set\_load\_op}}(VkAttachmentLoadOp\ load\_op)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ m\_description.loadOp\ =\ load\_op;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_a85df5ee119ce63bb476b4232720bf3f2}{set\_store\_op}}(VkAttachmentStoreOp\ store\_op)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ m\_description.storeOp\ =\ store\_op;}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_ac886ea2e70da3904f47a4b67f2062951}{set\_stencil\_op}}(VkAttachmentLoadOp\ load\_op,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkAttachmentStoreOp\ store\_op)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_acc264368d12704b2ca95d5c8b5f80b38}{set\_stencil\_load\_op}}(load\_op);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_aa6dc44ba5f4efdabf2801fdd7b17132b}{set\_stencil\_store\_op}}(store\_op);}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_acc264368d12704b2ca95d5c8b5f80b38}{set\_stencil\_load\_op}}(VkAttachmentLoadOp\ load\_op)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ m\_description.stencilLoadOp\ =\ load\_op;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_aa6dc44ba5f4efdabf2801fdd7b17132b}{set\_stencil\_store\_op}}(VkAttachmentStoreOp\ store\_op)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ m\_description.stencilStoreOp\ =\ store\_op;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_acc06388a2ddb6f95632c2aa1d7295aeb}{set\_layouts}}(VkImageLayout\ initial,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ \textcolor{keyword}{final})\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_af0d326486fb9c7c3a68104a3e7aa56ca}{set\_initial\_layout}}(initial);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1attachment_a5e543579f671f6b3c943b91db798f054}{set\_final\_layout}}(\textcolor{keyword}{final});}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_af0d326486fb9c7c3a68104a3e7aa56ca}{set\_initial\_layout}}(VkImageLayout\ layout)\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ m\_description.initialLayout\ =\ layout;}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1attachment_a5e543579f671f6b3c943b91db798f054}{set\_final\_layout}}(VkImageLayout\ layout)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ m\_description.finalLayout\ =\ layout;}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00160\ \ \ \ \ VkAttachmentDescription\ m\_description;}
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

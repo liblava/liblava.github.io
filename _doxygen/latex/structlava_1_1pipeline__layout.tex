@@ -1,0 +1,266 @@
+\doxysection{lava\+::pipeline\+\_\+layout Struct Reference}
+\hypertarget{structlava_1_1pipeline__layout}{}\label{structlava_1_1pipeline__layout}\index{lava::pipeline\_layout@{lava::pipeline\_layout}}
+
+
+Pipeline layout.  
+
+
+
+
+{\ttfamily \#include $<$pipeline\+\_\+layout.\+hpp$>$}
+
+Inheritance diagram for lava\+::pipeline\+\_\+layout\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1pipeline__layout}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1pipeline__layout_adeb6bacc906e605536e0d1533907c492}\label{structlava_1_1pipeline__layout_adeb6bacc906e605536e0d1533907c492} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1pipeline__layout}{pipeline\+\_\+layout}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to pipeline layout. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_af0562299efae118560acc477af21541c}\label{structlava_1_1pipeline__layout_af0562299efae118560acc477af21541c} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1pipeline__layout_adeb6bacc906e605536e0d1533907c492}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of pipeline layouts. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70}\label{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70} 
+using {\bfseries offset\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}$>$
+\begin{DoxyCompactList}\small\item\em List of offsets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_a8d5256ee7ec42a2cda945db27393514c}{add}} (\mbox{\hyperlink{structlava_1_1descriptor_af3984dd7b4c4a1b014d21ba862f8cb08}{descriptor\+::s\+\_\+ptr}} const \&\mbox{\hyperlink{structlava_1_1descriptor}{descriptor}})
+\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_af32bc935f614479e2ec6c094759e9f90}{add}} (Vk\+Push\+Constant\+Range const \&range)
+\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_ac478c90bf725a5c1b3bf6bfd59ccc86f}{add\+\_\+descriptor}} (\mbox{\hyperlink{structlava_1_1descriptor_af3984dd7b4c4a1b014d21ba862f8cb08}{descriptor\+::s\+\_\+ptr}} const \&\mbox{\hyperlink{structlava_1_1descriptor}{descriptor}})
+\begin{DoxyCompactList}\small\item\em Add descriptor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_afd034ca303a814ede6eee4167b1bd197}{add\+\_\+push\+\_\+constant\+\_\+range}} (Vk\+Push\+Constant\+Range const \&range)
+\begin{DoxyCompactList}\small\item\em Add push contant range. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_a8c9b807c7c91a93f47c472535a4d3e05}\label{structlava_1_1pipeline__layout_a8c9b807c7c91a93f47c472535a4d3e05} 
+void {\bfseries clear\+\_\+descriptors} ()
+\begin{DoxyCompactList}\small\item\em Clear descriptors. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_a6466b9a87a9872a692251cdcae1b6286}\label{structlava_1_1pipeline__layout_a6466b9a87a9872a692251cdcae1b6286} 
+void {\bfseries clear\+\_\+ranges} ()
+\begin{DoxyCompactList}\small\item\em Clear push constant ranges. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_a7555cbe78804e673d5877701a05d19d3}\label{structlava_1_1pipeline__layout_a7555cbe78804e673d5877701a05d19d3} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear descriptors and push constant ranges. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1pipeline__layout_a41e7eaf0635dbebe09365c14e3215681}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}})
+\begin{DoxyCompactList}\small\item\em Create a new pipeline layout. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1pipeline__layout_a3160748b253764012d0ee1b517c694ca}\label{structlava_1_1pipeline__layout_a3160748b253764012d0ee1b517c694ca} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline layout. \end{DoxyCompactList}\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{structlava_1_1pipeline__layout_ab8dd12247c0fa0c6791aa77c932d9705}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan pipeline layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1pipeline__layout_aa503f785ded67471cb19bdd1de583c17}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1descriptor_ac2e378ff58be1adac2eb3fa5c390143a}{descriptor\+::s\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1pipeline__layout_a409085e0712f935ec5b3d2dcc5e3aa6f}{get\+\_\+descriptors}} () const
+\begin{DoxyCompactList}\small\item\em Get the descriptors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_a5d74309e91a4d7bd8d327cd48d279908}{Vk\+Push\+Constant\+Ranges}} const \& \mbox{\hyperlink{structlava_1_1pipeline__layout_afc91b4cddf60214659d21bb3ed475375}{get\+\_\+push\+\_\+constant\+\_\+ranges}} () const
+\begin{DoxyCompactList}\small\item\em Get the push constant ranges. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_a6772737a70f03d1212d8d6393d469e49}{bind\+\_\+descriptor\+\_\+set}} (Vk\+Command\+Buffer cmd\+\_\+buf, Vk\+Descriptor\+Set descriptor\+\_\+set, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} first\+\_\+set=0, \mbox{\hyperlink{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70}{offset\+\_\+list}} offsets=\{\}, Vk\+Pipeline\+Bind\+Point bind\+\_\+point=VK\+\_\+\+PIPELINE\+\_\+\+BIND\+\_\+\+POINT\+\_\+\+GRAPHICS)
+\begin{DoxyCompactList}\small\item\em Bind descriptor set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1pipeline__layout_a00ab04bb3ce95a464e785a0a71f71069}{bind}} (Vk\+Command\+Buffer cmd\+\_\+buf, Vk\+Descriptor\+Set descriptor\+\_\+set, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} first\+\_\+set=0, \mbox{\hyperlink{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70}{offset\+\_\+list}} offsets=\{\}, Vk\+Pipeline\+Bind\+Point bind\+\_\+point=VK\+\_\+\+PIPELINE\+\_\+\+BIND\+\_\+\+POINT\+\_\+\+GRAPHICS)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1pipeline__layout_adeb6bacc906e605536e0d1533907c492}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1pipeline__layout_a466742e3acc50d0f98126568f08bdfbe}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new pipeline layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pipeline layout. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1pipeline__layout_a8d5256ee7ec42a2cda945db27393514c}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!add@{add}}
+\index{add@{add}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a8d5256ee7ec42a2cda945db27393514c} 
+void lava\+::pipeline\+\_\+layout\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1descriptor_af3984dd7b4c4a1b014d21ba862f8cb08}{descriptor\+::s\+\_\+ptr}} const \&}]{descriptor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1pipeline__layout_ac478c90bf725a5c1b3bf6bfd59ccc86f}{add\+\_\+descriptor} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1pipeline__layout_af32bc935f614479e2ec6c094759e9f90}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!add@{add}}
+\index{add@{add}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_af32bc935f614479e2ec6c094759e9f90} 
+void lava\+::pipeline\+\_\+layout\+::add (\begin{DoxyParamCaption}\item[{Vk\+Push\+Constant\+Range const \&}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1pipeline__layout_afd034ca303a814ede6eee4167b1bd197}{add\+\_\+push\+\_\+constant\+\_\+range} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1pipeline__layout_ac478c90bf725a5c1b3bf6bfd59ccc86f}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!add\_descriptor@{add\_descriptor}}
+\index{add\_descriptor@{add\_descriptor}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{add\_descriptor()}{add\_descriptor()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_ac478c90bf725a5c1b3bf6bfd59ccc86f} 
+void lava\+::pipeline\+\_\+layout\+::add\+\_\+descriptor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1descriptor_af3984dd7b4c4a1b014d21ba862f8cb08}{descriptor\+::s\+\_\+ptr}} const \&}]{descriptor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor} & Descriptor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1pipeline__layout_afd034ca303a814ede6eee4167b1bd197}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!add\_push\_constant\_range@{add\_push\_constant\_range}}
+\index{add\_push\_constant\_range@{add\_push\_constant\_range}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{add\_push\_constant\_range()}{add\_push\_constant\_range()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_afd034ca303a814ede6eee4167b1bd197} 
+void lava\+::pipeline\+\_\+layout\+::add\+\_\+push\+\_\+constant\+\_\+range (\begin{DoxyParamCaption}\item[{Vk\+Push\+Constant\+Range const \&}]{range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add push contant range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & Push contant range \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1pipeline__layout_a00ab04bb3ce95a464e785a0a71f71069}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!bind@{bind}}
+\index{bind@{bind}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a00ab04bb3ce95a464e785a0a71f71069} 
+void lava\+::pipeline\+\_\+layout\+::bind (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{Vk\+Descriptor\+Set}]{descriptor\+\_\+set}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{first\+\_\+set}{ = {\ttfamily 0}, }\item[{\mbox{\hyperlink{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70}{offset\+\_\+list}}}]{offsets}{ = {\ttfamily \{\}}, }\item[{Vk\+Pipeline\+Bind\+Point}]{bind\+\_\+point}{ = {\ttfamily VK\+\_\+PIPELINE\+\_\+BIND\+\_\+POINT\+\_\+GRAPHICS}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1pipeline__layout_a6772737a70f03d1212d8d6393d469e49}{bind\+\_\+descriptor\+\_\+set} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1pipeline__layout_a6772737a70f03d1212d8d6393d469e49}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!bind\_descriptor\_set@{bind\_descriptor\_set}}
+\index{bind\_descriptor\_set@{bind\_descriptor\_set}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{bind\_descriptor\_set()}{bind\_descriptor\_set()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a6772737a70f03d1212d8d6393d469e49} 
+void lava\+::pipeline\+\_\+layout\+::bind\+\_\+descriptor\+\_\+set (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{, }\item[{Vk\+Descriptor\+Set}]{descriptor\+\_\+set}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{first\+\_\+set}{ = {\ttfamily 0}, }\item[{\mbox{\hyperlink{structlava_1_1pipeline__layout_a1b0b0f849848ee624d258ff37f99ef70}{offset\+\_\+list}}}]{offsets}{ = {\ttfamily \{\}}, }\item[{Vk\+Pipeline\+Bind\+Point}]{bind\+\_\+point}{ = {\ttfamily VK\+\_\+PIPELINE\+\_\+BIND\+\_\+POINT\+\_\+GRAPHICS}}\end{DoxyParamCaption})}
+
+
+
+Bind descriptor set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+{\em descriptor\+\_\+set} & Descriptor set \\
+\hline
+{\em first\+\_\+set} & Index to first descriptor set \\
+\hline
+{\em offsets} & List of offsets \\
+\hline
+{\em bind\+\_\+point} & Pipeline bind point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1pipeline__layout_a41e7eaf0635dbebe09365c14e3215681}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!create@{create}}
+\index{create@{create}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a41e7eaf0635dbebe09365c14e3215681} 
+bool lava\+::pipeline\+\_\+layout\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Create a new pipeline layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1pipeline__layout_ab8dd12247c0fa0c6791aa77c932d9705}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!get@{get}}
+\index{get@{get}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_ab8dd12247c0fa0c6791aa77c932d9705} 
+Vk\+Pipeline\+Layout lava\+::pipeline\+\_\+layout\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan pipeline layout. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Pipeline\+Layout Pipeline layout 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1pipeline__layout_a409085e0712f935ec5b3d2dcc5e3aa6f}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!get\_descriptors@{get\_descriptors}}
+\index{get\_descriptors@{get\_descriptors}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{get\_descriptors()}{get\_descriptors()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a409085e0712f935ec5b3d2dcc5e3aa6f} 
+\mbox{\hyperlink{structlava_1_1descriptor_ac2e378ff58be1adac2eb3fa5c390143a}{descriptor\+::s\+\_\+list}} const  \& lava\+::pipeline\+\_\+layout\+::get\+\_\+descriptors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the descriptors. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1descriptor_ac2e378ff58be1adac2eb3fa5c390143a}{descriptor\+::s\+\_\+list} const\& List of descriptors 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1pipeline__layout_aa503f785ded67471cb19bdd1de583c17}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_aa503f785ded67471cb19bdd1de583c17} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::pipeline\+\_\+layout\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1pipeline__layout_afc91b4cddf60214659d21bb3ed475375}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!get\_push\_constant\_ranges@{get\_push\_constant\_ranges}}
+\index{get\_push\_constant\_ranges@{get\_push\_constant\_ranges}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{get\_push\_constant\_ranges()}{get\_push\_constant\_ranges()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_afc91b4cddf60214659d21bb3ed475375} 
+\mbox{\hyperlink{base_2base_8hpp_a5d74309e91a4d7bd8d327cd48d279908}{Vk\+Push\+Constant\+Ranges}} const  \& lava\+::pipeline\+\_\+layout\+::get\+\_\+push\+\_\+constant\+\_\+ranges (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the push constant ranges. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{base_2base_8hpp_a5d74309e91a4d7bd8d327cd48d279908}{Vk\+Push\+Constant\+Ranges} const\& List of push constant ranges 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1pipeline__layout_a466742e3acc50d0f98126568f08bdfbe}\index{lava::pipeline\_layout@{lava::pipeline\_layout}!make@{make}}
+\index{make@{make}!lava::pipeline\_layout@{lava::pipeline\_layout}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1pipeline__layout_a466742e3acc50d0f98126568f08bdfbe} 
+static \mbox{\hyperlink{structlava_1_1pipeline__layout_adeb6bacc906e605536e0d1533907c492}{s\+\_\+ptr}} lava\+::pipeline\+\_\+layout\+::make (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new pipeline layout. 
+
+\begin{DoxyReturn}{Returns}
+ptr Shared pointer to pipeline layout 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{pipeline__layout_8hpp}{pipeline\+\_\+layout.\+hpp}}\end{DoxyCompactItemize}

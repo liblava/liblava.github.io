@@ -1,0 +1,99 @@
+\doxysection{lava\+::forward\+\_\+shading Struct Reference}
+\hypertarget{structlava_1_1forward__shading}{}\label{structlava_1_1forward__shading}\index{lava::forward\_shading@{lava::forward\_shading}}
+
+
+Forward shading.  
+
+
+
+
+{\ttfamily \#include $<$forward\+\_\+shading.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1forward__shading_a724301829060777c7739db5d12f355cf}\label{structlava_1_1forward__shading_a724301829060777c7739db5d12f355cf} 
+{\bfseries forward\+\_\+shading} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new forward shading. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1forward__shading_a51391e8cb1bdb453c6cdccd27f659242}\label{structlava_1_1forward__shading_a51391e8cb1bdb453c6cdccd27f659242} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}forward\+\_\+shading} ()
+\begin{DoxyCompactList}\small\item\em Destroy the forward shading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1forward__shading_a7776049b29d8df5aa10a5b1f57a33bbe}{create}} (\mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{render\+\_\+target\+::s\+\_\+ptr}} target)
+\begin{DoxyCompactList}\small\item\em Create a forward shading for a render target. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1forward__shading_a9da8c059432678d2a32aa121d4a3c4b7}\label{structlava_1_1forward__shading_a9da8c059432678d2a32aa121d4a3c4b7} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the forward shading. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1render__pass_a6432d705ed6721ad579bac7264eb1f34}{render\+\_\+pass\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1forward__shading_ac02576486c499bde0aeecf4bcda72253}{get\+\_\+pass}} () const
+\begin{DoxyCompactList}\small\item\em Get the render pass. \end{DoxyCompactList}\item 
+Vk\+Render\+Pass \mbox{\hyperlink{structlava_1_1forward__shading_ac8078a6d6331237472a2920d287e3a65}{get\+\_\+vk\+\_\+pass}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan render pass. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1forward__shading_a5b3985f5b93c0725824b870b3dd25c0b}{get\+\_\+depth\+\_\+stencil}} () const
+\begin{DoxyCompactList}\small\item\em Get the depth stencil image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Forward shading. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1forward__shading_a7776049b29d8df5aa10a5b1f57a33bbe}\index{lava::forward\_shading@{lava::forward\_shading}!create@{create}}
+\index{create@{create}!lava::forward\_shading@{lava::forward\_shading}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1forward__shading_a7776049b29d8df5aa10a5b1f57a33bbe} 
+bool lava\+::forward\+\_\+shading\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1render__target_ad897aa3c29eff085b2b4e3d44c869db1}{render\+\_\+target\+::s\+\_\+ptr}}}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Create a forward shading for a render target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Render target \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1forward__shading_a5b3985f5b93c0725824b870b3dd25c0b}\index{lava::forward\_shading@{lava::forward\_shading}!get\_depth\_stencil@{get\_depth\_stencil}}
+\index{get\_depth\_stencil@{get\_depth\_stencil}!lava::forward\_shading@{lava::forward\_shading}}
+\doxysubsubsection{\texorpdfstring{get\_depth\_stencil()}{get\_depth\_stencil()}}
+{\footnotesize\ttfamily \label{structlava_1_1forward__shading_a5b3985f5b93c0725824b870b3dd25c0b} 
+\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr}} lava\+::forward\+\_\+shading\+::get\+\_\+depth\+\_\+stencil (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the depth stencil image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{image\+::s\+\_\+ptr} Depth stencil Image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1forward__shading_ac02576486c499bde0aeecf4bcda72253}\index{lava::forward\_shading@{lava::forward\_shading}!get\_pass@{get\_pass}}
+\index{get\_pass@{get\_pass}!lava::forward\_shading@{lava::forward\_shading}}
+\doxysubsubsection{\texorpdfstring{get\_pass()}{get\_pass()}}
+{\footnotesize\ttfamily \label{structlava_1_1forward__shading_ac02576486c499bde0aeecf4bcda72253} 
+\mbox{\hyperlink{structlava_1_1render__pass_a6432d705ed6721ad579bac7264eb1f34}{render\+\_\+pass\+::s\+\_\+ptr}} lava\+::forward\+\_\+shading\+::get\+\_\+pass (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the render pass. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1render__pass_a6432d705ed6721ad579bac7264eb1f34}{render\+\_\+pass\+::s\+\_\+ptr} Render pass 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1forward__shading_ac8078a6d6331237472a2920d287e3a65}\index{lava::forward\_shading@{lava::forward\_shading}!get\_vk\_pass@{get\_vk\_pass}}
+\index{get\_vk\_pass@{get\_vk\_pass}!lava::forward\_shading@{lava::forward\_shading}}
+\doxysubsubsection{\texorpdfstring{get\_vk\_pass()}{get\_vk\_pass()}}
+{\footnotesize\ttfamily \label{structlava_1_1forward__shading_ac8078a6d6331237472a2920d287e3a65} 
+Vk\+Render\+Pass lava\+::forward\+\_\+shading\+::get\+\_\+vk\+\_\+pass (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan render pass. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Render\+Pass Vulkan Render pass 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/app/\mbox{\hyperlink{forward__shading_8hpp}{forward\+\_\+shading.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\doxysection{lava\+::driver Struct Reference}
+\hypertarget{structlava_1_1driver}{}\label{structlava_1_1driver}\index{lava::driver@{lava::driver}}
+
+
+Stage driver.  
+
+
+
+
+{\ttfamily \#include $<$driver.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1driver_1_1result}{result}}
+\begin{DoxyCompactList}\small\item\em Driver result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1driver_a46bcb3fcede1d91f250dd6bef15bba84}\label{structlava_1_1driver_a46bcb3fcede1d91f250dd6bef15bba84} 
+enum \mbox{\hyperlink{structlava_1_1driver_a46bcb3fcede1d91f250dd6bef15bba84}{error}} \{ {\bfseries stages\+\_\+empty} = -\/1
+, {\bfseries stage\+\_\+not\+\_\+found} = -\/2
+, {\bfseries undef\+\_\+run} = -\/3
+ \}
+\begin{DoxyCompactList}\small\item\em Driver error codes. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1driver_a17f884fcfa3e5acb85f36da82a5b9240}\label{structlava_1_1driver_a17f884fcfa3e5acb85f36da82a5b9240} 
+using {\bfseries run\+\_\+func} = std\+::function$<$\mbox{\hyperlink{structlava_1_1driver_1_1result}{result}}(argh\+::parser)$>$
+\begin{DoxyCompactList}\small\item\em Run function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1driver_a10b1666387c2aac2ee2c3fcc0b56d87a}{add\+\_\+stage}} (\mbox{\hyperlink{structlava_1_1stage}{stage}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1stage}{stage}})
+\begin{DoxyCompactList}\small\item\em Add a stage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{stage\+::map}} const \& \mbox{\hyperlink{structlava_1_1driver_acd24daf28a3186453991f5ef1201e39e}{get\+\_\+stages}} () const
+\begin{DoxyCompactList}\small\item\em Get all stages. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{structlava_1_1driver_a8d80fe8735c05b7a898439d1a6ca7da0}{run}} (argh\+::parser \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}}=\{\})
+\begin{DoxyCompactList}\small\item\em Run the driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1driver}{driver}} \& \mbox{\hyperlink{structlava_1_1driver_ade12629f76d50f187860954ec93e5b15}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Get driver instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1driver_aae9102b766adabd740bb293e26c7e60c}\label{structlava_1_1driver_aae9102b766adabd740bb293e26c7e60c} 
+\mbox{\hyperlink{structlava_1_1driver_a17f884fcfa3e5acb85f36da82a5b9240}{run\+\_\+func}} {\bfseries on\+\_\+run}
+\begin{DoxyCompactList}\small\item\em Called if no stage has been selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stage driver. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1driver_a10b1666387c2aac2ee2c3fcc0b56d87a}\index{lava::driver@{lava::driver}!add\_stage@{add\_stage}}
+\index{add\_stage@{add\_stage}!lava::driver@{lava::driver}}
+\doxysubsubsection{\texorpdfstring{add\_stage()}{add\_stage()}}
+{\footnotesize\ttfamily \label{structlava_1_1driver_a10b1666387c2aac2ee2c3fcc0b56d87a} 
+void lava\+::driver\+::add\+\_\+stage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1stage}{stage}} \texorpdfstring{$\ast$}{*}}]{stage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stage} & Stage to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1driver_acd24daf28a3186453991f5ef1201e39e}\index{lava::driver@{lava::driver}!get\_stages@{get\_stages}}
+\index{get\_stages@{get\_stages}!lava::driver@{lava::driver}}
+\doxysubsubsection{\texorpdfstring{get\_stages()}{get\_stages()}}
+{\footnotesize\ttfamily \label{structlava_1_1driver_acd24daf28a3186453991f5ef1201e39e} 
+\mbox{\hyperlink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{stage\+::map}} const  \& lava\+::driver\+::get\+\_\+stages (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all stages. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1stage_af9a5dffac53f1f39a6d201f775d40bb9}{stage\+::map} const\& Map of stages 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1driver_ade12629f76d50f187860954ec93e5b15}\index{lava::driver@{lava::driver}!instance@{instance}}
+\index{instance@{instance}!lava::driver@{lava::driver}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \label{structlava_1_1driver_ade12629f76d50f187860954ec93e5b15} 
+static \mbox{\hyperlink{structlava_1_1driver}{driver}} \& lava\+::driver\+::instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get driver instance. 
+
+\begin{DoxyReturn}{Returns}
+driver\& Stage driver 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1driver_a8d80fe8735c05b7a898439d1a6ca7da0}\index{lava::driver@{lava::driver}!run@{run}}
+\index{run@{run}!lava::driver@{lava::driver}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{structlava_1_1driver_a8d80fe8735c05b7a898439d1a6ca7da0} 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} lava\+::driver\+::run (\begin{DoxyParamCaption}\item[{argh\+::parser}]{cmd\+\_\+line}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})}
+
+
+
+Run the driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32} Result code 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{driver_8hpp}{driver.\+hpp}}\end{DoxyCompactItemize}

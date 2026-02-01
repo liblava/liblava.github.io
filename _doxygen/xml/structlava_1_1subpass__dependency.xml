@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1subpass__dependency" kind="struct" language="C++" prot="public">
+    <compoundname>lava::subpass_dependency</compoundname>
+    <includes refid="subpass_8hpp" local="no">subpass.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1subpass__dependency" kindref="compound">subpass_dependency</ref> &gt;</type>
+        <definition>using lava::subpass_dependency::s_ptr =  std::shared_ptr&lt;subpass_dependency&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::subpass_dependency::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to subpass dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="229" column="5" bodyfile="liblava/block/subpass.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1subpass__dependency_1a6ace8aff487ed1ff9434ff974c9165d8" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::subpass_dependency::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::subpass_dependency::s_list</qualifiedname>
+        <briefdescription>
+<para>List of subpass dependencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="232" column="5" bodyfile="liblava/block/subpass.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1subpass__dependency_1af7e7fdbdfbcb7cd1b7d59718734b0a6d" prot="private" static="no" mutable="no">
+        <type>VkSubpassDependency</type>
+        <definition>VkSubpassDependency lava::subpass_dependency::m_dependency</definition>
+        <argsstring></argsstring>
+        <name>m_dependency</name>
+        <qualifiedname>lava::subpass_dependency::m_dependency</qualifiedname>
+        <briefdescription>
+<para>Vulkan subpass dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="354" column="25" bodyfile="liblava/block/subpass.hpp" bodystart="354" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a6fcc0a0c3eac93adaff1843703cb9ebb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::subpass_dependency::make</definition>
+        <argsstring>(ui32 src_subpass, ui32 dst_subpass, VkDependencyFlags dependency_flags=VK_DEPENDENCY_BY_REGION_BIT)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::subpass_dependency::make</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>src_subpass</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>dst_subpass</declname>
+        </param>
+        <param>
+          <type>VkDependencyFlags</type>
+          <declname>dependency_flags</declname>
+          <defval>VK_DEPENDENCY_BY_REGION_BIT</defval>
+        </param>
+        <briefdescription>
+<para>Make a new subpass dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src_subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source subpass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst_subpass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination subpass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dependency_flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dependency flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" kindref="member">s_ptr</ref> Shared pointer to subpass dependency </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="241" column="18" bodyfile="liblava/block/subpass.hpp" bodystart="241" bodyend="249"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a09932e40b5288003f4994b761ae125ac" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::subpass_dependency::subpass_dependency</definition>
+        <argsstring>()</argsstring>
+        <name>subpass_dependency</name>
+        <qualifiedname>lava::subpass_dependency::subpass_dependency</qualifiedname>
+        <briefdescription>
+<para>Construct a new subpass dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="254" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1ac662a4d3ba93e434c86b5eefe7b86bc9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkSubpassDependency const &amp;</type>
+        <definition>VkSubpassDependency const  &amp; lava::subpass_dependency::get_dependency</definition>
+        <argsstring>() const</argsstring>
+        <name>get_dependency</name>
+        <qualifiedname>lava::subpass_dependency::get_dependency</qualifiedname>
+        <briefdescription>
+<para>Get the dependency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkSubpassDependency const&amp; Vulkan subpass dependency </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="260" column="31" bodyfile="liblava/block/subpass.hpp" bodystart="260" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a85b6178eff7ddf3701530b9ac710da14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_subpass</definition>
+        <argsstring>(ui32 src, ui32 dst)</argsstring>
+        <name>set_subpass</name>
+        <qualifiedname>lava::subpass_dependency::set_subpass</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Set the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Subpass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="269" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a5862d316b3946df5db84bac1f2644c69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_src_subpass</definition>
+        <argsstring>(ui32 src)</argsstring>
+        <name>set_src_subpass</name>
+        <qualifiedname>lava::subpass_dependency::set_src_subpass</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Set the source subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source Subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="278" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="278" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a608b3a485457f7aab9c5ab4897c83afe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_dst_subpass</definition>
+        <argsstring>(ui32 dst)</argsstring>
+        <name>set_dst_subpass</name>
+        <qualifiedname>lava::subpass_dependency::set_dst_subpass</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Set the dst subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination subpass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="286" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="286" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a01bb876275018c9976f31e15901b0ded" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_stage_mask</definition>
+        <argsstring>(VkPipelineStageFlags src, VkPipelineStageFlags dst)</argsstring>
+        <name>set_stage_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_stage_mask</qualifiedname>
+        <param>
+          <type>VkPipelineStageFlags</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>VkPipelineStageFlags</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Set the stage mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source pipeline stage flags </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination pipeline stage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="295" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="295" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a56e19c9fc37e12b79caee3b7d6ae17f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_src_stage_mask</definition>
+        <argsstring>(VkPipelineStageFlags mask)</argsstring>
+        <name>set_src_stage_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_src_stage_mask</qualifiedname>
+        <param>
+          <type>VkPipelineStageFlags</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Set the source stage mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline stage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="305" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="305" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a4a01d8ea3ca09831cd353dc3341f42e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_dst_stage_mask</definition>
+        <argsstring>(VkPipelineStageFlags mask)</argsstring>
+        <name>set_dst_stage_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_dst_stage_mask</qualifiedname>
+        <param>
+          <type>VkPipelineStageFlags</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Set the destination stage mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline stage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="313" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="313" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a1b99106dc94c0455d1e74ec95369f0f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_access_mask</definition>
+        <argsstring>(VkAccessFlags src, VkAccessFlags dst)</argsstring>
+        <name>set_access_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_access_mask</qualifiedname>
+        <param>
+          <type>VkAccessFlags</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>VkAccessFlags</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Set the access mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source access flags </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination access flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="322" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="322" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a09ef6ed67f4f10e21496b6a20899cd17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_src_access_mask</definition>
+        <argsstring>(VkAccessFlags mask)</argsstring>
+        <name>set_src_access_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_src_access_mask</qualifiedname>
+        <param>
+          <type>VkAccessFlags</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Set the src access mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Access flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="332" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="332" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1acbe61b1487dbed939c60d34c744aa569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_dst_access_mask</definition>
+        <argsstring>(VkAccessFlags mask)</argsstring>
+        <name>set_dst_access_mask</name>
+        <qualifiedname>lava::subpass_dependency::set_dst_access_mask</qualifiedname>
+        <param>
+          <type>VkAccessFlags</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Set the dst access mask. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Access flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="340" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="340" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass__dependency_1a13896063593fd87487f2c726a0c1ec8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass_dependency::set_dependency_flags</definition>
+        <argsstring>(VkDependencyFlags flags)</argsstring>
+        <name>set_dependency_flags</name>
+        <qualifiedname>lava::subpass_dependency::set_dependency_flags</qualifiedname>
+        <param>
+          <type>VkDependencyFlags</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the dependency flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dependency flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="348" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="348" bodyend="350"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Subpass dependency. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/block/subpass.hpp" line="227" column="1" bodyfile="liblava/block/subpass.hpp" bodystart="227" bodyend="355"/>
+    <listofallmembers>
+      <member refid="structlava_1_1subpass__dependency_1ac662a4d3ba93e434c86b5eefe7b86bc9" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>get_dependency</name></member>
+      <member refid="structlava_1_1subpass__dependency_1af7e7fdbdfbcb7cd1b7d59718734b0a6d" prot="private" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>m_dependency</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a6fcc0a0c3eac93adaff1843703cb9ebb" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>make</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a6ace8aff487ed1ff9434ff974c9165d8" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>s_list</name></member>
+      <member refid="structlava_1_1subpass__dependency_1ac6b906e5c158e19fce6d0f60c2e57c6c" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a1b99106dc94c0455d1e74ec95369f0f5" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_access_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a13896063593fd87487f2c726a0c1ec8e" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_dependency_flags</name></member>
+      <member refid="structlava_1_1subpass__dependency_1acbe61b1487dbed939c60d34c744aa569" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_dst_access_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a4a01d8ea3ca09831cd353dc3341f42e8" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_dst_stage_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a608b3a485457f7aab9c5ab4897c83afe" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_dst_subpass</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a09ef6ed67f4f10e21496b6a20899cd17" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_src_access_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a56e19c9fc37e12b79caee3b7d6ae17f4" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_src_stage_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a5862d316b3946df5db84bac1f2644c69" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_src_subpass</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a01bb876275018c9976f31e15901b0ded" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_stage_mask</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a85b6178eff7ddf3701530b9ac710da14" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>set_subpass</name></member>
+      <member refid="structlava_1_1subpass__dependency_1a09932e40b5288003f4994b761ae125ac" prot="public" virt="non-virtual"><scope>lava::subpass_dependency</scope><name>subpass_dependency</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

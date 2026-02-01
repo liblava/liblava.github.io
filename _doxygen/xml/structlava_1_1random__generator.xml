@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1random__generator" kind="struct" language="C++" prot="public">
+    <compoundname>lava::random_generator</compoundname>
+    <includes refid="random_8hpp" local="no">random.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1random__generator_1a0d9424c491aa59ec1f42511a0e9ac6c3" prot="private" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 lava::random_generator::m_engine</definition>
+        <argsstring></argsstring>
+        <name>m_engine</name>
+        <qualifiedname>lava::random_generator::m_engine</qualifiedname>
+        <briefdescription>
+<para>Mersenne twister algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="53" column="18" bodyfile="liblava/util/random.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1random__generator_1a8affb6390ba5d8e5adc5a2bbe50f2889" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::random_generator::random_generator</definition>
+        <argsstring>()</argsstring>
+        <name>random_generator</name>
+        <qualifiedname>lava::random_generator::random_generator</qualifiedname>
+        <briefdescription>
+<para>Construct a new random generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="22" column="5" bodyfile="liblava/util/random.hpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1random__generator_1ac68d074c2fda354049f8424f77071c1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+        <definition>i32 lava::random_generator::get</definition>
+        <argsstring>(i32 low, i32 high)</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::random_generator::get</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref></type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+<para>Get next random number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lowest number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Highest number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="types_8hpp_1a7e5d7f16aff5126a54243302372b43b1" kindref="member">i32</ref> Random number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="33" column="9" bodyfile="liblava/util/random.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1random__generator_1a93be61deb5e1979fb65b9cedcdf6727e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval><ref refid="types_8hpp_1ac5a07aee91729f6ed77bd47fd1095218" kindref="member">real</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T lava::random_generator::get</definition>
+        <argsstring>(T low, T high)</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::random_generator::get</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+<para>Get next real random number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lowest number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Highest number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>T Random number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/random.hpp" line="46" column="7" bodyfile="liblava/util/random.hpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Random generator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/util/random.hpp" line="18" column="1" bodyfile="liblava/util/random.hpp" bodystart="18" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structlava_1_1random__generator_1ac68d074c2fda354049f8424f77071c1f" prot="public" virt="non-virtual"><scope>lava::random_generator</scope><name>get</name></member>
+      <member refid="structlava_1_1random__generator_1a93be61deb5e1979fb65b9cedcdf6727e" prot="public" virt="non-virtual"><scope>lava::random_generator</scope><name>get</name></member>
+      <member refid="structlava_1_1random__generator_1a0d9424c491aa59ec1f42511a0e9ac6c3" prot="private" virt="non-virtual"><scope>lava::random_generator</scope><name>m_engine</name></member>
+      <member refid="structlava_1_1random__generator_1a8affb6390ba5d8e5adc5a2bbe50f2889" prot="public" virt="non-virtual"><scope>lava::random_generator</scope><name>random_generator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

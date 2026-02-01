@@ -1,0 +1,43 @@
+\doxysection{lava\+::scroll\+\_\+event Struct Reference}
+\hypertarget{structlava_1_1scroll__event}{}\label{structlava_1_1scroll__event}\index{lava::scroll\_event@{lava::scroll\_event}}
+
+
+Scroll event.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}\label{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1scroll__event}{scroll\+\_\+event}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to scroll event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74}\label{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74} 
+using {\bfseries func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{ref}})$>$
+\begin{DoxyCompactList}\small\item\em Scroll event function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1scroll__event_a5ffb8b38989a51fcb7d96c9a69018a38}\label{structlava_1_1scroll__event_a5ffb8b38989a51fcb7d96c9a69018a38} 
+using {\bfseries listeners} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74}{func}}$>$
+\begin{DoxyCompactList}\small\item\em List of scroll event listeners. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1scroll__event_a0017da747cfbd97cd2de7acf650b9a69}\label{structlava_1_1scroll__event_a0017da747cfbd97cd2de7acf650b9a69} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1scroll__event}{scroll\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of scroll events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1scroll__event_a9aa143c98a522ccae6eecbdffe7da9e0}\label{structlava_1_1scroll__event_a9aa143c98a522ccae6eecbdffe7da9e0} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries sender}
+\begin{DoxyCompactList}\small\item\em Sender id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1scroll__event_a60f3e32d7908cc9187078595484440c3}\label{structlava_1_1scroll__event_a60f3e32d7908cc9187078595484440c3} 
+\mbox{\hyperlink{structlava_1_1scroll__offset}{scroll\+\_\+offset}} {\bfseries offset}
+\begin{DoxyCompactList}\small\item\em Input scroll offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scroll event. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

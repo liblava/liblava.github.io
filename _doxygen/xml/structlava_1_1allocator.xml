@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1allocator" kind="struct" language="C++" prot="public">
+    <compoundname>lava::allocator</compoundname>
+    <includes refid="memory_8hpp" local="no">memory.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1allocator" kindref="compound">allocator</ref> &gt;</type>
+        <definition>using lava::allocator::s_ptr =  std::shared_ptr&lt;allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::allocator::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to a allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="26" column="5" bodyfile="liblava/base/memory.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1allocator_1ac694ae1eb7b09a888504a757a63ef08e" prot="public" static="no">
+        <type><ref refid="structlava_1_1device" kindref="compound">device</ref> const  *</type>
+        <definition>using lava::allocator::device_c_ptr =  device const*</definition>
+        <argsstring></argsstring>
+        <name>device_c_ptr</name>
+        <qualifiedname>lava::allocator::device_c_ptr</qualifiedname>
+        <briefdescription>
+<para>Const pointer to device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="29" column="5" bodyfile="liblava/base/memory.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1allocator_1ab9d268c6fbc90ae9fc3dcd914a8de8e8" prot="private" static="no" mutable="no">
+        <type>VmaAllocator</type>
+        <definition>VmaAllocator lava::allocator::m_allocator</definition>
+        <argsstring></argsstring>
+        <name>m_allocator</name>
+        <qualifiedname>lava::allocator::m_allocator</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>VMA allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="83" column="18" bodyfile="liblava/base/memory.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1allocator_1a1ac4e448d0e97b6e4a3fc96d10af2947" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::allocator::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::allocator::make</qualifiedname>
+        <briefdescription>
+<para>Make a new allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" kindref="member">s_ptr</ref> Shared pointer to allocator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="35" column="18" bodyfile="liblava/base/memory.hpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1allocator_1a43595f4de65311f903bdaf3f0a920d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::allocator::allocator</definition>
+        <argsstring>()=default</argsstring>
+        <name>allocator</name>
+        <qualifiedname>lava::allocator::allocator</qualifiedname>
+        <briefdescription>
+<para>Construct a new allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1allocator_1a104549380e2442ee141fc82a3665391c" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::allocator::allocator</definition>
+        <argsstring>(VmaAllocator allocator)</argsstring>
+        <name>allocator</name>
+        <qualifiedname>lava::allocator::allocator</qualifiedname>
+        <param>
+          <type>VmaAllocator</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VMA allocator </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="48" column="14" bodyfile="liblava/base/memory.hpp" bodystart="48" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1allocator_1a9a166cb659c6c4b1512c419842431b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::allocator::create</definition>
+        <argsstring>(device_c_ptr device, VmaAllocatorCreateFlags flags=0)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::allocator::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1allocator_1ac694ae1eb7b09a888504a757a63ef08e" kindref="member">device_c_ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>VmaAllocatorCreateFlags</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create a new allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VMA allocator create flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1allocator_1a07c98ecaa86fbf0184c2082a810ce484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::allocator::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::allocator::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1allocator_1a4b9ce048e3a652edca92cd4f183e7de3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::allocator::valid</definition>
+        <argsstring>() const</argsstring>
+        <name>valid</name>
+        <qualifiedname>lava::allocator::valid</qualifiedname>
+        <briefdescription>
+<para>Check if allocator is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Allocator is valid or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="69" column="10" bodyfile="liblava/base/memory.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1allocator_1ad0b6446682e0edef271d7afbbb7aa97f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VmaAllocator</type>
+        <definition>VmaAllocator lava::allocator::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::allocator::get</qualifiedname>
+        <briefdescription>
+<para>Get the VMA allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VmaAllocator VMA allocator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/memory.hpp" line="77" column="18" bodyfile="liblava/base/memory.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Vulkan allocator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/base/memory.hpp" line="24" column="1" bodyfile="liblava/base/memory.hpp" bodystart="24" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structlava_1_1allocator_1a43595f4de65311f903bdaf3f0a920d54" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>allocator</name></member>
+      <member refid="structlava_1_1allocator_1a104549380e2442ee141fc82a3665391c" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>allocator</name></member>
+      <member refid="structlava_1_1allocator_1a9a166cb659c6c4b1512c419842431b2d" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>create</name></member>
+      <member refid="structlava_1_1allocator_1a07c98ecaa86fbf0184c2082a810ce484" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>destroy</name></member>
+      <member refid="structlava_1_1allocator_1ac694ae1eb7b09a888504a757a63ef08e" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>device_c_ptr</name></member>
+      <member refid="structlava_1_1allocator_1ad0b6446682e0edef271d7afbbb7aa97f" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>get</name></member>
+      <member refid="structlava_1_1allocator_1ab9d268c6fbc90ae9fc3dcd914a8de8e8" prot="private" virt="non-virtual"><scope>lava::allocator</scope><name>m_allocator</name></member>
+      <member refid="structlava_1_1allocator_1a1ac4e448d0e97b6e4a3fc96d10af2947" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>make</name></member>
+      <member refid="structlava_1_1allocator_1ab7f304804ff970ac1436b31ebf5647d8" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1allocator_1a4b9ce048e3a652edca92cd4f183e7de3" prot="public" virt="non-virtual"><scope>lava::allocator</scope><name>valid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

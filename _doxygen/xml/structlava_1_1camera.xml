@@ -1,0 +1,1246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1camera" kind="struct" language="C++" prot="public">
+    <compoundname>lava::camera</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="camera_8hpp" local="no">camera.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structlava_1_1camera_1aa4b6c75103911a9b9844b41bc6d6d94d" prot="public" static="no" strong="yes">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <name>mode</name>
+        <qualifiedname>lava::camera::mode</qualifiedname>
+        <enumvalue id="structlava_1_1camera_1aa4b6c75103911a9b9844b41bc6d6d94daeb4720eb3455281795678ac912b107e1" prot="public">
+          <name>first_person</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1camera_1aa4b6c75103911a9b9844b41bc6d6d94da604f1ee3cb3fde3226646a3cc49d4b7c" prot="public">
+          <name>look_at</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Camera modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="35" column="5" bodyfile="liblava/app/camera.hpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1camera_1ad397a86e772cea14d63bbe9ac241de92" prot="public" static="no">
+        <type><ref refid="structlava_1_1camera" kindref="compound">camera</ref> *</type>
+        <definition>using lava::camera::ptr =  camera*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::camera::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to camera. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="21" column="5" bodyfile="liblava/app/camera.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1camera_1aea3adeebee5eb3fad25acd5803d6990e" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1camera" kindref="compound">camera</ref> &gt;</type>
+        <definition>using lava::camera::s_ptr =  std::shared_ptr&lt;camera&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::camera::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to camera. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="24" column="5" bodyfile="liblava/app/camera.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1camera_1afd38f5c6815e3751c5cb75535baa5874" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1camera_1aea3adeebee5eb3fad25acd5803d6990e" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::camera::s_map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <qualifiedname>lava::camera::s_map</qualifiedname>
+        <briefdescription>
+<para>Map of cameras. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="27" column="5" bodyfile="liblava/app/camera.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1camera_1a583e56f9e7b4a0df71bfac7c5437bc11" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1camera_1aea3adeebee5eb3fad25acd5803d6990e" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::camera::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::camera::s_list</qualifiedname>
+        <briefdescription>
+<para>List of cameras. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="30" column="5" bodyfile="liblava/app/camera.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1camera_1abe3ae9b3c5b8de5f5bd623ad7528450a" prot="public" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref></type>
+        <definition>v3 lava::camera::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>lava::camera::position</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref>(0.f)</initializer>
+        <briefdescription>
+<para>Camera position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="183" column="8" bodyfile="liblava/app/camera.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a80234741cfe9f7e2808c2cce005fab6c" prot="public" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref></type>
+        <definition>v3 lava::camera::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <qualifiedname>lava::camera::rotation</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1a4384995facacf81c4762b81285341e78" kindref="member">v3</ref>(0.f)</initializer>
+        <briefdescription>
+<para>Camera rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="186" column="8" bodyfile="liblava/app/camera.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a50e621f8660dc6a420211ec810fae8ea" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::rotation_speed</definition>
+        <argsstring></argsstring>
+        <name>rotation_speed</name>
+        <qualifiedname>lava::camera::rotation_speed</qualifiedname>
+        <initializer>= 20.f</initializer>
+        <briefdescription>
+<para>Camera rotation speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="189" column="9" bodyfile="liblava/app/camera.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1aa8688226ac35525517e98260acb0f264" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::movement_speed</definition>
+        <argsstring></argsstring>
+        <name>movement_speed</name>
+        <qualifiedname>lava::camera::movement_speed</qualifiedname>
+        <initializer>= 1.f</initializer>
+        <briefdescription>
+<para>Camera movement speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="192" column="9" bodyfile="liblava/app/camera.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a5c0ea276e42e335229d6778a9da2eea3" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::zoom_speed</definition>
+        <argsstring></argsstring>
+        <name>zoom_speed</name>
+        <qualifiedname>lava::camera::zoom_speed</qualifiedname>
+        <initializer>= 20.f</initializer>
+        <briefdescription>
+<para>Camera zoom speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="195" column="9" bodyfile="liblava/app/camera.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a0d5b42d59361a57d98f9a90db5ce65ee" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::fov</definition>
+        <argsstring></argsstring>
+        <name>fov</name>
+        <qualifiedname>lava::camera::fov</qualifiedname>
+        <initializer>= 60.f</initializer>
+        <briefdescription>
+<para>Field of view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="198" column="9" bodyfile="liblava/app/camera.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a96c50dfd75e4611fd424709b6fb6200c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::z_near</definition>
+        <argsstring></argsstring>
+        <name>z_near</name>
+        <qualifiedname>lava::camera::z_near</qualifiedname>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+<para>Distance to near clipping plane along the -Z axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="201" column="9" bodyfile="liblava/app/camera.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1ab27550631e3cb0da1f76a2414a71eb53" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::z_far</definition>
+        <argsstring></argsstring>
+        <name>z_far</name>
+        <qualifiedname>lava::camera::z_far</qualifiedname>
+        <initializer>= 256.f</initializer>
+        <briefdescription>
+<para>Distance to far clipping plane along the -Z axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="204" column="9" bodyfile="liblava/app/camera.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a46b80c2fb0b453c66c8e5fd251faff4b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::camera::aspect_ratio</definition>
+        <argsstring></argsstring>
+        <name>aspect_ratio</name>
+        <qualifiedname>lava::camera::aspect_ratio</qualifiedname>
+        <initializer>= 1.77f</initializer>
+        <briefdescription>
+<para>Camera aspect ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="207" column="9" bodyfile="liblava/app/camera.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a06cc01c622dd10c043e8ea2ef6d7b46a" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1camera_1aa4b6c75103911a9b9844b41bc6d6d94d" kindref="member">mode</ref></type>
+        <definition>mode lava::camera::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>lava::camera::mode</qualifiedname>
+        <initializer>= mode::first_person</initializer>
+        <briefdescription>
+<para>Camera mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="210" column="10" bodyfile="liblava/app/camera.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a95be646793f23f19139810f173ba66de" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::lock_z</definition>
+        <argsstring></argsstring>
+        <name>lock_z</name>
+        <qualifiedname>lava::camera::lock_z</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Lock Z axis movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="213" column="10" bodyfile="liblava/app/camera.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a269a54d6faab7efde7e651ebbaac035f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::lock_rotation</definition>
+        <argsstring></argsstring>
+        <name>lock_rotation</name>
+        <qualifiedname>lava::camera::lock_rotation</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Lock camera rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="216" column="10" bodyfile="liblava/app/camera.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1camera_1aa75c31ed9ca304cdebb240dd5e8bb543" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_active</definition>
+        <argsstring></argsstring>
+        <name>m_active</name>
+        <qualifiedname>lava::camera::m_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Active state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="226" column="10" bodyfile="liblava/app/camera.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1af6a01e26a1dd1f46ceb330d646c661a4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_move_up</definition>
+        <argsstring></argsstring>
+        <name>m_move_up</name>
+        <qualifiedname>lava::camera::m_move_up</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Up movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="229" column="10" bodyfile="liblava/app/camera.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a8796f377d606bf7291fdae77a794ad44" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_move_down</definition>
+        <argsstring></argsstring>
+        <name>m_move_down</name>
+        <qualifiedname>lava::camera::m_move_down</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Down movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="232" column="10" bodyfile="liblava/app/camera.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a256f9c3f2a51f51d7119929820ea210b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_move_left</definition>
+        <argsstring></argsstring>
+        <name>m_move_left</name>
+        <qualifiedname>lava::camera::m_move_left</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Left movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="235" column="10" bodyfile="liblava/app/camera.hpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a9c71eabc88372dae81257b37da43ba8a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_move_right</definition>
+        <argsstring></argsstring>
+        <name>m_move_right</name>
+        <qualifiedname>lava::camera::m_move_right</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Right movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="238" column="10" bodyfile="liblava/app/camera.hpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a5b4036aaac2b96ab54dee86b9d6e0c90" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_rotate</definition>
+        <argsstring></argsstring>
+        <name>m_rotate</name>
+        <qualifiedname>lava::camera::m_rotate</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Rotation state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="241" column="10" bodyfile="liblava/app/camera.hpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a35a753eb879caf1bbe7e74fc80904e4b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::camera::m_translate</definition>
+        <argsstring></argsstring>
+        <name>m_translate</name>
+        <qualifiedname>lava::camera::m_translate</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Translate state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="244" column="10" bodyfile="liblava/app/camera.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1ad136f0db52844b9f5a891e5cab2838f5" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+        <definition>r64 lava::camera::m_mouse_pos_x</definition>
+        <argsstring></argsstring>
+        <name>m_mouse_pos_x</name>
+        <qualifiedname>lava::camera::m_mouse_pos_x</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Mouse X position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="247" column="9" bodyfile="liblava/app/camera.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a20477acfb9c5b588547d2bcf06358c2e" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+        <definition>r64 lava::camera::m_mouse_pos_y</definition>
+        <argsstring></argsstring>
+        <name>m_mouse_pos_y</name>
+        <qualifiedname>lava::camera::m_mouse_pos_y</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Mouse Y position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="250" column="9" bodyfile="liblava/app/camera.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a2e0f58078b1a0332618b45401aba62d2" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1aeb5fe0bd98dc4fba84d1e81c12d31476" kindref="member">r64</ref></type>
+        <definition>r64 lava::camera::m_scroll_pos</definition>
+        <argsstring></argsstring>
+        <name>m_scroll_pos</name>
+        <qualifiedname>lava::camera::m_scroll_pos</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Scroll position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="253" column="9" bodyfile="liblava/app/camera.hpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a17616f06ccbe1a9bfaec05e1c4d8f698" prot="private" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1af1777d4e8975bc9f0283b9d67e0290e3" kindref="member">keys</ref></type>
+        <definition>keys lava::camera::m_up_keys</definition>
+        <argsstring></argsstring>
+        <name>m_up_keys</name>
+        <qualifiedname>lava::camera::m_up_keys</qualifiedname>
+        <initializer>{key::w}</initializer>
+        <briefdescription>
+<para>Up input keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="256" column="10" bodyfile="liblava/app/camera.hpp" bodystart="256" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1adb34940c096b928c69ab742caf901cea" prot="private" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1af1777d4e8975bc9f0283b9d67e0290e3" kindref="member">keys</ref></type>
+        <definition>keys lava::camera::m_down_keys</definition>
+        <argsstring></argsstring>
+        <name>m_down_keys</name>
+        <qualifiedname>lava::camera::m_down_keys</qualifiedname>
+        <initializer>{key::s}</initializer>
+        <briefdescription>
+<para>Down input keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="259" column="10" bodyfile="liblava/app/camera.hpp" bodystart="259" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a9753353492d0e35a60a82cb4ae5c7468" prot="private" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1af1777d4e8975bc9f0283b9d67e0290e3" kindref="member">keys</ref></type>
+        <definition>keys lava::camera::m_left_keys</definition>
+        <argsstring></argsstring>
+        <name>m_left_keys</name>
+        <qualifiedname>lava::camera::m_left_keys</qualifiedname>
+        <initializer>{key::a}</initializer>
+        <briefdescription>
+<para>Left input keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="262" column="10" bodyfile="liblava/app/camera.hpp" bodystart="262" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a786cc0b14c70efc5e134cead538652b8" prot="private" static="no" mutable="no">
+        <type><ref refid="input_8hpp_1af1777d4e8975bc9f0283b9d67e0290e3" kindref="member">keys</ref></type>
+        <definition>keys lava::camera::m_right_keys</definition>
+        <argsstring></argsstring>
+        <name>m_right_keys</name>
+        <qualifiedname>lava::camera::m_right_keys</qualifiedname>
+        <initializer>{key::d}</initializer>
+        <briefdescription>
+<para>Right input keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="265" column="10" bodyfile="liblava/app/camera.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a1898a723c7969b0a2e4a3174f3f9ca9d" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1buffer_1a0f51976de6893d420896e888899858a1" kindref="member">buffer::s_ptr</ref></type>
+        <definition>buffer::s_ptr lava::camera::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <qualifiedname>lava::camera::m_data</qualifiedname>
+        <briefdescription>
+<para>Vulkan buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="268" column="19" bodyfile="liblava/app/camera.hpp" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a19a39d06ace4634e5083b8ba98aefc3c" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+        <definition>size_t lava::camera::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <qualifiedname>lava::camera::m_size</qualifiedname>
+        <initializer>= sizeof(<ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref>) * 2</initializer>
+        <briefdescription>
+<para>Buffer size (projection + view) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="271" column="12" bodyfile="liblava/app/camera.hpp" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1ab0c7e82759057749be12057124d03074" prot="private" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref></type>
+        <definition>mat4 lava::camera::m_projection</definition>
+        <argsstring></argsstring>
+        <name>m_projection</name>
+        <qualifiedname>lava::camera::m_projection</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref>(0.f)</initializer>
+        <briefdescription>
+<para>Projection matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="274" column="10" bodyfile="liblava/app/camera.hpp" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1camera_1a46586db60069fb6689e449cc9e6f6e2e" prot="private" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref></type>
+        <definition>mat4 lava::camera::m_view</definition>
+        <argsstring></argsstring>
+        <name>m_view</name>
+        <qualifiedname>lava::camera::m_view</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref>(0.f)</initializer>
+        <briefdescription>
+<para>View matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="277" column="10" bodyfile="liblava/app/camera.hpp" bodystart="277" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1camera_1a863e42bb8c5185f0e07e0efef53a66fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::create</definition>
+        <argsstring>(device::ptr device)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::camera::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Create a camera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1af76bd66f245611c64738121f70e3fea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::camera::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the camera. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a0218c5b3237f95d851ece093bf9cfe05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::update_projection</definition>
+        <argsstring>()</argsstring>
+        <name>update_projection</name>
+        <qualifiedname>lava::camera::update_projection</qualifiedname>
+        <briefdescription>
+<para>Update the projection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1ab5629150384212bb36279ccc7aee5fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::update_view</definition>
+        <argsstring>(delta dt, mouse_position mouse_pos)</argsstring>
+        <name>update_view</name>
+        <qualifiedname>lava::camera::update_view</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a5b5c372cf05c5834c538aad2b937aa9b" kindref="member">delta</ref></type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1mouse__position" kindref="compound">mouse_position</ref></type>
+          <declname>mouse_pos</declname>
+        </param>
+        <briefdescription>
+<para>Update the view with mouse position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delta time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mouse_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a0c7bcca859ff175838fc9fc22f1ec7ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::update_view</definition>
+        <argsstring>(delta dt, gamepad::ref pad)</argsstring>
+        <name>update_view</name>
+        <qualifiedname>lava::camera::update_view</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a5b5c372cf05c5834c538aad2b937aa9b" kindref="member">delta</ref></type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1gamepad_1ae9c3ebf9c404adc56a5415c6f364a081" kindref="member">gamepad::ref</ref></type>
+          <declname>pad</declname>
+        </param>
+        <briefdescription>
+<para>Update the view with gamepad. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delta time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gamepad </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a58d102279002d4482b42601d99b84135" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref></type>
+        <definition>mat4 lava::camera::get_view</definition>
+        <argsstring>() const</argsstring>
+        <name>get_view</name>
+        <qualifiedname>lava::camera::get_view</qualifiedname>
+        <briefdescription>
+<para>Get the camera&apos;s 4x4 view matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref> View matrix </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a450407d93e617f26595682e1d236b2cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref></type>
+        <definition>mat4 lava::camera::get_projection</definition>
+        <argsstring>() const</argsstring>
+        <name>get_projection</name>
+        <qualifiedname>lava::camera::get_projection</qualifiedname>
+        <briefdescription>
+<para>Get the camera&apos;s 4x4 projection matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref> Projection matrix </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a4b23855a2d209a56c72793a8b0636d6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref></type>
+        <definition>mat4 lava::camera::calc_view_projection</definition>
+        <argsstring>() const</argsstring>
+        <name>calc_view_projection</name>
+        <qualifiedname>lava::camera::calc_view_projection</qualifiedname>
+        <briefdescription>
+<para>Calc the camera&apos;s combined 4x4 view/projection matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1a07245a7b7cef276ff8ce545d92519604" kindref="member">mat4</ref> Combined view/projection matrix </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1adc223537f4a0a3f86110d407de2de24e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::handle</definition>
+        <argsstring>(key_event::ref event)</argsstring>
+        <name>handle</name>
+        <qualifiedname>lava::camera::handle</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1key__event_1a4b1052ca7223e6f46699c0e385b8e31b" kindref="member">key_event::ref</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handle key event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Event was handled or ignored </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="94" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a1602a69e9b10026a555b776435967274" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::handle</definition>
+        <argsstring>(mouse_button_event::ref event, mouse_position mouse_pos)</argsstring>
+        <name>handle</name>
+        <qualifiedname>lava::camera::handle</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1mouse__button__event_1af57e7a6430042611d34525eccd7a36b7" kindref="member">mouse_button_event::ref</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1mouse__position" kindref="compound">mouse_position</ref></type>
+          <declname>mouse_pos</declname>
+        </param>
+        <briefdescription>
+<para>Handle mouse button event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse button event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mouse_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Event was handled or ignored </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a5ab126b025cf5a295632a42029aaf39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::handle</definition>
+        <argsstring>(scroll_event::ref event)</argsstring>
+        <name>handle</name>
+        <qualifiedname>lava::camera::handle</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1scroll__event_1a5c79e9fed050b3830dcaa5bbf5d66e29" kindref="member">scroll_event::ref</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handle scroll event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scroll event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Event was handled or ignored </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="110" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1acb65ea214394366c19618feeb3ef6e29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::valid</definition>
+        <argsstring>() const</argsstring>
+        <name>valid</name>
+        <qualifiedname>lava::camera::valid</qualifiedname>
+        <briefdescription>
+<para>Check if camera is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Camera is valid or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="116" column="10" bodyfile="liblava/app/camera.hpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a12e066870d5f849cd231626870d05770" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorBufferInfo const *</type>
+        <definition>VkDescriptorBufferInfo const  * lava::camera::get_descriptor_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_descriptor_info</name>
+        <qualifiedname>lava::camera::get_descriptor_info</qualifiedname>
+        <briefdescription>
+<para>Get the descriptor buffer info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDescriptorBufferInfo const* Descriptor buffer info </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="124" column="34" bodyfile="liblava/app/camera.hpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1aa7bd2279bcac1e13ff18310d8713cf1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::upload</definition>
+        <argsstring>()</argsstring>
+        <name>upload</name>
+        <qualifiedname>lava::camera::upload</qualifiedname>
+        <briefdescription>
+<para>Upload camera state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="131" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a50ef9b7e825c9f5bcfc8728257cde0be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>lava::camera::stop</qualifiedname>
+        <briefdescription>
+<para>Stop camera movement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="136" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a53c5b447cc5e2cf063b7196f21c46274" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>lava::camera::reset</qualifiedname>
+        <briefdescription>
+<para>Reset camera. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a606ba30fa8d6487b76e3a72e92a51b04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::set_active</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>set_active</name>
+        <qualifiedname>lava::camera::set_active</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set camera active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="147" column="10" bodyfile="liblava/app/camera.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1abe7be71cb4f5c01c9b7dede8ba2ec8fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::activated</definition>
+        <argsstring>() const</argsstring>
+        <name>activated</name>
+        <qualifiedname>lava::camera::activated</qualifiedname>
+        <briefdescription>
+<para>Check if camera is activated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Camera is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="155" column="10" bodyfile="liblava/app/camera.hpp" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1ac37bea8c2893bf25c89f04427f2452ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::camera::moving</definition>
+        <argsstring>() const</argsstring>
+        <name>moving</name>
+        <qualifiedname>lava::camera::moving</qualifiedname>
+        <briefdescription>
+<para>Check if camera is moving. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Camera is moving or does not move </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="163" column="10" bodyfile="liblava/app/camera.hpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1camera_1a2a71a670e7e63fb388b8f92066695300" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::set_movement_keys</definition>
+        <argsstring>(keys_ref up, keys_ref down, keys_ref left, keys_ref right)</argsstring>
+        <name>set_movement_keys</name>
+        <qualifiedname>lava::camera::set_movement_keys</qualifiedname>
+        <param>
+          <type><ref refid="input_8hpp_1a497a8e9a89b2e1daea1e25042f28c87c" kindref="member">keys_ref</ref></type>
+          <declname>up</declname>
+        </param>
+        <param>
+          <type><ref refid="input_8hpp_1a497a8e9a89b2e1daea1e25042f28c87c" kindref="member">keys_ref</ref></type>
+          <declname>down</declname>
+        </param>
+        <param>
+          <type><ref refid="input_8hpp_1a497a8e9a89b2e1daea1e25042f28c87c" kindref="member">keys_ref</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="input_8hpp_1a497a8e9a89b2e1daea1e25042f28c87c" kindref="member">keys_ref</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Set keys for moving this camera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Up inputs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>down</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Down inputs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left inputs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right inputs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="174" column="10" bodyfile="liblava/app/camera.hpp" bodystart="174" bodyend="180"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1camera_1a07f38e66eab44b7a22b4392125fea380" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::camera::move_first_person</definition>
+        <argsstring>(delta dt)</argsstring>
+        <name>move_first_person</name>
+        <qualifiedname>lava::camera::move_first_person</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a5b5c372cf05c5834c538aad2b937aa9b" kindref="member">delta</ref></type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Move first person. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delta time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/app/camera.hpp" line="223" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>First Person / Look At camera. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>lava::camera</label>
+        <link refid="structlava_1_1camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::camera</label>
+        <link refid="structlava_1_1camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/app/camera.hpp" line="19" column="1" bodyfile="liblava/app/camera.hpp" bodystart="19" bodyend="278"/>
+    <listofallmembers>
+      <member refid="structlava_1_1camera_1abe7be71cb4f5c01c9b7dede8ba2ec8fe" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>activated</name></member>
+      <member refid="structlava_1_1camera_1a46b80c2fb0b453c66c8e5fd251faff4b" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>aspect_ratio</name></member>
+      <member refid="structlava_1_1camera_1a4b23855a2d209a56c72793a8b0636d6f" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>calc_view_projection</name></member>
+      <member refid="structlava_1_1camera_1a863e42bb8c5185f0e07e0efef53a66fe" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>create</name></member>
+      <member refid="structlava_1_1camera_1af76bd66f245611c64738121f70e3fea7" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>entity</name></member>
+      <member refid="structlava_1_1camera_1a0d5b42d59361a57d98f9a90db5ce65ee" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>fov</name></member>
+      <member refid="structlava_1_1camera_1a12e066870d5f849cd231626870d05770" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>get_descriptor_info</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>get_id</name></member>
+      <member refid="structlava_1_1camera_1a450407d93e617f26595682e1d236b2cd" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>get_projection</name></member>
+      <member refid="structlava_1_1camera_1a58d102279002d4482b42601d99b84135" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>get_view</name></member>
+      <member refid="structlava_1_1camera_1adc223537f4a0a3f86110d407de2de24e" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>handle</name></member>
+      <member refid="structlava_1_1camera_1a1602a69e9b10026a555b776435967274" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>handle</name></member>
+      <member refid="structlava_1_1camera_1a5ab126b025cf5a295632a42029aaf39b" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>handle</name></member>
+      <member refid="structlava_1_1camera_1a269a54d6faab7efde7e651ebbaac035f" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>lock_rotation</name></member>
+      <member refid="structlava_1_1camera_1a95be646793f23f19139810f173ba66de" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>lock_z</name></member>
+      <member refid="structlava_1_1camera_1aa75c31ed9ca304cdebb240dd5e8bb543" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_active</name></member>
+      <member refid="structlava_1_1camera_1a1898a723c7969b0a2e4a3174f3f9ca9d" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_data</name></member>
+      <member refid="structlava_1_1camera_1adb34940c096b928c69ab742caf901cea" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_down_keys</name></member>
+      <member refid="structlava_1_1camera_1a9753353492d0e35a60a82cb4ae5c7468" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_left_keys</name></member>
+      <member refid="structlava_1_1camera_1ad136f0db52844b9f5a891e5cab2838f5" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_mouse_pos_x</name></member>
+      <member refid="structlava_1_1camera_1a20477acfb9c5b588547d2bcf06358c2e" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_mouse_pos_y</name></member>
+      <member refid="structlava_1_1camera_1a8796f377d606bf7291fdae77a794ad44" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_move_down</name></member>
+      <member refid="structlava_1_1camera_1a256f9c3f2a51f51d7119929820ea210b" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_move_left</name></member>
+      <member refid="structlava_1_1camera_1a9c71eabc88372dae81257b37da43ba8a" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_move_right</name></member>
+      <member refid="structlava_1_1camera_1af6a01e26a1dd1f46ceb330d646c661a4" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_move_up</name></member>
+      <member refid="structlava_1_1camera_1ab0c7e82759057749be12057124d03074" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_projection</name></member>
+      <member refid="structlava_1_1camera_1a786cc0b14c70efc5e134cead538652b8" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_right_keys</name></member>
+      <member refid="structlava_1_1camera_1a5b4036aaac2b96ab54dee86b9d6e0c90" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_rotate</name></member>
+      <member refid="structlava_1_1camera_1a2e0f58078b1a0332618b45401aba62d2" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_scroll_pos</name></member>
+      <member refid="structlava_1_1camera_1a19a39d06ace4634e5083b8ba98aefc3c" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_size</name></member>
+      <member refid="structlava_1_1camera_1a35a753eb879caf1bbe7e74fc80904e4b" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_translate</name></member>
+      <member refid="structlava_1_1camera_1a17616f06ccbe1a9bfaec05e1c4d8f698" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_up_keys</name></member>
+      <member refid="structlava_1_1camera_1a46586db60069fb6689e449cc9e6f6e2e" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>m_view</name></member>
+      <member refid="structlava_1_1camera_1aa4b6c75103911a9b9844b41bc6d6d94d" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>mode</name></member>
+      <member refid="structlava_1_1camera_1a06cc01c622dd10c043e8ea2ef6d7b46a" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>mode</name></member>
+      <member refid="structlava_1_1camera_1a07f38e66eab44b7a22b4392125fea380" prot="private" virt="non-virtual"><scope>lava::camera</scope><name>move_first_person</name></member>
+      <member refid="structlava_1_1camera_1aa8688226ac35525517e98260acb0f264" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>movement_speed</name></member>
+      <member refid="structlava_1_1camera_1ac37bea8c2893bf25c89f04427f2452ff" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>moving</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>operator=</name></member>
+      <member refid="structlava_1_1camera_1abe3ae9b3c5b8de5f5bd623ad7528450a" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>position</name></member>
+      <member refid="structlava_1_1camera_1ad397a86e772cea14d63bbe9ac241de92" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>ptr</name></member>
+      <member refid="structlava_1_1camera_1a53c5b447cc5e2cf063b7196f21c46274" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>reset</name></member>
+      <member refid="structlava_1_1camera_1a80234741cfe9f7e2808c2cce005fab6c" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>rotation</name></member>
+      <member refid="structlava_1_1camera_1a50e621f8660dc6a420211ec810fae8ea" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>rotation_speed</name></member>
+      <member refid="structlava_1_1camera_1a583e56f9e7b4a0df71bfac7c5437bc11" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>s_list</name></member>
+      <member refid="structlava_1_1camera_1afd38f5c6815e3751c5cb75535baa5874" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>s_map</name></member>
+      <member refid="structlava_1_1camera_1aea3adeebee5eb3fad25acd5803d6990e" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1camera_1a606ba30fa8d6487b76e3a72e92a51b04" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>set_active</name></member>
+      <member refid="structlava_1_1camera_1a2a71a670e7e63fb388b8f92066695300" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>set_movement_keys</name></member>
+      <member refid="structlava_1_1camera_1a50ef9b7e825c9f5bcfc8728257cde0be" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>stop</name></member>
+      <member refid="structlava_1_1camera_1a0218c5b3237f95d851ece093bf9cfe05" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>update_projection</name></member>
+      <member refid="structlava_1_1camera_1ab5629150384212bb36279ccc7aee5fec" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>update_view</name></member>
+      <member refid="structlava_1_1camera_1a0c7bcca859ff175838fc9fc22f1ec7ef" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>update_view</name></member>
+      <member refid="structlava_1_1camera_1aa7bd2279bcac1e13ff18310d8713cf1b" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>upload</name></member>
+      <member refid="structlava_1_1camera_1acb65ea214394366c19618feeb3ef6e29" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>valid</name></member>
+      <member refid="structlava_1_1camera_1ab27550631e3cb0da1f76a2414a71eb53" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>z_far</name></member>
+      <member refid="structlava_1_1camera_1a96c50dfd75e4611fd424709b6fb6200c" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>z_near</name></member>
+      <member refid="structlava_1_1camera_1a5c0ea276e42e335229d6778a9da2eea3" prot="public" virt="non-virtual"><scope>lava::camera</scope><name>zoom_speed</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::camera</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

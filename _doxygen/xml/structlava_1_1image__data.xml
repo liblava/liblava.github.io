@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1image__data" kind="struct" language="C++" prot="public">
+    <compoundname>lava::image_data</compoundname>
+    <includes refid="image_8hpp" local="no">image.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1image__data_1ac9b1dc454efa428bdca20abbc8b077f5" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1image__data" kindref="compound">image_data</ref> &gt;</type>
+        <definition>using lava::image_data::s_ptr =  std::shared_ptr&lt;image_data&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::image_data::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to image data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="19" column="5" bodyfile="liblava/resource/image.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1image__data_1adb61e141bbf992ff9ee5bc2154cd62f5" prot="public" static="no" mutable="no">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::image_data::dimensions</definition>
+        <argsstring></argsstring>
+        <name>dimensions</name>
+        <qualifiedname>lava::image_data::dimensions</qualifiedname>
+        <initializer>= <ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref>(0, 0)</initializer>
+        <briefdescription>
+<para>Dimensions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="22" column="9" bodyfile="liblava/resource/image.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image__data_1adaee3c71a56c734b5185703b3c2e92f2" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::image_data::channels</definition>
+        <argsstring></argsstring>
+        <name>channels</name>
+        <qualifiedname>lava::image_data::channels</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of channels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="25" column="10" bodyfile="liblava/resource/image.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1image__data_1a501e4131343be3979203c8e5f4db75e9" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref></type>
+        <definition>data::ptr lava::image_data::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <qualifiedname>lava::image_data::m_data</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to image data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="66" column="15" bodyfile="liblava/resource/image.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1image__data_1a54b2493f9b11f87ff54b225be5358b18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::image_data::ready</definition>
+        <argsstring>() const</argsstring>
+        <name>ready</name>
+        <qualifiedname>lava::image_data::ready</qualifiedname>
+        <briefdescription>
+<para>Check if image data is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Image data is ready or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="31" column="10" bodyfile="liblava/resource/image.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image__data_1afbfd69749e188abc050ec343684c1323" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref></type>
+        <definition>data::ptr lava::image_data::get_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_data</name>
+        <qualifiedname>lava::image_data::get_data</qualifiedname>
+        <briefdescription>
+<para>Get image data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref> Pointer to image data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="39" column="15" bodyfile="liblava/resource/image.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image__data_1aea4af577fb6724421e4635c49da60a3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image_data::set_data</definition>
+        <argsstring>(data::ptr data)</argsstring>
+        <name>set_data</name>
+        <qualifiedname>lava::image_data::set_data</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1data_1a58e5faa7a8f9dd34567c29d6e1b891f8" kindref="member">data::ptr</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Set image data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to image data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="47" column="10" bodyfile="liblava/resource/image.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image__data_1a77f14125d4394656cae271c2aea5f02f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref></type>
+        <definition>size_t lava::image_data::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>lava::image_data::size</qualifiedname>
+        <briefdescription>
+<para>Get image data size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1a38bc8f04d76c66293330e126a20cd303" kindref="member">size_t</ref> Image data size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="55" column="12" bodyfile="liblava/resource/image.hpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image__data_1a1eaaca168d33b7bf986f4c57afbb793f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::image_data::~image_data</definition>
+        <argsstring>()</argsstring>
+        <name>~image_data</name>
+        <qualifiedname>lava::image_data::~image_data</qualifiedname>
+        <briefdescription>
+<para>Destroy the image data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="62" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Image data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/resource/image.hpp" line="17" column="1" bodyfile="liblava/resource/image.hpp" bodystart="17" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structlava_1_1image__data_1adaee3c71a56c734b5185703b3c2e92f2" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>channels</name></member>
+      <member refid="structlava_1_1image__data_1adb61e141bbf992ff9ee5bc2154cd62f5" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>dimensions</name></member>
+      <member refid="structlava_1_1image__data_1afbfd69749e188abc050ec343684c1323" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>get_data</name></member>
+      <member refid="structlava_1_1image__data_1a501e4131343be3979203c8e5f4db75e9" prot="private" virt="non-virtual"><scope>lava::image_data</scope><name>m_data</name></member>
+      <member refid="structlava_1_1image__data_1a54b2493f9b11f87ff54b225be5358b18" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>ready</name></member>
+      <member refid="structlava_1_1image__data_1ac9b1dc454efa428bdca20abbc8b077f5" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1image__data_1aea4af577fb6724421e4635c49da60a3b" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>set_data</name></member>
+      <member refid="structlava_1_1image__data_1a77f14125d4394656cae271c2aea5f02f" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>size</name></member>
+      <member refid="structlava_1_1image__data_1a1eaaca168d33b7bf986f4c57afbb793f" prot="public" virt="non-virtual"><scope>lava::image_data</scope><name>~image_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

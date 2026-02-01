@@ -1,0 +1,649 @@
+\doxysection{liblava/core/types.hpp File Reference}
+\hypertarget{types_8hpp}{}\label{types_8hpp}\index{liblava/core/types.hpp@{liblava/core/types.hpp}}
+
+
+Basic types.  
+
+
+{\ttfamily \#include "{}liblava/core/def.\+hpp"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}
+\begin{DoxyCompactList}\small\item\em No copy and no move object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1pair__hash}{lava\+::pair\+\_\+hash}}
+\begin{DoxyCompactList}\small\item\em Pair hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{types_8hpp_a5f16c262ac0dcfeba2db0564b8a57cfe}{ENUM\+\_\+\+FLAG\+\_\+\+OPERATORS}}(T)
+\begin{DoxyCompactList}\small\item\em Enum flag operators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{types_8hpp_a5154ade211be67b8729c4f489002045b}\label{types_8hpp_a5154ade211be67b8729c4f489002045b} 
+using {\bfseries lava\+::int8} = std\+::int8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8 bit integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_af15938d3c73dfa1a28307da6452a0cb3}{lava\+::i8}} = \mbox{\hyperlink{types_8hpp_a5154ade211be67b8729c4f489002045b}{int8}}
+\item 
+\Hypertarget{types_8hpp_aa9e9c1a0e47380050cfb430fccd8e7e5}\label{types_8hpp_aa9e9c1a0e47380050cfb430fccd8e7e5} 
+using {\bfseries lava\+::uint8} = std\+::uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8 bit unsigned integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a744c3fa12bcea9cd3344aaf347ca410c}{lava\+::ui8}} = \mbox{\hyperlink{types_8hpp_aa9e9c1a0e47380050cfb430fccd8e7e5}{uint8}}
+\item 
+\Hypertarget{types_8hpp_a73261f35c60d2a9b92a61d06dc3ef019}\label{types_8hpp_a73261f35c60d2a9b92a61d06dc3ef019} 
+using {\bfseries lava\+::int16} = std\+::int16\+\_\+t
+\begin{DoxyCompactList}\small\item\em 16 bit integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_aef911a7c061636ef7845c53160a2b72d}{lava\+::i16}} = \mbox{\hyperlink{types_8hpp_a73261f35c60d2a9b92a61d06dc3ef019}{int16}}
+\item 
+\Hypertarget{types_8hpp_ac5eb62e8bf41e04442b27a47f9c8a90b}\label{types_8hpp_ac5eb62e8bf41e04442b27a47f9c8a90b} 
+using {\bfseries lava\+::uint16} = std\+::uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em 16 bit unsigned integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{lava\+::ui16}} = \mbox{\hyperlink{types_8hpp_ac5eb62e8bf41e04442b27a47f9c8a90b}{uint16}}
+\item 
+\Hypertarget{types_8hpp_a5dfdbbdd8d939fec9b223d5addc53d9e}\label{types_8hpp_a5dfdbbdd8d939fec9b223d5addc53d9e} 
+using {\bfseries lava\+::int32} = std\+::int32\+\_\+t
+\begin{DoxyCompactList}\small\item\em 32 bit integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{lava\+::i32}} = \mbox{\hyperlink{types_8hpp_a5dfdbbdd8d939fec9b223d5addc53d9e}{int32}}
+\item 
+\Hypertarget{types_8hpp_a869fac794d31861c7016670617a2a8a2}\label{types_8hpp_a869fac794d31861c7016670617a2a8a2} 
+using {\bfseries lava\+::uint32} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em 32 bit unsigned integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{lava\+::ui32}} = \mbox{\hyperlink{types_8hpp_a869fac794d31861c7016670617a2a8a2}{uint32}}
+\item 
+\Hypertarget{types_8hpp_af04f91997c3547d0a81f9a3016f7c26d}\label{types_8hpp_af04f91997c3547d0a81f9a3016f7c26d} 
+using {\bfseries lava\+::int64} = std\+::int64\+\_\+t
+\begin{DoxyCompactList}\small\item\em 64 bit integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{lava\+::i64}} = \mbox{\hyperlink{types_8hpp_af04f91997c3547d0a81f9a3016f7c26d}{int64}}
+\item 
+\Hypertarget{types_8hpp_ad239ef8e5d3f7f1d883582d563a794ef}\label{types_8hpp_ad239ef8e5d3f7f1d883582d563a794ef} 
+using {\bfseries lava\+::uint64} = std\+::uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em 64 bit unsigned integer \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{lava\+::ui64}} = \mbox{\hyperlink{types_8hpp_ad239ef8e5d3f7f1d883582d563a794ef}{uint64}}
+\item 
+\Hypertarget{types_8hpp_aa411a8d0c2ffd62ba6b3e61c26c7be44}\label{types_8hpp_aa411a8d0c2ffd62ba6b3e61c26c7be44} 
+using {\bfseries lava\+::char8} = std\+::int\+\_\+fast8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8 bit char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a1bb7daf385cfc0f8087becb05fe969d1}{lava\+::c8}} = \mbox{\hyperlink{types_8hpp_aa411a8d0c2ffd62ba6b3e61c26c7be44}{char8}}
+\item 
+\Hypertarget{types_8hpp_a5c0dda8c4dbba47fca28d7db7ffbc543}\label{types_8hpp_a5c0dda8c4dbba47fca28d7db7ffbc543} 
+using {\bfseries lava\+::uchar8} = std\+::uint\+\_\+fast8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8 bit unsigened char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a0ecb6fcf4d77775908a270bd9cf09167}{lava\+::uc8}} = \mbox{\hyperlink{types_8hpp_a5c0dda8c4dbba47fca28d7db7ffbc543}{uchar8}}
+\item 
+\Hypertarget{types_8hpp_abac15b7a8e76a60d8f51bd272828ca1d}\label{types_8hpp_abac15b7a8e76a60d8f51bd272828ca1d} 
+using {\bfseries lava\+::char16} = \mbox{\hyperlink{types_8hpp_a73261f35c60d2a9b92a61d06dc3ef019}{int16}}
+\begin{DoxyCompactList}\small\item\em 16 bit char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a80835499e7debfc06d5639cb62ebb9bd}{lava\+::c16}} = \mbox{\hyperlink{types_8hpp_abac15b7a8e76a60d8f51bd272828ca1d}{char16}}
+\item 
+\Hypertarget{types_8hpp_a72675261098c206ded6ca480480f064d}\label{types_8hpp_a72675261098c206ded6ca480480f064d} 
+using {\bfseries lava\+::uchar16} = \mbox{\hyperlink{types_8hpp_ac5eb62e8bf41e04442b27a47f9c8a90b}{uint16}}
+\begin{DoxyCompactList}\small\item\em 16 bit unsigned char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a16ef2a3466e94f8f41729ed943fa4ca4}{lava\+::uc16}} = \mbox{\hyperlink{types_8hpp_a72675261098c206ded6ca480480f064d}{uchar16}}
+\item 
+\Hypertarget{types_8hpp_a5f15b17b871196e02acf9d8987f74889}\label{types_8hpp_a5f15b17b871196e02acf9d8987f74889} 
+using {\bfseries lava\+::char32} = \mbox{\hyperlink{types_8hpp_a5dfdbbdd8d939fec9b223d5addc53d9e}{int32}}
+\begin{DoxyCompactList}\small\item\em 32 bit char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a67c9d7331632668362b53a5fead63759}{lava\+::c32}} = \mbox{\hyperlink{types_8hpp_a5f15b17b871196e02acf9d8987f74889}{char32}}
+\item 
+\Hypertarget{types_8hpp_afea8942c1eba831445b17b35c5f755e0}\label{types_8hpp_afea8942c1eba831445b17b35c5f755e0} 
+using {\bfseries lava\+::uchar32} = \mbox{\hyperlink{types_8hpp_a869fac794d31861c7016670617a2a8a2}{uint32}}
+\begin{DoxyCompactList}\small\item\em 32 bit unsigned char \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{types_8hpp_a7db11466788d79f658b64786438784a4}{lava\+::uc32}} = \mbox{\hyperlink{types_8hpp_afea8942c1eba831445b17b35c5f755e0}{uchar32}}
+\item 
+\Hypertarget{types_8hpp_a38bc8f04d76c66293330e126a20cd303}\label{types_8hpp_a38bc8f04d76c66293330e126a20cd303} 
+using {\bfseries lava\+::size\+\_\+t} = std\+::size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Size. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a4d505d1722d977311ee2a14d104f10f3}\label{types_8hpp_a4d505d1722d977311ee2a14d104f10f3} 
+using {\bfseries lava\+::uchar} = unsigned char
+\begin{DoxyCompactList}\small\item\em Unsigned char. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}\label{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f} 
+using {\bfseries lava\+::r32} = float
+\begin{DoxyCompactList}\small\item\em Single-\/precision floating-\/point. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}\label{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476} 
+using {\bfseries lava\+::r64} = double
+\begin{DoxyCompactList}\small\item\em Double-\/precision floating-\/point. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_ac5a07aee91729f6ed77bd47fd1095218}\label{types_8hpp_ac5a07aee91729f6ed77bd47fd1095218} 
+using {\bfseries lava\+::real} = \mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}}
+\begin{DoxyCompactList}\small\item\em Real number. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}\label{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b} 
+using {\bfseries lava\+::delta} = \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}
+\begin{DoxyCompactList}\small\item\em Delta. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a94e873533b956efd41caa29bea06d498}\label{types_8hpp_a94e873533b956efd41caa29bea06d498} 
+using {\bfseries lava\+::void\+\_\+ptr} = void\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Void pointer. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c}\label{types_8hpp_a100af5d025fb75927f65cb6f3fbc8e5c} 
+using {\bfseries lava\+::void\+\_\+c\+\_\+ptr} = void const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Const void pointer. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a4a11496a1f0e914f75c325f33d21a216}\label{types_8hpp_a4a11496a1f0e914f75c325f33d21a216} 
+using {\bfseries lava\+::flag} = \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}
+\begin{DoxyCompactList}\small\item\em Flag. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}\label{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c} 
+using {\bfseries lava\+::index} = \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}
+\begin{DoxyCompactList}\small\item\em Index. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}\label{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851} 
+using {\bfseries lava\+::index\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}$>$
+\begin{DoxyCompactList}\small\item\em List of indices. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_aa671ee4059a4d958ca5a009e48c5edb6}\label{types_8hpp_aa671ee4059a4d958ca5a009e48c5edb6} 
+using {\bfseries lava\+::index\+\_\+map} = std\+::map$<$\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}$>$
+\begin{DoxyCompactList}\small\item\em Map of indices. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}\label{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145} 
+using {\bfseries lava\+::string} = std\+::string
+\begin{DoxyCompactList}\small\item\em String. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}\label{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6} 
+using {\bfseries lava\+::string\+\_\+ref} = \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to string. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}\label{types_8hpp_ac4015b12eb0458ac72d8f779573e91de} 
+using {\bfseries lava\+::string\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}$>$
+\begin{DoxyCompactList}\small\item\em List of strings. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a84b64f09909c198d14fadc65b0776272}\label{types_8hpp_a84b64f09909c198d14fadc65b0776272} 
+using {\bfseries lava\+::string\+\_\+list\+\_\+ref} = \mbox{\hyperlink{types_8hpp_ac4015b12eb0458ac72d8f779573e91de}{string\+\_\+list}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to list of strings. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a484f91e9e4dfc30e3b64b3fa6bf80f57}\label{types_8hpp_a484f91e9e4dfc30e3b64b3fa6bf80f57} 
+using {\bfseries lava\+::string\+\_\+view} = std\+::string\+\_\+view
+\begin{DoxyCompactList}\small\item\em String view. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_aaaa9ebb8b8e302a77d4a0d5c6c612ed3}\label{types_8hpp_aaaa9ebb8b8e302a77d4a0d5c6c612ed3} 
+using {\bfseries lava\+::string\+\_\+map} = std\+::map$<$\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}, \mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}}$>$
+\begin{DoxyCompactList}\small\item\em Map of strings. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_acd143c32ef342857c26c8623ac1fc92c}\label{types_8hpp_acd143c32ef342857c26c8623ac1fc92c} 
+using {\bfseries lava\+::string\+\_\+map\+\_\+ref} = \mbox{\hyperlink{types_8hpp_aaaa9ebb8b8e302a77d4a0d5c6c612ed3}{string\+\_\+map}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to map of strings. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}\label{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9} 
+using {\bfseries lava\+::name} = char const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Name. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a3f3772093a3aae135dc0d8eab715804b}\label{types_8hpp_a3f3772093a3aae135dc0d8eab715804b} 
+using {\bfseries lava\+::name\+\_\+ref} = char const\&
+\begin{DoxyCompactList}\small\item\em Reference to name. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82}\label{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82} 
+using {\bfseries lava\+::names} = std\+::vector$<$\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}$>$
+\begin{DoxyCompactList}\small\item\em List of names. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a1daaccd9a417ece0398eabcc0b82c0a1}\label{types_8hpp_a1daaccd9a417ece0398eabcc0b82c0a1} 
+using {\bfseries lava\+::names\+\_\+ref} = \mbox{\hyperlink{types_8hpp_aafb4d185126f5f9c34e5c6a19f49ee82}{names}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to list of names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} \mbox{\hyperlink{types_8hpp_ad11094258ce2dac54b79917ae31198b6}{lava\+::str}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} value)
+\begin{DoxyCompactList}\small\item\em Get c-\/string representation of string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} \mbox{\hyperlink{types_8hpp_ad3df134e8770529a2644dd8a4673ce22}{lava\+::to\+\_\+r32}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}} \mbox{\hyperlink{types_8hpp_afe30d55ad7a71c535f6b19ea62da8fa1}{lava\+::to\+\_\+r64}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{lava\+::to\+\_\+i32}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{types_8hpp_a45314ec1799c5849eb937045cb65c5e2}{lava\+::to\+\_\+i64}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}{lava\+::to\+\_\+ui32}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} \mbox{\hyperlink{types_8hpp_a52a659311126b89d05817c269505f14d}{lava\+::to\+\_\+ui64}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{types_8hpp_ab8e6637fd6f18692d24992fd9df90171}{lava\+::to\+\_\+size\+\_\+t}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to \doxylink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{types_8hpp_a5da1a3211b6ee5bed1b706d8962ad10b}{lava\+::to\+\_\+index}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to index. \end{DoxyCompactList}\item 
+char const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{types_8hpp_a591d8f47274518e2cf3f33c42a8995ca}{lava\+::to\+\_\+char}} (auto value)
+\begin{DoxyCompactList}\small\item\em Convert to pointer const char. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{types_8hpp_a5572f85d1a8e98f9312e25f986d59c1c}{lava\+::hash\+\_\+combine}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&seed, T const \&val)
+\begin{DoxyCompactList}\small\item\em Combine hash seed with value -\/ from boost (functional/hash) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{types_8hpp_a53cef41aea160cf568aa5dd576c9bd6b}{lava\+::hash\+\_\+value}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&seed, T const \&val)
+\begin{DoxyCompactList}\small\item\em Auxiliary generic functions to create a hash value using a seed. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Types$>$ }\\void \mbox{\hyperlink{types_8hpp_ac1b95fd404d9e4e4318d37da61dae384}{lava\+::hash\+\_\+value}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&seed, T const \&val, Types const \&... args)
+\item 
+{\footnotesize template$<$typename... Types$>$ }\\\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{types_8hpp_a854d276fa6bb3bbc17ce3bc01600fa12}{lava\+::hash\+\_\+value}} (Types const \&... args)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae}\label{types_8hpp_a276426bd2813c3fc0cb1c6bf20a8cbae} 
+constexpr \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} const {\bfseries lava\+::undef} = -\/1
+\begin{DoxyCompactList}\small\item\em Undefined value. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}\label{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105} 
+constexpr \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} const {\bfseries lava\+::no\+\_\+index} = 0xffffffff
+\begin{DoxyCompactList}\small\item\em No index. \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_aa6f0dfe4257894c2b7439582eeea0bec}\label{types_8hpp_aa6f0dfe4257894c2b7439582eeea0bec} 
+constexpr \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries lava\+::\+\_\+lava\+\_\+} = "{}lava"{}
+\begin{DoxyCompactList}\small\item\em lava \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_a5463322f2e652628790c04fe97367db0}\label{types_8hpp_a5463322f2e652628790c04fe97367db0} 
+constexpr \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries lava\+::\+\_\+liblava\+\_\+} = "{}liblava"{}
+\begin{DoxyCompactList}\small\item\em liblava \end{DoxyCompactList}\item 
+\Hypertarget{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c}\label{types_8hpp_ab60340ffa807e0a1c02cb8a37c96e81c} 
+constexpr \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} {\bfseries lava\+::\+\_\+default\+\_\+} = "{}default"{}
+\begin{DoxyCompactList}\small\item\em default \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic types. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{types_8hpp_a5f16c262ac0dcfeba2db0564b8a57cfe}\index{types.hpp@{types.hpp}!ENUM\_FLAG\_OPERATORS@{ENUM\_FLAG\_OPERATORS}}
+\index{ENUM\_FLAG\_OPERATORS@{ENUM\_FLAG\_OPERATORS}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{ENUM\_FLAG\_OPERATORS}{ENUM\_FLAG\_OPERATORS}}
+{\footnotesize\ttfamily \label{types_8hpp_a5f16c262ac0dcfeba2db0564b8a57cfe} 
+\#define ENUM\+\_\+\+FLAG\+\_\+\+OPERATORS(\begin{DoxyParamCaption}\item[{}]{T}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\ operator\string~(T\ a)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(\string~static\_cast<std::underlying\_type<T>::type>(a));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\ operator|(T\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\ operator\&(T\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(a)\ \&\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\ operator\string^(T\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(a)\ \string^\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\&\ operator|=(T\&\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}T\&\textcolor{keyword}{>}(\textcolor{keyword}{reinterpret\_cast<}std::underlying\_type<T>::type\&\textcolor{keyword}{>}(a)\ |=\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\&\ operator\&=(T\&\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}T\&\textcolor{keyword}{>}(\textcolor{keyword}{reinterpret\_cast<}std::underlying\_type<T>::type\&\textcolor{keyword}{>}(a)\ \&=\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{inline}\ T\&\ operator\string^=(T\&\ a,\ T\ b)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}T\&\textcolor{keyword}{>}(\textcolor{keyword}{reinterpret\_cast<}std::underlying\_type<T>::type\&\textcolor{keyword}{>}(a)\ \string^=\ \textcolor{keyword}{static\_cast<}std::underlying\_type<T>::type\textcolor{keyword}{>}(b));\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Enum flag operators. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{types_8hpp_a80835499e7debfc06d5639cb62ebb9bd}\index{types.hpp@{types.hpp}!c16@{c16}}
+\index{c16@{c16}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{c16}{c16}}
+{\footnotesize\ttfamily \label{types_8hpp_a80835499e7debfc06d5639cb62ebb9bd} 
+using \mbox{\hyperlink{types_8hpp_a80835499e7debfc06d5639cb62ebb9bd}{lava\+::c16}} = char16}
+
+\begin{DoxySeeAlso}{See also}
+char16 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a67c9d7331632668362b53a5fead63759}\index{types.hpp@{types.hpp}!c32@{c32}}
+\index{c32@{c32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{c32}{c32}}
+{\footnotesize\ttfamily \label{types_8hpp_a67c9d7331632668362b53a5fead63759} 
+using \mbox{\hyperlink{types_8hpp_a67c9d7331632668362b53a5fead63759}{lava\+::c32}} = char32}
+
+\begin{DoxySeeAlso}{See also}
+char32 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a1bb7daf385cfc0f8087becb05fe969d1}\index{types.hpp@{types.hpp}!c8@{c8}}
+\index{c8@{c8}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{c8}{c8}}
+{\footnotesize\ttfamily \label{types_8hpp_a1bb7daf385cfc0f8087becb05fe969d1} 
+using \mbox{\hyperlink{types_8hpp_a1bb7daf385cfc0f8087becb05fe969d1}{lava\+::c8}} = char8}
+
+\begin{DoxySeeAlso}{See also}
+char8 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_aef911a7c061636ef7845c53160a2b72d}\index{types.hpp@{types.hpp}!i16@{i16}}
+\index{i16@{i16}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{i16}{i16}}
+{\footnotesize\ttfamily \label{types_8hpp_aef911a7c061636ef7845c53160a2b72d} 
+using \mbox{\hyperlink{types_8hpp_aef911a7c061636ef7845c53160a2b72d}{lava\+::i16}} = int16}
+
+\begin{DoxySeeAlso}{See also}
+int16 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}\index{types.hpp@{types.hpp}!i32@{i32}}
+\index{i32@{i32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{i32}{i32}}
+{\footnotesize\ttfamily \label{types_8hpp_a7e5d7f16aff5126a54243302372b43b1} 
+using \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{lava\+::i32}} = int32}
+
+\begin{DoxySeeAlso}{See also}
+int32 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_af894ded8dd233c6505155b19777af556}\index{types.hpp@{types.hpp}!i64@{i64}}
+\index{i64@{i64}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{i64}{i64}}
+{\footnotesize\ttfamily \label{types_8hpp_af894ded8dd233c6505155b19777af556} 
+using \mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{lava\+::i64}} = int64}
+
+\begin{DoxySeeAlso}{See also}
+int64 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_af15938d3c73dfa1a28307da6452a0cb3}\index{types.hpp@{types.hpp}!i8@{i8}}
+\index{i8@{i8}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{i8}{i8}}
+{\footnotesize\ttfamily \label{types_8hpp_af15938d3c73dfa1a28307da6452a0cb3} 
+using \mbox{\hyperlink{types_8hpp_af15938d3c73dfa1a28307da6452a0cb3}{lava\+::i8}} = int8}
+
+\begin{DoxySeeAlso}{See also}
+int8 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a16ef2a3466e94f8f41729ed943fa4ca4}\index{types.hpp@{types.hpp}!uc16@{uc16}}
+\index{uc16@{uc16}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{uc16}{uc16}}
+{\footnotesize\ttfamily \label{types_8hpp_a16ef2a3466e94f8f41729ed943fa4ca4} 
+using \mbox{\hyperlink{types_8hpp_a16ef2a3466e94f8f41729ed943fa4ca4}{lava\+::uc16}} = uchar16}
+
+\begin{DoxySeeAlso}{See also}
+uchar16 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a7db11466788d79f658b64786438784a4}\index{types.hpp@{types.hpp}!uc32@{uc32}}
+\index{uc32@{uc32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{uc32}{uc32}}
+{\footnotesize\ttfamily \label{types_8hpp_a7db11466788d79f658b64786438784a4} 
+using \mbox{\hyperlink{types_8hpp_a7db11466788d79f658b64786438784a4}{lava\+::uc32}} = uchar32}
+
+\begin{DoxySeeAlso}{See also}
+uchar32 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a0ecb6fcf4d77775908a270bd9cf09167}\index{types.hpp@{types.hpp}!uc8@{uc8}}
+\index{uc8@{uc8}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{uc8}{uc8}}
+{\footnotesize\ttfamily \label{types_8hpp_a0ecb6fcf4d77775908a270bd9cf09167} 
+using \mbox{\hyperlink{types_8hpp_a0ecb6fcf4d77775908a270bd9cf09167}{lava\+::uc8}} = uchar8}
+
+\begin{DoxySeeAlso}{See also}
+uchar8 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a9726d8b17deae0ffa37db333759f197f}\index{types.hpp@{types.hpp}!ui16@{ui16}}
+\index{ui16@{ui16}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{ui16}{ui16}}
+{\footnotesize\ttfamily \label{types_8hpp_a9726d8b17deae0ffa37db333759f197f} 
+using \mbox{\hyperlink{types_8hpp_a9726d8b17deae0ffa37db333759f197f}{lava\+::ui16}} = uint16}
+
+\begin{DoxySeeAlso}{See also}
+uint16 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}\index{types.hpp@{types.hpp}!ui32@{ui32}}
+\index{ui32@{ui32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{ui32}{ui32}}
+{\footnotesize\ttfamily \label{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9} 
+using \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{lava\+::ui32}} = uint32}
+
+\begin{DoxySeeAlso}{See also}
+uint32 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}\index{types.hpp@{types.hpp}!ui64@{ui64}}
+\index{ui64@{ui64}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{ui64}{ui64}}
+{\footnotesize\ttfamily \label{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6} 
+using \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{lava\+::ui64}} = uint64}
+
+\begin{DoxySeeAlso}{See also}
+uint64 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a744c3fa12bcea9cd3344aaf347ca410c}\index{types.hpp@{types.hpp}!ui8@{ui8}}
+\index{ui8@{ui8}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{ui8}{ui8}}
+{\footnotesize\ttfamily \label{types_8hpp_a744c3fa12bcea9cd3344aaf347ca410c} 
+using \mbox{\hyperlink{types_8hpp_a744c3fa12bcea9cd3344aaf347ca410c}{lava\+::ui8}} = uint8}
+
+\begin{DoxySeeAlso}{See also}
+uint8 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{types_8hpp_a5572f85d1a8e98f9312e25f986d59c1c}\index{types.hpp@{types.hpp}!hash\_combine@{hash\_combine}}
+\index{hash\_combine@{hash\_combine}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{hash\_combine()}{hash\_combine()}}
+{\footnotesize\ttfamily \label{types_8hpp_a5572f85d1a8e98f9312e25f986d59c1c} 
+template$<$typename T$>$ \\
+void lava\+::hash\+\_\+combine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&}]{seed}{, }\item[{T const \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Combine hash seed with value -\/ from boost (functional/hash) 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://www.boost.org/doc/libs/1_77_0/doc/html/hash/combine.html}{\texttt{ https\+://www.\+boost.\+org/doc/libs/1\+\_\+77\+\_\+0/doc/html/hash/combine.\+html}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of value \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Seed to combine \\
+\hline
+{\em val} & Value to combine \\
+\hline
+\end{DoxyParams}
+\Hypertarget{types_8hpp_a53cef41aea160cf568aa5dd576c9bd6b}\index{types.hpp@{types.hpp}!hash\_value@{hash\_value}}
+\index{hash\_value@{hash\_value}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{hash\_value()}{hash\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{types_8hpp_a53cef41aea160cf568aa5dd576c9bd6b} 
+template$<$typename T$>$ \\
+void lava\+::hash\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&}]{seed}{, }\item[{T const \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Auxiliary generic functions to create a hash value using a seed. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of value \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Seed for hash \\
+\hline
+{\em val} & Hash value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{types_8hpp_ac1b95fd404d9e4e4318d37da61dae384}\index{types.hpp@{types.hpp}!hash\_value@{hash\_value}}
+\index{hash\_value@{hash\_value}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{hash\_value()}{hash\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{types_8hpp_ac1b95fd404d9e4e4318d37da61dae384} 
+template$<$typename T, typename... Types$>$ \\
+void lava\+::hash\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \&}]{seed}{, }\item[{T const \&}]{val}{, }\item[{Types const \&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+hash\+\_\+value$<$\+T$>$() 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_a854d276fa6bb3bbc17ce3bc01600fa12}\index{types.hpp@{types.hpp}!hash\_value@{hash\_value}}
+\index{hash\_value@{hash\_value}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{hash\_value()}{hash\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{types_8hpp_a854d276fa6bb3bbc17ce3bc01600fa12} 
+template$<$typename... Types$>$ \\
+size\+\_\+t lava\+::hash\+\_\+value (\begin{DoxyParamCaption}\item[{Types const \&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+hash\+\_\+value$<$\+T$>$() 
+\end{DoxySeeAlso}
+\Hypertarget{types_8hpp_ad11094258ce2dac54b79917ae31198b6}\index{types.hpp@{types.hpp}!str@{str}}
+\index{str@{str}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}}
+{\footnotesize\ttfamily \label{types_8hpp_ad11094258ce2dac54b79917ae31198b6} 
+name lava\+::str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get c-\/string representation of string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name C-\/string representation 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_a591d8f47274518e2cf3f33c42a8995ca}\index{types.hpp@{types.hpp}!to\_char@{to\_char}}
+\index{to\_char@{to\_char}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_char()}{to\_char()}}
+{\footnotesize\ttfamily \label{types_8hpp_a591d8f47274518e2cf3f33c42a8995ca} 
+char const  \texorpdfstring{$\ast$}{*} lava\+::to\+\_\+char (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to pointer const char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char const\texorpdfstring{$\ast$}{*} Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}\index{types.hpp@{types.hpp}!to\_i32@{to\_i32}}
+\index{to\_i32@{to\_i32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_i32()}{to\_i32()}}
+{\footnotesize\ttfamily \label{types_8hpp_a39cae746a7d2b802c1bd35d63b899532} 
+i32 lava\+::to\+\_\+i32 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to i32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i32 Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_a45314ec1799c5849eb937045cb65c5e2}\index{types.hpp@{types.hpp}!to\_i64@{to\_i64}}
+\index{to\_i64@{to\_i64}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_i64()}{to\_i64()}}
+{\footnotesize\ttfamily \label{types_8hpp_a45314ec1799c5849eb937045cb65c5e2} 
+i64 lava\+::to\+\_\+i64 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to i64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+i64 Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_a5da1a3211b6ee5bed1b706d8962ad10b}\index{types.hpp@{types.hpp}!to\_index@{to\_index}}
+\index{to\_index@{to\_index}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_index()}{to\_index()}}
+{\footnotesize\ttfamily \label{types_8hpp_a5da1a3211b6ee5bed1b706d8962ad10b} 
+index lava\+::to\+\_\+index (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_ad3df134e8770529a2644dd8a4673ce22}\index{types.hpp@{types.hpp}!to\_r32@{to\_r32}}
+\index{to\_r32@{to\_r32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_r32()}{to\_r32()}}
+{\footnotesize\ttfamily \label{types_8hpp_ad3df134e8770529a2644dd8a4673ce22} 
+r32 lava\+::to\+\_\+r32 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to r32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+r32 Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_afe30d55ad7a71c535f6b19ea62da8fa1}\index{types.hpp@{types.hpp}!to\_r64@{to\_r64}}
+\index{to\_r64@{to\_r64}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_r64()}{to\_r64()}}
+{\footnotesize\ttfamily \label{types_8hpp_afe30d55ad7a71c535f6b19ea62da8fa1} 
+r64 lava\+::to\+\_\+r64 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to r64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+r64 Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_ab8e6637fd6f18692d24992fd9df90171}\index{types.hpp@{types.hpp}!to\_size\_t@{to\_size\_t}}
+\index{to\_size\_t@{to\_size\_t}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_size\_t()}{to\_size\_t()}}
+{\footnotesize\ttfamily \label{types_8hpp_ab8e6637fd6f18692d24992fd9df90171} 
+size\+\_\+t lava\+::to\+\_\+size\+\_\+t (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to size\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9}\index{types.hpp@{types.hpp}!to\_ui32@{to\_ui32}}
+\index{to\_ui32@{to\_ui32}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_ui32()}{to\_ui32()}}
+{\footnotesize\ttfamily \label{types_8hpp_aeeecf3eba131cdad020bbd82d0db68c9} 
+ui32 lava\+::to\+\_\+ui32 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to ui32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui32 Converted value 
+\end{DoxyReturn}
+\Hypertarget{types_8hpp_a52a659311126b89d05817c269505f14d}\index{types.hpp@{types.hpp}!to\_ui64@{to\_ui64}}
+\index{to\_ui64@{to\_ui64}!types.hpp@{types.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_ui64()}{to\_ui64()}}
+{\footnotesize\ttfamily \label{types_8hpp_a52a659311126b89d05817c269505f14d} 
+ui64 lava\+::to\+\_\+ui64 (\begin{DoxyParamCaption}\item[{auto}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to ui64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Source value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui64 Converted value 
+\end{DoxyReturn}

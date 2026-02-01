@@ -1,0 +1,317 @@
+\doxysection{liblava/base/base.hpp File Reference}
+\hypertarget{base_2base_8hpp}{}\label{base_2base_8hpp}\index{liblava/base/base.hpp@{liblava/base/base.hpp}}
+
+
+Vulkan base types.  
+
+
+{\ttfamily \#include "{}liblava/core/version.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/util/math.\+hpp"{}}\newline
+{\ttfamily \#include "{}vulkan/vulkan.\+h"{}}\newline
+{\ttfamily \#include "{}volk.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1vk__result}{lava\+::vk\+\_\+result}}
+\begin{DoxyCompactList}\small\item\em Vulkan result. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1target__callback}{lava\+::target\+\_\+callback}}
+\begin{DoxyCompactList}\small\item\em Target callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}\label{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670} 
+using {\bfseries lava\+::\+Vk\+Version} = \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}
+\begin{DoxyCompactList}\small\item\em Vulkan version. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be}\label{base_2base_8hpp_af34c931d2c918df380c5c7afba9fd1be} 
+using {\bfseries lava\+::\+Vk\+Object\+Handle} = \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}
+\begin{DoxyCompactList}\small\item\em Vulkan object handle. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a12338e204d106f4602b9bf70a1573f8b}\label{base_2base_8hpp_a12338e204d106f4602b9bf70a1573f8b} 
+using {\bfseries lava\+::\+Vk\+Formats} = std\+::vector$<$Vk\+Format$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan formats. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a641dc45ef8eee378e727d58a660c7479}\label{base_2base_8hpp_a641dc45ef8eee378e727d58a660c7479} 
+using {\bfseries lava\+::\+Vk\+Images} = std\+::vector$<$Vk\+Image$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan images. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_aeff93a1fe711990342205f1e2474d7b7}\label{base_2base_8hpp_aeff93a1fe711990342205f1e2474d7b7} 
+using {\bfseries lava\+::\+Vk\+Images\+Ref} = \mbox{\hyperlink{base_2base_8hpp_a641dc45ef8eee378e727d58a660c7479}{Vk\+Images}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to list of Vulkan images. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ad86a56760c0ea73b5beaa3147af8df3d}\label{base_2base_8hpp_ad86a56760c0ea73b5beaa3147af8df3d} 
+using {\bfseries lava\+::\+Vk\+Image\+Views} = std\+::vector$<$Vk\+Image\+View$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan images views. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a18fe5b86fb1c98ec4f07db9bde567631}\label{base_2base_8hpp_a18fe5b86fb1c98ec4f07db9bde567631} 
+using {\bfseries lava\+::\+Vk\+Framebuffers} = std\+::vector$<$Vk\+Framebuffer$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan frame buffers. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_afe1ce1f608bd72e59916382d9c3cf615}\label{base_2base_8hpp_afe1ce1f608bd72e59916382d9c3cf615} 
+using {\bfseries lava\+::\+Vk\+Command\+Pools} = std\+::vector$<$Vk\+Command\+Pool$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan command pools. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ace97a755b9ed66f2467c625c05a29c0e}\label{base_2base_8hpp_ace97a755b9ed66f2467c625c05a29c0e} 
+using {\bfseries lava\+::\+Vk\+Command\+Buffers} = std\+::vector$<$Vk\+Command\+Buffer$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan command buffers. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_afc7a081f8c97f8d4b753a70c91270d3f}\label{base_2base_8hpp_afc7a081f8c97f8d4b753a70c91270d3f} 
+using {\bfseries lava\+::\+Vk\+Fences} = std\+::vector$<$Vk\+Fence$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan fences. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a29014e3e85b809e1c9175957d5012b76}\label{base_2base_8hpp_a29014e3e85b809e1c9175957d5012b76} 
+using {\bfseries lava\+::\+Vk\+Semaphores} = std\+::vector$<$Vk\+Semaphore$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan semaphores. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a31e005633f6b721fd471413d4d306cff}\label{base_2base_8hpp_a31e005633f6b721fd471413d4d306cff} 
+using {\bfseries lava\+::\+Vk\+Present\+Mode\+KHRs} = std\+::vector$<$Vk\+Present\+Mode\+KHR$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan present modes. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a86d1b187b311d0bacaa2656a143bdd01}\label{base_2base_8hpp_a86d1b187b311d0bacaa2656a143bdd01} 
+using {\bfseries lava\+::\+Vk\+Descriptor\+Sets} = std\+::vector$<$Vk\+Descriptor\+Set$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan descriptor sets. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ac0e6d7c298bc01a729815eae30414e36}\label{base_2base_8hpp_ac0e6d7c298bc01a729815eae30414e36} 
+using {\bfseries lava\+::\+Vk\+Descriptor\+Set\+Layouts} = std\+::vector$<$Vk\+Descriptor\+Set\+Layout$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan descriptor set layouts. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a137a002a37399975e323e78d0e90db11}\label{base_2base_8hpp_a137a002a37399975e323e78d0e90db11} 
+using {\bfseries lava\+::\+Vk\+Descriptor\+Set\+Layout\+Bindings} = std\+::vector$<$Vk\+Descriptor\+Set\+Layout\+Binding$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan descriptor set layout bindings. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_aeec9e5c423fdc50bd10ba2d59d347080}\label{base_2base_8hpp_aeec9e5c423fdc50bd10ba2d59d347080} 
+using {\bfseries lava\+::\+Vk\+Descriptor\+Pool\+Sizes} = std\+::vector$<$Vk\+Descriptor\+Pool\+Size$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan descriptor pool sizes. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a425746916ff6402a4032061a5e0e7da3}\label{base_2base_8hpp_a425746916ff6402a4032061a5e0e7da3} 
+using {\bfseries lava\+::\+Vk\+Descriptor\+Pool\+Sizes\+Ref} = \mbox{\hyperlink{base_2base_8hpp_aeec9e5c423fdc50bd10ba2d59d347080}{Vk\+Descriptor\+Pool\+Sizes}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to a list of Vulkan descritpr pool sizes. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a5d74309e91a4d7bd8d327cd48d279908}\label{base_2base_8hpp_a5d74309e91a4d7bd8d327cd48d279908} 
+using {\bfseries lava\+::\+Vk\+Push\+Constant\+Ranges} = std\+::vector$<$Vk\+Push\+Constant\+Range$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan push constant ranges. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834}\label{base_2base_8hpp_a49b85313d387c435f27e09e6277e0834} 
+using {\bfseries lava\+::\+Vk\+Attachment\+References} = std\+::vector$<$Vk\+Attachment\+Reference$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan attachment references. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a263ed5914a698556450a6132571fa854}\label{base_2base_8hpp_a263ed5914a698556450a6132571fa854} 
+using {\bfseries lava\+::\+Vk\+Clear\+Values} = std\+::vector$<$Vk\+Clear\+Value$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan clear values. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a591f03bbd3f94bad67fe8ce6dbcf687b}\label{base_2base_8hpp_a591f03bbd3f94bad67fe8ce6dbcf687b} 
+using {\bfseries lava\+::\+Vk\+Pipeline\+Shader\+Stage\+Create\+Infos} = std\+::vector$<$Vk\+Pipeline\+Shader\+Stage\+Create\+Info$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan pipeline shader stage create infos. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a8e11638468d2ec440a2af3c5e974ca7c}\label{base_2base_8hpp_a8e11638468d2ec440a2af3c5e974ca7c} 
+using {\bfseries lava\+::\+Vk\+Specialization\+Map\+Entries} = std\+::vector$<$Vk\+Specialization\+Map\+Entry$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan specialization map entries. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a919bd0b8a2dfec094ec8cc718fdd0c9c}\label{base_2base_8hpp_a919bd0b8a2dfec094ec8cc718fdd0c9c} 
+using {\bfseries lava\+::\+Vk\+Vertex\+Input\+Binding\+Descriptions} = std\+::vector$<$Vk\+Vertex\+Input\+Binding\+Description$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan vertex input binding descriptions. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_acede95ebeecb8bdd7a855ba1f2b518dc}\label{base_2base_8hpp_acede95ebeecb8bdd7a855ba1f2b518dc} 
+using {\bfseries lava\+::\+Vk\+Vertex\+Input\+Attribute\+Descriptions} = std\+::vector$<$Vk\+Vertex\+Input\+Attribute\+Description$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan vertex input attribute descriptions. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a8f0ca12074ec9090940eb7b5f0ff61ac}\label{base_2base_8hpp_a8f0ca12074ec9090940eb7b5f0ff61ac} 
+using {\bfseries lava\+::\+Vk\+Pipeline\+Color\+Blend\+Attachment\+States} = std\+::vector$<$Vk\+Pipeline\+Color\+Blend\+Attachment\+State$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan pipeline color blend attachment states. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a776c45a697b1300f9460e2015e99b69d}\label{base_2base_8hpp_a776c45a697b1300f9460e2015e99b69d} 
+using {\bfseries lava\+::\+Vk\+Pipeline\+Stage\+Flags\+List} = std\+::vector$<$Vk\+Pipeline\+Stage\+Flags$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan pipeline stage flags. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a740d0f8107af22a9f1dab998b0577a20}\label{base_2base_8hpp_a740d0f8107af22a9f1dab998b0577a20} 
+using {\bfseries lava\+::\+Vk\+Dynamic\+States} = std\+::vector$<$Vk\+Dynamic\+State$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan dynamic states. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}\label{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228} 
+using {\bfseries lava\+::\+Vk\+Queue\+Family\+Properties\+List} = std\+::vector$<$Vk\+Queue\+Family\+Properties$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan queue family properties. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}\label{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02} 
+using {\bfseries lava\+::\+Vk\+Extension\+Properties\+List} = std\+::vector$<$Vk\+Extension\+Properties$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan extension properties. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ad7b553b09e6cd35151635ed61efbe4a4}\label{base_2base_8hpp_ad7b553b09e6cd35151635ed61efbe4a4} 
+using {\bfseries lava\+::\+Vk\+Layer\+Properties\+List} = std\+::vector$<$Vk\+Layer\+Properties$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan layer properties. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ad05e68f9a336e01ee78008158d358f77}\label{base_2base_8hpp_ad05e68f9a336e01ee78008158d358f77} 
+using {\bfseries lava\+::\+Vk\+Physical\+Devices} = std\+::vector$<$Vk\+Physical\+Device$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan physical devices. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ae73891efe81ae4e16da96190b745cd04}\label{base_2base_8hpp_ae73891efe81ae4e16da96190b745cd04} 
+using {\bfseries lava\+::\+Vk\+Attachments} = std\+::vector$<$\mbox{\hyperlink{base_2base_8hpp_ad86a56760c0ea73b5beaa3147af8df3d}{Vk\+Image\+Views}}$>$
+\begin{DoxyCompactList}\small\item\em List of Vulkan attachments (image views) \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a5d9774191fbb48cbd1d60cd9216a5e1b}\label{base_2base_8hpp_a5d9774191fbb48cbd1d60cd9216a5e1b} 
+using {\bfseries lava\+::\+Vk\+Attachments\+Ref} = \mbox{\hyperlink{base_2base_8hpp_ae73891efe81ae4e16da96190b745cd04}{Vk\+Attachments}} const\&
+\begin{DoxyCompactList}\small\item\em Reference of Vulkan attachments (image views) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a}\label{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a} 
+enum class \mbox{\hyperlink{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a}{lava\+::api\+\_\+version}} \+: index \{ {\bfseries v1\+\_\+0} = 0
+, {\bfseries v1\+\_\+1}
+, {\bfseries v1\+\_\+2}
+, {\bfseries v1\+\_\+3}
+ \}
+\begin{DoxyCompactList}\small\item\em Vulkan API versions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}{lava\+::check}} (Vk\+Result result)
+\begin{DoxyCompactList}\small\item\em Check a Vulkan result. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{base_2base_8hpp_a8c33378c47aea22ea0734f005f3160f6}{lava\+::failed}} (Vk\+Result result)
+\begin{DoxyCompactList}\small\item\em Check if a Vulkan result failed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}{lava\+::to\+\_\+string}} (Vk\+Result result)
+\begin{DoxyCompactList}\small\item\em Convert a Vulkan result to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a56891e6c1c56efa24abd6b84f71d9145}{string}} \mbox{\hyperlink{base_2base_8hpp_a526fa4ab7b30e17635a0e5ff90a45b95}{lava\+::vk\+\_\+version\+\_\+to\+\_\+string}} (\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}} \mbox{\hyperlink{structlava_1_1version}{version}})
+\begin{DoxyCompactList}\small\item\em Convert a Vulkan version to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{base_2base_8hpp_ad57acb7f3e179f57808c9c815829bd9e}{lava\+::to\+\_\+version}} (\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}} \mbox{\hyperlink{structlava_1_1version}{version}})
+\begin{DoxyCompactList}\small\item\em Convert a Vulkan version to semantic version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}} \mbox{\hyperlink{base_2base_8hpp_acfad760f57f7987fa3271302d4d8377e}{lava\+::to\+\_\+vk\+\_\+version}} (\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{structlava_1_1version}{version}})
+\begin{DoxyCompactList}\small\item\em Convert a semantic version to Vulkan version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_a1bf135e6f61f0448a2fca3fbb9cd825a}{api\+\_\+version}} \mbox{\hyperlink{base_2base_8hpp_a1a3d4cc6fbab4db2ed03ae3c2f7afd4c}{lava\+::to\+\_\+api\+\_\+version}} (\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}} \mbox{\hyperlink{structlava_1_1version}{version}})
+\begin{DoxyCompactList}\small\item\em Convert a Vulkan version to API version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{base_2base_8hpp_a5ce56ce5fa9324105cd58a0573b27d36}\label{base_2base_8hpp_a5ce56ce5fa9324105cd58a0573b27d36} 
+constexpr bool const {\bfseries lava\+::build\+\_\+failed} = false
+\begin{DoxyCompactList}\small\item\em Build failed. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a9113e4177ba920920f06df6a7bf39382}\label{base_2base_8hpp_a9113e4177ba920920f06df6a7bf39382} 
+constexpr bool const {\bfseries lava\+::build\+\_\+done} = true
+\begin{DoxyCompactList}\small\item\em Build done. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a013b3ebd3c49c600aded40f65edc7a9d}\label{base_2base_8hpp_a013b3ebd3c49c600aded40f65edc7a9d} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Descriptor\+Sets} = 4
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan description sets. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a480388d3b3e0e985af702c9403d4a7c5}\label{base_2base_8hpp_a480388d3b3e0e985af702c9403d4a7c5} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Bindings} = 16
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan bindings. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a89b84ce26c4099f5b7894facace71df5}\label{base_2base_8hpp_a89b84ce26c4099f5b7894facace71df5} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Attachments} = 8
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan attachments. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_ab76e1c42f9b7e8110adf4677b9329d60}\label{base_2base_8hpp_ab76e1c42f9b7e8110adf4677b9329d60} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Vertex\+Attribs} = 16
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan vertex attributes. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a73b2e4bc6ac162d3e220dead440586b6}\label{base_2base_8hpp_a73b2e4bc6ac162d3e220dead440586b6} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Vertex\+Buffers} = 4
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan vertex buffers. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_a9b8f0c6649af56dc87910f3a33b9a6b1}\label{base_2base_8hpp_a9b8f0c6649af56dc87910f3a33b9a6b1} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+Push\+Constant\+\_\+\+Size} = 128
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan push constant size. \end{DoxyCompactList}\item 
+\Hypertarget{base_2base_8hpp_adbf9a98289504ad4fe87bb50a6aef9d2}\label{base_2base_8hpp_adbf9a98289504ad4fe87bb50a6aef9d2} 
+constexpr \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} const {\bfseries lava\+::\+Vk\+\_\+\+Limit\+\_\+\+UBO\+\_\+\+Size} = 16 \texorpdfstring{$\ast$}{*} 1024
+\begin{DoxyCompactList}\small\item\em Limit of Vulkan UBO size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan base types. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40}\index{base.hpp@{base.hpp}!check@{check}}
+\index{check@{check}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_aacf9ec688051b9b2607db92396055d40} 
+bool lava\+::check (\begin{DoxyParamCaption}\item[{Vk\+Result}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Check a Vulkan result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Result to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Okay or error 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_a8c33378c47aea22ea0734f005f3160f6}\index{base.hpp@{base.hpp}!failed@{failed}}
+\index{failed@{failed}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{failed()}{failed()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_a8c33378c47aea22ea0734f005f3160f6} 
+bool lava\+::failed (\begin{DoxyParamCaption}\item[{Vk\+Result}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if a Vulkan result failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Result to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error or okay 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_a1a3d4cc6fbab4db2ed03ae3c2f7afd4c}\index{base.hpp@{base.hpp}!to\_api\_version@{to\_api\_version}}
+\index{to\_api\_version@{to\_api\_version}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_api\_version()}{to\_api\_version()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_a1a3d4cc6fbab4db2ed03ae3c2f7afd4c} 
+api\+\_\+version lava\+::to\+\_\+api\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}}}]{version}{}\end{DoxyParamCaption})}
+
+
+
+Convert a Vulkan version to API version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Vulkan version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+api\+\_\+version Converted API version 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b}\index{base.hpp@{base.hpp}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_a7f77a3e2fd6478b5d5c013607ec5bd8b} 
+string lava\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{Vk\+Result}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Convert a Vulkan result to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Result to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String of result 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_ad57acb7f3e179f57808c9c815829bd9e}\index{base.hpp@{base.hpp}!to\_version@{to\_version}}
+\index{to\_version@{to\_version}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_version()}{to\_version()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_ad57acb7f3e179f57808c9c815829bd9e} 
+sem\+\_\+version lava\+::to\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}}}]{version}{}\end{DoxyParamCaption})}
+
+
+
+Convert a Vulkan version to semantic version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Vulkan version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sem\+\_\+version Converted semantic version 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_acfad760f57f7987fa3271302d4d8377e}\index{base.hpp@{base.hpp}!to\_vk\_version@{to\_vk\_version}}
+\index{to\_vk\_version@{to\_vk\_version}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{to\_vk\_version()}{to\_vk\_version()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_acfad760f57f7987fa3271302d4d8377e} 
+Vk\+Version lava\+::to\+\_\+vk\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}}}]{version}{}\end{DoxyParamCaption})}
+
+
+
+Convert a semantic version to Vulkan version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Semantic version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Version Converted Vulkan version 
+\end{DoxyReturn}
+\Hypertarget{base_2base_8hpp_a526fa4ab7b30e17635a0e5ff90a45b95}\index{base.hpp@{base.hpp}!vk\_version\_to\_string@{vk\_version\_to\_string}}
+\index{vk\_version\_to\_string@{vk\_version\_to\_string}!base.hpp@{base.hpp}}
+\doxysubsubsection{\texorpdfstring{vk\_version\_to\_string()}{vk\_version\_to\_string()}}
+{\footnotesize\ttfamily \label{base_2base_8hpp_a526fa4ab7b30e17635a0e5ff90a45b95} 
+string lava\+::vk\+\_\+version\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{base_2base_8hpp_aa62af46b2c296b6d19f005d5fe760670}{Vk\+Version}}}]{version}{}\end{DoxyParamCaption})}
+
+
+
+Convert a Vulkan version to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Version to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string String of version 
+\end{DoxyReturn}

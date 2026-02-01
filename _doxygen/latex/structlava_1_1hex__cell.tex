@@ -1,0 +1,124 @@
+\doxysection{lava\+::hex\+\_\+cell Struct Reference}
+\hypertarget{structlava_1_1hex__cell}{}\label{structlava_1_1hex__cell}\index{lava::hex\_cell@{lava::hex\_cell}}
+
+
+Hex cell.  
+
+
+
+
+{\ttfamily \#include $<$hex.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d}\label{structlava_1_1hex__cell_a7086bca7e865d99d7bccaf11a5bfde7d} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}}$>$
+\begin{DoxyCompactList}\small\item\em List of hex cells. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}\label{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44} 
+using {\bfseries pair} = std\+::pair$<$\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}, \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}$>$
+\begin{DoxyCompactList}\small\item\em Hex pair (Q and R) \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a775ffe0daed029c7f2adefd7ec080b08}\label{structlava_1_1hex__cell_a775ffe0daed029c7f2adefd7ec080b08} 
+using {\bfseries map} = std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{pair}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}, \mbox{\hyperlink{structlava_1_1pair__hash}{pair\+\_\+hash}}$>$
+\begin{DoxyCompactList}\small\item\em Map of hex cells. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1hex__cell_a3c30f0cbb14017e54456160554950fd2}\label{structlava_1_1hex__cell_a3c30f0cbb14017e54456160554950fd2} 
+auto {\bfseries operator$<$=$>$} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&) const =default
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{pair}} \mbox{\hyperlink{structlava_1_1hex__cell_af816d04f8d8c9041ccd8a9b7fd522a09}{to\+\_\+pair}} () const
+\begin{DoxyCompactList}\small\item\em Get the pair. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae}{add}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Add hex cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1hex__cell_a6eddba5d173537802483b3d4c726cbc5}{substract}} (\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&cell)
+\begin{DoxyCompactList}\small\item\em Substract hex cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1hex__cell_ab4e15c9d93220b9f98548887f101901a}{scale}} (\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} factor)
+\begin{DoxyCompactList}\small\item\em Scale the hex cell. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a4c143ba3ad787b6bcbe40dba0621316a}\label{structlava_1_1hex__cell_a4c143ba3ad787b6bcbe40dba0621316a} 
+void {\bfseries rotate\+\_\+left} ()
+\begin{DoxyCompactList}\small\item\em Rotate to left. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a8a6e68b4fe459e37bdeb30d98b10b910}\label{structlava_1_1hex__cell_a8a6e68b4fe459e37bdeb30d98b10b910} 
+void {\bfseries rotate\+\_\+right} ()
+\begin{DoxyCompactList}\small\item\em Rotate to right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115}\label{structlava_1_1hex__cell_a7d38f0a4030aaa028a1fd4326c328115} 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} {\bfseries q} \{\}
+\begin{DoxyCompactList}\small\item\em Q axis. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363}\label{structlava_1_1hex__cell_a3caaf22671b8dc57eca187ab5e585363} 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} {\bfseries r} \{\}
+\begin{DoxyCompactList}\small\item\em R axis. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea}\label{structlava_1_1hex__cell_a90842517fa4983b6d4bab9d5345e3cea} 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} {\bfseries s} \{\}
+\begin{DoxyCompactList}\small\item\em S axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hex cell. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae}\index{lava::hex\_cell@{lava::hex\_cell}!add@{add}}
+\index{add@{add}!lava::hex\_cell@{lava::hex\_cell}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__cell_a557f59f9fed24d9e380d33b99c9380ae} 
+void lava\+::hex\+\_\+cell\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Another hex cell \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1hex__cell_ab4e15c9d93220b9f98548887f101901a}\index{lava::hex\_cell@{lava::hex\_cell}!scale@{scale}}
+\index{scale@{scale}!lava::hex\_cell@{lava::hex\_cell}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__cell_ab4e15c9d93220b9f98548887f101901a} 
+void lava\+::hex\+\_\+cell\+::scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}}]{factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale the hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & Scaling factor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1hex__cell_a6eddba5d173537802483b3d4c726cbc5}\index{lava::hex\_cell@{lava::hex\_cell}!substract@{substract}}
+\index{substract@{substract}!lava::hex\_cell@{lava::hex\_cell}}
+\doxysubsubsection{\texorpdfstring{substract()}{substract()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__cell_a6eddba5d173537802483b3d4c726cbc5} 
+void lava\+::hex\+\_\+cell\+::substract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1hex__cell}{hex\+\_\+cell}} const \&}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Substract hex cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & Another hex cell \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1hex__cell_af816d04f8d8c9041ccd8a9b7fd522a09}\index{lava::hex\_cell@{lava::hex\_cell}!to\_pair@{to\_pair}}
+\index{to\_pair@{to\_pair}!lava::hex\_cell@{lava::hex\_cell}}
+\doxysubsubsection{\texorpdfstring{to\_pair()}{to\_pair()}}
+{\footnotesize\ttfamily \label{structlava_1_1hex__cell_af816d04f8d8c9041ccd8a9b7fd522a09} 
+\mbox{\hyperlink{structlava_1_1hex__cell_a7fb0840d44620bd022088ecb3e658c44}{pair}} lava\+::hex\+\_\+cell\+::to\+\_\+pair (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the pair. 
+
+\begin{DoxyReturn}{Returns}
+pair Hex pair 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/util/\mbox{\hyperlink{hex_8hpp}{hex.\+hpp}}\end{DoxyCompactItemize}

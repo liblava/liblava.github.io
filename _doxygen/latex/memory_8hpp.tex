@@ -1,0 +1,105 @@
+\doxysection{liblava/base/memory.hpp File Reference}
+\hypertarget{memory_8hpp}{}\label{memory_8hpp}\index{liblava/base/memory.hpp@{liblava/base/memory.hpp}}
+
+
+Vulkan allocator.  
+
+
+{\ttfamily \#include "{}liblava/base/base.\+hpp"{}}\newline
+{\ttfamily \#include "{}liblava/fwd.\+hpp"{}}\newline
+{\ttfamily \#include "{}vk\+\_\+mem\+\_\+alloc.\+h"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1allocator}{lava\+::allocator}}
+\begin{DoxyCompactList}\small\item\em Vulkan allocator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1memory}{lava\+::memory}}
+\begin{DoxyCompactList}\small\item\em Vulkan memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1allocator_ab7f304804ff970ac1436b31ebf5647d8}{allocator\+::s\+\_\+ptr}} \mbox{\hyperlink{memory_8hpp_a021206737032024500fda8195795e5ae}{lava\+::create\+\_\+allocator}} (\mbox{\hyperlink{structlava_1_1allocator_ac694ae1eb7b09a888504a757a63ef08e}{allocator\+::device\+\_\+c\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, Vma\+Allocator\+Create\+Flags flags=0)
+\begin{DoxyCompactList}\small\item\em Create a allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{memory_8hpp_a033009b2750404dee2dbcaa5f7a869a6}{lava\+::find\+\_\+memory\+\_\+type\+\_\+with\+\_\+properties}} (Vk\+Physical\+Device\+Memory\+Properties properties, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} type\+\_\+bits, Vk\+Memory\+Property\+Flags required\+\_\+properties)
+\begin{DoxyCompactList}\small\item\em Find the memory type with properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{memory_8hpp_a82f310a9f64c8e0390df94cdaccad831}{lava\+::find\+\_\+memory\+\_\+type}} (Vk\+Physical\+Device gpu, Vk\+Memory\+Property\+Flags properties, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} type\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em Find the memory type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan allocator. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{memory_8hpp_a021206737032024500fda8195795e5ae}\index{memory.hpp@{memory.hpp}!create\_allocator@{create\_allocator}}
+\index{create\_allocator@{create\_allocator}!memory.hpp@{memory.hpp}}
+\doxysubsubsection{\texorpdfstring{create\_allocator()}{create\_allocator()}}
+{\footnotesize\ttfamily \label{memory_8hpp_a021206737032024500fda8195795e5ae} 
+allocator\+::s\+\_\+ptr lava\+::create\+\_\+allocator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1allocator_ac694ae1eb7b09a888504a757a63ef08e}{allocator\+::device\+\_\+c\+\_\+ptr}}}]{device}{, }\item[{Vma\+Allocator\+Create\+Flags}]{flags}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em flags} & VMA allocator create flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+allocator\+::s\+\_\+ptr Allocator 
+\end{DoxyReturn}
+\Hypertarget{memory_8hpp_a82f310a9f64c8e0390df94cdaccad831}\index{memory.hpp@{memory.hpp}!find\_memory\_type@{find\_memory\_type}}
+\index{find\_memory\_type@{find\_memory\_type}!memory.hpp@{memory.hpp}}
+\doxysubsubsection{\texorpdfstring{find\_memory\_type()}{find\_memory\_type()}}
+{\footnotesize\ttfamily \label{memory_8hpp_a82f310a9f64c8e0390df94cdaccad831} 
+index lava\+::find\+\_\+memory\+\_\+type (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{gpu}{, }\item[{Vk\+Memory\+Property\+Flags}]{properties}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{type\+\_\+bits}{}\end{DoxyParamCaption})}
+
+
+
+Find the memory type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpu} & Physical device \\
+\hline
+{\em properties} & Memory properties flags \\
+\hline
+{\em type\+\_\+bits} & Type bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type Result type 
+\end{DoxyReturn}
+\Hypertarget{memory_8hpp_a033009b2750404dee2dbcaa5f7a869a6}\index{memory.hpp@{memory.hpp}!find\_memory\_type\_with\_properties@{find\_memory\_type\_with\_properties}}
+\index{find\_memory\_type\_with\_properties@{find\_memory\_type\_with\_properties}!memory.hpp@{memory.hpp}}
+\doxysubsubsection{\texorpdfstring{find\_memory\_type\_with\_properties()}{find\_memory\_type\_with\_properties()}}
+{\footnotesize\ttfamily \label{memory_8hpp_a033009b2750404dee2dbcaa5f7a869a6} 
+index lava\+::find\+\_\+memory\+\_\+type\+\_\+with\+\_\+properties (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device\+Memory\+Properties}]{properties}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{type\+\_\+bits}{, }\item[{Vk\+Memory\+Property\+Flags}]{required\+\_\+properties}{}\end{DoxyParamCaption})}
+
+
+
+Find the memory type with properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em properties} & Physical device memory properties \\
+\hline
+{\em type\+\_\+bits} & Type bits \\
+\hline
+{\em required\+\_\+properties} & Memory property flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type Result type 
+\end{DoxyReturn}

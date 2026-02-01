@@ -1,0 +1,79 @@
+\doxysection{lava\+::queue\+\_\+family\+\_\+info Struct Reference}
+\hypertarget{structlava_1_1queue__family__info}{}\label{structlava_1_1queue__family__info}\index{lava::queue\_family\_info@{lava::queue\_family\_info}}
+
+
+Queue family information.  
+
+
+
+
+{\ttfamily \#include $<$queue.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}\label{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502} 
+using {\bfseries list} = std\+::deque$<$\mbox{\hyperlink{structlava_1_1queue__family__info}{queue\+\_\+family\+\_\+info}}$>$
+\begin{DoxyCompactList}\small\item\em List of queue family informations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlava_1_1queue__family__info_a0118b1377d537994d6c9aa26a701d278}{add}} (Vk\+Queue\+Flags flags, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}{count}}=1, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add a queue family information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}{count}} () const
+\begin{DoxyCompactList}\small\item\em Get the count of queues. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue__family__info_a5009f5cb3c5050ceb3163f2987d3418d}\label{structlava_1_1queue__family__info_a5009f5cb3c5050ceb3163f2987d3418d} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the queue information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1queue__family__info_aa18ad31e5e2ebad5f271bb0d0a421dd5}\label{structlava_1_1queue__family__info_aa18ad31e5e2ebad5f271bb0d0a421dd5} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} {\bfseries family\+\_\+index} = 0
+\begin{DoxyCompactList}\small\item\em Queue family index. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22}\label{structlava_1_1queue__family__info_a8d13a8f2ee210afbdf98a18c4ec29a22} 
+\mbox{\hyperlink{structlava_1_1queue__info_aeca13b57f220037cfadabe6ecc004de9}{queue\+\_\+info\+::list}} {\bfseries queues}
+\begin{DoxyCompactList}\small\item\em List of queue informations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Queue family information. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1queue__family__info_a0118b1377d537994d6c9aa26a701d278}\index{lava::queue\_family\_info@{lava::queue\_family\_info}!add@{add}}
+\index{add@{add}!lava::queue\_family\_info@{lava::queue\_family\_info}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{structlava_1_1queue__family__info_a0118b1377d537994d6c9aa26a701d278} 
+void lava\+::queue\+\_\+family\+\_\+info\+::add (\begin{DoxyParamCaption}\item[{Vk\+Queue\+Flags}]{flags}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{count}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a queue family information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Queue flags \\
+\hline
+{\em count} & Number of queues \\
+\hline
+{\em priority} & Queue priority \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1}\index{lava::queue\_family\_info@{lava::queue\_family\_info}!count@{count}}
+\index{count@{count}!lava::queue\_family\_info@{lava::queue\_family\_info}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily \label{structlava_1_1queue__family__info_a49a1c232688559eb5604a4c20d1308a1} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::queue\+\_\+family\+\_\+info\+::count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the count of queues. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Count of queues 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{queue_8hpp}{queue.\+hpp}}\end{DoxyCompactItemize}

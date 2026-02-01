@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1attachment" kind="struct" language="C++" prot="public">
+    <compoundname>lava::attachment</compoundname>
+    <includes refid="attachment_8hpp" local="no">attachment.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1attachment" kindref="compound">attachment</ref> &gt;</type>
+        <definition>using lava::attachment::s_ptr =  std::shared_ptr&lt;attachment&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::attachment::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="20" column="5" bodyfile="liblava/block/attachment.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1attachment_1ac9aa19183cdf766e9a809966602ca265" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::attachment::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::attachment::s_list</qualifiedname>
+        <briefdescription>
+<para>List of attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="23" column="5" bodyfile="liblava/block/attachment.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1attachment_1a56f4a07137ab73751d691af28594a97c" prot="private" static="no" mutable="no">
+        <type>VkAttachmentDescription</type>
+        <definition>VkAttachmentDescription lava::attachment::m_description</definition>
+        <argsstring></argsstring>
+        <name>m_description</name>
+        <qualifiedname>lava::attachment::m_description</qualifiedname>
+        <briefdescription>
+<para>Attachment description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="160" column="29" bodyfile="liblava/block/attachment.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1attachment_1a0c411f8ba4d54cab48f82464d837c06d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::attachment::make</definition>
+        <argsstring>(VkFormat format=VK_FORMAT_UNDEFINED, VkSampleCountFlagBits samples=VK_SAMPLE_COUNT_1_BIT)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::attachment::make</qualifiedname>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+          <defval>VK_FORMAT_UNDEFINED</defval>
+        </param>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>samples</declname>
+          <defval>VK_SAMPLE_COUNT_1_BIT</defval>
+        </param>
+        <briefdescription>
+<para>Make a new attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample count flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" kindref="member">s_ptr</ref> Shared pointer to attachment </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="31" column="18" bodyfile="liblava/block/attachment.hpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1attachment_1ab1392899ab63234e2c8f2f2dbd3cf90b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::attachment::attachment</definition>
+        <argsstring>(VkFormat format=VK_FORMAT_UNDEFINED, VkSampleCountFlagBits samples=VK_SAMPLE_COUNT_1_BIT)</argsstring>
+        <name>attachment</name>
+        <qualifiedname>lava::attachment::attachment</qualifiedname>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+          <defval>VK_FORMAT_UNDEFINED</defval>
+        </param>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>samples</declname>
+          <defval>VK_SAMPLE_COUNT_1_BIT</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample count flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="41" column="14" bodyfile="liblava/block/attachment.hpp" bodystart="41" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1abad7ffb45a38e9083a6cbd7dd234e6df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkAttachmentDescription const &amp;</type>
+        <definition>VkAttachmentDescription const  &amp; lava::attachment::get_description</definition>
+        <argsstring>() const</argsstring>
+        <name>get_description</name>
+        <qualifiedname>lava::attachment::get_description</qualifiedname>
+        <briefdescription>
+<para>Get the description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkAttachmentDescription const&amp; Attachment description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="58" column="35" bodyfile="liblava/block/attachment.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1ac73648e3bcc9fb0fa941548b740e5518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_format</definition>
+        <argsstring>(VkFormat format)</argsstring>
+        <name>set_format</name>
+        <qualifiedname>lava::attachment::set_format</qualifiedname>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Set the format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="66" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1ad4f9434466abb598f4cf71c5a6b45f8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_samples</definition>
+        <argsstring>(VkSampleCountFlagBits samples)</argsstring>
+        <name>set_samples</name>
+        <qualifiedname>lava::attachment::set_samples</qualifiedname>
+        <param>
+          <type>VkSampleCountFlagBits</type>
+          <declname>samples</declname>
+        </param>
+        <briefdescription>
+<para>Set the samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment sample count flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="74" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1a5dc7bc53fc74f95398f3340d57cfe150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_op</definition>
+        <argsstring>(VkAttachmentLoadOp load_op, VkAttachmentStoreOp store_op)</argsstring>
+        <name>set_op</name>
+        <qualifiedname>lava::attachment::set_op</qualifiedname>
+        <param>
+          <type>VkAttachmentLoadOp</type>
+          <declname>load_op</declname>
+        </param>
+        <param>
+          <type>VkAttachmentStoreOp</type>
+          <declname>store_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>load_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment load op </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>store_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment store op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="83" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1a83f658457ee737dded0de77eb241f667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_load_op</definition>
+        <argsstring>(VkAttachmentLoadOp load_op)</argsstring>
+        <name>set_load_op</name>
+        <qualifiedname>lava::attachment::set_load_op</qualifiedname>
+        <param>
+          <type>VkAttachmentLoadOp</type>
+          <declname>load_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the load op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>load_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment load op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="92" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1a85df5ee119ce63bb476b4232720bf3f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_store_op</definition>
+        <argsstring>(VkAttachmentStoreOp store_op)</argsstring>
+        <name>set_store_op</name>
+        <qualifiedname>lava::attachment::set_store_op</qualifiedname>
+        <param>
+          <type>VkAttachmentStoreOp</type>
+          <declname>store_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the store op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>store_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment store op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="100" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1ac886ea2e70da3904f47a4b67f2062951" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_stencil_op</definition>
+        <argsstring>(VkAttachmentLoadOp load_op, VkAttachmentStoreOp store_op)</argsstring>
+        <name>set_stencil_op</name>
+        <qualifiedname>lava::attachment::set_stencil_op</qualifiedname>
+        <param>
+          <type>VkAttachmentLoadOp</type>
+          <declname>load_op</declname>
+        </param>
+        <param>
+          <type>VkAttachmentStoreOp</type>
+          <declname>store_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the stencil op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>load_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment load op </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>store_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment store op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="109" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1acc264368d12704b2ca95d5c8b5f80b38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_stencil_load_op</definition>
+        <argsstring>(VkAttachmentLoadOp load_op)</argsstring>
+        <name>set_stencil_load_op</name>
+        <qualifiedname>lava::attachment::set_stencil_load_op</qualifiedname>
+        <param>
+          <type>VkAttachmentLoadOp</type>
+          <declname>load_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the stencil load op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>load_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment load op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="119" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1aa6dc44ba5f4efdabf2801fdd7b17132b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_stencil_store_op</definition>
+        <argsstring>(VkAttachmentStoreOp store_op)</argsstring>
+        <name>set_stencil_store_op</name>
+        <qualifiedname>lava::attachment::set_stencil_store_op</qualifiedname>
+        <param>
+          <type>VkAttachmentStoreOp</type>
+          <declname>store_op</declname>
+        </param>
+        <briefdescription>
+<para>Set the stencil store op. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>store_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment store op </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="127" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1acc06388a2ddb6f95632c2aa1d7295aeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_layouts</definition>
+        <argsstring>(VkImageLayout initial, VkImageLayout final)</argsstring>
+        <name>set_layouts</name>
+        <qualifiedname>lava::attachment::set_layouts</qualifiedname>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>initial</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>final</declname>
+        </param>
+        <briefdescription>
+<para>Set the layouts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial image layout </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>final</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Final image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="136" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="136" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1af0d326486fb9c7c3a68104a3e7aa56ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_initial_layout</definition>
+        <argsstring>(VkImageLayout layout)</argsstring>
+        <name>set_initial_layout</name>
+        <qualifiedname>lava::attachment::set_initial_layout</qualifiedname>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the initial layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="146" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1attachment_1a5e543579f671f6b3c943b91db798f054" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::attachment::set_final_layout</definition>
+        <argsstring>(VkImageLayout layout)</argsstring>
+        <name>set_final_layout</name>
+        <qualifiedname>lava::attachment::set_final_layout</qualifiedname>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the final layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/attachment.hpp" line="154" column="10" bodyfile="liblava/block/attachment.hpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Attachment description. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/block/attachment.hpp" line="18" column="1" bodyfile="liblava/block/attachment.hpp" bodystart="18" bodyend="161"/>
+    <listofallmembers>
+      <member refid="structlava_1_1attachment_1ab1392899ab63234e2c8f2f2dbd3cf90b" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>attachment</name></member>
+      <member refid="structlava_1_1attachment_1abad7ffb45a38e9083a6cbd7dd234e6df" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>get_description</name></member>
+      <member refid="structlava_1_1attachment_1a56f4a07137ab73751d691af28594a97c" prot="private" virt="non-virtual"><scope>lava::attachment</scope><name>m_description</name></member>
+      <member refid="structlava_1_1attachment_1a0c411f8ba4d54cab48f82464d837c06d" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>make</name></member>
+      <member refid="structlava_1_1attachment_1ac9aa19183cdf766e9a809966602ca265" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>s_list</name></member>
+      <member refid="structlava_1_1attachment_1a78a2a1ebf26152f830e38beb84276a27" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1attachment_1a5e543579f671f6b3c943b91db798f054" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_final_layout</name></member>
+      <member refid="structlava_1_1attachment_1ac73648e3bcc9fb0fa941548b740e5518" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_format</name></member>
+      <member refid="structlava_1_1attachment_1af0d326486fb9c7c3a68104a3e7aa56ca" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_initial_layout</name></member>
+      <member refid="structlava_1_1attachment_1acc06388a2ddb6f95632c2aa1d7295aeb" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_layouts</name></member>
+      <member refid="structlava_1_1attachment_1a83f658457ee737dded0de77eb241f667" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_load_op</name></member>
+      <member refid="structlava_1_1attachment_1a5dc7bc53fc74f95398f3340d57cfe150" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_op</name></member>
+      <member refid="structlava_1_1attachment_1ad4f9434466abb598f4cf71c5a6b45f8d" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_samples</name></member>
+      <member refid="structlava_1_1attachment_1acc264368d12704b2ca95d5c8b5f80b38" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_stencil_load_op</name></member>
+      <member refid="structlava_1_1attachment_1ac886ea2e70da3904f47a4b67f2062951" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_stencil_op</name></member>
+      <member refid="structlava_1_1attachment_1aa6dc44ba5f4efdabf2801fdd7b17132b" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_stencil_store_op</name></member>
+      <member refid="structlava_1_1attachment_1a85df5ee119ce63bb476b4232720bf3f2" prot="public" virt="non-virtual"><scope>lava::attachment</scope><name>set_store_op</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

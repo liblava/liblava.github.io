@@ -1,0 +1,76 @@
+\doxysection{lava\+::configurable Struct Reference}
+\hypertarget{structlava_1_1configurable}{}\label{structlava_1_1configurable}\index{lava::configurable@{lava::configurable}}
+
+
+Configurable interface.  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+Inheritance diagram for lava\+::configurable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1configurable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}{set\+\_\+json}} (json\+\_\+ref j)=0
+\begin{DoxyCompactList}\small\item\em Set json config. \end{DoxyCompactList}\item 
+virtual json \mbox{\hyperlink{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}{get\+\_\+json}} () const =0
+\begin{DoxyCompactList}\small\item\em Get json config. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configurable interface. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c}\index{lava::configurable@{lava::configurable}!get\_json@{get\_json}}
+\index{get\_json@{get\_json}!lava::configurable@{lava::configurable}}
+\doxysubsubsection{\texorpdfstring{get\_json()}{get\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1configurable_a4d820633e763f6e1fe5de468ac84b22c} 
+virtual json lava\+::configurable\+::get\+\_\+json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get json config. 
+
+\begin{DoxyReturn}{Returns}
+json Json file 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structlava_1_1app__config_a89c8dfbd34042d7b3c8dfe2bd42619a5}{lava\+::app\+\_\+config}}, and \mbox{\hyperlink{structlava_1_1props_a1d5efad4d33dcb70b8dc7ad12ed38352}{lava\+::props}}.
+
+\Hypertarget{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c}\index{lava::configurable@{lava::configurable}!set\_json@{set\_json}}
+\index{set\_json@{set\_json}!lava::configurable@{lava::configurable}}
+\doxysubsubsection{\texorpdfstring{set\_json()}{set\_json()}}
+{\footnotesize\ttfamily \label{structlava_1_1configurable_adea3f5e14b54e32b9f176c8f75ef029c} 
+virtual void lava\+::configurable\+::set\+\_\+json (\begin{DoxyParamCaption}\item[{json\+\_\+ref}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set json config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & Json file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{structlava_1_1app__config_a65eeb9550ec619a14adf28da9054c68b}{lava\+::app\+\_\+config}}, and \mbox{\hyperlink{structlava_1_1props_af14af72d2081d93b4b7d932487ee3876}{lava\+::props}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/file/json.\+hpp\end{DoxyCompactItemize}

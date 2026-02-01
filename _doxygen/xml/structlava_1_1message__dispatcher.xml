@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1message__dispatcher" kind="struct" language="C++" prot="public">
+    <compoundname>lava::message_dispatcher</compoundname>
+    <basecompoundref refid="structlava_1_1telegraph" prot="public" virt="non-virtual">lava::telegraph</basecompoundref>
+    <includes refid="telegram_8hpp" local="no">telegram.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1message__dispatcher_1ae7bf4f0d44870b3d1e6e17e03394f88f" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="structlava_1_1telegram_1a1fab0b47a42d37f5d5eb474d95bf3caa" kindref="member">telegram::ref</ref>, <ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref>)&gt;</type>
+        <definition>using lava::message_dispatcher::message_func =  std::function&lt;void(telegram::ref, id::ref)&gt;</definition>
+        <argsstring></argsstring>
+        <name>message_func</name>
+        <qualifiedname>lava::message_dispatcher::message_func</qualifiedname>
+        <briefdescription>
+<para>Message function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="166" column="5" bodyfile="liblava/util/telegram.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structlava_1_1message__dispatcher_1ab69738365b7c58093af65ec1bd04ade9" prot="private" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1message__dispatcher_1ae7bf4f0d44870b3d1e6e17e03394f88f" kindref="member">message_func</ref> &gt;</type>
+        <definition>using lava::message_dispatcher::dispatch_map =  std::map&lt;id, message_func&gt;</definition>
+        <argsstring></argsstring>
+        <name>dispatch_map</name>
+        <qualifiedname>lava::message_dispatcher::dispatch_map</qualifiedname>
+        <briefdescription>
+<para>Map of dispatches. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="249" column="5" bodyfile="liblava/util/telegram.hpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1message__dispatcher_1adbbf45ef378b42386324f74184ab04c7" prot="private" static="no" mutable="no">
+        <type>dispatch_map</type>
+        <definition>dispatch_map lava::message_dispatcher::m_dispatches</definition>
+        <argsstring></argsstring>
+        <name>m_dispatches</name>
+        <qualifiedname>lava::message_dispatcher::m_dispatches</qualifiedname>
+        <briefdescription>
+<para>Registered dispatches. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="252" column="18" bodyfile="liblava/util/telegram.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1message__dispatcher_1ad8542700026305ac047c95bd52a4a89b" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex lava::message_dispatcher::m_lock</definition>
+        <argsstring></argsstring>
+        <name>m_lock</name>
+        <qualifiedname>lava::message_dispatcher::m_lock</qualifiedname>
+        <briefdescription>
+<para>Lock for dispatches. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="255" column="16" bodyfile="liblava/util/telegram.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1message__dispatcher_1af4c55c9272ed75f7d3ca6927b4ae0488" prot="private" static="no" mutable="no">
+        <type><ref refid="time_8hpp_1a8cc2ca1333c2a464b07f9c54326a4569" kindref="member">ms</ref></type>
+        <definition>ms lava::message_dispatcher::m_current_time</definition>
+        <argsstring></argsstring>
+        <name>m_current_time</name>
+        <qualifiedname>lava::message_dispatcher::m_current_time</qualifiedname>
+        <briefdescription>
+<para>Time in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="258" column="8" bodyfile="liblava/util/telegram.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1message__dispatcher_1a9a326ec50de1410c965093dfd07eab74" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1thread__pool" kindref="compound">thread_pool</ref></type>
+        <definition>thread_pool lava::message_dispatcher::m_pool</definition>
+        <argsstring></argsstring>
+        <name>m_pool</name>
+        <qualifiedname>lava::message_dispatcher::m_pool</qualifiedname>
+        <briefdescription>
+<para>Thread pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="261" column="17" bodyfile="liblava/util/telegram.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1message__dispatcher_1a0b11aae1a6a6fe6104476cd5b3b0f32e" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1telegram_1abc8fe1e9664bd0f9aa45f80dd3085fa2" kindref="member">telegram::set</ref></type>
+        <definition>telegram::set lava::message_dispatcher::m_messages</definition>
+        <argsstring></argsstring>
+        <name>m_messages</name>
+        <qualifiedname>lava::message_dispatcher::m_messages</qualifiedname>
+        <briefdescription>
+<para>List of messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="264" column="19" bodyfile="liblava/util/telegram.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a0677dd2d564d76a27a20766095ebd574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::message_dispatcher::~message_dispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>~message_dispatcher</name>
+        <qualifiedname>lava::message_dispatcher::~message_dispatcher</qualifiedname>
+        <briefdescription>
+<para>Destroy the dispatcher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="116" column="5" bodyfile="liblava/util/telegram.hpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1aa422c136ee6a70b8ba35c729e39ca9ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::setup</definition>
+        <argsstring>(ui32 thread_count)</argsstring>
+        <name>setup</name>
+        <qualifiedname>lava::message_dispatcher::setup</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>thread_count</declname>
+        </param>
+        <briefdescription>
+<para>Set up the dispatcher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thread_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of threads </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="124" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1afad57bbc64cbbbed74b5dab99d6c88c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::teardown</definition>
+        <argsstring>()</argsstring>
+        <name>teardown</name>
+        <qualifiedname>lava::message_dispatcher::teardown</qualifiedname>
+        <briefdescription>
+<para>Tear down the dispatcher. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="131" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a0d1c597dd4ff66f8da3a45bd84f338dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::update</definition>
+        <argsstring>(ms current)</argsstring>
+        <name>update</name>
+        <qualifiedname>lava::message_dispatcher::update</qualifiedname>
+        <param>
+          <type><ref refid="time_8hpp_1a8cc2ca1333c2a464b07f9c54326a4569" kindref="member">ms</ref></type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Update the dispatcher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="139" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1aac8ade56ddd9f9b837095fae1263b584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::send_message</definition>
+        <argsstring>(id::ref receiver, id::ref sender, index message, ms delay={}, any const &amp;info={}) override</argsstring>
+        <name>send_message</name>
+        <qualifiedname>lava::message_dispatcher::send_message</qualifiedname>
+        <reimplements refid="structlava_1_1telegraph_1a8c4cbde81019f05bf51f91327d529196">send_message</reimplements>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type><ref refid="time_8hpp_1a8cc2ca1333c2a464b07f9c54326a4569" kindref="member">ms</ref></type>
+          <declname>delay</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type><ref refid="telegram_8hpp_1adc5d467e5360109773d4eed7e273255d" kindref="member">any</ref> const &amp;</type>
+          <declname>info</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structlava_1_1telegraph_1a8c4cbde81019f05bf51f91327d529196" kindref="member">telegraph::send_message</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="145" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="145" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a390fdb43a976c51b07049b4bc2189d62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::message_dispatcher::add_dispatch</definition>
+        <argsstring>(id::ref target, message_func func)</argsstring>
+        <name>add_dispatch</name>
+        <qualifiedname>lava::message_dispatcher::add_dispatch</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="structlava_1_1message__dispatcher_1ae7bf4f0d44870b3d1e6e17e03394f88f" kindref="member">message_func</ref></type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>Add dispatch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dispatch function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dispatch added or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="174" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="174" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1ad2df99e26a91c77f226c33c190dea0e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::message_dispatcher::remove_dispatch</definition>
+        <argsstring>(id::ref target)</argsstring>
+        <name>remove_dispatch</name>
+        <qualifiedname>lava::message_dispatcher::remove_dispatch</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Remove dispatch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dispatch removed or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="189" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="189" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a8b3ec32314f216591ab9bf59ba1db394" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::message_dispatcher::has_dispatch</definition>
+        <argsstring>(id::ref target) const</argsstring>
+        <name>has_dispatch</name>
+        <qualifiedname>lava::message_dispatcher::has_dispatch</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Check if dispatch is registered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sender id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dispatch exists or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="204" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="204" bodyend="206"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a32dbcd2beb48f88d6fba04257d27867a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::discharge</definition>
+        <argsstring>(telegram::ref message)</argsstring>
+        <name>discharge</name>
+        <qualifiedname>lava::message_dispatcher::discharge</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1telegram_1a1fab0b47a42d37f5d5eb474d95bf3caa" kindref="member">telegram::ref</ref></type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Discharge a message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to discharge </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="213" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="213" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1ad29bddab757d074cc6bb8e2d751dac2b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::message_dispatcher::dispatch_delayed_messages</definition>
+        <argsstring>(ms time)</argsstring>
+        <name>dispatch_delayed_messages</name>
+        <qualifiedname>lava::message_dispatcher::dispatch_delayed_messages</qualifiedname>
+        <param>
+          <type><ref refid="time_8hpp_1a8cc2ca1333c2a464b07f9c54326a4569" kindref="member">ms</ref></type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Dispatch delayed messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="228" column="10" bodyfile="liblava/util/telegram.hpp" bodystart="228" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1message__dispatcher_1a28efb3614280629fb59152c16fd4b4a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1message__dispatcher_1ae7bf4f0d44870b3d1e6e17e03394f88f" kindref="member">message_func</ref></type>
+        <definition>message_func lava::message_dispatcher::get_dispatch</definition>
+        <argsstring>(id::ref target)</argsstring>
+        <name>get_dispatch</name>
+        <qualifiedname>lava::message_dispatcher::get_dispatch</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Get dispatch receiver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Receiver id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/telegram.hpp" line="241" column="18" bodyfile="liblava/util/telegram.hpp" bodystart="241" bodyend="246"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Message dispatcher. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::message_dispatcher</label>
+        <link refid="structlava_1_1message__dispatcher"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="1">
+        <label>lava::message_dispatcher</label>
+        <link refid="structlava_1_1message__dispatcher"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/util/telegram.hpp" line="112" column="1" bodyfile="liblava/util/telegram.hpp" bodystart="112" bodyend="265"/>
+    <listofallmembers>
+      <member refid="structlava_1_1message__dispatcher_1a390fdb43a976c51b07049b4bc2189d62" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>add_dispatch</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a32dbcd2beb48f88d6fba04257d27867a" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>discharge</name></member>
+      <member refid="structlava_1_1message__dispatcher_1ad29bddab757d074cc6bb8e2d751dac2b" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>dispatch_delayed_messages</name></member>
+      <member refid="structlava_1_1message__dispatcher_1ab69738365b7c58093af65ec1bd04ade9" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>dispatch_map</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a28efb3614280629fb59152c16fd4b4a0" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>get_dispatch</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a8b3ec32314f216591ab9bf59ba1db394" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>has_dispatch</name></member>
+      <member refid="structlava_1_1message__dispatcher_1af4c55c9272ed75f7d3ca6927b4ae0488" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>m_current_time</name></member>
+      <member refid="structlava_1_1message__dispatcher_1adbbf45ef378b42386324f74184ab04c7" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>m_dispatches</name></member>
+      <member refid="structlava_1_1message__dispatcher_1ad8542700026305ac047c95bd52a4a89b" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>m_lock</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a0b11aae1a6a6fe6104476cd5b3b0f32e" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>m_messages</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a9a326ec50de1410c965093dfd07eab74" prot="private" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>m_pool</name></member>
+      <member refid="structlava_1_1message__dispatcher_1ae7bf4f0d44870b3d1e6e17e03394f88f" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>message_func</name></member>
+      <member refid="structlava_1_1message__dispatcher_1ad2df99e26a91c77f226c33c190dea0e2" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>remove_dispatch</name></member>
+      <member refid="structlava_1_1message__dispatcher_1aac8ade56ddd9f9b837095fae1263b584" prot="public" virt="virtual"><scope>lava::message_dispatcher</scope><name>send_message</name></member>
+      <member refid="structlava_1_1message__dispatcher_1aa422c136ee6a70b8ba35c729e39ca9ea" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>setup</name></member>
+      <member refid="structlava_1_1message__dispatcher_1afad57bbc64cbbbed74b5dab99d6c88c6" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>teardown</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a0d1c597dd4ff66f8da3a45bd84f338dd" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>update</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::message_dispatcher</scope><name>~interface</name></member>
+      <member refid="structlava_1_1message__dispatcher_1a0677dd2d564d76a27a20766095ebd574" prot="public" virt="non-virtual"><scope>lava::message_dispatcher</scope><name>~message_dispatcher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

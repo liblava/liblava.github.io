@@ -1,0 +1,908 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1image" kind="struct" language="C++" prot="public">
+    <compoundname>lava::image</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="image_8hpp" local="no">image.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1image" kindref="compound">image</ref> &gt;</type>
+        <definition>using lava::image::s_ptr =  std::shared_ptr&lt;image&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::image::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="74" column="5" bodyfile="liblava/resource/image.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1image_1a71d4dfca8630df33b46a5268836f072d" prot="public" static="no">
+        <type>std::map&lt; <ref refid="structlava_1_1id" kindref="compound">id</ref>, <ref refid="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::image::s_map =  std::map&lt;id, s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_map</name>
+        <qualifiedname>lava::image::s_map</qualifiedname>
+        <briefdescription>
+<para>Map of images. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="77" column="5" bodyfile="liblava/resource/image.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1image_1a5e307b53ee5524d733a67eb086060d4c" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::image::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::image::s_list</qualifiedname>
+        <briefdescription>
+<para>List of images. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="80" column="5" bodyfile="liblava/resource/image.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1image_1ac0335c775f54bfe179b93403cf004309" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::image::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>lava::image::m_device</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Vulkan device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="283" column="17" bodyfile="liblava/resource/image.hpp" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1a28f4d05bac470d365c7e1b495a2b2cf5" prot="private" static="no" mutable="no">
+        <type>VkImage</type>
+        <definition>VkImage lava::image::m_vk_image</definition>
+        <argsstring></argsstring>
+        <name>m_vk_image</name>
+        <qualifiedname>lava::image::m_vk_image</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan image. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="286" column="13" bodyfile="liblava/resource/image.hpp" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1aaf8f8765f7cf085d9c87eb35254d4837" prot="private" static="no" mutable="no">
+        <type>VkImageCreateInfo</type>
+        <definition>VkImageCreateInfo lava::image::m_info</definition>
+        <argsstring></argsstring>
+        <name>m_info</name>
+        <qualifiedname>lava::image::m_info</qualifiedname>
+        <briefdescription>
+<para>Image create information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="289" column="23" bodyfile="liblava/resource/image.hpp" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1acc0e95ce5bf858776298db51d2d4cd1e" prot="private" static="no" mutable="no">
+        <type>VmaAllocation</type>
+        <definition>VmaAllocation lava::image::m_allocation</definition>
+        <argsstring></argsstring>
+        <name>m_allocation</name>
+        <qualifiedname>lava::image::m_allocation</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Allocation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="292" column="19" bodyfile="liblava/resource/image.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1a59498f29759b6e2fefb770dd3a23512a" prot="private" static="no" mutable="no">
+        <type>VkImageView</type>
+        <definition>VkImageView lava::image::m_view</definition>
+        <argsstring></argsstring>
+        <name>m_view</name>
+        <qualifiedname>lava::image::m_view</qualifiedname>
+        <initializer>= VK_NULL_HANDLE</initializer>
+        <briefdescription>
+<para>Vulkan image view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="295" column="17" bodyfile="liblava/resource/image.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1a0b86888f182d9f069367ffe386bcf4e5" prot="private" static="no" mutable="no">
+        <type>VkImageViewCreateInfo</type>
+        <definition>VkImageViewCreateInfo lava::image::m_view_info</definition>
+        <argsstring></argsstring>
+        <name>m_view_info</name>
+        <qualifiedname>lava::image::m_view_info</qualifiedname>
+        <briefdescription>
+<para>Image view create information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="298" column="27" bodyfile="liblava/resource/image.hpp" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1image_1a574eb6b44a38b2fb47044cb2411fc02e" prot="private" static="no" mutable="no">
+        <type>VkImageSubresourceRange</type>
+        <definition>VkImageSubresourceRange lava::image::m_subresource_range</definition>
+        <argsstring></argsstring>
+        <name>m_subresource_range</name>
+        <qualifiedname>lava::image::m_subresource_range</qualifiedname>
+        <briefdescription>
+<para>Image subresource range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="301" column="29" bodyfile="liblava/resource/image.hpp" bodystart="301" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1image_1ad14ef108582c92e59fb418d6b9ba59e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::image::make</definition>
+        <argsstring>(VkFormat format, VkImage vk_image=0)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::image::make</qualifiedname>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>vk_image</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Make a new image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vk_image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan image </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" kindref="member">s_ptr</ref> Shared pointer to image </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="88" column="18" bodyfile="liblava/resource/image.hpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1image_1ae408421e055cf4cf8449334d2c1444ec" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::image::image</definition>
+        <argsstring>(VkFormat format, VkImage vk_image=0)</argsstring>
+        <name>image</name>
+        <qualifiedname>lava::image::image</qualifiedname>
+        <param>
+          <type>VkFormat</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>VkImage</type>
+          <declname>vk_image</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vk_image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan image </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="98" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a284b3f1b69eac48a0174358eebbfcdfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::image::create</definition>
+        <argsstring>(device::ptr device, uv2 size, VmaMemoryUsage memory_usage=VMA_MEMORY_USAGE_GPU_ONLY, VmaAllocationCreateFlags allocation_flags=0)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::image::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>VmaMemoryUsage</type>
+          <declname>memory_usage</declname>
+          <defval>VMA_MEMORY_USAGE_GPU_ONLY</defval>
+        </param>
+        <param>
+          <type>VmaAllocationCreateFlags</type>
+          <declname>allocation_flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create a new image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vulkan device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memory_usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Memory usage </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>allocation_flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocation flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Create was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a308969f30821832171034ae067ec8b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::destroy</definition>
+        <argsstring>(bool view_only=false)</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::image::destroy</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>view_only</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Destroy the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>view_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destroy only the image view </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a5ce4b73da358d7ca1129804cc42eeace" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::destroy_view</definition>
+        <argsstring>()</argsstring>
+        <name>destroy_view</name>
+        <qualifiedname>lava::image::destroy_view</qualifiedname>
+        <briefdescription>
+<para>Destroy the image view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="123" column="10" bodyfile="liblava/resource/image.hpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a348713a9e679153fe1b1927a9ea58da5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::image::get_device</definition>
+        <argsstring>()</argsstring>
+        <name>get_device</name>
+        <qualifiedname>lava::image::get_device</qualifiedname>
+        <briefdescription>
+<para>Get the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="131" column="17" bodyfile="liblava/resource/image.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a56326b157b1065baa6ec7ce62df91f37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkFormat</type>
+        <definition>VkFormat lava::image::get_format</definition>
+        <argsstring>() const</argsstring>
+        <name>get_format</name>
+        <qualifiedname>lava::image::get_format</qualifiedname>
+        <briefdescription>
+<para>Get the format of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkFormat Image format </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="139" column="14" bodyfile="liblava/resource/image.hpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a8235e7dde660a605abb4a411a015e108" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+        <definition>uv2 lava::image::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <qualifiedname>lava::image::get_size</qualifiedname>
+        <briefdescription>
+<para>Get the size of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref> Image size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="147" column="9" bodyfile="liblava/resource/image.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1ae64efbe5c3f454f790344c11e4565699" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+        <definition>ui32 lava::image::get_depth</definition>
+        <argsstring>() const</argsstring>
+        <name>get_depth</name>
+        <qualifiedname>lava::image::get_depth</qualifiedname>
+        <briefdescription>
+<para>Get the depth of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref> Image depth </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="155" column="10" bodyfile="liblava/resource/image.hpp" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a41636ba2594ebc4d6e677fcb0e542fff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkImage</type>
+        <definition>VkImage lava::image::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::image::get</qualifiedname>
+        <briefdescription>
+<para>Get the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkImage Vulkan image </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="163" column="13" bodyfile="liblava/resource/image.hpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a6843bc71f3f1a318b2ebbcd529235ac4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkImageView</type>
+        <definition>VkImageView lava::image::get_view</definition>
+        <argsstring>() const</argsstring>
+        <name>get_view</name>
+        <qualifiedname>lava::image::get_view</qualifiedname>
+        <briefdescription>
+<para>Get the image view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkImageView Vulkan image view </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="171" column="17" bodyfile="liblava/resource/image.hpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a67a1de54b0819057b3c9e2c22a6d42e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkImageCreateInfo const &amp;</type>
+        <definition>VkImageCreateInfo const  &amp; lava::image::get_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_info</name>
+        <qualifiedname>lava::image::get_info</qualifiedname>
+        <briefdescription>
+<para>Get the image create information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkImageCreateInfo const&amp; Image create information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="179" column="29" bodyfile="liblava/resource/image.hpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a89c804c726969818437a42c5ecaeefe4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkImageViewCreateInfo const &amp;</type>
+        <definition>VkImageViewCreateInfo const  &amp; lava::image::get_view_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_view_info</name>
+        <qualifiedname>lava::image::get_view_info</qualifiedname>
+        <briefdescription>
+<para>Get the image view create information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkImageViewCreateInfo const&amp; Image view create information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="187" column="33" bodyfile="liblava/resource/image.hpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1af01ce34733cc4673f388613f133eb7eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkImageSubresourceRange const &amp;</type>
+        <definition>VkImageSubresourceRange const  &amp; lava::image::get_subresource_range</definition>
+        <argsstring>() const</argsstring>
+        <name>get_subresource_range</name>
+        <qualifiedname>lava::image::get_subresource_range</qualifiedname>
+        <briefdescription>
+<para>Get the subresource range of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkImageSubresourceRange const&amp; Image subresource range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="195" column="35" bodyfile="liblava/resource/image.hpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a6847a06bb922f563c7d5e195de374948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_flags</definition>
+        <argsstring>(VkImageCreateFlagBits flags)</argsstring>
+        <name>set_flags</name>
+        <qualifiedname>lava::image::set_flags</qualifiedname>
+        <param>
+          <type>VkImageCreateFlagBits</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the image create flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image create flag bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="203" column="10" bodyfile="liblava/resource/image.hpp" bodystart="203" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a53b8e4b378090fc6f960c65b3bddf3a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_tiling</definition>
+        <argsstring>(VkImageTiling tiling)</argsstring>
+        <name>set_tiling</name>
+        <qualifiedname>lava::image::set_tiling</qualifiedname>
+        <param>
+          <type>VkImageTiling</type>
+          <declname>tiling</declname>
+        </param>
+        <briefdescription>
+<para>Set the image tiling. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tiling</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image tiling </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="211" column="10" bodyfile="liblava/resource/image.hpp" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a929f1c26de399381e60e4bde5368a243" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_usage</definition>
+        <argsstring>(VkImageUsageFlags usage)</argsstring>
+        <name>set_usage</name>
+        <qualifiedname>lava::image::set_usage</qualifiedname>
+        <param>
+          <type>VkImageUsageFlags</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+<para>Set the image usage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image usage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="219" column="10" bodyfile="liblava/resource/image.hpp" bodystart="219" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a5b961f80dd743811785660a381e7ca19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_layout</definition>
+        <argsstring>(VkImageLayout initial)</argsstring>
+        <name>set_layout</name>
+        <qualifiedname>lava::image::set_layout</qualifiedname>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>initial</declname>
+        </param>
+        <briefdescription>
+<para>Set the initial layout of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="227" column="10" bodyfile="liblava/resource/image.hpp" bodystart="227" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1ab1faf46398b75f5bd89392c0e29985c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_aspect_mask</definition>
+        <argsstring>(VkImageAspectFlags aspectMask)</argsstring>
+        <name>set_aspect_mask</name>
+        <qualifiedname>lava::image::set_aspect_mask</qualifiedname>
+        <param>
+          <type>VkImageAspectFlags</type>
+          <declname>aspectMask</declname>
+        </param>
+        <briefdescription>
+<para>Set the aspect mask of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aspectMask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image aspect flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="235" column="10" bodyfile="liblava/resource/image.hpp" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a382972307f78457d7e6e5d5e7645fc78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_level_count</definition>
+        <argsstring>(ui32 levels)</argsstring>
+        <name>set_level_count</name>
+        <qualifiedname>lava::image::set_level_count</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>levels</declname>
+        </param>
+        <briefdescription>
+<para>Set the level count of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>levels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of levels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="243" column="10" bodyfile="liblava/resource/image.hpp" bodystart="243" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1ab2504a00fed7465cdd398ca7d7d3208b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_layer_count</definition>
+        <argsstring>(ui32 layers)</argsstring>
+        <name>set_layer_count</name>
+        <qualifiedname>lava::image::set_layer_count</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>layers</declname>
+        </param>
+        <briefdescription>
+<para>Set the layer count of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of layers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="252" column="10" bodyfile="liblava/resource/image.hpp" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a13c8acbfca50f5f260390367c3b79e62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_component</definition>
+        <argsstring>(VkComponentMapping mapping={})</argsstring>
+        <name>set_component</name>
+        <qualifiedname>lava::image::set_component</qualifiedname>
+        <param>
+          <type>VkComponentMapping</type>
+          <declname>mapping</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Set the component mapping of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mapping</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Component mapping </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="261" column="10" bodyfile="liblava/resource/image.hpp" bodystart="261" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a94c015f268b6b831caa5c5738b0f63e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::image::set_view_type</definition>
+        <argsstring>(VkImageViewType type)</argsstring>
+        <name>set_view_type</name>
+        <qualifiedname>lava::image::set_view_type</qualifiedname>
+        <param>
+          <type>VkImageViewType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Set the view type of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image view type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="269" column="10" bodyfile="liblava/resource/image.hpp" bodystart="269" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1image_1a722042abfe8806799de7bd50d035dbb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VmaAllocation const &amp;</type>
+        <definition>VmaAllocation const  &amp; lava::image::get_allocation</definition>
+        <argsstring>() const</argsstring>
+        <name>get_allocation</name>
+        <qualifiedname>lava::image::get_allocation</qualifiedname>
+        <briefdescription>
+<para>Get the allocation of the image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VmaAllocation const&amp; Image allocation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/resource/image.hpp" line="277" column="25" bodyfile="liblava/resource/image.hpp" bodystart="277" bodyend="279"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Image. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::image</label>
+        <link refid="structlava_1_1image"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::image</label>
+        <link refid="structlava_1_1image"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/resource/image.hpp" line="72" column="1" bodyfile="liblava/resource/image.hpp" bodystart="72" bodyend="302"/>
+    <listofallmembers>
+      <member refid="structlava_1_1image_1a284b3f1b69eac48a0174358eebbfcdfb" prot="public" virt="non-virtual"><scope>lava::image</scope><name>create</name></member>
+      <member refid="structlava_1_1image_1a308969f30821832171034ae067ec8b50" prot="public" virt="non-virtual"><scope>lava::image</scope><name>destroy</name></member>
+      <member refid="structlava_1_1image_1a5ce4b73da358d7ca1129804cc42eeace" prot="public" virt="non-virtual"><scope>lava::image</scope><name>destroy_view</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::image</scope><name>entity</name></member>
+      <member refid="structlava_1_1image_1a41636ba2594ebc4d6e677fcb0e542fff" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get</name></member>
+      <member refid="structlava_1_1image_1a722042abfe8806799de7bd50d035dbb9" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_allocation</name></member>
+      <member refid="structlava_1_1image_1ae64efbe5c3f454f790344c11e4565699" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_depth</name></member>
+      <member refid="structlava_1_1image_1a348713a9e679153fe1b1927a9ea58da5" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_device</name></member>
+      <member refid="structlava_1_1image_1a56326b157b1065baa6ec7ce62df91f37" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_format</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_id</name></member>
+      <member refid="structlava_1_1image_1a67a1de54b0819057b3c9e2c22a6d42e1" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_info</name></member>
+      <member refid="structlava_1_1image_1a8235e7dde660a605abb4a411a015e108" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_size</name></member>
+      <member refid="structlava_1_1image_1af01ce34733cc4673f388613f133eb7eb" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_subresource_range</name></member>
+      <member refid="structlava_1_1image_1a6843bc71f3f1a318b2ebbcd529235ac4" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_view</name></member>
+      <member refid="structlava_1_1image_1a89c804c726969818437a42c5ecaeefe4" prot="public" virt="non-virtual"><scope>lava::image</scope><name>get_view_info</name></member>
+      <member refid="structlava_1_1image_1ae408421e055cf4cf8449334d2c1444ec" prot="public" virt="non-virtual"><scope>lava::image</scope><name>image</name></member>
+      <member refid="structlava_1_1image_1acc0e95ce5bf858776298db51d2d4cd1e" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_allocation</name></member>
+      <member refid="structlava_1_1image_1ac0335c775f54bfe179b93403cf004309" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_device</name></member>
+      <member refid="structlava_1_1image_1aaf8f8765f7cf085d9c87eb35254d4837" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_info</name></member>
+      <member refid="structlava_1_1image_1a574eb6b44a38b2fb47044cb2411fc02e" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_subresource_range</name></member>
+      <member refid="structlava_1_1image_1a59498f29759b6e2fefb770dd3a23512a" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_view</name></member>
+      <member refid="structlava_1_1image_1a0b86888f182d9f069367ffe386bcf4e5" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_view_info</name></member>
+      <member refid="structlava_1_1image_1a28f4d05bac470d365c7e1b495a2b2cf5" prot="private" virt="non-virtual"><scope>lava::image</scope><name>m_vk_image</name></member>
+      <member refid="structlava_1_1image_1ad14ef108582c92e59fb418d6b9ba59e9" prot="public" virt="non-virtual"><scope>lava::image</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::image</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::image</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::image</scope><name>operator=</name></member>
+      <member refid="structlava_1_1image_1a5e307b53ee5524d733a67eb086060d4c" prot="public" virt="non-virtual"><scope>lava::image</scope><name>s_list</name></member>
+      <member refid="structlava_1_1image_1a71d4dfca8630df33b46a5268836f072d" prot="public" virt="non-virtual"><scope>lava::image</scope><name>s_map</name></member>
+      <member refid="structlava_1_1image_1a3268e2cf1bd3e74a86e42ddf8255c8bc" prot="public" virt="non-virtual"><scope>lava::image</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1image_1ab1faf46398b75f5bd89392c0e29985c8" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_aspect_mask</name></member>
+      <member refid="structlava_1_1image_1a13c8acbfca50f5f260390367c3b79e62" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_component</name></member>
+      <member refid="structlava_1_1image_1a6847a06bb922f563c7d5e195de374948" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_flags</name></member>
+      <member refid="structlava_1_1image_1ab2504a00fed7465cdd398ca7d7d3208b" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_layer_count</name></member>
+      <member refid="structlava_1_1image_1a5b961f80dd743811785660a381e7ca19" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_layout</name></member>
+      <member refid="structlava_1_1image_1a382972307f78457d7e6e5d5e7645fc78" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_level_count</name></member>
+      <member refid="structlava_1_1image_1a53b8e4b378090fc6f960c65b3bddf3a8" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_tiling</name></member>
+      <member refid="structlava_1_1image_1a929f1c26de399381e60e4bde5368a243" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_usage</name></member>
+      <member refid="structlava_1_1image_1a94c015f268b6b831caa5c5738b0f63e6" prot="public" virt="non-virtual"><scope>lava::image</scope><name>set_view_type</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::image</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+\doxysection{liblava/base/instance.hpp File Reference}
+\hypertarget{instance_8hpp}{}\label{instance_8hpp}\index{liblava/base/instance.hpp@{liblava/base/instance.hpp}}
+
+
+Vulkan instance.  
+
+
+{\ttfamily \#include "{}liblava/base/physical\+\_\+device.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1instance__info}{lava\+::instance\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Vulkan instance information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1instance}{lava\+::instance}}
+\begin{DoxyCompactList}\small\item\em Vulkan instance. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1instance_1_1create__param}{lava\+::instance\+::create\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em Instance create parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1instance_1_1debug__config}{lava\+::instance\+::debug\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Debug configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{instance_8hpp_a02039b1af3ce40e1e3eb0fd5c51f6548}{lava\+::check}} (\mbox{\hyperlink{structlava_1_1instance_1_1create__param_a0b66823fbd56bf7d1dbe5eb3025234d8}{instance\+::create\+\_\+param\+::ref}} param)
+\begin{DoxyCompactList}\small\item\em Check instance create parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{version_8hpp_ad21c2311c0d3c020c4ee9a7179d3ea2a}{sem\+\_\+version}} \mbox{\hyperlink{instance_8hpp_a1989b9705d9320e5d10639ef1640d9ed}{lava\+::get\+\_\+instance\+\_\+version}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_ad7b553b09e6cd35151635ed61efbe4a4}{Vk\+Layer\+Properties\+List}} \mbox{\hyperlink{instance_8hpp_a556bdf6c21c077ee4296a46b816db543}{lava\+::enumerate\+\_\+layer\+\_\+properties}} ()
+\begin{DoxyCompactList}\small\item\em Enumerate enabled layer properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_a333be9f107cf99eb1bd039d36fc6ee02}{Vk\+Extension\+Properties\+List}} \mbox{\hyperlink{instance_8hpp_aa33e957df60837d53d392a1ce30e3968}{lava\+::enumerate\+\_\+extension\+\_\+properties}} (\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} layer\+\_\+name=nullptr)
+\begin{DoxyCompactList}\small\item\em Enumerate enabled extension properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan instance. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{instance_8hpp_a02039b1af3ce40e1e3eb0fd5c51f6548}\index{instance.hpp@{instance.hpp}!check@{check}}
+\index{check@{check}!instance.hpp@{instance.hpp}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily \label{instance_8hpp_a02039b1af3ce40e1e3eb0fd5c51f6548} 
+bool lava\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1instance_1_1create__param_a0b66823fbd56bf7d1dbe5eb3025234d8}{instance\+::create\+\_\+param\+::ref}}}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Check instance create parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Create parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Check was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{instance_8hpp_aa33e957df60837d53d392a1ce30e3968}\index{instance.hpp@{instance.hpp}!enumerate\_extension\_properties@{enumerate\_extension\_properties}}
+\index{enumerate\_extension\_properties@{enumerate\_extension\_properties}!instance.hpp@{instance.hpp}}
+\doxysubsubsection{\texorpdfstring{enumerate\_extension\_properties()}{enumerate\_extension\_properties()}}
+{\footnotesize\ttfamily \label{instance_8hpp_aa33e957df60837d53d392a1ce30e3968} 
+Vk\+Extension\+Properties\+List lava\+::enumerate\+\_\+extension\+\_\+properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}}]{layer\+\_\+name}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Enumerate enabled extension properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+\_\+name} & Name of layer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Extension\+Properties\+List List of extension properties 
+\end{DoxyReturn}
+\Hypertarget{instance_8hpp_a556bdf6c21c077ee4296a46b816db543}\index{instance.hpp@{instance.hpp}!enumerate\_layer\_properties@{enumerate\_layer\_properties}}
+\index{enumerate\_layer\_properties@{enumerate\_layer\_properties}!instance.hpp@{instance.hpp}}
+\doxysubsubsection{\texorpdfstring{enumerate\_layer\_properties()}{enumerate\_layer\_properties()}}
+{\footnotesize\ttfamily \label{instance_8hpp_a556bdf6c21c077ee4296a46b816db543} 
+Vk\+Layer\+Properties\+List lava\+::enumerate\+\_\+layer\+\_\+properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Enumerate enabled layer properties. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Layer\+Properties\+List List of layer properties 
+\end{DoxyReturn}
+\Hypertarget{instance_8hpp_a1989b9705d9320e5d10639ef1640d9ed}\index{instance.hpp@{instance.hpp}!get\_instance\_version@{get\_instance\_version}}
+\index{get\_instance\_version@{get\_instance\_version}!instance.hpp@{instance.hpp}}
+\doxysubsubsection{\texorpdfstring{get\_instance\_version()}{get\_instance\_version()}}
+{\footnotesize\ttfamily \label{instance_8hpp_a1989b9705d9320e5d10639ef1640d9ed} 
+sem\+\_\+version lava\+::get\+\_\+instance\+\_\+version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the instance version. 
+
+\begin{DoxyReturn}{Returns}
+sem\+\_\+version Version 
+\end{DoxyReturn}

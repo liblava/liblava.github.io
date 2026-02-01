@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1props_1_1item" kind="struct" language="C++" prot="public">
+    <compoundname>lava::props::item</compoundname>
+    <includes refid="props_8hpp" local="no">props.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1props_1_1item_1ac837ec42717d0e7370925ecff4356f78" prot="public" static="no">
+        <type>std::map&lt; <ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref>, <ref refid="structlava_1_1props_1_1item" kindref="compound">item</ref> &gt;</type>
+        <definition>using lava::props::item::map =  std::map&lt;string, item&gt;</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>lava::props::item::map</qualifiedname>
+        <briefdescription>
+<para>Map of items. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/props.hpp" line="29" column="9" bodyfile="liblava/engine/props.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1props_1_1item_1a344be56cab6641896939d7e7919b4831" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref></type>
+        <definition>string lava::props::item::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>lava::props::item::filename</qualifiedname>
+        <briefdescription>
+<para>File name of prop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/props.hpp" line="39" column="16" bodyfile="liblava/engine/props.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1props_1_1item_1ace050fff73424f2adfde9cdda84bb11e" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1file__data" kindref="compound">file_data</ref></type>
+        <definition>file_data lava::props::item::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>lava::props::item::data</qualifiedname>
+        <briefdescription>
+<para>File data of prop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/props.hpp" line="42" column="19" bodyfile="liblava/engine/props.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1props_1_1item_1ada9980fc4f91f50f849252d548330b93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::props::item::item</definition>
+        <argsstring>(string_ref filename)</argsstring>
+        <name>item</name>
+        <qualifiedname>lava::props::item::item</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new prop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/props.hpp" line="35" column="9" bodyfile="liblava/engine/props.hpp" bodystart="35" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Prop item. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>lava::data</label>
+        <link refid="structlava_1_1data"/>
+      </node>
+      <node id="2">
+        <label>lava::file_data</label>
+        <link refid="structlava_1_1file__data"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lava::props::item</label>
+        <link refid="structlava_1_1props_1_1item"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::u_data</label>
+        <link refid="structlava_1_1u__data"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/engine/props.hpp" line="27" column="5" bodyfile="liblava/engine/props.hpp" bodystart="27" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structlava_1_1props_1_1item_1ace050fff73424f2adfde9cdda84bb11e" prot="public" virt="non-virtual"><scope>lava::props::item</scope><name>data</name></member>
+      <member refid="structlava_1_1props_1_1item_1a344be56cab6641896939d7e7919b4831" prot="public" virt="non-virtual"><scope>lava::props::item</scope><name>filename</name></member>
+      <member refid="structlava_1_1props_1_1item_1ada9980fc4f91f50f849252d548330b93" prot="public" virt="non-virtual"><scope>lava::props::item</scope><name>item</name></member>
+      <member refid="structlava_1_1props_1_1item_1ac837ec42717d0e7370925ecff4356f78" prot="public" virt="non-virtual"><scope>lava::props::item</scope><name>map</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

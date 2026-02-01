@@ -1,0 +1,989 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1subpass" kind="struct" language="C++" prot="public">
+    <compoundname>lava::subpass</compoundname>
+    <basecompoundref refid="structlava_1_1entity" prot="public" virt="non-virtual">lava::entity</basecompoundref>
+    <includes refid="subpass_8hpp" local="no">subpass.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1subpass" kindref="compound">subpass</ref> &gt;</type>
+        <definition>using lava::subpass::s_ptr =  std::shared_ptr&lt;subpass&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::subpass::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="19" column="5" bodyfile="liblava/block/subpass.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1subpass_1ad47bf8080d9808aa631430944f1eb610" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::subpass::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::subpass::s_list</qualifiedname>
+        <briefdescription>
+<para>List of subpasses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="22" column="5" bodyfile="liblava/block/subpass.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1subpass_1a8b8f556d0f9ea523fd9cf99bba940e1a" prot="private" static="no" mutable="no">
+        <type>VkSubpassDescription</type>
+        <definition>VkSubpassDescription lava::subpass::m_description</definition>
+        <argsstring></argsstring>
+        <name>m_description</name>
+        <qualifiedname>lava::subpass::m_description</qualifiedname>
+        <briefdescription>
+<para>Vulkan subpass description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="200" column="26" bodyfile="liblava/block/subpass.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a2c585f793cc924c5f25c792b604f2c09" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::subpass::m_active</definition>
+        <argsstring></argsstring>
+        <name>m_active</name>
+        <qualifiedname>lava::subpass::m_active</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="203" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a1a371f9df16f71cf81af79c0a18f52e6" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref></type>
+        <definition>VkAttachmentReferences lava::subpass::m_color_attachments</definition>
+        <argsstring></argsstring>
+        <name>m_color_attachments</name>
+        <qualifiedname>lava::subpass::m_color_attachments</qualifiedname>
+        <briefdescription>
+<para>List of color attachment references. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="206" column="28" bodyfile="liblava/block/subpass.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a40301db79377a76076b94a6e81053f6f" prot="private" static="no" mutable="no">
+        <type>VkAttachmentReference</type>
+        <definition>VkAttachmentReference lava::subpass::m_depth_stencil_attachment</definition>
+        <argsstring></argsstring>
+        <name>m_depth_stencil_attachment</name>
+        <qualifiedname>lava::subpass::m_depth_stencil_attachment</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Depth stencil attachment reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="209" column="27" bodyfile="liblava/block/subpass.hpp" bodystart="209" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a8bab48eb398ba62f43a8fec78a4f6cf2" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref></type>
+        <definition>VkAttachmentReferences lava::subpass::m_input_attachments</definition>
+        <argsstring></argsstring>
+        <name>m_input_attachments</name>
+        <qualifiedname>lava::subpass::m_input_attachments</qualifiedname>
+        <briefdescription>
+<para>List of input attachment references. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="212" column="28" bodyfile="liblava/block/subpass.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a15e8a0386ea4586be298698188647baf" prot="private" static="no" mutable="no">
+        <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref></type>
+        <definition>VkAttachmentReferences lava::subpass::m_resolve_attachments</definition>
+        <argsstring></argsstring>
+        <name>m_resolve_attachments</name>
+        <qualifiedname>lava::subpass::m_resolve_attachments</qualifiedname>
+        <briefdescription>
+<para>List of resolve attachment references. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="215" column="28" bodyfile="liblava/block/subpass.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a9ba17ec729932cc010d672811a71db42" prot="private" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1acc29b973e1c2c9dc4fb5fcc76836c851" kindref="member">index_list</ref></type>
+        <definition>index_list lava::subpass::m_preserve_attachments</definition>
+        <argsstring></argsstring>
+        <name>m_preserve_attachments</name>
+        <qualifiedname>lava::subpass::m_preserve_attachments</qualifiedname>
+        <briefdescription>
+<para>List of preserve attachment indicies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="218" column="16" bodyfile="liblava/block/subpass.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1subpass_1a7fff212f9dca4a3889750bb1cb9a6695" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1render__pipeline_1a4c7ab3e77536e3ab07b747165925e47c" kindref="member">render_pipeline::s_list</ref></type>
+        <definition>render_pipeline::s_list lava::subpass::m_pipelines</definition>
+        <argsstring></argsstring>
+        <name>m_pipelines</name>
+        <qualifiedname>lava::subpass::m_pipelines</qualifiedname>
+        <briefdescription>
+<para>List of render pipelines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="221" column="29" bodyfile="liblava/block/subpass.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1subpass_1a793ed6c510811e14008650290209035b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::subpass::make</definition>
+        <argsstring>(VkPipelineBindPoint pipeline_bind_point=VK_PIPELINE_BIND_POINT_GRAPHICS)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::subpass::make</qualifiedname>
+        <param>
+          <type>VkPipelineBindPoint</type>
+          <declname>pipeline_bind_point</declname>
+          <defval>VK_PIPELINE_BIND_POINT_GRAPHICS</defval>
+        </param>
+        <briefdescription>
+<para>Make a new subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline_bind_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline bind point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" kindref="member">s_ptr</ref> Shared pointer to subpass </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="29" column="18" bodyfile="liblava/block/subpass.hpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1subpass_1a76dd25aac48480780adc0258469513f9" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::subpass::subpass</definition>
+        <argsstring>()</argsstring>
+        <name>subpass</name>
+        <qualifiedname>lava::subpass::subpass</qualifiedname>
+        <briefdescription>
+<para>Construct a new subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="39" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a4fde2abcb620256255f350e44d0b44f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::subpass::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a75e4fca5924ed90f5fe0e716373fb828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::add</definition>
+        <argsstring>(render_pipeline::s_ptr const &amp;pipeline)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::subpass::add</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref> const &amp;</type>
+          <declname>pipeline</declname>
+        </param>
+        <briefdescription>
+<para>Add a render pipeline to the back of the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="50" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a807829577f57c1c098632227a9cb26dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::add_front</definition>
+        <argsstring>(render_pipeline::s_ptr const &amp;pipeline)</argsstring>
+        <name>add_front</name>
+        <qualifiedname>lava::subpass::add_front</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref> const &amp;</type>
+          <declname>pipeline</declname>
+        </param>
+        <briefdescription>
+<para>Add a render pipeline to the fronst of the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="58" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a8f847d6f6b867e49f5b250865b64f830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::remove</definition>
+        <argsstring>(render_pipeline::s_ptr pipeline)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::subpass::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1render__pipeline_1a7177a0f9ce21dd18b6f7befe611649dd" kindref="member">render_pipeline::s_ptr</ref></type>
+          <declname>pipeline</declname>
+        </param>
+        <briefdescription>
+<para>Remove the render pipeline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Render pipeline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a05c9f1f878dfbed31e7e25377e1a4458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::clear_pipelines</definition>
+        <argsstring>()</argsstring>
+        <name>clear_pipelines</name>
+        <qualifiedname>lava::subpass::clear_pipelines</qualifiedname>
+        <briefdescription>
+<para>Clear all pipelines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a3ae1c5277bddba721dcc7b48082e98bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::process</definition>
+        <argsstring>(VkCommandBuffer cmd_buf, uv2 size)</argsstring>
+        <name>process</name>
+        <qualifiedname>lava::subpass::process</qualifiedname>
+        <param>
+          <type>VkCommandBuffer</type>
+          <declname>cmd_buf</declname>
+        </param>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Process the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of render pass </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a1e4da0a00327b8da1792079df42725cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkSubpassDescription const &amp;</type>
+        <definition>VkSubpassDescription const  &amp; lava::subpass::get_description</definition>
+        <argsstring>() const</argsstring>
+        <name>get_description</name>
+        <qualifiedname>lava::subpass::get_description</qualifiedname>
+        <briefdescription>
+<para>Get the description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkSubpassDescription const&amp; Subpass description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="85" column="32" bodyfile="liblava/block/subpass.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1ad19be3f1e899928dd0efe30eaf1da84a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set</definition>
+        <argsstring>(VkPipelineBindPoint pipeline_bind_point)</argsstring>
+        <name>set</name>
+        <qualifiedname>lava::subpass::set</qualifiedname>
+        <param>
+          <type>VkPipelineBindPoint</type>
+          <declname>pipeline_bind_point</declname>
+        </param>
+        <briefdescription>
+<para>Set pipeline bind point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pipeline_bind_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pipeline bind point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="93" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a07c8108157a3f833a54895474fb59c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_color_attachment</definition>
+        <argsstring>(index attachment, VkImageLayout layout)</argsstring>
+        <name>set_color_attachment</name>
+        <qualifiedname>lava::subpass::set_color_attachment</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the color attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of attachment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a04e391ff3ee209bc6c7f6d3177074898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_color_attachment</definition>
+        <argsstring>(VkAttachmentReference attachment)</argsstring>
+        <name>set_color_attachment</name>
+        <qualifiedname>lava::subpass::set_color_attachment</qualifiedname>
+        <param>
+          <type>VkAttachmentReference</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Set the color attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1ab4024a06eaa5fdd6608aedb64e03d1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_color_attachments</definition>
+        <argsstring>(VkAttachmentReferences const &amp;attachments)</argsstring>
+        <name>set_color_attachments</name>
+        <qualifiedname>lava::subpass::set_color_attachments</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref> const &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+<para>Set the color attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of attachment references </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="115" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1ad870bc766852f9adae9514b281102ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_depth_stencil_attachment</definition>
+        <argsstring>(index attachment, VkImageLayout layout)</argsstring>
+        <name>set_depth_stencil_attachment</name>
+        <qualifiedname>lava::subpass::set_depth_stencil_attachment</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the depth stencil attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of attachment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="122" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1aeb9f9d0858ba6573712d218d4044e47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_depth_stencil_attachment</definition>
+        <argsstring>(VkAttachmentReference attachment)</argsstring>
+        <name>set_depth_stencil_attachment</name>
+        <qualifiedname>lava::subpass::set_depth_stencil_attachment</qualifiedname>
+        <param>
+          <type>VkAttachmentReference</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Set the depth stencil attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="129" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a68d540bc77bc6b62d53824991f5ff855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_input_attachment</definition>
+        <argsstring>(index attachment, VkImageLayout layout)</argsstring>
+        <name>set_input_attachment</name>
+        <qualifiedname>lava::subpass::set_input_attachment</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the input attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of attachment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="136" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a327b7254cd476fe596f0f4a2e80eedfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_input_attachment</definition>
+        <argsstring>(VkAttachmentReference attachment)</argsstring>
+        <name>set_input_attachment</name>
+        <qualifiedname>lava::subpass::set_input_attachment</qualifiedname>
+        <param>
+          <type>VkAttachmentReference</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Set the input attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="143" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a6d974580a8b1de95a2d260a29fa11636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_input_attachments</definition>
+        <argsstring>(VkAttachmentReferences const &amp;attachments)</argsstring>
+        <name>set_input_attachments</name>
+        <qualifiedname>lava::subpass::set_input_attachments</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref> const &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+<para>Set the input attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of attachment references </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="149" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a98a3ccafe55c4b7ff19f608ed16a31d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_resolve_attachment</definition>
+        <argsstring>(index attachment, VkImageLayout layout)</argsstring>
+        <name>set_resolve_attachment</name>
+        <qualifiedname>lava::subpass::set_resolve_attachment</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type>VkImageLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Set the resolve attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of attachment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image layout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="156" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a0424377a7d502ef733fbc4b88da7cec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_resolve_attachment</definition>
+        <argsstring>(VkAttachmentReference attachment)</argsstring>
+        <name>set_resolve_attachment</name>
+        <qualifiedname>lava::subpass::set_resolve_attachment</qualifiedname>
+        <param>
+          <type>VkAttachmentReference</type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Set the resolve attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attachment reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="162" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a9012ff1423ff76824633e60c0751e571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_resolve_attachments</definition>
+        <argsstring>(VkAttachmentReferences const &amp;attachments)</argsstring>
+        <name>set_resolve_attachments</name>
+        <qualifiedname>lava::subpass::set_resolve_attachments</qualifiedname>
+        <param>
+          <type><ref refid="base_2base_8hpp_1a49b85313d387c435f27e09e6277e0834" kindref="member">VkAttachmentReferences</ref> const &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+<para>Set the resolve attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of attachment references </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="168" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a79fe7e33a020f5f7694e4bfdc5c48ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::add_preserve_attachment</definition>
+        <argsstring>(index attachment)</argsstring>
+        <name>add_preserve_attachment</name>
+        <qualifiedname>lava::subpass::add_preserve_attachment</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <briefdescription>
+<para>Add preserve attachment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of attachment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="174" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a5cd9c4124bc0e7eecbecf0ca710c4995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_preserve_attachments</definition>
+        <argsstring>(index_list const &amp;attachments)</argsstring>
+        <name>set_preserve_attachments</name>
+        <qualifiedname>lava::subpass::set_preserve_attachments</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1acc29b973e1c2c9dc4fb5fcc76836c851" kindref="member">index_list</ref> const &amp;</type>
+          <declname>attachments</declname>
+        </param>
+        <briefdescription>
+<para>Set the preserve attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attachments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of indices </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="180" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1a6fe9b5ae07617946e7ae71a008dd31d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::subpass::set_active</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>set_active</name>
+        <qualifiedname>lava::subpass::set_active</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Activate or deactivate the subpass. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="186" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1subpass_1aec07eb2ef2df0960fa64d88ac3437921" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::subpass::activated</definition>
+        <argsstring>() const</argsstring>
+        <name>activated</name>
+        <qualifiedname>lava::subpass::activated</qualifiedname>
+        <briefdescription>
+<para>Check if subpass is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Subpass is active or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/subpass.hpp" line="194" column="10" bodyfile="liblava/block/subpass.hpp" bodystart="194" bodyend="196"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Subpass. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::subpass</label>
+        <link refid="structlava_1_1subpass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="3">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="1">
+        <label>lava::subpass</label>
+        <link refid="structlava_1_1subpass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/block/subpass.hpp" line="17" column="1" bodyfile="liblava/block/subpass.hpp" bodystart="17" bodyend="222"/>
+    <listofallmembers>
+      <member refid="structlava_1_1subpass_1aec07eb2ef2df0960fa64d88ac3437921" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>activated</name></member>
+      <member refid="structlava_1_1subpass_1a75e4fca5924ed90f5fe0e716373fb828" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>add</name></member>
+      <member refid="structlava_1_1subpass_1a807829577f57c1c098632227a9cb26dd" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>add_front</name></member>
+      <member refid="structlava_1_1subpass_1a79fe7e33a020f5f7694e4bfdc5c48ae6" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>add_preserve_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a05c9f1f878dfbed31e7e25377e1a4458" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>clear_pipelines</name></member>
+      <member refid="structlava_1_1subpass_1a4fde2abcb620256255f350e44d0b44f8" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>destroy</name></member>
+      <member refid="structlava_1_1entity_1a39066de3954adf265c61c28f0a3b521c" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>entity</name></member>
+      <member refid="structlava_1_1subpass_1a1e4da0a00327b8da1792079df42725cd" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>get_description</name></member>
+      <member refid="structlava_1_1entity_1adfe6db1cb4d47cd34c36d3225e3571b7" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>get_id</name></member>
+      <member refid="structlava_1_1subpass_1a2c585f793cc924c5f25c792b604f2c09" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_active</name></member>
+      <member refid="structlava_1_1subpass_1a1a371f9df16f71cf81af79c0a18f52e6" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_color_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a40301db79377a76076b94a6e81053f6f" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_depth_stencil_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a8b8f556d0f9ea523fd9cf99bba940e1a" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_description</name></member>
+      <member refid="structlava_1_1subpass_1a8bab48eb398ba62f43a8fec78a4f6cf2" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_input_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a7fff212f9dca4a3889750bb1cb9a6695" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_pipelines</name></member>
+      <member refid="structlava_1_1subpass_1a9ba17ec729932cc010d672811a71db42" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_preserve_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a15e8a0386ea4586be298698188647baf" prot="private" virt="non-virtual"><scope>lava::subpass</scope><name>m_resolve_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a793ed6c510811e14008650290209035b" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>make</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1ac97369ee1b1a70996ab3b9b24bf26432" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1a7942908379614cbb8d6260192d76347c" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>no_copy_no_move</name></member>
+      <member refid="structlava_1_1no__copy__no__move_1aa3211995685035c9ca4d0a3a7e4b5ac8" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>operator=</name></member>
+      <member refid="structlava_1_1subpass_1a3ae1c5277bddba721dcc7b48082e98bc" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>process</name></member>
+      <member refid="structlava_1_1subpass_1a8f847d6f6b867e49f5b250865b64f830" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>remove</name></member>
+      <member refid="structlava_1_1subpass_1ad47bf8080d9808aa631430944f1eb610" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>s_list</name></member>
+      <member refid="structlava_1_1subpass_1a0626da80e598a5ee3386eb0abd2b3591" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1subpass_1ad19be3f1e899928dd0efe30eaf1da84a" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set</name></member>
+      <member refid="structlava_1_1subpass_1a6fe9b5ae07617946e7ae71a008dd31d7" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_active</name></member>
+      <member refid="structlava_1_1subpass_1a07c8108157a3f833a54895474fb59c49" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_color_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a04e391ff3ee209bc6c7f6d3177074898" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_color_attachment</name></member>
+      <member refid="structlava_1_1subpass_1ab4024a06eaa5fdd6608aedb64e03d1d3" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_color_attachments</name></member>
+      <member refid="structlava_1_1subpass_1ad870bc766852f9adae9514b281102ead" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_depth_stencil_attachment</name></member>
+      <member refid="structlava_1_1subpass_1aeb9f9d0858ba6573712d218d4044e47a" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_depth_stencil_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a68d540bc77bc6b62d53824991f5ff855" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_input_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a327b7254cd476fe596f0f4a2e80eedfb" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_input_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a6d974580a8b1de95a2d260a29fa11636" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_input_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a5cd9c4124bc0e7eecbecf0ca710c4995" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_preserve_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a98a3ccafe55c4b7ff19f608ed16a31d1" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_resolve_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a0424377a7d502ef733fbc4b88da7cec3" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_resolve_attachment</name></member>
+      <member refid="structlava_1_1subpass_1a9012ff1423ff76824633e60c0751e571" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>set_resolve_attachments</name></member>
+      <member refid="structlava_1_1subpass_1a76dd25aac48480780adc0258469513f9" prot="public" virt="non-virtual"><scope>lava::subpass</scope><name>subpass</name></member>
+      <member refid="structlava_1_1interface_1a9b6fe12d71f6da5dea89d44c62a5a046" prot="public" virt="virtual"><scope>lava::subpass</scope><name>~interface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

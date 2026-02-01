@@ -1,0 +1,73 @@
+\doxysection{lava\+::input\+\_\+callback Struct Reference}
+\hypertarget{structlava_1_1input__callback}{}\label{structlava_1_1input__callback}\index{lava::input\_callback@{lava::input\_callback}}
+
+
+Input callback.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}\label{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e} 
+using {\bfseries cptr} = \mbox{\hyperlink{structlava_1_1input__callback}{input\+\_\+callback}} const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Const pointer to input callback. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_abb9c6298031decc24dd960373ebfdb6a}\label{structlava_1_1input__callback_abb9c6298031decc24dd960373ebfdb6a} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1input__callback}{input\+\_\+callback}}\texorpdfstring{$\ast$}{*}$>$
+\begin{DoxyCompactList}\small\item\em List of input callbacks. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_a10239e1631583796cb373223a6921945}\label{structlava_1_1input__callback_a10239e1631583796cb373223a6921945} 
+using {\bfseries clist} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1input__callback_a2c972ff8e44d60f360c13e7757658e4e}{cptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of const input callbacks. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\using \mbox{\hyperlink{structlava_1_1input__callback_ae12caf1409f8cb46dbe97de6876a2a42}{func}} = std\+::function$<$bool(typename T\+::ref)$>$
+\begin{DoxyCompactList}\small\item\em Input callback functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1input__callback_a15e6ab42f64d047fc92a1b5e8df2e877}\label{structlava_1_1input__callback_a15e6ab42f64d047fc92a1b5e8df2e877} 
+\mbox{\hyperlink{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb}{key\+\_\+event\+::func}} {\bfseries on\+\_\+key\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on key event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_ac5bade394647d7860e02b3ea59ddcd17}\label{structlava_1_1input__callback_ac5bade394647d7860e02b3ea59ddcd17} 
+\mbox{\hyperlink{structlava_1_1scroll__event_a2494a4a22f196d6ff881b579b6a78d74}{scroll\+\_\+event\+::func}} {\bfseries on\+\_\+scroll\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on scroll event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_a6e7de5a1d54143950923a5d830cb762c}\label{structlava_1_1input__callback_a6e7de5a1d54143950923a5d830cb762c} 
+\mbox{\hyperlink{structlava_1_1mouse__move__event_a988cc8b1a34fa1d81033db5b97f38188}{mouse\+\_\+move\+\_\+event\+::func}} {\bfseries on\+\_\+mouse\+\_\+move\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on mouse move event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_af242d055d858eaa390f933fa491251b9}\label{structlava_1_1input__callback_af242d055d858eaa390f933fa491251b9} 
+\mbox{\hyperlink{structlava_1_1mouse__button__event_af132bcbe066dc15d70a54a5586f3beaa}{mouse\+\_\+button\+\_\+event\+::func}} {\bfseries on\+\_\+mouse\+\_\+button\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on mouse button event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_a479849fc1d527dc3ef83ecce821889f5}\label{structlava_1_1input__callback_a479849fc1d527dc3ef83ecce821889f5} 
+\mbox{\hyperlink{structlava_1_1mouse__active__event_ab1f097b85a595f3fa6dde0da5ced2d40}{mouse\+\_\+active\+\_\+event\+::func}} {\bfseries on\+\_\+mouse\+\_\+active\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on mouse active event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1input__callback_a9866ee7e9135e230e1ac2d35831f37cf}\label{structlava_1_1input__callback_a9866ee7e9135e230e1ac2d35831f37cf} 
+\mbox{\hyperlink{structlava_1_1path__drop__event_a73a774e2649235422bdc30cc0ba7e780}{path\+\_\+drop\+\_\+event\+::func}} {\bfseries on\+\_\+path\+\_\+drop\+\_\+event}
+\begin{DoxyCompactList}\small\item\em Called on path drop event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input callback. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structlava_1_1input__callback_ae12caf1409f8cb46dbe97de6876a2a42}\index{lava::input\_callback@{lava::input\_callback}!func@{func}}
+\index{func@{func}!lava::input\_callback@{lava::input\_callback}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily \label{structlava_1_1input__callback_ae12caf1409f8cb46dbe97de6876a2a42} 
+template$<$typename T$>$ \\
+using \mbox{\hyperlink{structlava_1_1input__callback_ae12caf1409f8cb46dbe97de6876a2a42}{lava\+::input\+\_\+callback\+::func}} = std\+::function$<$bool(typename T\+::ref)$>$}
+
+
+
+Input callback functions. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of callback \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

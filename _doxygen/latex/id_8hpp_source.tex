@@ -1,0 +1,195 @@
+\doxysection{id.\+hpp}
+\hypertarget{id_8hpp_source}{}\label{id_8hpp_source}\index{liblava/core/id.hpp@{liblava/core/id.hpp}}
+\mbox{\hyperlink{id_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1id_a1caf19994deda21262dac41097b54de3}{id}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{ref}}\ =\ \textcolor{keywordtype}{id}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a5681d138e316875b5c91f34110f6b7ca}{set}}\ =\ std::set<id>;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a8cb3dbbd2611027c0b2b095db094bb81}{set\_ref}}\ =\ \mbox{\hyperlink{structlava_1_1id_a5681d138e316875b5c91f34110f6b7ca}{set}}\ \textcolor{keyword}{const}\&;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a76fc344f9c0b634c58611fb0a73528dd}{list}}\ =\ std::vector<id>;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a454b3ed8f4e34c06cef590e45bdd6f45}{map}}\ =\ std::map<id,\ id>;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a8328204a339b365090eb0c68a31560f1}{index\_map}}\ =\ std::map<id,\ index>;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id_a5a8dc3a1db21f6e29cb4518f465b1bb3}{string\_map}}\ =\ std::map<id,\ string>;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a1caf19994deda21262dac41097b54de3}{id}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a18c9a54cc887849df0195bd9a3a03c2a}{id}}(\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}})}
+\DoxyCodeLine{00054\ \ \ \ \ :\ \mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}}(\mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}})\ \{\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}}\ =\ \mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\_index}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1id_ade2d3cd5e892b75c94c8028c75e72c71}{valid}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}}\ !=\ \mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\_index}};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structlava_1_1id_ab9fd67ed78ec6d91cb691d850fe21815}{to\_string}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::to\_string(\mbox{\hyperlink{structlava_1_1id_a8dd9c3002186af2d2d15d778238e488a}{value}});}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1id_a576815d2775ff7d95a746322d50f9c57}{invalidate}}()\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ *\textcolor{keyword}{this}\ =\ \{\};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structlava_1_1id_a11620ef3741fe0f21f47aa5d21da131f}{operator<=>}}(\textcolor{keywordtype}{id}\ \textcolor{keyword}{const}\&)\ \textcolor{keyword}{const}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{using\ }\mbox{\hyperlink{id_8hpp_a2d3147f9bf9e67cdbc6ac4a2f39d13b6}{string\_id\_map}}\ =\ std::map<string,\ id>;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{id}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{id_8hpp_aa17c8404456cc4dbfea9a0762a615de5}{undef\_id}}\ =\ \mbox{\hyperlink{structlava_1_1id}{id}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{id_8hpp_afddb4bf323e954e08ff48b8514cb573e}{to\_id}}(\textcolor{keyword}{auto}\ value)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\textcolor{keyword}{>}(value)\};}
+\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1ids}{ids}}\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1ids}{ids}}\&\ \mbox{\hyperlink{structlava_1_1ids_a6ac8629822301912e5ba3f9f787a1d40}{instance}}()\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structlava_1_1ids}{ids}}\ \mbox{\hyperlink{structlava_1_1ids}{ids}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1ids}{ids}};}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{structlava_1_1ids_a7dddb91a681d2250c2b8f8f89e64eadb}{next}}()\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{++m\_next\};}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ std::atomic<index>\ m\_next\ =\ \{\mbox{\hyperlink{types_8hpp_a90deae5aeca0497b3b7e6c6316ac5105}{no\_index}}\};}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00137\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{id_8hpp_a41a466c284bc15c02b328e694b8ea3da}{add\_id\_map}}(T\ \textcolor{keyword}{const}\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<id,\ T>\&\ map)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{auto}\ next\ =\ \mbox{\hyperlink{structlava_1_1ids_a6ac8629822301912e5ba3f9f787a1d40}{ids::instance}}().\mbox{\hyperlink{structlava_1_1ids_a7dddb91a681d2250c2b8f8f89e64eadb}{next}}();}
+\DoxyCodeLine{00140\ \ \ \ \ map.emplace(next,\ std::move(\textcolor{keywordtype}{object}));}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{00142\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00151\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00152\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{id_8hpp_aecb510e0885f800ae029d60aa3c9e131}{remove\_id\_map}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<id,\ T>\&\ map)\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (!map.count(object\_id))}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ map.erase(object\_id);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00167\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1id__listeners}{id\_listeners}}\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{structlava_1_1id__listeners_acf4ca2ae9e29117f4e73aeaf193a18aa}{add}}(\textcolor{keyword}{typename}\ T::func\ \textcolor{keyword}{const}\&\ listener)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{id_8hpp_a41a466c284bc15c02b328e694b8ea3da}{add\_id\_map}}(listener,\ m\_list);}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1id__listeners_a6b0e6db05a239a3959f7f8587bc77a95}{remove}}(\textcolor{keywordtype}{id}\&\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{id_8hpp_aecb510e0885f800ae029d60aa3c9e131}{remove\_id\_map}}(\textcolor{keywordtype}{id},\ m\_list))}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}.invalidate();}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{typename}\ T::listeners\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1id__listeners_af4de5a83a8ddeb599bb464c2d6d185e1}{get\_list}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_list;}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{typename}\ T::listeners\ m\_list\ =\ \{\};}
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1entity_a39066de3954adf265c61c28f0a3b521c}{entity}}\ :\ \mbox{\hyperlink{structlava_1_1no__copy__no__move_ac97369ee1b1a70996ab3b9b24bf26432}{no\_copy\_no\_move}},\ \mbox{\hyperlink{structlava_1_1interface}{interface}}\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{structlava_1_1entity_a39066de3954adf265c61c28f0a3b521c}{entity}}()}
+\DoxyCodeLine{00207\ \ \ \ \ :\ m\_id(\mbox{\hyperlink{structlava_1_1ids}{ids}}::\mbox{\hyperlink{structlava_1_1instance}{instance}}().next())\ \{\}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00213\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\_id}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_id;}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{id}\ m\_id;}
+\DoxyCodeLine{00220\ \};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ Meta>}
+\DoxyCodeLine{00228\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1id__registry}{id\_registry}}\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id__registry_aace8a32d21e2f7ae833d156314ec5234}{s\_ptr}}\ =\ std::shared\_ptr<T>;}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id__registry_a485b50a5c6a7566d10d70675b002db70}{s\_map}}\ =\ std::map<id,\ s\_ptr>;}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}{meta\_map}}\ =\ std::map<id,\ Meta>;}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{id}\ \mbox{\hyperlink{structlava_1_1id__registry_a17f7cda234e50ef2b3baa76a4d3f4234}{create}}(Meta\ info\ =\ \{\})\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keywordtype}{object}\ =\ std::make\_shared<T>();}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_a5b0bf79cb4c321728640787613735f3f}{add}}(\textcolor{keywordtype}{object},\ info);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{object}-\/>get\_id();}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1id__registry_a5b0bf79cb4c321728640787613735f3f}{add}}(\mbox{\hyperlink{structlava_1_1id__registry_aace8a32d21e2f7ae833d156314ec5234}{s\_ptr}}\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ Meta\ info\ =\ \{\})\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ m\_objects.emplace(object-\/>get\_id(),\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ m\_meta.emplace(object-\/>get\_id(),\ info);}
+\DoxyCodeLine{00259\ \ \ \ \ \}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1id__registry_a1ef7f586431ea57e7e1cd8046ce4e5d7}{exists}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_objects.count(object\_id);}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00275\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_aace8a32d21e2f7ae833d156314ec5234}{s\_ptr}}\ \mbox{\hyperlink{structlava_1_1id__registry_ad307cb6ec788483366d6388424d78241}{get}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_objects.at(object\_id);}
+\DoxyCodeLine{00277\ \ \ \ \ \}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00284\ \ \ \ \ Meta\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1id__registry_aa44e8196ff58f515776f7395779f3860}{get\_meta}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_meta.at(object\_id);}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00292\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_a485b50a5c6a7566d10d70675b002db70}{s\_map}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1id__registry_a34fdce0eeaec6102cc6d6447b2c1306f}{get\_all}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_objects;}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}{meta\_map}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{structlava_1_1id__registry_abe1072366fcd4133bf88fe572c437c02}{get\_all\_meta}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_meta;}
+\DoxyCodeLine{00302\ \ \ \ \ \}}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1id__registry_a538de7261d27bb2f3618fd955a59cfce}{update}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id,}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Meta\ \textcolor{keyword}{const}\&\ meta)\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structlava_1_1id__registry_a1ef7f586431ea57e7e1cd8046ce4e5d7}{exists}}(object\_id))}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ m\_meta.at(object\_id)\ =\ meta;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1id__registry_a5f050d3ebb14fb5e3d2ba1e3afad1468}{remove}}(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id::ref}}\ object\_id)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ m\_objects.erase(object\_id);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ m\_meta.erase(object\_id);}
+\DoxyCodeLine{00326\ \ \ \ \ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1id__registry_a46dc3451b22f67ca87c551529565ace6}{clear}}()\ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ m\_objects.clear();}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ m\_meta.clear();}
+\DoxyCodeLine{00334\ \ \ \ \ \}}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00338\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_a485b50a5c6a7566d10d70675b002db70}{s\_map}}\ m\_objects;}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{structlava_1_1id__registry_aba3cc34d6a51590b48e6b611f48e04b2}{meta\_map}}\ m\_meta;}
+\DoxyCodeLine{00342\ \};}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

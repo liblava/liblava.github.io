@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1id__listeners" kind="struct" language="C++" prot="public">
+    <compoundname>lava::id_listeners</compoundname>
+    <includes refid="id_8hpp" local="no">id.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1id__listeners_1a1ee5a133f7a6117025d3fa99afc9c83b" prot="private" static="no" mutable="no">
+        <type>T::listeners</type>
+        <definition>T::listeners lava::id_listeners&lt; T &gt;::m_list</definition>
+        <argsstring></argsstring>
+        <name>m_list</name>
+        <qualifiedname>lava::id_listeners::m_list</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>List of listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="196" column="27" bodyfile="liblava/core/id.hpp" bodystart="196" bodyend="196"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1id__listeners_1acf4ca2ae9e29117f4e73aeaf193a18aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1id" kindref="compound">id</ref></type>
+        <definition>id lava::id_listeners&lt; T &gt;::add</definition>
+        <argsstring>(typename T::func const &amp;listener)</argsstring>
+        <name>add</name>
+        <qualifiedname>lava::id_listeners::add</qualifiedname>
+        <param>
+          <type>typename T::func const &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Add listener to map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target listener </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id Id of listener </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="173" column="8" bodyfile="liblava/core/id.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__listeners_1a6b0e6db05a239a3959f7f8587bc77a95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::id_listeners&lt; T &gt;::remove</definition>
+        <argsstring>(id &amp;id)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::id_listeners::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id" kindref="compound">id</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Remove listener from map by id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of listener </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="181" column="10" bodyfile="liblava/core/id.hpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1id__listeners_1af4de5a83a8ddeb599bb464c2d6d185e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T::listeners const &amp;</type>
+        <definition>T::listeners const  &amp; lava::id_listeners&lt; T &gt;::get_list</definition>
+        <argsstring>() const</argsstring>
+        <name>get_list</name>
+        <qualifiedname>lava::id_listeners::get_list</qualifiedname>
+        <briefdescription>
+<para>Get the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>T::listeners const&amp; List of listeners </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/core/id.hpp" line="190" column="33" bodyfile="liblava/core/id.hpp" bodystart="190" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Id listeners. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Listener </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="liblava/core/id.hpp" line="167" column="1" bodyfile="liblava/core/id.hpp" bodystart="167" bodyend="197"/>
+    <listofallmembers>
+      <member refid="structlava_1_1id__listeners_1acf4ca2ae9e29117f4e73aeaf193a18aa" prot="public" virt="non-virtual"><scope>lava::id_listeners</scope><name>add</name></member>
+      <member refid="structlava_1_1id__listeners_1af4de5a83a8ddeb599bb464c2d6d185e1" prot="public" virt="non-virtual"><scope>lava::id_listeners</scope><name>get_list</name></member>
+      <member refid="structlava_1_1id__listeners_1a1ee5a133f7a6117025d3fa99afc9c83b" prot="private" virt="non-virtual"><scope>lava::id_listeners</scope><name>m_list</name></member>
+      <member refid="structlava_1_1id__listeners_1a6b0e6db05a239a3959f7f8587bc77a95" prot="public" virt="non-virtual"><scope>lava::id_listeners</scope><name>remove</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

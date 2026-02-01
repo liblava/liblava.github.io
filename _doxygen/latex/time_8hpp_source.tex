@@ -1,0 +1,143 @@
+\doxysection{time.\+hpp}
+\hypertarget{time_8hpp_source}{}\label{time_8hpp_source}\index{liblava/core/time.hpp@{liblava/core/time.hpp}}
+\mbox{\hyperlink{time_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{types_8hpp}{liblava/core/types.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }std::chrono\_literals;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}}\ =\ std::chrono::seconds;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}}\ =\ std::chrono::milliseconds;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ =\ \mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a19eb584453abf1fc7f751b248bf938e6}{microseconds}}\ =\ std::chrono::microseconds;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}}\ =\ \mbox{\hyperlink{time_8hpp_a19eb584453abf1fc7f751b248bf938e6}{microseconds}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{time_8hpp_a39ed948807608027e5388132ca978739}{one\_second}}\ =\ \mbox{\hyperlink{time_8hpp_a44912e21e239eb2372d12ebb2cb0ce24}{seconds}}(1);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{time_8hpp_a206f3112b3871d88333c93b934c9ddd8}{one\_ms}}\ =\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}(1);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{time_8hpp_ad18d86f53c5264d018a96d02444e7a89}{one\_us}}\ =\ \mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}}(1);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_a1f53d10927ebf0e207581df6022c0989}{clock}}\ =\ std::chrono::high\_resolution\_clock;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_aa73b568ecb0def83e5d41f2731731a1c}{time\_point}}\ =\ clock::time\_point;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{using\ }\mbox{\hyperlink{time_8hpp_ab0d0ccd686e34ffd37c486c278552f98}{duration}}\ =\ clock::duration;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ \mbox{\hyperlink{time_8hpp_a56103af37e9e492515a76dc05975b379}{to\_delta}}(\mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}})\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}.count()\ /\ 1000.f;}
+\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ \mbox{\hyperlink{time_8hpp_a5a9ff164b025aac83c0ae087b5c31e3d}{to\_dt}}(\mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}})\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a56103af37e9e492515a76dc05975b379}{to\_delta}}(\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}});}
+\DoxyCodeLine{00067\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{types_8hpp_ac5a07aee91729f6ed77bd47fd1095218}{real}}\ \mbox{\hyperlink{time_8hpp_a9d5bf259deae56c66dd9eeaf562c5c42}{to\_sec}}(\mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}.count()\ /\ 1000.;}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}\ \mbox{\hyperlink{time_8hpp_a8626d59679b46f72c1d605edc6a66235}{to\_sec\_fix}}(\mbox{\hyperlink{time_8hpp_a2420fab3139b1aa75388807c29fabbfb}{milliseconds}}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}})\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(\mbox{\hyperlink{time_8hpp_a9d5bf259deae56c66dd9eeaf562c5c42}{to\_sec}}(\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}));}
+\DoxyCodeLine{00085\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{time_8hpp_ac2432e735e962579aa315c70a152ea90}{to\_ms}}(\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}\ dt)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(dt\ *\ 1000.f));}
+\DoxyCodeLine{00094\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{time_8hpp_ac2432e735e962579aa315c70a152ea90}{to\_ms}}(\mbox{\hyperlink{types_8hpp_ac5a07aee91729f6ed77bd47fd1095218}{real}}\ sec)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}(\mbox{\hyperlink{types_8hpp_a39cae746a7d2b802c1bd35d63b899532}{to\_i32}}(sec\ *\ 1000.));}
+\DoxyCodeLine{00103\ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1timer_a5786fcc8734370e5e02f5a2fda5b1553}{timer}}\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{structlava_1_1timer_a5786fcc8734370e5e02f5a2fda5b1553}{timer}}()}
+\DoxyCodeLine{00113\ \ \ \ \ :\ m\_start\_time(\mbox{\hyperlink{time_8hpp_a1f53d10927ebf0e207581df6022c0989}{clock}}::\mbox{\hyperlink{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe}{now}}())\ \{\}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlava_1_1timer_a46007b2925753b7d42d6363d50b81b52}{reset}}()\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ m\_start\_time\ =\ clock::now();}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1timer_a59cf056a575c94dead8e14d1fb7a0844}{elapsed}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<ms>(clock::now()}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/\ m\_start\_time);}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{time_8hpp_aa73b568ecb0def83e5d41f2731731a1c}{time\_point}}\ m\_start\_time;}
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1run__time}{run\_time}}\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1run__time_a837306909e9b4e666d5d5b41031f3524}{current}}\{0\};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1run__time_a974851dacedc756e402eff89ae042e5c}{clock}}\{16\};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1run__time_a563cec832cb3945c0c4ec3ea16f32de7}{system}}\{0\};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1run__time_ab5b11ae9abf6d099f2cc73678012eaed}{delta}}\{0\};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{structlava_1_1run__time_a18d25c6027dd85423f1a9bf5f3f529d1}{fix\_delta}}\{0\};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}\ \mbox{\hyperlink{structlava_1_1run__time_af05cf1cf47fa0397838e449618ece2bc}{speed}}\ =\ 1.f;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1run__time_a9fa360a31be0127611854b83a886bfd3}{paused}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00160\ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ warning(push)}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ warning(disable\ :\ 4996)\ }\textcolor{comment}{//\_CRT\_SECURE\_NO\_WARNINGS}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ CLOCK\_TYPE\ =\ std::chrono::system\_clock>}
+\DoxyCodeLine{00175\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{time_8hpp_a5234ff682ffd6e6cebd07408286a1c12}{timestamp}}(\textcolor{keyword}{const}\ \textcolor{keyword}{typename}\ CLOCK\_TYPE::time\_point\&\ \mbox{\hyperlink{time_8hpp_aa73b568ecb0def83e5d41f2731731a1c}{time\_point}},}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\_ref}}\ format\ =\ \textcolor{stringliteral}{"{}\%Y-\/\%m-\/\%d\ \%H-\/\%M-\/\%S"{}})\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ =\ std::chrono::duration\_cast<milliseconds>(}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{time_8hpp_aa73b568ecb0def83e5d41f2731731a1c}{time\_point}}.time\_since\_epoch())}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \%\ 1000;}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ t\ =\ CLOCK\_TYPE::to\_time\_t(\mbox{\hyperlink{time_8hpp_aa73b568ecb0def83e5d41f2731731a1c}{time\_point}});}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ tm\ =\ *std::localtime(std::addressof(t));}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ std::ostringstream\ stm;}
+\DoxyCodeLine{00185\ \ \ \ \ stm\ <<\ std::put\_time(std::addressof(tm),\ \mbox{\hyperlink{types_8hpp_ad11094258ce2dac54b79917ae31198b6}{str}}(format))}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ <<\ \textcolor{charliteral}{'.'}\ <<\ std::setfill(\textcolor{charliteral}{'0'})\ <<\ std::setw(3)\ <<\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}.count();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ stm.str();}
+\DoxyCodeLine{00188\ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{time_8hpp_a386bd7c3577aefd1a30788b1aa88d95a}{get\_current\_time}}()\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe}{now}}\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_a5234ff682ffd6e6cebd07408286a1c12}{timestamp}}(\mbox{\hyperlink{frame_2frame_8hpp_a0c842d5a8e181f26ac56e0cb9890f4fe}{now}});}
+\DoxyCodeLine{00197\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ warning(pop)}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}}\ \mbox{\hyperlink{time_8hpp_ab3c0e85a397c761e92162b76a4ee369e}{get\_current\_timestamp\_ms}}()\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<ms>(}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ clock::now().time\_since\_epoch());}
+\DoxyCodeLine{00210\ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{time_8hpp_a8583565dc80df92137aee37ba544c024}{us}}\ \mbox{\hyperlink{time_8hpp_a426ec2454365e2707061effc9e72d623}{get\_current\_timestamp\_us}}()\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<us>(}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ clock::now().time\_since\_epoch());}
+\DoxyCodeLine{00219\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00225\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}\ \mbox{\hyperlink{time_8hpp_a7a41bf2f96da788189a29b8e9363cfa2}{get\_current\_timestamp}}()\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{time_8hpp_ab3c0e85a397c761e92162b76a4ee369e}{get\_current\_timestamp\_ms}}().count();}
+\DoxyCodeLine{00227\ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

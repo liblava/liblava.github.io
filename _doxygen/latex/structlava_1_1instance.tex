@@ -1,0 +1,167 @@
+\doxysection{lava\+::instance Struct Reference}
+\hypertarget{structlava_1_1instance}{}\label{structlava_1_1instance}\index{lava::instance@{lava::instance}}
+
+
+Vulkan instance.  
+
+
+
+
+{\ttfamily \#include $<$instance.\+hpp$>$}
+
+Inheritance diagram for lava\+::instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structlava_1_1instance}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1instance_1_1create__param}{create\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em Instance create parameters. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1instance_1_1debug__config}{debug\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Debug configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1instance_a54427f9f67da9c7cbc4d2a9e526a3e70}{create}} (\mbox{\hyperlink{structlava_1_1instance_1_1create__param}{create\+\_\+param}} \&param, \mbox{\hyperlink{structlava_1_1instance_1_1debug__config_a1809669e55b5c23595b8f34a5a4c78a6}{debug\+\_\+config\+::ref}} debug, \mbox{\hyperlink{structlava_1_1instance__info_abe480a9712d125f4af32e90a350e2988}{instance\+\_\+info\+::ref}} info)
+\begin{DoxyCompactList}\small\item\em Create a new instance. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1instance_aa68e1aa8933ce3df5170feca2164737b}\label{structlava_1_1instance_aa68e1aa8933ce3df5170feca2164737b} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06}{physical\+\_\+device\+::s\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1instance_aaada1c479de995a87fc41fab4620f688}{get\+\_\+physical\+\_\+devices}} () const
+\begin{DoxyCompactList}\small\item\em Get the physical devices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b}{physical\+\_\+device\+::ref}} \mbox{\hyperlink{structlava_1_1instance_affb637336615a523044f24506b47d1c7}{get\+\_\+first\+\_\+physical\+\_\+device}} () const
+\begin{DoxyCompactList}\small\item\em Get the first physical device. \end{DoxyCompactList}\item 
+Vk\+Instance \mbox{\hyperlink{structlava_1_1instance_a602e22b1bc2ab77e5bdfd6fa2b503cad}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the Vulkan instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1instance_1_1debug__config_a1809669e55b5c23595b8f34a5a4c78a6}{debug\+\_\+config\+::ref}} \mbox{\hyperlink{structlava_1_1instance_a37471bcd43d6038145cc9a0f07085314}{get\+\_\+debug\+\_\+config}} () const
+\begin{DoxyCompactList}\small\item\em Get the debug configuration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1instance__info_abe480a9712d125f4af32e90a350e2988}{instance\+\_\+info\+::ref}} \mbox{\hyperlink{structlava_1_1instance_aa7e50df024aa54a8695ca8820262a69f}{get\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the instance information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1instance}{instance}} \& \mbox{\hyperlink{structlava_1_1instance_ae2188212d1ba1219f5570b0860377613}{singleton}} ()
+\begin{DoxyCompactList}\small\item\em Instance singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan instance. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1instance_a54427f9f67da9c7cbc4d2a9e526a3e70}\index{lava::instance@{lava::instance}!create@{create}}
+\index{create@{create}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_a54427f9f67da9c7cbc4d2a9e526a3e70} 
+bool lava\+::instance\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1instance_1_1create__param}{create\+\_\+param}} \&}]{param}{, }\item[{\mbox{\hyperlink{structlava_1_1instance_1_1debug__config_a1809669e55b5c23595b8f34a5a4c78a6}{debug\+\_\+config\+::ref}}}]{debug}{, }\item[{\mbox{\hyperlink{structlava_1_1instance__info_abe480a9712d125f4af32e90a350e2988}{instance\+\_\+info\+::ref}}}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Create a new instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Create parameters \\
+\hline
+{\em debug} & Debug configuration \\
+\hline
+{\em info} & Instance information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_a602e22b1bc2ab77e5bdfd6fa2b503cad}\index{lava::instance@{lava::instance}!get@{get}}
+\index{get@{get}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_a602e22b1bc2ab77e5bdfd6fa2b503cad} 
+Vk\+Instance lava\+::instance\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Vulkan instance. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Instance Vulkan instance 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_a37471bcd43d6038145cc9a0f07085314}\index{lava::instance@{lava::instance}!get\_debug\_config@{get\_debug\_config}}
+\index{get\_debug\_config@{get\_debug\_config}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{get\_debug\_config()}{get\_debug\_config()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_a37471bcd43d6038145cc9a0f07085314} 
+\mbox{\hyperlink{structlava_1_1instance_1_1debug__config_a1809669e55b5c23595b8f34a5a4c78a6}{debug\+\_\+config\+::ref}} lava\+::instance\+::get\+\_\+debug\+\_\+config (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the debug configuration. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1instance_1_1debug__config_a1809669e55b5c23595b8f34a5a4c78a6}{debug\+\_\+config\+::ref} Debug configuration 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_affb637336615a523044f24506b47d1c7}\index{lava::instance@{lava::instance}!get\_first\_physical\_device@{get\_first\_physical\_device}}
+\index{get\_first\_physical\_device@{get\_first\_physical\_device}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{get\_first\_physical\_device()}{get\_first\_physical\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_affb637336615a523044f24506b47d1c7} 
+\mbox{\hyperlink{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b}{physical\+\_\+device\+::ref}} lava\+::instance\+::get\+\_\+first\+\_\+physical\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the first physical device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1physical__device_a6ed241d5a685257e826434c5e393bf1b}{physical\+\_\+device\+::ref} Physcial device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_aa7e50df024aa54a8695ca8820262a69f}\index{lava::instance@{lava::instance}!get\_info@{get\_info}}
+\index{get\_info@{get\_info}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{get\_info()}{get\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_aa7e50df024aa54a8695ca8820262a69f} 
+\mbox{\hyperlink{structlava_1_1instance__info_abe480a9712d125f4af32e90a350e2988}{instance\+\_\+info\+::ref}} lava\+::instance\+::get\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the instance information. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1instance__info_abe480a9712d125f4af32e90a350e2988}{instance\+\_\+info\+::ref} Instance information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_aaada1c479de995a87fc41fab4620f688}\index{lava::instance@{lava::instance}!get\_physical\_devices@{get\_physical\_devices}}
+\index{get\_physical\_devices@{get\_physical\_devices}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{get\_physical\_devices()}{get\_physical\_devices()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_aaada1c479de995a87fc41fab4620f688} 
+\mbox{\hyperlink{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06}{physical\+\_\+device\+::s\+\_\+list}} const  \& lava\+::instance\+::get\+\_\+physical\+\_\+devices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the physical devices. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1physical__device_af97370e82248ac90728d234353f3bd06}{physical\+\_\+device\+::s\+\_\+list} const\& List of physical devices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1instance_ae2188212d1ba1219f5570b0860377613}\index{lava::instance@{lava::instance}!singleton@{singleton}}
+\index{singleton@{singleton}!lava::instance@{lava::instance}}
+\doxysubsubsection{\texorpdfstring{singleton()}{singleton()}}
+{\footnotesize\ttfamily \label{structlava_1_1instance_ae2188212d1ba1219f5570b0860377613} 
+static \mbox{\hyperlink{structlava_1_1instance}{instance}} \& lava\+::instance\+::singleton (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Instance singleton. 
+
+\begin{DoxyReturn}{Returns}
+instance\& Instance 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/base/\mbox{\hyperlink{instance_8hpp}{instance.\+hpp}}\end{DoxyCompactItemize}

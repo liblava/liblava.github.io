@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1platform" kind="struct" language="C++" prot="public">
+    <compoundname>lava::platform</compoundname>
+    <includes refid="platform_8hpp" local="no">platform.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1platform_1a804d1c6344c71df02428ca2b5f42e286" prot="public" static="no">
+        <type><ref refid="structlava_1_1platform" kindref="compound">platform</ref> *</type>
+        <definition>using lava::platform::ptr =  platform*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::platform::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to platform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="19" column="5" bodyfile="liblava/base/platform.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1platform_1a394d22d0bc7339bb446cc10cde021895" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="structlava_1_1device_1_1create__param" kindref="compound">device::create_param</ref> &amp;)&gt;</type>
+        <definition>using lava::platform::create_param_func =  std::function&lt;void(device::create_param&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>create_param_func</name>
+        <qualifiedname>lava::platform::create_param_func</qualifiedname>
+        <briefdescription>
+<para>Create parameter function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="68" column="5" bodyfile="liblava/base/platform.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1platform_1a540e774cad983aa99fa00681188ae0da" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1platform_1a394d22d0bc7339bb446cc10cde021895" kindref="member">create_param_func</ref></type>
+        <definition>create_param_func lava::platform::on_create_param</definition>
+        <argsstring></argsstring>
+        <name>on_create_param</name>
+        <qualifiedname>lava::platform::on_create_param</qualifiedname>
+        <briefdescription>
+<para>Called on create to adjust the create parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="71" column="23" bodyfile="liblava/base/platform.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1platform_1afb3da3034c79c40a805e8a77b1b0d558" prot="private" static="no" mutable="no">
+        <type><ref refid="structlava_1_1device_1a8169f8aeb9080ac355a8764ee7a4827b" kindref="member">device::s_list</ref></type>
+        <definition>device::s_list lava::platform::m_devices</definition>
+        <argsstring></argsstring>
+        <name>m_devices</name>
+        <qualifiedname>lava::platform::m_devices</qualifiedname>
+        <briefdescription>
+<para>List of managed devices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="75" column="20" bodyfile="liblava/base/platform.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1platform_1acc8990717eeaf72b967e34b20a8fdbb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">device::s_ptr</ref></type>
+        <definition>device::s_ptr lava::platform::create</definition>
+        <argsstring>(index physical_device=0)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::platform::create</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>physical_device</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create a managed device from a physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="structlava_1_1physical__device" kindref="compound">physical_device</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of physical device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">device::s_ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="26" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1ae53ca1c7ce200688c15cbb07f4375b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">device::s_ptr</ref></type>
+        <definition>device::s_ptr lava::platform::create</definition>
+        <argsstring>(device::create_param::ref param)</argsstring>
+        <name>create</name>
+        <qualifiedname>lava::platform::create</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1device_1_1create__param_1a9461eed9d139014e80e2eed33d835cb0" kindref="member">device::create_param::ref</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Create a managed device with create parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Create parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">device::s_ptr</ref> Vulkan device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="33" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1ad8c92fb882e5df968c3eee54de280c8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a6f7d378ef30e7bf1cd4fe208de859250" kindref="member">device::ptr</ref></type>
+        <definition>device::ptr lava::platform::create_device</definition>
+        <argsstring>(index physical_device=0)</argsstring>
+        <name>create_device</name>
+        <qualifiedname>lava::platform::create_device</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>physical_device</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create a managed device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="structlava_1_1physical__device" kindref="compound">physical_device</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Physical device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1device_1a0f818905b248104d2238558fe1cd4086" kindref="member">device::s_ptr</ref> Pointer to device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="40" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1a99bd2eb05dae301e7ba4e68798b48f1c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1device_1a8169f8aeb9080ac355a8764ee7a4827b" kindref="member">device::s_list</ref> const &amp;</type>
+        <definition>device::s_list const  &amp; lava::platform::get_devices</definition>
+        <argsstring>() const</argsstring>
+        <name>get_devices</name>
+        <qualifiedname>lava::platform::get_devices</qualifiedname>
+        <briefdescription>
+<para>Get all devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structlava_1_1device_1a8169f8aeb9080ac355a8764ee7a4827b" kindref="member">device::s_list</ref> const&amp; List of devices </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="46" column="26" bodyfile="liblava/base/platform.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1a7a74dab7b396cb2bf35cb0ce5f60c987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::platform::wait_idle</definition>
+        <argsstring>()</argsstring>
+        <name>wait_idle</name>
+        <qualifiedname>lava::platform::wait_idle</qualifiedname>
+        <briefdescription>
+<para>Wait for idle on all managed devices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1aa9f0c3a4956cad217783b13b53597ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::platform::remove</definition>
+        <argsstring>(id::ref device_id)</argsstring>
+        <name>remove</name>
+        <qualifiedname>lava::platform::remove</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1id_1a226df789a94177f765bdcaac2988eda0" kindref="member">id::ref</ref></type>
+          <declname>device_id</declname>
+        </param>
+        <briefdescription>
+<para>Remove device from platform. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Remove was successful or failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1platform_1a197da16d082fb67b9f4f6efb52e7abf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::platform::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::platform::clear</qualifiedname>
+        <briefdescription>
+<para>Clear all managed devices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/base/platform.hpp" line="65" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Stage platform. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/base/platform.hpp" line="17" column="1" bodyfile="liblava/base/platform.hpp" bodystart="17" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structlava_1_1platform_1a197da16d082fb67b9f4f6efb52e7abf4" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>clear</name></member>
+      <member refid="structlava_1_1platform_1acc8990717eeaf72b967e34b20a8fdbb0" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>create</name></member>
+      <member refid="structlava_1_1platform_1ae53ca1c7ce200688c15cbb07f4375b05" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>create</name></member>
+      <member refid="structlava_1_1platform_1ad8c92fb882e5df968c3eee54de280c8f" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>create_device</name></member>
+      <member refid="structlava_1_1platform_1a394d22d0bc7339bb446cc10cde021895" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>create_param_func</name></member>
+      <member refid="structlava_1_1platform_1a99bd2eb05dae301e7ba4e68798b48f1c" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>get_devices</name></member>
+      <member refid="structlava_1_1platform_1afb3da3034c79c40a805e8a77b1b0d558" prot="private" virt="non-virtual"><scope>lava::platform</scope><name>m_devices</name></member>
+      <member refid="structlava_1_1platform_1a540e774cad983aa99fa00681188ae0da" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>on_create_param</name></member>
+      <member refid="structlava_1_1platform_1a804d1c6344c71df02428ca2b5f42e286" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>ptr</name></member>
+      <member refid="structlava_1_1platform_1aa9f0c3a4956cad217783b13b53597ef5" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>remove</name></member>
+      <member refid="structlava_1_1platform_1a7a74dab7b396cb2bf35cb0ce5f60c987" prot="public" virt="non-virtual"><scope>lava::platform</scope><name>wait_idle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

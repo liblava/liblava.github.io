@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1producer" kind="struct" language="C++" prot="public">
+    <compoundname>lava::producer</compoundname>
+    <includes refid="producer_8hpp" local="no">producer.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396" prot="public" static="no" strong="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <name>shader_optimization</name>
+        <qualifiedname>lava::producer::shader_optimization</qualifiedname>
+        <enumvalue id="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396a008b80bee6917b0d5009f34f5f0c1548" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396afb73504ca4078a343c8f0f16b60b7e0a" prot="public">
+          <name>size</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396a8507ba0225523de60c4dfcca5478627f" prot="public">
+          <name>performance</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Shader optimization level. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="124" column="5" bodyfile="liblava/engine/producer.hpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="enum" id="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfb" prot="public" static="no" strong="no">
+        <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+        <name>shader_language</name>
+        <qualifiedname>lava::producer::shader_language</qualifiedname>
+        <enumvalue id="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfba338753ab2f71d5c7be17b5e8287a5b4c" prot="public">
+          <name>glsl</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfbaa2ed96f77fdc81a1a3fc50bc234ce85f" prot="public">
+          <name>hlsl</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Shader source language. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="136" column="5" bodyfile="liblava/engine/producer.hpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1producer_1a1c35bbf5017f998e492ec5fa8b161a8f" prot="public" static="no">
+        <type><ref refid="structlava_1_1producer" kindref="compound">producer</ref> *</type>
+        <definition>using lava::producer::ptr =  producer*</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>lava::producer::ptr</qualifiedname>
+        <briefdescription>
+<para>Pointer to producer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="29" column="5" bodyfile="liblava/engine/producer.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structlava_1_1producer_1abd3fe607665940e7921ab3fd98c52103" prot="private" static="no">
+        <type>std::map&lt; <ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref>, <ref refid="structlava_1_1data" kindref="compound">data</ref> &gt;</type>
+        <definition>using lava::producer::shader_map =  std::map&lt;string, data&gt;</definition>
+        <argsstring></argsstring>
+        <name>shader_map</name>
+        <qualifiedname>lava::producer::shader_map</qualifiedname>
+        <briefdescription>
+<para>Map of shader products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="164" column="5" bodyfile="liblava/engine/producer.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1producer_1a0246341f434c17fa0b727e552c496488" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1engine" kindref="compound">engine</ref> *</type>
+        <definition>engine* lava::producer::app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <qualifiedname>lava::producer::app</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Engine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="32" column="12" bodyfile="liblava/engine/producer.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1producer_1ad7ec786d9a89d95bd28c3c7cd380aea2" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id__registry" kindref="compound">id_registry</ref>&lt; <ref refid="mesh_8hpp_1ad5ed4a99e12848d76d0097c2599e6341" kindref="member">mesh</ref>, <ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref> &gt;</type>
+        <definition>id_registry&lt;mesh, string&gt; lava::producer::meshes</definition>
+        <argsstring></argsstring>
+        <name>meshes</name>
+        <qualifiedname>lava::producer::meshes</qualifiedname>
+        <briefdescription>
+<para>Mesh products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="116" column="17" bodyfile="liblava/engine/producer.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1producer_1af03bcb173ef9d6633556d5f08d90f081" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1id__registry" kindref="compound">id_registry</ref>&lt; <ref refid="structlava_1_1texture" kindref="compound">texture</ref>, <ref refid="types_8hpp_1a56891e6c1c56efa24abd6b84f71d9145" kindref="member">string</ref> &gt;</type>
+        <definition>id_registry&lt;texture, string&gt; lava::producer::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <qualifiedname>lava::producer::textures</qualifiedname>
+        <briefdescription>
+<para>Texture products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="119" column="17" bodyfile="liblava/engine/producer.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1producer_1a50036267bb97fc294b73d18b41471498" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396" kindref="member">shader_optimization</ref></type>
+        <definition>shader_optimization lava::producer::shader_opt</definition>
+        <argsstring></argsstring>
+        <name>shader_opt</name>
+        <qualifiedname>lava::producer::shader_opt</qualifiedname>
+        <initializer>= shader_optimization::performance</initializer>
+        <briefdescription>
+<para>Shader optimization level. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="131" column="25" bodyfile="liblava/engine/producer.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1producer_1aa4c66fdc83b093ce2269af2f5d5fa977" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfb" kindref="member">shader_language</ref></type>
+        <definition>shader_language lava::producer::shader_lang</definition>
+        <argsstring></argsstring>
+        <name>shader_lang</name>
+        <qualifiedname>lava::producer::shader_lang</qualifiedname>
+        <initializer>= shader_language::glsl</initializer>
+        <briefdescription>
+<para>Shader source language. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="142" column="21" bodyfile="liblava/engine/producer.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1producer_1ab3bc54229e400f0803732a80223fb8c6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lava::producer::shader_debug</definition>
+        <argsstring></argsstring>
+        <name>shader_debug</name>
+        <qualifiedname>lava::producer::shader_debug</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Shader debug information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="145" column="10" bodyfile="liblava/engine/producer.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1producer_1a90b43b04aee71748d03cc5b6954d831f" prot="private" static="no" mutable="no">
+        <type>shader_map</type>
+        <definition>shader_map lava::producer::m_shaders</definition>
+        <argsstring></argsstring>
+        <name>m_shaders</name>
+        <qualifiedname>lava::producer::m_shaders</qualifiedname>
+        <briefdescription>
+<para>Shader products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="167" column="16" bodyfile="liblava/engine/producer.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1producer_1a15fbf775b6c4477dedcba17f905860bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template_1aeeef7bb3ec744b5281a113e570bd6988" kindref="member">mesh::s_ptr</ref></type>
+        <definition>mesh::s_ptr lava::producer::create_mesh</definition>
+        <argsstring>(mesh_type mesh_type)</argsstring>
+        <name>create_mesh</name>
+        <qualifiedname>lava::producer::create_mesh</qualifiedname>
+        <param>
+          <type><ref refid="primitive_8hpp_1afa8a64b09dc1ec2d28ac5cb426fb79bf" kindref="member">mesh_type</ref></type>
+          <declname>mesh_type</declname>
+        </param>
+        <briefdescription>
+<para>Create a mesh product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="primitive_8hpp_1afa8a64b09dc1ec2d28ac5cb426fb79bf" kindref="member">mesh_type</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of mesh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1mesh__template_1aeeef7bb3ec744b5281a113e570bd6988" kindref="member">mesh::s_ptr</ref> Mesh </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="39" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1af51971921ad6b75df9578d89f24849cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1mesh__template_1aeeef7bb3ec744b5281a113e570bd6988" kindref="member">mesh::s_ptr</ref></type>
+        <definition>mesh::s_ptr lava::producer::get_mesh</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>get_mesh</name>
+        <qualifiedname>lava::producer::get_mesh</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get mesh by prop name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1mesh__template_1aeeef7bb3ec744b5281a113e570bd6988" kindref="member">mesh::s_ptr</ref> Mesh </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="46" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a794527d9bd34d7fd42c9d4e44985cd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::producer::add_mesh</definition>
+        <argsstring>(mesh::s_ptr mesh)</argsstring>
+        <name>add_mesh</name>
+        <qualifiedname>lava::producer::add_mesh</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1mesh__template_1aeeef7bb3ec744b5281a113e570bd6988" kindref="member">mesh::s_ptr</ref></type>
+          <declname>mesh</declname>
+        </param>
+        <briefdescription>
+<para>Add mesh to products. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Added to products or already exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1af44cc8412da26682a3961e8cd3c66590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref></type>
+        <definition>texture::s_ptr lava::producer::create_texture</definition>
+        <argsstring>(uv2 size)</argsstring>
+        <name>create_texture</name>
+        <qualifiedname>lava::producer::create_texture</qualifiedname>
+        <param>
+          <type><ref refid="math_8hpp_1ad63e913ea06491bbe4e45588b35587df" kindref="member">uv2</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Create a texture product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of texture </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref> Default texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="60" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a7017f850dad5f8c9800629aa107427d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref></type>
+        <definition>texture::s_ptr lava::producer::get_texture</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>get_texture</name>
+        <qualifiedname>lava::producer::get_texture</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get texture by prop name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of prop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref> Texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="67" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1afcc8c8b59d1d6ead4e728ff321c5fd17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::producer::add_texture</definition>
+        <argsstring>(texture::s_ptr product)</argsstring>
+        <name>add_texture</name>
+        <qualifiedname>lava::producer::add_texture</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1texture_1a0fd62a3dd974f573e5134ed498140360" kindref="member">texture::s_ptr</ref></type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+<para>Add texture to products. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>product</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Texture </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Added to products or already exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a5efa0fdbad2f60aa21d9f9c4a72161d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref></type>
+        <definition>c_data lava::producer::get_shader</definition>
+        <argsstring>(string_ref name, bool reload=false)</argsstring>
+        <name>get_shader</name>
+        <qualifiedname>lava::producer::get_shader</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reload</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Generate shader by prop name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of shader </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reload shader </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref> Shader data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="82" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a1e0b2eb5de50571933068b22a1f9a997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref></type>
+        <definition>c_data lava::producer::reload_shader</definition>
+        <argsstring>(string_ref name)</argsstring>
+        <name>reload_shader</name>
+        <qualifiedname>lava::producer::reload_shader</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Regenerate shader by prop name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of shader </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref> Shader data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="90" column="12" bodyfile="liblava/engine/producer.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a7646ea144e25fbb1e176bacbb943276c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlava_1_1data" kindref="compound">data</ref></type>
+        <definition>data lava::producer::compile_shader</definition>
+        <argsstring>(c_data product, string_ref name, string_ref filename) const</argsstring>
+        <name>compile_shader</name>
+        <qualifiedname>lava::producer::compile_shader</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1c__data" kindref="compound">c_data</ref></type>
+          <declname>product</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Compile shader. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>product</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader filename </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>data Compiled shader data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1aeea5c08661de1850daf7c392aee1d99d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::producer::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <qualifiedname>lava::producer::destroy</qualifiedname>
+        <briefdescription>
+<para>Destroy all products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="108" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1a66b908590b9c22b43cbefd78b4553b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::producer::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>lava::producer::clear</qualifiedname>
+        <briefdescription>
+<para>Clear all products. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="113" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structlava_1_1producer_1a6cfef6e6e8903d480b8a7ebe359480c3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::producer::update_hash</definition>
+        <argsstring>(string_ref name, string_map_ref file_hash_map) const</argsstring>
+        <name>update_hash</name>
+        <qualifiedname>lava::producer::update_hash</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1acd143c32ef342857c26c8623ac1fc92c" kindref="member">string_map_ref</ref></type>
+          <declname>file_hash_map</declname>
+        </param>
+        <briefdescription>
+<para>Update file hash. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file_hash_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map of used files with hash </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="153" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1producer_1ada843bdec0940a9cbbd3c4a6207292ff" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lava::producer::valid_shader</definition>
+        <argsstring>(string_ref name) const</argsstring>
+        <name>valid_shader</name>
+        <qualifiedname>lava::producer::valid_shader</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a01c2a7bfa24e7ea76ef5a79d8d4daaf6" kindref="member">string_ref</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check if shader file(s) changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of shader </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Shader is valid or has changed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/engine/producer.hpp" line="161" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Producer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="15">
+        <label>key_event::list</label>
+      </node>
+      <node id="3">
+        <label>lava::app</label>
+        <link refid="structlava_1_1app"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>window</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>imgui</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>imgui_config</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>tooltips</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>staging</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>block</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>shading</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>fs</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>config_file</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>lava::app_config</label>
+        <link refid="structlava_1_1app__config"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>imgui_font</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>lava::block</label>
+        <link refid="structlava_1_1block"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>lava::camera</label>
+        <link refid="structlava_1_1camera"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>lava::configurable</label>
+        <link refid="structlava_1_1configurable"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>lava::data</label>
+        <link refid="structlava_1_1data"/>
+      </node>
+      <node id="32">
+        <label>lava::device</label>
+        <link refid="structlava_1_1device"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>lava::device_table</label>
+        <link refid="structlava_1_1device__table"/>
+      </node>
+      <node id="2">
+        <label>lava::engine</label>
+        <link refid="structlava_1_1engine"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>props</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>producer</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>lava::entity</label>
+        <link refid="structlava_1_1entity"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>lava::file_system</label>
+        <link refid="structlava_1_1file__system"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>lava::forward_shading</label>
+        <link refid="structlava_1_1forward__shading"/>
+      </node>
+      <node id="4">
+        <label>lava::frame</label>
+        <link refid="structlava_1_1frame"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>run_time</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>platform</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>telegraph</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>lava::gamepad</label>
+        <link refid="structlava_1_1gamepad"/>
+      </node>
+      <node id="47">
+        <label>lava::id_registry&lt; lava::mesh_template&lt; vertex &gt;, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="48">
+        <label>lava::id_registry&lt; lava::texture, string &gt;</label>
+        <link refid="structlava_1_1id__registry"/>
+      </node>
+      <node id="26">
+        <label>lava::imgui</label>
+        <link refid="structlava_1_1imgui"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>layers</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>lava::imgui::config</label>
+        <link refid="structlava_1_1imgui_1_1config"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>icon</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>lava::imgui::font</label>
+        <link refid="structlava_1_1imgui_1_1font"/>
+      </node>
+      <node id="30">
+        <label>lava::imgui::icon_font</label>
+        <link refid="structlava_1_1imgui_1_1icon__font"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>font_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>lava::input</label>
+        <link refid="structlava_1_1input"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>scroll</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mouse_move</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>mouse_button</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>mouse_active</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>path_drop</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>lava::input_events&lt; key_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>lava::input_events&lt; mouse_active_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>lava::input_events&lt; mouse_button_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>lava::input_events&lt; mouse_move_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>lava::input_events&lt; path_drop_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>lava::input_events&lt; scroll_event &gt;</label>
+        <link refid="structlava_1_1input__events"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lava::interface</label>
+        <link refid="structlava_1_1interface"/>
+      </node>
+      <node id="45">
+        <label>lava::json_file</label>
+        <link refid="structlava_1_1json__file"/>
+      </node>
+      <node id="27">
+        <label>lava::layer_list</label>
+        <link refid="structlava_1_1layer__list"/>
+      </node>
+      <node id="9">
+        <label>lava::message_dispatcher</label>
+        <link refid="structlava_1_1message__dispatcher"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lava::no_copy_no_move</label>
+        <link refid="structlava_1_1no__copy__no__move"/>
+      </node>
+      <node id="8">
+        <label>lava::platform</label>
+        <link refid="structlava_1_1platform"/>
+      </node>
+      <node id="1">
+        <label>lava::producer</label>
+        <link refid="structlava_1_1producer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>meshes</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>textures</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>lava::props</label>
+        <link refid="structlava_1_1props"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>lava::renderer</label>
+        <link refid="structlava_1_1renderer"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>lava::run_time</label>
+        <link refid="structlava_1_1run__time"/>
+      </node>
+      <node id="36">
+        <label>lava::staging</label>
+        <link refid="structlava_1_1staging"/>
+      </node>
+      <node id="43">
+        <label>lava::surface_format_request</label>
+        <link refid="structlava_1_1surface__format__request"/>
+      </node>
+      <node id="10">
+        <label>lava::telegraph</label>
+        <link refid="structlava_1_1telegraph"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>lava::tooltip_list</label>
+        <link refid="structlava_1_1tooltip__list"/>
+      </node>
+      <node id="11">
+        <label>lava::window</label>
+        <link refid="structlava_1_1window"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>mouse_active_event::list</label>
+      </node>
+      <node id="21">
+        <label>mouse_button_event::list</label>
+      </node>
+      <node id="19">
+        <label>mouse_move_event::list</label>
+      </node>
+      <node id="25">
+        <label>path_drop_event::list</label>
+      </node>
+      <node id="17">
+        <label>scroll_event::list</label>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/engine/producer.hpp" line="27" column="1" bodyfile="liblava/engine/producer.hpp" bodystart="27" bodyend="168"/>
+    <listofallmembers>
+      <member refid="structlava_1_1producer_1a794527d9bd34d7fd42c9d4e44985cd9b" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>add_mesh</name></member>
+      <member refid="structlava_1_1producer_1afcc8c8b59d1d6ead4e728ff321c5fd17" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>add_texture</name></member>
+      <member refid="structlava_1_1producer_1a0246341f434c17fa0b727e552c496488" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>app</name></member>
+      <member refid="structlava_1_1producer_1a66b908590b9c22b43cbefd78b4553b9f" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>clear</name></member>
+      <member refid="structlava_1_1producer_1a7646ea144e25fbb1e176bacbb943276c" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>compile_shader</name></member>
+      <member refid="structlava_1_1producer_1a15fbf775b6c4477dedcba17f905860bc" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>create_mesh</name></member>
+      <member refid="structlava_1_1producer_1af44cc8412da26682a3961e8cd3c66590" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>create_texture</name></member>
+      <member refid="structlava_1_1producer_1aeea5c08661de1850daf7c392aee1d99d" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>destroy</name></member>
+      <member refid="structlava_1_1producer_1af51971921ad6b75df9578d89f24849cd" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>get_mesh</name></member>
+      <member refid="structlava_1_1producer_1a5efa0fdbad2f60aa21d9f9c4a72161d9" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>get_shader</name></member>
+      <member refid="structlava_1_1producer_1a7017f850dad5f8c9800629aa107427d1" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>get_texture</name></member>
+      <member refid="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfba338753ab2f71d5c7be17b5e8287a5b4c" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>glsl</name></member>
+      <member refid="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfbaa2ed96f77fdc81a1a3fc50bc234ce85f" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>hlsl</name></member>
+      <member refid="structlava_1_1producer_1a90b43b04aee71748d03cc5b6954d831f" prot="private" virt="non-virtual"><scope>lava::producer</scope><name>m_shaders</name></member>
+      <member refid="structlava_1_1producer_1ad7ec786d9a89d95bd28c3c7cd380aea2" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>meshes</name></member>
+      <member refid="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396a008b80bee6917b0d5009f34f5f0c1548" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>none</name></member>
+      <member refid="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396a8507ba0225523de60c4dfcca5478627f" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>performance</name></member>
+      <member refid="structlava_1_1producer_1a1c35bbf5017f998e492ec5fa8b161a8f" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>ptr</name></member>
+      <member refid="structlava_1_1producer_1a1e0b2eb5de50571933068b22a1f9a997" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>reload_shader</name></member>
+      <member refid="structlava_1_1producer_1ab3bc54229e400f0803732a80223fb8c6" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>shader_debug</name></member>
+      <member refid="structlava_1_1producer_1aa4c66fdc83b093ce2269af2f5d5fa977" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>shader_lang</name></member>
+      <member refid="structlava_1_1producer_1a37e9869dd0d1999bbff93c7587575cfb" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>shader_language</name></member>
+      <member refid="structlava_1_1producer_1abd3fe607665940e7921ab3fd98c52103" prot="private" virt="non-virtual"><scope>lava::producer</scope><name>shader_map</name></member>
+      <member refid="structlava_1_1producer_1a50036267bb97fc294b73d18b41471498" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>shader_opt</name></member>
+      <member refid="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>shader_optimization</name></member>
+      <member refid="structlava_1_1producer_1a33c72a1aef3a15861eee5f4ff451e396afb73504ca4078a343c8f0f16b60b7e0a" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>size</name></member>
+      <member refid="structlava_1_1producer_1af03bcb173ef9d6633556d5f08d90f081" prot="public" virt="non-virtual"><scope>lava::producer</scope><name>textures</name></member>
+      <member refid="structlava_1_1producer_1a6cfef6e6e8903d480b8a7ebe359480c3" prot="private" virt="non-virtual"><scope>lava::producer</scope><name>update_hash</name></member>
+      <member refid="structlava_1_1producer_1ada843bdec0940a9cbbd3c4a6207292ff" prot="private" virt="non-virtual"><scope>lava::producer</scope><name>valid_shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

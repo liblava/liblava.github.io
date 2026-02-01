@@ -1,0 +1,392 @@
+\doxysection{lava\+::mesh\+\_\+template\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structlava_1_1mesh__template}{}\label{structlava_1_1mesh__template}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+
+
+Temporary templated mesh.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+hpp$>$}
+
+Inheritance diagram for lava\+::mesh\+\_\+template\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1mesh__template}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}\label{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1mesh__template}{mesh\+\_\+template}}$<$T$>$$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to mesh. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mesh__template_a928d2c024739fe1e0abdda04cabad6ec}\label{structlava_1_1mesh__template_a928d2c024739fe1e0abdda04cabad6ec} 
+using {\bfseries s\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of meshes. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mesh__template_a04be3c660b75fa460305d8e1532a3d6a}\label{structlava_1_1mesh__template_a04be3c660b75fa460305d8e1532a3d6a} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of meshes. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}\label{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a} 
+using {\bfseries vertex\+\_\+list} = std\+::vector$<$T$>$
+\begin{DoxyCompactList}\small\item\em List of vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1mesh__template_ae7534d966bb2e9d5ab383406d8363722}\label{structlava_1_1mesh__template_ae7534d966bb2e9d5ab383406d8363722} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}mesh\+\_\+template} ()
+\begin{DoxyCompactList}\small\item\em Destroy the mesh. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1mesh__template_a65439956dc6df51ccf9a011a2e26cb8e}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, bool mapped=false, Vma\+Memory\+Usage memory\+\_\+usage=VMA\+\_\+\+MEMORY\+\_\+\+USAGE\+\_\+\+CPU\+\_\+\+TO\+\_\+\+GPU)
+\begin{DoxyCompactList}\small\item\em Create a new mesh. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1mesh__template_ac931db5680dd91101a987296b53e960c}\label{structlava_1_1mesh__template_ac931db5680dd91101a987296b53e960c} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f}{bind}} (Vk\+Command\+Buffer cmd\+\_\+buf) const
+\begin{DoxyCompactList}\small\item\em Bind the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5}{draw}} (Vk\+Command\+Buffer cmd\+\_\+buf) const
+\begin{DoxyCompactList}\small\item\em Draw the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template_aeb011c73afe5340e9a72574f2d2c333f}{bind\+\_\+draw}} (Vk\+Command\+Buffer cmd\+\_\+buf) const
+\begin{DoxyCompactList}\small\item\em Bind and draw the mesh. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1mesh__template_aed03147c43b3f14db7622c6183e11b59}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if mesh is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template_a25a6fab4f8ce6532389a8e88d4ef700d}{set\+\_\+data}} (\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ const \&value)
+\begin{DoxyCompactList}\small\item\em Set the mesh data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ \& \mbox{\hyperlink{structlava_1_1mesh__template_acbbf206ddeba856352db1c42862bed59}{get\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the mesh data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1mesh__template_a8b110080cb6cb594a0c51584ef1dce57}{add\+\_\+data}} (\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ const \&value)
+\begin{DoxyCompactList}\small\item\em Add mesh data to existing data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\+\_\+list}} \& \mbox{\hyperlink{structlava_1_1mesh__template_a4f5449dbed9c68def2e84cdbd97bb25a}{get\+\_\+vertices}} ()
+\begin{DoxyCompactList}\small\item\em Get the vertices of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1mesh__template_af19bbd42de50c795c13f5607cf53c3ef}{get\+\_\+vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get the const vertices of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1mesh__template_a2d2462d0bd17f2996f192a1c83e11844}{get\+\_\+vertices\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Get the vertices count of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} \& \mbox{\hyperlink{structlava_1_1mesh__template_a6a33cb7f77dbad21a3b7fada5a751fb3}{get\+\_\+indices}} ()
+\begin{DoxyCompactList}\small\item\em Get the indices of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1mesh__template_a13e0ed80437c331a4e56b20d3f816465}{get\+\_\+indices}} () const
+\begin{DoxyCompactList}\small\item\em Get the const indices of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1mesh__template_aed0db990910482de9b21f3809413468d}{get\+\_\+indices\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Get the indices count of the mesh. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1mesh__template_a53fe723a0b3f47a733aad3c42048b78e}{reload}} ()
+\begin{DoxyCompactList}\small\item\em Reload the mesh data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template_ab993bbce7af4ac1495ae5f2f56dc7c1f}{get\+\_\+vertex\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Get the vertex buffer of the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template_a913250b9f2d63f32bc3151d09a9dc991}{get\+\_\+index\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Get the index buffer of the mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template_a372b62521677d195272f6e24441b5b7a}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = vertex$>$\newline
+struct lava\+::mesh\+\_\+template$<$ T $>$}
+Temporary templated mesh. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vertex struct typename \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1mesh__template_a8b110080cb6cb594a0c51584ef1dce57}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!add\_data@{add\_data}}
+\index{add\_data@{add\_data}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add\_data()}{add\_data()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a8b110080cb6cb594a0c51584ef1dce57} 
+template$<$typename T = vertex$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::add\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ const \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add mesh data to existing data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Mesh data to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!bind@{bind}}
+\index{bind@{bind}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a977d87b340a7c9f048c53f616096ed2f} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::bind (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{}\end{DoxyParamCaption}) const}
+
+
+
+Bind the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template_aeb011c73afe5340e9a72574f2d2c333f}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!bind\_draw@{bind\_draw}}
+\index{bind\_draw@{bind\_draw}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bind\_draw()}{bind\_draw()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_aeb011c73afe5340e9a72574f2d2c333f} 
+template$<$typename T = vertex$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::bind\+\_\+draw (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bind and draw the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template_a65439956dc6df51ccf9a011a2e26cb8e}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!create@{create}}
+\index{create@{create}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a65439956dc6df51ccf9a011a2e26cb8e} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{bool}]{mapped}{ = {\ttfamily false}, }\item[{Vma\+Memory\+Usage}]{memory\+\_\+usage}{ = {\ttfamily VMA\+\_\+MEMORY\+\_\+USAGE\+\_\+CPU\+\_\+TO\+\_\+GPU}}\end{DoxyParamCaption})}
+
+
+
+Create a new mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em mapped} & Map mesh data \\
+\hline
+{\em memory\+\_\+usage} & Memory usage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!draw@{draw}}
+\index{draw@{draw}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a46507f22f7fc1151fd3f94edb027dcc5} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::draw (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd\+\_\+buf}{}\end{DoxyParamCaption}) const}
+
+
+
+Draw the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+buf} & Command buffer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1mesh__template_aed03147c43b3f14db7622c6183e11b59}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_aed03147c43b3f14db7622c6183e11b59} 
+template$<$typename T = vertex$>$ \\
+bool \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if mesh is empty. 
+
+\begin{DoxyReturn}{Returns}
+Mesh is empty or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_acbbf206ddeba856352db1c42862bed59}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_acbbf206ddeba856352db1c42862bed59} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ \& \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the mesh data. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{mesh_8hpp_a516a3f121aa952cd1a58450ffac5b334}{mesh\+\_\+data}\& Mesh data 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a913250b9f2d63f32bc3151d09a9dc991}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_index\_buffer@{get\_index\_buffer}}
+\index{get\_index\_buffer@{get\_index\_buffer}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_index\_buffer()}{get\_index\_buffer()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a913250b9f2d63f32bc3151d09a9dc991} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+index\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index buffer of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr} Shared pointer to buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a6a33cb7f77dbad21a3b7fada5a751fb3}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_indices@{get\_indices}}
+\index{get\_indices@{get\_indices}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_indices()}{get\_indices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a6a33cb7f77dbad21a3b7fada5a751fb3} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} \& \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+indices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the indices of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}\& List of indices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a13e0ed80437c331a4e56b20d3f816465}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_indices@{get\_indices}}
+\index{get\_indices@{get\_indices}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_indices()}{get\_indices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a13e0ed80437c331a4e56b20d3f816465} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list}} const  \& \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+indices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the const indices of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_acc29b973e1c2c9dc4fb5fcc76836c851}{index\+\_\+list} const\& List of indices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_aed0db990910482de9b21f3809413468d}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_indices\_count@{get\_indices\_count}}
+\index{get\_indices\_count@{get\_indices\_count}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_indices\_count()}{get\_indices\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_aed0db990910482de9b21f3809413468d} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+indices\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the indices count of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Number of indices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_ab993bbce7af4ac1495ae5f2f56dc7c1f}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_vertex\_buffer@{get\_vertex\_buffer}}
+\index{get\_vertex\_buffer@{get\_vertex\_buffer}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_vertex\_buffer()}{get\_vertex\_buffer()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_ab993bbce7af4ac1495ae5f2f56dc7c1f} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+vertex\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the vertex buffer of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1buffer_a0f51976de6893d420896e888899858a1}{buffer\+::s\+\_\+ptr} Shared pointer to buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a4f5449dbed9c68def2e84cdbd97bb25a}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_vertices()}{get\_vertices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a4f5449dbed9c68def2e84cdbd97bb25a} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\+\_\+list}} \& \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the vertices of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1vertex_a6eabb986548885259ae4b96c5c48a498}{vertex\+::list}\& List of vertices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_af19bbd42de50c795c13f5607cf53c3ef}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_vertices()}{get\_vertices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_af19bbd42de50c795c13f5607cf53c3ef} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{structlava_1_1mesh__template_a07b101db9b60f2a36dff0f6581d3284a}{vertex\+\_\+list}} const  \& \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+vertices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the const vertices of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1vertex_a6eabb986548885259ae4b96c5c48a498}{vertex\+::list} const\& List of vertices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a2d2462d0bd17f2996f192a1c83e11844}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!get\_vertices\_count@{get\_vertices\_count}}
+\index{get\_vertices\_count@{get\_vertices\_count}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_vertices\_count()}{get\_vertices\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a2d2462d0bd17f2996f192a1c83e11844} 
+template$<$typename T = vertex$>$ \\
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::get\+\_\+vertices\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the vertices count of the mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Number of vertices 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a372b62521677d195272f6e24441b5b7a}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!make@{make}}
+\index{make@{make}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a372b62521677d195272f6e24441b5b7a} 
+template$<$typename T = vertex$>$ \\
+static \mbox{\hyperlink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::make (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new mesh. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1mesh__template_aeeef7bb3ec744b5281a113e570bd6988}{s\+\_\+ptr} Shared pointer to mesh 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a53fe723a0b3f47a733aad3c42048b78e}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!reload@{reload}}
+\index{reload@{reload}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reload()}{reload()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a53fe723a0b3f47a733aad3c42048b78e} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::reload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reload the mesh data. 
+
+\begin{DoxyReturn}{Returns}
+Reload was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1mesh__template_a25a6fab4f8ce6532389a8e88d4ef700d}\index{lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}!set\_data@{set\_data}}
+\index{set\_data@{set\_data}!lava::mesh\_template$<$ T $>$@{lava::mesh\_template$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_data()}{set\_data()}}
+{\footnotesize\ttfamily \label{structlava_1_1mesh__template_a25a6fab4f8ce6532389a8e88d4ef700d} 
+template$<$typename T = vertex$>$ \\
+void \mbox{\hyperlink{structlava_1_1mesh__template}{lava\+::mesh\+\_\+template}}$<$ T $>$\+::set\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1mesh__template__data}{mesh\+\_\+template\+\_\+data}}$<$ T $>$ const \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the mesh data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Mesh data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{mesh_8hpp}{mesh.\+hpp}}\end{DoxyCompactItemize}

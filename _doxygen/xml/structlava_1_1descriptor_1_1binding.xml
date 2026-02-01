@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1descriptor_1_1binding" kind="struct" language="C++" prot="public">
+    <compoundname>lava::descriptor::binding</compoundname>
+    <includes refid="descriptor_8hpp" local="no">descriptor.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structlava_1_1descriptor_1_1binding_1a1df8d85a8a44b268a649e0e5e3dfca10" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structlava_1_1descriptor_1_1binding" kindref="compound">binding</ref> &gt;</type>
+        <definition>using lava::descriptor::binding::s_ptr =  std::shared_ptr&lt;binding&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_ptr</name>
+        <qualifiedname>lava::descriptor::binding::s_ptr</qualifiedname>
+        <briefdescription>
+<para>Shared pointer to binding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="23" column="9" bodyfile="liblava/block/descriptor.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structlava_1_1descriptor_1_1binding_1afb9ae6e820453224e9562729c5aec99e" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structlava_1_1descriptor_1_1binding_1a1df8d85a8a44b268a649e0e5e3dfca10" kindref="member">s_ptr</ref> &gt;</type>
+        <definition>using lava::descriptor::binding::s_list =  std::vector&lt;s_ptr&gt;</definition>
+        <argsstring></argsstring>
+        <name>s_list</name>
+        <qualifiedname>lava::descriptor::binding::s_list</qualifiedname>
+        <briefdescription>
+<para>List of bindings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="26" column="9" bodyfile="liblava/block/descriptor.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structlava_1_1descriptor_1_1binding_1a2b5e9b597a72613a0be649b52155f60d" prot="private" static="no" mutable="no">
+        <type>VkDescriptorSetLayoutBinding</type>
+        <definition>VkDescriptorSetLayoutBinding lava::descriptor::binding::m_vk_binding</definition>
+        <argsstring></argsstring>
+        <name>m_vk_binding</name>
+        <qualifiedname>lava::descriptor::binding::m_vk_binding</qualifiedname>
+        <briefdescription>
+<para>Vulkan binding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="95" column="38" bodyfile="liblava/block/descriptor.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1a86260cc342e5ad73a84c7777d8224d17" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1descriptor_1_1binding_1a1df8d85a8a44b268a649e0e5e3dfca10" kindref="member">s_ptr</ref></type>
+        <definition>static s_ptr lava::descriptor::binding::make</definition>
+        <argsstring>(index index)</argsstring>
+        <name>make</name>
+        <qualifiedname>lava::descriptor::binding::make</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Make a new descriptor binding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binding index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ptr Shared pointer to descriptor binding </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="33" column="22" bodyfile="liblava/block/descriptor.hpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1a946af81bcb8055f786f1e6ba90ebefb0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>lava::descriptor::binding::binding</definition>
+        <argsstring>()</argsstring>
+        <name>binding</name>
+        <qualifiedname>lava::descriptor::binding::binding</qualifiedname>
+        <briefdescription>
+<para>Construct a new binding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1aaf2faa3cb381c46a74dcd6fff272a4cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>VkDescriptorSetLayoutBinding const &amp;</type>
+        <definition>VkDescriptorSetLayoutBinding const  &amp; lava::descriptor::binding::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <qualifiedname>lava::descriptor::binding::get</qualifiedname>
+        <briefdescription>
+<para>Get the Vulkan descriptor set layout binding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VkDescriptorSetLayoutBinding const&amp; Vulkan binding </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="49" column="44" bodyfile="liblava/block/descriptor.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1ae19c025ac25b38f0ce2c299fa9edd223" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::binding::set</definition>
+        <argsstring>(index index)</argsstring>
+        <name>set</name>
+        <qualifiedname>lava::descriptor::binding::set</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a2a40eb7fccb1ebcfd58d6d4b7a078e5c" kindref="member">index</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Det the binding index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binding index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="57" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1af38746b62f1cfa6ac67227d53495a5e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::binding::set_type</definition>
+        <argsstring>(VkDescriptorType descriptor_type)</argsstring>
+        <name>set_type</name>
+        <qualifiedname>lava::descriptor::binding::set_type</qualifiedname>
+        <param>
+          <type>VkDescriptorType</type>
+          <declname>descriptor_type</declname>
+        </param>
+        <briefdescription>
+<para>Set the type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="65" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1a8e513bcd9cc11e5fe6cb8ca7549481a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::binding::set_count</definition>
+        <argsstring>(ui32 descriptor_count)</argsstring>
+        <name>set_count</name>
+        <qualifiedname>lava::descriptor::binding::set_count</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1ae3c4bbc50dd4583ab0df2c24c49a49c9" kindref="member">ui32</ref></type>
+          <declname>descriptor_count</declname>
+        </param>
+        <briefdescription>
+<para>Set the count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>descriptor_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Descriptor count </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="73" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1a7dd8cad97af9912e2004f7b1ed249c4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::binding::set_stage_flags</definition>
+        <argsstring>(VkShaderStageFlags stage_flags)</argsstring>
+        <name>set_stage_flags</name>
+        <qualifiedname>lava::descriptor::binding::set_stage_flags</qualifiedname>
+        <param>
+          <type>VkShaderStageFlags</type>
+          <declname>stage_flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the stage flags. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stage_flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader stage flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="81" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1descriptor_1_1binding_1a06c457792fc5eb3e934757d1c0a496fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::descriptor::binding::set_samplers</definition>
+        <argsstring>(VkSampler const *immutable_samplers)</argsstring>
+        <name>set_samplers</name>
+        <qualifiedname>lava::descriptor::binding::set_samplers</qualifiedname>
+        <param>
+          <type>VkSampler const *</type>
+          <declname>immutable_samplers</declname>
+        </param>
+        <briefdescription>
+<para>Set the samplers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>immutable_samplers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to immutable samplers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/block/descriptor.hpp" line="89" column="14" bodyfile="liblava/block/descriptor.hpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Descriptor binding. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="liblava/block/descriptor.hpp" line="21" column="5" bodyfile="liblava/block/descriptor.hpp" bodystart="21" bodyend="96"/>
+    <listofallmembers>
+      <member refid="structlava_1_1descriptor_1_1binding_1a946af81bcb8055f786f1e6ba90ebefb0" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>binding</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1aaf2faa3cb381c46a74dcd6fff272a4cd" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>get</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a2b5e9b597a72613a0be649b52155f60d" prot="private" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>m_vk_binding</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a86260cc342e5ad73a84c7777d8224d17" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>make</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1afb9ae6e820453224e9562729c5aec99e" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>s_list</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a1df8d85a8a44b268a649e0e5e3dfca10" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>s_ptr</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1ae19c025ac25b38f0ce2c299fa9edd223" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>set</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a8e513bcd9cc11e5fe6cb8ca7549481a0" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>set_count</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a06c457792fc5eb3e934757d1c0a496fc" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>set_samplers</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1a7dd8cad97af9912e2004f7b1ed249c4c" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>set_stage_flags</name></member>
+      <member refid="structlava_1_1descriptor_1_1binding_1af38746b62f1cfa6ac67227d53495a5e0" prot="public" virt="non-virtual"><scope>lava::descriptor::binding</scope><name>set_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

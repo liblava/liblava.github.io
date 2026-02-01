@@ -1,0 +1,155 @@
+\doxysection{lava\+::key\+\_\+event Struct Reference}
+\hypertarget{structlava_1_1key__event}{}\label{structlava_1_1key__event}\index{lava::key\_event@{lava::key\_event}}
+
+
+Key event.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}\label{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1key__event}{key\+\_\+event}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to key event. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb}\label{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb} 
+using {\bfseries func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{ref}})$>$
+\begin{DoxyCompactList}\small\item\em Key event function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_a6570c9bb2733968f3a6dbb6b2eca72ba}\label{structlava_1_1key__event_a6570c9bb2733968f3a6dbb6b2eca72ba} 
+using {\bfseries listeners} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1key__event_af46f759e9b0e04649ddaeb728e6319bb}{func}}$>$
+\begin{DoxyCompactList}\small\item\em List of key event listeners. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_ae4b1616f7d4c856f1cf37073b922db98}\label{structlava_1_1key__event_ae4b1616f7d4c856f1cf37073b922db98} 
+using {\bfseries list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1key__event}{key\+\_\+event}}$>$
+\begin{DoxyCompactList}\small\item\em List of key events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1key__event_a9741e0da20252e7db9164db13a364d13}{pressed}} (\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}} k) const
+\begin{DoxyCompactList}\small\item\em Check if key is pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1key__event_aeff304c2c3388f4d9ec8e305867de9a7}{released}} (\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}} k) const
+\begin{DoxyCompactList}\small\item\em Check if key is released. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1key__event_a97f052f4ac4e070cce94b95980a5e6bc}{repeated}} (\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}} k) const
+\begin{DoxyCompactList}\small\item\em Check if key is repeated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1key__event_a94e716a7a0d261504cae3e65efa730cf}{active}} () const
+\begin{DoxyCompactList}\small\item\em Check if key is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1key__event_ab0b1d8451d6479bf2c889c550a38fc40}{pressed}} (\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}} k, \mbox{\hyperlink{input_8hpp_a7d7f3cb9ffbc3938511999b1c375db33}{mod\+\_\+ref}} m) const
+\begin{DoxyCompactList}\small\item\em Check if key is pressed with mod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1key__event_aad9442a3c233bd4614773f96593ebdfa}\label{structlava_1_1key__event_aad9442a3c233bd4614773f96593ebdfa} 
+\mbox{\hyperlink{structlava_1_1id}{id}} {\bfseries sender}
+\begin{DoxyCompactList}\small\item\em Sender id. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_adb7b3637b448b3f083b7afff4a1eae54}\label{structlava_1_1key__event_adb7b3637b448b3f083b7afff4a1eae54} 
+\mbox{\hyperlink{input_8hpp_a9f1f9c2e6ae8192d1adecd3314877831}{lava\+::key}} {\bfseries key}
+\begin{DoxyCompactList}\small\item\em Input key. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_a9342b7413db949bd2ba7cc799a8114eb}\label{structlava_1_1key__event_a9342b7413db949bd2ba7cc799a8114eb} 
+\mbox{\hyperlink{input_8hpp_a12e8d7909c4de4a74e281bb91cd4a5e7}{lava\+::action}} {\bfseries action}
+\begin{DoxyCompactList}\small\item\em Input action. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_a85219f4377cdd310489ead6d1bc7cedd}\label{structlava_1_1key__event_a85219f4377cdd310489ead6d1bc7cedd} 
+\mbox{\hyperlink{input_8hpp_a83cec806a5f7af14a6981b4760aef6fb}{lava\+::mod}} {\bfseries mod}
+\begin{DoxyCompactList}\small\item\em Input mod. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1key__event_aed419f44822a52508f904146ccb883b7}\label{structlava_1_1key__event_aed419f44822a52508f904146ccb883b7} 
+\mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}} {\bfseries scancode} = 0
+\begin{DoxyCompactList}\small\item\em Input scan code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Key event. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1key__event_a94e716a7a0d261504cae3e65efa730cf}\index{lava::key\_event@{lava::key\_event}!active@{active}}
+\index{active@{active}!lava::key\_event@{lava::key\_event}}
+\doxysubsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily \label{structlava_1_1key__event_a94e716a7a0d261504cae3e65efa730cf} 
+bool lava\+::key\+\_\+event\+::active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if key is active. 
+
+\begin{DoxyReturn}{Returns}
+Key is pressed (and repeated) or not active 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1key__event_a9741e0da20252e7db9164db13a364d13}\index{lava::key\_event@{lava::key\_event}!pressed@{pressed}}
+\index{pressed@{pressed}!lava::key\_event@{lava::key\_event}}
+\doxysubsubsection{\texorpdfstring{pressed()}{pressed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1key__event_a9741e0da20252e7db9164db13a364d13} 
+bool lava\+::key\+\_\+event\+::pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}}}]{k}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if key is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Key to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Key is pressed or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1key__event_ab0b1d8451d6479bf2c889c550a38fc40}\index{lava::key\_event@{lava::key\_event}!pressed@{pressed}}
+\index{pressed@{pressed}!lava::key\_event@{lava::key\_event}}
+\doxysubsubsection{\texorpdfstring{pressed()}{pressed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1key__event_ab0b1d8451d6479bf2c889c550a38fc40} 
+bool lava\+::key\+\_\+event\+::pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}}}]{k}{, }\item[{\mbox{\hyperlink{input_8hpp_a7d7f3cb9ffbc3938511999b1c375db33}{mod\+\_\+ref}}}]{m}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if key is pressed with mod. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Key to check \\
+\hline
+{\em m} & Mods to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Key is pressed with mod or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1key__event_aeff304c2c3388f4d9ec8e305867de9a7}\index{lava::key\_event@{lava::key\_event}!released@{released}}
+\index{released@{released}!lava::key\_event@{lava::key\_event}}
+\doxysubsubsection{\texorpdfstring{released()}{released()}}
+{\footnotesize\ttfamily \label{structlava_1_1key__event_aeff304c2c3388f4d9ec8e305867de9a7} 
+bool lava\+::key\+\_\+event\+::released (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}}}]{k}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if key is released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Key to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Key is released or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1key__event_a97f052f4ac4e070cce94b95980a5e6bc}\index{lava::key\_event@{lava::key\_event}!repeated@{repeated}}
+\index{repeated@{repeated}!lava::key\_event@{lava::key\_event}}
+\doxysubsubsection{\texorpdfstring{repeated()}{repeated()}}
+{\footnotesize\ttfamily \label{structlava_1_1key__event_a97f052f4ac4e070cce94b95980a5e6bc} 
+bool lava\+::key\+\_\+event\+::repeated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_aa563fd25d36506aa0f56906ca6357f26}{key\+\_\+ref}}}]{k}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if key is repeated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Key to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Key is repeated or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{input_8hpp}{input.\+hpp}}\end{DoxyCompactItemize}

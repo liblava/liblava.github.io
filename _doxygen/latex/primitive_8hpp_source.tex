@@ -1,0 +1,42 @@
+\doxysection{primitive.\+hpp}
+\hypertarget{primitive_8hpp_source}{}\label{primitive_8hpp_source}\index{liblava/resource/primitive.hpp@{liblava/resource/primitive.hpp}}
+\mbox{\hyperlink{primitive_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math_8hpp}{liblava/util/math.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1vertex}{vertex}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1vertex_a6eabb986548885259ae4b96c5c48a498}{list}}\ =\ std::vector<vertex>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ \mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a43bc972887896e505e428d6c7a426324}{v4}}\ \mbox{\hyperlink{structlava_1_1vertex_a4df783c68cb20c8069f7c67b6eb72c62}{color}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a4e3a0adf51090a120cdae77cc06ec2a1}{v2}}\ \mbox{\hyperlink{structlava_1_1vertex_ad0963257c2390613a9ec83494200007f}{uv}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}\ \mbox{\hyperlink{structlava_1_1vertex_afdab750776eee212313fbcc192ffe06f}{normal}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1vertex_a9809a47c893c49ce9ca4317ef3b6fae4}{operator==}}(\mbox{\hyperlink{structlava_1_1vertex}{vertex}}\ \textcolor{keyword}{const}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}}\ ==\ other.\mbox{\hyperlink{structlava_1_1vertex_a74c826681a8d53121c844950d4014891}{position}}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{structlava_1_1vertex_a4df783c68cb20c8069f7c67b6eb72c62}{color}}\ ==\ other.\mbox{\hyperlink{structlava_1_1vertex_a4df783c68cb20c8069f7c67b6eb72c62}{color}}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{structlava_1_1vertex_ad0963257c2390613a9ec83494200007f}{uv}}\ ==\ other.\mbox{\hyperlink{structlava_1_1vertex_ad0963257c2390613a9ec83494200007f}{uv}}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{structlava_1_1vertex_afdab750776eee212313fbcc192ffe06f}{normal}}\ ==\ other.\mbox{\hyperlink{structlava_1_1vertex_afdab750776eee212313fbcc192ffe06f}{normal}};}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{primitive_8hpp_afa8a64b09dc1ec2d28ac5cb426fb79bf}{mesh\_type}}\ :\ \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ none\ =\ 0,}
+\DoxyCodeLine{00051\ \ \ \ \ cube,}
+\DoxyCodeLine{00052\ \ \ \ \ triangle,}
+\DoxyCodeLine{00053\ \ \ \ \ quad,}
+\DoxyCodeLine{00054\ \ \ \ \ hexagon,}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

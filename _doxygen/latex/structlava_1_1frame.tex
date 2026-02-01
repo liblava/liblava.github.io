@@ -1,0 +1,353 @@
+\doxysection{lava\+::frame Struct Reference}
+\hypertarget{structlava_1_1frame}{}\label{structlava_1_1frame}\index{lava::frame@{lava::frame}}
+
+
+Framework.  
+
+
+
+
+{\ttfamily \#include $<$frame.\+hpp$>$}
+
+Inheritance diagram for lava\+::frame\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{structlava_1_1frame}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1frame_adaea615ada78d449d51078340bbd05fd}\label{structlava_1_1frame_adaea615ada78d449d51078340bbd05fd} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1frame}{frame}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to framework. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_ac3d3f9da01ee70a15024a715c7523635}\label{structlava_1_1frame_ac3d3f9da01ee70a15024a715c7523635} 
+using {\bfseries result} = \mbox{\hyperlink{types_8hpp_a7e5d7f16aff5126a54243302372b43b1}{i32}}
+\begin{DoxyCompactList}\small\item\em Framework result. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_ad4239b17e8ea083fd2e26055a2053dd8}\label{structlava_1_1frame_ad4239b17e8ea083fd2e26055a2053dd8} 
+using {\bfseries run\+\_\+func} = std\+::function$<$bool(\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}})$>$
+\begin{DoxyCompactList}\small\item\em Run function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a1baf2b13b19143c32816bcec0dc44e1a}\label{structlava_1_1frame_a1baf2b13b19143c32816bcec0dc44e1a} 
+using {\bfseries run\+\_\+func\+\_\+ref} = \mbox{\hyperlink{structlava_1_1frame_ad4239b17e8ea083fd2e26055a2053dd8}{run\+\_\+func}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to run function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a52ca74283525108201d243f0436d9d52}\label{structlava_1_1frame_a52ca74283525108201d243f0436d9d52} 
+using {\bfseries run\+\_\+end\+\_\+func} = std\+::function$<$void()$>$
+\begin{DoxyCompactList}\small\item\em Run end function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a246c5dc377aa229b796c273443fd6c2a}\label{structlava_1_1frame_a246c5dc377aa229b796c273443fd6c2a} 
+using {\bfseries run\+\_\+end\+\_\+func\+\_\+ref} = \mbox{\hyperlink{structlava_1_1frame_a52ca74283525108201d243f0436d9d52}{run\+\_\+end\+\_\+func}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to run end function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a745267e2a6632ea6b0fa30c2d0223812}\label{structlava_1_1frame_a745267e2a6632ea6b0fa30c2d0223812} 
+using {\bfseries run\+\_\+once\+\_\+func} = std\+::function$<$bool()$>$
+\begin{DoxyCompactList}\small\item\em Run once function. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a36e6af9024658dca86df983f3d8d1539}\label{structlava_1_1frame_a36e6af9024658dca86df983f3d8d1539} 
+using {\bfseries run\+\_\+once\+\_\+func\+\_\+ref} = \mbox{\hyperlink{structlava_1_1frame_a745267e2a6632ea6b0fa30c2d0223812}{run\+\_\+once\+\_\+func}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to run once function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1frame_a3654649fa6870251276af0149e04fa4d}{frame}} (argh\+::parser \mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}})
+\begin{DoxyCompactList}\small\item\em Construct a new framework. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1frame_aff834432bc9fe1b5e3b6c8ed322abab0}{frame}} (\mbox{\hyperlink{structlava_1_1frame__env}{frame\+\_\+env}} env)
+\begin{DoxyCompactList}\small\item\em Construct a new framework. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_a913bcba53dadc062fd078e57df76ed41}\label{structlava_1_1frame_a913bcba53dadc062fd078e57df76ed41} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}frame} () override
+\begin{DoxyCompactList}\small\item\em Destroy the framework. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1frame_ae8f1c745f9086f7e93e2a925cbd6362a}{ready}} () const
+\begin{DoxyCompactList}\small\item\em Check if framework is ready. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1frame_ac3d3f9da01ee70a15024a715c7523635}{result}} \mbox{\hyperlink{structlava_1_1frame_a956030d60fc69b88fa171e5a772cb2e6}{run}} ()
+\begin{DoxyCompactList}\small\item\em Run the framework. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1frame_ac8bfcb3b1bd090953d2f6897b4f98247}{shut\+\_\+down}} ()
+\begin{DoxyCompactList}\small\item\em Shut down the framework. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1frame_a43ee9210bb4360cc0224cc9c145f2283}{add\+\_\+run}} (\mbox{\hyperlink{structlava_1_1frame_a1baf2b13b19143c32816bcec0dc44e1a}{run\+\_\+func\+\_\+ref}} func)
+\begin{DoxyCompactList}\small\item\em Add run to framework. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1frame_abe68c5f38b2de4bda065ec3234ab2597}{add\+\_\+run\+\_\+end}} (\mbox{\hyperlink{structlava_1_1frame_a246c5dc377aa229b796c273443fd6c2a}{run\+\_\+end\+\_\+func\+\_\+ref}} func)
+\begin{DoxyCompactList}\small\item\em Add run end to framework. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1frame_a1390550e2be9d636d5f461c998a23f0c}{add\+\_\+run\+\_\+once}} (\mbox{\hyperlink{structlava_1_1frame_a36e6af9024658dca86df983f3d8d1539}{run\+\_\+once\+\_\+func\+\_\+ref}} func)
+\begin{DoxyCompactList}\small\item\em Add run once to framework. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1frame_a40025a8683f4c903b1166642cdf90132}{remove}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} func\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove a function from framework. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} \mbox{\hyperlink{structlava_1_1frame_a0d0853f9375ba76b11f5b9af8fc43ec8}{get\+\_\+running\+\_\+time}} () const
+\begin{DoxyCompactList}\small\item\em Get the running time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}} \mbox{\hyperlink{structlava_1_1frame_a3c57694f474bd765f413dec540cad1f1}{get\+\_\+running\+\_\+time\+\_\+sec}} () const
+\begin{DoxyCompactList}\small\item\em Get the running time in seconds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} \mbox{\hyperlink{structlava_1_1frame_a5f59d71443b1c39fb0493687bdeec739}{get\+\_\+cmd\+\_\+line}} () const
+\begin{DoxyCompactList}\small\item\em Get the command line arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1frame__env_ade8cafeb094c26f88fcee27114a42287}{frame\+\_\+env\+::ref}} \mbox{\hyperlink{structlava_1_1frame_a83fad308a14053ddf4fa606c4eb249be}{get\+\_\+env}} () const
+\begin{DoxyCompactList}\small\item\em Get the framework environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} \mbox{\hyperlink{structlava_1_1frame_a41b099b4b77b7f9929e9645aa6f31a78}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of application. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1frame_a6622e4273b1399a9aff90889ffbe4547}{waiting\+\_\+for\+\_\+events}} () const
+\begin{DoxyCompactList}\small\item\em Check if framework is waiting for events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1frame_ae98d1fd17b5ab7f856c0aa6cc1eff60b}{set\+\_\+wait\+\_\+for\+\_\+events}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set wait for events in framework. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1frame_abdb3e371ff2b0383d17bba36c824ef0a}\label{structlava_1_1frame_abdb3e371ff2b0383d17bba36c824ef0a} 
+\mbox{\hyperlink{structlava_1_1run__time}{lava\+::run\+\_\+time}} {\bfseries run\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Run time. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_abcf81b8a82712413d2dbeb6365b7dd44}\label{structlava_1_1frame_abcf81b8a82712413d2dbeb6365b7dd44} 
+\mbox{\hyperlink{structlava_1_1platform}{lava\+::platform}} {\bfseries platform}
+\begin{DoxyCompactList}\small\item\em Stage platform. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1frame_ae0c4e5e2186c452aa59a9214ab347ed0}\label{structlava_1_1frame_ae0c4e5e2186c452aa59a9214ab347ed0} 
+\mbox{\hyperlink{structlava_1_1message__dispatcher}{message\+\_\+dispatcher}} {\bfseries telegraph}
+\begin{DoxyCompactList}\small\item\em Message dispatcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Framework. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1frame_a3654649fa6870251276af0149e04fa4d}\index{lava::frame@{lava::frame}!frame@{frame}}
+\index{frame@{frame}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{frame()}{frame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a3654649fa6870251276af0149e04fa4d} 
+lava\+::frame\+::frame (\begin{DoxyParamCaption}\item[{argh\+::parser}]{cmd\+\_\+line}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1frame_aff834432bc9fe1b5e3b6c8ed322abab0}\index{lava::frame@{lava::frame}!frame@{frame}}
+\index{frame@{frame}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{frame()}{frame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_aff834432bc9fe1b5e3b6c8ed322abab0} 
+lava\+::frame\+::frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1frame__env}{frame\+\_\+env}}}]{env}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em env} & Framework environment \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1frame_a43ee9210bb4360cc0224cc9c145f2283}\index{lava::frame@{lava::frame}!add\_run@{add\_run}}
+\index{add\_run@{add\_run}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{add\_run()}{add\_run()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a43ee9210bb4360cc0224cc9c145f2283} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::frame\+::add\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1frame_a1baf2b13b19143c32816bcec0dc44e1a}{run\+\_\+func\+\_\+ref}}}]{func}{}\end{DoxyParamCaption})}
+
+
+
+Add run to framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Run function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of function 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_abe68c5f38b2de4bda065ec3234ab2597}\index{lava::frame@{lava::frame}!add\_run\_end@{add\_run\_end}}
+\index{add\_run\_end@{add\_run\_end}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{add\_run\_end()}{add\_run\_end()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_abe68c5f38b2de4bda065ec3234ab2597} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::frame\+::add\+\_\+run\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1frame_a246c5dc377aa229b796c273443fd6c2a}{run\+\_\+end\+\_\+func\+\_\+ref}}}]{func}{}\end{DoxyParamCaption})}
+
+
+
+Add run end to framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Run end function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Id of function 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a1390550e2be9d636d5f461c998a23f0c}\index{lava::frame@{lava::frame}!add\_run\_once@{add\_run\_once}}
+\index{add\_run\_once@{add\_run\_once}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{add\_run\_once()}{add\_run\_once()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a1390550e2be9d636d5f461c998a23f0c} 
+void lava\+::frame\+::add\+\_\+run\+\_\+once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1frame_a36e6af9024658dca86df983f3d8d1539}{run\+\_\+once\+\_\+func\+\_\+ref}}}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add run once to framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Run once function \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1frame_a5f59d71443b1c39fb0493687bdeec739}\index{lava::frame@{lava::frame}!get\_cmd\_line@{get\_cmd\_line}}
+\index{get\_cmd\_line@{get\_cmd\_line}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{get\_cmd\_line()}{get\_cmd\_line()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a5f59d71443b1c39fb0493687bdeec739} 
+\mbox{\hyperlink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line}} lava\+::frame\+::get\+\_\+cmd\+\_\+line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the command line arguments. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{argh_8hpp_a0ec69c8269dd4598981cbfeea2cc88d1}{cmd\+\_\+line} Command line arguments 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a83fad308a14053ddf4fa606c4eb249be}\index{lava::frame@{lava::frame}!get\_env@{get\_env}}
+\index{get\_env@{get\_env}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{get\_env()}{get\_env()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a83fad308a14053ddf4fa606c4eb249be} 
+\mbox{\hyperlink{structlava_1_1frame__env_ade8cafeb094c26f88fcee27114a42287}{frame\+\_\+env\+::ref}} lava\+::frame\+::get\+\_\+env (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the framework environment. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1frame__env_ade8cafeb094c26f88fcee27114a42287}{frame\+\_\+env\+::ref} Framework environment 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a41b099b4b77b7f9929e9645aa6f31a78}\index{lava::frame@{lava::frame}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a41b099b4b77b7f9929e9645aa6f31a78} 
+\mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}} lava\+::frame\+::get\+\_\+name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the name of application. 
+
+\begin{DoxyReturn}{Returns}
+name Name of application 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a0d0853f9375ba76b11f5b9af8fc43ec8}\index{lava::frame@{lava::frame}!get\_running\_time@{get\_running\_time}}
+\index{get\_running\_time@{get\_running\_time}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{get\_running\_time()}{get\_running\_time()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a0d0853f9375ba76b11f5b9af8fc43ec8} 
+\mbox{\hyperlink{time_8hpp_a8cc2ca1333c2a464b07f9c54326a4569}{ms}} lava\+::frame\+::get\+\_\+running\+\_\+time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the running time. 
+
+\begin{DoxyReturn}{Returns}
+ms Time since start of framework 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a3c57694f474bd765f413dec540cad1f1}\index{lava::frame@{lava::frame}!get\_running\_time\_sec@{get\_running\_time\_sec}}
+\index{get\_running\_time\_sec@{get\_running\_time\_sec}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{get\_running\_time\_sec()}{get\_running\_time\_sec()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a3c57694f474bd765f413dec540cad1f1} 
+\mbox{\hyperlink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64}} lava\+::frame\+::get\+\_\+running\+\_\+time\+\_\+sec (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the running time in seconds. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_aeb5fe0bd98dc4fba84d1e81c12d31476}{r64} Time since start of framework 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_ae8f1c745f9086f7e93e2a925cbd6362a}\index{lava::frame@{lava::frame}!ready@{ready}}
+\index{ready@{ready}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_ae8f1c745f9086f7e93e2a925cbd6362a} 
+bool lava\+::frame\+::ready (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if framework is ready. 
+
+\begin{DoxyReturn}{Returns}
+Framework is ready or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a40025a8683f4c903b1166642cdf90132}\index{lava::frame@{lava::frame}!remove@{remove}}
+\index{remove@{remove}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a40025a8683f4c903b1166642cdf90132} 
+bool lava\+::frame\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{func\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Remove a function from framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func\+\_\+id} & Id of function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remove was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a956030d60fc69b88fa171e5a772cb2e6}\index{lava::frame@{lava::frame}!run@{run}}
+\index{run@{run}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a956030d60fc69b88fa171e5a772cb2e6} 
+\mbox{\hyperlink{structlava_1_1frame_ac3d3f9da01ee70a15024a715c7523635}{result}} lava\+::frame\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Run the framework. 
+
+\begin{DoxyReturn}{Returns}
+result Run result 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_ae98d1fd17b5ab7f856c0aa6cc1eff60b}\index{lava::frame@{lava::frame}!set\_wait\_for\_events@{set\_wait\_for\_events}}
+\index{set\_wait\_for\_events@{set\_wait\_for\_events}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{set\_wait\_for\_events()}{set\_wait\_for\_events()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_ae98d1fd17b5ab7f856c0aa6cc1eff60b} 
+void lava\+::frame\+::set\+\_\+wait\+\_\+for\+\_\+events (\begin{DoxyParamCaption}\item[{bool}]{value}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set wait for events in framework. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wait for events state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1frame_ac8bfcb3b1bd090953d2f6897b4f98247}\index{lava::frame@{lava::frame}!shut\_down@{shut\_down}}
+\index{shut\_down@{shut\_down}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{shut\_down()}{shut\_down()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_ac8bfcb3b1bd090953d2f6897b4f98247} 
+bool lava\+::frame\+::shut\+\_\+down (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shut down the framework. 
+
+\begin{DoxyReturn}{Returns}
+Shut down was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1frame_a6622e4273b1399a9aff90889ffbe4547}\index{lava::frame@{lava::frame}!waiting\_for\_events@{waiting\_for\_events}}
+\index{waiting\_for\_events@{waiting\_for\_events}!lava::frame@{lava::frame}}
+\doxysubsubsection{\texorpdfstring{waiting\_for\_events()}{waiting\_for\_events()}}
+{\footnotesize\ttfamily \label{structlava_1_1frame_a6622e4273b1399a9aff90889ffbe4547} 
+bool lava\+::frame\+::waiting\+\_\+for\+\_\+events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if framework is waiting for events. 
+
+\begin{DoxyReturn}{Returns}
+Framework waits for events or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/frame/\mbox{\hyperlink{frame_2frame_8hpp}{frame.\+hpp}}\end{DoxyCompactItemize}

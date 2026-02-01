@@ -1,0 +1,270 @@
+\doxysection{lava\+::file Struct Reference}
+\hypertarget{structlava_1_1file}{}\label{structlava_1_1file}\index{lava::file@{lava::file}}
+
+
+File.  
+
+
+
+
+{\ttfamily \#include $<$file.\+hpp$>$}
+
+Inheritance diagram for lava\+::file\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structlava_1_1file}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1file_a9a38fd427cf4038bf38f422c275b2cad}\label{structlava_1_1file_a9a38fd427cf4038bf38f422c275b2cad} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1file}{file}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1file_a2e577777719e646fe07900fd35955135}{file}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path="{}"{}, \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\+\_\+mode}} mode=file\+\_\+mode\+::read)
+\begin{DoxyCompactList}\small\item\em Construct a new file. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1file_ab870ec4da9026e9e6986590d94a155b2}\label{structlava_1_1file_ab870ec4da9026e9e6986590d94a155b2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}file} ()
+\begin{DoxyCompactList}\small\item\em Destroy the file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file_a5978b972d71c28a1d6b5ab23054e51b4}{open}} (\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} path, \mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\+\_\+mode}} mode=file\+\_\+mode\+::read)
+\begin{DoxyCompactList}\small\item\em Open the file. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1file_a6ff92cdcc2b249ffc58a323306e4d7c7}\label{structlava_1_1file_a6ff92cdcc2b249ffc58a323306e4d7c7} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Close the file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file_ad04cef21b98035fd3edee2dbd857ce98}{opened}} () const
+\begin{DoxyCompactList}\small\item\em Check if the file is opened. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_a761e7bdfd3f76ab05d5032e3763f8fb6}{read}} (\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data\+::ptr}} \mbox{\hyperlink{structlava_1_1data}{data}})
+\begin{DoxyCompactList}\small\item\em Read data from file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_a88b182b8ac6e33396fd93157346b9e52}{read}} (\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data\+::ptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} size)
+\begin{DoxyCompactList}\small\item\em Read data from file (limited size) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_af1c3403a3edd5210691126fc4cb8c79a}{write}} (\mbox{\hyperlink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{data\+::c\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1data}{data}}, \mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} size)
+\begin{DoxyCompactList}\small\item\em Write data to file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_a86a14d3cb72e0f73126a3608c066309e}{seek}} (\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}} position)
+\begin{DoxyCompactList}\small\item\em Seek to position in the file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} \mbox{\hyperlink{structlava_1_1file_aa61df64db7c99e73e3ce3471956d9f29}{tell}} () const
+\begin{DoxyCompactList}\small\item\em Get the current position in the file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1file_a7cd953262a017883f91f3411182773a3}{writable}} () const
+\begin{DoxyCompactList}\small\item\em Check if the file is in write mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\+\_\+type}} \mbox{\hyperlink{structlava_1_1file_abada804bc55603748cbbe269a0fadaa3}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get the file type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} \mbox{\hyperlink{structlava_1_1file_a091e149d0cc93f5cefc7814df316027f}{get\+\_\+path}} () const
+\begin{DoxyCompactList}\small\item\em Get the path of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1file_a2e577777719e646fe07900fd35955135}\index{lava::file@{lava::file}!file@{file}}
+\index{file@{file}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{file()}{file()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a2e577777719e646fe07900fd35955135} 
+lava\+::file\+::file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{ = {\ttfamily "{}"{}}, }\item[{\mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\+\_\+mode}}}]{mode}{ = {\ttfamily file\+\_\+mode\+:\+:read}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of file \\
+\hline
+{\em mode} & File mode \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1file_a091e149d0cc93f5cefc7814df316027f}\index{lava::file@{lava::file}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a091e149d0cc93f5cefc7814df316027f} 
+\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}} lava\+::file\+::get\+\_\+path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the path of the file. 
+
+\begin{DoxyReturn}{Returns}
+name File path 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2}\index{lava::file@{lava::file}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a8c78d97f2a73db2b7c7d99bc7cbee7d2} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the size of the file. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} File size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_abada804bc55603748cbbe269a0fadaa3}\index{lava::file@{lava::file}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_abada804bc55603748cbbe269a0fadaa3} 
+\mbox{\hyperlink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\+\_\+type}} lava\+::file\+::get\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the file type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{file_2file_8hpp_a503873db26179fd7f334e1b56bd029d5}{file\+\_\+type} Type of file 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a5978b972d71c28a1d6b5ab23054e51b4}\index{lava::file@{lava::file}!open@{open}}
+\index{open@{open}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a5978b972d71c28a1d6b5ab23054e51b4} 
+bool lava\+::file\+::open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a01c2a7bfa24e7ea76ef5a79d8d4daaf6}{string\+\_\+ref}}}]{path}{, }\item[{\mbox{\hyperlink{file_2file_8hpp_ae04e055ef72d0683eda59470d89849ff}{file\+\_\+mode}}}]{mode}{ = {\ttfamily file\+\_\+mode\+:\+:read}}\end{DoxyParamCaption})}
+
+
+
+Open the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of file \\
+\hline
+{\em mode} & File mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Open was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_ad04cef21b98035fd3edee2dbd857ce98}\index{lava::file@{lava::file}!opened@{opened}}
+\index{opened@{opened}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{opened()}{opened()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_ad04cef21b98035fd3edee2dbd857ce98} 
+bool lava\+::file\+::opened (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if the file is opened. 
+
+\begin{DoxyReturn}{Returns}
+File is opened or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a761e7bdfd3f76ab05d5032e3763f8fb6}\index{lava::file@{lava::file}!read@{read}}
+\index{read@{read}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a761e7bdfd3f76ab05d5032e3763f8fb6} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data\+::ptr}}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read data from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} File size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a88b182b8ac6e33396fd93157346b9e52}\index{lava::file@{lava::file}!read@{read}}
+\index{read@{read}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a88b182b8ac6e33396fd93157346b9e52} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{data\+::ptr}}}]{data}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Read data from file (limited size) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to read \\
+\hline
+{\em size} & File size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} File size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a86a14d3cb72e0f73126a3608c066309e}\index{lava::file@{lava::file}!seek@{seek}}
+\index{seek@{seek}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{seek()}{seek()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a86a14d3cb72e0f73126a3608c066309e} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Seek to position in the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position to seek to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} Current position 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_aa61df64db7c99e73e3ce3471956d9f29}\index{lava::file@{lava::file}!tell@{tell}}
+\index{tell@{tell}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_aa61df64db7c99e73e3ce3471956d9f29} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::tell (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current position in the file. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} Current position 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_a7cd953262a017883f91f3411182773a3}\index{lava::file@{lava::file}!writable@{writable}}
+\index{writable@{writable}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{writable()}{writable()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_a7cd953262a017883f91f3411182773a3} 
+bool lava\+::file\+::writable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the file is in write mode. 
+
+\begin{DoxyReturn}{Returns}
+File is writable or only readable 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1file_af1c3403a3edd5210691126fc4cb8c79a}\index{lava::file@{lava::file}!write@{write}}
+\index{write@{write}!lava::file@{lava::file}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{structlava_1_1file_af1c3403a3edd5210691126fc4cb8c79a} 
+\mbox{\hyperlink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64}} lava\+::file\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{data\+::c\+\_\+ptr}}}]{data}{, }\item[{\mbox{\hyperlink{types_8hpp_abd93cf188810a5c57f1e971c1ba12db6}{ui64}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Write data to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to write \\
+\hline
+{\em size} & File size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_af894ded8dd233c6505155b19777af556}{i64} File size 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/file/\mbox{\hyperlink{file_2file_8hpp}{file.\+hpp}}\end{DoxyCompactItemize}

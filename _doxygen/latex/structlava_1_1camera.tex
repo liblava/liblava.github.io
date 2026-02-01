@@ -1,0 +1,391 @@
+\doxysection{lava\+::camera Struct Reference}
+\hypertarget{structlava_1_1camera}{}\label{structlava_1_1camera}\index{lava::camera@{lava::camera}}
+
+
+First Person / Look At camera.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+hpp$>$}
+
+Inheritance diagram for lava\+::camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1camera_aa4b6c75103911a9b9844b41bc6d6d94d}\label{structlava_1_1camera_aa4b6c75103911a9b9844b41bc6d6d94d} 
+enum class \mbox{\hyperlink{structlava_1_1camera_aa4b6c75103911a9b9844b41bc6d6d94d}{mode}} \+: index \{ {\bfseries first\+\_\+person} = 0
+, {\bfseries look\+\_\+at}
+ \}
+\begin{DoxyCompactList}\small\item\em Camera modes. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_ad397a86e772cea14d63bbe9ac241de92}\label{structlava_1_1camera_ad397a86e772cea14d63bbe9ac241de92} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1camera}{camera}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to camera. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_aea3adeebee5eb3fad25acd5803d6990e}\label{structlava_1_1camera_aea3adeebee5eb3fad25acd5803d6990e} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1camera}{camera}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to camera. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_afd38f5c6815e3751c5cb75535baa5874}\label{structlava_1_1camera_afd38f5c6815e3751c5cb75535baa5874} 
+using {\bfseries s\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1camera_aea3adeebee5eb3fad25acd5803d6990e}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of cameras. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a583e56f9e7b4a0df71bfac7c5437bc11}\label{structlava_1_1camera_a583e56f9e7b4a0df71bfac7c5437bc11} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1camera_aea3adeebee5eb3fad25acd5803d6990e}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of cameras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlava_1_1camera_a863e42bb8c5185f0e07e0efef53a66fe}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}})
+\begin{DoxyCompactList}\small\item\em Create a camera. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_af76bd66f245611c64738121f70e3fea7}\label{structlava_1_1camera_af76bd66f245611c64738121f70e3fea7} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the camera. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a0218c5b3237f95d851ece093bf9cfe05}\label{structlava_1_1camera_a0218c5b3237f95d851ece093bf9cfe05} 
+void {\bfseries update\+\_\+projection} ()
+\begin{DoxyCompactList}\small\item\em Update the projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1camera_ab5629150384212bb36279ccc7aee5fec}{update\+\_\+view}} (\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}} dt, \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} mouse\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Update the view with mouse position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1camera_a0c7bcca859ff175838fc9fc22f1ec7ef}{update\+\_\+view}} (\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}} dt, \mbox{\hyperlink{structlava_1_1gamepad_ae9c3ebf9c404adc56a5415c6f364a081}{gamepad\+::ref}} pad)
+\begin{DoxyCompactList}\small\item\em Update the view with gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} \mbox{\hyperlink{structlava_1_1camera_a58d102279002d4482b42601d99b84135}{get\+\_\+view}} () const
+\begin{DoxyCompactList}\small\item\em Get the camera\textquotesingle{}s 4x4 view matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} \mbox{\hyperlink{structlava_1_1camera_a450407d93e617f26595682e1d236b2cd}{get\+\_\+projection}} () const
+\begin{DoxyCompactList}\small\item\em Get the camera\textquotesingle{}s 4x4 projection matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} \mbox{\hyperlink{structlava_1_1camera_a4b23855a2d209a56c72793a8b0636d6f}{calc\+\_\+view\+\_\+projection}} () const
+\begin{DoxyCompactList}\small\item\em Calc the camera\textquotesingle{}s combined 4x4 view/projection matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_adc223537f4a0a3f86110d407de2de24e}{handle}} (\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{key\+\_\+event\+::ref}} event)
+\begin{DoxyCompactList}\small\item\em Handle key event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_a1602a69e9b10026a555b776435967274}{handle}} (\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{mouse\+\_\+button\+\_\+event\+::ref}} event, \mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}} mouse\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Handle mouse button event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_a5ab126b025cf5a295632a42029aaf39b}{handle}} (\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{scroll\+\_\+event\+::ref}} event)
+\begin{DoxyCompactList}\small\item\em Handle scroll event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_acb65ea214394366c19618feeb3ef6e29}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if camera is valid. \end{DoxyCompactList}\item 
+Vk\+Descriptor\+Buffer\+Info const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlava_1_1camera_a12e066870d5f849cd231626870d05770}{get\+\_\+descriptor\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the descriptor buffer info. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_aa7bd2279bcac1e13ff18310d8713cf1b}\label{structlava_1_1camera_aa7bd2279bcac1e13ff18310d8713cf1b} 
+void {\bfseries upload} ()
+\begin{DoxyCompactList}\small\item\em Upload camera state. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a50ef9b7e825c9f5bcfc8728257cde0be}\label{structlava_1_1camera_a50ef9b7e825c9f5bcfc8728257cde0be} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Stop camera movement. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a53c5b447cc5e2cf063b7196f21c46274}\label{structlava_1_1camera_a53c5b447cc5e2cf063b7196f21c46274} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Reset camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1camera_a606ba30fa8d6487b76e3a72e92a51b04}{set\+\_\+active}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Set camera active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_abe7be71cb4f5c01c9b7dede8ba2ec8fe}{activated}} () const
+\begin{DoxyCompactList}\small\item\em Check if camera is activated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1camera_ac37bea8c2893bf25c89f04427f2452ff}{moving}} () const
+\begin{DoxyCompactList}\small\item\em Check if camera is moving. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1camera_a2a71a670e7e63fb388b8f92066695300}{set\+\_\+movement\+\_\+keys}} (\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}} up, \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}} down, \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}} left, \mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}} right)
+\begin{DoxyCompactList}\small\item\em Set keys for moving this camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1camera_abe3ae9b3c5b8de5f5bd623ad7528450a}\label{structlava_1_1camera_abe3ae9b3c5b8de5f5bd623ad7528450a} 
+\mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}} {\bfseries position} = \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}(0.f)
+\begin{DoxyCompactList}\small\item\em Camera position. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a80234741cfe9f7e2808c2cce005fab6c}\label{structlava_1_1camera_a80234741cfe9f7e2808c2cce005fab6c} 
+\mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}} {\bfseries rotation} = \mbox{\hyperlink{math_8hpp_a4384995facacf81c4762b81285341e78}{v3}}(0.f)
+\begin{DoxyCompactList}\small\item\em Camera rotation. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a50e621f8660dc6a420211ec810fae8ea}\label{structlava_1_1camera_a50e621f8660dc6a420211ec810fae8ea} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries rotation\+\_\+speed} = 20.f
+\begin{DoxyCompactList}\small\item\em Camera rotation speed. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_aa8688226ac35525517e98260acb0f264}\label{structlava_1_1camera_aa8688226ac35525517e98260acb0f264} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries movement\+\_\+speed} = 1.f
+\begin{DoxyCompactList}\small\item\em Camera movement speed. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a5c0ea276e42e335229d6778a9da2eea3}\label{structlava_1_1camera_a5c0ea276e42e335229d6778a9da2eea3} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries zoom\+\_\+speed} = 20.f
+\begin{DoxyCompactList}\small\item\em Camera zoom speed. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a0d5b42d59361a57d98f9a90db5ce65ee}\label{structlava_1_1camera_a0d5b42d59361a57d98f9a90db5ce65ee} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries fov} = 60.f
+\begin{DoxyCompactList}\small\item\em Field of view. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a96c50dfd75e4611fd424709b6fb6200c}\label{structlava_1_1camera_a96c50dfd75e4611fd424709b6fb6200c} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries z\+\_\+near} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Distance to near clipping plane along the -\/Z axis. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_ab27550631e3cb0da1f76a2414a71eb53}\label{structlava_1_1camera_ab27550631e3cb0da1f76a2414a71eb53} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries z\+\_\+far} = 256.f
+\begin{DoxyCompactList}\small\item\em Distance to far clipping plane along the -\/Z axis. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a46b80c2fb0b453c66c8e5fd251faff4b}\label{structlava_1_1camera_a46b80c2fb0b453c66c8e5fd251faff4b} 
+\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} {\bfseries aspect\+\_\+ratio} = 1.\+77f
+\begin{DoxyCompactList}\small\item\em Camera aspect ratio. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a06cc01c622dd10c043e8ea2ef6d7b46a}\label{structlava_1_1camera_a06cc01c622dd10c043e8ea2ef6d7b46a} 
+\mbox{\hyperlink{structlava_1_1camera_aa4b6c75103911a9b9844b41bc6d6d94d}{mode}} {\bfseries mode} = mode\+::first\+\_\+person
+\begin{DoxyCompactList}\small\item\em Camera mode. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a95be646793f23f19139810f173ba66de}\label{structlava_1_1camera_a95be646793f23f19139810f173ba66de} 
+bool {\bfseries lock\+\_\+z} = false
+\begin{DoxyCompactList}\small\item\em Lock Z axis movement. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1camera_a269a54d6faab7efde7e651ebbaac035f}\label{structlava_1_1camera_a269a54d6faab7efde7e651ebbaac035f} 
+bool {\bfseries lock\+\_\+rotation} = false
+\begin{DoxyCompactList}\small\item\em Lock camera rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+First Person / Look At camera. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1camera_abe7be71cb4f5c01c9b7dede8ba2ec8fe}\index{lava::camera@{lava::camera}!activated@{activated}}
+\index{activated@{activated}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_abe7be71cb4f5c01c9b7dede8ba2ec8fe} 
+bool lava\+::camera\+::activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if camera is activated. 
+
+\begin{DoxyReturn}{Returns}
+Camera is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a4b23855a2d209a56c72793a8b0636d6f}\index{lava::camera@{lava::camera}!calc\_view\_projection@{calc\_view\_projection}}
+\index{calc\_view\_projection@{calc\_view\_projection}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{calc\_view\_projection()}{calc\_view\_projection()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a4b23855a2d209a56c72793a8b0636d6f} 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} lava\+::camera\+::calc\+\_\+view\+\_\+projection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calc the camera\textquotesingle{}s combined 4x4 view/projection matrix. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4} Combined view/projection matrix 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a863e42bb8c5185f0e07e0efef53a66fe}\index{lava::camera@{lava::camera}!create@{create}}
+\index{create@{create}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a863e42bb8c5185f0e07e0efef53a66fe} 
+bool lava\+::camera\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Create a camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a12e066870d5f849cd231626870d05770}\index{lava::camera@{lava::camera}!get\_descriptor\_info@{get\_descriptor\_info}}
+\index{get\_descriptor\_info@{get\_descriptor\_info}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{get\_descriptor\_info()}{get\_descriptor\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a12e066870d5f849cd231626870d05770} 
+Vk\+Descriptor\+Buffer\+Info const  \texorpdfstring{$\ast$}{*} lava\+::camera\+::get\+\_\+descriptor\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the descriptor buffer info. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Descriptor\+Buffer\+Info const\texorpdfstring{$\ast$}{*} Descriptor buffer info 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a450407d93e617f26595682e1d236b2cd}\index{lava::camera@{lava::camera}!get\_projection@{get\_projection}}
+\index{get\_projection@{get\_projection}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{get\_projection()}{get\_projection()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a450407d93e617f26595682e1d236b2cd} 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} lava\+::camera\+::get\+\_\+projection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the camera\textquotesingle{}s 4x4 projection matrix. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4} Projection matrix 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a58d102279002d4482b42601d99b84135}\index{lava::camera@{lava::camera}!get\_view@{get\_view}}
+\index{get\_view@{get\_view}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{get\_view()}{get\_view()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a58d102279002d4482b42601d99b84135} 
+\mbox{\hyperlink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4}} lava\+::camera\+::get\+\_\+view (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the camera\textquotesingle{}s 4x4 view matrix. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_a07245a7b7cef276ff8ce545d92519604}{mat4} View matrix 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_adc223537f4a0a3f86110d407de2de24e}\index{lava::camera@{lava::camera}!handle@{handle}}
+\index{handle@{handle}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_adc223537f4a0a3f86110d407de2de24e} 
+bool lava\+::camera\+::handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1key__event_a4b1052ca7223e6f46699c0e385b8e31b}{key\+\_\+event\+::ref}}}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Handle key event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Key event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event was handled or ignored 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a1602a69e9b10026a555b776435967274}\index{lava::camera@{lava::camera}!handle@{handle}}
+\index{handle@{handle}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a1602a69e9b10026a555b776435967274} 
+bool lava\+::camera\+::handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1mouse__button__event_af57e7a6430042611d34525eccd7a36b7}{mouse\+\_\+button\+\_\+event\+::ref}}}]{event}{, }\item[{\mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}}}]{mouse\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Handle mouse button event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Mouse button event \\
+\hline
+{\em mouse\+\_\+pos} & Mouse position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event was handled or ignored 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a5ab126b025cf5a295632a42029aaf39b}\index{lava::camera@{lava::camera}!handle@{handle}}
+\index{handle@{handle}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a5ab126b025cf5a295632a42029aaf39b} 
+bool lava\+::camera\+::handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1scroll__event_a5c79e9fed050b3830dcaa5bbf5d66e29}{scroll\+\_\+event\+::ref}}}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Handle scroll event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Scroll event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event was handled or ignored 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_ac37bea8c2893bf25c89f04427f2452ff}\index{lava::camera@{lava::camera}!moving@{moving}}
+\index{moving@{moving}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{moving()}{moving()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_ac37bea8c2893bf25c89f04427f2452ff} 
+bool lava\+::camera\+::moving (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if camera is moving. 
+
+\begin{DoxyReturn}{Returns}
+Camera is moving or does not move 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1camera_a606ba30fa8d6487b76e3a72e92a51b04}\index{lava::camera@{lava::camera}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a606ba30fa8d6487b76e3a72e92a51b04} 
+void lava\+::camera\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{bool}]{value}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set camera active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Active state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1camera_a2a71a670e7e63fb388b8f92066695300}\index{lava::camera@{lava::camera}!set\_movement\_keys@{set\_movement\_keys}}
+\index{set\_movement\_keys@{set\_movement\_keys}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{set\_movement\_keys()}{set\_movement\_keys()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a2a71a670e7e63fb388b8f92066695300} 
+void lava\+::camera\+::set\+\_\+movement\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}}}]{up}{, }\item[{\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}}}]{down}{, }\item[{\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}}}]{left}{, }\item[{\mbox{\hyperlink{input_8hpp_a497a8e9a89b2e1daea1e25042f28c87c}{keys\+\_\+ref}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set keys for moving this camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em up} & Up inputs \\
+\hline
+{\em down} & Down inputs \\
+\hline
+{\em left} & Left inputs \\
+\hline
+{\em right} & Right inputs \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1camera_a0c7bcca859ff175838fc9fc22f1ec7ef}\index{lava::camera@{lava::camera}!update\_view@{update\_view}}
+\index{update\_view@{update\_view}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{update\_view()}{update\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_a0c7bcca859ff175838fc9fc22f1ec7ef} 
+void lava\+::camera\+::update\+\_\+view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}}]{dt}{, }\item[{\mbox{\hyperlink{structlava_1_1gamepad_ae9c3ebf9c404adc56a5415c6f364a081}{gamepad\+::ref}}}]{pad}{}\end{DoxyParamCaption})}
+
+
+
+Update the view with gamepad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em pad} & Gamepad \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1camera_ab5629150384212bb36279ccc7aee5fec}\index{lava::camera@{lava::camera}!update\_view@{update\_view}}
+\index{update\_view@{update\_view}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{update\_view()}{update\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_ab5629150384212bb36279ccc7aee5fec} 
+void lava\+::camera\+::update\+\_\+view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a5b5c372cf05c5834c538aad2b937aa9b}{delta}}}]{dt}{, }\item[{\mbox{\hyperlink{structlava_1_1mouse__position}{mouse\+\_\+position}}}]{mouse\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Update the view with mouse position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em mouse\+\_\+pos} & Mouse position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1camera_acb65ea214394366c19618feeb3ef6e29}\index{lava::camera@{lava::camera}!valid@{valid}}
+\index{valid@{valid}!lava::camera@{lava::camera}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily \label{structlava_1_1camera_acb65ea214394366c19618feeb3ef6e29} 
+bool lava\+::camera\+::valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if camera is valid. 
+
+\begin{DoxyReturn}{Returns}
+Camera is valid or not 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/app/\mbox{\hyperlink{camera_8hpp}{camera.\+hpp}}\end{DoxyCompactItemize}

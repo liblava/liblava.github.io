@@ -1,0 +1,51 @@
+\doxysection{engine.\+hpp}
+\hypertarget{engine_2engine_8hpp_source}{}\label{engine_2engine_8hpp_source}\index{liblava/engine/engine.hpp@{liblava/engine/engine.hpp}}
+\mbox{\hyperlink{engine_2engine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{app_2app_8hpp}{liblava/app/app.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{producer_8hpp}{liblava/engine/producer.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{props_8hpp}{liblava/engine/props.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }lava\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{types_8hpp_a6ac8e87ce8d5b170084592abbef3b8c9}{name}}\ \mbox{\hyperlink{engine_2engine_8hpp_a3693e091c595f5fa78aebc1c05b50f3c}{\_props\_}}\ =\ \textcolor{stringliteral}{"{}props"{}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlava_1_1engine}{engine}}\ :\ \mbox{\hyperlink{structlava_1_1engine_ad06bc981f99fe2edf32f425a92589de6}{app}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ engine}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }ptr\ =\ \mbox{\hyperlink{structlava_1_1engine}{engine}}*;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1app_ad06bc981f99fe2edf32f425a92589de6}{app::app}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1engine_a3790f6a8595f91b51d4e2b46ffffbb0e}{setup}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structlava_1_1props}{lava::props}}\ \mbox{\hyperlink{structlava_1_1engine_a9100d6f342f15239b9db76af73b9cd74}{props}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structlava_1_1producer}{lava::producer}}\ \mbox{\hyperlink{structlava_1_1engine_a25acffe4cf0d148de7b64b39f946e26b}{producer}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structlava_1_1engine_aeb6a7c03d75cbee98c3e8a97d1c86e15}{hud\_menu\_func}}\ =\ std::function<void()>;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{structlava_1_1engine_aeb6a7c03d75cbee98c3e8a97d1c86e15}{hud\_menu\_func}}\ \mbox{\hyperlink{structlava_1_1engine_a0bfb6967a08014bb4e98634c6e6edf07}{on\_menu}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlava_1_1engine_ad80db3fd3b9f2aa0e0605d5c4bdf0e2c}{hud\_active}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ handle\_config();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ hud\_menu();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{id}\ m\_menu\_layer;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#if\ LAVA\_DEBUG}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{id}\ m\_demo\_layer;}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{structlava_1_1json__file_1_1callback}{json\_file::callback}}\ m\_config\_callback;}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \}\ \textcolor{comment}{//\ namespace\ lava}}
+
+\end{DoxyCode}

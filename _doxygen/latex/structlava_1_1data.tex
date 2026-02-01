@@ -1,0 +1,183 @@
+\doxysection{lava\+::data Struct Reference}
+\hypertarget{structlava_1_1data}{}\label{structlava_1_1data}\index{lava::data@{lava::data}}
+
+
+Data wrapper.  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+Inheritance diagram for lava\+::data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7}\label{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7} 
+enum class \mbox{\hyperlink{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7}{mode}} \+: index \{ {\bfseries alloc} = 0
+, {\bfseries no\+\_\+alloc}
+ \}
+\begin{DoxyCompactList}\small\item\em Data modes. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_af45fa6169fcd0b92cfa6692099fedc73}\label{structlava_1_1data_af45fa6169fcd0b92cfa6692099fedc73} 
+using {\bfseries ref} = \mbox{\hyperlink{structlava_1_1data}{data}} const\&
+\begin{DoxyCompactList}\small\item\em Reference to data wrapper. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}\label{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8} 
+using {\bfseries ptr} = char\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Data pointer. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}\label{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09} 
+using {\bfseries c\+\_\+ptr} = char const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Const data pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1data_a8671f49149a11b46b0ca3f54d3be29d6}\label{structlava_1_1data_a8671f49149a11b46b0ca3f54d3be29d6} 
+{\bfseries data} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1data_a2592093d22ac0752af9a50b92f681678}{data}} (auto \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structlava_1_1data_a7641eb0243b7678841543af9cc04ba1a}{addr}}, \mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} \mbox{\hyperlink{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}{size}})
+\begin{DoxyCompactList}\small\item\em Construct a new data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1data_ac6d483a2fb20c2a9c8dbfa28bb9fba39}{set}} (\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} length, \mbox{\hyperlink{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7}{mode}} \mbox{\hyperlink{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7}{mode}}=mode\+::alloc)
+\begin{DoxyCompactList}\small\item\em Set and allocate data by length. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1data_abcf807ad35ff941ca2c33775ee6d092f}{allocate}} ()
+\begin{DoxyCompactList}\small\item\em Allocate data. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_affcd2fdf6ce4356fb443ac2e6f43eba1}\label{structlava_1_1data_affcd2fdf6ce4356fb443ac2e6f43eba1} 
+void {\bfseries deallocate} ()
+\begin{DoxyCompactList}\small\item\em Deallocate data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{ptr}} \mbox{\hyperlink{structlava_1_1data_ab6a1acf184e4fc936ffbd77420c84c78}{end}} () const
+\begin{DoxyCompactList}\small\item\em Pointer to end of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{ptr}} \mbox{\hyperlink{structlava_1_1data_a9b5bf1221ef9333e57fe02debca35f79}{as\+\_\+ptr}} (auto \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Cast to data pointer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{c\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1data_a666e23854b354d99170d77c483f208eb}{as\+\_\+c\+\_\+ptr}} (auto \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Cast to const data pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1data_a7641eb0243b7678841543af9cc04ba1a}\label{structlava_1_1data_a7641eb0243b7678841543af9cc04ba1a} 
+\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{ptr}} {\bfseries addr} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer address. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04}\label{structlava_1_1data_a1e89c4d1cfa7181022f3e7beefea9d04} 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} {\bfseries size} = 0
+\begin{DoxyCompactList}\small\item\em Size of data. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1data_a3d158ca810846638f6117ae7f8be8c99}\label{structlava_1_1data_a3d158ca810846638f6117ae7f8be8c99} 
+\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}} {\bfseries alignment} = 0
+\begin{DoxyCompactList}\small\item\em Data alignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data wrapper. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1data_a2592093d22ac0752af9a50b92f681678}\index{lava::data@{lava::data}!data@{data}}
+\index{data@{data}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_a2592093d22ac0752af9a50b92f681678} 
+lava\+::data\+::data (\begin{DoxyParamCaption}\item[{auto \texorpdfstring{$\ast$}{*}}]{addr}{, }\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Data pointer \\
+\hline
+{\em size} & Size of data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1data_abcf807ad35ff941ca2c33775ee6d092f}\index{lava::data@{lava::data}!allocate@{allocate}}
+\index{allocate@{allocate}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_abcf807ad35ff941ca2c33775ee6d092f} 
+bool lava\+::data\+::allocate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate data. 
+
+\begin{DoxyReturn}{Returns}
+Allocate was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1data_a666e23854b354d99170d77c483f208eb}\index{lava::data@{lava::data}!as\_c\_ptr@{as\_c\_ptr}}
+\index{as\_c\_ptr@{as\_c\_ptr}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{as\_c\_ptr()}{as\_c\_ptr()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_a666e23854b354d99170d77c483f208eb} 
+static \mbox{\hyperlink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{c\+\_\+ptr}} lava\+::data\+::as\+\_\+c\+\_\+ptr (\begin{DoxyParamCaption}\item[{auto \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Cast to const data pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to cast \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1data_adbf9c722e987bd8211e40ecf58aacc09}{c\+\_\+ptr} Const data pointer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1data_a9b5bf1221ef9333e57fe02debca35f79}\index{lava::data@{lava::data}!as\_ptr@{as\_ptr}}
+\index{as\_ptr@{as\_ptr}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{as\_ptr()}{as\_ptr()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_a9b5bf1221ef9333e57fe02debca35f79} 
+static \mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{ptr}} lava\+::data\+::as\+\_\+ptr (\begin{DoxyParamCaption}\item[{auto \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Cast to data pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to cast \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr Data pointer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1data_ab6a1acf184e4fc936ffbd77420c84c78}\index{lava::data@{lava::data}!end@{end}}
+\index{end@{end}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_ab6a1acf184e4fc936ffbd77420c84c78} 
+\mbox{\hyperlink{structlava_1_1data_a58e5faa7a8f9dd34567c29d6e1b891f8}{ptr}} lava\+::data\+::end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pointer to end of data. 
+
+\begin{DoxyReturn}{Returns}
+ptr Pointer to end 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1data_ac6d483a2fb20c2a9c8dbfa28bb9fba39}\index{lava::data@{lava::data}!set@{set}}
+\index{set@{set}!lava::data@{lava::data}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \label{structlava_1_1data_ac6d483a2fb20c2a9c8dbfa28bb9fba39} 
+bool lava\+::data\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a38bc8f04d76c66293330e126a20cd303}{size\+\_\+t}}}]{length}{, }\item[{\mbox{\hyperlink{structlava_1_1data_a6ab3e5b14785812270d21f32a1a904f7}{mode}}}]{mode}{ = {\ttfamily mode\+:\+:alloc}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set and allocate data by length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Length of data \\
+\hline
+{\em mode} & Data mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Allocate was successful or failed (mode\+: alloc) 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/core/\mbox{\hyperlink{data_8hpp}{data.\+hpp}}\end{DoxyCompactItemize}

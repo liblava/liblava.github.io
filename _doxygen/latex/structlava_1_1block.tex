@@ -1,0 +1,373 @@
+\doxysection{lava\+::block Struct Reference}
+\hypertarget{structlava_1_1block}{}\label{structlava_1_1block}\index{lava::block@{lava::block}}
+
+
+Block of commands.  
+
+
+
+
+{\ttfamily \#include $<$block.\+hpp$>$}
+
+Inheritance diagram for lava\+::block\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1block}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1block_a18c827550b419bfe686fcef78c65892e}\label{structlava_1_1block_a18c827550b419bfe686fcef78c65892e} 
+using {\bfseries ptr} = \mbox{\hyperlink{structlava_1_1block}{block}}\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Pointer to block. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5}\label{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1block}{block}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to block. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1block_ae30cc03dd2789f3b0c7ef2125dee013b}\label{structlava_1_1block_ae30cc03dd2789f3b0c7ef2125dee013b} 
+using {\bfseries c\+\_\+ptr} = \mbox{\hyperlink{structlava_1_1block}{block}} const\texorpdfstring{$\ast$}{*}
+\begin{DoxyCompactList}\small\item\em Const pointer to block. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1block_afa1a9c5b31fcfcccf2467eac19d26f9c}\label{structlava_1_1block_afa1a9c5b31fcfcccf2467eac19d26f9c} 
+using {\bfseries s\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of blocks. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1block_ac8b9e081cd1ed1659385f4770a5b3893}\label{structlava_1_1block_ac8b9e081cd1ed1659385f4770a5b3893} 
+using {\bfseries c\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1block_ae30cc03dd2789f3b0c7ef2125dee013b}{c\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of blocks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1block_ac3392a022afd4387a9a5c17aec8a1139}\label{structlava_1_1block_ac3392a022afd4387a9a5c17aec8a1139} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}block} ()
+\begin{DoxyCompactList}\small\item\em Destroy the block. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1block_a90e2ee2da194d25b073986c2b375fe4e}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} frame\+\_\+count, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} queue\+\_\+family)
+\begin{DoxyCompactList}\small\item\em Create a new block. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1block_a5875f397c600f70f66d205793777d533}\label{structlava_1_1block_a5875f397c600f70f66d205793777d533} 
+void {\bfseries destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy the block. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1block_a2d33dd787828f5fdb976df93cfba5660}{get\+\_\+frame\+\_\+count}} () const
+\begin{DoxyCompactList}\small\item\em Get the frame count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1block_a15ddf43bfcdf5e3524ea28ca1495e5b9}{add\+\_\+cmd}} (\mbox{\hyperlink{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}{command\+::process\+\_\+func}} func, bool active=true)
+\item 
+\mbox{\hyperlink{structlava_1_1id}{id}} \mbox{\hyperlink{structlava_1_1block_acb14766b92fb411a8b9dc5adab469084}{add\+\_\+command}} (\mbox{\hyperlink{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}{command\+::process\+\_\+func}} func, bool active=true)
+\begin{DoxyCompactList}\small\item\em Add a command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1block_afdda663d3950e15bdaea82d0c303ffba}{remove\+\_\+cmd}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id)
+\item 
+void \mbox{\hyperlink{structlava_1_1block_acb560ae2445f1610bfc7155d3a81d7c6}{remove\+\_\+command}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove the command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1block_a1ba35820f45a6702cdab60ea471bf080}{process}} (\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1frame}{frame}})
+\begin{DoxyCompactList}\small\item\em Process the block. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1block_ac6132a8f9bca3e90648c35f22eaa49fb}{get\+\_\+current\+\_\+frame}} () const
+\begin{DoxyCompactList}\small\item\em Get the current frame. \end{DoxyCompactList}\item 
+Vk\+Command\+Buffer \mbox{\hyperlink{structlava_1_1block_a79bb818384221484733eb1b372e6b9e5}{get\+\_\+command\+\_\+buffer}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id) const
+\begin{DoxyCompactList}\small\item\em Get the command buffer. \end{DoxyCompactList}\item 
+Vk\+Command\+Buffer \mbox{\hyperlink{structlava_1_1block_a7bfec0344646503eeb17ea402080d59c}{get\+\_\+command\+\_\+buffer}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id, \mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} \mbox{\hyperlink{structlava_1_1frame}{frame}}) const
+\begin{DoxyCompactList}\small\item\em Get the command buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{base_2base_8hpp_ace97a755b9ed66f2467c625c05a29c0e}{Vk\+Command\+Buffers}} \mbox{\hyperlink{structlava_1_1block_a78728f7d5abc5de61cce17ee2ead2f57}{collect\+\_\+buffers}} ()
+\begin{DoxyCompactList}\small\item\em Collect the buffers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1command_ad9c87f65181226619252146f936d4a2f}{command\+::s\+\_\+map}} const \& \mbox{\hyperlink{structlava_1_1block_ad962cd9012179be009da8bdade12bf57}{get\+\_\+commands}} () const
+\begin{DoxyCompactList}\small\item\em Get the commands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1command_a0b3001d7f3be692a50bbf537a59ffeb2}{command\+::c\+\_\+list}} const \& \mbox{\hyperlink{structlava_1_1block_a7a05921272711863394d162fe2cb3983}{get\+\_\+cmd\+\_\+order}} () const
+\begin{DoxyCompactList}\small\item\em Get the cmd order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1block_ab18e296c08b487afea2e1f1ddb679b41}{activated}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Check if command is activated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1block_a61dd13bfe64d3715353dd2b1f02718f9}{set\+\_\+active}} (\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} cmd\+\_\+id, bool active=true)
+\begin{DoxyCompactList}\small\item\em Set the command active. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1block_ac1ec06d85e3e4b44a7954a1ba38eb840}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1block_af59243ac0dccc0df36ac159be1987de0}{make}} ()
+\begin{DoxyCompactList}\small\item\em Make a new block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Block of commands. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1block_ab18e296c08b487afea2e1f1ddb679b41}\index{lava::block@{lava::block}!activated@{activated}}
+\index{activated@{activated}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_ab18e296c08b487afea2e1f1ddb679b41} 
+bool lava\+::block\+::activated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Check if command is activated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+id} & Command id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Command is active or not 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a15ddf43bfcdf5e3524ea28ca1495e5b9}\index{lava::block@{lava::block}!add\_cmd@{add\_cmd}}
+\index{add\_cmd@{add\_cmd}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{add\_cmd()}{add\_cmd()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a15ddf43bfcdf5e3524ea28ca1495e5b9} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::block\+::add\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}{command\+::process\+\_\+func}}}]{func}{, }\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1block_acb14766b92fb411a8b9dc5adab469084}{add\+\_\+command} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1block_acb14766b92fb411a8b9dc5adab469084}\index{lava::block@{lava::block}!add\_command@{add\_command}}
+\index{add\_command@{add\_command}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{add\_command()}{add\_command()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_acb14766b92fb411a8b9dc5adab469084} 
+\mbox{\hyperlink{structlava_1_1id}{id}} lava\+::block\+::add\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1command_aea5fb742f88010683d2ea34a1c81bb76}{command\+::process\+\_\+func}}}]{func}{, }\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Command function \\
+\hline
+{\em active} & Active state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id Command id 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a78728f7d5abc5de61cce17ee2ead2f57}\index{lava::block@{lava::block}!collect\_buffers@{collect\_buffers}}
+\index{collect\_buffers@{collect\_buffers}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{collect\_buffers()}{collect\_buffers()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a78728f7d5abc5de61cce17ee2ead2f57} 
+\mbox{\hyperlink{base_2base_8hpp_ace97a755b9ed66f2467c625c05a29c0e}{Vk\+Command\+Buffers}} lava\+::block\+::collect\+\_\+buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Collect the buffers. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{base_2base_8hpp_ace97a755b9ed66f2467c625c05a29c0e}{Vk\+Command\+Buffers} List of Vulkan command buffers 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a90e2ee2da194d25b073986c2b375fe4e}\index{lava::block@{lava::block}!create@{create}}
+\index{create@{create}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a90e2ee2da194d25b073986c2b375fe4e} 
+bool lava\+::block\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frame\+\_\+count}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{queue\+\_\+family}{}\end{DoxyParamCaption})}
+
+
+
+Create a new block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em frame\+\_\+count} & Number of frames \\
+\hline
+{\em queue\+\_\+family} & Queue family index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a7a05921272711863394d162fe2cb3983}\index{lava::block@{lava::block}!get\_cmd\_order@{get\_cmd\_order}}
+\index{get\_cmd\_order@{get\_cmd\_order}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_cmd\_order()}{get\_cmd\_order()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a7a05921272711863394d162fe2cb3983} 
+\mbox{\hyperlink{structlava_1_1command_a0b3001d7f3be692a50bbf537a59ffeb2}{command\+::c\+\_\+list}} const  \& lava\+::block\+::get\+\_\+cmd\+\_\+order (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the cmd order. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1command_a0b3001d7f3be692a50bbf537a59ffeb2}{command\+::c\+\_\+list} const\& List of commands 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a79bb818384221484733eb1b372e6b9e5}\index{lava::block@{lava::block}!get\_command\_buffer@{get\_command\_buffer}}
+\index{get\_command\_buffer@{get\_command\_buffer}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_command\_buffer()}{get\_command\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a79bb818384221484733eb1b372e6b9e5} 
+Vk\+Command\+Buffer lava\+::block\+::get\+\_\+command\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the command buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+id} & Command id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Command\+Buffer Vulkan command buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a7bfec0344646503eeb17ea402080d59c}\index{lava::block@{lava::block}!get\_command\_buffer@{get\_command\_buffer}}
+\index{get\_command\_buffer@{get\_command\_buffer}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_command\_buffer()}{get\_command\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a7bfec0344646503eeb17ea402080d59c} 
+Vk\+Command\+Buffer lava\+::block\+::get\+\_\+command\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{, }\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frame}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the command buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+id} & Command id \\
+\hline
+{\em frame} & Frame index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vk\+Command\+Buffer Vulkan command buffer 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_ad962cd9012179be009da8bdade12bf57}\index{lava::block@{lava::block}!get\_commands@{get\_commands}}
+\index{get\_commands@{get\_commands}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_commands()}{get\_commands()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_ad962cd9012179be009da8bdade12bf57} 
+\mbox{\hyperlink{structlava_1_1command_ad9c87f65181226619252146f936d4a2f}{command\+::s\+\_\+map}} const  \& lava\+::block\+::get\+\_\+commands (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the commands. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1command_ad9c87f65181226619252146f936d4a2f}{command\+::s\+\_\+map} const\& Map of commands 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_ac6132a8f9bca3e90648c35f22eaa49fb}\index{lava::block@{lava::block}!get\_current\_frame@{get\_current\_frame}}
+\index{get\_current\_frame@{get\_current\_frame}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_current\_frame()}{get\_current\_frame()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_ac6132a8f9bca3e90648c35f22eaa49fb} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} lava\+::block\+::get\+\_\+current\+\_\+frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current frame. 
+
+\begin{DoxyReturn}{Returns}
+index Current frame 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_ac1ec06d85e3e4b44a7954a1ba38eb840}\index{lava::block@{lava::block}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_ac1ec06d85e3e4b44a7954a1ba38eb840} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::block\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a2d33dd787828f5fdb976df93cfba5660}\index{lava::block@{lava::block}!get\_frame\_count@{get\_frame\_count}}
+\index{get\_frame\_count@{get\_frame\_count}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{get\_frame\_count()}{get\_frame\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a2d33dd787828f5fdb976df93cfba5660} 
+\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}} lava\+::block\+::get\+\_\+frame\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the frame count. 
+
+\begin{DoxyReturn}{Returns}
+index Number of frames 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_af59243ac0dccc0df36ac159be1987de0}\index{lava::block@{lava::block}!make@{make}}
+\index{make@{make}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_af59243ac0dccc0df36ac159be1987de0} 
+static \mbox{\hyperlink{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5}{s\+\_\+ptr}} lava\+::block\+::make (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new block. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1block_aebd0a7c9d3be269cd4749dbd41ec78f5}{s\+\_\+ptr} Shared pointer to block 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_a1ba35820f45a6702cdab60ea471bf080}\index{lava::block@{lava::block}!process@{process}}
+\index{process@{process}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a1ba35820f45a6702cdab60ea471bf080} 
+bool lava\+::block\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_a2a40eb7fccb1ebcfd58d6d4b7a078e5c}{index}}}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+Process the block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Process was successful or aborted 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1block_afdda663d3950e15bdaea82d0c303ffba}\index{lava::block@{lava::block}!remove\_cmd@{remove\_cmd}}
+\index{remove\_cmd@{remove\_cmd}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{remove\_cmd()}{remove\_cmd()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_afdda663d3950e15bdaea82d0c303ffba} 
+void lava\+::block\+::remove\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{structlava_1_1block_acb560ae2445f1610bfc7155d3a81d7c6}{remove\+\_\+command} 
+\end{DoxySeeAlso}
+\Hypertarget{structlava_1_1block_acb560ae2445f1610bfc7155d3a81d7c6}\index{lava::block@{lava::block}!remove\_command@{remove\_command}}
+\index{remove\_command@{remove\_command}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{remove\_command()}{remove\_command()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_acb560ae2445f1610bfc7155d3a81d7c6} 
+void lava\+::block\+::remove\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+id} & Command id \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1block_a61dd13bfe64d3715353dd2b1f02718f9}\index{lava::block@{lava::block}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!lava::block@{lava::block}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily \label{structlava_1_1block_a61dd13bfe64d3715353dd2b1f02718f9} 
+bool lava\+::block\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}}}]{cmd\+\_\+id}{, }\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Set the command active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+\_\+id} & Command id \\
+\hline
+{\em active} & Active state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set was successful or failed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/block/\mbox{\hyperlink{block_2block_8hpp}{block.\+hpp}}\end{DoxyCompactItemize}

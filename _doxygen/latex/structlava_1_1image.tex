@@ -1,0 +1,460 @@
+\doxysection{lava\+::image Struct Reference}
+\hypertarget{structlava_1_1image}{}\label{structlava_1_1image}\index{lava::image@{lava::image}}
+
+
+Image.  
+
+
+
+
+{\ttfamily \#include $<$image.\+hpp$>$}
+
+Inheritance diagram for lava\+::image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structlava_1_1image}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}\label{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc} 
+using {\bfseries s\+\_\+ptr} = std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structlava_1_1image}{image}}$>$
+\begin{DoxyCompactList}\small\item\em Shared pointer to image. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1image_a71d4dfca8630df33b46a5268836f072d}\label{structlava_1_1image_a71d4dfca8630df33b46a5268836f072d} 
+using {\bfseries s\+\_\+map} = std\+::map$<$\mbox{\hyperlink{structlava_1_1id}{id}}, \mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em Map of images. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c}\label{structlava_1_1image_a5e307b53ee5524d733a67eb086060d4c} 
+using {\bfseries s\+\_\+list} = std\+::vector$<$\mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{s\+\_\+ptr}}$>$
+\begin{DoxyCompactList}\small\item\em List of images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlava_1_1image_ae408421e055cf4cf8449334d2c1444ec}{image}} (Vk\+Format format, Vk\+Image vk\+\_\+image=0)
+\begin{DoxyCompactList}\small\item\em Construct a new image. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlava_1_1image_a284b3f1b69eac48a0174358eebbfcdfb}{create}} (\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1device}{device}}, \mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} size, Vma\+Memory\+Usage memory\+\_\+usage=VMA\+\_\+\+MEMORY\+\_\+\+USAGE\+\_\+\+GPU\+\_\+\+ONLY, Vma\+Allocation\+Create\+Flags allocation\+\_\+flags=0)
+\begin{DoxyCompactList}\small\item\em Create a new image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a308969f30821832171034ae067ec8b50}{destroy}} (bool view\+\_\+only=false)
+\begin{DoxyCompactList}\small\item\em Destroy the image. \end{DoxyCompactList}\item 
+\Hypertarget{structlava_1_1image_a5ce4b73da358d7ca1129804cc42eeace}\label{structlava_1_1image_a5ce4b73da358d7ca1129804cc42eeace} 
+void {\bfseries destroy\+\_\+view} ()
+\begin{DoxyCompactList}\small\item\em Destroy the image view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} \mbox{\hyperlink{structlava_1_1image_a348713a9e679153fe1b1927a9ea58da5}{get\+\_\+device}} ()
+\begin{DoxyCompactList}\small\item\em Get the device. \end{DoxyCompactList}\item 
+Vk\+Format \mbox{\hyperlink{structlava_1_1image_a56326b157b1065baa6ec7ce62df91f37}{get\+\_\+format}} () const
+\begin{DoxyCompactList}\small\item\em Get the format of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} \mbox{\hyperlink{structlava_1_1image_a8235e7dde660a605abb4a411a015e108}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} \mbox{\hyperlink{structlava_1_1image_ae64efbe5c3f454f790344c11e4565699}{get\+\_\+depth}} () const
+\begin{DoxyCompactList}\small\item\em Get the depth of the image. \end{DoxyCompactList}\item 
+Vk\+Image \mbox{\hyperlink{structlava_1_1image_a41636ba2594ebc4d6e677fcb0e542fff}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the image. \end{DoxyCompactList}\item 
+Vk\+Image\+View \mbox{\hyperlink{structlava_1_1image_a6843bc71f3f1a318b2ebbcd529235ac4}{get\+\_\+view}} () const
+\begin{DoxyCompactList}\small\item\em Get the image view. \end{DoxyCompactList}\item 
+Vk\+Image\+Create\+Info const \& \mbox{\hyperlink{structlava_1_1image_a67a1de54b0819057b3c9e2c22a6d42e1}{get\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the image create information. \end{DoxyCompactList}\item 
+Vk\+Image\+View\+Create\+Info const \& \mbox{\hyperlink{structlava_1_1image_a89c804c726969818437a42c5ecaeefe4}{get\+\_\+view\+\_\+info}} () const
+\begin{DoxyCompactList}\small\item\em Get the image view create information. \end{DoxyCompactList}\item 
+Vk\+Image\+Subresource\+Range const \& \mbox{\hyperlink{structlava_1_1image_af01ce34733cc4673f388613f133eb7eb}{get\+\_\+subresource\+\_\+range}} () const
+\begin{DoxyCompactList}\small\item\em Get the subresource range of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a6847a06bb922f563c7d5e195de374948}{set\+\_\+flags}} (Vk\+Image\+Create\+Flag\+Bits flags)
+\begin{DoxyCompactList}\small\item\em Set the image create flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a53b8e4b378090fc6f960c65b3bddf3a8}{set\+\_\+tiling}} (Vk\+Image\+Tiling tiling)
+\begin{DoxyCompactList}\small\item\em Set the image tiling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a929f1c26de399381e60e4bde5368a243}{set\+\_\+usage}} (Vk\+Image\+Usage\+Flags usage)
+\begin{DoxyCompactList}\small\item\em Set the image usage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a5b961f80dd743811785660a381e7ca19}{set\+\_\+layout}} (Vk\+Image\+Layout initial)
+\begin{DoxyCompactList}\small\item\em Set the initial layout of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_ab1faf46398b75f5bd89392c0e29985c8}{set\+\_\+aspect\+\_\+mask}} (Vk\+Image\+Aspect\+Flags aspect\+Mask)
+\begin{DoxyCompactList}\small\item\em Set the aspect mask of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a382972307f78457d7e6e5d5e7645fc78}{set\+\_\+level\+\_\+count}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} levels)
+\begin{DoxyCompactList}\small\item\em Set the level count of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_ab2504a00fed7465cdd398ca7d7d3208b}{set\+\_\+layer\+\_\+count}} (\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} layers)
+\begin{DoxyCompactList}\small\item\em Set the layer count of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a13c8acbfca50f5f260390367c3b79e62}{set\+\_\+component}} (Vk\+Component\+Mapping mapping=\{\})
+\begin{DoxyCompactList}\small\item\em Set the component mapping of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlava_1_1image_a94c015f268b6b831caa5c5738b0f63e6}{set\+\_\+view\+\_\+type}} (Vk\+Image\+View\+Type type)
+\begin{DoxyCompactList}\small\item\em Set the view type of the image. \end{DoxyCompactList}\item 
+Vma\+Allocation const \& \mbox{\hyperlink{structlava_1_1image_a722042abfe8806799de7bd50d035dbb9}{get\+\_\+allocation}} () const
+\begin{DoxyCompactList}\small\item\em Get the allocation of the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1entity}{lava\+::entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries entity} ()
+\begin{DoxyCompactList}\small\item\em Construct a new entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlava_1_1id_a226df789a94177f765bdcaac2988eda0}{id\+::ref}} \mbox{\hyperlink{structlava_1_1entity_adfe6db1cb4d47cd34c36d3225e3571b7}{get\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Get the id of entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1no__copy__no__move}{lava\+::no\+\_\+copy\+\_\+no\+\_\+move}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new object. \end{DoxyCompactList}\item 
+{\bfseries no\+\_\+copy\+\_\+no\+\_\+move} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No copy. \end{DoxyCompactList}\item 
+void {\bfseries operator=} (\mbox{\hyperlink{structlava_1_1no__copy__no__move}{no\+\_\+copy\+\_\+no\+\_\+move}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em No move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structlava_1_1interface}{lava\+::interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}interface} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{s\+\_\+ptr}} \mbox{\hyperlink{structlava_1_1image_ad14ef108582c92e59fb418d6b9ba59e9}{make}} (Vk\+Format format, Vk\+Image vk\+\_\+image=0)
+\begin{DoxyCompactList}\small\item\em Make a new image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structlava_1_1image_ae408421e055cf4cf8449334d2c1444ec}\index{lava::image@{lava::image}!image@{image}}
+\index{image@{image}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_ae408421e055cf4cf8449334d2c1444ec} 
+lava\+::image\+::image (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format}{, }\item[{Vk\+Image}]{vk\+\_\+image}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Image format \\
+\hline
+{\em vk\+\_\+image} & Vulkan image \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structlava_1_1image_a284b3f1b69eac48a0174358eebbfcdfb}\index{lava::image@{lava::image}!create@{create}}
+\index{create@{create}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a284b3f1b69eac48a0174358eebbfcdfb} 
+bool lava\+::image\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}}}]{device}{, }\item[{\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}}}]{size}{, }\item[{Vma\+Memory\+Usage}]{memory\+\_\+usage}{ = {\ttfamily VMA\+\_\+MEMORY\+\_\+USAGE\+\_\+GPU\+\_\+ONLY}, }\item[{Vma\+Allocation\+Create\+Flags}]{allocation\+\_\+flags}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Create a new image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Vulkan device \\
+\hline
+{\em size} & Image size \\
+\hline
+{\em memory\+\_\+usage} & Memory usage \\
+\hline
+{\em allocation\+\_\+flags} & Allocation flags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Create was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a308969f30821832171034ae067ec8b50}\index{lava::image@{lava::image}!destroy@{destroy}}
+\index{destroy@{destroy}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a308969f30821832171034ae067ec8b50} 
+void lava\+::image\+::destroy (\begin{DoxyParamCaption}\item[{bool}]{view\+\_\+only}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Destroy the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+\_\+only} & Destroy only the image view \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a41636ba2594ebc4d6e677fcb0e542fff}\index{lava::image@{lava::image}!get@{get}}
+\index{get@{get}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a41636ba2594ebc4d6e677fcb0e542fff} 
+Vk\+Image lava\+::image\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the image. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Image Vulkan image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a722042abfe8806799de7bd50d035dbb9}\index{lava::image@{lava::image}!get\_allocation@{get\_allocation}}
+\index{get\_allocation@{get\_allocation}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_allocation()}{get\_allocation()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a722042abfe8806799de7bd50d035dbb9} 
+Vma\+Allocation const  \& lava\+::image\+::get\+\_\+allocation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the allocation of the image. 
+
+\begin{DoxyReturn}{Returns}
+Vma\+Allocation const\& Image allocation 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_ae64efbe5c3f454f790344c11e4565699}\index{lava::image@{lava::image}!get\_depth@{get\_depth}}
+\index{get\_depth@{get\_depth}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_depth()}{get\_depth()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_ae64efbe5c3f454f790344c11e4565699} 
+\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} lava\+::image\+::get\+\_\+depth (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the depth of the image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32} Image depth 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a348713a9e679153fe1b1927a9ea58da5}\index{lava::image@{lava::image}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a348713a9e679153fe1b1927a9ea58da5} 
+\mbox{\hyperlink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr}} lava\+::image\+::get\+\_\+device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the device. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1device_a6f7d378ef30e7bf1cd4fe208de859250}{device\+::ptr} Vulkan device 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a56326b157b1065baa6ec7ce62df91f37}\index{lava::image@{lava::image}!get\_format@{get\_format}}
+\index{get\_format@{get\_format}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_format()}{get\_format()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a56326b157b1065baa6ec7ce62df91f37} 
+Vk\+Format lava\+::image\+::get\+\_\+format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the format of the image. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Format Image format 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a67a1de54b0819057b3c9e2c22a6d42e1}\index{lava::image@{lava::image}!get\_info@{get\_info}}
+\index{get\_info@{get\_info}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_info()}{get\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a67a1de54b0819057b3c9e2c22a6d42e1} 
+Vk\+Image\+Create\+Info const  \& lava\+::image\+::get\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the image create information. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+Create\+Info const\& Image create information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a8235e7dde660a605abb4a411a015e108}\index{lava::image@{lava::image}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a8235e7dde660a605abb4a411a015e108} 
+\mbox{\hyperlink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2}} lava\+::image\+::get\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the image. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{math_8hpp_ad63e913ea06491bbe4e45588b35587df}{uv2} Image size 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_af01ce34733cc4673f388613f133eb7eb}\index{lava::image@{lava::image}!get\_subresource\_range@{get\_subresource\_range}}
+\index{get\_subresource\_range@{get\_subresource\_range}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_subresource\_range()}{get\_subresource\_range()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_af01ce34733cc4673f388613f133eb7eb} 
+Vk\+Image\+Subresource\+Range const  \& lava\+::image\+::get\+\_\+subresource\+\_\+range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the subresource range of the image. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+Subresource\+Range const\& Image subresource range 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a6843bc71f3f1a318b2ebbcd529235ac4}\index{lava::image@{lava::image}!get\_view@{get\_view}}
+\index{get\_view@{get\_view}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_view()}{get\_view()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a6843bc71f3f1a318b2ebbcd529235ac4} 
+Vk\+Image\+View lava\+::image\+::get\+\_\+view (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the image view. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+View Vulkan image view 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_a89c804c726969818437a42c5ecaeefe4}\index{lava::image@{lava::image}!get\_view\_info@{get\_view\_info}}
+\index{get\_view\_info@{get\_view\_info}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{get\_view\_info()}{get\_view\_info()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a89c804c726969818437a42c5ecaeefe4} 
+Vk\+Image\+View\+Create\+Info const  \& lava\+::image\+::get\+\_\+view\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the image view create information. 
+
+\begin{DoxyReturn}{Returns}
+Vk\+Image\+View\+Create\+Info const\& Image view create information 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_ad14ef108582c92e59fb418d6b9ba59e9}\index{lava::image@{lava::image}!make@{make}}
+\index{make@{make}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_ad14ef108582c92e59fb418d6b9ba59e9} 
+static \mbox{\hyperlink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{s\+\_\+ptr}} lava\+::image\+::make (\begin{DoxyParamCaption}\item[{Vk\+Format}]{format}{, }\item[{Vk\+Image}]{vk\+\_\+image}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a new image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Image format \\
+\hline
+{\em vk\+\_\+image} & Vulkan image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structlava_1_1image_a3268e2cf1bd3e74a86e42ddf8255c8bc}{s\+\_\+ptr} Shared pointer to image 
+\end{DoxyReturn}
+\Hypertarget{structlava_1_1image_ab1faf46398b75f5bd89392c0e29985c8}\index{lava::image@{lava::image}!set\_aspect\_mask@{set\_aspect\_mask}}
+\index{set\_aspect\_mask@{set\_aspect\_mask}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_aspect\_mask()}{set\_aspect\_mask()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_ab1faf46398b75f5bd89392c0e29985c8} 
+void lava\+::image\+::set\+\_\+aspect\+\_\+mask (\begin{DoxyParamCaption}\item[{Vk\+Image\+Aspect\+Flags}]{aspect\+Mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the aspect mask of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aspect\+Mask} & Image aspect flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a13c8acbfca50f5f260390367c3b79e62}\index{lava::image@{lava::image}!set\_component@{set\_component}}
+\index{set\_component@{set\_component}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_component()}{set\_component()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a13c8acbfca50f5f260390367c3b79e62} 
+void lava\+::image\+::set\+\_\+component (\begin{DoxyParamCaption}\item[{Vk\+Component\+Mapping}]{mapping}{ = {\ttfamily \{\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the component mapping of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapping} & Component mapping \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a6847a06bb922f563c7d5e195de374948}\index{lava::image@{lava::image}!set\_flags@{set\_flags}}
+\index{set\_flags@{set\_flags}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_flags()}{set\_flags()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a6847a06bb922f563c7d5e195de374948} 
+void lava\+::image\+::set\+\_\+flags (\begin{DoxyParamCaption}\item[{Vk\+Image\+Create\+Flag\+Bits}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the image create flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & Image create flag bits \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_ab2504a00fed7465cdd398ca7d7d3208b}\index{lava::image@{lava::image}!set\_layer\_count@{set\_layer\_count}}
+\index{set\_layer\_count@{set\_layer\_count}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_layer\_count()}{set\_layer\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_ab2504a00fed7465cdd398ca7d7d3208b} 
+void lava\+::image\+::set\+\_\+layer\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{layers}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the layer count of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layers} & Number of layers \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a5b961f80dd743811785660a381e7ca19}\index{lava::image@{lava::image}!set\_layout@{set\_layout}}
+\index{set\_layout@{set\_layout}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_layout()}{set\_layout()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a5b961f80dd743811785660a381e7ca19} 
+void lava\+::image\+::set\+\_\+layout (\begin{DoxyParamCaption}\item[{Vk\+Image\+Layout}]{initial}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial layout of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial} & Initial image layout \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a382972307f78457d7e6e5d5e7645fc78}\index{lava::image@{lava::image}!set\_level\_count@{set\_level\_count}}
+\index{set\_level\_count@{set\_level\_count}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_level\_count()}{set\_level\_count()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a382972307f78457d7e6e5d5e7645fc78} 
+void lava\+::image\+::set\+\_\+level\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{levels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the level count of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em levels} & Number of levels \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a53b8e4b378090fc6f960c65b3bddf3a8}\index{lava::image@{lava::image}!set\_tiling@{set\_tiling}}
+\index{set\_tiling@{set\_tiling}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_tiling()}{set\_tiling()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a53b8e4b378090fc6f960c65b3bddf3a8} 
+void lava\+::image\+::set\+\_\+tiling (\begin{DoxyParamCaption}\item[{Vk\+Image\+Tiling}]{tiling}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the image tiling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tiling} & Image tiling \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a929f1c26de399381e60e4bde5368a243}\index{lava::image@{lava::image}!set\_usage@{set\_usage}}
+\index{set\_usage@{set\_usage}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_usage()}{set\_usage()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a929f1c26de399381e60e4bde5368a243} 
+void lava\+::image\+::set\+\_\+usage (\begin{DoxyParamCaption}\item[{Vk\+Image\+Usage\+Flags}]{usage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the image usage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usage} & Image usage flags \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlava_1_1image_a94c015f268b6b831caa5c5738b0f63e6}\index{lava::image@{lava::image}!set\_view\_type@{set\_view\_type}}
+\index{set\_view\_type@{set\_view\_type}!lava::image@{lava::image}}
+\doxysubsubsection{\texorpdfstring{set\_view\_type()}{set\_view\_type()}}
+{\footnotesize\ttfamily \label{structlava_1_1image_a94c015f268b6b831caa5c5738b0f63e6} 
+void lava\+::image\+::set\+\_\+view\+\_\+type (\begin{DoxyParamCaption}\item[{Vk\+Image\+View\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the view type of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Image view type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+liblava/resource/\mbox{\hyperlink{image_8hpp}{image.\+hpp}}\end{DoxyCompactItemize}

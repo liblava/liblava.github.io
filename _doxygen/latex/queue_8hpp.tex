@@ -1,0 +1,186 @@
+\doxysection{liblava/base/queue.hpp File Reference}
+\hypertarget{queue_8hpp}{}\label{queue_8hpp}\index{liblava/base/queue.hpp@{liblava/base/queue.hpp}}
+
+
+Device queue.  
+
+
+{\ttfamily \#include "{}liblava/base/base.\+hpp"{}}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlava_1_1queue}{lava\+::queue}}
+\begin{DoxyCompactList}\small\item\em Device queue. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1queue__info}{lava\+::queue\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Queue information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlava_1_1queue__family__info}{lava\+::queue\+\_\+family\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Queue family information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}\label{queue_8hpp_ae36be97f14d22001f41c2164d08457d6} 
+enum class \mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{lava\+::verify\+\_\+queues\+\_\+result}} \+: index \{ \newline
+{\bfseries ok} = 0
+, {\bfseries empty\+\_\+list}
+, {\bfseries no\+\_\+properties}
+, {\bfseries duplicate\+\_\+family\+\_\+index}
+, \newline
+{\bfseries no\+\_\+family\+\_\+index}
+, {\bfseries no\+\_\+queues}
+, {\bfseries too\+\_\+many\+\_\+queues}
+, {\bfseries no\+\_\+compatible\+\_\+flags}
+ \}
+\begin{DoxyCompactList}\small\item\em Result of queue verifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{queue_8hpp_a3a95d4fb6a75e074295c1a46695397ce}{lava\+::set\+\_\+default\+\_\+queues}} (\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&list)
+\begin{DoxyCompactList}\small\item\em Set the default queues. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8hpp_a625654669a4963a2daf910561b6282b4}{lava\+::set\+\_\+all\+\_\+queues}} (\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&list, \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&properties)
+\begin{DoxyCompactList}\small\item\em Set all queues. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{queue_8hpp_ab7f1d0e25ab487cecd007ab6cd580b4c}{lava\+::add\+\_\+queues}} (\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&list, \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&properties, Vk\+Queue\+Flags flags, \mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}} count, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add queues. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{queue_8hpp_aa9e3a3836f529f0147d0a9a2556ac764}{lava\+::add\+\_\+dedicated\+\_\+queues}} (\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&list, \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&properties, \mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}} priority=1.f)
+\begin{DoxyCompactList}\small\item\em Add dedicated queues. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue_8hpp_ae36be97f14d22001f41c2164d08457d6}{verify\+\_\+queues\+\_\+result}} \mbox{\hyperlink{queue_8hpp_a6dce4074f13b98f4a822013d1b51b016}{lava\+::verify\+\_\+queues}} (\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} const \&list, \mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&properties)
+\begin{DoxyCompactList}\small\item\em Verify queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr Vk\+Queue\+Flags const \mbox{\hyperlink{queue_8hpp_a9fd36ce00e5d8b978c6205ed8d2b74d9}{lava\+::default\+\_\+queue\+\_\+flags}}
+\begin{DoxyCompactList}\small\item\em Default queue flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Device queue. 
+
+\begin{DoxyAuthor}{Authors}
+Lava Block OÜ and contributors 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018-\/present, MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8hpp_aa9e3a3836f529f0147d0a9a2556ac764}\index{queue.hpp@{queue.hpp}!add\_dedicated\_queues@{add\_dedicated\_queues}}
+\index{add\_dedicated\_queues@{add\_dedicated\_queues}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{add\_dedicated\_queues()}{add\_dedicated\_queues()}}
+{\footnotesize\ttfamily \label{queue_8hpp_aa9e3a3836f529f0147d0a9a2556ac764} 
+bool lava\+::add\+\_\+dedicated\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&}]{list}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&}]{properties}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})}
+
+
+
+Add dedicated queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of queue family informations \\
+\hline
+{\em properties} & List of queue family properties \\
+\hline
+{\em priority} & Queue priority \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Add was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{queue_8hpp_ab7f1d0e25ab487cecd007ab6cd580b4c}\index{queue.hpp@{queue.hpp}!add\_queues@{add\_queues}}
+\index{add\_queues@{add\_queues}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{add\_queues()}{add\_queues()}}
+{\footnotesize\ttfamily \label{queue_8hpp_ab7f1d0e25ab487cecd007ab6cd580b4c} 
+bool lava\+::add\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&}]{list}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&}]{properties}{, }\item[{Vk\+Queue\+Flags}]{flags}{, }\item[{\mbox{\hyperlink{types_8hpp_ae3c4bbc50dd4583ab0df2c24c49a49c9}{ui32}}}]{count}{, }\item[{\mbox{\hyperlink{types_8hpp_a3a32680a459890aa9c80b4f5533b3b1f}{r32}}}]{priority}{ = {\ttfamily 1.f}}\end{DoxyParamCaption})}
+
+
+
+Add queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of queue family informations \\
+\hline
+{\em properties} & List of queue family properties \\
+\hline
+{\em flags} & Queue flags \\
+\hline
+{\em count} & Number of queues \\
+\hline
+{\em priority} & Queue priority \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Add was successful or failed 
+\end{DoxyReturn}
+\Hypertarget{queue_8hpp_a625654669a4963a2daf910561b6282b4}\index{queue.hpp@{queue.hpp}!set\_all\_queues@{set\_all\_queues}}
+\index{set\_all\_queues@{set\_all\_queues}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_all\_queues()}{set\_all\_queues()}}
+{\footnotesize\ttfamily \label{queue_8hpp_a625654669a4963a2daf910561b6282b4} 
+void lava\+::set\+\_\+all\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&}]{list}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&}]{properties}{}\end{DoxyParamCaption})}
+
+
+
+Set all queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of queue family informations \\
+\hline
+{\em properties} & List of queue family properties \\
+\hline
+\end{DoxyParams}
+\Hypertarget{queue_8hpp_a3a95d4fb6a75e074295c1a46695397ce}\index{queue.hpp@{queue.hpp}!set\_default\_queues@{set\_default\_queues}}
+\index{set\_default\_queues@{set\_default\_queues}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{set\_default\_queues()}{set\_default\_queues()}}
+{\footnotesize\ttfamily \label{queue_8hpp_a3a95d4fb6a75e074295c1a46695397ce} 
+void lava\+::set\+\_\+default\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} \&}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Set the default queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of queue family informations \\
+\hline
+\end{DoxyParams}
+\Hypertarget{queue_8hpp_a6dce4074f13b98f4a822013d1b51b016}\index{queue.hpp@{queue.hpp}!verify\_queues@{verify\_queues}}
+\index{verify\_queues@{verify\_queues}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{verify\_queues()}{verify\_queues()}}
+{\footnotesize\ttfamily \label{queue_8hpp_a6dce4074f13b98f4a822013d1b51b016} 
+verify\+\_\+queues\+\_\+result lava\+::verify\+\_\+queues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlava_1_1queue__family__info_a419c065ba098d0cad7d1ae8750336502}{queue\+\_\+family\+\_\+info\+::list}} const \&}]{list}{, }\item[{\mbox{\hyperlink{base_2base_8hpp_abf600c76d74b79d839b9f25aa7ae8228}{Vk\+Queue\+Family\+Properties\+List}} const \&}]{properties}{}\end{DoxyParamCaption})}
+
+
+
+Verify queues. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List of queue family informations \\
+\hline
+{\em properties} & List of queue family properties \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verify\+\_\+queues\+\_\+result Verification result 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{queue_8hpp_a9fd36ce00e5d8b978c6205ed8d2b74d9}\index{queue.hpp@{queue.hpp}!default\_queue\_flags@{default\_queue\_flags}}
+\index{default\_queue\_flags@{default\_queue\_flags}!queue.hpp@{queue.hpp}}
+\doxysubsubsection{\texorpdfstring{default\_queue\_flags}{default\_queue\_flags}}
+{\footnotesize\ttfamily \label{queue_8hpp_a9fd36ce00e5d8b978c6205ed8d2b74d9} 
+Vk\+Queue\+Flags const lava\+::default\+\_\+queue\+\_\+flags\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ VK\_QUEUE\_GRAPHICS\_BIT}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ VK\_QUEUE\_COMPUTE\_BIT}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ VK\_QUEUE\_TRANSFER\_BIT}
+
+\end{DoxyCode}
+
+
+Default queue flags. 
+

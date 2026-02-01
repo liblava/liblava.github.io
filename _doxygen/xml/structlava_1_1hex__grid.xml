@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structlava_1_1hex__grid" kind="struct" language="C++" prot="public">
+    <compoundname>lava::hex_grid</compoundname>
+    <includes refid="hex_8hpp" local="no">hex.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlava_1_1hex__grid_1a835e161cfc4d3e3d5d69646a21e5b896" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::hex_grid::inner_radius</definition>
+        <argsstring></argsstring>
+        <name>inner_radius</name>
+        <qualifiedname>lava::hex_grid::inner_radius</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+<para>Hex inner radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="684" column="9" bodyfile="liblava/util/hex.hpp" bodystart="684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1hex__grid_1ad3f348f5a43e347edcf6d5b0da2978cb" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+        <definition>r32 lava::hex_grid::outer_radius</definition>
+        <argsstring></argsstring>
+        <name>outer_radius</name>
+        <qualifiedname>lava::hex_grid::outer_radius</qualifiedname>
+        <initializer>= <ref refid="hex_8hpp_1a56f700cb1f640b51f18963e2b63649ae" kindref="member">hex_default_outer_radius</ref></initializer>
+        <briefdescription>
+<para>Hex outer radius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="687" column="9" bodyfile="liblava/util/hex.hpp" bodystart="687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlava_1_1hex__grid_1aad025ee36c697be80f6e2c706b6d7b1d" prot="public" static="no" mutable="no">
+        <type><ref refid="structlava_1_1hex__layout" kindref="compound">hex_layout</ref></type>
+        <definition>hex_layout lava::hex_grid::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <qualifiedname>lava::hex_grid::layout</qualifiedname>
+        <briefdescription>
+<para>Hex layout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="690" column="16" bodyfile="liblava/util/hex.hpp" bodystart="690" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structlava_1_1hex__grid_1af37592f301eba31bdd07708b66a85c2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>lava::hex_grid::hex_grid</definition>
+        <argsstring>(r32 radius=hex_default_outer_radius)</argsstring>
+        <name>hex_grid</name>
+        <qualifiedname>lava::hex_grid::hex_grid</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+          <declname>radius</declname>
+          <defval><ref refid="hex_8hpp_1a56f700cb1f640b51f18963e2b63649ae" kindref="member">hex_default_outer_radius</ref></defval>
+        </param>
+        <briefdescription>
+<para>Construct a new hex grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hex outer radius </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="696" column="5" bodyfile="liblava/util/hex.hpp" bodystart="696" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1hex__grid_1a7f60fc1e3eacd0e5aed6b5863b5479bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void lava::hex_grid::update</definition>
+        <argsstring>(hex_orientation orientation=hex_layout_point_y)</argsstring>
+        <name>update</name>
+        <qualifiedname>lava::hex_grid::update</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1hex__orientation" kindref="compound">hex_orientation</ref></type>
+          <declname>orientation</declname>
+          <defval><ref refid="hex_8hpp_1a5d537da1c2076b8e4a95694c88758b5d" kindref="member">hex_layout_point_y</ref></defval>
+        </param>
+        <briefdescription>
+<para>Update the hex grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orientation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hex orientation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="705" column="10" bodyfile="liblava/util/hex.hpp" bodystart="705" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1hex__grid_1a4b6f1445db48e26bc0919090dc1b4d62" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1hex__cell" kindref="compound">hex_cell</ref></type>
+        <definition>hex_cell lava::hex_grid::find</definition>
+        <argsstring>(r32 x, r32 y) const</argsstring>
+        <name>find</name>
+        <qualifiedname>lava::hex_grid::find</qualifiedname>
+        <param>
+          <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8hpp_1a3a32680a459890aa9c80b4f5533b3b1f" kindref="member">r32</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Find the hex cell from X and Y coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1hex__cell" kindref="compound">hex_cell</ref> Hex cell </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="719" column="14" bodyfile="liblava/util/hex.hpp" bodystart="719" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="structlava_1_1hex__grid_1ad91f76ece700e3308b1d199846dd3a7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structlava_1_1hex__point" kindref="compound">hex_point</ref></type>
+        <definition>hex_point lava::hex_grid::to_pixel</definition>
+        <argsstring>(hex_cell const &amp;cell) const</argsstring>
+        <name>to_pixel</name>
+        <qualifiedname>lava::hex_grid::to_pixel</qualifiedname>
+        <param>
+          <type><ref refid="structlava_1_1hex__cell" kindref="compound">hex_cell</ref> const &amp;</type>
+          <declname>cell</declname>
+        </param>
+        <briefdescription>
+<para>Get the hex point from hex cell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hex cell </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structlava_1_1hex__point" kindref="compound">hex_point</ref> Hex point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liblava/util/hex.hpp" line="729" column="15" bodyfile="liblava/util/hex.hpp" bodystart="729" bodyend="731"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Hex grid. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>lava::hex_grid</label>
+        <link refid="structlava_1_1hex__grid"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lava::hex_layout</label>
+        <link refid="structlava_1_1hex__layout"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>origin</edgelabel>
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lava::hex_orientation</label>
+        <link refid="structlava_1_1hex__orientation"/>
+      </node>
+      <node id="4">
+        <label>lava::hex_point</label>
+        <link refid="structlava_1_1hex__point"/>
+      </node>
+    </collaborationgraph>
+    <location file="liblava/util/hex.hpp" line="682" column="1" bodyfile="liblava/util/hex.hpp" bodystart="682" bodyend="732"/>
+    <listofallmembers>
+      <member refid="structlava_1_1hex__grid_1a4b6f1445db48e26bc0919090dc1b4d62" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>find</name></member>
+      <member refid="structlava_1_1hex__grid_1af37592f301eba31bdd07708b66a85c2b" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>hex_grid</name></member>
+      <member refid="structlava_1_1hex__grid_1a835e161cfc4d3e3d5d69646a21e5b896" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>inner_radius</name></member>
+      <member refid="structlava_1_1hex__grid_1aad025ee36c697be80f6e2c706b6d7b1d" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>layout</name></member>
+      <member refid="structlava_1_1hex__grid_1ad3f348f5a43e347edcf6d5b0da2978cb" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>outer_radius</name></member>
+      <member refid="structlava_1_1hex__grid_1ad91f76ece700e3308b1d199846dd3a7e" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>to_pixel</name></member>
+      <member refid="structlava_1_1hex__grid_1a7f60fc1e3eacd0e5aed6b5863b5479bf" prot="public" virt="non-virtual"><scope>lava::hex_grid</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
